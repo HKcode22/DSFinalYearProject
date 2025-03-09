@@ -1,0 +1,11 @@
+company_name,funding_amount,funding_stage,industry,announced_date,location,data_source,is_early_stage,is_startup,funding_category
+Created by Humans,5500000,Seed,AI,2025-02-15,San Francisco,Q1 2025 Seed Reports,True,True,Early Stage (≤$10M)
+Olmo,5000000,Seed,AI Search,2025-01-30,San Francisco,Q1 2025 Seed Reports,True,True,Early Stage (≤$10M)
+Embark Bio,4500000,Seed,BioTech,2025-01-25,South San Francisco,Q1 2025 Seed Reports,True,True,Early Stage (≤$10M)
+Modular AI,4000000,Seed,AI,2025-01-20,Palo Alto,Q1 2025 Seed Reports,True,True,Early Stage (≤$10M)
+Clarity Health,3500000,Seed,HealthTech,2025-01-15,Oakland,Q1 2025 Seed Reports,True,True,Early Stage (≤$10M)
+Meta Stack,3000000,Seed,DevTools,2025-01-10,San Francisco,Q1 2025 Seed Reports,True,True,Early Stage (≤$10M)
+Quantum AI,2500000,Seed,Quantum Computing,2025-01-05,Berkeley,Q1 2025 Seed Reports,True,True,Early Stage (≤$10M)
+GreenFlow,2000000,Seed,CleanTech,2025-02-01,San Francisco,Q1 2025 Seed Reports,True,True,Early Stage (≤$10M)
+EdTech Labs,1500000,Seed,Education,2025-02-05,San Jose,Q1 2025 Seed Reports,True,True,Early Stage (≤$10M)
+FinTech Now,1000000,Seed,FinTech,2025-02-10,San Francisco,Q1 2025 Seed Reports,True,True,Seed Stage (≤$1M)
