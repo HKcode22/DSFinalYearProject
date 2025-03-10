@@ -1,0 +1,31 @@
+2025-03-09 23:37:40,773 - __main__ - INFO - Starting data processing pipeline
+2025-03-09 23:37:40,773 - __main__ - INFO - Loading provided CSV files
+2025-03-09 23:37:40,778 - __main__ - INFO - Loaded 352 records from bay_area_startups_master.csv
+2025-03-09 23:37:40,781 - __main__ - ERROR - Error loading datasf_tech_businesses.csv: [Errno 2] No such file or directory: 'datasf_tech_businesses.csv'
+2025-03-09 23:37:40,781 - __main__ - ERROR - Error loading github_bay_area_companies.csv: [Errno 2] No such file or directory: 'github_bay_area_companies.csv'
+2025-03-09 23:37:40,781 - __main__ - ERROR - Error loading yc_bay_area_startups.csv: [Errno 2] No such file or directory: 'yc_bay_area_startups.csv'
+2025-03-09 23:37:40,781 - __main__ - ERROR - Error loading silicon_valley_companies.csv: [Errno 2] No such file or directory: 'silicon_valley_companies.csv'
+2025-03-09 23:37:40,782 - __main__ - INFO - Combined 352 records from provided CSV files
+2025-03-09 23:37:40,782 - __main__ - INFO - Collecting DataSF business registration data
+2025-03-09 23:37:40,782 - root - WARNING - Requests made without an app_token will be subject to strict throttling limits.
+2025-03-09 23:37:41,329 - __main__ - WARNING - No businesses found from DataSF
+2025-03-09 23:37:41,331 - __main__ - INFO - Collecting free Crunchbase data
+2025-03-09 23:37:43,147 - __main__ - INFO - Found 8819 Bay Area companies in https://raw.githubusercontent.com/notpeter/crunchbase-data/master/companies.csv
+2025-03-09 23:37:47,073 - __main__ - INFO - Found 4401 Bay Area companies in https://raw.githubusercontent.com/datahoarder/crunchbase-october-2013/master/crunchbase-companies.csv
+2025-03-09 23:37:47,174 - __main__ - INFO - Collected 13220 companies from Crunchbase alternatives
+2025-03-09 23:37:47,184 - __main__ - INFO - Collecting GitHub startup data
+2025-03-09 23:37:47,371 - __main__ - ERROR - Error collecting data from https://raw.githubusercontent.com/BesselStudio/tech-companies-sf-bay-area/main/README.md: 404 Client Error: Not Found for url: https://raw.githubusercontent.com/BesselStudio/tech-companies-sf-bay-area/main/README.md
+2025-03-09 23:37:47,513 - __main__ - ERROR - Error collecting data from https://raw.githubusercontent.com/karllhughes/chicago-tech-companies/master/companies.csv: 404 Client Error: Not Found for url: https://raw.githubusercontent.com/karllhughes/chicago-tech-companies/master/companies.csv
+2025-03-09 23:37:47,675 - __main__ - ERROR - Error collecting data from https://raw.githubusercontent.com/tksf/awesome-silicon-valley-startups/master/README.md: 404 Client Error: Not Found for url: https://raw.githubusercontent.com/tksf/awesome-silicon-valley-startups/master/README.md
+2025-03-09 23:37:47,675 - __main__ - WARNING - No data collected from GitHub repositories
+2025-03-09 23:37:47,684 - __main__ - INFO - Merging and deduplicating datasets
+2025-03-09 23:38:05,070 - __main__ - INFO - Created merged dataset with 9299 unique companies
+2025-03-09 23:38:05,076 - __main__ - INFO - Handling missing values
+2025-03-09 23:38:05,093 - __main__ - ERROR - Error handling missing values: 'Index' object has no attribute 'median'
+2025-03-09 23:38:05,095 - __main__ - INFO - Creating predictive features
+2025-03-09 23:38:05,120 - __main__ - INFO - Successfully created predictive features
+2025-03-09 23:38:05,257 - __main__ - INFO - Created final dataset with 9299 companies
+2025-03-09 23:38:05,263 - __main__ - INFO - Created high potential startups dataset with 100 companies
+2025-03-09 23:38:05,264 - __main__ - INFO - Created recent startups dataset with 0 companies
+2025-03-09 23:38:05,264 - __main__ - INFO - Creating summary report
+2025-03-09 23:38:05,688 - __main__ - INFO - Summary report created successfully
