@@ -1,0 +1,1605 @@
+import os
+import logging
+import requests
+import pandas as pd
+import numpy as np
+import time
+import json
+import re
+import csv
+from bs4 import BeautifulSoup
+import datetime
+from tqdm import tqdm
+from dotenv import load_dotenv
+import backoff
+import random
+from pathlib import Path
+from io import StringIO
+from selenium import webdriver
+from selenium.webdriver.chrome.options import Options
+from selenium.webdriver.chrome.service import Service
+from selenium.webdriver.common.by import By
+from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.support import expected_conditions as EC
+from webdriver_manager.chrome import ChromeDriverManager
+
+# Set up logging
+logging.basicConfig(
+    level=logging.INFO,
+    format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
+    handlers=[
+        logging.FileHandler("bay_area_startups.log"),
+        logging.StreamHandler()
+    ]
+)
+logger = logging.getLogger(__name__)
+
+# Load environment variables for API keys
+load_dotenv()
+
+class BayAreaStartupCollector:
+    def __init__(self, output_file="bay_area_startups_dataset.csv"):
+        """Initialize the startup data collector."""
+        self.output_file = output_file
+        
+        # Create folders for data storage
+        self.raw_data_folder = "raw_data"
+        self.processed_data_folder = "processed_data"
+        os.makedirs(self.raw_data_folder, exist_ok=True)
+        os.makedirs(self.processed_data_folder, exist_ok=True)
+        
+        # Initialize web driver
+        self.driver = None
+        
+        # Bay Area locations for filtering
+        self.bay_area_locations = [
+            'san francisco', 'oakland', 'berkeley', 'palo alto', 'menlo park', 
+            'mountain view', 'sunnyvale', 'santa clara', 'san jose', 'redwood city',
+            'south san francisco', 'fremont', 'san mateo', 'cupertino', 'emeryville',
+            'hayward', 'milpitas', 'burlingame', 'foster city', 'san carlos',
+            'walnut creek', 'pleasanton', 'san ramon', 'bay area', 'silicon valley'
+        ]
+        
+        # HTTP headers for requests
+        self.headers = {
+            'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36'
+        }
+    
+    def initialize_webdriver(self):
+        """Initialize Chrome webdriver for scraping dynamic content."""
+        if self.driver is None:
+            try:
+                chrome_options = Options()
+                chrome_options.add_argument("--headless")
+                chrome_options.add_argument("--no-sandbox")
+                chrome_options.add_argument("--disable-dev-shm-usage")
+                chrome_options.add_argument("--disable-gpu")
+                chrome_options.add_argument(f"user-agent={self.headers['User-Agent']}")
+                
+                service = Service(ChromeDriverManager().install())
+                self.driver = webdriver.Chrome(service=service, options=chrome_options)
+                logger.info("Initialized Chrome WebDriver")
+                return True
+            except Exception as e:
+                logger.error(f"Failed to initialize WebDriver: {e}")
+                return False
+        return True
+    
+    def close_webdriver(self):
+        """Close the webdriver if it exists."""
+        if self.driver:
+            try:
+                self.driver.quit()
+                self.driver = None
+                logger.info("Closed WebDriver")
+            except Exception as e:
+                logger.error(f"Error closing WebDriver: {e}")
+    
+    @backoff.on_exception(backoff.expo, requests.exceptions.RequestException, max_tries=3)
+    def make_request(self, url, params=None, headers=None):
+        """Make HTTP request with exponential backoff for failed requests."""
+        if not headers:
+            headers = self.headers
+            
+        response = requests.get(url, params=params, headers=headers, timeout=30)
+        response.raise_for_status()
+        return response
+    
+    def collect_datasf_businesses(self):
+        """
+        Collect business registration data from DataSF API.
+        """
+        logger.info("Collecting business registration data from DataSF...")
+        
+        # DataSF API endpoint for registered businesses
+        url = "https://data.sfgov.org/resource/g8m3-pdis.json"
+        
+        # Parameters to filter for active businesses and tech-related NAICS codes
+        tech_naics_codes = [
+            '5112', '5415', '5417',  # Software, Computer Services, R&D
+            '5182', '5191', '5179',  # Data Processing, Internet Publishing, Other Telecom
+            '3341', '3342', '3344',  # Computer Manufacturing, Communications Equipment, Semiconductor
+            '4541', '5413', '5416',  # Electronic Shopping, Architecture/Engineering, Management Consulting
+            '5419'                    # Other Professional Services
+        ]
+        
+        naics_filter = " OR ".join([f"naics_code LIKE '{code}%'" for code in tech_naics_codes])
+        
+        try:
+            # Build query
+            params = {
+                "$where": f"business_start_date > '2010-01-01' AND business_end_date IS NULL AND ({naics_filter})",
+                "$limit": 10000,
+                "$order": "business_start_date DESC"
+            }
+            
+            response = self.make_request(url, params=params)
+            businesses = response.json()
+            
+            if not businesses:
+                logger.warning("No businesses found from DataSF")
+                return pd.DataFrame()
+            
+            logger.info(f"Retrieved {len(businesses)} businesses from DataSF")
+            
+            # Convert to DataFrame
+            df = pd.DataFrame(businesses)
+            
+            # Filter for tech startups (based on business name and NAICS code)
+            tech_keywords = ['tech', 'software', 'app', 'digital', 'ai', 'data', 'analytics', 
+                            'cloud', 'cyber', 'internet', 'web', 'mobile', 'bio', 'health',
+                            'robot', 'auto', 'space', 'drone', 'venture', 'capital', 'lab',
+                            'startup', 'systems', 'solutions', 'platform', 'network']
+            
+            # Create filter for tech keywords in business name
+            name_filter = df['dba_name'].str.lower().apply(
+                lambda name: any(keyword in name for keyword in tech_keywords)
+            ) | df['business_name'].str.lower().apply(
+                lambda name: any(keyword in name for keyword in tech_keywords)
+            )
+            
+            # Get tech businesses
+            tech_businesses = df[name_filter].copy()
+            
+            if tech_businesses.empty:
+                logger.warning("No tech businesses found after filtering")
+                return pd.DataFrame()
+            
+            logger.info(f"Identified {len(tech_businesses)} potential tech startups from DataSF")
+            
+            # Format the data
+            tech_businesses['name'] = tech_businesses['dba_name'].fillna(tech_businesses['business_name'])
+            tech_businesses['founded_date'] = pd.to_datetime(tech_businesses['business_start_date']).dt.strftime('%Y-%m-%d')
+            tech_businesses['location'] = 'San Francisco'
+            tech_businesses['data_source'] = 'DataSF'
+            
+            # Calculate company age
+            tech_businesses['startup_age_years'] = (
+                pd.to_datetime('today') - pd.to_datetime(tech_businesses['business_start_date'])
+            ).dt.days / 365
+            
+            # Select relevant columns
+            result_df = tech_businesses[[
+                'name', 'founded_date', 'location', 'data_source', 'startup_age_years',
+                'naics_code', 'naics', 'supervisor_district', 'neighborhoods_analysis_boundaries'
+            ]].copy()
+            
+            # Save raw data
+            tech_businesses.to_csv(f"{self.raw_data_folder}/datasf_tech_businesses.csv", index=False)
+            
+            return result_df
+            
+        except Exception as e:
+            logger.error(f"Error collecting DataSF business data: {e}")
+            return pd.DataFrame()
+    
+    def collect_ycombinator_data(self):
+        """
+        Collect YCombinator companies that are in the Bay Area.
+        """
+        logger.info("Collecting Y Combinator data...")
+        
+        # Initialize WebDriver
+        if not self.initialize_webdriver():
+            return pd.DataFrame()
+        
+        # Check alternative approach first: use YC public API endpoint if available
+        yc_api_url = "https://www.ycombinator.com/api/companies"
+        
+        try:
+            response = self.make_request(yc_api_url)
+            companies_json = response.json()
+            
+            if companies_json and isinstance(companies_json, list):
+                logger.info(f"Successfully retrieved {len(companies_json)} companies from YC API")
+                
+                # Filter for Bay Area companies
+                bay_area_companies = []
+                
+                for company in companies_json:
+                    # Check if company is in Bay Area
+                    if isinstance(company.get('location', ''), str):
+                        location = company.get('location', '').lower()
+                        if any(loc in location for loc in self.bay_area_locations):
+                            bay_area_companies.append({
+                                'name': company.get('name', ''),
+                                'description': company.get('description', ''),
+                                'location': company.get('location', ''),
+                                'website': company.get('website', ''),
+                                'ycombinator_batch': company.get('batch', ''),
+                                'industries': ', '.join(company.get('tags', [])),
+                                'founded_date': company.get('foundedDate', ''),
+                                'data_source': 'Y Combinator API'
+                            })
+                
+                if bay_area_companies:
+                    logger.info(f"Found {len(bay_area_companies)} Bay Area companies from YC API")
+                    result_df = pd.DataFrame(bay_area_companies)
+                    
+                    # Save raw data
+                    result_df.to_csv(f"{self.raw_data_folder}/yc_companies.csv", index=False)
+                    
+                    return result_df
+                else:
+                    logger.warning("No Bay Area companies found in YC API data")
+            
+        except Exception as e:
+            logger.warning(f"Error accessing YC API, falling back to web scraping: {e}")
+        
+        # If API approach fails, try web scraping
+        yc_url = "https://www.ycombinator.com/companies"
+        
+        try:
+            self.driver.get(yc_url)
+            logger.info("Loaded YC companies page")
+            
+            # Wait for content to load
+            time.sleep(5)
+            
+            # Try to find the company cards with updated selectors
+            company_elements = []
+            possible_selectors = [
+                '.comp-card',
+                '.company-card',
+                '[data-test="company_card"]',
+                '.company',
+                '.company-result',
+                '.CompanyCard',
+                'div[data-testid="company-card"]'
+            ]
+            
+            for selector in possible_selectors:
+                try:
+                    company_elements = self.driver.find_elements(By.CSS_SELECTOR, selector)
+                    if company_elements:
+                        logger.info(f"Found {len(company_elements)} company elements using selector: {selector}")
+                        break
+                except Exception:
+                    continue
+            
+            if not company_elements:
+                # Last resort: get page source and use BeautifulSoup
+                logger.info("No company elements found with CSS selectors, trying BeautifulSoup approach")
+                page_source = self.driver.page_source
+                soup = BeautifulSoup(page_source, 'html.parser')
+                
+                # Save HTML for debugging
+                with open(f"{self.raw_data_folder}/yc_page_source.html", "w", encoding="utf-8") as f:
+                    f.write(page_source)
+                
+                # Try to find companies with BeautifulSoup
+                company_cards = soup.find_all('div', class_=lambda c: c and ('company' in c.lower() or 'card' in c.lower()))
+                logger.info(f"Found {len(company_cards)} potential company cards with BeautifulSoup")
+                
+                # Process company cards from BeautifulSoup
+                yc_companies = []
+                for card in company_cards:
+                    try:
+                        # Extract company name from any header tag
+                        name_tag = card.find(['h1', 'h2', 'h3', 'h4', 'h5', 'h6'])
+                        if not name_tag:
+                            continue
+                        
+                        company_name = name_tag.get_text().strip()
+                        
+                        # Extract description from paragraph
+                        desc_tag = card.find('p')
+                        company_desc = desc_tag.get_text().strip() if desc_tag else ""
+                        
+                        # Extract other info
+                        location_tag = card.find('span', string=lambda s: s and any(loc in s.lower() for loc in self.bay_area_locations))
+                        company_location = location_tag.get_text().strip() if location_tag else ""
+                        
+                        # Only add if we have a Bay Area location
+                        if any(loc in company_location.lower() for loc in self.bay_area_locations):
+                            yc_companies.append({
+                                'name': company_name,
+                                'description': company_desc,
+                                'location': company_location,
+                                'data_source': 'Y Combinator'
+                            })
+                    except Exception as e:
+                        logger.debug(f"Error processing YC company card: {e}")
+                
+                if yc_companies:
+                    logger.info(f"Extracted {len(yc_companies)} Bay Area companies from YC")
+                    result_df = pd.DataFrame(yc_companies)
+                    result_df.to_csv(f"{self.raw_data_folder}/yc_companies.csv", index=False)
+                    return result_df
+            
+            # Process company elements from Selenium
+            yc_companies = []
+            for element in company_elements:
+                try:
+                    # Get company text
+                    company_text = element.text
+                    
+                    # Only process if we can extract data
+                    if company_text and len(company_text) > 5:
+                        # Try to extract location
+                        company_location = ""
+                        location_lines = [line for line in company_text.split('\n') if any(loc in line.lower() for loc in self.bay_area_locations)]
+                        if location_lines:
+                            company_location = location_lines[0].strip()
+                        
+                        # Only add if we have a Bay Area location
+                        if company_location:
+                            # Extract name and description
+                            text_lines = company_text.split('\n')
+                            company_name = text_lines[0] if len(text_lines) > 0 else ""
+                            company_desc = text_lines[1] if len(text_lines) > 1 else ""
+                            
+                            yc_companies.append({
+                                'name': company_name,
+                                'description': company_desc,
+                                'location': company_location,
+                                'data_source': 'Y Combinator'
+                            })
+                except Exception as e:
+                    logger.debug(f"Error processing YC company element: {e}")
+            
+            if yc_companies:
+                logger.info(f"Extracted {len(yc_companies)} Bay Area companies from YC")
+                result_df = pd.DataFrame(yc_companies)
+                result_df.to_csv(f"{self.raw_data_folder}/yc_companies.csv", index=False)
+                return result_df
+            else:
+                logger.warning("No Bay Area companies found in YC data")
+                return pd.DataFrame()
+            
+        except Exception as e:
+            logger.error(f"Error scraping YC data: {e}")
+            return pd.DataFrame()
+    
+    def collect_github_startup_data(self):
+        """
+        Collect startup data from various GitHub repositories that maintain lists of Bay Area companies.
+        """
+        logger.info("Collecting Bay Area startup data from GitHub repositories...")
+        
+        # GitHub repositories with Bay Area startup lists
+        repos = [
+            {
+                'url': 'https://raw.githubusercontent.com/mmccaff/StartupBattlesnake/master/README.md',
+                'type': 'markdown'
+            },
+            {
+                'url': 'https://raw.githubusercontent.com/RyanNaughton/TechCompaniesInSF/master/tech-companies-in-sf.csv',
+                'type': 'csv'
+            },
+            {
+                'url': 'https://raw.githubusercontent.com/agurz/tech-companies-bay-area/main/README.md',
+                'type': 'markdown'
+            }
+        ]
+        
+        all_companies = []
+        
+        for repo in repos:
+            try:
+                response = self.make_request(repo['url'])
+                
+                if repo['type'] == 'csv':
+                    # Parse CSV data
+                    csv_data = StringIO(response.text)
+                    df = pd.read_csv(csv_data)
+                    
+                    # Save raw data
+                    df.to_csv(f"{self.raw_data_folder}/github_repo_{Path(repo['url']).stem}.csv", index=False)
+                    
+                    # Process and extract company data
+                    for _, row in df.iterrows():
+                        try:
+                            company = {}
+                            
+                            # Map columns (adjust based on each CSV structure)
+                            if 'Company' in df.columns:
+                                company['name'] = row['Company']
+                            elif 'name' in df.columns:
+                                company['name'] = row['name']
+                            
+                            if 'Description' in df.columns:
+                                company['description'] = row['Description']
+                            elif 'description' in df.columns:
+                                company['description'] = row['description']
+                            
+                            # Add additional fields if available
+                            for field in ['website', 'location', 'funding', 'size']:
+                                if field in df.columns:
+                                    company[field] = row[field]
+                            
+                            company['data_source'] = f'GitHub: {Path(repo["url"]).stem}'
+                            all_companies.append(company)
+                        except Exception as e:
+                            logger.debug(f"Error processing company row: {e}")
+                    
+                elif repo['type'] == 'markdown':
+                    # Parse Markdown data
+                    md_content = response.text
+                    
+                    # Save raw data
+                    with open(f"{self.raw_data_folder}/github_repo_{Path(repo['url']).stem}.md", "w", encoding="utf-8") as f:
+                        f.write(md_content)
+                    
+                    # Extract company names and descriptions using regex
+                    # This is a simplified approach - actual parsing would depend on MD structure
+                    company_pattern = r'\[(.*?)\]\((.*?)\)(?:\s+-\s+(.*?))?(?:\n|$)'
+                    matches = re.findall(company_pattern, md_content)
+                    
+                    for match in matches:
+                        company_name = match[0].strip()
+                        company_url = match[1].strip()
+                        company_desc = match[2].strip() if len(match) > 2 else ""
+                        
+                        all_companies.append({
+                            'name': company_name,
+                            'website': company_url,
+                            'description': company_desc,
+                            'data_source': f'GitHub: {Path(repo["url"]).stem}'
+                        })
+                
+                logger.info(f"Processed GitHub repository: {repo['url']}")
+                
+            except Exception as e:
+                logger.error(f"Error fetching GitHub repo data from {repo['url']}: {e}")
+        
+        # Convert to DataFrame
+        if all_companies:
+            result_df = pd.DataFrame(all_companies)
+            
+            # Ensure required columns exist
+            if 'name' not in result_df.columns:
+                logger.warning("No 'name' column in GitHub data")
+                return pd.DataFrame()
+            
+            # Add location if missing
+            if 'location' not in result_df.columns:
+                result_df['location'] = 'Bay Area'
+            
+            logger.info(f"Collected {len(result_df)} companies from GitHub repositories")
+            return result_df
+        else:
+            logger.warning("No companies found in GitHub repositories")
+            return pd.DataFrame()
+    
+    def collect_crunchbase_free_data(self):
+        """
+        Collect free Crunchbase data using available public datasets or API.
+        """
+        logger.info("Collecting free Crunchbase data...")
+        
+        # Try to use public Crunchbase datasets from GitHub or other sources
+        crunchbase_datasets = [
+            "https://raw.githubusercontent.com/notpeter/crunchbase-data/master/companies.csv"
+        ]
+        
+        all_companies = []
+        
+        for dataset_url in crunchbase_datasets:
+            try:
+                response = self.make_request(dataset_url)
+                
+                # Parse CSV data
+                csv_data = StringIO(response.text)
+                df = pd.read_csv(csv_data)
+                
+                # Save raw data
+                df.to_csv(f"{self.raw_data_folder}/crunchbase_{Path(dataset_url).stem}.csv", index=False)
+                
+                # Filter for Bay Area companies
+                if 'city' in df.columns or 'location_city' in df.columns:
+                    city_col = 'city' if 'city' in df.columns else 'location_city'
+                    bay_area_df = df[df[city_col].str.lower().apply(
+                        lambda x: any(loc in str(x).lower() for loc in self.bay_area_locations)
+                    ) if pd.notna(df[city_col]) else False].copy()
+                    
+                    if not bay_area_df.empty:
+                        logger.info(f"Found {len(bay_area_df)} Bay Area companies in Crunchbase dataset")
+                        
+                        # Map Crunchbase columns to our standard format
+                        column_mapping = {
+                            'name': 'name',
+                            'homepage_url': 'website',
+                            'category_list': 'industry',
+                            'market': 'market',
+                            'funding_total_usd': 'funding_amount',
+                            'status': 'status',
+                            'country_code': 'country',
+                            'state_code': 'state',
+                            'region': 'region',
+                            'city': 'city',
+                            'founded_at': 'founded_date',
+                            'description': 'description'
+                        }
+                        
+                        # Create new dataframe with mapped columns
+                        mapped_df = pd.DataFrame()
+                        
+                        for our_col, cb_col in column_mapping.items():
+                            if cb_col in bay_area_df.columns:
+                                mapped_df[our_col] = bay_area_df[cb_col]
+                        
+                        mapped_df['data_source'] = 'Crunchbase Public Data'
+                        mapped_df['location'] = mapped_df['city'] if 'city' in mapped_df.columns else 'Bay Area'
+                        
+                        # Convert funding to millions if available
+                        if 'funding_amount' in mapped_df.columns:
+                            mapped_df['funding_amount_millions'] = pd.to_numeric(
+                                mapped_df['funding_amount'], errors='coerce'
+                            ) / 1000000
+                        
+                        # Add to our collection
+                        all_companies.append(mapped_df)
+                
+                logger.info(f"Processed Crunchbase dataset: {dataset_url}")
+                
+            except Exception as e:
+                logger.error(f"Error fetching Crunchbase dataset from {dataset_url}: {e}")
+        
+        # Combine all datasets
+        if all_companies:
+            result_df = pd.concat(all_companies, ignore_index=True)
+            logger.info(f"Collected {len(result_df)} companies from Crunchbase public data")
+            return result_df
+        else:
+            logger.warning("No companies found in Crunchbase public data")
+            return pd.DataFrame()
+    
+    def collect_wellfound_data(self):
+        """
+        Collect startup data from Wellfound (formerly AngelList).
+        """
+        logger.info("Collecting Wellfound data...")
+        
+        # Initialize WebDriver
+        if not self.initialize_webdriver():
+            return pd.DataFrame()
+        
+        # Wellfound URL for Bay Area startups
+        url = "https://wellfound.com/startups/location/san-francisco-bay-area"
+        
+        try:
+            self.driver.get(url)
+            logger.info("Loaded Wellfound page")
+            
+            # Wait for content to load
+            time.sleep(5)
+            
+            # Scroll down to load more startups
+            for _ in range(3):
+                self.driver.execute_script("window.scrollTo(0, document.body.scrollHeight);")
+                time.sleep(2)
+            
+            # Try different selectors for startup cards
+            startup_cards = []
+            possible_selectors = [
+                '.styles_startupCard__TlHr9',
+                '.startup-card',
+                '[data-test="startup-card"]',
+                '.company-card',
+                'div[data-testid="startup-card"]'
+            ]
+            
+            for selector in possible_selectors:
+                try:
+                    startup_cards = self.driver.find_elements(By.CSS_SELECTOR, selector)
+                    if startup_cards:
+                        logger.info(f"Found {len(startup_cards)} startup cards using selector: {selector}")
+                        break
+                except Exception:
+                    continue
+            
+            if not startup_cards:
+                # Use BeautifulSoup as a backup
+                logger.info("No startup cards found with selectors, trying BeautifulSoup")
+                page_source = self.driver.page_source
+                
+                # Save HTML for debugging
+                with open(f"{self.raw_data_folder}/wellfound_page_source.html", "w", encoding="utf-8") as f:
+                    f.write(page_source)
+                
+                soup = BeautifulSoup(page_source, 'html.parser')
+                startup_elements = soup.find_all('div', class_=lambda c: c and ('startup' in c.lower() or 'company' in c.lower()))
+                
+                if not startup_elements:
+                    logger.warning("No startup elements found in Wellfound page")
+                    return pd.DataFrame()
+                
+                # Process startup elements with BeautifulSoup
+                wellfound_startups = []
+                
+                for element in startup_elements:
+                    try:
+                        # Extract startup name
+                        name_tag = element.find(['h2', 'h3', 'h4', 'h5', 'h6'])
+                        if not name_tag:
+                            continue
+                            
+                        startup_name = name_tag.get_text().strip()
+                        
+                        # Extract description
+                        desc_tag = element.find('p')
+                        startup_desc = desc_tag.get_text().strip() if desc_tag else ""
+                        
+                        # Extract location
+                        location_tags = element.find_all(['div', 'span'], string=lambda s: s and any(loc in s.lower() for loc in self.bay_area_locations))
+                        startup_location = location_tags[0].get_text().strip() if location_tags else "Bay Area"
+                        
+                        # Extract funding if available
+                        funding_tag = element.find(['div', 'span'], string=lambda s: s and ('$' in s and ('M' in s or 'k' in s)))
+                        funding_info = funding_tag.get_text().strip() if funding_tag else ""
+                        
+                        # Extract funding amount in millions
+                        funding_amount = None
+                        if funding_info:
+                            funding_match = re.search(r'\$(\d+(?:\.\d+)?)\s*([kKmMbB])', funding_info)
+                            if funding_match:
+                                amount = float(funding_match.group(1))
+                                unit = funding_match.group(2).lower()
+                                
+                                if unit == 'k':
+                                    amount /= 1000  # Convert k to M
+                                elif unit == 'b':
+                                    amount *= 1000  # Convert B to M
+                                
+                                funding_amount = amount
+                        
+                        wellfound_startups.append({
+                            'name': startup_name,
+                            'description': startup_desc,
+                            'location': startup_location,
+                            'funding_info': funding_info,
+                            'funding_amount_millions': funding_amount,
+                            'data_source': 'Wellfound/AngelList'
+                        })
+                    except Exception as e:
+                        logger.debug(f"Error processing Wellfound startup element: {e}")
+                
+                if wellfound_startups:
+                    logger.info(f"Extracted {len(wellfound_startups)} startups from Wellfound using BeautifulSoup")
+                    result_df = pd.DataFrame(wellfound_startups)
+                    result_df.to_csv(f"{self.raw_data_folder}/wellfound_startups.csv", index=False)
+                    return result_df
+                
+                return pd.DataFrame()
+            
+            # Process startup cards from Selenium
+            wellfound_startups = []
+            
+            for card in startup_cards:
+                try:
+                    # Get card text
+                    card_text = card.text
+                    
+                    # Only process if we can extract data
+                    if card_text and len(card_text) > 5:
+                        # Extract name (first line)
+                        text_lines = [line.strip() for line in card_text.split('\n') if line.strip()]
+                        startup_name = text_lines[0] if text_lines else ""
+                        
+                        # Extract description (second line)
+                        startup_desc = text_lines[1] if len(text_lines) > 1 else ""
+                        
+                        # Find location in text
+                        startup_location = "Bay Area"  # Default
+                        for line in text_lines:
+                            if any(loc in line.lower() for loc in self.bay_area_locations):
+                                startup_location = line
+                                break
+                        
+                        # Find funding info (looks for $ sign with numeric values)
+                        funding_info = ""
+                        for line in text_lines:
+                            if '$' in line and any(c.isdigit() for c in line):
+                                funding_info = line
+                                break
+                        
+                        # Extract funding amount in millions
+                        funding_amount = None
+                        if funding_info:
+                            funding_match = re.search(r'\$(\d+(?:\.\d+)?)\s*([kKmMbB])', funding_info)
+                            if funding_match:
+                                amount = float(funding_match.group(1))
+                                unit = funding_match.group(2).lower()
+                                
+                                if unit == 'k':
+                                    amount /= 1000  # Convert k to M
+                                elif unit == 'b':
+                                    amount *= 1000  # Convert B to M
+                                
+                                funding_amount = amount
+                        
+                        wellfound_startups.append({
+                            'name': startup_name,
+                            'description': startup_desc,
+                            'location': startup_location,
+                            'funding_info': funding_info,
+                            'funding_amount_millions': funding_amount,
+                            'data_source': 'Wellfound/AngelList'
+                        })
+                except Exception as e:
+                    logger.debug(f"Error processing Wellfound startup card: {e}")
+            
+            if wellfound_startups:
+                logger.info(f"Extracted {len(wellfound_startups)} startups from Wellfound")
+                result_df = pd.DataFrame(wellfound_startups)
+                result_df.to_csv(f"{self.raw_data_folder}/wellfound_startups.csv", index=False)
+                return result_df
+            else:
+                logger.warning("No startups extracted from Wellfound")
+                return pd.DataFrame()
+            
+        except Exception as e:
+            logger.error(f"Error collecting Wellfound data: {e}")
+            return pd.DataFrame()
+    
+    def collect_sec_edgar_data(self):
+        """
+        Collect data from SEC EDGAR for public and pre-IPO companies.
+        """
+        logger.info("Collecting SEC EDGAR data...")
+        
+        try:
+            # Get company tickers from EDGAR
+            base_url = "https://www.sec.gov/files/company_tickers.json"
+            
+            response = self.make_request(base_url)
+            company_tickers = response.json()
+            
+            # Extract company data
+            companies = []
+            for _, company_data in company_tickers.items():
+                companies.append({
+                    'ticker': company_data.get('ticker'),
+                    'name': company_data.get('title'),
+                    'cik': str(company_data.get('cik_str')).zfill(10)
+                })
+            
+            # Create DataFrame
+            companies_df = pd.DataFrame(companies)
+            
+            # Save raw data
+            companies_df.to_csv(f"{self.raw_data_folder}/sec_edgar_companies.csv", index=False)
+            
+            logger.info(f"Retrieved {len(companies_df)} companies from SEC EDGAR")
+            
+            # Filter for known Bay Area companies
+            # Since SEC doesn't provide location data, we need to match with other sources
+            # This is a simplified approach - in practice, you'd need to use a more robust method
+            
+            # Keywords for Bay Area tech companies in company names
+            bay_area_company_keywords = [
+                'San Francisco', 'SF', 'Silicon Valley', 'Palo Alto', 'Santa Clara',
+                'California', 'Berkeley', 'Oakland', 'Menlo Park', 'Cupertino',
+                'Redwood', 'Sunnyvale', 'San Jose', 'Mountain View'
+            ]
+            
+            # Try to identify Bay Area companies by name
+            potential_bay_area = companies_df[
+                companies_df['name'].str.contains('|'.join(bay_area_company_keywords), case=False, na=False)
+            ].copy()
+            
+            # Now, let's sample 10 recently public tech companies known to be in Bay Area
+            known_bay_area = [
+                'AAPL', 'GOOGL', 'META', 'CRM', 'NVDA', 'ADBE', 'CSCO', 'PYPL', 'UBER', 'AFRM',
+                'AI', 'SNOW', 'U', 'RBLX', 'NET', 'PLTR', 'CRWD', 'OKTA', 'ZS', 'TEAM'
+            ]
+            
+            # Add known Bay Area companies
+            known_df = companies_df[companies_df['ticker'].isin(known_bay_area)].copy()
+            
+            # Combine both datasets
+            bay_area_sec = pd.concat([potential_bay_area, known_df]).drop_duplicates(subset=['cik'])
+            
+            if not bay_area_sec.empty:
+                logger.info(f"Identified {len(bay_area_sec)} potential Bay Area companies from SEC EDGAR")
+                
+                # Add data source
+                bay_area_sec['data_source'] = 'SEC EDGAR'
+                bay_area_sec['location'] = 'Bay Area'
+                
+                # For each company, try to get latest filing to extract more info
+                # This is a simplified approach - in practice, you would need more robust logic
+                
+                return bay_area_sec
+            else:
+                logger.warning("No Bay Area companies identified in SEC EDGAR data")
+                return pd.DataFrame()
+            
+        except Exception as e:
+            logger.error(f"Error collecting SEC EDGAR data: {e}")
+            return pd.DataFrame()
+    
+    def collect_opencorporates_data(self):
+        """
+        Collect data from OpenCorporates API.
+        """
+        logger.info("Collecting OpenCorporates data...")
+        
+        # Check if API key is available
+        api_key = os.getenv('OPENCORPORATES_API_KEY')
+        
+        if not api_key:
+            logger.warning("No OpenCorporates API key provided. Using limited public access.")
+        
+        try:
+            # Search for Bay Area tech companies
+            url = "https://api.opencorporates.com/v0.4/companies/search"
+            
+            # Search for tech companies in San Francisco
+            params = {
+                "q": "technology startup",
+                "jurisdiction_code": "us_ca",
+                "locality": "San Francisco",
+                "per_page": 100
+            }
+            
+            if api_key:
+                params["api_token"] = api_key
+            
+            response = self.make_request(url, params=params)
+            data = response.json()
+            
+            # Extract companies
+            companies = data.get('results', {}).get('companies', [])
+            
+            if not companies:
+                logger.warning("No companies found in OpenCorporates data")
+                return pd.DataFrame()
+            
+            logger.info(f"Retrieved {len(companies)} companies from OpenCorporates")
+            
+            # Process company data
+            opencorp_companies = []
+            
+            for company_data in companies:
+                company = company_data.get('company', {})
+                
+                # Extract basic info
+                name = company.get('name', '')
+                company_number = company.get('company_number', '')
+                jurisdiction = company.get('jurisdiction_code', '')
+                status = company.get('current_status', '')
+                incorporation_date = company.get('incorporation_date', '')
+                
+                # Skip inactive or unrelated companies
+                if status.lower() in ['inactive', 'dissolved', 'revoked']:
+                    continue
+                
+                opencorp_companies.append({
+                    'name': name,
+                    'registration_number': company_number,
+                    'jurisdiction': jurisdiction,
+                    'status': status,
+                    'founded_date': incorporation_date,
+                    'location': 'San Francisco, CA',
+                    'data_source': 'OpenCorporates'
+                })
+            
+            if opencorp_companies:
+                result_df = pd.DataFrame(opencorp_companies)
+                
+                # Save raw data
+                result_df.to_csv(f"{self.raw_data_folder}/opencorporates_companies.csv", index=False)
+                
+                logger.info(f"Processed {len(result_df)} active companies from OpenCorporates")
+                return result_df
+            else:
+                logger.warning("No active companies found in OpenCorporates data")
+                return pd.DataFrame()
+            
+        except Exception as e:
+            logger.error(f"Error collecting OpenCorporates data: {e}")
+            return pd.DataFrame()
+    
+    def collect_techcrunch_data(self):
+        """
+        Collect startup data from TechCrunch.
+        """
+        logger.info("Collecting TechCrunch data...")
+        
+        # Initialize WebDriver if needed
+        if not self.initialize_webdriver():
+            return pd.DataFrame()
+        
+        try:
+            # TechCrunch search for Bay Area startups
+            search_urls = [
+                "https://techcrunch.com/search/San+Francisco+startup",
+                "https://techcrunch.com/search/Silicon+Valley+startup",
+                "https://techcrunch.com/search/Bay+Area+startup+funding"
+            ]
+            
+            all_startup_mentions = []
+            
+            for search_url in search_urls:
+                try:
+                    self.driver.get(search_url)
+                    logger.info(f"Loaded TechCrunch search: {search_url}")
+                    
+                    # Wait for content to load
+                    time.sleep(5)
+                    
+                    # Get page source
+                    page_source = self.driver.page_source
+                    soup = BeautifulSoup(page_source, 'html.parser')
+                    
+                    # Find article cards
+                    article_elements = soup.select('div.post-block')
+                    
+                    if not article_elements:
+                        logger.warning(f"No article elements found in {search_url}")
+                        continue
+                    
+                    logger.info(f"Found {len(article_elements)} article elements in {search_url}")
+                    
+                    # Process articles (limit to 20 per search to avoid overloading)
+                    for article in article_elements[:20]:
+                        try:
+                            # Extract article title
+                            title_elem = article.select_one('h2 a')
+                            if not title_elem:
+                                continue
+                                
+                            article_title = title_elem.get_text().strip()
+                            article_url = title_elem['href'] if 'href' in title_elem.attrs else ""
+                            
+                            # Extract date
+                            date_elem = article.select_one('time')
+                            article_date = date_elem['datetime'] if date_elem and 'datetime' in date_elem.attrs else ""
+                            
+                            # Extract startup names mentioned in title
+                            # This is a heuristic approach - may miss some companies
+                            startup_names = []
+                            
+                            # Look for company names in quotes
+                            quote_matches = re.findall(r'"([^"]+)"', article_title)
+                            for match in quote_matches:
+                                if len(match.split()) <= 4:  # Likely a company name if few words
+                                    startup_names.append(match)
+                            
+                            # Look for company names followed by "raises" or similar funding terms
+                            funding_matches = re.findall(r'([A-Z][a-zA-Z0-9\s]+)(?:\s+raises|\s+secures|\s+closes|\s+lands|\s+gets|\s+announces)', article_title)
+                            for match in funding_matches:
+                                if len(match.split()) <= 4:  # Likely a company name if few words
+                                    startup_names.append(match.strip())
+                            
+                            # Extract funding amount from title
+                            funding_amount = None
+                            funding_match = re.search(r'\$(\d+(?:\.\d+)?)\s*([mMbB]illion|[mMbB]|\s*million|\s*billion)', article_title)
+                            if funding_match:
+                                amount = float(funding_match.group(1))
+                                unit = funding_match.group(2).lower()
+                                
+                                if 'b' in unit:
+                                    amount *= 1000  # Convert billions to millions
+                                
+                                funding_amount = amount
+                            
+                            # If no startups found but article mentions funding, try to visit the article
+                            if (not startup_names or funding_amount) and article_url:
+                                try:
+                                    # Visit article page to extract more info
+                                    article_response = self.make_request(article_url)
+                                    article_soup = BeautifulSoup(article_response.text, 'html.parser')
+                                    
+                                    # Extract article content
+                                    content_elem = article_soup.select_one('div.article-content')
+                                    if content_elem:
+                                        article_content = content_elem.get_text()
+                                        
+                                        # Look for company mentions
+                                        # This pattern looks for company indicators followed by names
+                                        company_patterns = [
+                                            r'startup ([A-Z][a-zA-Z0-9\s]+) (?:has|is|announced|raised)',
+                                            r'company ([A-Z][a-zA-Z0-9\s]+) (?:has|is|announced|raised)',
+                                            r'([A-Z][a-zA-Z0-9\s]+),\s+(?:a|the)\s+(?:startup|company|platform|app)'
+                                        ]
+                                        
+                                        for pattern in company_patterns:
+                                            for match in re.finditer(pattern, article_content):
+                                                company_name = match.group(1).strip()
+                                                if len(company_name.split()) <= 4 and company_name not in startup_names:
+                                                    startup_names.append(company_name)
+                                        
+                                        # If still no funding amount, try to extract it
+                                        if not funding_amount:
+                                            funding_match = re.search(r'\$(\d+(?:\.\d+)?)\s*([mMbB]illion|[mMbB]|\s*million|\s*billion)', article_content)
+                                            if funding_match:
+                                                amount = float(funding_match.group(1))
+                                                unit = funding_match.group(2).lower()
+                                                
+                                                if 'b' in unit:
+                                                    amount *= 1000  # Convert billions to millions
+                                                
+                                                funding_amount = amount
+                                except Exception as e:
+                                    logger.debug(f"Error processing article page {article_url}: {e}")
+                            
+                            # Add each startup mention
+                            for startup_name in startup_names:
+                                all_startup_mentions.append({
+                                    'name': startup_name,
+                                    'article_title': article_title,
+                                    'article_url': article_url,
+                                    'article_date': article_date,
+                                    'funding_amount_millions': funding_amount,
+                                    'data_source': 'TechCrunch'
+                                })
+                            
+                            # If no specific startup found but article has funding info, add a generic entry
+                            if not startup_names and funding_amount:
+                                # Extract potential company name from title
+                                title_words = article_title.split()
+                                for i in range(len(title_words) - 1):
+                                    if title_words[i].lower() in ['startup', 'company'] and i > 0:
+                                        potential_name = title_words[i-1]
+                                        if potential_name[0].isupper():
+                                            all_startup_mentions.append({
+                                                'name': potential_name,
+                                                'article_title': article_title,
+                                                'article_url': article_url,
+                                                'article_date': article_date,
+                                                'funding_amount_millions': funding_amount,
+                                                'data_source': 'TechCrunch'
+                                            })
+                                            break
+                            
+                        except Exception as e:
+                            logger.debug(f"Error processing TechCrunch article: {e}")
+                    
+                    # Sleep between searches
+                    time.sleep(2)
+                    
+                except Exception as e:
+                    logger.error(f"Error processing TechCrunch search {search_url}: {e}")
+            
+            if all_startup_mentions:
+                result_df = pd.DataFrame(all_startup_mentions)
+                
+                # Save raw data
+                result_df.to_csv(f"{self.raw_data_folder}/techcrunch_mentions.csv", index=False)
+                
+                logger.info(f"Extracted {len(result_df)} startup mentions from TechCrunch")
+                return result_df
+            else:
+                logger.warning("No startup mentions found in TechCrunch data")
+                return pd.DataFrame()
+            
+        except Exception as e:
+            logger.error(f"Error collecting TechCrunch data: {e}")
+            return pd.DataFrame()
+    
+    def collect_census_data(self):
+        """
+        Collect census data for Bay Area to provide context.
+        """
+        logger.info("Collecting Census data for Bay Area...")
+        
+        try:
+            # Census API for Bay Area (San Francisco MSA)
+            # This is a simplified approach - actual census data collection would be more complex
+            
+            # For demonstration, create a small dataset with key Bay Area demographic info
+            census_data = {
+                'region': ['Bay Area'],
+                'population': [7750000],
+                'median_household_income': [120000],
+                'tech_workforce_percentage': [12.5],
+                'median_housing_cost': [1200000],
+                'college_degree_percentage': [48.5]
+            }
+            
+            census_df = pd.DataFrame(census_data)
+            
+            # Save census data
+            census_df.to_csv(f"{self.raw_data_folder}/bay_area_census.csv", index=False)
+            
+            logger.info("Collected Census data for Bay Area context")
+            return census_df
+            
+        except Exception as e:
+            logger.error(f"Error collecting Census data: {e}")
+            return pd.DataFrame()
+    
+    def merge_and_deduplicate(self, datasets):
+        """
+        Merge multiple datasets and handle duplicates intelligently.
+        """
+        logger.info("Merging and deduplicating datasets...")
+        
+        if not datasets:
+            logger.warning("No datasets to merge")
+            return pd.DataFrame()
+        
+        try:
+            # Concatenate all datasets
+            combined_df = pd.concat(datasets, ignore_index=True)
+            
+            # Ensure we have company names
+            if 'name' not in combined_df.columns or combined_df['name'].isna().all():
+                logger.error("No company names in combined dataset")
+                return pd.DataFrame()
+            
+            # Clean company names for better matching
+            combined_df['name_clean'] = combined_df['name'].str.lower().str.strip()
+            combined_df['name_clean'] = combined_df['name_clean'].str.replace(r'[^\w\s]', '', regex=True)
+            combined_df['name_clean'] = combined_df['name_clean'].str.replace(r'\s+', ' ', regex=True)
+            
+            # Handle duplicates by creating groups of similar companies
+            merged_data = []
+            processed_names = set()
+            
+            for name in combined_df['name_clean'].unique():
+                if name in processed_names or pd.isna(name) or name == '':
+                    continue
+                
+                # Get all rows for this company
+                company_rows = combined_df[combined_df['name_clean'] == name]
+                
+                # Create a merged company entry
+                merged_company = {}
+                
+                # For each column, prioritize non-null values
+                for column in combined_df.columns:
+                    if column == 'name_clean':
+                        continue
+                        
+                    # For 'data_source', combine all sources
+                    if column == 'data_source':
+                        sources = company_rows['data_source'].dropna().unique()
+                        merged_company[column] = ', '.join(sources) if len(sources) > 0 else None
+                    else:
+                        # For other columns, take the first non-null value
+                        non_null_values = company_rows[column].dropna()
+                        if not non_null_values.empty:
+                            merged_company[column] = non_null_values.iloc[0]
+                
+                merged_data.append(merged_company)
+                processed_names.add(name)
+            
+            if not merged_data:
+                logger.error("No data after merging and deduplication")
+                return pd.DataFrame()
+            
+            result_df = pd.DataFrame(merged_data)
+            
+            # Drop the temporary column
+            if 'name_clean' in result_df.columns:
+                result_df = result_df.drop(columns=['name_clean'])
+            
+            logger.info(f"Created merged dataset with {len(result_df)} unique companies")
+            return result_df
+            
+        except Exception as e:
+            logger.error(f"Error merging datasets: {e}")
+            return pd.DataFrame()
+    
+    def calculate_predictive_features(self, df):
+        """
+        Calculate features for predictive analysis.
+        """
+        logger.info("Calculating predictive features...")
+        
+        try:
+            # Make a copy to avoid modifying the original
+            result_df = df.copy()
+            
+            # 1. Calculate company age if founded_date exists
+            if 'founded_date' in result_df.columns:
+                # Convert to datetime, handling various formats
+                result_df['founded_date_dt'] = pd.to_datetime(result_df['founded_date'], errors='coerce')
+                
+                # Calculate age in years
+                result_df['startup_age_years'] = (
+                    pd.to_datetime('today') - result_df['founded_date_dt']
+                ).dt.days / 365
+                
+                # Clean up
+                result_df = result_df.drop(columns=['founded_date_dt'])
+            
+            # 2. Map funding stages to numeric values for analysis
+            if 'funding_stage' in result_df.columns:
+                # Define stage mapping (lower = earlier)
+                stage_mapping = {
+                    'seed': 1,
+                    'angel': 1,
+                    'pre-seed': 0,
+                    'series a': 2,
+                    'series b': 3,
+                    'series c': 4,
+                    'series d': 5,
+                    'series e': 6,
+                    'series f': 7,
+                    'series g': 8,
+                    'series h': 9,
+                    'growth': 5,
+                    'late stage': 6,
+                    'ipo': 10,
+                    'public': 10,
+                    'acquired': 11
+                }
+                
+                # Create numeric funding stage
+                result_df['funding_stage_numeric'] = result_df['funding_stage'].str.lower().map(stage_mapping)
+            
+            # 3. Extract employee count range
+            if 'employee_count' in result_df.columns:
+                # If employee count is already numeric, use it directly
+                if pd.api.types.is_numeric_dtype(result_df['employee_count']):
+                    pass
+                else:
+                    # Try to extract numeric values from ranges like "1-10", "11-50", etc.
+                    def extract_employee_count(value):
+                        if pd.isna(value):
+                            return None
+                        
+                        # If already numeric, return as is
+                        if str(value).isdigit():
+                            return int(value)
+                        
+                        # Try to extract range midpoint
+                        range_match = re.search(r'(\d+)[^\d]+(\d+)', str(value))
+                        if range_match:
+                            lower = int(range_match.group(1))
+                            upper = int(range_match.group(2))
+                            return (lower + upper) / 2
+                        
+                        # Try to extract single number
+                        number_match = re.search(r'(\d+)', str(value))
+                        if number_match:
+                            return int(number_match.group(1))
+                        
+                        return None
+                    
+                    result_df['employee_count'] = result_df['employee_count'].apply(extract_employee_count)
+            
+            # 4. Calculate news mention recency if available
+            if 'article_date' in result_df.columns:
+                result_df['article_date_dt'] = pd.to_datetime(result_df['article_date'], errors='coerce')
+                
+                # Calculate days since latest news mention
+                result_df['days_since_news'] = (
+                    pd.to_datetime('today') - result_df['article_date_dt']
+                ).dt.days
+                
+                # Clean up
+                result_df = result_df.drop(columns=['article_date_dt'])
+            
+            # 5. Normalize and combine multiple data points for predictive score
+            # First, identify which metrics are available
+            potential_metrics = [
+                ('funding_amount_millions', 0.3),
+                ('funding_stage_numeric', 0.2),
+                ('startup_age_years', 0.15),
+                ('employee_count', 0.2),
+                ('days_since_news', 0.15)
+            ]
+            
+            # Create columns for normalized values
+            available_metrics = []
+            
+            for metric, weight in potential_metrics:
+                if metric in result_df.columns and not result_df[metric].isna().all():
+                    # Create normalized version (0-1 scale)
+                    norm_col = f"{metric}_norm"
+                    
+                    # Handle special cases
+                    if metric == 'startup_age_years':
+                        # For age, we want newer startups to score higher (lower age = higher score)
+                        max_val = result_df[metric].max()
+                        if max_val > 0:
+                            result_df[norm_col] = 1 - (result_df[metric] / max_val)
+                            result_df[norm_col] = result_df[norm_col].clip(0, 1)
+                            available_metrics.append((norm_col, weight))
+                    elif metric == 'days_since_news':
+                        # For news recency, lower is better (more recent = higher score)
+                        max_val = result_df[metric].max()
+                        if max_val > 0:
+                            result_df[norm_col] = 1 - (result_df[metric] / max_val)
+                            result_df[norm_col] = result_df[norm_col].clip(0, 1)
+                            available_metrics.append((norm_col, weight))
+                    else:
+                        # For other metrics, higher values = higher score
+                        max_val = result_df[metric].max()
+                        if max_val > 0:
+                            result_df[norm_col] = result_df[metric] / max_val
+                            available_metrics.append((norm_col, weight))
+            
+            # Calculate composite growth potential score
+            if available_metrics:
+                # Initialize score column
+                result_df['growth_potential_score'] = 0
+                total_weight = 0
+                
+                # Calculate weighted sum
+                for col, weight in available_metrics:
+                    result_df['growth_potential_score'] += result_df[col] * weight
+                    total_weight += weight
+                
+                # Normalize to 0-100 scale
+                if total_weight > 0:
+                    result_df['growth_potential_score'] = (result_df['growth_potential_score'] / total_weight) * 100
+                    
+                # Clean up normalization columns
+                for col, _ in available_metrics:
+                    result_df = result_df.drop(columns=[col])
+            else:
+                logger.warning("Insufficient metrics available for growth potential scoring")
+                
+            return result_df
+            
+        except Exception as e:
+            logger.error(f"Error calculating predictive features: {e}", exc_info=True)
+            return df
+    
+    def create_market_segment_features(self, df):
+        """
+        Create features related to market segments and industries.
+        """
+        logger.info("Creating market segment features...")
+        
+        try:
+            # Make a copy to avoid modifying the original
+            result_df = df.copy()
+            
+            # Define market segments and their keywords
+            market_segments = {
+                'AI/ML': ['ai', 'artificial intelligence', 'machine learning', 'deep learning', 'neural', 'nlp'],
+                'Fintech': ['fintech', 'financial tech', 'payment', 'banking', 'insurtech', 'lending', 'wealth'],
+                'Healthtech': ['health', 'medical', 'biotech', 'life science', 'genomics', 'telemedicine'],
+                'SaaS': ['saas', 'software as a service', 'enterprise software', 'cloud software'],
+                'Ecommerce': ['ecommerce', 'e-commerce', 'retail tech', 'marketplace', 'shopping'],
+                'Edtech': ['edtech', 'education', 'learning', 'training'],
+                'Cleantech': ['clean', 'climate', 'energy', 'solar', 'sustainable', 'battery'],
+                'Crypto/Blockchain': ['crypto', 'blockchain', 'bitcoin', 'ethereum', 'web3', 'token'],
+                'Consumer': ['consumer', 'social media', 'gaming', 'entertainment', 'app'],
+                'DevTools': ['developer', 'devtools', 'programming', 'infrastructure', 'api']
+            }
+            
+            # Text columns that might contain industry information
+            text_columns = ['description', 'market', 'categories', 'industry']
+            existing_columns = [col for col in text_columns if col in result_df.columns]
+            
+            # Skip if no descriptive columns available
+            if not existing_columns:
+                logger.warning("No descriptive columns available for market segment analysis")
+                return result_df
+            
+            # Combine all text columns
+            result_df['combined_text'] = ''
+            for col in existing_columns:
+                result_df['combined_text'] += ' ' + result_df[col].fillna('').astype(str).str.lower()
+            
+            # Create segment flags
+            for segment, keywords in market_segments.items():
+                # Check if any keyword is in the combined text
+                result_df[f'is_{segment.lower().replace("/", "_")}'] = result_df['combined_text'].apply(
+                    lambda text: any(keyword.lower() in text for keyword in keywords)
+                )
+            
+            # Drop temporary column
+            result_df = result_df.drop(columns=['combined_text'])
+            
+            # Create a primary segment column (most likely segment)
+            segment_columns = [f'is_{segment.lower().replace("/", "_")}' for segment in market_segments.keys()]
+            
+            # Count how many segments each startup belongs to
+            result_df['segment_count'] = result_df[segment_columns].sum(axis=1)
+            
+            # For startups with multiple segments, determine primary segment based on text analysis
+            # This is a simplified approach - could be improved with NLP/ML techniques
+            for idx, row in result_df[result_df['segment_count'] > 1].iterrows():
+                best_segment = None
+                most_keywords = 0
+                
+                for segment, keywords in market_segments.items():
+                    col_name = f'is_{segment.lower().replace("/", "_")}'
+                    if row[col_name]:
+                        # Count keyword occurrences
+                        combined_text = ' '.join(
+                            [str(row[col]) for col in existing_columns if col in row and pd.notna(row[col])]
+                        )
+                        keyword_count = sum(combined_text.lower().count(keyword.lower()) for keyword in keywords)
+                        
+                        if keyword_count > most_keywords:
+                            most_keywords = keyword_count
+                            best_segment = segment
+                
+                if best_segment:
+                    result_df.at[idx, 'primary_segment'] = best_segment
+            
+            # For startups with exactly one segment, use that as primary
+            for idx, row in result_df[result_df['segment_count'] == 1].iterrows():
+                for segment in market_segments.keys():
+                    col_name = f'is_{segment.lower().replace("/", "_")}'
+                    if row[col_name]:
+                        result_df.at[idx, 'primary_segment'] = segment
+                        break
+            
+            return result_df
+            
+        except Exception as e:
+            logger.error(f"Error creating market segment features: {e}", exc_info=True)
+            return df
+    
+    def collect_and_process_all_data(self):
+        """
+        Main method to orchestrate the entire data collection and processing pipeline.
+        """
+        logger.info("Starting complete data collection process for Bay Area startups")
+        
+        # Step 1: Collect raw data from all sources
+        datasets = []
+        
+        # Government data
+        datasf_df = self.collect_datasf_businesses()
+        if not datasf_df.empty:
+            datasets.append(datasf_df)
+        
+        # Y Combinator
+        yc_df = self.collect_ycombinator_data()
+        if not yc_df.empty:
+            datasets.append(yc_df)
+        
+        # GitHub repositories
+        github_df = self.collect_github_startup_data()
+        if not github_df.empty:
+            datasets.append(github_df)
+        
+        # Crunchbase free data
+        crunchbase_df = self.collect_crunchbase_free_data()
+        if not crunchbase_df.empty:
+            datasets.append(crunchbase_df)
+        
+        # Wellfound/AngelList
+        wellfound_df = self.collect_wellfound_data()
+        if not wellfound_df.empty:
+            datasets.append(wellfound_df)
+        
+        # SEC EDGAR
+        sec_df = self.collect_sec_edgar_data()
+        if not sec_df.empty:
+            datasets.append(sec_df)
+        
+        # OpenCorporates
+        opencorp_df = self.collect_opencorporates_data()
+        if not opencorp_df.empty:
+            datasets.append(opencorp_df)
+        
+        # TechCrunch
+        techcrunch_df = self.collect_techcrunch_data()
+        if not techcrunch_df.empty:
+            datasets.append(techcrunch_df)
+        
+        # Census data
+        census_df = self.collect_census_data()
+        
+        # Step 2: Merge and deduplicate
+        logger.info("Merging all collected datasets")
+        if datasets:
+            merged_df = self.merge_and_deduplicate(datasets)
+            
+            if not merged_df.empty:
+                # Step 3: Calculate features for predictive analysis
+                logger.info("Calculating features for predictive analysis")
+                enriched_df = self.calculate_predictive_features(merged_df)
+                
+                # Step 4: Create market segment features
+                segmented_df = self.create_market_segment_features(enriched_df)
+                
+                # Step 5: Save final dataset
+                segmented_df['data_collected_date'] = datetime.datetime.now().strftime('%Y-%m-%d')
+                segmented_df.to_csv(self.output_file, index=False)
+                logger.info(f"Saved final dataset with {len(segmented_df)} companies to {self.output_file}")
+                
+                # Step 6: Create auxiliary datasets
+                
+                # Create a dataset of top-funded startups
+                if 'funding_amount_millions' in segmented_df.columns and not segmented_df['funding_amount_millions'].isna().all():
+                    top_funded = segmented_df.sort_values('funding_amount_millions', ascending=False).head(100)
+                    top_funded.to_csv(f"{self.processed_data_folder}/top_funded_startups.csv", index=False)
+                    logger.info(f"Created dataset of top-funded startups with {len(top_funded)} entries")
+                
+                # Create a dataset of recently founded startups
+                if 'startup_age_years' in segmented_df.columns and not segmented_df['startup_age_years'].isna().all():
+                    recent_startups = segmented_df[segmented_df['startup_age_years'] <= 2].sort_values('startup_age_years')
+                    recent_startups.to_csv(f"{self.processed_data_folder}/recent_startups.csv", index=False)
+                    logger.info(f"Created dataset of recent startups with {len(recent_startups)} entries")
+                
+                # Create a dataset of high-growth-potential startups
+                if 'growth_potential_score' in segmented_df.columns:
+                    high_potential = segmented_df.sort_values('growth_potential_score', ascending=False).head(100)
+                    high_potential.to_csv(f"{self.processed_data_folder}/high_potential_startups.csv", index=False)
+                    logger.info(f"Created dataset of high-potential startups with {len(high_potential)} entries")
+                
+                # Create datasets by segment
+                if 'primary_segment' in segmented_df.columns:
+                    for segment in segmented_df['primary_segment'].dropna().unique():
+                        segment_df = segmented_df[segmented_df['primary_segment'] == segment]
+                        safe_segment = segment.lower().replace('/', '_').replace(' ', '_')
+                        segment_df.to_csv(f"{self.processed_data_folder}/{safe_segment}_startups.csv", index=False)
+                        logger.info(f"Created dataset of {segment} startups with {len(segment_df)} entries")
+                
+                return segmented_df
+            else:
+                logger.error("Failed to create merged dataset")
+                return pd.DataFrame()
+        else:
+            logger.error("No datasets collected")
+            return pd.DataFrame()
+        
+    def cleanup(self):
+        """Clean up resources when done."""
+        self.close_webdriver()
+
+
+# Execute data collection if run as script
+if __name__ == "__main__":
+    try:
+        # Create collector
+        collector = BayAreaStartupCollector()
+        
+        # Run collection process
+        result_df = collector.collect_and_process_all_data()
+        
+        # Print summary
+        if not result_df.empty:
+            print("\nCollection complete! Dataset statistics:")
+            print(f"Total startups collected: {len(result_df)}")
+            
+            # Data source breakdown
+            if 'data_source' in result_df.columns:
+                print("\nData sources:")
+                sources = result_df['data_source'].str.split(', ').explode().value_counts()
+                for source, count in sources.items():
+                    print(f"- {source}: {count}")
+            
+            # Funding breakdown
+            if 'funding_amount_millions' in result_df.columns and not result_df['funding_amount_millions'].isna().all():
+                print("\nFunding statistics:")
+                funding_stats = result_df['funding_amount_millions'].describe()
+                print(f"- Mean funding: ${funding_stats['mean']:.2f}M")
+                print(f"- Median funding: ${funding_stats['50%']:.2f}M")
+                print(f"- Max funding: ${funding_stats['max']:.2f}M")
+                
+            # Segment breakdown
+            if 'primary_segment' in result_df.columns:
+                print("\nSegment distribution:")
+                segments = result_df['primary_segment'].value_counts()
+                for segment, count in segments.items():
+                    if pd.notna(segment):
+                        print(f"- {segment}: {count}")
+            
+            # Top companies by growth potential
+            if 'growth_potential_score' in result_df.columns:
+                print("\nTop 10 startups by growth potential:")
+                top_10 = result_df.sort_values('growth_potential_score', ascending=False).head(10)
+                for idx, row in top_10.iterrows():
+                    print(f"- {row['name']}: {row['growth_potential_score']:.1f}/100")
+        
+        # Clean up resources
+        collector.cleanup()
+        
+    except Exception as e:
+        logger.error(f"Unhandled error in main execution: {e}", exc_info=True)

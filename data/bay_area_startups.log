@@ -1,0 +1,65 @@
+2025-03-09 20:32:27,123 - __main__ - INFO - Starting complete data collection process for Bay Area startups
+2025-03-09 20:32:27,123 - __main__ - INFO - Collecting business registration data from DataSF...
+2025-03-09 20:32:27,628 - backoff - INFO - Backing off make_request(...) for 0.4s (requests.exceptions.HTTPError: 400 Client Error: Bad Request for url: https://data.sfgov.org/resource/g8m3-pdis.json?%24where=business_start_date+%3E+%272010-01-01%27+AND+business_end_date+IS+NULL+AND+%28naics_code+LIKE+%275112%25%27+OR+naics_code+LIKE+%275415%25%27+OR+naics_code+LIKE+%275417%25%27+OR+naics_code+LIKE+%275182%25%27+OR+naics_code+LIKE+%275191%25%27+OR+naics_code+LIKE+%275179%25%27+OR+naics_code+LIKE+%273341%25%27+OR+naics_code+LIKE+%273342%25%27+OR+naics_code+LIKE+%273344%25%27+OR+naics_code+LIKE+%274541%25%27+OR+naics_code+LIKE+%275413%25%27+OR+naics_code+LIKE+%275416%25%27+OR+naics_code+LIKE+%275419%25%27%29&%24limit=10000&%24order=business_start_date+DESC)
+2025-03-09 20:32:28,497 - backoff - INFO - Backing off make_request(...) for 0.3s (requests.exceptions.HTTPError: 400 Client Error: Bad Request for url: https://data.sfgov.org/resource/g8m3-pdis.json?%24where=business_start_date+%3E+%272010-01-01%27+AND+business_end_date+IS+NULL+AND+%28naics_code+LIKE+%275112%25%27+OR+naics_code+LIKE+%275415%25%27+OR+naics_code+LIKE+%275417%25%27+OR+naics_code+LIKE+%275182%25%27+OR+naics_code+LIKE+%275191%25%27+OR+naics_code+LIKE+%275179%25%27+OR+naics_code+LIKE+%273341%25%27+OR+naics_code+LIKE+%273342%25%27+OR+naics_code+LIKE+%273344%25%27+OR+naics_code+LIKE+%274541%25%27+OR+naics_code+LIKE+%275413%25%27+OR+naics_code+LIKE+%275416%25%27+OR+naics_code+LIKE+%275419%25%27%29&%24limit=10000&%24order=business_start_date+DESC)
+2025-03-09 20:32:29,209 - backoff - ERROR - Giving up make_request(...) after 3 tries (requests.exceptions.HTTPError: 400 Client Error: Bad Request for url: https://data.sfgov.org/resource/g8m3-pdis.json?%24where=business_start_date+%3E+%272010-01-01%27+AND+business_end_date+IS+NULL+AND+%28naics_code+LIKE+%275112%25%27+OR+naics_code+LIKE+%275415%25%27+OR+naics_code+LIKE+%275417%25%27+OR+naics_code+LIKE+%275182%25%27+OR+naics_code+LIKE+%275191%25%27+OR+naics_code+LIKE+%275179%25%27+OR+naics_code+LIKE+%273341%25%27+OR+naics_code+LIKE+%273342%25%27+OR+naics_code+LIKE+%273344%25%27+OR+naics_code+LIKE+%274541%25%27+OR+naics_code+LIKE+%275413%25%27+OR+naics_code+LIKE+%275416%25%27+OR+naics_code+LIKE+%275419%25%27%29&%24limit=10000&%24order=business_start_date+DESC)
+2025-03-09 20:32:29,210 - __main__ - ERROR - Error collecting DataSF business data: 400 Client Error: Bad Request for url: https://data.sfgov.org/resource/g8m3-pdis.json?%24where=business_start_date+%3E+%272010-01-01%27+AND+business_end_date+IS+NULL+AND+%28naics_code+LIKE+%275112%25%27+OR+naics_code+LIKE+%275415%25%27+OR+naics_code+LIKE+%275417%25%27+OR+naics_code+LIKE+%275182%25%27+OR+naics_code+LIKE+%275191%25%27+OR+naics_code+LIKE+%275179%25%27+OR+naics_code+LIKE+%273341%25%27+OR+naics_code+LIKE+%273342%25%27+OR+naics_code+LIKE+%273344%25%27+OR+naics_code+LIKE+%274541%25%27+OR+naics_code+LIKE+%275413%25%27+OR+naics_code+LIKE+%275416%25%27+OR+naics_code+LIKE+%275419%25%27%29&%24limit=10000&%24order=business_start_date+DESC
+2025-03-09 20:32:29,235 - __main__ - INFO - Collecting Y Combinator data...
+2025-03-09 20:32:29,236 - WDM - INFO - ====== WebDriver manager ======
+2025-03-09 20:32:29,366 - WDM - INFO - Get LATEST chromedriver version for google-chrome
+2025-03-09 20:32:29,415 - WDM - INFO - Get LATEST chromedriver version for google-chrome
+2025-03-09 20:32:29,452 - WDM - INFO - Driver [/Users/hk/.wdm/drivers/chromedriver/mac64/133.0.6943.141/chromedriver-mac-arm64/chromedriver] found in cache
+2025-03-09 20:32:30,840 - __main__ - INFO - Initialized Chrome WebDriver
+2025-03-09 20:32:31,055 - backoff - INFO - Backing off make_request(...) for 1.0s (requests.exceptions.HTTPError: 404 Client Error: Not Found for url: https://www.ycombinator.com/api/companies)
+2025-03-09 20:32:32,184 - backoff - INFO - Backing off make_request(...) for 0.3s (requests.exceptions.HTTPError: 404 Client Error: Not Found for url: https://www.ycombinator.com/api/companies)
+2025-03-09 20:32:32,637 - backoff - ERROR - Giving up make_request(...) after 3 tries (requests.exceptions.HTTPError: 404 Client Error: Not Found for url: https://www.ycombinator.com/api/companies)
+2025-03-09 20:32:32,637 - __main__ - WARNING - Error accessing YC API, falling back to web scraping: 404 Client Error: Not Found for url: https://www.ycombinator.com/api/companies
+2025-03-09 20:32:33,092 - __main__ - INFO - Loaded YC companies page
+2025-03-09 20:32:38,190 - __main__ - INFO - No company elements found with CSS selectors, trying BeautifulSoup approach
+2025-03-09 20:32:38,228 - __main__ - INFO - Found 0 potential company cards with BeautifulSoup
+2025-03-09 20:32:38,228 - __main__ - WARNING - No Bay Area companies found in YC data
+2025-03-09 20:32:38,230 - __main__ - INFO - Collecting Bay Area startup data from GitHub repositories...
+2025-03-09 20:32:38,390 - backoff - INFO - Backing off make_request(...) for 0.3s (requests.exceptions.HTTPError: 404 Client Error: Not Found for url: https://raw.githubusercontent.com/mmccaff/StartupBattlesnake/master/README.md)
+2025-03-09 20:32:38,696 - backoff - INFO - Backing off make_request(...) for 0.9s (requests.exceptions.HTTPError: 404 Client Error: Not Found for url: https://raw.githubusercontent.com/mmccaff/StartupBattlesnake/master/README.md)
+2025-03-09 20:32:39,652 - backoff - ERROR - Giving up make_request(...) after 3 tries (requests.exceptions.HTTPError: 404 Client Error: Not Found for url: https://raw.githubusercontent.com/mmccaff/StartupBattlesnake/master/README.md)
+2025-03-09 20:32:39,652 - __main__ - ERROR - Error fetching GitHub repo data from https://raw.githubusercontent.com/mmccaff/StartupBattlesnake/master/README.md: 404 Client Error: Not Found for url: https://raw.githubusercontent.com/mmccaff/StartupBattlesnake/master/README.md
+2025-03-09 20:32:39,814 - backoff - INFO - Backing off make_request(...) for 0.8s (requests.exceptions.HTTPError: 404 Client Error: Not Found for url: https://raw.githubusercontent.com/RyanNaughton/TechCompaniesInSF/master/tech-companies-in-sf.csv)
+2025-03-09 20:32:40,621 - backoff - INFO - Backing off make_request(...) for 2.0s (requests.exceptions.HTTPError: 404 Client Error: Not Found for url: https://raw.githubusercontent.com/RyanNaughton/TechCompaniesInSF/master/tech-companies-in-sf.csv)
+2025-03-09 20:32:42,662 - backoff - ERROR - Giving up make_request(...) after 3 tries (requests.exceptions.HTTPError: 404 Client Error: Not Found for url: https://raw.githubusercontent.com/RyanNaughton/TechCompaniesInSF/master/tech-companies-in-sf.csv)
+2025-03-09 20:32:42,663 - __main__ - ERROR - Error fetching GitHub repo data from https://raw.githubusercontent.com/RyanNaughton/TechCompaniesInSF/master/tech-companies-in-sf.csv: 404 Client Error: Not Found for url: https://raw.githubusercontent.com/RyanNaughton/TechCompaniesInSF/master/tech-companies-in-sf.csv
+2025-03-09 20:32:42,798 - backoff - INFO - Backing off make_request(...) for 0.2s (requests.exceptions.HTTPError: 404 Client Error: Not Found for url: https://raw.githubusercontent.com/agurz/tech-companies-bay-area/main/README.md)
+2025-03-09 20:32:43,003 - backoff - INFO - Backing off make_request(...) for 0.6s (requests.exceptions.HTTPError: 404 Client Error: Not Found for url: https://raw.githubusercontent.com/agurz/tech-companies-bay-area/main/README.md)
+2025-03-09 20:32:43,672 - backoff - ERROR - Giving up make_request(...) after 3 tries (requests.exceptions.HTTPError: 404 Client Error: Not Found for url: https://raw.githubusercontent.com/agurz/tech-companies-bay-area/main/README.md)
+2025-03-09 20:32:43,672 - __main__ - ERROR - Error fetching GitHub repo data from https://raw.githubusercontent.com/agurz/tech-companies-bay-area/main/README.md: 404 Client Error: Not Found for url: https://raw.githubusercontent.com/agurz/tech-companies-bay-area/main/README.md
+2025-03-09 20:32:43,673 - __main__ - WARNING - No companies found in GitHub repositories
+2025-03-09 20:32:43,677 - __main__ - INFO - Collecting free Crunchbase data...
+2025-03-09 20:32:44,427 - __main__ - ERROR - Error fetching Crunchbase dataset from https://raw.githubusercontent.com/notpeter/crunchbase-data/master/companies.csv: The truth value of a Series is ambiguous. Use a.empty, a.bool(), a.item(), a.any() or a.all().
+2025-03-09 20:32:44,428 - __main__ - WARNING - No companies found in Crunchbase public data
+2025-03-09 20:32:44,434 - __main__ - INFO - Collecting Wellfound data...
+2025-03-09 20:32:47,132 - __main__ - INFO - Loaded Wellfound page
+2025-03-09 20:32:58,284 - __main__ - INFO - No startup cards found with selectors, trying BeautifulSoup
+2025-03-09 20:32:58,292 - __main__ - WARNING - No startup elements found in Wellfound page
+2025-03-09 20:32:58,302 - __main__ - INFO - Collecting SEC EDGAR data...
+2025-03-09 20:32:58,452 - backoff - INFO - Backing off make_request(...) for 0.4s (requests.exceptions.HTTPError: 403 Client Error: Forbidden for url: https://www.sec.gov/files/company_tickers.json)
+2025-03-09 20:32:58,962 - backoff - INFO - Backing off make_request(...) for 0.5s (requests.exceptions.HTTPError: 403 Client Error: Forbidden for url: https://www.sec.gov/files/company_tickers.json)
+2025-03-09 20:32:59,579 - backoff - ERROR - Giving up make_request(...) after 3 tries (requests.exceptions.HTTPError: 403 Client Error: Forbidden for url: https://www.sec.gov/files/company_tickers.json)
+2025-03-09 20:32:59,579 - __main__ - ERROR - Error collecting SEC EDGAR data: 403 Client Error: Forbidden for url: https://www.sec.gov/files/company_tickers.json
+2025-03-09 20:32:59,579 - __main__ - INFO - Collecting OpenCorporates data...
+2025-03-09 20:32:59,579 - __main__ - WARNING - No OpenCorporates API key provided. Using limited public access.
+2025-03-09 20:33:00,268 - backoff - INFO - Backing off make_request(...) for 0.9s (requests.exceptions.HTTPError: 401 Client Error: Unauthorized for url: https://api.opencorporates.com/v0.4/companies/search?q=technology+startup&jurisdiction_code=us_ca&locality=San+Francisco&per_page=100)
+2025-03-09 20:33:01,961 - backoff - INFO - Backing off make_request(...) for 1.2s (requests.exceptions.HTTPError: 401 Client Error: Unauthorized for url: https://api.opencorporates.com/v0.4/companies/search?q=technology+startup&jurisdiction_code=us_ca&locality=San+Francisco&per_page=100)
+2025-03-09 20:33:03,808 - backoff - ERROR - Giving up make_request(...) after 3 tries (requests.exceptions.HTTPError: 401 Client Error: Unauthorized for url: https://api.opencorporates.com/v0.4/companies/search?q=technology+startup&jurisdiction_code=us_ca&locality=San+Francisco&per_page=100)
+2025-03-09 20:33:03,808 - __main__ - ERROR - Error collecting OpenCorporates data: 401 Client Error: Unauthorized for url: https://api.opencorporates.com/v0.4/companies/search?q=technology+startup&jurisdiction_code=us_ca&locality=San+Francisco&per_page=100
+2025-03-09 20:33:03,811 - __main__ - INFO - Collecting TechCrunch data...
+2025-03-09 20:34:49,526 - __main__ - INFO - Loaded TechCrunch search: https://techcrunch.com/search/San+Francisco+startup
+2025-03-09 20:34:54,628 - __main__ - WARNING - No article elements found in https://techcrunch.com/search/San+Francisco+startup
+2025-03-09 20:34:57,384 - __main__ - INFO - Loaded TechCrunch search: https://techcrunch.com/search/Silicon+Valley+startup
+2025-03-09 20:35:02,491 - __main__ - WARNING - No article elements found in https://techcrunch.com/search/Silicon+Valley+startup
+2025-03-09 20:35:03,671 - __main__ - INFO - Loaded TechCrunch search: https://techcrunch.com/search/Bay+Area+startup+funding
+2025-03-09 20:35:08,803 - __main__ - WARNING - No article elements found in https://techcrunch.com/search/Bay+Area+startup+funding
+2025-03-09 20:35:08,804 - __main__ - WARNING - No startup mentions found in TechCrunch data
+2025-03-09 20:35:08,833 - __main__ - INFO - Collecting Census data for Bay Area...
+2025-03-09 20:35:08,860 - __main__ - INFO - Collected Census data for Bay Area context
+2025-03-09 20:35:08,861 - __main__ - INFO - Merging all collected datasets
+2025-03-09 20:35:08,861 - __main__ - ERROR - No datasets collected
+2025-03-09 20:35:09,127 - __main__ - INFO - Closed WebDriver

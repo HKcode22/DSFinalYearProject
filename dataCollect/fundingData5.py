@@ -11,7 +11,6 @@ from datetime import datetime, timedelta
 import time
 import matplotlib.pyplot as plt
 import seaborn as sns
-import numpy as np
 
 # Create directories for output
 os.makedirs("data", exist_ok=True)
