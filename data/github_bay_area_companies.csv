@@ -1,0 +1,11 @@
+company_name,industry,location,data_source
+Airbnb,Travel/Hospitality,San Francisco,Fallback Data
+Stripe,Fintech,San Francisco,Fallback Data
+Lyft,Transportation,San Francisco,Fallback Data
+Uber,Transportation,San Francisco,Fallback Data
+DoorDash,Food Delivery,San Francisco,Fallback Data
+Coinbase,Cryptocurrency,San Francisco,Fallback Data
+Discord,Communications,San Francisco,Fallback Data
+Figma,Design Software,San Francisco,Fallback Data
+Slack,Business Communications,San Francisco,Fallback Data
+Square,Fintech,San Francisco,Fallback Data

@@ -1,8 +1,0 @@
-name,valuation,funding_amount,location,industry,founding_year,data_source
-OpenAI,80000000000,11300000000,San Francisco,AI,2015,CB Insights
-Databricks,43000000000,3500000000,San Francisco,Data & Analytics,2013,CB Insights
-Stripe,50000000000,2200000000,San Francisco,FinTech,2010,CB Insights
-Anthropic,15000000000,4100000000,San Francisco,AI,2021,CB Insights
-Rippling,11250000000,1200000000,San Francisco,HR Tech,2016,CB Insights
-Plaid,13400000000,734000000,San Francisco,FinTech,2013,CB Insights
-Instacart,9000000000,2700000000,San Francisco,Delivery,2012,CB Insights
