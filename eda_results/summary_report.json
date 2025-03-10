@@ -1,0 +1,52 @@
+{
+    "total_companies": 9299,
+    "processing_date": "2025-03-09",
+    "data_sources": "bay_area_startups_master.csv, Crunchbase_Alt_companies.csv, Crunchbase_Alt_crunchbase-companies.csv",
+    "age_statistics": {
+        "mean_age": 16.741049540347287,
+        "median_age": 15.1,
+        "max_age": 185.3
+    },
+    "top_potential_startups": [
+        {
+            "name": NaN,
+            "score": 100.0
+        },
+        {
+            "name": "VRCommerce",
+            "score": 47.4635725849973
+        },
+        {
+            "name": "Healvo",
+            "score": 47.43658931462493
+        },
+        {
+            "name": "IcedTea",
+            "score": 47.43658931462493
+        },
+        {
+            "name": "Rentberry",
+            "score": 47.43658931462493
+        },
+        {
+            "name": "Made.it",
+            "score": 47.40960604425256
+        },
+        {
+            "name": "Siren Care IVS",
+            "score": 47.40960604425256
+        },
+        {
+            "name": "Gazelle Integrated Media",
+            "score": 47.38262277388019
+        },
+        {
+            "name": "Soundctl",
+            "score": 47.38262277388019
+        },
+        {
+            "name": "Epic Sky",
+            "score": 47.38262277388019
+        }
+    ]
+}

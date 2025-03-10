@@ -1,0 +1,803 @@
+import os
+import logging
+import pandas as pd
+import numpy as np
+import requests
+import re
+import json
+import time
+from datetime import datetime
+from io import StringIO
+from bs4 import BeautifulSoup
+from tqdm import tqdm
+import matplotlib.pyplot as plt
+import seaborn as sns
+from thefuzz import fuzz, process
+from sodapy import Socrata
+
+# Set up logging
+logging.basicConfig(
+    level=logging.INFO,
+    format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
+    handlers=[
+        logging.FileHandler("bay_area_startups.log"),
+        logging.StreamHandler()
+    ]
+)
+logger = logging.getLogger(__name__)
+
+class BayAreaStartupDataProcessor:
+    def __init__(self):
+        """Initialize the data processor."""
+        # Create directory structure
+        self.raw_data_folder = "raw_data"
+        self.processed_data_folder = "processed_data"
+        self.output_folder = "output"
+        self.eda_folder = "eda_results"
+        
+        for folder in [self.raw_data_folder, self.processed_data_folder, 
+                       self.output_folder, self.eda_folder]:
+            os.makedirs(folder, exist_ok=True)
+        
+        # Bay Area locations for filtering
+        self.bay_area_locations = [
+            'san francisco', 'oakland', 'berkeley', 'palo alto', 'menlo park', 
+            'mountain view', 'sunnyvale', 'santa clara', 'san jose', 'redwood city',
+            'south san francisco', 'fremont', 'san mateo', 'cupertino', 'emeryville',
+            'hayward', 'milpitas', 'burlingame', 'foster city', 'san carlos',
+            'walnut creek', 'pleasanton', 'san ramon', 'bay area', 'silicon valley'
+        ]
+        
+        # HTTP headers for requests
+        self.headers = {
+            'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36'
+        }
+    
+    def load_provided_csv_files(self, file_paths):
+        """Load and process the provided CSV files."""
+        logger.info("Loading provided CSV files")
+        
+        all_dfs = []
+        
+        for file_path in file_paths:
+            try:
+                df = pd.read_csv(file_path)
+                logger.info(f"Loaded {len(df)} records from {file_path}")
+                
+                # Standardize column names
+                df.columns = [col.strip().lower().replace(' ', '_') for col in df.columns]
+                
+                # Add source information
+                df['data_source'] = os.path.basename(file_path)
+                
+                # Save to raw data folder
+                output_path = f"{self.raw_data_folder}/{os.path.basename(file_path)}"
+                df.to_csv(output_path, index=False)
+                
+                all_dfs.append(df)
+            except Exception as e:
+                logger.error(f"Error loading {file_path}: {e}")
+        
+        # Combine all dataframes
+        if all_dfs:
+            combined_df = pd.concat(all_dfs, ignore_index=True)
+            logger.info(f"Combined {len(combined_df)} records from provided CSV files")
+            return combined_df
+        else:
+            logger.warning("No data loaded from provided CSV files")
+            return pd.DataFrame()
+    
+    def collect_datasf_businesses(self):
+        """Collect business registration data from DataSF API."""
+        logger.info("Collecting DataSF business registration data")
+        
+        try:
+            # Use Socrata client for DataSF API
+            client = Socrata("data.sfgov.org", None)
+            
+            # Query with correct column names
+            tech_naics_codes = [
+                '5112', '5415', '5417',  # Software, Computer Services, R&D
+                '5182', '5191', '5179',  # Data Processing, Internet Publishing, Telecom
+                '3341', '3342', '3344',  # Computer Manufacturing, Communications Equipment
+                '5413', '5416'           # Scientific Services, Management Consulting
+            ]
+            
+            naics_filter = " OR ".join([f"naic_code LIKE '{code}%'" for code in tech_naics_codes])
+            
+            # Build query with proper field names
+            query = f"""
+                SELECT ownership_name, dba_name, full_business_address, 
+                city, state, business_zip, dba_start_date, dba_end_date, 
+                location_start_date, location_end_date, naic_code, 
+                naic_code_description, supervisor_district
+                WHERE dba_start_date > '2010-01-01' 
+                AND dba_end_date IS NULL
+                AND ({naics_filter})
+                LIMIT 10000
+            """
+            
+            results = client.get("g8m3-pdis", query=query)
+            
+            if not results:
+                logger.warning("No businesses found from DataSF")
+                return pd.DataFrame()
+            
+            logger.info(f"Retrieved {len(results)} businesses from DataSF")
+            
+            # Convert to DataFrame
+            df = pd.DataFrame(results)
+            
+            # Filter for tech businesses
+            tech_keywords = ['tech', 'software', 'app', 'digital', 'ai', 'data', 'analytics', 
+                            'cloud', 'cyber', 'internet', 'web', 'mobile', 'bio', 'health',
+                            'robot', 'auto', 'space', 'drone', 'startup', 'systems']
+            
+            name_filter = df['dba_name'].str.lower().apply(
+                lambda name: any(keyword in str(name).lower() for keyword in tech_keywords) if pd.notna(name) else False
+            ) | df['ownership_name'].str.lower().apply(
+                lambda name: any(keyword in str(name).lower() for keyword in tech_keywords) if pd.notna(name) else False
+            )
+            
+            tech_df = df[name_filter].copy()
+            
+            if tech_df.empty:
+                logger.warning("No tech businesses found after filtering")
+                return pd.DataFrame()
+            
+            logger.info(f"Identified {len(tech_df)} potential tech startups from DataSF")
+            
+            # Format the data to standard schema
+            tech_df['name'] = tech_df['dba_name'].fillna(tech_df['ownership_name'])
+            tech_df['founded_date'] = pd.to_datetime(tech_df['dba_start_date']).dt.strftime('%Y-%m-%d')
+            tech_df['location'] = tech_df['full_business_address'] + ', ' + tech_df['city'].fillna('San Francisco')
+            tech_df['data_source'] = 'DataSF'
+            tech_df['industry'] = tech_df['naic_code_description']
+            
+            # Calculate company age
+            tech_df['startup_age_years'] = (
+                pd.to_datetime('today') - pd.to_datetime(tech_df['dba_start_date'])
+            ).dt.days / 365
+            
+            # Save raw data
+            tech_df.to_csv(f"{self.raw_data_folder}/datasf_tech_businesses.csv", index=False)
+            
+            return tech_df
+            
+        except Exception as e:
+            logger.error(f"Error collecting DataSF business data: {e}")
+            return pd.DataFrame()
+    
+    def collect_crunchbase_free_data(self):
+        """Collect startup data from free Crunchbase alternatives."""
+        logger.info("Collecting free Crunchbase data")
+        
+        crunchbase_alt_urls = [
+            "https://raw.githubusercontent.com/notpeter/crunchbase-data/master/companies.csv",
+            "https://raw.githubusercontent.com/datahoarder/crunchbase-october-2013/master/crunchbase-companies.csv"
+        ]
+        
+        all_data = []
+        
+        for url in crunchbase_alt_urls:
+            try:
+                response = requests.get(url, headers=self.headers, timeout=30)
+                response.raise_for_status()
+                
+                # Parse CSV data
+                df = pd.read_csv(StringIO(response.text))
+                
+                # Standardize column names
+                df.columns = [col.strip().lower().replace(' ', '_') for col in df.columns]
+                
+                # Filter for Bay Area companies
+                location_cols = ['location', 'city', 'state_code', 'region']
+                location_present = [col for col in location_cols if col in df.columns]
+                
+                if location_present:
+                    # Create a combined location column for filtering
+                    df['combined_location'] = ''
+                    for loc_col in location_present:
+                        df['combined_location'] += df[loc_col].fillna('').astype(str) + ' '
+                    
+                    bay_area_mask = df['combined_location'].str.lower().apply(
+                        lambda x: any(loc in x for loc in self.bay_area_locations)
+                    )
+                    filtered_df = df[bay_area_mask].copy()
+                    
+                    # Drop temporary column
+                    filtered_df.drop('combined_location', axis=1, inplace=True)
+                    
+                    if not filtered_df.empty:
+                        logger.info(f"Found {len(filtered_df)} Bay Area companies in {url}")
+                        filtered_df['data_source'] = f'Crunchbase_Alt_{os.path.basename(url)}'
+                        all_data.append(filtered_df)
+                    else:
+                        logger.warning(f"No Bay Area companies found in {url}")
+                else:
+                    logger.warning(f"No location columns found in {url}")
+            except Exception as e:
+                logger.error(f"Error collecting data from {url}: {e}")
+        
+        # Combine all dataframes
+        if all_data:
+            combined_df = pd.concat(all_data, ignore_index=True)
+            
+            # Standardize column names
+            if 'name' not in combined_df.columns and 'company_name' in combined_df.columns:
+                combined_df['name'] = combined_df['company_name']
+            
+            if 'founded_date' not in combined_df.columns and 'founded_at' in combined_df.columns:
+                combined_df['founded_date'] = combined_df['founded_at']
+                
+            # Save raw data
+            combined_df.to_csv(f"{self.raw_data_folder}/crunchbase_alternative_data.csv", index=False)
+            
+            logger.info(f"Collected {len(combined_df)} companies from Crunchbase alternatives")
+            return combined_df
+        else:
+            logger.warning("No data collected from Crunchbase alternatives")
+            return pd.DataFrame()
+    
+    def collect_github_startup_data(self):
+        """Collect startup data from GitHub repositories."""
+        logger.info("Collecting GitHub startup data")
+        
+        github_repos = [
+            {
+                'url': 'https://raw.githubusercontent.com/BesselStudio/tech-companies-sf-bay-area/main/README.md',
+                'type': 'markdown'
+            },
+            {
+                'url': 'https://raw.githubusercontent.com/karllhughes/chicago-tech-companies/master/companies.csv',
+                'type': 'csv'
+            },
+            {
+                'url': 'https://raw.githubusercontent.com/tksf/awesome-silicon-valley-startups/master/README.md',
+                'type': 'markdown'
+            }
+        ]
+        
+        all_data = []
+        
+        for repo in github_repos:
+            try:
+                response = requests.get(repo['url'], headers=self.headers, timeout=30)
+                response.raise_for_status()
+                
+                if repo['type'] == 'csv':
+                    # Parse CSV data
+                    df = pd.read_csv(StringIO(response.text))
+                    
+                    # Add source
+                    df['data_source'] = f"GitHub_{os.path.basename(repo['url'])}"
+                    
+                    # Keep track of data from this source
+                    all_data.append(df)
+                    
+                elif repo['type'] == 'markdown':
+                    # Extract company data from markdown
+                    companies = []
+                    content = response.text
+                    
+                    # Look for markdown links and tables
+                    # Simple link pattern: [Company Name](https://website.com)
+                    link_pattern = r'\[(.*?)\]\((https?://.*?)\)'
+                    for match in re.finditer(link_pattern, content):
+                        name = match.group(1).strip()
+                        website = match.group(2).strip()
+                        
+                        # Only include if it looks like a company (not navigation)
+                        if len(name) > 2 and 'http' in website and '##' not in name:
+                            companies.append({
+                                'name': name,
+                                'website': website,
+                                'data_source': f"GitHub_{os.path.basename(repo['url'])}"
+                            })
+                    
+                    if companies:
+                        md_df = pd.DataFrame(companies)
+                        all_data.append(md_df)
+                        
+                logger.info(f"Processed {repo['url']}")
+                
+            except Exception as e:
+                logger.error(f"Error collecting data from {repo['url']}: {e}")
+        
+        # Combine all dataframes
+        if all_data:
+            combined_df = pd.concat(all_data, ignore_index=True)
+            
+            # Filter for Bay Area companies if location information is available
+            if 'location' in combined_df.columns:
+                bay_area_mask = combined_df['location'].str.lower().apply(
+                    lambda x: any(loc in str(x).lower() for loc in self.bay_area_locations) if pd.notna(x) else False
+                )
+                filtered_df = combined_df[bay_area_mask].copy()
+                logger.info(f"Filtered to {len(filtered_df)} Bay Area companies from GitHub")
+            else:
+                filtered_df = combined_df
+                logger.info(f"Could not filter by location, keeping all {len(filtered_df)} companies from GitHub")
+            
+            # Save raw data
+            filtered_df.to_csv(f"{self.raw_data_folder}/github_startup_data.csv", index=False)
+            
+            return filtered_df
+        else:
+            logger.warning("No data collected from GitHub repositories")
+            return pd.DataFrame()
+    
+    def merge_and_deduplicate(self, datasets):
+        """Merge multiple datasets and handle duplicates."""
+        logger.info("Merging and deduplicating datasets")
+        
+        if not datasets:
+            logger.warning("No datasets to merge")
+            return pd.DataFrame()
+        
+        try:
+            # Concatenate all datasets
+            combined_df = pd.concat(datasets, ignore_index=True)
+            
+            # Ensure we have company names
+            if 'name' not in combined_df.columns or combined_df['name'].isna().all():
+                logger.error("No company names in combined dataset")
+                return pd.DataFrame()
+            
+            # Clean company names for better matching
+            combined_df['name_clean'] = combined_df['name'].astype(str).str.lower().str.strip()
+            combined_df['name_clean'] = combined_df['name_clean'].str.replace(r'[^\w\s]', '', regex=True)
+            combined_df['name_clean'] = combined_df['name_clean'].str.replace(r'\s+', ' ', regex=True)
+            
+            # Handle duplicates by creating groups of similar companies
+            merged_data = []
+            processed_names = set()
+            
+            for name in combined_df['name_clean'].unique():
+                if name in processed_names or pd.isna(name) or name == '':
+                    continue
+                
+                # Get all rows for this company
+                company_rows = combined_df[combined_df['name_clean'] == name]
+                
+                # Create a merged company entry
+                merged_company = {}
+                
+                # For each column, prioritize non-null values
+                for column in combined_df.columns:
+                    if column == 'name_clean':
+                        continue
+                        
+                    # For 'data_source', combine all sources
+                    if column == 'data_source':
+                        sources = company_rows['data_source'].dropna().unique()
+                        merged_company[column] = ', '.join(sources) if len(sources) > 0 else None
+                    else:
+                        # For other columns, take the first non-null value
+                        non_null_values = company_rows[column].dropna()
+                        if not non_null_values.empty:
+                            merged_company[column] = non_null_values.iloc[0]
+                
+                merged_data.append(merged_company)
+                processed_names.add(name)
+            
+            if not merged_data:
+                logger.error("No data after merging and deduplication")
+                return pd.DataFrame()
+            
+            result_df = pd.DataFrame(merged_data)
+            
+            # Drop the temporary column
+            if 'name_clean' in result_df.columns:
+                result_df = result_df.drop(columns=['name_clean'])
+            
+            logger.info(f"Created merged dataset with {len(result_df)} unique companies")
+            return result_df
+            
+        except Exception as e:
+            logger.error(f"Error merging datasets: {e}")
+            return pd.DataFrame()
+    
+    def handle_missing_values(self, df):
+        """Handle missing values in the dataset."""
+        logger.info("Handling missing values")
+        
+        try:
+            # Make a copy to avoid modifying the original
+            result_df = df.copy()
+            
+            # Handle missing founding dates
+            if 'founded_date' in result_df.columns:
+                # Try to extract year from company name or description if available
+                missing_founded = result_df['founded_date'].isna()
+                
+                if 'description' in result_df.columns:
+                    # Look for year patterns in descriptions
+                    year_pattern = r'founded in (\d{4})|established in (\d{4})|since (\d{4})'
+                    
+                    for idx in result_df[missing_founded].index:
+                        desc = str(result_df.loc[idx, 'description'])
+                        match = re.search(year_pattern, desc.lower())
+                        
+                        if match:
+                            # Extract the first non-None group
+                            year = next((g for g in match.groups() if g is not None), None)
+                            if year:
+                                result_df.loc[idx, 'founded_date'] = f"{year}-01-01"
+                
+                # For still missing dates, use the median founding date
+                still_missing = result_df['founded_date'].isna()
+                if any(still_missing) and any(~still_missing):
+                    # Convert to datetime for calculation
+                    result_df['founded_date_temp'] = pd.to_datetime(result_df['founded_date'], errors='coerce')
+                    
+                    # Get median year
+                    valid_years = pd.DatetimeIndex(result_df['founded_date_temp'].dropna()).year
+                    if len(valid_years) > 0:
+                        median_year = int(valid_years.median())
+                        median_date = f"{median_year}-01-01"
+                        
+                        result_df.loc[still_missing, 'founded_date'] = median_date
+                    
+                    # Clean up
+                    result_df = result_df.drop(columns=['founded_date_temp'])
+            
+            # Handle missing locations
+            if 'location' in result_df.columns:
+                # Fill missing locations with 'San Francisco, CA'
+                result_df['location'] = result_df['location'].fillna('San Francisco, CA')
+            
+            # Handle missing industries
+            if 'industry' in result_df.columns:
+                # Fill missing industries with 'Technology'
+                result_df['industry'] = result_df['industry'].fillna('Technology')
+            
+            # Handle missing employee counts
+            if 'employee_count' in result_df.columns:
+                # Fill missing employee counts with median
+                median_employees = result_df['employee_count'].median()
+                if pd.notna(median_employees):
+                    result_df['employee_count'] = result_df['employee_count'].fillna(median_employees)
+                else:
+                    # If median is NA, use a default value
+                    result_df['employee_count'] = result_df['employee_count'].fillna(10)
+            
+            # Handle missing funding amounts
+            if 'funding_amount_millions' in result_df.columns:
+                # Try to infer from employee count if available
+                if 'employee_count' in result_df.columns:
+                    # Create a simple model: funding ~ employee_count
+                    mask = (result_df['funding_amount_millions'].notna()) & (result_df['employee_count'].notna())
+                    
+                    if mask.sum() > 5:  # Only if we have enough data points
+                        from sklearn.linear_model import LinearRegression
+                        
+                        # Fit model
+                        X = result_df.loc[mask, 'employee_count'].values.reshape(-1, 1)
+                        y = result_df.loc[mask, 'funding_amount_millions'].values
+                        
+                        model = LinearRegression()
+                        model.fit(X, y)
+                        
+                        # Predict missing values
+                        missing_mask = (result_df['funding_amount_millions'].isna()) & (result_df['employee_count'].notna())
+                        if missing_mask.sum() > 0:
+                            X_pred = result_df.loc[missing_mask, 'employee_count'].values.reshape(-1, 1)
+                            result_df.loc[missing_mask, 'funding_amount_millions'] = model.predict(X_pred)
+                
+                # Fill remaining missing values with industry median
+                if 'industry' in result_df.columns:
+                    for industry in result_df['industry'].dropna().unique():
+                        industry_mask = result_df['industry'] == industry
+                        industry_median = result_df.loc[industry_mask, 'funding_amount_millions'].median()
+                        
+                        if pd.notna(industry_median):
+                            missing_mask = (result_df['industry'] == industry) & (result_df['funding_amount_millions'].isna())
+                            result_df.loc[missing_mask, 'funding_amount_millions'] = industry_median
+                
+                # Fill any remaining missing values with overall median
+                median_funding = result_df['funding_amount_millions'].median()
+                if pd.notna(median_funding):
+                    result_df['funding_amount_millions'] = result_df['funding_amount_millions'].fillna(median_funding)
+                else:
+                    # If median is NA, use a default value
+                    result_df['funding_amount_millions'] = result_df['funding_amount_millions'].fillna(1.0)
+            
+            logger.info("Successfully handled missing values")
+            return result_df
+            
+        except Exception as e:
+            logger.error(f"Error handling missing values: {e}")
+            return df
+    
+    def create_predictive_features(self, df):
+        """Create features useful for predictive analysis."""
+        logger.info("Creating predictive features")
+        
+        try:
+            # Make a copy to avoid modifying the original
+            result_df = df.copy()
+            
+            # Calculate company age in years
+            if 'founded_date' in result_df.columns:
+                result_df['founded_date_dt'] = pd.to_datetime(result_df['founded_date'], errors='coerce')
+                today = pd.Timestamp('2025-03-09')  # Current date
+                
+                result_df['company_age_years'] = ((today - result_df['founded_date_dt']).dt.days / 365).round(1)
+                
+                # Clean up
+                result_df = result_df.drop(columns=['founded_date_dt'])
+            
+            # Create industry category
+            if 'industry' in result_df.columns:
+                # Define industry mappings
+                industry_mapping = {
+                    'AI': ['artificial intelligence', 'ai', 'machine learning', 'ml', 'deep learning', 'neural'],
+                    'Fintech': ['fintech', 'financial', 'banking', 'payment', 'insurance', 'lending'],
+                    'Health Tech': ['health', 'medical', 'biotech', 'genomics', 'life sciences', 'pharma'],
+                    'SaaS': ['saas', 'software as a service', 'cloud', 'enterprise software'],
+                    'E-commerce': ['ecommerce', 'e-commerce', 'retail', 'marketplace', 'shopping'],
+                    'Consumer': ['consumer', 'social media', 'gaming', 'entertainment', 'app']
+                }
+                
+                # Create industry category column
+                result_df['industry_category'] = 'Other'
+                
+                for category, keywords in industry_mapping.items():
+                    # Match keywords in industry column
+                    mask = result_df['industry'].str.lower().apply(
+                        lambda x: any(keyword in str(x).lower() for keyword in keywords) if pd.notna(x) else False
+                    )
+                    result_df.loc[mask, 'industry_category'] = category
+            
+            # Create funding efficiency metric if both funding and age available
+            if all(col in result_df.columns for col in ['funding_amount_millions', 'company_age_years']):
+                # Calculate funding per year
+                result_df['funding_per_year'] = result_df['funding_amount_millions'] / result_df['company_age_years']
+                
+                # Handle infinity (new companies with age near 0)
+                result_df['funding_per_year'] = result_df['funding_per_year'].replace([np.inf, -np.inf], np.nan)
+                
+                # Fill NA with median
+                median_funding_per_year = result_df['funding_per_year'].median()
+                if pd.notna(median_funding_per_year):
+                    result_df['funding_per_year'] = result_df['funding_per_year'].fillna(median_funding_per_year)
+            
+            # Create location value score
+            if 'location' in result_df.columns:
+                # Define location tiers
+                location_tiers = {
+                    'Tier 1': ['san francisco', 'palo alto', 'menlo park'],
+                    'Tier 2': ['mountain view', 'sunnyvale', 'redwood city', 'south san francisco', 'berkeley'],
+                    'Tier 3': ['oakland', 'san jose', 'fremont', 'santa clara']
+                }
+                
+                # Create location tier column
+                result_df['location_tier'] = 'Other'
+                
+                for tier, locations in location_tiers.items():
+                    # Match locations
+                    mask = result_df['location'].str.lower().apply(
+                        lambda x: any(loc in str(x).lower() for loc in locations) if pd.notna(x) else False
+                    )
+                    result_df.loc[mask, 'location_tier'] = tier
+                
+                # Convert tier to numeric score
+                tier_mapping = {'Tier 1': 3, 'Tier 2': 2, 'Tier 3': 1, 'Other': 0}
+                result_df['location_score'] = result_df['location_tier'].map(tier_mapping)
+            
+            # Calculate growth potential score
+            potential_metrics = []
+            
+            # Funding is a positive indicator
+            if 'funding_amount_millions' in result_df.columns:
+                result_df['funding_amount_millions'] = pd.to_numeric(result_df['funding_amount_millions'], errors='coerce')
+                
+                # Normalize to 0-100 scale
+                max_funding = result_df['funding_amount_millions'].max()
+                if max_funding > 0:
+                    result_df['funding_score'] = (result_df['funding_amount_millions'] / max_funding) * 100
+                    potential_metrics.append('funding_score')
+            
+            # Funding efficiency is a positive indicator
+            if 'funding_per_year' in result_df.columns:
+                # Normalize to 0-100 scale
+                max_funding_per_year = result_df['funding_per_year'].max()
+                if max_funding_per_year > 0:
+                    result_df['efficiency_score'] = (result_df['funding_per_year'] / max_funding_per_year) * 100
+                    potential_metrics.append('efficiency_score')
+            
+            # Location score is a positive indicator
+            if 'location_score' in result_df.columns:
+                # Normalize to 0-100 scale
+                result_df['location_value_score'] = (result_df['location_score'] / 3) * 100
+                potential_metrics.append('location_value_score')
+            
+            # Age can be a mixed indicator - younger startups may have more growth potential
+            if 'company_age_years' in result_df.columns:
+                # Normalize inversely (younger = higher score)
+                max_age = result_df['company_age_years'].max()
+                if max_age > 0:
+                    result_df['youth_score'] = (1 - (result_df['company_age_years'] / max_age)) * 100
+                    potential_metrics.append('youth_score')
+            
+            # Calculate overall growth potential score
+            if potential_metrics:
+                # Use weighted average of available metrics
+                result_df['growth_potential_score'] = result_df[potential_metrics].mean(axis=1)
+                
+                # Drop intermediate score columns
+                result_df = result_df.drop(columns=potential_metrics)
+            
+            logger.info("Successfully created predictive features")
+            return result_df
+            
+        except Exception as e:
+            logger.error(f"Error creating predictive features: {e}")
+            return df
+    
+    def process_and_save_datasets(self):
+        """Process all data sources and create final datasets."""
+        logger.info("Starting data processing pipeline")
+        
+        # 1. Load existing data (your CSV files)
+        your_csv_files = [
+            'bay_area_startups_master.csv',
+            'datasf_tech_businesses.csv',
+            'github_bay_area_companies.csv',
+            'yc_bay_area_startups.csv',
+            'silicon_valley_companies.csv'
+        ]
+        your_data = self.load_provided_csv_files(your_csv_files)
+        
+        # 2. Collect additional data
+        datasf_data = self.collect_datasf_businesses()
+        crunchbase_data = self.collect_crunchbase_free_data()
+        github_data = self.collect_github_startup_data()
+        
+        # 3. Merge all datasets
+        datasets = [df for df in [your_data, datasf_data, crunchbase_data, github_data] if not df.empty]
+        
+        if not datasets:
+            logger.error("No data collected from any source")
+            return False
+        
+        merged_df = self.merge_and_deduplicate(datasets)
+        
+        if merged_df.empty:
+            logger.error("Failed to create merged dataset")
+            return False
+        
+        # 4. Handle missing values
+        cleaned_df = self.handle_missing_values(merged_df)
+        
+        # 5. Create predictive features
+        final_df = self.create_predictive_features(cleaned_df)
+        
+        # 6. Save final dataset
+        final_df['processing_date'] = datetime.now().strftime('%Y-%m-%d')
+        final_df.to_csv(f"{self.output_folder}/bay_area_startups_predictive_dataset.csv", index=False)
+        
+        logger.info(f"Created final dataset with {len(final_df)} companies")
+        
+        # 7. Create specialized datasets
+        # High growth potential startups
+        if 'growth_potential_score' in final_df.columns:
+            top_potential = final_df.sort_values('growth_potential_score', ascending=False).head(100)
+            top_potential.to_csv(f"{self.output_folder}/high_potential_startups.csv", index=False)
+            logger.info(f"Created high potential startups dataset with {len(top_potential)} companies")
+        
+        # Recently founded startups
+        if 'company_age_years' in final_df.columns:
+            recent_startups = final_df[final_df['company_age_years'] <= 3].sort_values('company_age_years')
+            recent_startups.to_csv(f"{self.output_folder}/recent_startups.csv", index=False)
+            logger.info(f"Created recent startups dataset with {len(recent_startups)} companies")
+        
+        # Datasets by industry
+        if 'industry_category' in final_df.columns:
+            for category in final_df['industry_category'].unique():
+                if pd.notna(category):
+                    category_df = final_df[final_df['industry_category'] == category]
+                    safe_name = category.lower().replace(' ', '_').replace('/', '_')
+                    category_df.to_csv(f"{self.output_folder}/{safe_name}_startups.csv", index=False)
+                    logger.info(f"Created {category} startups dataset with {len(category_df)} companies")
+        
+        # 8. Create summary report
+        self.create_summary_report(final_df)
+        
+        return True
+    
+    def create_summary_report(self, df):
+        """Create a summary report of the dataset."""
+        try:
+            logger.info("Creating summary report")
+            
+            os.makedirs(self.eda_folder, exist_ok=True)
+            
+            # Summary statistics
+            summary = {
+                'total_companies': len(df),
+                'processing_date': datetime.now().strftime('%Y-%m-%d'),
+                'data_sources': ', '.join(df['data_source'].str.split(', ').explode().unique()),
+            }
+            
+            # Industry distribution
+            if 'industry_category' in df.columns:
+                industry_counts = df['industry_category'].value_counts()
+                
+                plt.figure(figsize=(10, 6))
+                sns.barplot(x=industry_counts.index, y=industry_counts.values)
+                plt.title('Startups by Industry Category')
+                plt.xticks(rotation=45)
+                plt.tight_layout()
+                plt.savefig(f"{self.eda_folder}/industry_distribution.png")
+                plt.close()
+                
+                summary['industry_distribution'] = {
+                    category: count for category, count in industry_counts.items()
+                }
+            
+            # Company age distribution
+            if 'company_age_years' in df.columns:
+                plt.figure(figsize=(10, 6))
+                sns.histplot(df['company_age_years'].dropna(), bins=20)
+                plt.title('Company Age Distribution')
+                plt.xlabel('Age (Years)')
+                plt.tight_layout()
+                plt.savefig(f"{self.eda_folder}/age_distribution.png")
+                plt.close()
+                
+                summary['age_statistics'] = {
+                    'mean_age': df['company_age_years'].mean(),
+                    'median_age': df['company_age_years'].median(),
+                    'max_age': df['company_age_years'].max()
+                }
+            
+            # Funding distribution
+            if 'funding_amount_millions' in df.columns:
+                plt.figure(figsize=(10, 6))
+                sns.histplot(df['funding_amount_millions'].dropna(), bins=20, log_scale=True)
+                plt.title('Funding Distribution (log scale)')
+                plt.xlabel('Funding ($ millions)')
+                plt.tight_layout()
+                plt.savefig(f"{self.eda_folder}/funding_distribution.png")
+                plt.close()
+                
+                summary['funding_statistics'] = {
+                    'mean_funding': df['funding_amount_millions'].mean(),
+                    'median_funding': df['funding_amount_millions'].median(),
+                    'total_funding': df['funding_amount_millions'].sum()
+                }
+            
+            # Growth potential score distribution
+            if 'growth_potential_score' in df.columns:
+                plt.figure(figsize=(10, 6))
+                sns.histplot(df['growth_potential_score'].dropna(), bins=20)
+                plt.title('Growth Potential Score Distribution')
+                plt.xlabel('Growth Potential Score')
+                plt.tight_layout()
+                plt.savefig(f"{self.eda_folder}/growth_potential_distribution.png")
+                plt.close()
+                
+                # Top 10 high potential startups
+                top_10 = df.sort_values('growth_potential_score', ascending=False).head(10)
+                top_10_list = [
+                    {'name': row['name'], 'score': row['growth_potential_score']}
+                    for _, row in top_10.iterrows()
+                ]
+                summary['top_potential_startups'] = top_10_list
+            
+            # Save summary as JSON
+            with open(f"{self.eda_folder}/summary_report.json", 'w') as f:
+                json.dump(summary, f, indent=4, default=str)
+            
+            logger.info("Summary report created successfully")
+            
+        except Exception as e:
+            logger.error(f"Error creating summary report: {e}")
+
+# Main execution
+if __name__ == "__main__":
+    processor = BayAreaStartupDataProcessor()
+    processor.process_and_save_datasets()
+    print("Processing complete. Check the output folder for results.")
