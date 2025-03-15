@@ -1,0 +1,68 @@
+{
+  "companies": [
+    {
+      "name": "Gigs",
+      "description": "Stripe for phone plans",
+      "employee_count": "50-100",
+      "remote": true,
+      "source": "LinkedIn list",
+      "location": "Bay Area (to be verified)"
+    },
+    {
+      "name": "Embrace",
+      "description": "mobile observability built on OpenTelemetry",
+      "employee_count": "50-100",
+      "remote": true,
+      "source": "LinkedIn list",
+      "location": "Bay Area (to be verified)"
+    },
+    {
+      "name": "PostHog",
+      "description": "open source product operating system",
+      "employee_count": "50-100",
+      "remote": true,
+      "source": "LinkedIn list",
+      "location": "Bay Area (to be verified)"
+    },
+    {
+      "name": "SafeBase",
+      "description": "trust center platform",
+      "employee_count": "50-100",
+      "remote": true,
+      "source": "LinkedIn list",
+      "location": "Bay Area (to be verified)"
+    },
+    {
+      "name": "Veryfi",
+      "description": "data extraction platform",
+      "employee_count": "50-100",
+      "remote": true,
+      "source": "LinkedIn list",
+      "location": "Bay Area (to be verified)"
+    },
+    {
+      "name": "Gather",
+      "description": "better way to meet online",
+      "employee_count": "50-100",
+      "remote": true,
+      "source": "LinkedIn list",
+      "location": "Bay Area (to be verified)"
+    },
+    {
+      "name": "R2",
+      "description": "embedded lending infrastructure",
+      "employee_count": "50-100",
+      "remote": true,
+      "source": "LinkedIn list",
+      "location": "Bay Area (to be verified)"
+    },
+    {
+      "name": "Pulley",
+      "description": "equity and cap table management",
+      "employee_count": "50-100",
+      "remote": true,
+      "source": "LinkedIn list",
+      "location": "Bay Area (to be verified)"
+    }
+  ]
+}
