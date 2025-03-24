@@ -1,0 +1,355 @@
+uniqueid,business_id,certificate_number,owner,name,address,city,state,zip_code,dba_start_date,founded_date,mailing_address_1,mail_city,mail_zipcode,mail_state,naic_code_x,naic_code_description_x,naics_code_descriptions_list,parking_tax,transient_occupancy_tax,supervisor_district,neighborhoods_analysis_boundaries,location,data_as_of,data_loaded_at,dba_end_date,location_end_date,lic,lic_code_description,lic_code_descriptions_list,administratively_closed,business_corridor,naic_code_y,naic_code_description_y,is_tech,name_contains_tech,data_source,source_file,company_name,founding_year
+1274816-04-211-0391825,1274816-04-211,391825.0,Net App Inc,"Netapp, Inc.",565 Commercial St Ste 200,San Francisco,CA,94111.0,2013-05-31,2020-05-01,3060 Olsen Dr,San Jose,95128.0,CA,3100-3399,Manufacturing,Manufacturing,False,False,3.0,Chinatown,"{'type': 'Point', 'coordinates': [-122.4026055, 37.794087]}",2025-03-09T00:00:00.000,2025-03-09T04:12:33.000,,,,,,,,3100-3399,Manufacturing,False,True,DataSF,datasf_tech_businesses.csv,,
+,,,,,,,CA,,,,,,,,,,,,,,,San Francisco,,,,,,,,,,,,,,DataSF API,datasf_tech_businesses copy.csv,"Maiten Consulting, LLC",2025.0
+,,,,,,,CA,,,,,,,,,,,,,,,San Francisco,,,,,,,,,,,,,,DataSF API,datasf_tech_businesses copy.csv,Hung Mai Corporation Dba Floor Pros,2025.0
+,,,,,,,CA,,,,,,,,,,,,,,,San Francisco,,,,,,,,,,,,,,DataSF API,datasf_tech_businesses copy.csv,Draintek Plumbing Inc,2025.0
+,,,,,,,CA,,,,,,,,,,,,,,,San Francisco,,,,,,,,,,,,,,DataSF API,datasf_tech_businesses copy.csv,Aciif Ai Forensics Celta Academy,2025.0
+,,,,,,,CA,,,,,,,,,,,,,,,San Francisco,,,,,,,,,,,,,,DataSF API,datasf_tech_businesses copy.csv,"California College Of Business, Science & Technology",2025.0
+,,,,,,,CA,,,,,,,,,,,,,,,San Francisco,,,,,,,,,,,,,,DataSF API,datasf_tech_businesses copy.csv,Tailwinds,2025.0
+,,,,,,,CA,,,,,,,,,,,,,,,San Francisco,,,,,,,,,,,,,,DataSF API,datasf_tech_businesses copy.csv,Comfort Home Heating & Air,2025.0
+,,,,,,,CA,,,,,,,,,,,,,,,San Francisco,,,,,,,,,,,,,,DataSF API,datasf_tech_businesses copy.csv,Pulido's Painting,2025.0
+,,,,,,,CA,,,,,,,,,,,,,,,San Francisco,,,,,,,,,,,,,,DataSF API,datasf_tech_businesses copy.csv,Hawkeye Safety Training,2025.0
+,,,,,,,CA,,,,,,,,,,,,,,,San Francisco,,,,,,,,,,,,,,DataSF API,datasf_tech_businesses copy.csv,Leico Tire & Auto Repair,2025.0
+,,,,,,,CA,,,,,,,,,,,,,,,San Francisco,,,,,,,,,,,,,,DataSF API,datasf_tech_businesses copy.csv,Tailwinds Advisory,2025.0
+,,,,,,,CA,,,,,,,,,,,,,,,San Francisco,,,,,,,,,,,,,,DataSF API,datasf_tech_businesses copy.csv,Evolve Digitally LLC,2025.0
+,,,,,,,CA,,,,,,,,,,,,,,,San Francisco,,,,,,,,,,,,,,DataSF API,datasf_tech_businesses copy.csv,"Mosaic Ai Labs, Inc.",2025.0
+,,,,,,,CA,,,,,,,,,,,,,,,San Francisco,,,,,,,,,,,,,,DataSF API,datasf_tech_businesses copy.csv,Smart & Beyond Painting Inc,2025.0
+,,,,,,,CA,,,,,,,,,,,,,,,San Francisco,,,,,,,,,,,,,,DataSF API,datasf_tech_businesses copy.csv,"Riley Ai, Inc.",2025.0
+,,,,,,,CA,,,,,,,,,,,,,,,San Francisco,,,,,,,,,,,,,,DataSF API,datasf_tech_businesses copy.csv,Taishan Food Gift Shop,2025.0
+,,,,,,,CA,,,,,,,,,,,,,,,San Francisco,,,,,,,,,,,,,,DataSF API,datasf_tech_businesses copy.csv,Mova.Ai,2025.0
+,,,,,,,CA,,,,,,,,,,,,,,,San Francisco,,,,,,,,,,,,,,DataSF API,datasf_tech_businesses copy.csv,Danny's Hair Studio SF,2025.0
+,,,,,,,CA,,,,,,,,,,,,,,,San Francisco,,,,,,,,,,,,,,DataSF API,datasf_tech_businesses copy.csv,Taldea Services And Maintenance,2025.0
+,,,,,,,CA,,,,,,,,,,,,,,,San Francisco,,,,,,,,,,,,,,DataSF API,datasf_tech_businesses copy.csv,Miguel Painting,2025.0
+,,,,,,,CA,,,,,,,,,,,,,,,San Francisco,,,,,,,,,,,,,,DataSF API,datasf_tech_businesses copy.csv,Luckyxhair,2025.0
+,,,,,,,CA,,,,,,,,,,,,,,,San Francisco,,,,,,,,,,,,,,DataSF API,datasf_tech_businesses copy.csv,Aireserv Of Campbell And Saratoga,2025.0
+,,,,,,,CA,,,,,,,,,,,,,,,San Francisco,,,,,,,,,,,,,,DataSF API,datasf_tech_businesses copy.csv,Rainbow Beauty Spa,2025.0
+,,,,,,,CA,,,,,,,,,,,,,,,San Francisco,,,,,,,,,,,,,,DataSF API,datasf_tech_businesses copy.csv,Straightedge Handyman Service And Solutions,2025.0
+,,,,,,,CA,,,,,,,,,,,,,,,San Francisco,,,,,,,,,,,,,,DataSF API,datasf_tech_businesses copy.csv,Insul-Tech Contracting,2025.0
+,,,,,,,CA,,,,,,,,,,,,,,,San Francisco,,,,,,,,,,,,,,DataSF API,datasf_tech_businesses copy.csv,"Bay-Valley Painting, Inc.",2025.0
+,,,,,,,CA,,,,,,,,,,,,,,,San Francisco,,,,,,,,,,,,,,DataSF API,datasf_tech_businesses copy.csv,Heating And Air Design,2025.0
+,,,,,,,CA,,,,,,,,,,,,,,,San Francisco,,,,,,,,,,,,,,DataSF API,datasf_tech_businesses copy.csv,Better Hairdays,2025.0
+,,,,,,,CA,,,,,,,,,,,,,,,San Francisco,,,,,,,,,,,,,,DataSF API,datasf_tech_businesses copy.csv,Angstrom Ai Inc.,2025.0
+,,,,,,,CA,,,,,,,,,,,,,,,San Francisco,,,,,,,,,,,,,,DataSF API,datasf_tech_businesses copy.csv,Innovatics Ai LLC,2025.0
+,,,,,,,CA,,,,,,,,,,,,,,,San Francisco,,,,,,,,,,,,,,DataSF API,datasf_tech_businesses copy.csv,Mobetta Entertainment,2025.0
+,,,,,,,CA,,,,,,,,,,,,,,,San Francisco,,,,,,,,,,,,,,DataSF API,datasf_tech_businesses copy.csv,"Capernaum Ai, Inc.",2025.0
+,,,,,,,CA,,,,,,,,,,,,,,,San Francisco,,,,,,,,,,,,,,DataSF API,datasf_tech_businesses copy.csv,Turner Auctions + Appraisals LLC,2025.0
+,,,,,,,CA,,,,,,,,,,,,,,,San Francisco,,,,,,,,,,,,,,DataSF API,datasf_tech_businesses copy.csv,Sandy Health Ai,2025.0
+,,,,,,,CA,,,,,,,,,,,,,,,San Francisco,,,,,,,,,,,,,,DataSF API,datasf_tech_businesses copy.csv,Sandy Ai,2025.0
+,,,,,,,CA,,,,,,,,,,,,,,,San Francisco,,,,,,,,,,,,,,DataSF API,datasf_tech_businesses copy.csv,Flare App Inc,2025.0
+,,,,,,,CA,,,,,,,,,,,,,,,San Francisco,,,,,,,,,,,,,,DataSF API,datasf_tech_businesses copy.csv,"Kitchen Cabinet Public Affairs Group, Inc.",2025.0
+,,,,,,,CA,,,,,,,,,,,,,,,San Francisco,,,,,,,,,,,,,,DataSF API,datasf_tech_businesses copy.csv,Slightly Straight Stud Construction,2025.0
+,,,,,,,CA,,,,,,,,,,,,,,,San Francisco,,,,,,,,,,,,,,DataSF API,datasf_tech_businesses copy.csv,Hair By Becca LLC,2025.0
+,,,,,,,CA,,,,,,,,,,,,,,,San Francisco,,,,,,,,,,,,,,DataSF API,datasf_tech_businesses copy.csv,Soulful Web Design Studio,2025.0
+,,,,,,,CA,,,,,,,,,,,,,,,San Francisco,,,,,,,,,,,,,,DataSF API,datasf_tech_businesses copy.csv,Maison Assist,2025.0
+,,,,,,,CA,,,,,,,,,,,,,,,San Francisco,,,,,,,,,,,,,,DataSF API,datasf_tech_businesses copy.csv,Precision Strength Training,2025.0
+,,,,,,,CA,,,,,,,,,,,,,,,San Francisco,,,,,,,,,,,,,,DataSF API,datasf_tech_businesses copy.csv,Mai Bodywork,2025.0
+,,,,,,,CA,,,,,,,,,,,,,,,San Francisco,,,,,,,,,,,,,,DataSF API,datasf_tech_businesses copy.csv,Ai System,2025.0
+,,,,,,,CA,,,,,,,,,,,,,,,San Francisco,,,,,,,,,,,,,,DataSF API,datasf_tech_businesses copy.csv,Leshchinskaia Music,2025.0
+,,,,,,,CA,,,,,,,,,,,,,,,San Francisco,,,,,,,,,,,,,,DataSF API,datasf_tech_businesses copy.csv,Advanced Data Sciences,2025.0
+,,,,,,,CA,,,,,,,,,,,,,,,San Francisco,,,,,,,,,,,,,,DataSF API,datasf_tech_businesses copy.csv,Appu Tattoos,2025.0
+,,,,,,,CA,,,,,,,,,,,,,,,San Francisco,,,,,,,,,,,,,,DataSF API,datasf_tech_businesses copy.csv,Rainbow Market And Deli,2025.0
+,,,,,,,CA,,,,,,,,,,,,,,,San Francisco,,,,,,,,,,,,,,DataSF API,datasf_tech_businesses copy.csv,"Securus Technologies, LLC",2025.0
+,,,,,,,CA,,,,,,,,,,,,,,,San Francisco,,,,,,,,,,,,,,DataSF API,datasf_tech_businesses copy.csv,Elearning Lair Corp,2025.0
+,,,,,,,CA,,,,,,,,,,,,,,,San Francisco,,,,,,,,,,,,,,DataSF API,datasf_tech_businesses copy.csv,Smarketing Technologies Corporation,2025.0
+,,,,,,,CA,,,,,,,,,,,,,,,San Francisco,,,,,,,,,,,,,,DataSF API,datasf_tech_businesses copy.csv,Gregory Training Center,2025.0
+,,,,,,,CA,,,,,,,,,,,,,,,San Francisco,,,,,,,,,,,,,,DataSF API,datasf_tech_businesses copy.csv,Mosaic Global Transportation,2025.0
+,,,,,,,CA,,,,,,,,,,,,,,,San Francisco,,,,,,,,,,,,,,DataSF API,datasf_tech_businesses copy.csv,Shannon Cairns,2025.0
+,,,,,,,CA,,,,,,,,,,,,,,,San Francisco,,,,,,,,,,,,,,DataSF API,datasf_tech_businesses copy.csv,Pretty Art Nail & Beauty Spa,2025.0
+,,,,,,,CA,,,,,,,,,,,,,,,San Francisco,,,,,,,,,,,,,,DataSF API,datasf_tech_businesses copy.csv,Mbh Residential Cleaning And Maintenance Services,2025.0
+,,,,,,,CA,,,,,,,,,,,,,,,San Francisco,,,,,,,,,,,,,,DataSF API,datasf_tech_businesses copy.csv,Lunarlanding.Ai,2025.0
+,,,,,,,CA,,,,,,,,,,,,,,,San Francisco,,,,,,,,,,,,,,DataSF API,datasf_tech_businesses copy.csv,Bamboo Nails,2025.0
+,,,,,,,CA,,,,,,,,,,,,,,,San Francisco,,,,,,,,,,,,,,DataSF API,datasf_tech_businesses copy.csv,Green Windows Repairs,2025.0
+,,,,,,,CA,,,,,,,,,,,,,,,San Francisco,,,,,,,,,,,,,,DataSF API,datasf_tech_businesses copy.csv,Hair Caffe Lab,2025.0
+,,,,,,,CA,,,,,,,,,,,,,,,San Francisco,,,,,,,,,,,,,,DataSF API,datasf_tech_businesses copy.csv,Gp Mobile Solutions LLC,2025.0
+,,,,,,,CA,,,,,,,,,,,,,,,San Francisco,,,,,,,,,,,,,,DataSF API,datasf_tech_businesses copy.csv,Sandpail Productions,2025.0
+,,,,,,,CA,,,,,,,,,,,,,,,San Francisco,,,,,,,,,,,,,,DataSF API,datasf_tech_businesses copy.csv,Adornment Painting Inc.,2025.0
+,,,,,,,CA,,,,,,,,,,,,,,,San Francisco,,,,,,,,,,,,,,DataSF API,datasf_tech_businesses copy.csv,All Pro Painting Inc,2025.0
+,,,,,,,CA,,,,,,,,,,,,,,,San Francisco,,,,,,,,,,,,,,DataSF API,datasf_tech_businesses copy.csv,Kai Morgan,2025.0
+,,,,,,,CA,,,,,,,,,,,,,,,San Francisco,,,,,,,,,,,,,,DataSF API,datasf_tech_businesses copy.csv,Aiurion Inc.,2025.0
+,,,,,,,CA,,,,,,,,,,,,,,,San Francisco,,,,,,,,,,,,,,DataSF API,datasf_tech_businesses copy.csv,Perfect Star Heating & Air Conditioning,2025.0
+,,,,,,,CA,,,,,,,,,,,,,,,San Francisco,,,,,,,,,,,,,,DataSF API,datasf_tech_businesses copy.csv,Z & F Maintenance LLC,2025.0
+,,,,,,,CA,,,,,,,,,,,,,,,San Francisco,,,,,,,,,,,,,,DataSF API,datasf_tech_businesses copy.csv,Cloud N Books Pc,2025.0
+,,,,,,,CA,,,,,,,,,,,,,,,San Francisco,,,,,,,,,,,,,,DataSF API,datasf_tech_businesses copy.csv,Tacos El Shaddai,2025.0
+,,,,,,,CA,,,,,,,,,,,,,,,San Francisco,,,,,,,,,,,,,,DataSF API,datasf_tech_businesses copy.csv,Erica Maissy,2025.0
+,,,,,,,CA,,,,,,,,,,,,,,,San Francisco,,,,,,,,,,,,,,DataSF API,datasf_tech_businesses copy.csv,The Ai Receptionist Agency,2025.0
+,,,,,,,CA,,,,,,,,,,,,,,,San Francisco,,,,,,,,,,,,,,DataSF API,datasf_tech_businesses copy.csv,Yeji Cuts Hair,2025.0
+,,,,,,,CA,,,,,,,,,,,,,,,San Francisco,,,,,,,,,,,,,,DataSF API,datasf_tech_businesses copy.csv,Ai Receptionist Agency,2025.0
+,,,,,,,CA,,,,,,,,,,,,,,,San Francisco,,,,,,,,,,,,,,DataSF API,datasf_tech_businesses copy.csv,Flenser Entertainment Rights,2025.0
+,,,,,,,CA,,,,,,,,,,,,,,,San Francisco,,,,,,,,,,,,,,DataSF API,datasf_tech_businesses copy.csv,"Quantum Energy Services & Technologies, Inc.",2025.0
+,,,,,,,CA,,,,,,,,,,,,,,,San Francisco,,,,,,,,,,,,,,DataSF API,datasf_tech_businesses copy.csv,Escobar Pro Painting Corp,2025.0
+,,,,,,,CA,,,,,,,,,,,,,,,San Francisco,,,,,,,,,,,,,,DataSF API,datasf_tech_businesses copy.csv,Queue Happy Inspirations,2025.0
+,,,,,,,CA,,,,,,,,,,,,,,,San Francisco,,,,,,,,,,,,,,DataSF API,datasf_tech_businesses copy.csv,Rous Maintenance Services LLC,2025.0
+,,,,,,,CA,,,,,,,,,,,,,,,San Francisco,,,,,,,,,,,,,,DataSF API,datasf_tech_businesses copy.csv,New Image Hairstyling,2025.0
+,,,,,,,CA,,,,,,,,,,,,,,,San Francisco,,,,,,,,,,,,,,DataSF API,datasf_tech_businesses copy.csv,Fairbrook,2025.0
+,,,,,,,CA,,,,,,,,,,,,,,,San Francisco,,,,,,,,,,,,,,DataSF API,datasf_tech_businesses copy.csv,Happy Tots Sf Daycare,2025.0
+,,,,,,,CA,,,,,,,,,,,,,,,San Francisco,,,,,,,,,,,,,,DataSF API,datasf_tech_businesses copy.csv,Artist Liaison Agency,2025.0
+,,,,,,,CA,,,,,,,,,,,,,,,San Francisco,,,,,,,,,,,,,,DataSF API,datasf_tech_businesses copy.csv,Bay Area Mobile Diagnostics,2025.0
+,,,,,,,CA,,,,,,,,,,,,,,,San Francisco,,,,,,,,,,,,,,DataSF API,datasf_tech_businesses copy.csv,Gaines Event Staffing,2025.0
+,,,,,,,CA,,,,,,,,,,,,,,,San Francisco,,,,,,,,,,,,,,DataSF API,datasf_tech_businesses copy.csv,Amine Jemai,2025.0
+,,,,,,,CA,,,,,,,,,,,,,,,San Francisco,,,,,,,,,,,,,,DataSF API,datasf_tech_businesses copy.csv,Forte Fintech,2025.0
+,,,,,,,CA,,,,,,,,,,,,,,,San Francisco,,,,,,,,,,,,,,DataSF API,datasf_tech_businesses copy.csv,Forte Fintech LLC,2025.0
+,,,,,,,CA,,,,,,,,,,,,,,,San Francisco,,,,,,,,,,,,,,DataSF API,datasf_tech_businesses copy.csv,A1 Bright Maid,2025.0
+,,,,,,,CA,,,,,,,,,,,,,,,San Francisco,,,,,,,,,,,,,,DataSF API,datasf_tech_businesses copy.csv,Jairo A Medina Mayorga,2025.0
+,,,,,,,CA,,,,,,,,,,,,,,,San Francisco,,,,,,,,,,,,,,DataSF API,datasf_tech_businesses copy.csv,Aiherbs Inc,2025.0
+,,,,,,,CA,,,,,,,,,,,,,,,San Francisco,,,,,,,,,,,,,,DataSF API,datasf_tech_businesses copy.csv,Excellence Heating And Air,2025.0
+,,,,,,,CA,,,,,,,,,,,,,,,San Francisco,,,,,,,,,,,,,,DataSF API,datasf_tech_businesses copy.csv,"Cloudcruise, Inc.",2025.0
+,,,,,,,CA,,,,,,,,,,,,,,,San Francisco,,,,,,,,,,,,,,DataSF API,datasf_tech_businesses copy.csv,Rebecca Wraxall Hair,2025.0
+,,,,,,,CA,,,,,,,,,,,,,,,San Francisco,,,,,,,,,,,,,,DataSF API,datasf_tech_businesses copy.csv,Furry Friends Dog Training,2025.0
+,,,,,,,CA,,,,,,,,,,,,,,,San Francisco,,,,,,,,,,,,,,DataSF API,datasf_tech_businesses copy.csv,Lauren Elisa Face Painting,2025.0
+,,,,,,,CA,,,,,,,,,,,,,,,San Francisco,,,,,,,,,,,,,,DataSF API,datasf_tech_businesses copy.csv,Puzz.Ai,2025.0
+,,,,,,,CA,,,,,,,,,,,,,,,San Francisco,,,,,,,,,,,,,,DataSF API,datasf_tech_businesses copy.csv,"Golden State Training, LLC",2025.0
+,,,,,,,CA,,,,,,,,,,,,,,,San Francisco,,,,,,,,,,,,,,DataSF API,datasf_tech_businesses copy.csv,Tom Praisan,2025.0
+,,,,,,,CA,,,,,,,,,,,,,,,San Francisco,,,,,,,,,,,,,,DataSF API,datasf_tech_businesses copy.csv,Le Nain,2025.0
+,,,,,,,CA,,,,,,,,,,,,,,,San Francisco,,,,,,,,,,,,,,DataSF API,datasf_tech_businesses copy.csv,Appreciation Coffee,2025.0
+,,,,,,,CA,,,,,,,,,,,,,,,San Francisco,,,,,,,,,,,,,,DataSF API,datasf_tech_businesses copy.csv,Ees Nails,2025.0
+,,,,,,,CA,,,,,,,,,,,,,,,San Francisco,,,,,,,,,,,,,,DataSF API,datasf_tech_businesses copy.csv,115 Moffitt Air Bnb,2025.0
+,,,,,,,CA,,,,,,,,,,,,,,,San Francisco,,,,,,,,,,,,,,DataSF API,datasf_tech_businesses copy.csv,Dodirty's Security And Maintenance,2025.0
+,,,,,,,CA,,,,,,,,,,,,,,,San Francisco,,,,,,,,,,,,,,DataSF API,datasf_tech_businesses copy.csv,Gateway Mountain Center,2025.0
+,,,,,,,CA,,,,,,,,,,,,,,,San Francisco,,,,,,,,,,,,,,DataSF API,datasf_tech_businesses copy.csv,Baytek Indoor Air Solutions,2025.0
+,,,,,,,CA,,,,,,,,,,,,,,,San Francisco,,,,,,,,,,,,,,DataSF API,datasf_tech_businesses copy.csv,Iz Painting,2025.0
+,,,,,,,CA,,,,,,,,,,,,,,,San Francisco,,,,,,,,,,,,,,DataSF API,datasf_tech_businesses copy.csv,Mindfulfairy Foundation,2025.0
+,,,,,,,CA,,,,,,,,,,,,,,,San Francisco,,,,,,,,,,,,,,DataSF API,datasf_tech_businesses copy.csv,Vroomdetail,2025.0
+,,,,,,,CA,,,,,,,,,,,,,,,San Francisco,,,,,,,,,,,,,,DataSF API,datasf_tech_businesses copy.csv,Lucidic Ai,2025.0
+,,,,,,,CA,,,,,,,,,,,,,,,San Francisco,,,,,,,,,,,,,,DataSF API,datasf_tech_businesses copy.csv,1552 Haight Street,2025.0
+,,,,,,,CA,,,,,,,,,,,,,,,San Francisco,,,,,,,,,,,,,,DataSF API,datasf_tech_businesses copy.csv,American School Of Emerging Technology,2025.0
+,,,,,,,CA,,,,,,,,,,,,,,,San Francisco,,,,,,,,,,,,,,DataSF API,datasf_tech_businesses copy.csv,Ridea Painting,2025.0
+,,,,,,,CA,,,,,,,,,,,,,,,San Francisco,,,,,,,,,,,,,,DataSF API,datasf_tech_businesses copy.csv,Haight Street Eyecare,2025.0
+,,,,,,,CA,,,,,,,,,,,,,,,San Francisco,,,,,,,,,,,,,,DataSF API,datasf_tech_businesses copy.csv,Paige Mclaughlin,2025.0
+,,,,,,,CA,,,,,,,,,,,,,,,San Francisco,,,,,,,,,,,,,,DataSF API,datasf_tech_businesses copy.csv,Fog City Detail,2025.0
+,,,,,,,CA,,,,,,,,,,,,,,,San Francisco,,,,,,,,,,,,,,DataSF API,datasf_tech_businesses copy.csv,"Cooper Oates Air Conditioning, Inc.",2025.0
+,,,,,,,CA,,,,,,,,,,,,,,,San Francisco,,,,,,,,,,,,,,DataSF API,datasf_tech_businesses copy.csv,Maison Eureka,2025.0
+,,,,,,,CA,,,,,,,,,,,,,,,San Francisco,,,,,,,,,,,,,,DataSF API,datasf_tech_businesses copy.csv,Air Sharks,2025.0
+,,,,,,,CA,,,,,,,,,,,,,,,San Francisco,,,,,,,,,,,,,,DataSF API,datasf_tech_businesses copy.csv,Kmosaic,2025.0
+,,,,,,,CA,,,,,,,,,,,,,,,San Francisco,,,,,,,,,,,,,,DataSF API,datasf_tech_businesses copy.csv,Memo's Painters LLC,2025.0
+,,,,,,,CA,,,,,,,,,,,,,,,San Francisco,,,,,,,,,,,,,,DataSF API,datasf_tech_businesses copy.csv,High-Growth Digital,2025.0
+,,,,,,,CA,,,,,,,,,,,,,,,San Francisco,,,,,,,,,,,,,,DataSF API,datasf_tech_businesses copy.csv,Caldata Communications,2025.0
+,,,,,,,CA,,,,,,,,,,,,,,,San Francisco,,,,,,,,,,,,,,DataSF API,datasf_tech_businesses copy.csv,Sf House Of Nails Pierce Inc,2025.0
+,,,,,,,CA,,,,,,,,,,,,,,,San Francisco,,,,,,,,,,,,,,DataSF API,datasf_tech_businesses copy.csv,"Laketech Solutions, Inc.",2025.0
+,,,,,,,CA,,,,,,,,,,,,,,,San Francisco,,,,,,,,,,,,,,DataSF API,datasf_tech_businesses copy.csv,Hero Auto Detailing,2025.0
+,,,,,,,CA,,,,,,,,,,,,,,,San Francisco,,,,,,,,,,,,,,DataSF API,datasf_tech_businesses copy.csv,Alice Nails,2025.0
+,,,,,,,CA,,,,,,,,,,,,,,,San Francisco,,,,,,,,,,,,,,DataSF API,datasf_tech_businesses copy.csv,Patronus Ai,2025.0
+,,,,,,,CA,,,,,,,,,,,,,,,San Francisco,,,,,,,,,,,,,,DataSF API,datasf_tech_businesses copy.csv,Sf House Of Nails,2025.0
+,,,,,,,CA,,,,,,,,,,,,,,,San Francisco,,,,,,,,,,,,,,DataSF API,datasf_tech_businesses copy.csv,581 Capp Street,2025.0
+,,,,,,,CA,,,,,,,,,,,,,,,San Francisco,,,,,,,,,,,,,,DataSF API,datasf_tech_businesses copy.csv,Wainaku Strategy Group,2025.0
+,,,,,,,CA,,,,,,,,,,,,,,,San Francisco,,,,,,,,,,,,,,DataSF API,datasf_tech_businesses copy.csv,"The Main Post, Inc",2025.0
+,,,,,,,CA,,,,,,,,,,,,,,,San Francisco,,,,,,,,,,,,,,DataSF API,datasf_tech_businesses copy.csv,Said & Done Projects,2025.0
+,,,,,,,CA,,,,,,,,,,,,,,,San Francisco,,,,,,,,,,,,,,DataSF API,datasf_tech_businesses copy.csv,Running With Abigail LLC,2025.0
+,,,,,,,CA,,,,,,,,,,,,,,,San Francisco,,,,,,,,,,,,,,DataSF API,datasf_tech_businesses copy.csv,"Weedn Public Affairs, LLC",2025.0
+,,,,,,,CA,,,,,,,,,,,,,,,San Francisco,,,,,,,,,,,,,,DataSF API,datasf_tech_businesses copy.csv,Flagship Training Fidi,2025.0
+,,,,,,,CA,,,,,,,,,,,,,,,San Francisco,,,,,,,,,,,,,,DataSF API,datasf_tech_businesses copy.csv,"Foundry Technologies, Inc.",2025.0
+,,,,,,,CA,,,,,,,,,,,,,,,San Francisco,,,,,,,,,,,,,,DataSF API,datasf_tech_businesses copy.csv,The Daisy Foundation,2025.0
+,,,,,,,CA,,,,,,,,,,,,,,,San Francisco,,,,,,,,,,,,,,DataSF API,datasf_tech_businesses copy.csv,Cloud95,2025.0
+,,,,,,,CA,,,,,,,,,,,,,,,San Francisco,,,,,,,,,,,,,,DataSF API,datasf_tech_businesses copy.csv,Yellow Orchid Nail Spa,2025.0
+,,,,,,,CA,,,,,,,,,,,,,,,San Francisco,,,,,,,,,,,,,,DataSF API,datasf_tech_businesses copy.csv,Chutikarn Sukmongkolchai,2025.0
+,,,,,,,CA,,,,,,,,,,,,,,,San Francisco,,,,,,,,,,,,,,DataSF API,datasf_tech_businesses copy.csv,Ligier Entertainment Inc.,2025.0
+,,,,,,,CA,,,,,,,,,,,,,,,San Francisco,,,,,,,,,,,,,,DataSF API,datasf_tech_businesses copy.csv,"Go Technology Management, LLC",2025.0
+,,,,,,,CA,,,,,,,,,,,,,,,San Francisco,,,,,,,,,,,,,,DataSF API,datasf_tech_businesses copy.csv,Leafair Construction Inc,2025.0
+,,,,,,,CA,,,,,,,,,,,,,,,San Francisco,,,,,,,,,,,,,,DataSF API,datasf_tech_businesses copy.csv,Wai Ahead LLC,2025.0
+,,,,,,,CA,,,,,,,,,,,,,,,San Francisco,,,,,,,,,,,,,,DataSF API,datasf_tech_businesses copy.csv,"Tusk Ai, Inc.",2025.0
+,,,,,,,CA,,,,,,,,,,,,,,,San Francisco,,,,,,,,,,,,,,DataSF API,datasf_tech_businesses copy.csv,Rebelretailers,2025.0
+,,,,,,,CA,,,,,,,,,,,,,,,San Francisco,,,,,,,,,,,,,,DataSF API,datasf_tech_businesses copy.csv,Silver Apple LLC,2024.0
+,,,,,,,CA,,,,,,,,,,,,,,,San Francisco,,,,,,,,,,,,,,DataSF API,datasf_tech_businesses copy.csv,Top Hair Care LLC,2024.0
+,,,,,,,CA,,,,,,,,,,,,,,,San Francisco,,,,,,,,,,,,,,DataSF API,datasf_tech_businesses copy.csv,Nails 2001,2024.0
+,,,,,,,CA,,,,,,,,,,,,,,,San Francisco,,,,,,,,,,,,,,DataSF API,datasf_tech_businesses copy.csv,Data Sync Communication Inc,2024.0
+,,,,,,,CA,,,,,,,,,,,,,,,San Francisco,,,,,,,,,,,,,,DataSF API,datasf_tech_businesses copy.csv,Brightwright-Techcomm LLC,2024.0
+,,,,,,,CA,,,,,,,,,,,,,,,San Francisco,,,,,,,,,,,,,,DataSF API,datasf_tech_businesses copy.csv,Bear Paws Training & Animal Communication,2024.0
+,,,,,,,CA,,,,,,,,,,,,,,,San Francisco,,,,,,,,,,,,,,DataSF API,datasf_tech_businesses copy.csv,Somo Ai Inc,2024.0
+,,,,,,,CA,,,,,,,,,,,,,,,San Francisco,,,,,,,,,,,,,,DataSF API,datasf_tech_businesses copy.csv,Foam Ai,2024.0
+,,,,,,,CA,,,,,,,,,,,,,,,San Francisco,,,,,,,,,,,,,,DataSF API,datasf_tech_businesses copy.csv,"Tri Valley Hvac LLC, Dba Aireserv Of Pleasanton",2024.0
+,,,,,,,CA,,,,,,,,,,,,,,,San Francisco,,,,,,,,,,,,,,DataSF API,datasf_tech_businesses copy.csv,Tetelestai Painting Corporation,2024.0
+,,,,,,,CA,,,,,,,,,,,,,,,San Francisco,,,,,,,,,,,,,,DataSF API,datasf_tech_businesses copy.csv,"Cordata Healthcare Innovations, Inc.",2024.0
+,,,,,,,CA,,,,,,,,,,,,,,,San Francisco,,,,,,,,,,,,,,DataSF API,datasf_tech_businesses copy.csv,Ben Edmondson Building Maintenance Company,2024.0
+,,,,,,,CA,,,,,,,,,,,,,,,San Francisco,,,,,,,,,,,,,,DataSF API,datasf_tech_businesses copy.csv,"Hi-Lite Airfield Services, LLC",2024.0
+,,,,,,,CA,,,,,,,,,,,,,,,San Francisco,,,,,,,,,,,,,,DataSF API,datasf_tech_businesses copy.csv,Par Apparel LLC,2024.0
+,,,,,,,CA,,,,,,,,,,,,,,,San Francisco,,,,,,,,,,,,,,DataSF API,datasf_tech_businesses copy.csv,"Macano Tech, LLC",2024.0
+,,,,,,,CA,,,,,,,,,,,,,,,San Francisco,,,,,,,,,,,,,,DataSF API,datasf_tech_businesses copy.csv,"Primal Paint, Inc.",2024.0
+,,,,,,,CA,,,,,,,,,,,,,,,San Francisco,,,,,,,,,,,,,,DataSF API,datasf_tech_businesses copy.csv,Calpro Construction & Painting,2024.0
+,,,,,,,CA,,,,,,,,,,,,,,,San Francisco,,,,,,,,,,,,,,DataSF API,datasf_tech_businesses copy.csv,Rc Maintenance Holdings Inc,2024.0
+,,,,,,,CA,,,,,,,,,,,,,,,San Francisco,,,,,,,,,,,,,,DataSF API,datasf_tech_businesses copy.csv,D Air Balance Inc,2024.0
+,,,,,,,CA,,,,,,,,,,,,,,,San Francisco,,,,,,,,,,,,,,DataSF API,datasf_tech_businesses copy.csv,In Place Technology Inc,2024.0
+,,,,,,,CA,,,,,,,,,,,,,,,San Francisco,,,,,,,,,,,,,,DataSF API,datasf_tech_businesses copy.csv,Jackdanyels Mobile Car Wash And Detailing,2024.0
+,,,,,,,CA,,,,,,,,,,,,,,,San Francisco,,,,,,,,,,,,,,DataSF API,datasf_tech_businesses copy.csv,Premier Hair Solutions,2024.0
+,,,,,,,CA,,,,,,,,,,,,,,,San Francisco,,,,,,,,,,,,,,DataSF API,datasf_tech_businesses copy.csv,T & H Painting Company,2024.0
+,,,,,,,CA,,,,,,,,,,,,,,,San Francisco,,,,,,,,,,,,,,DataSF API,datasf_tech_businesses copy.csv,"Terrace Biotech, LLC",2024.0
+,,,,,,,CA,,,,,,,,,,,,,,,San Francisco,,,,,,,,,,,,,,DataSF API,datasf_tech_businesses copy.csv,Mantech (Usa) Inc.,2024.0
+,,,,,,,CA,,,,,,,,,,,,,,,San Francisco,,,,,,,,,,,,,,DataSF API,datasf_tech_businesses copy.csv,Hairsbybren,2024.0
+,,,,,,,CA,,,,,,,,,,,,,,,San Francisco,,,,,,,,,,,,,,DataSF API,datasf_tech_businesses copy.csv,Jamila Voltaire,2024.0
+,,,,,,,CA,,,,,,,,,,,,,,,San Francisco,,,,,,,,,,,,,,DataSF API,datasf_tech_businesses copy.csv,Eg Painting,2024.0
+,,,,,,,CA,,,,,,,,,,,,,,,San Francisco,,,,,,,,,,,,,,DataSF API,datasf_tech_businesses copy.csv,"Gb Heating And Air, Inc",2024.0
+,,,,,,,CA,,,,,,,,,,,,,,,San Francisco,,,,,,,,,,,,,,DataSF API,datasf_tech_businesses copy.csv,Digital Mobile Innovations LLC,2024.0
+,,,,,,,CA,,,,,,,,,,,,,,,San Francisco,,,,,,,,,,,,,,DataSF API,datasf_tech_businesses copy.csv,D & F Mobile Truck Repair,2024.0
+,,,,,,,CA,,,,,,,,,,,,,,,San Francisco,,,,,,,,,,,,,,DataSF API,datasf_tech_businesses copy.csv,Alp Construction & Painting Inc,2024.0
+,,,,,,,CA,,,,,,,,,,,,,,,San Francisco,,,,,,,,,,,,,,DataSF API,datasf_tech_businesses copy.csv,Hair By The Ts Misty,2024.0
+,,,,,,,CA,,,,,,,,,,,,,,,San Francisco,,,,,,,,,,,,,,DataSF API,datasf_tech_businesses copy.csv,Taishan Cuisine Second,2024.0
+,,,,,,,CA,,,,,,,,,,,,,,,San Francisco,,,,,,,,,,,,,,DataSF API,datasf_tech_businesses copy.csv,Kaili Beauty Nail Salon,2024.0
+,,,,,,,CA,,,,,,,,,,,,,,,San Francisco,,,,,,,,,,,,,,DataSF API,datasf_tech_businesses copy.csv,Three Soles Inc. Dba Trainor Builders,2024.0
+,,,,,,,CA,,,,,,,,,,,,,,,San Francisco,,,,,,,,,,,,,,DataSF API,datasf_tech_businesses copy.csv,Unsloth Ai,2024.0
+,,,,,,,CA,,,,,,,,,,,,,,,San Francisco,,,,,,,,,,,,,,DataSF API,datasf_tech_businesses copy.csv,A&S Painting And Plastering Inc,2024.0
+,,,,,,,CA,,,,,,,,,,,,,,,San Francisco,,,,,,,,,,,,,,DataSF API,datasf_tech_businesses copy.csv,Hand Wash Detailing SF,2024.0
+,,,,,,,CA,,,,,,,,,,,,,,,San Francisco,,,,,,,,,,,,,,DataSF API,datasf_tech_businesses copy.csv,Maison Au Pont Owners Association,2024.0
+,,,,,,,CA,,,,,,,,,,,,,,,San Francisco,,,,,,,,,,,,,,DataSF API,datasf_tech_businesses copy.csv,"Linkup Mobile, Inc.",2024.0
+,,,,,,,CA,,,,,,,,,,,,,,,San Francisco,,,,,,,,,,,,,,DataSF API,datasf_tech_businesses copy.csv,Appliance Repair SF,2024.0
+,,,,,,,CA,,,,,,,,,,,,,,,San Francisco,,,,,,,,,,,,,,DataSF API,datasf_tech_businesses copy.csv,Happy Junk Truck,2024.0
+,,,,,,,CA,,,,,,,,,,,,,,,San Francisco,,,,,,,,,,,,,,DataSF API,datasf_tech_businesses copy.csv,Unsloth Ai Inc.,2024.0
+,,,,,,,CA,,,,,,,,,,,,,,,San Francisco,,,,,,,,,,,,,,DataSF API,datasf_tech_businesses copy.csv,435 Duncan St Airbnb,2024.0
+,,,,,,,CA,,,,,,,,,,,,,,,San Francisco,,,,,,,,,,,,,,DataSF API,datasf_tech_businesses copy.csv,Aquatic Technology Pool & Spa,2024.0
+,,,,,,,CA,,,,,,,,,,,,,,,San Francisco,,,,,,,,,,,,,,DataSF API,datasf_tech_businesses copy.csv,Taishan Cuisine The 5th One,2024.0
+,,,,,,,CA,,,,,,,,,,,,,,,San Francisco,,,,,,,,,,,,,,DataSF API,datasf_tech_businesses copy.csv,Removaldefense.Ai,2024.0
+,,,,,,,CA,,,,,,,,,,,,,,,San Francisco,,,,,,,,,,,,,,DataSF API,datasf_tech_businesses copy.csv,Freeman's Heating Air Conditioning & Electrical Services,2024.0
+,,,,,,,CA,,,,,,,,,,,,,,,San Francisco,,,,,,,,,,,,,,DataSF API,datasf_tech_businesses copy.csv,Armored Air Heating & Air Conditioning,2024.0
+,,,,,,,CA,,,,,,,,,,,,,,,San Francisco,,,,,,,,,,,,,,DataSF API,datasf_tech_businesses copy.csv,Laila Fernanda Vivas Maline Sarmadi,2024.0
+,,,,,,,CA,,,,,,,,,,,,,,,San Francisco,,,,,,,,,,,,,,DataSF API,datasf_tech_businesses copy.csv,Caretech Innovations LLC,2024.0
+,,,,,,,CA,,,,,,,,,,,,,,,San Francisco,,,,,,,,,,,,,,DataSF API,datasf_tech_businesses copy.csv,Done Right Heating And Air,2024.0
+,,,,,,,CA,,,,,,,,,,,,,,,San Francisco,,,,,,,,,,,,,,DataSF API,datasf_tech_businesses copy.csv,Solis Ai And Data Transformation Services,2024.0
+,,,,,,,CA,,,,,,,,,,,,,,,San Francisco,,,,,,,,,,,,,,DataSF API,datasf_tech_businesses copy.csv,"Golden State Training, LLC",2024.0
+,,,,,,,CA,,,,,,,,,,,,,,,San Francisco,,,,,,,,,,,,,,DataSF API,datasf_tech_businesses copy.csv,Pauls Mobile Detailing Inc,2024.0
+,,,,,,,CA,,,,,,,,,,,,,,,San Francisco,,,,,,,,,,,,,,DataSF API,datasf_tech_businesses copy.csv,Solar Tech Collective LLC,2024.0
+,,,,,,,CA,,,,,,,,,,,,,,,San Francisco,,,,,,,,,,,,,,DataSF API,datasf_tech_businesses copy.csv,Abigail Edber,2024.0
+,,,,,,,CA,,,,,,,,,,,,,,,San Francisco,,,,,,,,,,,,,,DataSF API,datasf_tech_businesses copy.csv,Eckert's Mobile Phones,2024.0
+,,,,,,,CA,,,,,,,,,,,,,,,San Francisco,,,,,,,,,,,,,,DataSF API,datasf_tech_businesses copy.csv,Cogent Infotech,2024.0
+,,,,,,,CA,,,,,,,,,,,,,,,San Francisco,,,,,,,,,,,,,,DataSF API,datasf_tech_businesses copy.csv,Sparkl Sustainable Solutions Dba Sparkl Reusables,2024.0
+,,,,,,,CA,,,,,,,,,,,,,,,San Francisco,,,,,,,,,,,,,,DataSF API,datasf_tech_businesses copy.csv,Toc Painting,2024.0
+,,,,,,,CA,,,,,,,,,,,,,,,San Francisco,,,,,,,,,,,,,,DataSF API,datasf_tech_businesses copy.csv,K&K Nail Studio,2024.0
+,,,,,,,CA,,,,,,,,,,,,,,,San Francisco,,,,,,,,,,,,,,DataSF API,datasf_tech_businesses copy.csv,Mosaic Public Partners LLC,2024.0
+,,,,,,,CA,,,,,,,,,,,,,,,San Francisco,,,,,,,,,,,,,,DataSF API,datasf_tech_businesses copy.csv,Clinton Park Airbnb,2024.0
+,,,,,,,CA,,,,,,,,,,,,,,,San Francisco,,,,,,,,,,,,,,DataSF API,datasf_tech_businesses copy.csv,Nail Dar,2024.0
+,,,,,,,CA,,,,,,,,,,,,,,,San Francisco,,,,,,,,,,,,,,DataSF API,datasf_tech_businesses copy.csv,Marina Auto Detail,2024.0
+,,,,,,,CA,,,,,,,,,,,,,,,San Francisco,,,,,,,,,,,,,,DataSF API,datasf_tech_businesses copy.csv,"Propel Platform, Inc.",2024.0
+,,,,,,,CA,,,,,,,,,,,,,,,San Francisco,,,,,,,,,,,,,,DataSF API,datasf_tech_businesses copy.csv,Aimee Golant: Metal Art & Judaica,2024.0
+,,,,,,,CA,,,,,,,,,,,,,,,San Francisco,,,,,,,,,,,,,,DataSF API,datasf_tech_businesses copy.csv,"Luminator Technology Group Global, LLC",2024.0
+,,,,,,,CA,,,,,,,,,,,,,,,San Francisco,,,,,,,,,,,,,,DataSF API,datasf_tech_businesses copy.csv,Home Front Heating And Air Conditioning Inc,2024.0
+,,,,,,,CA,,,,,,,,,,,,,,,San Francisco,,,,,,,,,,,,,,DataSF API,datasf_tech_businesses copy.csv,Flagship Training,2024.0
+,,,,,,,CA,,,,,,,,,,,,,,,San Francisco,,,,,,,,,,,,,,DataSF API,datasf_tech_businesses copy.csv,Atlas Voice & Data LLC,2024.0
+,,,,,,,CA,,,,,,,,,,,,,,,San Francisco,,,,,,,,,,,,,,DataSF API,datasf_tech_businesses copy.csv,Airbnb,2024.0
+,,,,,,,CA,,,,,,,,,,,,,,,San Francisco,,,,,,,,,,,,,,DataSF API,datasf_tech_businesses copy.csv,Eightai Inc.,2024.0
+,,,,,,,CA,,,,,,,,,,,,,,,San Francisco,,,,,,,,,,,,,,DataSF API,datasf_tech_businesses copy.csv,Peachy Nails,2024.0
+,,,,,,,CA,,,,,,,,,,,,,,,San Francisco,,,,,,,,,,,,,,DataSF API,datasf_tech_businesses copy.csv,Leksi Paints,2024.0
+,,,,,,,CA,,,,,,,,,,,,,,,San Francisco,,,,,,,,,,,,,,DataSF API,datasf_tech_businesses copy.csv,Silver Cloud,2024.0
+,,,,,,,CA,,,,,,,,,,,,,,,San Francisco,,,,,,,,,,,,,,DataSF API,datasf_tech_businesses copy.csv,Avail Engineering,2024.0
+,,,,,,,CA,,,,,,,,,,,,,,,San Francisco,,,,,,,,,,,,,,DataSF API,datasf_tech_businesses copy.csv,Nicolas Protopappas,2024.0
+,,,,,,,CA,,,,,,,,,,,,,,,San Francisco,,,,,,,,,,,,,,DataSF API,datasf_tech_businesses copy.csv,Informa Tech LLC,2024.0
+,,,,,,,CA,,,,,,,,,,,,,,,San Francisco,,,,,,,,,,,,,,DataSF API,datasf_tech_businesses copy.csv,Quevedo Painting,2024.0
+,,,,,,,CA,,,,,,,,,,,,,,,San Francisco,,,,,,,,,,,,,,DataSF API,datasf_tech_businesses copy.csv,"Scrubz Apparel Supplies 2024 Unlimited, LLC",2024.0
+,,,,,,,CA,,,,,,,,,,,,,,,San Francisco,,,,,,,,,,,,,,DataSF API,datasf_tech_businesses copy.csv,Sun & Shield Tech Services,2024.0
+,,,,,,,CA,,,,,,,,,,,,,,,San Francisco,,,,,,,,,,,,,,DataSF API,datasf_tech_businesses copy.csv,Daily Accounting Services,2024.0
+,,,,,,,CA,,,,,,,,,,,,,,,San Francisco,,,,,,,,,,,,,,DataSF API,datasf_tech_businesses copy.csv,"So Does Nails, Inc",2024.0
+,,,,,,,CA,,,,,,,,,,,,,,,San Francisco,,,,,,,,,,,,,,DataSF API,datasf_tech_businesses copy.csv,Stoic Tech,2024.0
+,,,,,,,CA,,,,,,,,,,,,,,,San Francisco,,,,,,,,,,,,,,DataSF API,datasf_tech_businesses copy.csv,Phone & Computer Repair 23rd,2024.0
+,,,,,,,CA,,,,,,,,,,,,,,,San Francisco,,,,,,,,,,,,,,DataSF API,datasf_tech_businesses copy.csv,"Oui, Si, Hai LLC",2024.0
+,,,,,,,CA,,,,,,,,,,,,,,,San Francisco,,,,,,,,,,,,,,DataSF API,datasf_tech_businesses copy.csv,Nailart Fairytale,2024.0
+,,,,,,,CA,,,,,,,,,,,,,,,San Francisco,,,,,,,,,,,,,,DataSF API,datasf_tech_businesses copy.csv,Teixeira Training,2024.0
+,,,,,,,CA,,,,,,,,,,,,,,,San Francisco,,,,,,,,,,,,,,DataSF API,datasf_tech_businesses copy.csv,Maigane Music,2024.0
+,,,,,,,CA,,,,,,,,,,,,,,,San Francisco,,,,,,,,,,,,,,DataSF API,datasf_tech_businesses copy.csv,Clearscope Technology Solutions,2024.0
+,,,,,,,CA,,,,,,,,,,,,,,,San Francisco,,,,,,,,,,,,,,DataSF API,datasf_tech_businesses copy.csv,Js Technology Ventures Inc,2024.0
+,,,,,,,CA,,,,,,,,,,,,,,,San Francisco,,,,,,,,,,,,,,DataSF API,datasf_tech_businesses copy.csv,Sophia Nail Spa,2024.0
+,,,,,,,CA,,,,,,,,,,,,,,,San Francisco,,,,,,,,,,,,,,DataSF API,datasf_tech_businesses copy.csv,Sinclair Domestic Services,2024.0
+,,,,,,,CA,,,,,,,,,,,,,,,San Francisco,,,,,,,,,,,,,,DataSF API,datasf_tech_businesses copy.csv,Happy Poke,2024.0
+,,,,,,,CA,,,,,,,,,,,,,,,San Francisco,,,,,,,,,,,,,,DataSF API,datasf_tech_businesses copy.csv,Hairglim Beauty,2024.0
+,,,,,,,CA,,,,,,,,,,,,,,,San Francisco,,,,,,,,,,,,,,DataSF API,datasf_tech_businesses copy.csv,Agentbaseai Inc,2024.0
+,,,,,,,CA,,,,,,,,,,,,,,,San Francisco,,,,,,,,,,,,,,DataSF API,datasf_tech_businesses copy.csv,Clarity Ai Research Inc,2024.0
+,,,,,,,CA,,,,,,,,,,,,,,,San Francisco,,,,,,,,,,,,,,DataSF API,datasf_tech_businesses copy.csv,Golden Bear Heating And Air,2024.0
+,,,,,,,CA,,,,,,,,,,,,,,,San Francisco,,,,,,,,,,,,,,DataSF API,datasf_tech_businesses copy.csv,Happy Cozy Rental,2024.0
+,,,,,,,CA,,,,,,,,,,,,,,,San Francisco,,,,,,,,,,,,,,DataSF API,datasf_tech_businesses copy.csv,"Caia's Cookies, LLC",2024.0
+,,,,,,,CA,,,,,,,,,,,,,,,San Francisco,,,,,,,,,,,,,,DataSF API,datasf_tech_businesses copy.csv,Omnithink.Ai Inc.,2024.0
+,,,,,,,CA,,,,,,,,,,,,,,,San Francisco,,,,,,,,,,,,,,DataSF API,datasf_tech_businesses copy.csv,Caia's Cookies,2024.0
+,,,,,,,CA,,,,,,,,,,,,,,,San Francisco,,,,,,,,,,,,,,DataSF API,datasf_tech_businesses copy.csv,Caiye Huang,2024.0
+,,,,,,,CA,,,,,,,,,,,,,,,San Francisco,,,,,,,,,,,,,,DataSF API,datasf_tech_businesses copy.csv,"Loqi Applications, LLC",2024.0
+,,,,,,,CA,,,,,,,,,,,,,,,San Francisco,,,,,,,,,,,,,,DataSF API,datasf_tech_businesses copy.csv,"Caitlin O'donnell, Psyd, Psychotherapy Inc.",2024.0
+,,,,,,,CA,,,,,,,,,,,,,,,San Francisco,,,,,,,,,,,,,,DataSF API,datasf_tech_businesses copy.csv,"Kino Ai, Inc.",2024.0
+,,,,,,,CA,,,,,,,,,,,,,,,San Francisco,,,,,,,,,,,,,,DataSF API,datasf_tech_businesses copy.csv,Advanced Heating And Air,2024.0
+,,,,,,,CA,,,,,,,,,,,,,,,San Francisco,,,,,,,,,,,,,,DataSF API,datasf_tech_businesses copy.csv,Happy Teachers,2024.0
+,,,,,,,CA,,,,,,,,,,,,,,,San Francisco,,,,,,,,,,,,,,DataSF API,datasf_tech_businesses copy.csv,Service King Air,2024.0
+,,,,,,,CA,,,,,,,,,,,,,,,San Francisco,,,,,,,,,,,,,,DataSF API,datasf_tech_businesses copy.csv,Aimee Duddridge-Picard,2024.0
+,,,,,,,CA,,,,,,,,,,,,,,,San Francisco,,,,,,,,,,,,,,DataSF API,datasf_tech_businesses copy.csv,"Law Office Of Christy Lai, P.C.",2024.0
+,,,,,,,CA,,,,,,,,,,,,,,,San Francisco,,,,,,,,,,,,,,DataSF API,datasf_tech_businesses copy.csv,Sunset Painting,2024.0
+,,,,,,,CA,,,,,,,,,,,,,,,San Francisco,,,,,,,,,,,,,,DataSF API,datasf_tech_businesses copy.csv,41x1 Training,2024.0
+,,,,,,,CA,,,,,,,,,,,,,,,San Francisco,,,,,,,,,,,,,,DataSF API,datasf_tech_businesses copy.csv,40x0 Training,2024.0
+,,,,,,,CA,,,,,,,,,,,,,,,San Francisco,,,,,,,,,,,,,,DataSF API,datasf_tech_businesses copy.csv,Nail It SF,2024.0
+,,,,,,,CA,,,,,,,,,,,,,,,San Francisco,,,,,,,,,,,,,,DataSF API,datasf_tech_businesses copy.csv,Al Aignment Liaison,2024.0
+,,,,,,,CA,,,,,,,,,,,,,,,San Francisco,,,,,,,,,,,,,,DataSF API,datasf_tech_businesses copy.csv,Failup Management Advisory Inc,2024.0
+,,,,,,,CA,,,,,,,,,,,,,,,San Francisco,,,,,,,,,,,,,,DataSF API,datasf_tech_businesses copy.csv,Susie Thai Massage,2024.0
+,,,,,,,CA,,,,,,,,,,,,,,,San Francisco,,,,,,,,,,,,,,DataSF API,datasf_tech_businesses copy.csv,Revic Ai Inc,2024.0
+,,,,,,,CA,,,,,,,,,,,,,,,San Francisco,,,,,,,,,,,,,,DataSF API,datasf_tech_businesses copy.csv,"Bdo Digital, LLC",2024.0
+,,,,,,,CA,,,,,,,,,,,,,,,San Francisco,,,,,,,,,,,,,,DataSF API,datasf_tech_businesses copy.csv,1076 Capp,2024.0
+,,,,,,,CA,,,,,,,,,,,,,,,San Francisco,,,,,,,,,,,,,,DataSF API,datasf_tech_businesses copy.csv,Tie Dye By Gail,2024.0
+,,,,,,,CA,,,,,,,,,,,,,,,San Francisco,,,,,,,,,,,,,,DataSF API,datasf_tech_businesses copy.csv,"Capture Technologies A Division Of Identisys, Inc.",2024.0
+,,,,,,,CA,,,,,,,,,,,,,,,San Francisco,,,,,,,,,,,,,,DataSF API,datasf_tech_businesses copy.csv,Humantech,2024.0
+,,,,,,,CA,,,,,,,,,,,,,,,San Francisco,,,,,,,,,,,,,,DataSF API,datasf_tech_businesses copy.csv,848 Clement Street Tai Hing Books & Gifts,2024.0
+,,,,,,,CA,,,,,,,,,,,,,,,San Francisco,,,,,,,,,,,,,,DataSF API,datasf_tech_businesses copy.csv,"Expand Power Technologies, Inc.",2024.0
+,,,,,,,CA,,,,,,,,,,,,,,,San Francisco,,,,,,,,,,,,,,DataSF API,datasf_tech_businesses copy.csv,Peerless Digital Services,2024.0
+,,,,,,,CA,,,,,,,,,,,,,,,San Francisco,,,,,,,,,,,,,,DataSF API,datasf_tech_businesses copy.csv,"Paratus Ai, Inc",2024.0
+,,,,,,,CA,,,,,,,,,,,,,,,San Francisco,,,,,,,,,,,,,,DataSF API,datasf_tech_businesses copy.csv,"Ambr Technologies, Inc.",2024.0
+,,,,,,,CA,,,,,,,,,,,,,,,San Francisco,,,,,,,,,,,,,,DataSF API,datasf_tech_businesses copy.csv,949 Capp,2024.0
+,,,,,,,CA,,,,,,,,,,,,,,,San Francisco,,,,,,,,,,,,,,DataSF API,datasf_tech_businesses copy.csv,Deconvolute Ai Inc,2024.0
+,,,,,,,CA,,,,,,,,,,,,,,,San Francisco,,,,,,,,,,,,,,DataSF API,datasf_tech_businesses copy.csv,Wastech Corporation,2024.0
+,,,,,,,CA,,,,,,,,,,,,,,,San Francisco,,,,,,,,,,,,,,DataSF API,datasf_tech_businesses copy.csv,Heat Technology Products,2024.0
+,,,,,,,CA,,,,,,,,,,,,,,,San Francisco,,,,,,,,,,,,,,DataSF API,datasf_tech_businesses copy.csv,Yishai Lerner Consulting,2024.0
+,,,,,,,CA,,,,,,,,,,,,,,,San Francisco,,,,,,,,,,,,,,DataSF API,datasf_tech_businesses copy.csv,Js Information Technology Solutions LLC,2024.0
+,,,,,,,CA,,,,,,,,,,,,,,,San Francisco,,,,,,,,,,,,,,DataSF API,datasf_tech_businesses copy.csv,Richmond District Jewelry Repair,2024.0
+,,,,,,,CA,,,,,,,,,,,,,,,San Francisco,,,,,,,,,,,,,,DataSF API,datasf_tech_businesses copy.csv,Cje Heating And Air,2024.0
+,,,,,,,CA,,,,,,,,,,,,,,,San Francisco,,,,,,,,,,,,,,DataSF API,datasf_tech_businesses copy.csv,Central Haight Market,2024.0
+,,,,,,,CA,,,,,,,,,,,,,,,San Francisco,,,,,,,,,,,,,,DataSF API,datasf_tech_businesses copy.csv,Joannabuksahair,2024.0
+,,,,,,,CA,,,,,,,,,,,,,,,San Francisco,,,,,,,,,,,,,,DataSF API,datasf_tech_businesses copy.csv,Kailie Barnes,2024.0
+,,,,,,,CA,,,,,,,,,,,,,,,San Francisco,,,,,,,,,,,,,,DataSF API,datasf_tech_businesses copy.csv,Diego Data,2024.0
+,,,,,,,CA,,,,,,,,,,,,,,,San Francisco,,,,,,,,,,,,,,DataSF API,datasf_tech_businesses copy.csv,Prestige Custom Painting Inc,2024.0
+,,,,,,,CA,,,,,,,,,,,,,,,San Francisco,,,,,,,,,,,,,,DataSF API,datasf_tech_businesses copy.csv,Taishan Specialty,2024.0
+,,,,,,,CA,,,,,,,,,,,,,,,San Francisco,,,,,,,,,,,,,,DataSF API,datasf_tech_businesses copy.csv,Vista Mobile Urgent Care Inc,2024.0
+,,,,,,,CA,,,,,,,,,,,,,,,San Francisco,,,,,,,,,,,,,,DataSF API,datasf_tech_businesses copy.csv,Aidens Quality Painting Inc,2024.0
+,,,,,,,CA,,,,,,,,,,,,,,,San Francisco,,,,,,,,,,,,,,DataSF API,datasf_tech_businesses copy.csv,Taishan Restaurant,2024.0
+,,,,,,,CA,,,,,,,,,,,,,,,San Francisco,,,,,,,,,,,,,,DataSF API,datasf_tech_businesses copy.csv,Taishan Cuisine,2024.0
+,,,,,,,CA,,,,,,,,,,,,,,,San Francisco,,,,,,,,,,,,,,DataSF API,datasf_tech_businesses copy.csv,Ts Nail&Lash LLC,2024.0
+,,,,,,,CA,,,,,,,,,,,,,,,San Francisco,,,,,,,,,,,,,,DataSF API,datasf_tech_businesses copy.csv,"Liquidmetal Ai, Inc.",2024.0
+,,,,,,,CA,,,,,,,,,,,,,,,San Francisco,,,,,,,,,,,,,,DataSF API,datasf_tech_businesses copy.csv,T's Nail & Lash Spa,2024.0
+,,,,,,,CA,,,,,,,,,,,,,,,San Francisco,,,,,,,,,,,,,,DataSF API,datasf_tech_businesses copy.csv,Made Simple Heating And Air Inc.,2024.0
+,,,,,,,CA,,,,,,,,,,,,,,,San Francisco,,,,,,,,,,,,,,DataSF API,datasf_tech_businesses copy.csv,Roundabout Technologies,2024.0
+,,,,,,,CA,,,,,,,,,,,,,,,San Francisco,,,,,,,,,,,,,,DataSF API,datasf_tech_businesses copy.csv,Phone Repair,2024.0
+,,,,,,,CA,,,,,,,,,,,,,,,San Francisco,,,,,,,,,,,,,,DataSF API,datasf_tech_businesses copy.csv,Steps Towards Faith,2024.0
+,,,,,,,CA,,,,,,,,,,,,,,,San Francisco,,,,,,,,,,,,,,DataSF API,datasf_tech_businesses copy.csv,"Perfect Pairing Trading, LLC.",2024.0
+,,,,,,,CA,,,,,,,,,,,,,,,San Francisco,,,,,,,,,,,,,,DataSF API,datasf_tech_businesses copy.csv,Cloudxpress,2024.0
+,,,,,,,CA,,,,,,,,,,,,,,,San Francisco,,,,,,,,,,,,,,DataSF API,datasf_tech_businesses copy.csv,Amy Tai,2024.0
+,,,,,,,CA,,,,,,,,,,,,,,,San Francisco,,,,,,,,,,,,,,DataSF API,datasf_tech_businesses copy.csv,Live Guard Tech LLC,2024.0
+,,,,,,,CA,,,,,,,,,,,,,,,San Francisco,,,,,,,,,,,,,,DataSF API,datasf_tech_businesses copy.csv,The Creation Painting Inc.,2024.0
+,,,,,,,CA,,,,,,,,,,,,,,,San Francisco,,,,,,,,,,,,,,DataSF API,datasf_tech_businesses copy.csv,Edgewood Contruction & Home Repair,2024.0
+,,,,,,,CA,,,,,,,,,,,,,,,San Francisco,,,,,,,,,,,,,,DataSF API,datasf_tech_businesses copy.csv,General Hvac Electric And Appliance Repair,2024.0
+,,,,,,,CA,,,,,,,,,,,,,,,San Francisco,,,,,,,,,,,,,,DataSF API,datasf_tech_businesses copy.csv,Hometown Heating & Air,2024.0
+,,,,,,,CA,,,,,,,,,,,,,,,San Francisco,,,,,,,,,,,,,,DataSF API,datasf_tech_businesses copy.csv,Gaa Auto Repair And Body Shop,2024.0
+,,,,,,,CA,,,,,,,,,,,,,,,San Francisco,,,,,,,,,,,,,,DataSF API,datasf_tech_businesses copy.csv,Trachawk Painting Co,2024.0
+,,,,,,,CA,,,,,,,,,,,,,,,San Francisco,,,,,,,,,,,,,,DataSF API,datasf_tech_businesses copy.csv,Whiskertails,2024.0
+,,,,,,,CA,,,,,,,,,,,,,,,San Francisco,,,,,,,,,,,,,,DataSF API,datasf_tech_businesses copy.csv,Mountain Microgrids,2024.0
+,,,,,,,CA,,,,,,,,,,,,,,,San Francisco,,,,,,,,,,,,,,DataSF API,datasf_tech_businesses copy.csv,Dynamic Map Platform North America Inc,2024.0
+,,,,,,,CA,,,,,,,,,,,,,,,San Francisco,,,,,,,,,,,,,,DataSF API,datasf_tech_businesses copy.csv,Mb Painting Company,2024.0
+,,,,,,,CA,,,,,,,,,,,,,,,San Francisco,,,,,,,,,,,,,,DataSF API,datasf_tech_businesses copy.csv,Quick Fix Garage Door Repair Inc,2024.0
+,,,,,,,CA,,,,,,,,,,,,,,,San Francisco,,,,,,,,,,,,,,DataSF API,datasf_tech_businesses copy.csv,Wong Tai Sen Temple & Services Inc,2024.0
+,,,,,,,CA,,,,,,,,,,,,,,,San Francisco,,,,,,,,,,,,,,DataSF API,datasf_tech_businesses copy.csv,Zorina Nail Studio,2024.0
+,,,,,,,CA,,,,,,,,,,,,,,,San Francisco,,,,,,,,,,,,,,DataSF API,datasf_tech_businesses copy.csv,"Riveter Ai, Inc.",2024.0
+,,,,,,,CA,,,,,,,,,,,,,,,San Francisco,,,,,,,,,,,,,,DataSF API,datasf_tech_businesses copy.csv,Oscar Areas Mobile Auto Repair,2024.0
+,,,,,,,CA,,,,,,,,,,,,,,,San Francisco,,,,,,,,,,,,,,DataSF API,datasf_tech_businesses copy.csv,Organization Technology,2024.0
+,,,,,,,CA,,,,,,,,,,,,,,,San Francisco,,,,,,,,,,,,,,DataSF API,datasf_tech_businesses copy.csv,"Hydra Technologies, LLC",2024.0
+,,,,,,,CA,,,,,,,,,,,,,,,San Francisco,,,,,,,,,,,,,,DataSF API,datasf_tech_businesses copy.csv,"Nonna App, LLC",2024.0
+,,,,,,,CA,,,,,,,,,,,,,,,San Francisco,,,,,,,,,,,,,,DataSF API,datasf_tech_businesses copy.csv,Dariyana Ukrainian Crepes,2024.0
+,,,,,,,CA,,,,,,,,,,,,,,,San Francisco,,,,,,,,,,,,,,DataSF API,datasf_tech_businesses copy.csv,Jb Painting,2024.0
+,,,,,,,CA,,,,,,,,,,,,,,,San Francisco,,,,,,,,,,,,,,DataSF API,datasf_tech_businesses copy.csv,Kenia Beauty Nails,2024.0
+,,,,,,,CA,,,,,,,,,,,,,,,San Francisco,,,,,,,,,,,,,,DataSF API,datasf_tech_businesses copy.csv,"Deepseq.Ai, Inc.",2024.0
+,,,,,,,CA,,,,,,,,,,,,,,,San Francisco,,,,,,,,,,,,,,DataSF API,datasf_tech_businesses copy.csv,Luke Moody Ai,2024.0
+,,,,,,,CA,,,,,,,,,,,,,,,San Francisco,,,,,,,,,,,,,,DataSF API,datasf_tech_businesses copy.csv,Metro Mobile Communications,2024.0
+,,,,,,,CA,,,,,,,,,,,,,,,San Francisco,,,,,,,,,,,,,,DataSF API,datasf_tech_businesses copy.csv,Claire Bonham-Carter,2024.0
+,,,,,,,CA,,,,,,,,,,,,,,,San Francisco,,,,,,,,,,,,,,DataSF API,datasf_tech_businesses copy.csv,Dba Vetsentry/River City Data,2024.0
+,,,,,,,CA,,,,,,,,,,,,,,,San Francisco,,,,,,,,,,,,,,DataSF API,datasf_tech_businesses copy.csv,Maison De Vertu,2024.0
+,,,,,,,CA,,,,,,,,,,,,,,,San Francisco,,,,,,,,,,,,,,DataSF API,datasf_tech_businesses copy.csv,"Usa Digital Communications, Inc",2024.0
+,,,,,,,CA,,,,,,,,,,,,,,,San Francisco,,,,,,,,,,,,,,DataSF API,datasf_tech_businesses copy.csv,Onedigital,2024.0
+,,,,,,,CA,,,,,,,,,,,,,,,San Francisco,,,,,,,,,,,,,,DataSF API,datasf_tech_businesses copy.csv,Nova's Airbnb,2024.0
+,,,,,,,CA,,,,,,,,,,,,,,,San Francisco,,,,,,,,,,,,,,DataSF API,datasf_tech_businesses copy.csv,Friendly App Studio,2024.0
+,,,,,,,CA,,,,,,,,,,,,,,,San Francisco,,,,,,,,,,,,,,DataSF API,datasf_tech_businesses copy.csv,Junaid Basir Reinforce,2024.0
+,,,,,,,CA,,,,,,,,,,,,,,,San Francisco,,,,,,,,,,,,,,DataSF API,datasf_tech_businesses copy.csv,Alamere Digital LLC,2024.0
+,,,,,,,CA,,,,,,,,,,,,,,,San Francisco,,,,,,,,,,,,,,DataSF API,datasf_tech_businesses copy.csv,Metaintels LLC,2024.0
+,,,,,,,CA,,,,,,,,,,,,,,,San Francisco,,,,,,,,,,,,,,DataSF API,datasf_tech_businesses copy.csv,Rockstar Iphone Ipad Samsung Mac Laptop & Electronics Repair,2024.0
+,,,,,,,CA,,,,,,,,,,,,,,,San Francisco,,,,,,,,,,,,,,DataSF API,datasf_tech_businesses copy.csv,Best Coast Sailing,2024.0
+,,,,,,,CA,,,,,,,,,,,,,,,San Francisco,,,,,,,,,,,,,,DataSF API,datasf_tech_businesses copy.csv,Diane Martinez - Certified Personal Trainer (Cpt),2024.0
+,,,,,,,CA,,,,,,,,,,,,,,,San Francisco,,,,,,,,,,,,,,DataSF API,datasf_tech_businesses copy.csv,Your Happy Place LLC,2024.0
+,,,,,,,CA,,,,,,,,,,,,,,,San Francisco,,,,,,,,,,,,,,DataSF API,datasf_tech_businesses copy.csv,Rush Air Mechanical,2024.0
+,,,,,,,CA,,,,,,,,,,,,,,,San Francisco,,,,,,,,,,,,,,DataSF API,datasf_tech_businesses copy.csv,"Vanguard Smoke & Fire Curtains, Inc.",2024.0
+,,,,,,,CA,,,,,,,,,,,,,,,San Francisco,,,,,,,,,,,,,,DataSF API,datasf_tech_businesses copy.csv,Happy Patches LLC,2024.0
+,,,,,,,CA,,,,,,,,,,,,,,,San Francisco,,,,,,,,,,,,,,DataSF API,datasf_tech_businesses copy.csv,Norcal Maid Cleaning Services,2024.0
+,,,,,,,CA,,,,,,,,,,,,,,,San Francisco,,,,,,,,,,,,,,DataSF API,datasf_tech_businesses copy.csv,"Blackhawk Painting, Inc.",2024.0
+,,,,,,,CA,,,,,,,,,,,,,,,San Francisco,,,,,,,,,,,,,,DataSF API,datasf_tech_businesses copy.csv,Rotor Digital Services,2024.0
+,,,,,,,CA,,,,,,,,,,,,,,,San Francisco,,,,,,,,,,,,,,DataSF API,datasf_tech_businesses copy.csv,Toorialai Naeem,2024.0

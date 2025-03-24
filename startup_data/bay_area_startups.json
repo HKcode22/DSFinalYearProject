@@ -1,0 +1,502 @@
+[
+    {
+        "name": "Mercor",
+        "website": "mercor.com",
+        "category": "Artificial Intelligence",
+        "location": "Bay Area",
+        "funding_amount": "$75,000,000",
+        "funding_round": "Series B",
+        "date": "Feb 2025",
+        "source": "Growth List"
+    },
+    {
+        "name": "Created by Humans",
+        "website": "www.createdbyhumans.ai",
+        "category": "Artificial Intelligence",
+        "location": "Bay Area",
+        "funding_amount": "$5,500,000",
+        "funding_round": "Seed",
+        "date": "Feb 2025",
+        "source": "Growth List"
+    },
+    {
+        "name": "Manas AI",
+        "website": "www.manasai.co",
+        "category": "Artificial Intelligence",
+        "location": "Bay Area",
+        "funding_amount": "$24,600,000",
+        "funding_round": "Seed",
+        "date": "Feb 2025",
+        "source": "Growth List"
+    },
+    {
+        "name": "BluWhale",
+        "website": "bluwhale.net",
+        "category": "Artificial Intelligence, Cloud Computing",
+        "location": "Bay Area",
+        "funding_amount": "$75,000,000",
+        "funding_round": "Initial Coin Offering",
+        "date": "Feb 2025",
+        "source": "Growth List"
+    },
+    {
+        "name": "Savant Labs",
+        "website": "savantlabs.io",
+        "category": "Artificial Intelligence, Data, Analytics",
+        "location": "Bay Area",
+        "funding_amount": "$18,500,000",
+        "funding_round": "Series A",
+        "date": "Feb 2025",
+        "source": "Growth List"
+    },
+    {
+        "name": "Athenic AI",
+        "website": "Athenic.com",
+        "category": "Artificial Intelligence, Data, Analytics",
+        "location": "Bay Area",
+        "funding_amount": "$4,300,000",
+        "funding_round": "Seed",
+        "date": "Feb 2025",
+        "source": "Growth List"
+    },
+    {
+        "name": "Delve",
+        "website": "www.delve.co",
+        "category": "Artificial Intelligence, Data, Marketing",
+        "location": "Bay Area",
+        "funding_amount": "$3,300,000",
+        "funding_round": "Seed",
+        "date": "Feb 2025",
+        "source": "Growth List"
+    },
+    {
+        "name": "Motif",
+        "website": "motif.io",
+        "category": "Augmented Reality",
+        "location": "Bay Area",
+        "funding_amount": "$46,000,000",
+        "funding_round": "Series A",
+        "date": "Feb 2025",
+        "source": "Growth List"
+    },
+    {
+        "name": "Atomicwork",
+        "website": "www.atomicwork.com",
+        "category": "Cloud Computing",
+        "location": "Bay Area",
+        "funding_amount": "$25,000,000",
+        "funding_round": "Series A",
+        "date": "Feb 2025",
+        "source": "Growth List"
+    },
+    {
+        "name": "Kroskod",
+        "website": "Kroskod.com",
+        "category": "Cloud Computing",
+        "location": "Bay Area",
+        "funding_amount": "",
+        "funding_round": "Pre-Seed",
+        "date": "Feb 2025",
+        "source": "Growth List"
+    },
+    {
+        "name": "Roofr",
+        "website": "roofr.com",
+        "category": "Construction, Marketplace, Aerospace",
+        "location": "Bay Area",
+        "funding_amount": "",
+        "funding_round": "Series B",
+        "date": "Feb 2025",
+        "source": "Growth List"
+    },
+    {
+        "name": "Pakal Technologies",
+        "website": "pakal-tech.com",
+        "category": "Electronics",
+        "location": "Bay Area",
+        "funding_amount": "$25,000,000",
+        "funding_round": "Series B",
+        "date": "Feb 2025",
+        "source": "Growth List"
+    },
+    {
+        "name": "Smart Wires",
+        "website": "www.smartwires.com",
+        "category": "Energy",
+        "location": "Bay Area",
+        "funding_amount": "$65,000,000",
+        "funding_round": "Private Equity",
+        "date": "Feb 2025",
+        "source": "Growth List"
+    },
+    {
+        "name": "WeaveGrid",
+        "website": "www.weavegrid.com",
+        "category": "Energy, Cloud Computing",
+        "location": "Bay Area",
+        "funding_amount": "",
+        "funding_round": "Venture - Series Unknown",
+        "date": "Feb 2025",
+        "source": "Growth List"
+    },
+    {
+        "name": "Wisetack",
+        "website": "www.wisetack.com",
+        "category": "Finance",
+        "location": "Bay Area",
+        "funding_amount": "$25,000,000",
+        "funding_round": "Venture - Series Unknown",
+        "date": "Feb 2025",
+        "source": "Growth List"
+    },
+    {
+        "name": "Taxflow",
+        "website": "www.jointaxflow.ai",
+        "category": "FinTech, Finance",
+        "location": "Bay Area",
+        "funding_amount": "$750,000",
+        "funding_round": "Pre-Seed",
+        "date": "Feb 2025",
+        "source": "Growth List"
+    },
+    {
+        "name": "Bicycle Health",
+        "website": "www.bicyclehealth.com",
+        "category": "Healthcare",
+        "location": "Bay Area",
+        "funding_amount": "$16,500,000",
+        "funding_round": "Venture - Series Unknown",
+        "date": "Feb 2025",
+        "source": "Growth List"
+    },
+    {
+        "name": "Delfina",
+        "website": "www.delfina.com",
+        "category": "Healthcare",
+        "location": "Bay Area",
+        "funding_amount": "$17,000,000",
+        "funding_round": "Series A",
+        "date": "Feb 2025",
+        "source": "Growth List"
+    },
+    {
+        "name": "Safely You",
+        "website": "www.safely-you.com",
+        "category": "Healthcare, Family",
+        "location": "Bay Area",
+        "funding_amount": "$43,000,000",
+        "funding_round": "Series C",
+        "date": "Feb 2025",
+        "source": "Growth List"
+    },
+    {
+        "name": "Waterlily",
+        "website": "www.waterlily.com",
+        "category": "Healthcare, Insurance, Family",
+        "location": "Bay Area",
+        "funding_amount": "$7,000,000",
+        "funding_round": "Seed",
+        "date": "Feb 2025",
+        "source": "Growth List"
+    },
+    {
+        "name": "Tandem Space",
+        "website": "tandem.space",
+        "category": "Aerospace",
+        "location": "Bay Area",
+        "funding_amount": "$6,100,000",
+        "funding_round": "Seed",
+        "date": "Feb 2025",
+        "source": "Growth List"
+    },
+    {
+        "name": "Riot",
+        "website": "tryriot.com",
+        "category": "Artificial Intelligence",
+        "location": "Bay Area",
+        "funding_amount": "$30,000,000",
+        "funding_round": "Series B",
+        "date": "Feb 2025",
+        "source": "Growth List"
+    },
+    {
+        "name": "Response",
+        "website": "www.tryresponse.com",
+        "category": "Artificial Intelligence",
+        "location": "Bay Area",
+        "funding_amount": "$4,160,000",
+        "funding_round": "Seed",
+        "date": "Feb 2025",
+        "source": "Growth List"
+    },
+    {
+        "name": "TrueFoundry",
+        "website": "truefoundry.com",
+        "category": "Artificial Intelligence",
+        "location": "Bay Area",
+        "funding_amount": "$19,000,000",
+        "funding_round": "Series A",
+        "date": "Feb 2025",
+        "source": "Growth List"
+    },
+    {
+        "name": "Ivo",
+        "website": "www.ivo.ai",
+        "category": "Artificial Intelligence, Marketing",
+        "location": "Bay Area",
+        "funding_amount": "$16,000,000",
+        "funding_round": "Series A",
+        "date": "Feb 2025",
+        "source": "Growth List"
+    },
+    {
+        "name": "Warmly",
+        "website": "warmly.ai",
+        "category": "Artificial Intelligence, Sales",
+        "location": "Bay Area",
+        "funding_amount": "$6,000,000",
+        "funding_round": "Series A",
+        "date": "Feb 2025",
+        "source": "Growth List"
+    },
+    {
+        "name": "Plume Network",
+        "website": "www.plumenetwork.xyz",
+        "category": "Blockchain",
+        "location": "Bay Area",
+        "funding_amount": "",
+        "funding_round": "Venture - Series Unknown",
+        "date": "Feb 2025",
+        "source": "Growth List"
+    },
+    {
+        "name": "Monograph",
+        "website": "monograph.com",
+        "category": "Cloud Computing, Architecture",
+        "location": "Bay Area",
+        "funding_amount": "$20,000,000",
+        "funding_round": "Series B",
+        "date": "Feb 2025",
+        "source": "Growth List"
+    },
+    {
+        "name": "Trace.Space",
+        "website": "trace.space",
+        "category": "Cloud Computing, Artificial Intelligence",
+        "location": "Bay Area",
+        "funding_amount": "$4,000,000",
+        "funding_round": "Seed",
+        "date": "Feb 2025",
+        "source": "Growth List"
+    },
+    {
+        "name": "Semgrep",
+        "website": "semgrep.dev",
+        "category": "Cyber Security, Analytics",
+        "location": "Bay Area",
+        "funding_amount": "$100,000,000",
+        "funding_round": "Series D",
+        "date": "Feb 2025",
+        "source": "Growth List"
+    },
+    {
+        "name": "Converge",
+        "website": "www.runconverge.com",
+        "category": "Data, Marketing",
+        "location": "Bay Area",
+        "funding_amount": "$5,600,000",
+        "funding_round": "Venture - Series Unknown",
+        "date": "Feb 2025",
+        "source": "Growth List"
+    },
+    {
+        "name": "Archive",
+        "website": "www.archiveresale.com",
+        "category": "E-commerce, Fashion, Marketplace",
+        "location": "Bay Area",
+        "funding_amount": "$30,000,000",
+        "funding_round": "Series B",
+        "date": "Feb 2025",
+        "source": "Growth List"
+    },
+    {
+        "name": "TaxGPT",
+        "website": "www.taxgpt.com",
+        "category": "Finance, Artificial Intelligence",
+        "location": "Bay Area",
+        "funding_amount": "$4,600,000",
+        "funding_round": "Seed",
+        "date": "Feb 2025",
+        "source": "Growth List"
+    },
+    {
+        "name": "Sotira",
+        "website": "sotira.co",
+        "category": "FinTech, Finance",
+        "location": "Bay Area",
+        "funding_amount": "$2,000,000",
+        "funding_round": "Pre-Seed",
+        "date": "Feb 2025",
+        "source": "Growth List"
+    },
+    {
+        "name": "Little Otter",
+        "website": "www.littleotterhealth.com",
+        "category": "Healthcare, Mental Health",
+        "location": "Bay Area",
+        "funding_amount": "$9,500,000",
+        "funding_round": "Venture - Series Unknown",
+        "date": "Feb 2025",
+        "source": "Growth List"
+    },
+    {
+        "name": "Fay",
+        "website": "www.faynutrition.com",
+        "category": "Healthcare, Wellness, Nutrition and Supplements",
+        "location": "Bay Area",
+        "funding_amount": "$50,000,000",
+        "funding_round": "Series B",
+        "date": "Feb 2025",
+        "source": "Growth List"
+    },
+    {
+        "name": "Tyba",
+        "website": "www.tyba.ai",
+        "category": "Human Resources, Recruiting, Artificial Intelligence",
+        "location": "Bay Area",
+        "funding_amount": "$13,900,000",
+        "funding_round": "Series A",
+        "date": "Feb 2025",
+        "source": "Growth List"
+    },
+    {
+        "name": "Mixedbread",
+        "website": "mixedbread.ai",
+        "category": "Artificial Intelligence",
+        "location": "Bay Area",
+        "funding_amount": "$5,500,000",
+        "funding_round": "Seed",
+        "date": "Feb 2025",
+        "source": "Growth List"
+    },
+    {
+        "name": "Fal",
+        "website": "www.fal.ai",
+        "category": "Artificial Intelligence",
+        "location": "Bay Area",
+        "funding_amount": "$49,000,000",
+        "funding_round": "Series B",
+        "date": "Feb 2025",
+        "source": "Growth List"
+    },
+    {
+        "name": "Pinkfish",
+        "website": "www.pinkfish.ai",
+        "category": "Artificial Intelligence",
+        "location": "Bay Area",
+        "funding_amount": "$7,600,000",
+        "funding_round": "Pre-Seed",
+        "date": "Feb 2025",
+        "source": "Growth List"
+    },
+    {
+        "name": "Future AGI",
+        "website": "futureagi.com",
+        "category": "Artificial Intelligence",
+        "location": "Bay Area",
+        "funding_amount": "$1,600,000",
+        "funding_round": "Pre-Seed",
+        "date": "Feb 2025",
+        "source": "Growth List"
+    },
+    {
+        "name": "Harvey",
+        "website": "harvey.ai",
+        "category": "Artificial Intelligence, Legal",
+        "location": "Bay Area",
+        "funding_amount": "$300,000,000",
+        "funding_round": "Series D",
+        "date": "Feb 2025",
+        "source": "Growth List"
+    },
+    {
+        "name": "Tofu",
+        "website": "www.tofuhq.com",
+        "category": "Cloud Computing",
+        "location": "Bay Area",
+        "funding_amount": "$12,000,000",
+        "funding_round": "Series A",
+        "date": "Feb 2025",
+        "source": "Growth List"
+    },
+    {
+        "name": "Hydro Wind Energy",
+        "website": "www.hw.energy",
+        "category": "Energy",
+        "location": "Bay Area",
+        "funding_amount": "$82,660",
+        "funding_round": "Equity Crowdfunding",
+        "date": "Feb 2025",
+        "source": "Growth List"
+    },
+    {
+        "name": "Limited",
+        "website": "limitedapp.com",
+        "category": "Finance",
+        "location": "Bay Area",
+        "funding_amount": "$3,000,000",
+        "funding_round": "Pre-Seed",
+        "date": "Feb 2025",
+        "source": "Growth List"
+    },
+    {
+        "name": "Comulate",
+        "website": "www.comulate.com",
+        "category": "Finance, Analytics",
+        "location": "Bay Area",
+        "funding_amount": "$20,000,000",
+        "funding_round": "Series B",
+        "date": "Feb 2025",
+        "source": "Growth List"
+    },
+    {
+        "name": "museLIVE Inc.",
+        "website": "quabble.app",
+        "category": "Gaming",
+        "location": "Bay Area",
+        "funding_amount": "",
+        "funding_round": "Seed",
+        "date": "Feb 2025",
+        "source": "Growth List"
+    },
+    {
+        "name": "Candid Health",
+        "website": "www.joincandidhealth.com",
+        "category": "Healthcare",
+        "location": "Bay Area",
+        "funding_amount": "$52,500,000",
+        "funding_round": "Series C",
+        "date": "Feb 2025",
+        "source": "Growth List"
+    },
+    {
+        "name": "Junevity",
+        "website": "www.junevity.com",
+        "category": "Healthcare, Wellness",
+        "location": "Bay Area",
+        "funding_amount": "$10,000,000",
+        "funding_round": "Seed",
+        "date": "Feb 2025",
+        "source": "Growth List"
+    },
+    {
+        "name": "Human",
+        "website": "joinhuman.com",
+        "category": "Human Resources",
+        "location": "Bay Area",
+        "funding_amount": "$7,300,000",
+        "funding_round": "Pre-Seed",
+        "date": "Feb 2025",
+        "source": "Growth List"
+    }
+]

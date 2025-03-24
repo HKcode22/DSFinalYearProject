@@ -1,0 +1,11 @@
+2025-03-23 22:46:53,113 - WDM - INFO - ====== WebDriver manager ======
+2025-03-23 22:46:53,271 - WDM - INFO - Get LATEST chromedriver version for google-chrome
+2025-03-23 22:46:53,318 - WDM - INFO - Get LATEST chromedriver version for google-chrome
+2025-03-23 22:46:53,351 - WDM - INFO - Driver [/Users/hk/.wdm/drivers/chromedriver/mac64/134.0.6998.165/chromedriver-mac-arm64/chromedriver] found in cache
+2025-03-23 22:46:55,375 - BayAreaScraperPro - INFO - Starting data collection...
+2025-03-23 22:46:55,376 - BayAreaScraperPro - INFO - Starting Y Combinator scrape
+2025-03-23 22:46:55,686 - BayAreaScraperPro - ERROR - YC API error: 404 Client Error: Not Found for url: https://api.ycombinator.com/companies/v2?batch=all&location=san-francisco-bay-area&pageSize=100
+2025-03-23 22:47:03,928 - BayAreaScraperPro - INFO - Starting Growth List scrape
+2025-03-23 22:47:05,764 - BayAreaScraperPro - WARNING - No data to save for growth_list.csv
+2025-03-23 22:47:11,483 - BayAreaScraperPro - INFO - Starting Crunchbase scrape
+2025-03-23 22:47:22,783 - BayAreaScraperPro - WARNING - No data to save for crunchbase.csv

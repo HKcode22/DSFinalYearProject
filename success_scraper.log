@@ -1,0 +1,35 @@
+2025-03-23 23:07:54,955 - WDM - INFO - ====== WebDriver manager ======
+2025-03-23 23:07:55,169 - WDM - INFO - Get LATEST chromedriver version for google-chrome
+2025-03-23 23:07:55,241 - WDM - INFO - Get LATEST chromedriver version for google-chrome
+2025-03-23 23:07:55,283 - WDM - INFO - Driver [/Users/hk/.wdm/drivers/chromedriver/mac64/134.0.6998.165/chromedriver-mac-arm64/chromedriver] found in cache
+2025-03-23 23:07:55,831 - undetected_chromedriver.patcher - INFO - patching driver executable /Users/hk/Library/Application Support/undetected_chromedriver/undetected_chromedriver
+2025-03-23 23:07:58,900 - WorkingScraper - INFO - Starting reliable data collection...
+2025-03-23 23:07:58,901 - WorkingScraper - INFO - Starting Y Combinator scrape
+2025-03-23 23:07:59,073 - WorkingScraper - ERROR - YC API error: Expecting value: line 1 column 1 (char 0)
+2025-03-23 23:08:02,659 - WorkingScraper - INFO - Starting Growth List scrape
+2025-03-23 23:08:04,115 - WorkingScraper - INFO - Saved 99 records to growth_list.csv
+2025-03-23 23:08:07,867 - WorkingScraper - INFO - Starting Crunchbase scrape
+2025-03-23 23:08:38,645 - WorkingScraper - ERROR - Crunchbase error: Message: 
+Stacktrace:
+0   undetected_chromedriver             0x0000000102970568 undetected_chromedriver + 6088040
+1   undetected_chromedriver             0x000000010296817a undetected_chromedriver + 6054266
+2   undetected_chromedriver             0x0000000102407540 undetected_chromedriver + 415040
+3   undetected_chromedriver             0x00000001024590a0 undetected_chromedriver + 749728
+4   undetected_chromedriver             0x00000001024592f1 undetected_chromedriver + 750321
+5   undetected_chromedriver             0x00000001024a9764 undetected_chromedriver + 1079140
+6   undetected_chromedriver             0x000000010247f41d undetected_chromedriver + 906269
+7   undetected_chromedriver             0x00000001024a6a19 undetected_chromedriver + 1067545
+8   undetected_chromedriver             0x000000010247f1c3 undetected_chromedriver + 905667
+9   undetected_chromedriver             0x000000010244b05a undetected_chromedriver + 692314
+10  undetected_chromedriver             0x000000010244c1b1 undetected_chromedriver + 696753
+11  undetected_chromedriver             0x000000010292fc90 undetected_chromedriver + 5823632
+12  undetected_chromedriver             0x0000000102933b44 undetected_chromedriver + 5839684
+13  undetected_chromedriver             0x000000010290ae86 undetected_chromedriver + 5672582
+14  undetected_chromedriver             0x000000010293453b undetected_chromedriver + 5842235
+15  undetected_chromedriver             0x00000001028f9824 undetected_chromedriver + 5601316
+16  undetected_chromedriver             0x0000000102956618 undetected_chromedriver + 5981720
+17  undetected_chromedriver             0x00000001029567df undetected_chromedriver + 5982175
+18  undetected_chromedriver             0x0000000102967d58 undetected_chromedriver + 6053208
+19  libsystem_pthread.dylib             0x00007ff81b7371d3 _pthread_start + 125
+20  libsystem_pthread.dylib             0x00007ff81b732bd3 thread_start + 15
+

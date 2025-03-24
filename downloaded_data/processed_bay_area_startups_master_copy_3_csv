@@ -1,0 +1,270 @@
+company_name,industry,location,data_source,investor,mention_count
+Airbnb,Travel/Hospitality,San Francisco,bay_area_startups_master copy 3.csv,nan,nan
+Stripe,Fintech,San Francisco,bay_area_startups_master copy 3.csv,nan,nan
+Lyft,Transportation,San Francisco,bay_area_startups_master copy 3.csv,nan,nan
+Uber,Transportation,San Francisco,bay_area_startups_master copy 3.csv,nan,nan
+Doordash,Food Delivery,San Francisco,bay_area_startups_master copy 3.csv,nan,nan
+Coinbase,Cryptocurrency,San Francisco,bay_area_startups_master copy 3.csv,nan,nan
+Discord,Communications,San Francisco,bay_area_startups_master copy 3.csv,nan,nan
+Figma,Design Software,San Francisco,bay_area_startups_master copy 3.csv,nan,nan
+Slack,Business Communications,San Francisco,bay_area_startups_master copy 3.csv,nan,nan
+Square,Fintech,San Francisco,bay_area_startups_master copy 3.csv,nan,nan
+Meta,nan,Menlo Park,bay_area_startups_master copy 3.csv,nan,nan
+Google,nan,Mountain View,bay_area_startups_master copy 3.csv,nan,nan
+Apple,nan,Cupertino,bay_area_startups_master copy 3.csv,nan,nan
+Netflix,nan,Los Gatos,bay_area_startups_master copy 3.csv,nan,nan
+Adobe,nan,San Jose,bay_area_startups_master copy 3.csv,nan,nan
+Nvidia,nan,Santa Clara,bay_area_startups_master copy 3.csv,nan,nan
+News & Content,nan,nan,bay_area_startups_master copy 3.csv,Andreessen Horowitz,nan
+Team,nan,nan,bay_area_startups_master copy 3.csv,Andreessen Horowitz,nan
+Jobs,nan,nan,bay_area_startups_master copy 3.csv,Andreessen Horowitz,nan
+Connect,nan,nan,bay_area_startups_master copy 3.csv,Andreessen Horowitz,nan
+American Dynamism,nan,nan,bay_area_startups_master copy 3.csv,Andreessen Horowitz,nan
+Bio + Health,nan,nan,bay_area_startups_master copy 3.csv,Andreessen Horowitz,nan
+Consumer,nan,nan,bay_area_startups_master copy 3.csv,Andreessen Horowitz,nan
+Crypto,nan,nan,bay_area_startups_master copy 3.csv,Andreessen Horowitz,nan
+Enterprise,nan,nan,bay_area_startups_master copy 3.csv,Andreessen Horowitz,nan
+Fintech,nan,nan,bay_area_startups_master copy 3.csv,Andreessen Horowitz,nan
+Games,nan,nan,bay_area_startups_master copy 3.csv,Andreessen Horowitz,nan
+Infrastructure,nan,nan,bay_area_startups_master copy 3.csv,Andreessen Horowitz,nan
+Seed,nan,nan,bay_area_startups_master copy 3.csv,Andreessen Horowitz,nan
+Speedrun,nan,nan,bay_area_startups_master copy 3.csv,Andreessen Horowitz,nan
+Growth,nan,nan,bay_area_startups_master copy 3.csv,Andreessen Horowitz,nan
+Cultural Leadership Fund,nan,nan,bay_area_startups_master copy 3.csv,Andreessen Horowitz,nan
+Talent X Opportunity,nan,nan,bay_area_startups_master copy 3.csv,Andreessen Horowitz,nan
+Perennial,nan,nan,bay_area_startups_master copy 3.csv,Andreessen Horowitz,nan
+See More Results,nan,nan,bay_area_startups_master copy 3.csv,Andreessen Horowitz,nan
+Machine & Deep Learning,nan,nan,bay_area_startups_master copy 3.csv,Andreessen Horowitz,nan
+"Product, Design & Engineering",nan,nan,bay_area_startups_master copy 3.csv,Andreessen Horowitz,nan
+Education,nan,nan,bay_area_startups_master copy 3.csv,Andreessen Horowitz,nan
+Marketplaces,nan,nan,bay_area_startups_master copy 3.csv,Andreessen Horowitz,nan
+Web3,nan,nan,bay_area_startups_master copy 3.csv,Andreessen Horowitz,nan
+Go To Top,nan,nan,bay_area_startups_master copy 3.csv,Andreessen Horowitz,nan
+Terms Of Use,nan,nan,bay_area_startups_master copy 3.csv,Andreessen Horowitz,nan
+Conduct,nan,nan,bay_area_startups_master copy 3.csv,Andreessen Horowitz,nan
+Privacy Policy,nan,nan,bay_area_startups_master copy 3.csv,Andreessen Horowitz,nan
+Disclosures,nan,nan,bay_area_startups_master copy 3.csv,Andreessen Horowitz,nan
+"Home
+
+H",nan,nan,bay_area_startups_master copy 3.csv,Andreessen Horowitz,nan
+Cookie Policy,nan,nan,bay_area_startups_master copy 3.csv,Andreessen Horowitz,nan
+Accept,nan,nan,bay_area_startups_master copy 3.csv,Andreessen Horowitz,nan
+Decline,nan,nan,bay_area_startups_master copy 3.csv,Andreessen Horowitz,nan
+Skip To Main Content,nan,nan,bay_area_startups_master copy 3.csv,Sequoia Capital,nan
+Our Founders,nan,nan,bay_area_startups_master copy 3.csv,Sequoia Capital,nan
+Our Companies,nan,nan,bay_area_startups_master copy 3.csv,Sequoia Capital,nan
+Our Team,nan,nan,bay_area_startups_master copy 3.csv,Sequoia Capital,nan
+Stories,nan,nan,bay_area_startups_master copy 3.csv,Sequoia Capital,nan
+Company Design,nan,nan,bay_area_startups_master copy 3.csv,Sequoia Capital,nan
+Spotlights,nan,nan,bay_area_startups_master copy 3.csv,Sequoia Capital,nan
+"Nvidia
+Nvidia Is A Pioneer In The Art And Science Of Visual Computing.",nan,nan,bay_area_startups_master copy 3.csv,Sequoia Capital,nan
+"Reddit
+Reddit Is The Internet’S Leading Source Of Interest-Based Content.",nan,nan,bay_area_startups_master copy 3.csv,Sequoia Capital,nan
+"Instacart
+Instacart Facilitates Instant Grocery Delivery From Local Stores.",nan,nan,bay_area_startups_master copy 3.csv,Sequoia Capital,nan
+"Youtube
+Youtube, Now Part Of Google, Is The World'S Leading Video-Sharing Service.",nan,nan,bay_area_startups_master copy 3.csv,Sequoia Capital,nan
+"Apple
+Apple Transforms How Humans Interact With Technologies With Products Like The Iphone, Ipod, Ipad, Mac And Watch.",nan,nan,bay_area_startups_master copy 3.csv,Sequoia Capital,nan
+"Dropbox
+Dropbox Is A Collaboration Platform Transforming The Way Teams Work Together.",nan,nan,bay_area_startups_master copy 3.csv,Sequoia Capital,nan
+"Doordash
+Doordash Is An On-Demand Delivery Service.",nan,nan,bay_area_startups_master copy 3.csv,Sequoia Capital,nan
+"Airbnb
+Airbnb Connects People Around The World With Unique Homes And Unforgettable Experiences.",nan,nan,bay_area_startups_master copy 3.csv,Sequoia Capital,nan
+"Linear
+Linear Builds Issue Tracking Tools For Developers.",nan,nan,bay_area_startups_master copy 3.csv,Sequoia Capital,nan
+"Paypal
+Paypal Is The Digital Payment Solution Behind The Digital Wallet.",nan,nan,bay_area_startups_master copy 3.csv,Sequoia Capital,nan
+"Block
+Block Is Square, Cash App, Spiral, Tidal, Tbd, And Other Foundational Teams.",nan,nan,bay_area_startups_master copy 3.csv,Sequoia Capital,nan
+"Snowflake
+Snowflake Is A Data Warehouse Platform Built For The Cloud.",nan,nan,bay_area_startups_master copy 3.csv,Sequoia Capital,nan
+"Spacex
+Spacex Designs, Manufactures And Launches Rockets And Spacecraft.",nan,nan,bay_area_startups_master copy 3.csv,Sequoia Capital,nan
+"Vanta
+Vanta Automates And Simplifies Security And Compliance.",nan,nan,bay_area_startups_master copy 3.csv,Sequoia Capital,nan
+"Nubank
+Nubank Provides Next-Generation Mobile Banking And Financial Services To The Latin American Market.",nan,nan,bay_area_startups_master copy 3.csv,Sequoia Capital,nan
+"Stripe
+Stripe Is Building An Economic Infrastructure For The Internet.",nan,nan,bay_area_startups_master copy 3.csv,Sequoia Capital,nan
+"Retool
+Retool Is The Fastest Way To Build Internal Applications.",nan,nan,bay_area_startups_master copy 3.csv,Sequoia Capital,nan
+"Zoom
+Zoom Brings Teams Together With Cloud-Based Video Communications.",nan,nan,bay_area_startups_master copy 3.csv,Sequoia Capital,nan
+"Whatsapp
+Whatsapp, Now Part Of Facebook, Is An End-To-End Encrypted Mobile Messenger App.",nan,nan,bay_area_startups_master copy 3.csv,Sequoia Capital,nan
+"Google
+Google Organizes The World'S Information.",nan,nan,bay_area_startups_master copy 3.csv,Sequoia Capital,nan
+"Hubspot
+Hubspot Builds All-In-One Marketing Software.",nan,nan,bay_area_startups_master copy 3.csv,Sequoia Capital,nan
+"Unity
+Unity Is A 3D And Vr Content Development Platform.",nan,nan,bay_area_startups_master copy 3.csv,Sequoia Capital,nan
+"Instagram
+Instagram, Now Part Of Meta, Is The World'S Most Popular Photo-Sharing App.",nan,nan,bay_area_startups_master copy 3.csv,Sequoia Capital,nan
+"Cisco
+Cisco Makes Networking, Security And Collaboration Products For Enterprise Companies.",nan,nan,bay_area_startups_master copy 3.csv,Sequoia Capital,nan
+Our Ethos,nan,nan,bay_area_startups_master copy 3.csv,Sequoia Capital,nan
+Our History,nan,nan,bay_area_startups_master copy 3.csv,Sequoia Capital,nan
+Newsletter,nan,nan,bay_area_startups_master copy 3.csv,Sequoia Capital,nan
+Legal,nan,nan,bay_area_startups_master copy 3.csv,Sequoia Capital,nan
+Sequoia Capital,nan,nan,bay_area_startups_master copy 3.csv,Sequoia Capital,nan
+Sequoia Heritage,nan,nan,bay_area_startups_master copy 3.csv,Sequoia Capital,nan
+Sequoia Capital Global Equities,nan,nan,bay_area_startups_master copy 3.csv,Sequoia Capital,nan
+Lp Login,nan,nan,bay_area_startups_master copy 3.csv,Sequoia Capital,nan
+Sequoia Ampersand Login,nan,nan,bay_area_startups_master copy 3.csv,Sequoia Capital,nan
+Menu,nan,nan,bay_area_startups_master copy 3.csv,Khosla Ventures,nan
+Close,nan,nan,bay_area_startups_master copy 3.csv,Khosla Ventures,nan
+Aboutimagining The Possible,nan,nan,bay_area_startups_master copy 3.csv,Khosla Ventures,nan
+Portfoliomaking The Impossible Happen,nan,nan,bay_area_startups_master copy 3.csv,Khosla Ventures,nan
+Teamventure Assistance,nan,nan,bay_area_startups_master copy 3.csv,Khosla Ventures,nan
+Entrepreneursresources For Entrepreneurs,nan,nan,bay_area_startups_master copy 3.csv,Khosla Ventures,nan
+Kv@Khoslaventures.Com,nan,nan,bay_area_startups_master copy 3.csv,Khosla Ventures,nan
+Media@Khoslaventures.Com,nan,nan,bay_area_startups_master copy 3.csv,Khosla Ventures,nan
+Categories,nan,nan,bay_area_startups_master copy 3.csv,Khosla Ventures,nan
+Careers,nan,nan,bay_area_startups_master copy 3.csv,Khosla Ventures,nan
+Consumer & Retail,nan,nan,bay_area_startups_master copy 3.csv,Khosla Ventures,nan
+Frontier,nan,nan,bay_area_startups_master copy 3.csv,Khosla Ventures,nan
+Sustainability,nan,nan,bay_area_startups_master copy 3.csv,Khosla Ventures,nan
+Digital Health,nan,nan,bay_area_startups_master copy 3.csv,Khosla Ventures,nan
+Medtech & Diagnostics,nan,nan,bay_area_startups_master copy 3.csv,Khosla Ventures,nan
+Therapeutics,nan,nan,bay_area_startups_master copy 3.csv,Khosla Ventures,nan
+Select Exits,nan,nan,bay_area_startups_master copy 3.csv,Khosla Ventures,nan
+View More,nan,nan,bay_area_startups_master copy 3.csv,Khosla Ventures,nan
+Transforming The Way America Eats,nan,nan,bay_area_startups_master copy 3.csv,Khosla Ventures,nan
+Fueling Human Potential Through Optimal Sleep,nan,nan,bay_area_startups_master copy 3.csv,Khosla Ventures,nan
+One-Stop Shop For Wholesale,nan,nan,bay_area_startups_master copy 3.csv,Khosla Ventures,nan
+One Dedicated Handyman For Your Home,nan,nan,bay_area_startups_master copy 3.csv,Khosla Ventures,nan
+Hyper-Personalized Stories Powered By Ai,nan,nan,bay_area_startups_master copy 3.csv,Khosla Ventures,nan
+World'S Largest Online Grocery Service,nan,nan,bay_area_startups_master copy 3.csv,Khosla Ventures,nan
+Creating Objects Out Of Light And Thin Air,nan,nan,bay_area_startups_master copy 3.csv,Khosla Ventures,nan
+Sell A Home In Minutes,nan,nan,bay_area_startups_master copy 3.csv,Khosla Ventures,nan
+Watch Live Sports With Friends,nan,nan,bay_area_startups_master copy 3.csv,Khosla Ventures,nan
+Personalized Automated Oral Health System,nan,nan,bay_area_startups_master copy 3.csv,Khosla Ventures,nan
+Personal Ai-Powered Chatbot,nan,nan,bay_area_startups_master copy 3.csv,Khosla Ventures,nan
+Clinical Grade Headband To Improve Sleep,nan,nan,bay_area_startups_master copy 3.csv,Khosla Ventures,nan
+Largest Music Game On Roblox,nan,nan,bay_area_startups_master copy 3.csv,Khosla Ventures,nan
+First Federally Chartered Crypto Bank,nan,nan,bay_area_startups_master copy 3.csv,Khosla Ventures,nan
+Ai-Powered Finance Workflow,nan,nan,bay_area_startups_master copy 3.csv,Khosla Ventures,nan
+Automated Analog Layout,nan,nan,bay_area_startups_master copy 3.csv,Khosla Ventures,nan
+Building An Ai+Human Executive Assistant,nan,nan,bay_area_startups_master copy 3.csv,Khosla Ventures,nan
+Agentic Service Management Platform,nan,nan,bay_area_startups_master copy 3.csv,Khosla Ventures,nan
+Chip Design Reimagined With Ai,nan,nan,bay_area_startups_master copy 3.csv,Khosla Ventures,nan
+Ai-Powered Website Optimization,nan,nan,bay_area_startups_master copy 3.csv,Khosla Ventures,nan
+"Makers Of Devin, The First Ai Software Engineer.",nan,nan,bay_area_startups_master copy 3.csv,Khosla Ventures,nan
+Antivirus Software To Prevent Rather Than Detect,nan,nan,bay_area_startups_master copy 3.csv,Khosla Ventures,nan
+Force Multiply Your Cloud Security Team,nan,nan,bay_area_startups_master copy 3.csv,Khosla Ventures,nan
+Ai Assistant To Transcribe And Summarize Meetings,nan,nan,bay_area_startups_master copy 3.csv,Khosla Ventures,nan
+Devsecops,nan,nan,bay_area_startups_master copy 3.csv,Khosla Ventures,nan
+Business Automation In Your Own Words,nan,nan,bay_area_startups_master copy 3.csv,Khosla Ventures,nan
+Ai-Powered Contract Management System,nan,nan,bay_area_startups_master copy 3.csv,Khosla Ventures,nan
+Building Blocks For Platform Creators,nan,nan,bay_area_startups_master copy 3.csv,Khosla Ventures,nan
+World'S Largest Realtime People Database Powered By Ai,nan,nan,bay_area_startups_master copy 3.csv,Khosla Ventures,nan
+Serverless Postgres,nan,nan,bay_area_startups_master copy 3.csv,Khosla Ventures,nan
+World'S Largest Decentralized Wireless Network.,nan,nan,bay_area_startups_master copy 3.csv,Khosla Ventures,nan
+One Platform To Run All Your Apps And Data Anywhere,nan,nan,bay_area_startups_master copy 3.csv,Khosla Ventures,nan
+World'S Identity Company,nan,nan,bay_area_startups_master copy 3.csv,Khosla Ventures,nan
+Adapting The Web For Ais,nan,nan,bay_area_startups_master copy 3.csv,Khosla Ventures,nan
+Superhuman Customer Support Voice Assistants Powered By Ai,nan,nan,bay_area_startups_master copy 3.csv,Khosla Ventures,nan
+Empowering A Billion Software Developers,nan,nan,bay_area_startups_master copy 3.csv,Khosla Ventures,nan
+Simplified Business Communications,nan,nan,bay_area_startups_master copy 3.csv,Khosla Ventures,nan
+Ai Gamemaker,nan,nan,bay_area_startups_master copy 3.csv,Khosla Ventures,nan
+Data Security And Operational Resilience For Enterprises,nan,nan,bay_area_startups_master copy 3.csv,Khosla Ventures,nan
+Building A Native Ai Foundational Model For Japan,nan,nan,bay_area_startups_master copy 3.csv,Khosla Ventures,nan
+Building The Full-Stack For Generative Ai In India,nan,nan,bay_area_startups_master copy 3.csv,Khosla Ventures,nan
+Copilot For Architects And Interior Designers,nan,nan,bay_area_startups_master copy 3.csv,Khosla Ventures,nan
+Data Privacy Vault For Ai,nan,nan,bay_area_startups_master copy 3.csv,Khosla Ventures,nan
+Staying On Top Of Cyber Threats,nan,nan,bay_area_startups_master copy 3.csv,Khosla Ventures,nan
+Pay Over Time Without Hidden Fees,nan,nan,bay_area_startups_master copy 3.csv,Khosla Ventures,nan
+Cyber Insurance,nan,nan,bay_area_startups_master copy 3.csv,Khosla Ventures,nan
+Credit Card Using Your Home Equity For Lower Rates,nan,nan,bay_area_startups_master copy 3.csv,Khosla Ventures,nan
+Ai Agents Built For Accountants,nan,nan,bay_area_startups_master copy 3.csv,Khosla Ventures,nan
+Enabling Businesses To Participate In The Economy,nan,nan,bay_area_startups_master copy 3.csv,Khosla Ventures,nan
+Platform For Small Businesses To Optimize Cash Flow,nan,nan,bay_area_startups_master copy 3.csv,Khosla Ventures,nan
+Finance Simplified,nan,nan,bay_area_startups_master copy 3.csv,Khosla Ventures,nan
+Real Estate Investing For Everyone,nan,nan,bay_area_startups_master copy 3.csv,Khosla Ventures,nan
+Financial Infrastructure For The Internet,nan,nan,bay_area_startups_master copy 3.csv,Khosla Ventures,nan
+Helping American Small Businesses Become Employee-Owned,nan,nan,bay_area_startups_master copy 3.csv,Khosla Ventures,nan
+Building A New Way To Live Where Renters Build Wealth Like Owners,nan,nan,bay_area_startups_master copy 3.csv,Khosla Ventures,nan
+Improving Access To Affordable Credit With Ai,nan,nan,bay_area_startups_master copy 3.csv,Khosla Ventures,nan
+Building Identity And Financial Network As A Public Utility For All,nan,nan,bay_area_startups_master copy 3.csv,Khosla Ventures,nan
+Revolutionizing Analog Computing For Ai,nan,nan,bay_area_startups_master copy 3.csv,Khosla Ventures,nan
+Intelligent Enterprise Robotics,nan,nan,bay_area_startups_master copy 3.csv,Khosla Ventures,nan
+New York To London In 90 Minutes Via Mach 5 Aircraft,nan,nan,bay_area_startups_master copy 3.csv,Khosla Ventures,nan
+Intelligent Robotics For Item Handling,nan,nan,bay_area_startups_master copy 3.csv,Khosla Ventures,nan
+Ai Benefiting Humanity,nan,nan,bay_area_startups_master copy 3.csv,Khosla Ventures,nan
+"Frequent, Reliable Access To Space",nan,nan,bay_area_startups_master copy 3.csv,Khosla Ventures,nan
+High-Resolution Imaging Satellites,nan,nan,bay_area_startups_master copy 3.csv,Khosla Ventures,nan
+Structured Cognition In Machines,nan,nan,bay_area_startups_master copy 3.csv,Khosla Ventures,nan
+Manufacturing In Space,nan,nan,bay_area_startups_master copy 3.csv,Khosla Ventures,nan
+Building Delivery Bots,nan,nan,bay_area_startups_master copy 3.csv,Khosla Ventures,nan
+Self-Driving Trucks,nan,nan,bay_area_startups_master copy 3.csv,Khosla Ventures,nan
+Ai-Powered Weather Balloons,nan,nan,bay_area_startups_master copy 3.csv,Khosla Ventures,nan
+High-Resolution Radar,nan,nan,bay_area_startups_master copy 3.csv,Khosla Ventures,nan
+Universal Manufacturing Network,nan,nan,bay_area_startups_master copy 3.csv,Khosla Ventures,nan
+Changing Agriculture With Intelligent Machinery,nan,nan,bay_area_startups_master copy 3.csv,Khosla Ventures,nan
+Using Perovskites For Lower-Cost Solar,nan,nan,bay_area_startups_master copy 3.csv,Khosla Ventures,nan
+Unlocking The World'S Copper,nan,nan,bay_area_startups_master copy 3.csv,Khosla Ventures,nan
+Limitless Clean Fusion Energy,nan,nan,bay_area_startups_master copy 3.csv,Khosla Ventures,nan
+Low Co₂ Cement,nan,nan,bay_area_startups_master copy 3.csv,Khosla Ventures,nan
+High-Capacity Urban Mass Transit,nan,nan,bay_area_startups_master copy 3.csv,Khosla Ventures,nan
+"Burgers, Chicken Nuggets And Pork All From Plants",nan,nan,bay_area_startups_master copy 3.csv,Khosla Ventures,nan
+"Identify, Access, And Produce Geologic Hydrogen",nan,nan,bay_area_startups_master copy 3.csv,Khosla Ventures,nan
+Transforming Pollution Into Sustainable Fuels,nan,nan,bay_area_startups_master copy 3.csv,Khosla Ventures,nan
+Capturing Rubisco Protein From Green Leaves,nan,nan,bay_area_startups_master copy 3.csv,Khosla Ventures,nan
+Next-Generation Lithium-Ion Battery Recycling,nan,nan,bay_area_startups_master copy 3.csv,Khosla Ventures,nan
+Local Power Generation For A Zero-Carbon Future,nan,nan,bay_area_startups_master copy 3.csv,Khosla Ventures,nan
+Fertilizer From Air,nan,nan,bay_area_startups_master copy 3.csv,Khosla Ventures,nan
+Solid State Lithium Batteries,nan,nan,bay_area_startups_master copy 3.csv,Khosla Ventures,nan
+Industrial Heat And Power From Fusion,nan,nan,bay_area_startups_master copy 3.csv,Khosla Ventures,nan
+Energy Storage Solution,nan,nan,bay_area_startups_master copy 3.csv,Khosla Ventures,nan
+Circular Apparel,nan,nan,bay_area_startups_master copy 3.csv,Khosla Ventures,nan
+Direct Air Capture At Scale,nan,nan,bay_area_startups_master copy 3.csv,Khosla Ventures,nan
+Improving Critical Resource Development With Advanced Intelligent Systems,nan,nan,bay_area_startups_master copy 3.csv,Khosla Ventures,nan
+Green Hydrogen Using Renewable Energy & Water,nan,nan,bay_area_startups_master copy 3.csv,Khosla Ventures,nan
+Transforming Cardiologic Care Using Deep Learning,nan,nan,bay_area_startups_master copy 3.csv,Khosla Ventures,nan
+Exercise Platform To Prevent Falls,nan,nan,bay_area_startups_master copy 3.csv,Khosla Ventures,nan
+Prediction Model For Cancer,nan,nan,bay_area_startups_master copy 3.csv,Khosla Ventures,nan
+Ai-Assisted Primary Care,nan,nan,bay_area_startups_master copy 3.csv,Khosla Ventures,nan
+In-The-Moment Care For Every Emotion,nan,nan,bay_area_startups_master copy 3.csv,Khosla Ventures,nan
+Empowering People To Improve Their Heart Health,nan,nan,bay_area_startups_master copy 3.csv,Khosla Ventures,nan
+Ai Therapist,nan,nan,bay_area_startups_master copy 3.csv,Khosla Ventures,nan
+Health Insurance Built On A Full-Stack Tech Platform,nan,nan,bay_area_startups_master copy 3.csv,Khosla Ventures,nan
+Ai Radiology Workflow Automation Tool,nan,nan,bay_area_startups_master copy 3.csv,Khosla Ventures,nan
+Simplifying The Healthcare Experience For Clients And Members,nan,nan,bay_area_startups_master copy 3.csv,Khosla Ventures,nan
+Freeing The World From Pain,nan,nan,bay_area_startups_master copy 3.csv,Khosla Ventures,nan
+Ai Copilot For Physicians,nan,nan,bay_area_startups_master copy 3.csv,Khosla Ventures,nan
+"Automated, Software-Only Platform That Greatly Simplifies A Cmr Exam",nan,nan,bay_area_startups_master copy 3.csv,Khosla Ventures,nan
+Medication-Free Depression Treatment,nan,nan,bay_area_startups_master copy 3.csv,Khosla Ventures,nan
+Transforming Cancer Care Through Blood Tests,nan,nan,bay_area_startups_master copy 3.csv,Khosla Ventures,nan
+Rapid Diagnostic Tests That Read The Immune System,nan,nan,bay_area_startups_master copy 3.csv,Khosla Ventures,nan
+Robots For Biologists,nan,nan,bay_area_startups_master copy 3.csv,Khosla Ventures,nan
+An Embryology Lab In A Box Making Ivf More Accesible,nan,nan,bay_area_startups_master copy 3.csv,Khosla Ventures,nan
+Building Next-Gen Biomaterials For Smart Biologics,nan,nan,bay_area_startups_master copy 3.csv,Khosla Ventures,nan
+Autonomous Full Body Scanner,nan,nan,bay_area_startups_master copy 3.csv,Khosla Ventures,nan
+Matching Each Autoimmune Patient With Their Most Effective Therapy,nan,nan,bay_area_startups_master copy 3.csv,Khosla Ventures,nan
+Instant Access To Biomarkers Using Silicon Photonics.,nan,nan,bay_area_startups_master copy 3.csv,Khosla Ventures,nan
+Brain Computer Interface To Treat Paralysis And More,nan,nan,bay_area_startups_master copy 3.csv,Khosla Ventures,nan
+$100 Dna Sequencing Platform,nan,nan,bay_area_startups_master copy 3.csv,Khosla Ventures,nan
+Robots For Minimally Invasive Surgery,nan,nan,bay_area_startups_master copy 3.csv,Khosla Ventures,nan
+Neonatal Platform For Preterm Infants,nan,nan,bay_area_startups_master copy 3.csv,Khosla Ventures,nan
+Longevity Therapeutics Discovery,nan,nan,bay_area_startups_master copy 3.csv,Khosla Ventures,nan
+Micro-Robots To Navigate The Human Body,nan,nan,bay_area_startups_master copy 3.csv,Khosla Ventures,nan
+Microfluidics-Based Cell Engineering Platform,nan,nan,bay_area_startups_master copy 3.csv,Khosla Ventures,nan
+Autonomizing Stem Cell Therapy Manufacturing.,nan,nan,bay_area_startups_master copy 3.csv,Khosla Ventures,nan
+Individualized Precision Therapeutics,nan,nan,bay_area_startups_master copy 3.csv,Khosla Ventures,nan
+Precision Nucleic Acid Delivery Technology,nan,nan,bay_area_startups_master copy 3.csv,Khosla Ventures,nan
+Extending Lifespan Of Dogs,nan,nan,bay_area_startups_master copy 3.csv,Khosla Ventures,nan
+Pioneering Precision Epigenetic Medicines,nan,nan,bay_area_startups_master copy 3.csv,Khosla Ventures,nan
+Immune Organoid Technology For Cancer,nan,nan,bay_area_startups_master copy 3.csv,Khosla Ventures,nan
+3D-Printed Lymph Node Organoids,nan,nan,bay_area_startups_master copy 3.csv,Khosla Ventures,nan
+Targeting Cells That Cause Aging,nan,nan,bay_area_startups_master copy 3.csv,Khosla Ventures,nan
+Turning Cells Into Bioreactors To Manufacture Proteins In The Body,nan,nan,bay_area_startups_master copy 3.csv,Khosla Ventures,nan
+Lab-Grown Human Organs For Drug Discovery,nan,nan,bay_area_startups_master copy 3.csv,Khosla Ventures,nan
+Openai,nan,nan,bay_area_startups_master copy 3.csv,nan,15.0
+Anthropic,nan,nan,bay_area_startups_master copy 3.csv,nan,12.0
+Scale Ai,nan,nan,bay_area_startups_master copy 3.csv,nan,8.0
+Databricks,nan,nan,bay_area_startups_master copy 3.csv,nan,7.0
+Rippling,nan,nan,bay_area_startups_master copy 3.csv,nan,6.0
+Plaid,nan,nan,bay_area_startups_master copy 3.csv,nan,5.0

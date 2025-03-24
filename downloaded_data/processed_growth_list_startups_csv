@@ -1,0 +1,101 @@
+name,website,industry,country,funding_amount_(usd),funding_type,last_funding_date,source,data_source
+Mercor,mercor.com,Artificial Intelligence,United States,75000000.0,Series B,Feb 2025,Growth List,growth_list_startups.csv
+Created by Humans,www.createdbyhumans.ai,Artificial Intelligence,United States,5500000.0,Seed,Feb 2025,Growth List,growth_list_startups.csv
+Manas AI,www.manasai.co,Artificial Intelligence,United States,24600000.0,Seed,Feb 2025,Growth List,growth_list_startups.csv
+BluWhale,bluwhale.net,"Artificial Intelligence, Cloud Computing",United States,75000000.0,Initial Coin Offering,Feb 2025,Growth List,growth_list_startups.csv
+Savant Labs,savantlabs.io,"Artificial Intelligence, Data, Analytics",United States,18500000.0,Series A,Feb 2025,Growth List,growth_list_startups.csv
+Athenic AI,Athenic.com,"Artificial Intelligence, Data, Analytics",United States,4300000.0,Seed,Feb 2025,Growth List,growth_list_startups.csv
+Delve,www.delve.co,"Artificial Intelligence, Data, Marketing",United States,3300000.0,Seed,Feb 2025,Growth List,growth_list_startups.csv
+Motif,motif.io,Augmented Reality,United States,46000000.0,Series A,Feb 2025,Growth List,growth_list_startups.csv
+Atomicwork,www.atomicwork.com,Cloud Computing,United States,25000000.0,Series A,Feb 2025,Growth List,growth_list_startups.csv
+Kroskod,Kroskod.com,Cloud Computing,United States,nan,Pre-Seed,Feb 2025,Growth List,growth_list_startups.csv
+Roofr,roofr.com,"Construction, Marketplace, Aerospace",United States,nan,Series B,Feb 2025,Growth List,growth_list_startups.csv
+Pakal Technologies,pakal-tech.com,Electronics,United States,25000000.0,Series B,Feb 2025,Growth List,growth_list_startups.csv
+Smart Wires,www.smartwires.com,Energy,United States,65000000.0,Private Equity,Feb 2025,Growth List,growth_list_startups.csv
+WeaveGrid,www.weavegrid.com,"Energy, Cloud Computing",United States,nan,Venture - Series Unknown,Feb 2025,Growth List,growth_list_startups.csv
+Wisetack,www.wisetack.com,Finance,United States,25000000.0,Venture - Series Unknown,Feb 2025,Growth List,growth_list_startups.csv
+Taxflow,www.jointaxflow.ai,"FinTech, Finance",United States,750000.0,Pre-Seed,Feb 2025,Growth List,growth_list_startups.csv
+Bicycle Health,www.bicyclehealth.com,Healthcare,United States,16500000.0,Venture - Series Unknown,Feb 2025,Growth List,growth_list_startups.csv
+Delfina,www.delfina.com,Healthcare,United States,17000000.0,Series A,Feb 2025,Growth List,growth_list_startups.csv
+Safely You,www.safely-you.com,"Healthcare, Family",United States,43000000.0,Series C,Feb 2025,Growth List,growth_list_startups.csv
+Waterlily,www.waterlily.com,"Healthcare, Insurance, Family",United States,7000000.0,Seed,Feb 2025,Growth List,growth_list_startups.csv
+Tandem Space,tandem.space,Aerospace,United States,6100000.0,Seed,Feb 2025,Growth List,growth_list_startups.csv
+Riot,tryriot.com,Artificial Intelligence,United States,30000000.0,Series B,Feb 2025,Growth List,growth_list_startups.csv
+Response,www.tryresponse.com,Artificial Intelligence,United States,4160000.0,Seed,Feb 2025,Growth List,growth_list_startups.csv
+TrueFoundry,truefoundry.com,Artificial Intelligence,United States,19000000.0,Series A,Feb 2025,Growth List,growth_list_startups.csv
+Ivo,www.ivo.ai,"Artificial Intelligence, Marketing",United States,16000000.0,Series A,Feb 2025,Growth List,growth_list_startups.csv
+Warmly,warmly.ai,"Artificial Intelligence, Sales",United States,6000000.0,Series A,Feb 2025,Growth List,growth_list_startups.csv
+Plume Network,www.plumenetwork.xyz,Blockchain,United States,nan,Venture - Series Unknown,Feb 2025,Growth List,growth_list_startups.csv
+Monograph,monograph.com,"Cloud Computing, Architecture",United States,20000000.0,Series B,Feb 2025,Growth List,growth_list_startups.csv
+Trace.Space,trace.space,"Cloud Computing, Artificial Intelligence",United States,4000000.0,Seed,Feb 2025,Growth List,growth_list_startups.csv
+Semgrep,semgrep.dev,"Cyber Security, Analytics",United States,100000000.0,Series D,Feb 2025,Growth List,growth_list_startups.csv
+Converge,www.runconverge.com,"Data, Marketing",United States,5600000.0,Venture - Series Unknown,Feb 2025,Growth List,growth_list_startups.csv
+Archive,www.archiveresale.com,"E-commerce, Fashion, Marketplace",United States,30000000.0,Series B,Feb 2025,Growth List,growth_list_startups.csv
+TaxGPT,www.taxgpt.com,"Finance, Artificial Intelligence",United States,4600000.0,Seed,Feb 2025,Growth List,growth_list_startups.csv
+Sotira,sotira.co,"FinTech, Finance",United States,2000000.0,Pre-Seed,Feb 2025,Growth List,growth_list_startups.csv
+Little Otter,www.littleotterhealth.com,"Healthcare, Mental Health",United States,9500000.0,Venture - Series Unknown,Feb 2025,Growth List,growth_list_startups.csv
+Fay,www.faynutrition.com,"Healthcare, Wellness, Nutrition and Supplements",United States,50000000.0,Series B,Feb 2025,Growth List,growth_list_startups.csv
+Tyba,www.tyba.ai,"Human Resources, Recruiting, Artificial Intelligence",United States,13900000.0,Series A,Feb 2025,Growth List,growth_list_startups.csv
+Mixedbread,mixedbread.ai,Artificial Intelligence,United States,5500000.0,Seed,Feb 2025,Growth List,growth_list_startups.csv
+Fal,www.fal.ai,Artificial Intelligence,United States,49000000.0,Series B,Feb 2025,Growth List,growth_list_startups.csv
+Pinkfish,www.pinkfish.ai,Artificial Intelligence,United States,7600000.0,Pre-Seed,Feb 2025,Growth List,growth_list_startups.csv
+Future AGI,futureagi.com,Artificial Intelligence,United States,1600000.0,Pre-Seed,Feb 2025,Growth List,growth_list_startups.csv
+Harvey,harvey.ai,"Artificial Intelligence, Legal",United States,300000000.0,Series D,Feb 2025,Growth List,growth_list_startups.csv
+Tofu,www.tofuhq.com,Cloud Computing,United States,12000000.0,Series A,Feb 2025,Growth List,growth_list_startups.csv
+Hydro Wind Energy,www.hw.energy,Energy,United States,82660.0,Equity Crowdfunding,Feb 2025,Growth List,growth_list_startups.csv
+Limited,limitedapp.com,Finance,United States,3000000.0,Pre-Seed,Feb 2025,Growth List,growth_list_startups.csv
+Comulate,www.comulate.com,"Finance, Analytics",United States,20000000.0,Series B,Feb 2025,Growth List,growth_list_startups.csv
+museLIVE Inc.,quabble.app,Gaming,United States,nan,Seed,Feb 2025,Growth List,growth_list_startups.csv
+Candid Health,www.joincandidhealth.com,Healthcare,United States,52500000.0,Series C,Feb 2025,Growth List,growth_list_startups.csv
+Junevity,www.junevity.com,"Healthcare, Wellness",United States,10000000.0,Seed,Feb 2025,Growth List,growth_list_startups.csv
+Human,joinhuman.com,Human Resources,United States,7300000.0,Pre-Seed,Feb 2025,Growth List,growth_list_startups.csv
+Vouch,www.vouch.us,Insurance,United States,nan,Series D,Feb 2025,Growth List,growth_list_startups.csv
+Index,www.index.inc,Marketing,United States,2193705.0,Seed,Feb 2025,Growth List,growth_list_startups.csv
+Suger,www.suger.io,Marketplace,United States,15000000.0,Series A,Feb 2025,Growth List,growth_list_startups.csv
+Fifteenth,www.fifteenth.com,"Real Estate, Property Management",United States,8250000.0,Seed,Feb 2025,Growth List,growth_list_startups.csv
+Era Finance,era.app,Wellness,United States,6200000.0,Seed,Feb 2025,Growth List,growth_list_startups.csv
+Beam,www.trybeam.com,Wellness,United States,11000000.0,Series A,Feb 2025,Growth List,growth_list_startups.csv
+Baseten,www.baseten.co,Artificial Intelligence,United States,75000000.0,Series C,Feb 2025,Growth List,growth_list_startups.csv
+CTGT,www.ctgt.ai,Artificial Intelligence,United States,7200000.0,Seed,Feb 2025,Growth List,growth_list_startups.csv
+Entangl,www.entangl.ai,Artificial Intelligence,United States,nan,Venture - Series Unknown,Feb 2025,Growth List,growth_list_startups.csv
+Lingo.dev,lingo.dev,Artificial Intelligence,United States,4200000.0,Seed,Feb 2025,Growth List,growth_list_startups.csv
+Pulse,www.runpulse.com,Artificial Intelligence,United States,3900000.0,Seed,Feb 2025,Growth List,growth_list_startups.csv
+Sawmills,www.sawmills.ai,Artificial Intelligence,United States,10000000.0,Seed,Feb 2025,Growth List,growth_list_startups.csv
+Together AI,www.together.ai,"Artificial Intelligence, Cloud Computing",United States,305000000.0,Series B,Feb 2025,Growth List,growth_list_startups.csv
+Mercor,mercor.com,"Artificial Intelligence, Human Resources",United States,100000000.0,Series B,Feb 2025,Growth List,growth_list_startups.csv
+Aomni,www.aomni.com,"Artificial Intelligence, Sales",United States,4000000.0,Seed,Feb 2025,Growth List,growth_list_startups.csv
+Hightouch,www.hightouch.com,"Data, Marketing",United States,80000000.0,Series C,Feb 2025,Growth List,growth_list_startups.csv
+Riley,rileyapp.com,"Finance, Cloud Computing",United States,3100000.0,Seed,Feb 2025,Growth List,growth_list_startups.csv
+Varo Bank,www.varomoney.com,"FinTech, Finance",United States,28982355.0,Series G,Feb 2025,Growth List,growth_list_startups.csv
+Lambda,lambdalabs.com,"Hardware, Artificial Intelligence",United States,480000000.0,Series D,Feb 2025,Growth List,growth_list_startups.csv
+Wurthy,www.wurthy.co,"Cloud Computing, Wellness",United States,nan,Seed,Jan 2025,Growth List,growth_list_startups.csv
+OpenFunnel,openfunnel.dev,Artificial Intelligence,United States,1300000.0,Pre-Seed,Jan 2025,Growth List,growth_list_startups.csv
+Innovaccer,www.innovaccer.com,"Artificial Intelligence, Cloud Computing, Data, Analytics",United States,275000000.0,Series F,Jan 2025,Growth List,growth_list_startups.csv
+MilkStraw AI,www.milkstraw.ai,"Artificial Intelligence, Data",United States,600000.0,Pre-Seed,Jan 2025,Growth List,growth_list_startups.csv
+Tenvie Therapeutics,tenvie.com,"Biotechnology, Healthcare",United States,200000000.0,Series A,Jan 2025,Growth List,growth_list_startups.csv
+Movement Labs,movementlabs.xyz,Blockchain,United States,100000000.0,Series B,Jan 2025,Growth List,growth_list_startups.csv
+Cuckoo,www.cuckoo.so,Cloud Computing,United States,500000.0,Pre-Seed,Jan 2025,Growth List,growth_list_startups.csv
+Fazeshift,www.fazeshift.com,Energy,United States,4000000.0,Seed,Jan 2025,Growth List,growth_list_startups.csv
+Gridware,gridware.io,Environment,United States,26500000.0,Series A,Jan 2025,Growth List,growth_list_startups.csv
+Siren Care,siren.care,Healthcare,United States,9500000.0,Venture - Series Unknown,Jan 2025,Growth List,growth_list_startups.csv
+Grove,grovetrials.com,"Healthcare, Artificial Intelligence",United States,4900000.0,Seed,Jan 2025,Growth List,growth_list_startups.csv
+Abstract,abstract.us,Legal,United States,4800000.0,Seed,Jan 2025,Growth List,growth_list_startups.csv
+Ouro Medicines,www.ouromedicines.com,Pharmaceuticals,United States,120000000.0,Series A,Jan 2025,Growth List,growth_list_startups.csv
+Tangible,tangiblematerials.com,Real Estate,United States,3000000.0,Venture - Series Unknown,Jan 2025,Growth List,growth_list_startups.csv
+Loft Orbital,www.loftorbital.com,Aerospace,United States,170000000.0,Series C,Jan 2025,Growth List,growth_list_startups.csv
+Homestead Capital,www.homesteadcapital.com,"Agriculture, Investing",United States,nan,Venture - Series Unknown,Jan 2025,Growth List,growth_list_startups.csv
+Magic,magic.dev,Artificial Intelligence,United States,805525.0,Venture - Series Unknown,Jan 2025,Growth List,growth_list_startups.csv
+Thoras.ai,thoras.ai,"Artificial Intelligence, Cloud Computing",United States,5000000.0,Seed,Jan 2025,Growth List,growth_list_startups.csv
+Mesh,meshconnect.com,Blockchain,United States,nan,Venture - Series Unknown,Jan 2025,Growth List,growth_list_startups.csv
+Phantom,phantom.com,Blockchain,United States,150000000.0,Series C,Jan 2025,Growth List,growth_list_startups.csv
+Open Ledger,www.openledger.com,Blockchain,United States,3000000.0,Venture - Series Unknown,Jan 2025,Growth List,growth_list_startups.csv
+Instabase,instabase.com,Data,United States,100000000.0,Series D,Jan 2025,Growth List,growth_list_startups.csv
+Arva AI,www.arva.ai,"Data, Artificial Intelligence, Analytics",United States,3000000.0,Seed,Jan 2025,Growth List,growth_list_startups.csv
+kegg,kegg.tech,"Electronics, Artificial Intelligence",United States,6500000.0,Series A,Jan 2025,Growth List,growth_list_startups.csv
+Teal Health,getteal.com,"Healthcare, B2C Software",United States,10000000.0,Seed,Jan 2025,Growth List,growth_list_startups.csv
+Vividly,govividly.com,Hospitality,United States,30000000.0,Series B,Jan 2025,Growth List,growth_list_startups.csv
+Eve,www.eve.legal,Legal,United States,47000000.0,Series A,Jan 2025,Growth List,growth_list_startups.csv
+Thrive,thrivenextgen.com,Professional Services,United States,nan,Private Equity,Jan 2025,Growth List,growth_list_startups.csv
+Rainbow,www.userainbow.com,Social Network,United States,8000000.0,Series A,Jan 2025,Growth List,growth_list_startups.csv
+Gravity,www.gravityclimate.com,Accounting,United States,13000000.0,Series A,Jan 2025,Growth List,growth_list_startups.csv
+Ember Software,www.embersoftware.com,Cloud Computing,United States,10000000.0,Venture - Series Unknown,Jan 2025,Growth List,growth_list_startups.csv

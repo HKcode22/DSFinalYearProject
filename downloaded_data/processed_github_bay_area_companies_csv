@@ -1,0 +1,11 @@
+company_name,industry,location,data_source
+Airbnb,Travel/Hospitality,San Francisco,github_bay_area_companies.csv
+Stripe,Fintech,San Francisco,github_bay_area_companies.csv
+Lyft,Transportation,San Francisco,github_bay_area_companies.csv
+Uber,Transportation,San Francisco,github_bay_area_companies.csv
+DoorDash,Food Delivery,San Francisco,github_bay_area_companies.csv
+Coinbase,Cryptocurrency,San Francisco,github_bay_area_companies.csv
+Discord,Communications,San Francisco,github_bay_area_companies.csv
+Figma,Design Software,San Francisco,github_bay_area_companies.csv
+Slack,Business Communications,San Francisco,github_bay_area_companies.csv
+Square,Fintech,San Francisco,github_bay_area_companies.csv

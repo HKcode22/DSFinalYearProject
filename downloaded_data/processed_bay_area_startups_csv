@@ -1,0 +1,9 @@
+name,description,employee_count,remote,source,location,data_source
+Gigs,Stripe for phone plans,50-100,True,LinkedIn list,Bay Area (to be verified),bay_area_startups.csv
+Embrace,mobile observability built on OpenTelemetry,50-100,True,LinkedIn list,Bay Area (to be verified),bay_area_startups.csv
+PostHog,open source product operating system,50-100,True,LinkedIn list,Bay Area (to be verified),bay_area_startups.csv
+SafeBase,trust center platform,50-100,True,LinkedIn list,Bay Area (to be verified),bay_area_startups.csv
+Veryfi,data extraction platform,50-100,True,LinkedIn list,Bay Area (to be verified),bay_area_startups.csv
+Gather,better way to meet online,50-100,True,LinkedIn list,Bay Area (to be verified),bay_area_startups.csv
+R2,embedded lending infrastructure,50-100,True,LinkedIn list,Bay Area (to be verified),bay_area_startups.csv
+Pulley,equity and cap table management,50-100,True,LinkedIn list,Bay Area (to be verified),bay_area_startups.csv
