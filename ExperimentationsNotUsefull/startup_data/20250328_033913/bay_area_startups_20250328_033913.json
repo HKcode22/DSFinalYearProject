@@ -1,0 +1,474 @@
+[
+    {
+        "name": "Unknown Company",
+        "description": null,
+        "logo_url": null,
+        "tags": [],
+        "quick_facts": {
+            "hq": null,
+            "employees": null,
+            "founded": null
+        },
+        "funding": {
+            "investors": [],
+            "details": [],
+            "valuation": null
+        },
+        "website_url": null,
+        "scraped_at": "2025-03-28 03:39:21"
+    },
+    {
+        "name": "Unknown Company",
+        "description": null,
+        "logo_url": "https://res.cloudinary.com/die3a7qhl/image/upload/v1729032535/numeric_ekspis.png",
+        "tags": [
+            "Enterprise Software",
+            "FinTech",
+            "Accounting",
+            "Founders Fund",
+            "Menlo VC",
+            "IVP",
+            "$28M Series A in 2024"
+        ],
+        "quick_facts": {
+            "hq": null,
+            "employees": null,
+            "founded": null
+        },
+        "funding": {
+            "investors": [],
+            "details": [],
+            "valuation": null
+        },
+        "website_url": "https://www.numeric.io/?utm_source=topstartups.io",
+        "scraped_at": "2025-03-28 03:39:21"
+    },
+    {
+        "name": "Unknown Company",
+        "description": null,
+        "logo_url": "https://res.cloudinary.com/die3a7qhl/image/upload/v1739239915/render-logo_m6kuwe.svg",
+        "tags": [
+            "SaaS",
+            "Enterprise Software",
+            "Developer Tools",
+            "Bessemer",
+            "General Catalyst",
+            "$80M Series C in 2025"
+        ],
+        "quick_facts": {
+            "hq": null,
+            "employees": null,
+            "founded": null
+        },
+        "funding": {
+            "investors": [],
+            "details": [],
+            "valuation": null
+        },
+        "website_url": "https://www.render.com/?utm_source=topstartups.io",
+        "scraped_at": "2025-03-28 03:39:22"
+    },
+    {
+        "name": "Unknown Company",
+        "description": null,
+        "logo_url": "https://images.crunchbase.com/image/upload/c_pad,f_auto,q_auto:eco,dpr_1/whp7nzng2urnf2voeikd",
+        "tags": [
+            "Artificial Intelligence",
+            "Legal",
+            "Sequoia",
+            "Kleiner Perkins",
+            "$300M Series D in 2025",
+            "$3.0B valuation"
+        ],
+        "quick_facts": {
+            "hq": null,
+            "employees": null,
+            "founded": null
+        },
+        "funding": {
+            "investors": [],
+            "details": [],
+            "valuation": null
+        },
+        "website_url": "https://www.harvey.ai/?utm_source=topstartups.io",
+        "scraped_at": "2025-03-28 03:39:22"
+    },
+    {
+        "name": "Unknown Company",
+        "description": null,
+        "logo_url": "https://images.crunchbase.com/image/upload/c_lpad,h_170,w_170,f_auto,b_white,q_auto:eco,dpr_1/z9okitrtwykeceivfrsh",
+        "tags": [
+            "Cybersecurity",
+            "SaaS",
+            "Sequoia",
+            "$100M Series D in 2025"
+        ],
+        "quick_facts": {
+            "hq": null,
+            "employees": null,
+            "founded": null
+        },
+        "funding": {
+            "investors": [],
+            "details": [],
+            "valuation": null
+        },
+        "website_url": "https://semgrep.dev/?utm_source=topstartups.io",
+        "scraped_at": "2025-03-28 03:39:22"
+    },
+    {
+        "name": "Unknown Company",
+        "description": null,
+        "logo_url": "https://images.crunchbase.com/image/upload/c_lpad,h_256,w_256,f_auto,q_auto:eco,dpr_1/uhsr0uetxgjuq84ksent",
+        "tags": [
+            "Marketing",
+            "Enterprise Software",
+            "SaaS",
+            "Sales",
+            "Y Combinator",
+            "$80M Series C in 2025",
+            "$1.2B valuation"
+        ],
+        "quick_facts": {
+            "hq": null,
+            "employees": null,
+            "founded": null
+        },
+        "funding": {
+            "investors": [],
+            "details": [],
+            "valuation": null
+        },
+        "website_url": "http://www.hightouch.io/?utm_source=topstartups.io",
+        "scraped_at": "2025-03-28 03:39:22"
+    },
+    {
+        "name": "Unknown Company",
+        "description": null,
+        "logo_url": "https://images.crunchbase.com/image/upload/c_lpad,f_auto,q_auto:eco,dpr_1/v1504537466/sx7fkolgm56fkhqupehd.png",
+        "tags": [
+            "Predictive Analytics",
+            "Healthcare",
+            "Bessemer",
+            "Y Combinator",
+            "$85M Series D in 2025"
+        ],
+        "quick_facts": {
+            "hq": null,
+            "employees": null,
+            "founded": null
+        },
+        "funding": {
+            "investors": [],
+            "details": [],
+            "valuation": null
+        },
+        "website_url": "http://www.qventus.com/?utm_source=topstartups.io",
+        "scraped_at": "2025-03-28 03:39:23"
+    },
+    {
+        "name": "Unknown Company",
+        "description": null,
+        "logo_url": "https://images.crunchbase.com/image/upload/c_pad,h_120,w_120,f_auto,b_white,q_auto:eco,dpr_1/bc745592fc9144b09df643a736c5818a",
+        "tags": [
+            "SaaS",
+            "Consumer",
+            "Artificial Intelligence",
+            "Accel",
+            "$78M Series C in 2024",
+            "$1.0B valuation"
+        ],
+        "quick_facts": {
+            "hq": null,
+            "employees": null,
+            "founded": null
+        },
+        "funding": {
+            "investors": [],
+            "details": [],
+            "valuation": null
+        },
+        "website_url": "https://www.speak.com/?utm_source=topstartups.io",
+        "scraped_at": "2025-03-28 03:39:23"
+    },
+    {
+        "name": "Unknown Company",
+        "description": null,
+        "logo_url": "https://images.crunchbase.com/image/upload/c_lpad,f_auto,q_auto:eco,dpr_1/w4fk7lg95vmrsqt6gire",
+        "tags": [
+            "Artificial Intelligence",
+            "SaaS",
+            "Analytics",
+            "Data Science",
+            "Andreessen Horowitz",
+            "$10B Series J in 2024",
+            "$62.0B valuation"
+        ],
+        "quick_facts": {
+            "hq": null,
+            "employees": null,
+            "founded": null
+        },
+        "funding": {
+            "investors": [],
+            "details": [],
+            "valuation": null
+        },
+        "website_url": "http://databricks.com/?utm_source=topstartups.io",
+        "scraped_at": "2025-03-28 03:39:23"
+    },
+    {
+        "name": "Unknown Company",
+        "description": null,
+        "logo_url": "https://img-cdn.tnwcdn.com/image?url=https%3A%2F%2Fpbs.twimg.com%2Fprofile_images%2F1412956907929620486%2FGkFcFJFf.jpg&signature=dbf80f029dc186893f337bf93a145d0b",
+        "tags": [
+            "Enterprise Software",
+            "SaaS",
+            "Andreessen Horowitz",
+            "$175M Series E in 2024",
+            "$2.0B valuation"
+        ],
+        "quick_facts": {
+            "hq": null,
+            "employees": null,
+            "founded": null
+        },
+        "funding": {
+            "investors": [],
+            "details": [],
+            "valuation": null
+        },
+        "website_url": "https://konghq.com/?utm_source=topstartups.io",
+        "scraped_at": "2025-03-28 03:39:23"
+    },
+    {
+        "name": "Unknown Company",
+        "description": null,
+        "logo_url": "https://images.crunchbase.com/image/upload/ooblsjdblhfi601ujl7r",
+        "tags": [
+            "Artificial Intelligence",
+            "Sales",
+            "Enterprise Software",
+            "Sequoia",
+            "Andreessen Horowitz",
+            "$125M Series D in 2024"
+        ],
+        "quick_facts": {
+            "hq": null,
+            "employees": null,
+            "founded": null
+        },
+        "funding": {
+            "investors": [],
+            "details": [],
+            "valuation": null
+        },
+        "website_url": "http://cresta.com/?utm_source=topstartups.io",
+        "scraped_at": "2025-03-28 03:39:24"
+    },
+    {
+        "name": "Unknown Company",
+        "description": null,
+        "logo_url": "https://images.crunchbase.com/image/upload/c_pad,h_120,w_120,f_auto,b_white,q_auto:eco,dpr_1/dn00i7alw6rc3xla89km",
+        "tags": [
+            "Health",
+            "Artificial Intelligence",
+            "Andreessen Horowitz",
+            "Kleiner Perkins",
+            "$51M Series C in 2024"
+        ],
+        "quick_facts": {
+            "hq": null,
+            "employees": null,
+            "founded": null
+        },
+        "funding": {
+            "investors": [],
+            "details": [],
+            "valuation": null
+        },
+        "website_url": "https://www.infinitus.ai/?utm_source=topstartups.io",
+        "scraped_at": "2025-03-28 03:39:24"
+    },
+    {
+        "name": "Unknown Company",
+        "description": null,
+        "logo_url": "https://images.crunchbase.com/image/upload/c_pad,h_120,w_120,f_auto,b_white,q_auto:eco,dpr_1/jbymoqcyqscp8fgvud6b",
+        "tags": [
+            "Artificial Intelligence",
+            "Sales",
+            "Kleiner Perkins",
+            "$43M Series B in 2024"
+        ],
+        "quick_facts": {
+            "hq": null,
+            "employees": null,
+            "founded": null
+        },
+        "funding": {
+            "investors": [],
+            "details": [],
+            "valuation": null
+        },
+        "website_url": "https://www.nooks.ai/?utm_source=topstartups.io",
+        "scraped_at": "2025-03-28 03:39:24"
+    },
+    {
+        "name": "Unknown Company",
+        "description": null,
+        "logo_url": "https://images.crunchbase.com/image/upload/c_pad,f_auto,q_auto:eco,dpr_1/e0779b5e58c94c77bce457ce9a6ed2dc",
+        "tags": [
+            "Artificial Intelligence",
+            "Enterprise Software",
+            "Andreessen Horowitz",
+            "Accel",
+            "$65M Series B in 2024"
+        ],
+        "quick_facts": {
+            "hq": null,
+            "employees": null,
+            "founded": null
+        },
+        "funding": {
+            "investors": [],
+            "details": [],
+            "valuation": null
+        },
+        "website_url": "https://decagon.ai/?utm_source=topstartups.io",
+        "scraped_at": "2025-03-28 03:39:24"
+    },
+    {
+        "name": "Unknown Company",
+        "description": null,
+        "logo_url": "https://images.crunchbase.com/image/upload/c_pad,f_auto,q_auto:eco,dpr_1/7e39375157714ef1b7733d002ebb3017",
+        "tags": [
+            "Artificial Intelligence",
+            "Andreessen Horowitz",
+            "$230M Series A in 2024",
+            "$1.0B valuation"
+        ],
+        "quick_facts": {
+            "hq": null,
+            "employees": null,
+            "founded": null
+        },
+        "funding": {
+            "investors": [],
+            "details": [],
+            "valuation": null
+        },
+        "website_url": "https://www.worldlabs.ai/?utm_source=topstartups.io",
+        "scraped_at": "2025-03-28 03:39:24"
+    },
+    {
+        "name": "Unknown Company",
+        "description": null,
+        "logo_url": "https://images.crunchbase.com/image/upload/c_pad,h_256,w_256,f_auto,q_auto:eco,dpr_1/b6ff26f22c0d4c5c8fec0811038f3e62",
+        "tags": [
+            "Artificial Intelligence",
+            "Sequoia",
+            "Andreessen Horowitz",
+            "$1B Series A in 2024"
+        ],
+        "quick_facts": {
+            "hq": null,
+            "employees": null,
+            "founded": null
+        },
+        "funding": {
+            "investors": [],
+            "details": [],
+            "valuation": null
+        },
+        "website_url": "https://ssi.inc/?utm_source=topstartups.io",
+        "scraped_at": "2025-03-28 03:39:24"
+    },
+    {
+        "name": "Unknown Company",
+        "description": null,
+        "logo_url": "https://images.crunchbase.com/image/upload/c_pad,f_auto,q_auto:eco,dpr_1/14620131a02b438192d571be5e2492f4",
+        "tags": [
+            "Artificial Intelligence",
+            "Sequoia",
+            "$75M Series A in 2024"
+        ],
+        "quick_facts": {
+            "hq": null,
+            "employees": null,
+            "founded": null
+        },
+        "funding": {
+            "investors": [],
+            "details": [],
+            "valuation": null
+        },
+        "website_url": "https://harmonic.fun/index/?utm_source=topstartups.io",
+        "scraped_at": "2025-03-28 03:39:25"
+    },
+    {
+        "name": "Unknown Company",
+        "description": null,
+        "logo_url": "https://images.crunchbase.com/image/upload/c_lpad,h_170,w_170,f_auto,b_white,q_auto:eco,dpr_1/icjjhljnjqxdgepbytyz",
+        "tags": [
+            "Immigration",
+            "Travel",
+            "Andreessen Horowitz",
+            "Sequoia",
+            "Accel",
+            "$20M Series B in 2024"
+        ],
+        "quick_facts": {
+            "hq": null,
+            "employees": null,
+            "founded": null
+        },
+        "funding": {
+            "investors": [],
+            "details": [],
+            "valuation": null
+        },
+        "website_url": "https://www.atlys.com/?utm_source=topstartups.io",
+        "scraped_at": "2025-03-28 03:39:25"
+    },
+    {
+        "name": "Unknown Company",
+        "description": null,
+        "logo_url": "https://images.crunchbase.com/image/upload/c_pad,h_256,w_256,f_auto,q_auto:eco,dpr_1/o9krgzpt5d7hmm5d5vp4",
+        "tags": [
+            "Enterprise Software",
+            "Developer Tools",
+            "Sequoia",
+            "$60M Series C in 2024"
+        ],
+        "quick_facts": {
+            "hq": null,
+            "employees": null,
+            "founded": null
+        },
+        "funding": {
+            "investors": [],
+            "details": [],
+            "valuation": null
+        },
+        "website_url": "https://www.cortex.io/?utm_source=topstartups.io",
+        "scraped_at": "2025-03-28 03:39:25"
+    },
+    {
+        "name": "Unknown Company",
+        "description": null,
+        "logo_url": null,
+        "tags": [],
+        "quick_facts": {
+            "hq": null,
+            "employees": null,
+            "founded": null
+        },
+        "funding": {
+            "investors": [],
+            "details": [],
+            "valuation": null
+        },
+        "website_url": null,
+        "scraped_at": "2025-03-28 03:39:25"
+    }
+]

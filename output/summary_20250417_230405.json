@@ -1,0 +1,23 @@
+{
+    "timestamp": "20250417_230405",
+    "data_records": 1747,
+    "features": [
+        "funding_amount_log",
+        "employees",
+        "employee_efficiency",
+        "funding_year",
+        "funding_month",
+        "previous_rounds",
+        "months_since_first_funding"
+    ],
+    "model_results": {
+        "Random Forest": {
+            "accuracy": 0.6085714285714285,
+            "model_path": "./output/models/random_forest_20250417_230405.joblib"
+        },
+        "XGBoost": {
+            "accuracy": 0.6028571428571429,
+            "model_path": "./output/models/xgboost_20250417_230405.joblib"
+        }
+    }
+}

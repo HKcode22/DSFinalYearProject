@@ -1,0 +1,45 @@
+2025-03-26 18:25:11,084 - INFO - Scraping https://growthlist.co/san-francisco-startups/
+2025-03-26 18:25:11,445 - ERROR - No table found on page
+2025-03-26 18:25:11,446 - INFO - Reached last page
+2025-03-26 18:25:11,446 - INFO - Completed! Collected 0 entries
+2025-03-26 18:31:01,427 - INFO - Scraping https://growthlist.co/san-francisco-startups/
+2025-03-26 18:31:01,641 - ERROR - No table found on page
+2025-03-26 18:31:01,642 - INFO - Reached last page
+2025-03-26 18:31:01,642 - INFO - Completed! Collected 0 entries
+2025-03-26 18:35:59,304 - INFO - Scraping https://growthlist.co/san-francisco-startups/
+2025-03-26 18:35:59,554 - ERROR - No table found on page
+2025-03-26 18:35:59,555 - INFO - Reached last page
+2025-03-26 18:35:59,555 - INFO - Completed! Collected 0 entries
+2025-03-26 18:39:58,441 - INFO - Scraping https://growthlist.co/san-francisco-startups/
+2025-03-26 18:39:58,790 - ERROR - No table found on page
+2025-03-26 18:39:58,792 - INFO - Reached last page
+2025-03-26 18:39:58,792 - INFO - Completed! Collected 0 entries
+2025-03-26 18:40:28,201 - INFO - Scraping page 1
+2025-03-26 18:40:28,630 - INFO - No more data found
+2025-03-26 18:40:28,630 - INFO - Completed! Collected 0 entries
+2025-03-26 18:44:33,256 - INFO - Scraping https://growthlist.co/san-francisco-startups/
+2025-03-26 18:44:33,521 - INFO - Reached last page
+2025-03-26 18:44:33,522 - INFO - Final count: 0 startups
+2025-03-26 18:48:51,723 - INFO - Scraping Page 1: https://growthlist.co/san-francisco-startups/
+2025-03-26 18:48:54,850 - INFO - No more data found
+2025-03-26 18:48:54,850 - INFO - Final count: 0 startups
+2025-03-26 18:53:16,882 - INFO - Scraping https://growthlist.co/san-francisco-startups/
+2025-03-26 18:53:20,662 - INFO - Collected 100 entries (Total: 100)
+2025-03-26 18:53:20,805 - INFO - Reached last page
+2025-03-26 18:53:20,806 - INFO - Final count: 100 startups
+2025-03-26 18:59:15,700 - INFO - Final collection: 0 startups
+2025-03-26 19:05:43,283 - INFO - ====== WebDriver manager ======
+2025-03-26 19:05:43,418 - INFO - Get LATEST chromedriver version for google-chrome
+2025-03-26 19:05:43,471 - INFO - Get LATEST chromedriver version for google-chrome
+2025-03-26 19:05:43,509 - INFO - Driver [/Users/hk/.wdm/drivers/chromedriver/mac64/134.0.6998.165/chromedriver-mac-arm64/chromedriver] found in cache
+2025-03-26 19:21:58,248 - INFO - ====== WebDriver manager ======
+2025-03-26 19:21:58,346 - INFO - Get LATEST chromedriver version for google-chrome
+2025-03-26 19:21:58,410 - INFO - Get LATEST chromedriver version for google-chrome
+2025-03-26 19:21:58,451 - INFO - Driver [/Users/hk/.wdm/drivers/chromedriver/mac64/134.0.6998.165/chromedriver-mac-arm64/chromedriver] found in cache
+2025-03-26 19:22:21,159 - INFO - ====== WebDriver manager ======
+2025-03-26 19:22:21,235 - INFO - Get LATEST chromedriver version for google-chrome
+2025-03-26 19:22:21,280 - INFO - Get LATEST chromedriver version for google-chrome
+2025-03-26 19:22:21,319 - INFO - Driver [/Users/hk/.wdm/drivers/chromedriver/mac64/134.0.6998.165/chromedriver-mac-arm64/chromedriver] found in cache
+2025-03-26 19:22:32,072 - INFO - Collected 100 (Total: 100)
+2025-03-26 19:22:42,346 - INFO - No more pages available
+2025-03-26 19:22:42,442 - INFO - Final collection: 100 startups

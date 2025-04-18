@@ -1,0 +1,24 @@
+2025-03-26 03:31:26,596 - INFO - Starting monitoring service
+2025-03-26 03:31:26,597 - DEBUG - Checking page 1: https://growthlist.co/funded-startups/?page=1
+2025-03-26 03:31:26,614 - DEBUG - Starting new HTTPS connection (1): growthlist.co:443
+2025-03-26 03:31:26,745 - DEBUG - https://growthlist.co:443 "GET /funded-startups/?page=1 HTTP/1.1" 301 None
+2025-03-26 03:31:26,818 - DEBUG - https://growthlist.co:443 "GET /funded-startups/ HTTP/1.1" 200 None
+2025-03-26 03:31:26,851 - INFO - Change detected on page 1
+2025-03-26 03:31:26,887 - INFO - Changes detected, starting processing
+2025-03-26 03:31:26,887 - INFO - Processing page 1
+2025-03-26 03:31:26,928 - DEBUG - https://growthlist.co:443 "GET /funded-startups/?page=1 HTTP/1.1" 301 None
+2025-03-26 03:31:26,982 - DEBUG - https://growthlist.co:443 "GET /funded-startups/ HTTP/1.1" 200 None
+2025-03-26 03:31:27,029 - INFO - No more company links found
+2025-03-26 03:31:27,029 - INFO - Next check in 29 minutes
+2025-03-26 03:32:16,010 - INFO - Starting monitoring service
+2025-03-26 03:32:16,010 - DEBUG - Checking page 1: https://growthlist.co/funded-startups/?page=1
+2025-03-26 03:32:16,013 - DEBUG - Starting new HTTPS connection (1): growthlist.co:443
+2025-03-26 03:32:16,138 - DEBUG - https://growthlist.co:443 "GET /funded-startups/?page=1 HTTP/1.1" 301 None
+2025-03-26 03:32:16,209 - DEBUG - https://growthlist.co:443 "GET /funded-startups/ HTTP/1.1" 200 None
+2025-03-26 03:32:16,235 - INFO - Change detected on page 1
+2025-03-26 03:32:16,269 - INFO - Changes detected, starting processing
+2025-03-26 03:32:16,269 - INFO - Processing page 1
+2025-03-26 03:32:16,310 - DEBUG - https://growthlist.co:443 "GET /funded-startups/?page=1 HTTP/1.1" 301 None
+2025-03-26 03:32:16,357 - DEBUG - https://growthlist.co:443 "GET /funded-startups/ HTTP/1.1" 200 None
+2025-03-26 03:32:16,386 - INFO - No more company links found
+2025-03-26 03:32:16,386 - INFO - Next check in 15 minutes

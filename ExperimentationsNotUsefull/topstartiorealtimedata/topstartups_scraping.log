@@ -1,0 +1,1004 @@
+2025-04-10 07:08:42,077 - INFO - Starting continuous data collection service
+2025-04-10 07:08:42,077 - INFO - Data will be collected every 24 hours
+2025-04-10 07:08:42,077 - INFO - Initializing TopStartups.io scraper
+2025-04-10 07:08:42,077 - INFO - ====== WebDriver manager ======
+2025-04-10 07:08:42,234 - INFO - Get LATEST chromedriver version for google-chrome
+2025-04-10 07:08:42,279 - INFO - Get LATEST chromedriver version for google-chrome
+2025-04-10 07:08:42,315 - INFO - Driver [/Users/hk/.wdm/drivers/chromedriver/mac64/135.0.7049.84/chromedriver-mac-arm64/chromedriver] found in cache
+2025-04-10 07:08:44,075 - INFO - Starting new data collection cycle at 2025-04-10 07:08:44.074521
+2025-04-10 07:08:44,077 - INFO - Navigating to: https://topstartups.io/?hq_location=San+Francisco+Bay+Area&sort=funding
+2025-04-10 07:08:45,619 - INFO - Page loaded successfully
+2025-04-10 07:08:45,619 - INFO - Beginning startup extraction
+2025-04-10 07:08:45,640 - INFO - Found 20 startup cards on current view
+2025-04-10 07:08:45,928 - INFO - Extracted startup #1: Numeric
+2025-04-10 07:08:46,028 - INFO - Extracted startup #2: Render
+2025-04-10 07:08:46,126 - INFO - Extracted startup #3: Harvey
+2025-04-10 07:08:46,215 - INFO - Extracted startup #4: Semgrep
+2025-04-10 07:08:46,296 - INFO - Extracted startup #5: HighTouch.io
+2025-04-10 07:08:46,397 - INFO - Extracted startup #6: Qventus
+2025-04-10 07:08:46,506 - INFO - Extracted startup #7: Speak
+2025-04-10 07:08:46,702 - INFO - Extracted startup #8: Databricks
+2025-04-10 07:08:46,789 - INFO - Extracted startup #9: Kong
+2025-04-10 07:08:46,872 - INFO - Extracted startup #10: Cresta
+2025-04-10 07:08:46,969 - INFO - Extracted startup #11: Infinitus
+2025-04-10 07:08:47,063 - INFO - Extracted startup #12: Nooks
+2025-04-10 07:08:47,166 - INFO - Extracted startup #13: Decagon
+2025-04-10 07:08:47,251 - INFO - Extracted startup #14: World Labs
+2025-04-10 07:08:47,420 - INFO - Extracted startup #15: Safe Superintelligence
+2025-04-10 07:08:47,521 - INFO - Extracted startup #16: Harmonic
+2025-04-10 07:08:47,600 - INFO - Extracted startup #17: Atlys
+2025-04-10 07:08:47,710 - INFO - Extracted startup #18: Cortex
+2025-04-10 07:08:47,785 - INFO - Extracted startup #19: Get newly funded startups delivered to you weekly
+2025-04-10 07:08:47,785 - INFO - Extracted 19 startups from current page
+2025-04-10 07:08:47,787 - INFO - Navigating to page 2: https://topstartups.io/?hq_location=San+Francisco+Bay+Area&sort=funding&page=2
+2025-04-10 07:08:48,268 - INFO - Found 20 startup cards on current view
+2025-04-10 07:08:48,467 - INFO - Extracted startup #20: Glean
+2025-04-10 07:08:48,551 - INFO - Extracted startup #21: Codeium
+2025-04-10 07:08:48,648 - INFO - Extracted startup #22: Allium
+2025-04-10 07:08:48,745 - INFO - Extracted startup #23: Ema
+2025-04-10 07:08:48,853 - INFO - Extracted startup #24: Astranis
+2025-04-10 07:08:48,935 - INFO - Extracted startup #25: Vanta
+2025-04-10 07:08:49,027 - INFO - Extracted startup #26: Caldera
+2025-04-10 07:08:49,120 - INFO - Extracted startup #27: xAI
+2025-04-10 07:08:49,202 - INFO - Extracted startup #28: Alkira
+2025-04-10 07:08:49,294 - INFO - Extracted startup #29: Together
+2025-04-10 07:08:49,375 - INFO - Extracted startup #30: HeyGen
+2025-04-10 07:08:49,470 - INFO - Extracted startup #31: Fireworks AI
+2025-04-10 07:08:49,549 - INFO - Extracted startup #32: Pomelo
+2025-04-10 07:08:49,646 - INFO - Extracted startup #33: Cognition
+2025-04-10 07:08:49,743 - INFO - Extracted startup #34: Rippling
+2025-04-10 07:08:49,834 - INFO - Extracted startup #35: Varda
+2025-04-10 07:08:49,924 - INFO - Extracted startup #36: Vocode
+2025-04-10 07:08:50,008 - INFO - Extracted startup #37: Ambience
+2025-04-10 07:08:50,065 - INFO - Extracted 18 startups from current page
+2025-04-10 07:08:50,068 - INFO - Navigating to page 3: https://topstartups.io/?hq_location=San+Francisco+Bay+Area&sort=funding&page=3
+2025-04-10 07:08:50,541 - INFO - Found 20 startup cards on current view
+2025-04-10 07:08:50,744 - INFO - Extracted startup #38: LangChain
+2025-04-10 07:08:50,840 - INFO - Extracted startup #39: Watershed
+2025-04-10 07:08:50,927 - INFO - Extracted startup #40: Instawork
+2025-04-10 07:08:51,014 - INFO - Extracted startup #41: BioAge Labs
+2025-04-10 07:08:51,117 - INFO - Extracted startup #42: Freenome
+2025-04-10 07:08:51,205 - INFO - Extracted startup #43: Zum
+2025-04-10 07:08:51,300 - INFO - Extracted startup #44: Forward
+2025-04-10 07:08:51,394 - INFO - Extracted startup #45: Pika
+2025-04-10 07:08:51,486 - INFO - Extracted startup #46: Air Space Intelligence
+2025-04-10 07:08:51,580 - INFO - Extracted startup #47: Squint
+2025-04-10 07:08:51,678 - INFO - Extracted startup #48: Instabase
+2025-04-10 07:08:51,774 - INFO - Extracted startup #49: OpenAI
+2025-04-10 07:08:51,861 - INFO - Extracted startup #50: Replit
+2025-04-10 07:08:51,944 - INFO - Extracted startup #51: Memora Health
+2025-04-10 07:08:52,033 - INFO - Extracted startup #52: Mojo Vision
+2025-04-10 07:08:52,136 - INFO - Extracted startup #53: dashbot.io
+2025-04-10 07:08:52,219 - INFO - Extracted startup #54: Graphiant
+2025-04-10 07:08:52,308 - INFO - Extracted startup #55: Stripe
+2025-04-10 07:08:52,372 - INFO - Extracted 18 startups from current page
+2025-04-10 07:08:52,373 - INFO - Navigating to page 4: https://topstartups.io/?hq_location=San+Francisco+Bay+Area&sort=funding&page=4
+2025-04-10 07:08:52,852 - INFO - Found 20 startup cards on current view
+2025-04-10 07:08:53,068 - INFO - Extracted startup #56: Shef
+2025-04-10 07:08:53,160 - INFO - Extracted startup #57: Skydio
+2025-04-10 07:08:53,258 - INFO - Extracted startup #58: Light Field Lab
+2025-04-10 07:08:53,347 - INFO - Extracted startup #59: MindsDB
+2025-04-10 07:08:53,438 - INFO - Extracted startup #60: IgGenix
+2025-04-10 07:08:53,540 - INFO - Extracted startup #61: Forward Networks
+2025-04-10 07:08:53,776 - INFO - Extracted startup #62: Mad Street Den
+2025-04-10 07:08:53,873 - INFO - Extracted startup #63: Fathom
+2025-04-10 07:08:53,960 - INFO - Extracted startup #64: Atmos
+2025-04-10 07:08:54,044 - INFO - Extracted startup #65: TripActions
+2025-04-10 07:08:54,145 - INFO - Extracted startup #66: Golden
+2025-04-10 07:08:54,239 - INFO - Extracted startup #67: Workstream
+2025-04-10 07:08:54,328 - INFO - Extracted startup #68: Kumo
+2025-04-10 07:08:54,426 - INFO - Extracted startup #69: Verkada
+2025-04-10 07:08:54,525 - INFO - Extracted startup #70: Patch
+2025-04-10 07:08:54,620 - INFO - Extracted startup #71: Isovalent
+2025-04-10 07:08:54,710 - INFO - Extracted startup #72: Incredible Health
+2025-04-10 07:08:54,793 - INFO - Extracted startup #73: AliveCor
+2025-04-10 07:08:54,872 - INFO - Extracted 18 startups from current page
+2025-04-10 07:08:54,874 - INFO - Navigating to page 5: https://topstartups.io/?hq_location=San+Francisco+Bay+Area&sort=funding&page=5
+2025-04-10 07:08:55,313 - INFO - Found 20 startup cards on current view
+2025-04-10 07:08:55,529 - INFO - Extracted startup #74: Truework
+2025-04-10 07:08:55,620 - INFO - Extracted startup #75: Aisera
+2025-04-10 07:08:55,724 - INFO - Extracted startup #76: Sprig
+2025-04-10 07:08:55,818 - INFO - Extracted startup #77: Retool
+2025-04-10 07:08:55,909 - INFO - Extracted startup #78: Tecton.AI
+2025-04-10 07:08:56,013 - INFO - Extracted startup #79: Front App
+2025-04-10 07:08:56,107 - INFO - Extracted startup #80: Pave
+2025-04-10 07:08:56,195 - INFO - Extracted startup #81: Courier
+2025-04-10 07:08:56,291 - INFO - Extracted startup #82: Fountain
+2025-04-10 07:08:56,392 - INFO - Extracted startup #83: Middesk
+2025-04-10 07:08:56,490 - INFO - Extracted startup #84: Cambly
+2025-04-10 07:08:56,584 - INFO - Extracted startup #85: Metawave
+2025-04-10 07:08:56,679 - INFO - Extracted startup #86: Belong
+2025-04-10 07:08:56,763 - INFO - Extracted startup #87: SpotOn
+2025-04-10 07:08:56,855 - INFO - Extracted startup #88: Mirvie
+2025-04-10 07:08:56,944 - INFO - Extracted startup #89: Vivun
+2025-04-10 07:08:57,048 - INFO - Extracted startup #90: Instabug
+2025-04-10 07:08:57,140 - INFO - Extracted startup #91: Imply
+2025-04-10 07:08:57,201 - INFO - Extracted 18 startups from current page
+2025-04-10 07:08:57,203 - INFO - Navigating to page 6: https://topstartups.io/?hq_location=San+Francisco+Bay+Area&sort=funding&page=6
+2025-04-10 07:08:57,675 - INFO - Found 20 startup cards on current view
+2025-04-10 07:08:57,885 - INFO - Extracted startup #92: Faire
+2025-04-10 07:08:57,980 - INFO - Extracted startup #93: Sentry
+2025-04-10 07:08:58,084 - INFO - Extracted startup #94: Primer
+2025-04-10 07:08:58,205 - INFO - Extracted startup #95: Doppler
+2025-04-10 07:08:58,316 - INFO - Extracted startup #96: Mutiny
+2025-04-10 07:08:58,423 - INFO - Extracted startup #97: Playbook
+2025-04-10 07:08:58,513 - INFO - Extracted startup #98: Valar Labs
+2025-04-10 07:08:58,608 - INFO - Extracted startup #99: Newfront
+2025-04-10 07:08:58,713 - INFO - Extracted startup #100: Built Robotics
+2025-04-10 07:08:58,812 - INFO - Extracted startup #101: Viz
+2025-04-10 07:08:58,909 - INFO - Extracted startup #102: Lilt
+2025-04-10 07:08:59,003 - INFO - Extracted startup #103: Skiff
+2025-04-10 07:08:59,101 - INFO - Extracted startup #104: HackerRank
+2025-04-10 07:08:59,186 - INFO - Extracted startup #105: RapidAPI
+2025-04-10 07:08:59,272 - INFO - Extracted startup #106: Deepcell
+2025-04-10 07:08:59,363 - INFO - Extracted startup #107: Webflow
+2025-04-10 07:08:59,459 - INFO - Extracted startup #108: SmithRx
+2025-04-10 07:08:59,547 - INFO - Extracted startup #109: Roofstock
+2025-04-10 07:08:59,617 - INFO - Extracted 18 startups from current page
+2025-04-10 07:08:59,619 - INFO - Navigating to page 7: https://topstartups.io/?hq_location=San+Francisco+Bay+Area&sort=funding&page=7
+2025-04-10 07:09:00,619 - INFO - Found 20 startup cards on current view
+2025-04-10 07:09:00,856 - INFO - Extracted startup #110: Disco
+2025-04-10 07:09:00,955 - INFO - Extracted startup #111: Apollo.io
+2025-04-10 07:09:01,052 - INFO - Extracted startup #112: BillionToOne
+2025-04-10 07:09:01,142 - INFO - Extracted startup #113: Promise
+2025-04-10 07:09:01,240 - INFO - Extracted startup #114: AnyRoad
+2025-04-10 07:09:01,330 - INFO - Extracted startup #115: Secureframe
+2025-04-10 07:09:01,421 - INFO - Extracted startup #116: WorkWhile
+2025-04-10 07:09:01,610 - INFO - Extracted startup #117: Flutterwave
+2025-04-10 07:09:01,701 - INFO - Extracted startup #118: Helium
+2025-04-10 07:09:01,801 - INFO - Extracted startup #119: PopSQL
+2025-04-10 07:09:01,901 - INFO - Extracted startup #120: Homebound
+2025-04-10 07:09:01,995 - INFO - Extracted startup #121: Branch
+2025-04-10 07:09:02,085 - INFO - Extracted startup #122: Salt Security
+2025-04-10 07:09:02,188 - INFO - Extracted startup #123: Alchemy
+2025-04-10 07:09:02,277 - INFO - Extracted startup #124: Flexport
+2025-04-10 07:09:02,371 - INFO - Extracted startup #125: Census
+2025-04-10 07:09:02,464 - INFO - Extracted startup #126: Mos
+2025-04-10 07:09:02,552 - INFO - Extracted startup #127: ProductBoard
+2025-04-10 07:09:02,633 - INFO - Extracted 18 startups from current page
+2025-04-10 07:09:02,635 - INFO - Navigating to page 8: https://topstartups.io/?hq_location=San+Francisco+Bay+Area&sort=funding&page=8
+2025-04-10 07:09:03,105 - INFO - Found 20 startup cards on current view
+2025-04-10 07:09:03,306 - INFO - Extracted startup #128: Phantom
+2025-04-10 07:09:03,407 - INFO - Extracted startup #129: Vesta
+2025-04-10 07:09:03,490 - INFO - Extracted startup #130: Compound Financial
+2025-04-10 07:09:03,572 - INFO - Extracted startup #131: CoinTracker
+2025-04-10 07:09:03,657 - INFO - Extracted startup #132: Supermove
+2025-04-10 07:09:03,748 - INFO - Extracted startup #133: CaptivateIQ
+2025-04-10 07:09:03,851 - INFO - Extracted startup #134: Scratchpad
+2025-04-10 07:09:03,952 - INFO - Extracted startup #135: Pavilion Data
+2025-04-10 07:09:04,063 - INFO - Extracted startup #136: Handshake
+2025-04-10 07:09:04,158 - INFO - Extracted startup #137: Smartcar
+2025-04-10 07:09:04,244 - INFO - Extracted startup #138: Lattice
+2025-04-10 07:09:04,342 - INFO - Extracted startup #139: Clari
+2025-04-10 07:09:04,432 - INFO - Extracted startup #140: Clockwise
+2025-04-10 07:09:04,516 - INFO - Extracted startup #141: Ironclad
+2025-04-10 07:09:04,613 - INFO - Extracted startup #142: Merit
+2025-04-10 07:09:04,709 - INFO - Extracted startup #143: Wonderschool
+2025-04-10 07:09:04,801 - INFO - Extracted startup #144: Envoy
+2025-04-10 07:09:04,899 - INFO - Extracted startup #145: Labelbox
+2025-04-10 07:09:04,983 - INFO - Extracted 18 startups from current page
+2025-04-10 07:09:04,985 - INFO - Navigating to page 9: https://topstartups.io/?hq_location=San+Francisco+Bay+Area&sort=funding&page=9
+2025-04-10 07:09:05,497 - INFO - Found 20 startup cards on current view
+2025-04-10 07:09:05,706 - INFO - Extracted startup #146: Miro
+2025-04-10 07:09:05,804 - INFO - Extracted startup #147: Pyka
+2025-04-10 07:09:05,901 - INFO - Extracted startup #148: BigPanda
+2025-04-10 07:09:06,005 - INFO - Extracted startup #149: Searchlight
+2025-04-10 07:09:06,106 - INFO - Extracted startup #150: Sysdig
+2025-04-10 07:09:06,213 - INFO - Extracted startup #151: Anchorage
+2025-04-10 07:09:06,360 - INFO - Extracted startup #152: Mixhalo
+2025-04-10 07:09:06,460 - INFO - Extracted startup #153: Airtable
+2025-04-10 07:09:06,571 - INFO - Extracted startup #154: Robust Intelligence
+2025-04-10 07:09:06,673 - INFO - Extracted startup #155: Anyscale
+2025-04-10 07:09:06,756 - INFO - Extracted startup #156: Mezmo (fka LogDNA)
+2025-04-10 07:09:06,844 - INFO - Extracted startup #157: CyCognito
+2025-04-10 07:09:06,949 - INFO - Extracted startup #158: SnapLogic
+2025-04-10 07:09:07,039 - INFO - Extracted startup #159: CloudTrucks
+2025-04-10 07:09:07,160 - INFO - Extracted startup #160: Iron Fish
+2025-04-10 07:09:07,261 - INFO - Extracted startup #161: Quince
+2025-04-10 07:09:07,356 - INFO - Extracted startup #162: Fundbox
+2025-04-10 07:09:07,478 - INFO - Extracted startup #163: Simplified
+2025-04-10 07:09:07,570 - INFO - Extracted 18 startups from current page
+2025-04-10 07:09:07,574 - INFO - Navigating to page 10: https://topstartups.io/?hq_location=San+Francisco+Bay+Area&sort=funding&page=10
+2025-04-10 07:09:08,192 - INFO - Found 20 startup cards on current view
+2025-04-10 07:09:08,382 - INFO - Extracted startup #164: Vercel
+2025-04-10 07:09:08,496 - INFO - Extracted startup #165: Niantic
+2025-04-10 07:09:08,590 - INFO - Extracted startup #166: Zuma
+2025-04-10 07:09:08,705 - INFO - Extracted startup #167: Stytch
+2025-04-10 07:09:08,796 - INFO - Extracted startup #168: Fountain Therapeutics
+2025-04-10 07:09:08,885 - INFO - Extracted startup #169: Netlify
+2025-04-10 07:09:08,989 - INFO - Extracted startup #170: Benchling
+2025-04-10 07:09:09,082 - INFO - Extracted startup #171: PlanetScale
+2025-04-10 07:09:09,169 - INFO - Extracted startup #172: Netography
+2025-04-10 07:09:09,262 - INFO - Extracted startup #173: ThoughtSpot
+2025-04-10 07:09:09,354 - INFO - Extracted startup #174: Orderful
+2025-04-10 07:09:09,437 - INFO - Extracted startup #175: Applied Intuition
+2025-04-10 07:09:09,540 - INFO - Extracted startup #176: Density
+2025-04-10 07:09:09,655 - INFO - Extracted startup #177: VergeSense
+2025-04-10 07:09:09,744 - INFO - Extracted startup #178: Blotout
+2025-04-10 07:09:09,842 - INFO - Extracted startup #179: Everlaw
+2025-04-10 07:09:09,940 - INFO - Extracted startup #180: Zeit Medical
+2025-04-10 07:09:10,022 - INFO - Extracted startup #181: Drip Capital
+2025-04-10 07:09:10,083 - INFO - Extracted 18 startups from current page
+2025-04-10 07:09:10,085 - INFO - Navigating to page 11: https://topstartups.io/?hq_location=San+Francisco+Bay+Area&sort=funding&page=11
+2025-04-10 07:09:10,592 - INFO - Found 20 startup cards on current view
+2025-04-10 07:09:10,798 - INFO - Extracted startup #182: Truepill
+2025-04-10 07:09:10,885 - INFO - Extracted startup #183: Deel
+2025-04-10 07:09:10,987 - INFO - Extracted startup #184: Matik
+2025-04-10 07:09:11,079 - INFO - Extracted startup #185: Sprinter Health
+2025-04-10 07:09:11,181 - INFO - Extracted startup #186: All Day Kitchens
+2025-04-10 07:09:11,281 - INFO - Extracted startup #187: Wonolo
+2025-04-10 07:09:11,366 - INFO - Extracted startup #188: Ripple Foods
+2025-04-10 07:09:11,458 - INFO - Extracted startup #189: Osaro
+2025-04-10 07:09:11,554 - INFO - Extracted startup #190: Superhuman
+2025-04-10 07:09:11,649 - INFO - Extracted startup #191: Arevo
+2025-04-10 07:09:11,766 - INFO - Extracted startup #192: WorkRamp
+2025-04-10 07:09:11,862 - INFO - Extracted startup #193: Elemeno Health
+2025-04-10 07:09:11,946 - INFO - Extracted startup #194: Zenysis
+2025-04-10 07:09:12,033 - INFO - Extracted startup #195: HyperTrack
+2025-04-10 07:09:12,126 - INFO - Extracted startup #196: Nimble Pharmacy
+2025-04-10 07:09:12,210 - INFO - Extracted startup #197: Notion
+2025-04-10 07:09:12,302 - INFO - Extracted startup #198: Gem
+2025-04-10 07:09:12,396 - INFO - Extracted startup #199: Forta
+2025-04-10 07:09:12,456 - INFO - Extracted 18 startups from current page
+2025-04-10 07:09:12,458 - INFO - Navigating to page 12: https://topstartups.io/?hq_location=San+Francisco+Bay+Area&sort=funding&page=12
+2025-04-10 07:09:13,034 - INFO - Found 20 startup cards on current view
+2025-04-10 07:09:13,226 - INFO - Extracted startup #200: Loyal
+2025-04-10 07:09:13,327 - INFO - Extracted startup #201: Stardust
+2025-04-10 07:09:13,424 - INFO - Extracted startup #202: Beacons
+2025-04-10 07:09:13,529 - INFO - Extracted startup #203: GenEdit
+2025-04-10 07:09:13,612 - INFO - Extracted startup #204: Persona
+2025-04-10 07:09:13,704 - INFO - Extracted startup #205: Zapier
+2025-04-10 07:09:13,800 - INFO - Extracted startup #206: Rapid Robotics
+2025-04-10 07:09:13,888 - INFO - Extracted startup #207: Catch&Release
+2025-04-10 07:09:14,008 - INFO - Extracted startup #208: Monad
+2025-04-10 07:09:14,092 - INFO - Extracted startup #209: Aalto
+2025-04-10 07:09:14,184 - INFO - Extracted startup #210: Tabular Technologies
+2025-04-10 07:09:14,287 - INFO - Extracted startup #211: Firemaps
+2025-04-10 07:09:14,394 - INFO - Extracted startup #212: Robocorp
+2025-04-10 07:09:14,497 - INFO - Extracted startup #213: Dover
+2025-04-10 07:09:14,592 - INFO - Extracted startup #214: Origin
+2025-04-10 07:09:14,688 - INFO - Extracted startup #215: Juno
+2025-04-10 07:09:14,788 - INFO - Extracted startup #216: Hipcamp
+2025-04-10 07:09:14,880 - INFO - Extracted startup #217: Doxel
+2025-04-10 07:09:14,955 - INFO - Extracted 18 startups from current page
+2025-04-10 07:09:14,957 - INFO - Navigating to page 13: https://topstartups.io/?hq_location=San+Francisco+Bay+Area&sort=funding&page=13
+2025-04-10 07:09:15,425 - INFO - Found 20 startup cards on current view
+2025-04-10 07:09:15,626 - INFO - Extracted startup #218: PicsArt
+2025-04-10 07:09:15,712 - INFO - Extracted startup #219: SplashLearn
+2025-04-10 07:09:15,801 - INFO - Extracted startup #220: Zomentum
+2025-04-10 07:09:15,887 - INFO - Extracted startup #221: unitQ
+2025-04-10 07:09:15,978 - INFO - Extracted startup #222: Shepherd
+2025-04-10 07:09:16,081 - INFO - Extracted startup #223: Solv Health
+2025-04-10 07:09:16,198 - INFO - Extracted startup #224: Carta
+2025-04-10 07:09:16,295 - INFO - Extracted startup #225: Passport
+2025-04-10 07:09:16,378 - INFO - Extracted startup #226: Moveworks
+2025-04-10 07:09:16,611 - INFO - Extracted startup #227: Bite Ninja
+2025-04-10 07:09:16,749 - INFO - Extracted startup #228: Neuralink
+2025-04-10 07:09:16,842 - INFO - Extracted startup #229: MakersPlace
+2025-04-10 07:09:16,942 - INFO - Extracted startup #230: Queenly
+2025-04-10 07:09:17,038 - INFO - Extracted startup #231: SentiLink
+2025-04-10 07:09:17,133 - INFO - Extracted startup #232: Algolia
+2025-04-10 07:09:17,230 - INFO - Extracted startup #233: Deserve
+2025-04-10 07:09:17,325 - INFO - Extracted startup #234: Netskope
+2025-04-10 07:09:17,410 - INFO - Extracted startup #235: Blameless
+2025-04-10 07:09:17,478 - INFO - Extracted 18 startups from current page
+2025-04-10 07:09:17,480 - INFO - Navigating to page 14: https://topstartups.io/?hq_location=San+Francisco+Bay+Area&sort=funding&page=14
+2025-04-10 07:09:18,102 - INFO - Found 20 startup cards on current view
+2025-04-10 07:09:18,297 - INFO - Extracted startup #236: Slintel
+2025-04-10 07:09:18,397 - INFO - Extracted startup #237: Human Interest
+2025-04-10 07:09:18,494 - INFO - Extracted startup #238: Multiply Labs
+2025-04-10 07:09:18,602 - INFO - Extracted startup #239: HiOperator
+2025-04-10 07:09:18,712 - INFO - Extracted startup #240: Plate IQ
+2025-04-10 07:09:18,801 - INFO - Extracted startup #241: Lob
+2025-04-10 07:09:18,891 - INFO - Extracted startup #242: Cofactor Genomics
+2025-04-10 07:09:18,985 - INFO - Extracted startup #243: SafetyWing
+2025-04-10 07:09:19,095 - INFO - Extracted startup #244: Checkr
+2025-04-10 07:09:19,179 - INFO - Extracted startup #245: Bot, M.D.
+2025-04-10 07:09:19,267 - INFO - Extracted startup #246: Prodigal
+2025-04-10 07:09:19,372 - INFO - Extracted startup #247: Standard AI
+2025-04-10 07:09:19,488 - INFO - Extracted startup #248: Phiar Technologies
+2025-04-10 07:09:19,685 - INFO - Extracted startup #249: Roofr
+2025-04-10 07:09:19,936 - INFO - Extracted startup #250: SendBird
+2025-04-10 07:09:20,123 - INFO - Extracted startup #251: AmpUp
+2025-04-10 07:09:20,327 - INFO - Extracted startup #252: Memfault
+2025-04-10 07:09:20,559 - INFO - Extracted startup #253: Treasury Prime
+2025-04-10 07:09:20,752 - INFO - Extracted 18 startups from current page
+2025-04-10 07:09:20,754 - INFO - Navigating to page 15: https://topstartups.io/?hq_location=San+Francisco+Bay+Area&sort=funding&page=15
+2025-04-10 07:09:21,283 - INFO - Found 20 startup cards on current view
+2025-04-10 07:09:21,519 - INFO - Extracted startup #254: Warmly,
+2025-04-10 07:09:21,614 - INFO - Extracted startup #255: Forage
+2025-04-10 07:09:21,699 - INFO - Extracted startup #256: Outschool
+2025-04-10 07:09:21,807 - INFO - Extracted startup #257: Shogun
+2025-04-10 07:09:21,889 - INFO - Extracted startup #258: Curtsy
+2025-04-10 07:09:21,978 - INFO - Extracted startup #259: Landed
+2025-04-10 07:09:22,078 - INFO - Extracted startup #260: CrowdAI
+2025-04-10 07:09:22,176 - INFO - Extracted startup #261: LegionFarm
+2025-04-10 07:09:22,288 - INFO - Extracted startup #262: Jerry
+2025-04-10 07:09:22,372 - INFO - Extracted startup #263: Gridware
+2025-04-10 07:09:22,494 - INFO - Extracted startup #264: Ditto
+2025-04-10 07:09:22,583 - INFO - Extracted startup #265: Holy Grail
+2025-04-10 07:09:22,660 - INFO - Extracted startup #266: Rootly
+2025-04-10 07:09:22,754 - INFO - Extracted startup #267: Serverless Stack
+2025-04-10 07:09:22,842 - INFO - Extracted startup #268: Blend
+2025-04-10 07:09:22,934 - INFO - Extracted startup #269: Voiceops
+2025-04-10 07:09:23,034 - INFO - Extracted startup #270: Carrot Fertility
+2025-04-10 07:09:23,126 - INFO - Extracted startup #271: Collective Health
+2025-04-10 07:09:23,199 - INFO - Extracted 18 startups from current page
+2025-04-10 07:09:23,201 - INFO - Navigating to page 16: https://topstartups.io/?hq_location=San+Francisco+Bay+Area&sort=funding&page=16
+2025-04-10 07:09:23,736 - INFO - Found 20 startup cards on current view
+2025-04-10 07:09:23,934 - INFO - Extracted startup #272: Virta Health
+2025-04-10 07:09:24,027 - INFO - Extracted startup #273: Indee Labs
+2025-04-10 07:09:24,117 - INFO - Extracted startup #274: Wild Earth
+2025-04-10 07:09:24,206 - INFO - Extracted startup #275: Sundae
+2025-04-10 07:09:24,301 - INFO - Extracted startup #276: Turing
+2025-04-10 07:09:24,394 - INFO - Extracted startup #277: Modern Health
+2025-04-10 07:09:24,493 - INFO - Extracted startup #278: Eco
+2025-04-10 07:09:24,584 - INFO - Extracted startup #279: Scale AI
+2025-04-10 07:09:24,686 - INFO - Extracted startup #280: Grabango
+2025-04-10 07:09:24,786 - INFO - Extracted startup #281: Brightwheel
+2025-04-10 07:09:24,877 - INFO - Extracted startup #282: HashiCorp
+2025-04-10 07:09:24,967 - INFO - Extracted startup #283: Crosschq
+2025-04-10 07:09:25,059 - INFO - Extracted startup #284: LaunchDarkly
+2025-04-10 07:09:25,164 - INFO - Extracted startup #285: Hinge Health
+2025-04-10 07:09:25,267 - INFO - Extracted startup #286: Shopmonkey
+2025-04-10 07:09:25,360 - INFO - Extracted startup #287: Sila Nanotechnologies
+2025-04-10 07:09:25,456 - INFO - Extracted startup #288: DroneDeploy
+2025-04-10 07:09:25,559 - INFO - Extracted startup #289: Shippo
+2025-04-10 07:09:25,627 - INFO - Extracted 18 startups from current page
+2025-04-10 07:09:25,629 - INFO - Navigating to page 17: https://topstartups.io/?hq_location=San+Francisco+Bay+Area&sort=funding&page=17
+2025-04-10 07:09:26,098 - INFO - Found 20 startup cards on current view
+2025-04-10 07:09:26,301 - INFO - Extracted startup #290: MaintainX
+2025-04-10 07:09:26,386 - INFO - Extracted startup #291: Hound Labs
+2025-04-10 07:09:26,476 - INFO - Extracted startup #292: Discord
+2025-04-10 07:09:26,562 - INFO - Extracted startup #293: Good Eggs
+2025-04-10 07:09:26,663 - INFO - Extracted startup #294: Manticore Games
+2025-04-10 07:09:26,755 - INFO - Extracted startup #295: Modern Treasury
+2025-04-10 07:09:26,878 - INFO - Extracted startup #296: BetterWorks
+2025-04-10 07:09:26,975 - INFO - Extracted startup #297: Kinsa
+2025-04-10 07:09:27,056 - INFO - Extracted startup #298: InCorta
+2025-04-10 07:09:27,138 - INFO - Extracted startup #299: Helix
+2025-04-10 07:09:27,228 - INFO - Extracted startup #300: Gusto
+2025-04-10 07:09:27,317 - INFO - Extracted startup #301: Audius
+2025-04-10 07:09:27,401 - INFO - Extracted startup #302: AEye
+2025-04-10 07:09:27,496 - INFO - Extracted startup #303: Brex
+2025-04-10 07:09:27,583 - INFO - Extracted startup #304: Comma.ai
+2025-04-10 07:09:27,665 - INFO - Extracted startup #305: Medium
+2025-04-10 07:09:27,758 - INFO - Extracted startup #306: Illumio
+2025-04-10 07:09:27,859 - INFO - Extracted startup #307: Descript
+2025-04-10 07:09:27,922 - INFO - Extracted 18 startups from current page
+2025-04-10 07:09:27,924 - INFO - Navigating to page 18: https://topstartups.io/?hq_location=San+Francisco+Bay+Area&sort=funding&page=18
+2025-04-10 07:09:28,887 - INFO - Found 20 startup cards on current view
+2025-04-10 07:09:29,086 - INFO - Extracted startup #308: Chia Network
+2025-04-10 07:09:29,182 - INFO - Extracted startup #309: Celo
+2025-04-10 07:09:29,276 - INFO - Extracted startup #310: People.ai
+2025-04-10 07:09:29,382 - INFO - Extracted startup #311: Apollo
+2025-04-10 07:09:29,475 - INFO - Extracted startup #312: preset.io
+2025-04-10 07:09:29,677 - INFO - Extracted startup #313: Snackpass
+2025-04-10 07:09:29,843 - INFO - Extracted startup #314: Komodo Health
+2025-04-10 07:09:29,947 - INFO - Extracted startup #315: Workboard
+2025-04-10 07:09:30,050 - INFO - Extracted startup #316: Alluxio
+2025-04-10 07:09:30,150 - INFO - Extracted startup #317: insitro
+2025-04-10 07:09:30,353 - INFO - Extracted startup #318: Dialpad
+2025-04-10 07:09:30,467 - INFO - Extracted startup #319: Honor
+2025-04-10 07:09:30,555 - INFO - Extracted startup #320: Divvy Homes
+2025-04-10 07:09:30,752 - INFO - Extracted startup #321: AKASA
+2025-04-10 07:09:30,876 - INFO - Extracted startup #322: Substack
+2025-04-10 07:09:30,976 - INFO - Extracted startup #323: Mux
+2025-04-10 07:09:31,067 - INFO - Extracted startup #324: Solana
+2025-04-10 07:09:31,151 - INFO - Extracted startup #325: Thesis
+2025-04-10 07:09:31,222 - INFO - Extracted 18 startups from current page
+2025-04-10 07:09:31,224 - INFO - Navigating to page 19: https://topstartups.io/?hq_location=San+Francisco+Bay+Area&sort=funding&page=19
+2025-04-10 07:09:31,969 - INFO - Found 20 startup cards on current view
+2025-04-10 07:09:32,179 - INFO - Extracted startup #326: Nobell Foods
+2025-04-10 07:09:32,285 - INFO - Extracted startup #327: SingleStore
+2025-04-10 07:09:32,376 - INFO - Extracted startup #328: Color
+2025-04-10 07:09:32,485 - INFO - Extracted startup #329: Cape Analytics
+2025-04-10 07:09:32,749 - INFO - Extracted startup #330: Kiddom
+2025-04-10 07:09:32,876 - INFO - Extracted startup #331: Homebase
+2025-04-10 07:09:32,985 - INFO - Extracted startup #332: Bungalow
+2025-04-10 07:09:33,100 - INFO - Extracted startup #333: Rubrik
+2025-04-10 07:09:33,211 - INFO - Extracted startup #334: Vectra AI
+2025-04-10 07:09:33,331 - INFO - Extracted startup #335: Abacus.AI
+2025-04-10 07:09:33,436 - INFO - Extracted startup #336: Inflammatix
+2025-04-10 07:09:33,527 - INFO - Extracted startup #337: At-Bay
+2025-04-10 07:09:33,626 - INFO - Extracted startup #338: Tempo
+2025-04-10 07:09:33,716 - INFO - Extracted startup #339: Bitwise Asset Management
+2025-04-10 07:09:33,810 - INFO - Extracted startup #340: Coda
+2025-04-10 07:09:33,903 - INFO - Extracted startup #341: Mighty Buildings
+2025-04-10 07:09:34,007 - INFO - Extracted startup #342: DevRev
+2025-04-10 07:09:34,077 - INFO - Extracted 17 startups from current page
+2025-04-10 07:09:34,079 - INFO - Navigating to page 20: https://topstartups.io/?hq_location=San+Francisco+Bay+Area&sort=funding&page=20
+2025-04-10 07:09:34,562 - INFO - Found 20 startup cards on current view
+2025-04-10 07:09:34,756 - INFO - Extracted startup #343: Gong.io
+2025-04-10 07:09:34,852 - INFO - Extracted startup #344: Houzz
+2025-04-10 07:09:34,950 - INFO - Extracted startup #345: Druva
+2025-04-10 07:09:35,043 - INFO - Extracted startup #346: LocoNav
+2025-04-10 07:09:35,133 - INFO - Extracted startup #347: Brii Biosciences
+2025-04-10 07:09:35,221 - INFO - Extracted startup #348: Reddit
+2025-04-10 07:09:35,319 - INFO - Extracted startup #349: Pendulum Therapeutics
+2025-04-10 07:09:35,407 - INFO - Extracted startup #350: Ethos Life
+2025-04-10 07:09:35,528 - INFO - Extracted startup #351: Domino Data Lab
+2025-04-10 07:09:35,615 - INFO - Extracted startup #352: mmhmm
+2025-04-10 07:09:35,709 - INFO - Extracted startup #353: StrongDM
+2025-04-10 07:09:35,807 - INFO - Extracted startup #354: Robinhood
+2025-04-10 07:09:35,891 - INFO - Extracted startup #355: Pilot.com
+2025-04-10 07:09:35,973 - INFO - Extracted startup #356: Bigeye
+2025-04-10 07:09:36,071 - INFO - Extracted startup #357: Releasehub
+2025-04-10 07:09:36,168 - INFO - Extracted startup #358: Loom
+2025-04-10 07:09:36,271 - INFO - Extracted startup #359: snapdocs
+2025-04-10 07:09:36,373 - INFO - Extracted startup #360: Forter
+2025-04-10 07:09:36,444 - INFO - Extracted 18 startups from current page
+2025-04-10 07:09:36,446 - INFO - Navigating to page 21: https://topstartups.io/?hq_location=San+Francisco+Bay+Area&sort=funding&page=21
+2025-04-10 07:09:36,926 - INFO - Found 20 startup cards on current view
+2025-04-10 07:09:37,160 - INFO - Extracted startup #361: Thumbtack
+2025-04-10 07:09:37,264 - INFO - Extracted startup #362: Figma
+2025-04-10 07:09:37,354 - INFO - Extracted startup #363: StreamSets
+2025-04-10 07:09:37,441 - INFO - Extracted startup #364: Wakie
+2025-04-10 07:09:37,535 - INFO - Extracted startup #365: REVL
+2025-04-10 07:09:37,619 - INFO - Extracted startup #366: Nova Credit
+2025-04-10 07:09:37,725 - INFO - Extracted startup #367: Aella Credit
+2025-04-10 07:09:37,818 - INFO - Extracted startup #368: Petcube
+2025-04-10 07:09:37,898 - INFO - Extracted startup #369: BloomTech (fka Lambda School)
+2025-04-10 07:09:37,992 - INFO - Extracted startup #370: Yoshi
+2025-04-10 07:09:38,075 - INFO - Extracted startup #371: Observe.AI
+2025-04-10 07:09:38,162 - INFO - Extracted startup #372: MOMENTUS
+2025-04-10 07:09:38,266 - INFO - Extracted startup #373: FidoCure
+2025-04-10 07:09:38,359 - INFO - Extracted startup #374: Meru Health
+2025-04-10 07:09:38,452 - INFO - Extracted startup #375: Lets do this
+2025-04-10 07:09:38,548 - INFO - Extracted startup #376: Datree
+2025-04-10 07:09:38,642 - INFO - Extracted startup #377: Lilia
+2025-04-10 07:09:38,728 - INFO - Extracted startup #378: DeepSource
+2025-04-10 07:09:38,805 - INFO - Extracted 18 startups from current page
+2025-04-10 07:09:38,807 - INFO - Navigating to page 22: https://topstartups.io/?hq_location=San+Francisco+Bay+Area&sort=funding&page=22
+2025-04-10 07:09:39,417 - INFO - Found 20 startup cards on current view
+2025-04-10 07:09:39,607 - INFO - Extracted startup #379: Avo
+2025-04-10 07:09:39,704 - INFO - Extracted startup #380: Armory
+2025-04-10 07:09:39,790 - INFO - Extracted startup #381: Nabis
+2025-04-10 07:09:39,887 - INFO - Extracted startup #382: Explo
+2025-04-10 07:09:39,992 - INFO - Extracted startup #383: Pair Team
+2025-04-10 07:09:40,092 - INFO - Extracted startup #384: Bunch
+2025-04-10 07:09:40,175 - INFO - Extracted startup #385: Zinier
+2025-04-10 07:09:40,272 - INFO - Extracted startup #386: Motherly
+2025-04-10 07:09:40,354 - INFO - Extracted startup #387: Raise (formerly HelloOffice)
+2025-04-10 07:09:40,457 - INFO - Extracted startup #388: AI Foundation
+2025-04-10 07:09:40,553 - INFO - Extracted startup #389: Synthego
+2025-04-10 07:09:40,645 - INFO - Extracted startup #390: Eden
+2025-04-10 07:09:40,743 - INFO - Extracted startup #391: Okera
+2025-04-10 07:09:40,854 - INFO - Extracted startup #392: Netdata
+2025-04-10 07:09:40,951 - INFO - Extracted startup #393: Earthly
+2025-04-10 07:09:41,042 - INFO - Extracted startup #394: Streamloots
+2025-04-10 07:09:41,124 - INFO - Extracted startup #395: GetAccept
+2025-04-10 07:09:41,220 - INFO - Extracted startup #396: Iris Automation
+2025-04-10 07:09:41,287 - INFO - Extracted 18 startups from current page
+2025-04-10 07:09:41,289 - INFO - Navigating to page 23: https://topstartups.io/?hq_location=San+Francisco+Bay+Area&sort=funding&page=23
+2025-04-10 07:09:41,786 - INFO - Found 20 startup cards on current view
+2025-04-10 07:09:41,984 - INFO - Extracted startup #397: Pachyderm
+2025-04-10 07:09:42,172 - INFO - Extracted startup #398: Pixie
+2025-04-10 07:09:42,278 - INFO - Extracted startup #399: Proterra
+2025-04-10 07:09:42,366 - INFO - Extracted startup #400: Coursera
+2025-04-10 07:09:42,462 - INFO - Extracted startup #401: Farmers Business Network
+2025-04-10 07:09:42,545 - INFO - Extracted startup #402: Ripcord
+2025-04-10 07:09:42,637 - INFO - Extracted startup #403: Element Analytics
+2025-04-10 07:09:42,743 - INFO - Extracted startup #404: UJET
+2025-04-10 07:09:42,829 - INFO - Extracted startup #405: Zumper
+2025-04-10 07:09:42,921 - INFO - Extracted startup #406: Veem
+2025-04-10 07:09:43,042 - INFO - Extracted startup #407: Rigetti Computing
+2025-04-10 07:09:43,140 - INFO - Extracted startup #408: Lime
+2025-04-10 07:09:43,236 - INFO - Extracted startup #409: MakerDAO
+2025-04-10 07:09:43,321 - INFO - Extracted startup #410: CodeCombat
+2025-04-10 07:09:43,406 - INFO - Extracted startup #411: Very Good Security
+2025-04-10 07:09:43,500 - INFO - Extracted startup #412: Sleeper
+2025-04-10 07:09:43,592 - INFO - Extracted startup #413: Run The World
+2025-04-10 07:09:43,698 - INFO - Extracted startup #414: Nautilus Biotechnology
+2025-04-10 07:09:43,769 - INFO - Extracted 18 startups from current page
+2025-04-10 07:09:43,771 - INFO - Navigating to page 24: https://topstartups.io/?hq_location=San+Francisco+Bay+Area&sort=funding&page=24
+2025-04-10 07:09:44,444 - INFO - Found 20 startup cards on current view
+2025-04-10 07:09:44,655 - INFO - Extracted startup #415: Drishti
+2025-04-10 07:09:44,749 - INFO - Extracted startup #416: Fivetran
+2025-04-10 07:09:44,849 - INFO - Extracted startup #417: Silo
+2025-04-10 07:09:44,957 - INFO - Extracted startup #418: Plaid
+2025-04-10 07:09:45,045 - INFO - Extracted startup #419: RideCell
+2025-04-10 07:09:45,135 - INFO - Extracted startup #420: Cafe X
+2025-04-10 07:09:45,219 - INFO - Extracted startup #421: Impossible Foods
+2025-04-10 07:09:45,302 - INFO - Extracted startup #422: Modal
+2025-04-10 07:09:45,412 - INFO - Extracted startup #423: Affirm
+2025-04-10 07:09:45,502 - INFO - Extracted startup #424: Bidgely
+2025-04-10 07:09:45,605 - INFO - Extracted startup #425: Akash Systems
+2025-04-10 07:09:45,695 - INFO - Extracted startup #426: Atomwise
+2025-04-10 07:09:45,794 - INFO - Extracted startup #427: Probably Genetic
+2025-04-10 07:09:45,876 - INFO - Extracted startup #428: Q.bio
+2025-04-10 07:09:45,966 - INFO - Extracted startup #429: Karius
+2025-04-10 07:09:46,070 - INFO - Extracted startup #430: Yes Health
+2025-04-10 07:09:46,179 - INFO - Extracted startup #431: VELO3D
+2025-04-10 07:09:46,272 - INFO - Extracted startup #432: HeartVista
+2025-04-10 07:09:46,341 - INFO - Extracted 18 startups from current page
+2025-04-10 07:09:46,343 - INFO - Navigating to page 25: https://topstartups.io/?hq_location=San+Francisco+Bay+Area&sort=funding&page=25
+2025-04-10 07:09:46,838 - INFO - Found 20 startup cards on current view
+2025-04-10 07:09:47,037 - INFO - Extracted startup #433: Clear Labs
+2025-04-10 07:09:47,136 - INFO - Extracted startup #434: Zibo
+2025-04-10 07:09:47,240 - INFO - Extracted startup #435: Siolta Therapeutics
+2025-04-10 07:09:47,323 - INFO - Extracted startup #436: Siren Health
+2025-04-10 07:09:47,429 - INFO - Extracted startup #437: Curai Health
+2025-04-10 07:09:47,532 - INFO - Extracted startup #438: Unity Technologies
+2025-04-10 07:09:47,648 - INFO - Extracted startup #439: Strava
+2025-04-10 07:09:47,749 - INFO - Extracted startup #440: Instacart
+2025-04-10 07:09:47,842 - INFO - Extracted startup #441: Vivace Therapeutics
+2025-04-10 07:09:47,943 - INFO - Extracted startup #442: TuneIn
+2025-04-10 07:09:48,040 - INFO - Extracted startup #443: Pony.ai
+2025-04-10 07:09:48,129 - INFO - Extracted startup #444: CleverTap
+2025-04-10 07:09:48,231 - INFO - Extracted startup #445: Finix
+2025-04-10 07:09:48,312 - INFO - Extracted startup #446: Empower
+2025-04-10 07:09:48,393 - INFO - Extracted startup #447: Cohesity
+2025-04-10 07:09:48,488 - INFO - Extracted startup #448: Confluent
+2025-04-10 07:09:48,592 - INFO - Extracted startup #449: Amplitude
+2025-04-10 07:09:48,689 - INFO - Extracted startup #450: Rockset
+2025-04-10 07:09:48,752 - INFO - Extracted 18 startups from current page
+2025-04-10 07:09:48,754 - INFO - Navigating to page 26: https://topstartups.io/?hq_location=San+Francisco+Bay+Area&sort=funding&page=26
+2025-04-10 07:09:49,403 - INFO - Found 20 startup cards on current view
+2025-04-10 07:09:49,614 - INFO - Extracted startup #451: Linear
+2025-04-10 07:09:49,706 - INFO - Extracted startup #452: 23andMe
+2025-04-10 07:09:49,793 - INFO - Extracted startup #453: Legalist
+2025-04-10 07:09:49,892 - INFO - Extracted startup #454: Swayable
+2025-04-10 07:09:49,979 - INFO - Extracted startup #455: Goodly
+2025-04-10 07:09:50,062 - INFO - Extracted startup #456: College Pulse
+2025-04-10 07:09:50,165 - INFO - Extracted startup #457: Confident Cannabis
+2025-04-10 07:09:50,248 - INFO - Extracted startup #458: Tara Intelligence
+2025-04-10 07:09:50,333 - INFO - Extracted startup #459: Tachyus
+2025-04-10 07:09:50,426 - INFO - Extracted startup #460: hims & hers
+2025-04-10 07:09:50,526 - INFO - Extracted startup #461: ManyChat
+2025-04-10 07:09:50,624 - INFO - Extracted startup #462: Blue Hexagon
+2025-04-10 07:09:50,708 - INFO - Extracted startup #463: Terminal
+2025-04-10 07:09:50,810 - INFO - Extracted startup #464: Kapwing
+2025-04-10 07:09:50,901 - INFO - Extracted startup #465: Reputation.com
+2025-04-10 07:09:50,986 - INFO - Extracted startup #466: PagerDuty
+2025-04-10 07:09:51,074 - INFO - Extracted startup #467: Branch International
+2025-04-10 07:09:51,158 - INFO - Extracted startup #468: Castle
+2025-04-10 07:09:51,239 - INFO - Extracted 18 startups from current page
+2025-04-10 07:09:51,241 - INFO - Navigating to page 27: https://topstartups.io/?hq_location=San+Francisco+Bay+Area&sort=funding&page=27
+2025-04-10 07:09:52,283 - INFO - Found 20 startup cards on current view
+2025-04-10 07:09:52,514 - INFO - Extracted startup #469: GitLab
+2025-04-10 07:09:52,602 - INFO - Extracted startup #470: Opendoor
+2025-04-10 07:09:52,695 - INFO - Extracted startup #471: Neurotrack
+2025-04-10 07:09:52,782 - INFO - Extracted startup #472: Sumo Logic
+2025-04-10 07:09:52,876 - INFO - Extracted startup #473: Orchid Labs
+2025-04-10 07:09:52,970 - INFO - Extracted startup #474: BridgeBio
+2025-04-10 07:09:53,060 - INFO - Extracted startup #475: DoorDash
+2025-04-10 07:09:53,165 - INFO - Extracted startup #476: Cobalt Robotics
+2025-04-10 07:09:53,268 - INFO - Extracted startup #477: Carbon
+2025-04-10 07:09:53,359 - INFO - Extracted startup #478: Freshworks
+2025-04-10 07:09:53,467 - INFO - Extracted startup #479: Dolls Kill
+2025-04-10 07:09:53,565 - INFO - Extracted startup #480: YapStone
+2025-04-10 07:09:53,670 - INFO - Extracted startup #481: CrowdStrike
+2025-04-10 07:09:53,766 - INFO - Extracted startup #482: Oasis Labs
+2025-04-10 07:09:53,857 - INFO - Extracted startup #483: Narvar
+2025-04-10 07:09:53,943 - INFO - Extracted startup #484: NuCypher
+2025-04-10 07:09:54,046 - INFO - Extracted startup #485: Robby Technologies
+2025-04-10 07:09:54,144 - INFO - Extracted startup #486: RankScience
+2025-04-10 07:09:54,220 - INFO - Extracted 18 startups from current page
+2025-04-10 07:09:54,222 - INFO - Navigating to page 28: https://topstartups.io/?hq_location=San+Francisco+Bay+Area&sort=funding&page=28
+2025-04-10 07:09:54,726 - INFO - Found 20 startup cards on current view
+2025-04-10 07:09:54,914 - INFO - Extracted startup #487: Templarbit
+2025-04-10 07:09:55,010 - INFO - Extracted startup #488: YouTeam
+2025-04-10 07:09:55,109 - INFO - Extracted startup #489: SpotAngels
+2025-04-10 07:09:55,192 - INFO - Extracted startup #490: Supermedium
+2025-04-10 07:09:55,281 - INFO - Extracted startup #491: SFOX
+2025-04-10 07:09:55,382 - INFO - Extracted startup #492: Paladin Cyber
+2025-04-10 07:09:55,474 - INFO - Extracted startup #493: Wallarm
+2025-04-10 07:09:55,567 - INFO - Extracted startup #494: Bolt Threads
+2025-04-10 07:09:55,686 - INFO - Extracted startup #495: UNITY Biotechnology
+2025-04-10 07:09:55,777 - INFO - Extracted startup #496: Naked Labs
+2025-04-10 07:09:55,867 - INFO - Extracted startup #497: Asana
+2025-04-10 07:09:55,969 - INFO - Extracted startup #498: Smule
+2025-04-10 07:09:56,060 - INFO - Extracted startup #499: Rainforest QA
+2025-04-10 07:09:56,155 - INFO - Extracted startup #500: ScyllaDB
+2025-04-10 07:09:56,238 - INFO - Extracted startup #501: SoundHound
+2025-04-10 07:09:56,329 - INFO - Extracted startup #502: Intercom
+2025-04-10 07:09:56,421 - INFO - Extracted startup #503: YourMechanic
+2025-04-10 07:09:56,525 - INFO - Extracted startup #504: Samsara
+2025-04-10 07:09:56,594 - INFO - Extracted 18 startups from current page
+2025-04-10 07:09:56,596 - INFO - Navigating to page 29: https://topstartups.io/?hq_location=San+Francisco+Bay+Area&sort=funding&page=29
+2025-04-10 07:09:57,157 - INFO - Found 20 startup cards on current view
+2025-04-10 07:09:57,358 - INFO - Extracted startup #505: Shift
+2025-04-10 07:09:57,453 - INFO - Extracted startup #506: Coinbase
+2025-04-10 07:09:57,543 - INFO - Extracted startup #507: Earnin
+2025-04-10 07:09:57,645 - INFO - Extracted startup #508: indeni
+2025-04-10 07:09:57,739 - INFO - Extracted startup #509: Uber
+2025-04-10 07:09:57,845 - INFO - Extracted startup #510: Quince Therapeutics
+2025-04-10 07:09:57,934 - INFO - Extracted startup #511: Amino
+2025-04-10 07:09:58,018 - INFO - Extracted startup #512: Atomist
+2025-04-10 07:09:58,120 - INFO - Extracted startup #513: Science Exchange
+2025-04-10 07:09:58,207 - INFO - Extracted startup #514: Sourceress
+2025-04-10 07:09:58,306 - INFO - Extracted startup #515: Thematic
+2025-04-10 07:09:58,401 - INFO - Extracted startup #516: HOOKED
+2025-04-10 07:09:58,495 - INFO - Extracted startup #517: Adentro (formerly Zenreach)
+2025-04-10 07:09:58,590 - INFO - Extracted startup #518: Bastille
+2025-04-10 07:09:58,672 - INFO - Extracted startup #519: Nuna
+2025-04-10 07:09:58,756 - INFO - Extracted startup #520: Health IQ
+2025-04-10 07:09:58,852 - INFO - Extracted startup #521: AirHelp
+2025-04-10 07:09:58,952 - INFO - Extracted startup #522: Upstart
+2025-04-10 07:09:59,033 - INFO - Extracted 18 startups from current page
+2025-04-10 07:09:59,035 - INFO - Navigating to page 30: https://topstartups.io/?hq_location=San+Francisco+Bay+Area&sort=funding&page=30
+2025-04-10 07:09:59,543 - INFO - Found 20 startup cards on current view
+2025-04-10 07:09:59,743 - INFO - Extracted startup #523: Creator
+2025-04-10 07:09:59,839 - INFO - Extracted startup #524: Gobble
+2025-04-10 07:09:59,945 - INFO - Extracted startup #525: Catalia Health
+2025-04-10 07:10:00,045 - INFO - Extracted startup #526: Luka
+2025-04-10 07:10:00,138 - INFO - Extracted startup #527: Zoom
+2025-04-10 07:10:00,220 - INFO - Extracted startup #528: Guardant Health
+2025-04-10 07:10:00,317 - INFO - Extracted startup #529: Filecoin
+2025-04-10 07:10:00,418 - INFO - Extracted startup #530: Acalvio Technologies
+2025-04-10 07:10:00,515 - INFO - Extracted startup #531: LeadGenius
+2025-04-10 07:10:00,605 - INFO - Extracted startup #532: Vote.org
+2025-04-10 07:10:00,688 - INFO - Extracted startup #533: Suiteness
+2025-04-10 07:10:00,776 - INFO - Extracted startup #534: Luminostics
+2025-04-10 07:10:00,865 - INFO - Extracted startup #535: ApolloShield
+2025-04-10 07:10:00,978 - INFO - Extracted startup #536: Indiegogo
+2025-04-10 07:10:01,075 - INFO - Extracted startup #537: Fond
+2025-04-10 07:10:01,283 - INFO - Extracted startup #538: Quartzy
+2025-04-10 07:10:01,367 - INFO - Extracted startup #539: Kumu Networks
+2025-04-10 07:10:01,467 - INFO - Extracted startup #540: Pique Tea
+2025-04-10 07:10:01,528 - INFO - Extracted 18 startups from current page
+2025-04-10 07:10:01,530 - INFO - Navigating to page 31: https://topstartups.io/?hq_location=San+Francisco+Bay+Area&sort=funding&page=31
+2025-04-10 07:10:02,290 - INFO - Found 7 startup cards on current view
+2025-04-10 07:10:02,477 - INFO - Extracted startup #541: Grokker
+2025-04-10 07:10:02,567 - INFO - Extracted startup #542: data.ai
+2025-04-10 07:10:02,650 - INFO - Extracted startup #543: The One Music Group
+2025-04-10 07:10:02,741 - INFO - Extracted startup #544: Clover Health
+2025-04-10 07:10:02,827 - INFO - Extracted startup #545: Thanx
+2025-04-10 07:10:02,891 - INFO - Extracted 5 startups from current page
+2025-04-10 07:10:02,893 - INFO - Navigating to page 32: https://topstartups.io/?hq_location=San+Francisco+Bay+Area&sort=funding&page=32
+2025-04-10 07:10:03,607 - INFO - Found 20 startup cards on current view
+2025-04-10 07:10:05,452 - INFO - Extracted 0 startups from current page
+2025-04-10 07:10:05,452 - INFO - Stopping due to consecutive empty pages
+2025-04-10 07:10:05,452 - INFO - Extraction complete. Total startups extracted: 545
+2025-04-10 07:10:05,457 - INFO - Saved data to CSV: topstartiorealtimedata/2025-04-10/topstartups_data.csv
+2025-04-10 07:10:05,466 - INFO - Saved data to JSON: topstartiorealtimedata/2025-04-10/topstartups_data.json
+2025-04-10 07:10:05,467 - INFO - Updated latest data links to 2025-04-10 version
+2025-04-10 07:10:05,467 - INFO - Collection cycle completed in 0:01:21.392694. Next run at 2025-04-11 07:10:05.467215
+2025-04-10 07:10:05,560 - INFO - WebDriver closed successfully
+2025-04-10 07:10:05,561 - INFO - Sleeping for 23.98 hours until next cycle
+2025-04-14 15:11:01,597 - INFO - Starting continuous data collection service
+2025-04-14 15:11:01,598 - INFO - Data will be collected every 24 hours
+2025-04-14 15:11:01,598 - INFO - Initializing TopStartups.io scraper
+2025-04-14 15:11:01,598 - INFO - ====== WebDriver manager ======
+2025-04-14 15:11:01,697 - INFO - Get LATEST chromedriver version for google-chrome
+2025-04-14 15:11:01,766 - INFO - Get LATEST chromedriver version for google-chrome
+2025-04-14 15:11:01,793 - INFO - Driver [/Users/hk/.wdm/drivers/chromedriver/mac64/135.0.7049.84/chromedriver-mac-arm64/chromedriver] found in cache
+2025-04-14 15:11:03,282 - INFO - Starting new data collection cycle at 2025-04-14 15:11:03.282220
+2025-04-14 15:11:03,282 - INFO - Navigating to: https://topstartups.io/?hq_location=San+Francisco+Bay+Area&sort=funding
+2025-04-14 15:11:05,528 - INFO - Page loaded successfully
+2025-04-14 15:11:05,530 - INFO - Beginning startup extraction
+2025-04-14 15:11:05,550 - INFO - Found 20 startup cards on current view
+2025-04-14 15:11:05,838 - INFO - Extracted startup #1: Numeric
+2025-04-14 15:11:05,931 - INFO - Extracted startup #2: Render
+2025-04-14 15:11:06,031 - INFO - Extracted startup #3: Harvey
+2025-04-14 15:11:06,123 - INFO - Extracted startup #4: Semgrep
+2025-04-14 15:11:06,218 - INFO - Extracted startup #5: HighTouch.io
+2025-04-14 15:11:06,314 - INFO - Extracted startup #6: Qventus
+2025-04-14 15:11:06,422 - INFO - Extracted startup #7: Speak
+2025-04-14 15:11:06,512 - INFO - Extracted startup #8: Databricks
+2025-04-14 15:11:06,623 - INFO - Extracted startup #9: Kong
+2025-04-14 15:11:06,737 - INFO - Extracted startup #10: Cresta
+2025-04-14 15:11:06,833 - INFO - Extracted startup #11: Infinitus
+2025-04-14 15:11:06,919 - INFO - Extracted startup #12: Nooks
+2025-04-14 15:11:07,015 - INFO - Extracted startup #13: Decagon
+2025-04-14 15:11:07,196 - INFO - Extracted startup #14: World Labs
+2025-04-14 15:11:07,299 - INFO - Extracted startup #15: Safe Superintelligence
+2025-04-14 15:11:07,384 - INFO - Extracted startup #16: Harmonic
+2025-04-14 15:11:07,480 - INFO - Extracted startup #17: Atlys
+2025-04-14 15:11:07,580 - INFO - Extracted startup #18: Cortex
+2025-04-14 15:11:07,643 - INFO - Extracted startup #19: Get newly funded startups delivered to you weekly
+2025-04-14 15:11:07,643 - INFO - Extracted 19 startups from current page
+2025-04-14 15:11:07,647 - INFO - Navigating to page 2: https://topstartups.io/?hq_location=San+Francisco+Bay+Area&sort=funding&page=2
+2025-04-14 15:11:08,130 - INFO - Found 20 startup cards on current view
+2025-04-14 15:11:08,346 - INFO - Extracted startup #20: Glean
+2025-04-14 15:11:08,441 - INFO - Extracted startup #21: Codeium
+2025-04-14 15:11:08,542 - INFO - Extracted startup #22: Allium
+2025-04-14 15:11:08,626 - INFO - Extracted startup #23: Ema
+2025-04-14 15:11:08,729 - INFO - Extracted startup #24: Astranis
+2025-04-14 15:11:08,838 - INFO - Extracted startup #25: Vanta
+2025-04-14 15:11:08,950 - INFO - Extracted startup #26: Caldera
+2025-04-14 15:11:09,047 - INFO - Extracted startup #27: xAI
+2025-04-14 15:11:09,137 - INFO - Extracted startup #28: Alkira
+2025-04-14 15:11:09,228 - INFO - Extracted startup #29: Together
+2025-04-14 15:11:09,331 - INFO - Extracted startup #30: HeyGen
+2025-04-14 15:11:09,417 - INFO - Extracted startup #31: Fireworks AI
+2025-04-14 15:11:09,517 - INFO - Extracted startup #32: Pomelo
+2025-04-14 15:11:09,620 - INFO - Extracted startup #33: Cognition
+2025-04-14 15:11:09,719 - INFO - Extracted startup #34: Rippling
+2025-04-14 15:11:09,809 - INFO - Extracted startup #35: Varda
+2025-04-14 15:11:09,905 - INFO - Extracted startup #36: Vocode
+2025-04-14 15:11:10,003 - INFO - Extracted startup #37: Ambience
+2025-04-14 15:11:10,074 - INFO - Extracted 18 startups from current page
+2025-04-14 15:11:10,078 - INFO - Navigating to page 3: https://topstartups.io/?hq_location=San+Francisco+Bay+Area&sort=funding&page=3
+2025-04-14 15:11:10,361 - ERROR - Error navigating to page 3: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=135.0.7049.85)
+Stacktrace:
+0   chromedriver                        0x000000010069adec cxxbridge1$str$ptr + 2817040
+1   chromedriver                        0x0000000100693088 cxxbridge1$str$ptr + 2784940
+2   chromedriver                        0x00000001001da8d8 cxxbridge1$string$len + 93028
+3   chromedriver                        0x00000001001b4758 chromedriver + 132952
+4   chromedriver                        0x0000000100249734 cxxbridge1$string$len + 547264
+5   chromedriver                        0x00000001002622c4 cxxbridge1$string$len + 648528
+6   chromedriver                        0x0000000100215a80 cxxbridge1$string$len + 335116
+7   chromedriver                        0x000000010065fc74 cxxbridge1$str$ptr + 2575000
+8   chromedriver                        0x0000000100662f40 cxxbridge1$str$ptr + 2588004
+9   chromedriver                        0x000000010063f9fc cxxbridge1$str$ptr + 2443296
+10  chromedriver                        0x00000001006637bc cxxbridge1$str$ptr + 2590176
+11  chromedriver                        0x0000000100630af0 cxxbridge1$str$ptr + 2382100
+12  chromedriver                        0x00000001006839a0 cxxbridge1$str$ptr + 2721732
+13  chromedriver                        0x0000000100683b2c cxxbridge1$str$ptr + 2722128
+14  chromedriver                        0x0000000100692cd4 cxxbridge1$str$ptr + 2783992
+15  libsystem_pthread.dylib             0x0000000188803fa8 _pthread_start + 148
+16  libsystem_pthread.dylib             0x00000001887feda0 thread_start + 8
+
+2025-04-14 15:11:10,361 - INFO - Extraction complete. Total startups extracted: 37
+2025-04-14 15:11:10,362 - INFO - Saved data to CSV: topstartiorealtimedata/2025-04-14/topstartups_data.csv
+2025-04-14 15:11:10,363 - INFO - Saved data to JSON: topstartiorealtimedata/2025-04-14/topstartups_data.json
+2025-04-14 15:11:10,364 - ERROR - Error during scraping cycle: [Errno 2] No such file or directory: 'topstartiorealtimedata/latest_data.csv'
+2025-04-14 15:11:10,457 - INFO - WebDriver closed successfully
+2025-04-14 15:13:10,765 - INFO - Starting continuous data collection service
+2025-04-14 15:13:10,766 - INFO - Data will be collected every 24 hours
+2025-04-14 15:13:10,766 - INFO - Initializing TopStartups.io scraper
+2025-04-14 15:13:10,766 - INFO - ====== WebDriver manager ======
+2025-04-14 15:13:10,852 - INFO - Get LATEST chromedriver version for google-chrome
+2025-04-14 15:13:10,904 - INFO - Get LATEST chromedriver version for google-chrome
+2025-04-14 15:13:10,931 - INFO - Driver [/Users/hk/.wdm/drivers/chromedriver/mac64/135.0.7049.84/chromedriver-mac-arm64/chromedriver] found in cache
+2025-04-14 15:13:12,165 - INFO - Starting new data collection cycle at 2025-04-14 15:13:12.165066
+2025-04-14 15:13:12,165 - INFO - Navigating to: https://topstartups.io/?hq_location=San+Francisco+Bay+Area&sort=funding
+2025-04-14 15:13:13,825 - INFO - Page loaded successfully
+2025-04-14 15:13:13,826 - INFO - Beginning startup extraction
+2025-04-14 15:13:13,836 - INFO - Found 20 startup cards on current view
+2025-04-14 15:13:14,093 - INFO - Extracted startup #1: Numeric
+2025-04-14 15:13:14,182 - INFO - Extracted startup #2: Render
+2025-04-14 15:13:14,287 - INFO - Extracted startup #3: Harvey
+2025-04-14 15:13:14,382 - INFO - Extracted startup #4: Semgrep
+2025-04-14 15:13:14,503 - INFO - Extracted startup #5: HighTouch.io
+2025-04-14 15:13:14,609 - INFO - Extracted startup #6: Qventus
+2025-04-14 15:13:14,704 - INFO - Extracted startup #7: Speak
+2025-04-14 15:13:14,804 - INFO - Extracted startup #8: Databricks
+2025-04-14 15:13:14,907 - INFO - Extracted startup #9: Kong
+2025-04-14 15:13:14,997 - INFO - Extracted startup #10: Cresta
+2025-04-14 15:13:15,094 - INFO - Extracted startup #11: Infinitus
+2025-04-14 15:13:15,212 - INFO - Extracted startup #12: Nooks
+2025-04-14 15:13:15,324 - INFO - Extracted startup #13: Decagon
+2025-04-14 15:13:15,440 - INFO - Extracted startup #14: World Labs
+2025-04-14 15:13:15,543 - INFO - Extracted startup #15: Safe Superintelligence
+2025-04-14 15:13:15,632 - INFO - Extracted startup #16: Harmonic
+2025-04-14 15:13:15,743 - INFO - Extracted startup #17: Atlys
+2025-04-14 15:13:15,865 - INFO - Extracted startup #18: Cortex
+2025-04-14 15:13:15,942 - INFO - Extracted startup #19: Get newly funded startups delivered to you weekly
+2025-04-14 15:13:15,942 - INFO - Extracted 19 startups from current page
+2025-04-14 15:13:15,944 - INFO - Navigating to page 2: https://topstartups.io/?hq_location=San+Francisco+Bay+Area&sort=funding&page=2
+2025-04-14 15:13:16,456 - INFO - Found 20 startup cards on current view
+2025-04-14 15:13:16,667 - INFO - Extracted startup #20: Glean
+2025-04-14 15:13:16,767 - INFO - Extracted startup #21: Codeium
+2025-04-14 15:13:16,853 - INFO - Extracted startup #22: Allium
+2025-04-14 15:13:16,951 - INFO - Extracted startup #23: Ema
+2025-04-14 15:13:17,050 - INFO - Extracted startup #24: Astranis
+2025-04-14 15:13:17,135 - INFO - Extracted startup #25: Vanta
+2025-04-14 15:13:17,221 - INFO - Extracted startup #26: Caldera
+2025-04-14 15:13:17,324 - INFO - Extracted startup #27: xAI
+2025-04-14 15:13:17,416 - INFO - Extracted startup #28: Alkira
+2025-04-14 15:13:17,509 - INFO - Extracted startup #29: Together
+2025-04-14 15:13:17,599 - INFO - Extracted startup #30: HeyGen
+2025-04-14 15:13:17,684 - INFO - Extracted startup #31: Fireworks AI
+2025-04-14 15:13:17,772 - INFO - Extracted startup #32: Pomelo
+2025-04-14 15:13:17,874 - INFO - Extracted startup #33: Cognition
+2025-04-14 15:13:17,971 - INFO - Extracted startup #34: Rippling
+2025-04-14 15:13:18,058 - INFO - Extracted startup #35: Varda
+2025-04-14 15:13:18,140 - INFO - Extracted startup #36: Vocode
+2025-04-14 15:13:18,226 - INFO - Extracted startup #37: Ambience
+2025-04-14 15:13:18,296 - INFO - Extracted 18 startups from current page
+2025-04-14 15:13:18,298 - INFO - Navigating to page 3: https://topstartups.io/?hq_location=San+Francisco+Bay+Area&sort=funding&page=3
+2025-04-14 15:13:18,754 - INFO - Found 20 startup cards on current view
+2025-04-14 15:13:18,941 - INFO - Extracted startup #38: LangChain
+2025-04-14 15:13:19,030 - INFO - Extracted startup #39: Watershed
+2025-04-14 15:13:19,119 - INFO - Extracted startup #40: Instawork
+2025-04-14 15:13:19,210 - INFO - Extracted startup #41: BioAge Labs
+2025-04-14 15:13:19,312 - INFO - Extracted startup #42: Freenome
+2025-04-14 15:13:19,396 - INFO - Extracted startup #43: Zum
+2025-04-14 15:13:19,490 - INFO - Extracted startup #44: Forward
+2025-04-14 15:13:19,587 - INFO - Extracted startup #45: Pika
+2025-04-14 15:13:19,686 - INFO - Extracted startup #46: Air Space Intelligence
+2025-04-14 15:13:19,777 - INFO - Extracted startup #47: Squint
+2025-04-14 15:13:19,876 - INFO - Extracted startup #48: Instabase
+2025-04-14 15:13:19,975 - INFO - Extracted startup #49: OpenAI
+2025-04-14 15:13:20,066 - INFO - Extracted startup #50: Replit
+2025-04-14 15:13:20,165 - INFO - Extracted startup #51: Memora Health
+2025-04-14 15:13:20,262 - INFO - Extracted startup #52: Mojo Vision
+2025-04-14 15:13:20,347 - INFO - Extracted startup #53: dashbot.io
+2025-04-14 15:13:20,437 - INFO - Extracted startup #54: Graphiant
+2025-04-14 15:13:20,525 - INFO - Extracted startup #55: Stripe
+2025-04-14 15:13:20,594 - INFO - Extracted 18 startups from current page
+2025-04-14 15:13:20,596 - INFO - Navigating to page 4: https://topstartups.io/?hq_location=San+Francisco+Bay+Area&sort=funding&page=4
+2025-04-14 15:13:21,156 - INFO - Found 20 startup cards on current view
+2025-04-14 15:13:21,358 - INFO - Extracted startup #56: Shef
+2025-04-14 15:13:21,451 - INFO - Extracted startup #57: Skydio
+2025-04-14 15:13:21,539 - INFO - Extracted startup #58: Light Field Lab
+2025-04-14 15:13:21,629 - INFO - Extracted startup #59: MindsDB
+2025-04-14 15:13:21,728 - INFO - Extracted startup #60: IgGenix
+2025-04-14 15:13:21,814 - INFO - Extracted startup #61: Forward Networks
+2025-04-14 15:13:21,908 - INFO - Extracted startup #62: Mad Street Den
+2025-04-14 15:13:22,014 - INFO - Extracted startup #63: Fathom
+2025-04-14 15:13:22,117 - INFO - Extracted startup #64: Atmos
+2025-04-14 15:13:22,226 - INFO - Extracted startup #65: TripActions
+2025-04-14 15:13:22,336 - INFO - Extracted startup #66: Golden
+2025-04-14 15:13:22,431 - INFO - Extracted startup #67: Workstream
+2025-04-14 15:13:22,532 - INFO - Extracted startup #68: Kumo
+2025-04-14 15:13:22,618 - INFO - Extracted startup #69: Verkada
+2025-04-14 15:13:22,714 - INFO - Extracted startup #70: Patch
+2025-04-14 15:13:22,818 - INFO - Extracted startup #71: Isovalent
+2025-04-14 15:13:22,920 - INFO - Extracted startup #72: Incredible Health
+2025-04-14 15:13:23,023 - INFO - Extracted startup #73: AliveCor
+2025-04-14 15:13:23,091 - INFO - Extracted 18 startups from current page
+2025-04-14 15:13:23,093 - INFO - Navigating to page 5: https://topstartups.io/?hq_location=San+Francisco+Bay+Area&sort=funding&page=5
+2025-04-14 15:13:23,646 - INFO - Found 20 startup cards on current view
+2025-04-14 15:13:23,846 - INFO - Extracted startup #74: Truework
+2025-04-14 15:13:23,938 - INFO - Extracted startup #75: Aisera
+2025-04-14 15:13:24,037 - INFO - Extracted startup #76: Sprig
+2025-04-14 15:13:24,136 - INFO - Extracted startup #77: Retool
+2025-04-14 15:13:24,221 - INFO - Extracted startup #78: Tecton.AI
+2025-04-14 15:13:24,309 - INFO - Extracted startup #79: Front App
+2025-04-14 15:13:24,405 - INFO - Extracted startup #80: Pave
+2025-04-14 15:13:24,490 - INFO - Extracted startup #81: Courier
+2025-04-14 15:13:24,589 - INFO - Extracted startup #82: Fountain
+2025-04-14 15:13:24,691 - INFO - Extracted startup #83: Middesk
+2025-04-14 15:13:24,791 - INFO - Extracted startup #84: Cambly
+2025-04-14 15:13:24,890 - INFO - Extracted startup #85: Metawave
+2025-04-14 15:13:24,979 - INFO - Extracted startup #86: Belong
+2025-04-14 15:13:25,078 - INFO - Extracted startup #87: SpotOn
+2025-04-14 15:13:25,178 - INFO - Extracted startup #88: Mirvie
+2025-04-14 15:13:25,268 - INFO - Extracted startup #89: Vivun
+2025-04-14 15:13:25,358 - INFO - Extracted startup #90: Instabug
+2025-04-14 15:13:25,469 - INFO - Extracted startup #91: Imply
+2025-04-14 15:13:25,544 - INFO - Extracted 18 startups from current page
+2025-04-14 15:13:25,546 - INFO - Navigating to page 6: https://topstartups.io/?hq_location=San+Francisco+Bay+Area&sort=funding&page=6
+2025-04-14 15:13:26,080 - INFO - Found 20 startup cards on current view
+2025-04-14 15:13:26,293 - INFO - Extracted startup #92: Faire
+2025-04-14 15:13:26,390 - INFO - Extracted startup #93: Sentry
+2025-04-14 15:13:26,479 - INFO - Extracted startup #94: Primer
+2025-04-14 15:13:26,591 - INFO - Extracted startup #95: Doppler
+2025-04-14 15:13:26,682 - INFO - Extracted startup #96: Mutiny
+2025-04-14 15:13:26,787 - INFO - Extracted startup #97: Playbook
+2025-04-14 15:13:26,882 - INFO - Extracted startup #98: Valar Labs
+2025-04-14 15:13:26,976 - INFO - Extracted startup #99: Newfront
+2025-04-14 15:13:27,077 - INFO - Extracted startup #100: Built Robotics
+2025-04-14 15:13:27,173 - INFO - Extracted startup #101: Viz
+2025-04-14 15:13:27,276 - INFO - Extracted startup #102: Lilt
+2025-04-14 15:13:27,365 - INFO - Extracted startup #103: Skiff
+2025-04-14 15:13:27,456 - INFO - Extracted startup #104: HackerRank
+2025-04-14 15:13:27,546 - INFO - Extracted startup #105: RapidAPI
+2025-04-14 15:13:27,629 - INFO - Extracted startup #106: Deepcell
+2025-04-14 15:13:27,735 - INFO - Extracted startup #107: Webflow
+2025-04-14 15:13:27,832 - INFO - Extracted startup #108: SmithRx
+2025-04-14 15:13:27,937 - INFO - Extracted startup #109: Roofstock
+2025-04-14 15:13:28,004 - INFO - Extracted 18 startups from current page
+2025-04-14 15:13:28,007 - INFO - Navigating to page 7: https://topstartups.io/?hq_location=San+Francisco+Bay+Area&sort=funding&page=7
+2025-04-14 15:13:29,714 - INFO - Found 20 startup cards on current view
+2025-04-14 15:13:29,918 - INFO - Extracted startup #110: Disco
+2025-04-14 15:13:30,009 - INFO - Extracted startup #111: Apollo.io
+2025-04-14 15:13:30,108 - INFO - Extracted startup #112: BillionToOne
+2025-04-14 15:13:30,219 - INFO - Extracted startup #113: Promise
+2025-04-14 15:13:30,307 - INFO - Extracted startup #114: AnyRoad
+2025-04-14 15:13:30,404 - INFO - Extracted startup #115: Secureframe
+2025-04-14 15:13:30,485 - INFO - Extracted startup #116: WorkWhile
+2025-04-14 15:13:30,570 - INFO - Extracted startup #117: Flutterwave
+2025-04-14 15:13:30,672 - INFO - Extracted startup #118: Helium
+2025-04-14 15:13:30,782 - INFO - Extracted startup #119: PopSQL
+2025-04-14 15:13:30,868 - INFO - Extracted startup #120: Homebound
+2025-04-14 15:13:30,967 - INFO - Extracted startup #121: Branch
+2025-04-14 15:13:31,060 - INFO - Extracted startup #122: Salt Security
+2025-04-14 15:13:31,142 - INFO - Extracted startup #123: Alchemy
+2025-04-14 15:13:31,244 - INFO - Extracted startup #124: Flexport
+2025-04-14 15:13:31,364 - INFO - Extracted startup #125: Census
+2025-04-14 15:13:31,457 - INFO - Extracted startup #126: Mos
+2025-04-14 15:13:31,549 - INFO - Extracted startup #127: ProductBoard
+2025-04-14 15:13:31,626 - INFO - Extracted 18 startups from current page
+2025-04-14 15:13:31,628 - INFO - Navigating to page 8: https://topstartups.io/?hq_location=San+Francisco+Bay+Area&sort=funding&page=8
+2025-04-14 15:13:32,097 - INFO - Found 20 startup cards on current view
+2025-04-14 15:13:32,280 - INFO - Extracted startup #128: Phantom
+2025-04-14 15:13:32,364 - INFO - Extracted startup #129: Vesta
+2025-04-14 15:13:32,456 - INFO - Extracted startup #130: Compound Financial
+2025-04-14 15:13:32,563 - INFO - Extracted startup #131: CoinTracker
+2025-04-14 15:13:32,661 - INFO - Extracted startup #132: Supermove
+2025-04-14 15:13:32,757 - INFO - Extracted startup #133: CaptivateIQ
+2025-04-14 15:13:32,854 - INFO - Extracted startup #134: Scratchpad
+2025-04-14 15:13:32,948 - INFO - Extracted startup #135: Pavilion Data
+2025-04-14 15:13:33,049 - INFO - Extracted startup #136: Handshake
+2025-04-14 15:13:33,146 - INFO - Extracted startup #137: Smartcar
+2025-04-14 15:13:33,243 - INFO - Extracted startup #138: Lattice
+2025-04-14 15:13:33,353 - INFO - Extracted startup #139: Clari
+2025-04-14 15:13:33,475 - INFO - Extracted startup #140: Clockwise
+2025-04-14 15:13:33,583 - INFO - Extracted startup #141: Ironclad
+2025-04-14 15:13:33,674 - INFO - Extracted startup #142: Merit
+2025-04-14 15:13:33,787 - INFO - Extracted startup #143: Wonderschool
+2025-04-14 15:13:33,895 - INFO - Extracted startup #144: Envoy
+2025-04-14 15:13:33,981 - INFO - Extracted startup #145: Labelbox
+2025-04-14 15:13:34,041 - INFO - Extracted 18 startups from current page
+2025-04-14 15:13:34,043 - INFO - Navigating to page 9: https://topstartups.io/?hq_location=San+Francisco+Bay+Area&sort=funding&page=9
+2025-04-14 15:13:34,602 - INFO - Found 20 startup cards on current view
+2025-04-14 15:13:34,813 - INFO - Extracted startup #146: Miro
+2025-04-14 15:13:34,902 - INFO - Extracted startup #147: Pyka
+2025-04-14 15:13:35,001 - INFO - Extracted startup #148: BigPanda
+2025-04-14 15:13:35,104 - INFO - Extracted startup #149: Searchlight
+2025-04-14 15:13:35,194 - INFO - Extracted startup #150: Sysdig
+2025-04-14 15:13:35,287 - INFO - Extracted startup #151: Anchorage
+2025-04-14 15:13:35,385 - INFO - Extracted startup #152: Mixhalo
+2025-04-14 15:13:35,482 - INFO - Extracted startup #153: Airtable
+2025-04-14 15:13:35,568 - INFO - Extracted startup #154: Robust Intelligence
+2025-04-14 15:13:35,685 - INFO - Extracted startup #155: Anyscale
+2025-04-14 15:13:35,782 - INFO - Extracted startup #156: Mezmo (fka LogDNA)
+2025-04-14 15:13:35,891 - INFO - Extracted startup #157: CyCognito
+2025-04-14 15:13:35,988 - INFO - Extracted startup #158: SnapLogic
+2025-04-14 15:13:36,094 - INFO - Extracted startup #159: CloudTrucks
+2025-04-14 15:13:36,180 - INFO - Extracted startup #160: Iron Fish
+2025-04-14 15:13:36,284 - INFO - Extracted startup #161: Quince
+2025-04-14 15:13:36,389 - INFO - Extracted startup #162: Fundbox
+2025-04-14 15:13:36,494 - INFO - Extracted startup #163: Simplified
+2025-04-14 15:13:36,556 - INFO - Extracted 18 startups from current page
+2025-04-14 15:13:36,557 - INFO - Navigating to page 10: https://topstartups.io/?hq_location=San+Francisco+Bay+Area&sort=funding&page=10
+2025-04-14 15:13:37,074 - INFO - Found 20 startup cards on current view
+2025-04-14 15:13:37,281 - INFO - Extracted startup #164: Vercel
+2025-04-14 15:13:37,385 - INFO - Extracted startup #165: Niantic
+2025-04-14 15:13:37,475 - INFO - Extracted startup #166: Zuma
+2025-04-14 15:13:37,566 - INFO - Extracted startup #167: Stytch
+2025-04-14 15:13:37,674 - INFO - Extracted startup #168: Fountain Therapeutics
+2025-04-14 15:13:37,774 - INFO - Extracted startup #169: Netlify
+2025-04-14 15:13:37,877 - INFO - Extracted startup #170: Benchling
+2025-04-14 15:13:37,987 - INFO - Extracted startup #171: PlanetScale
+2025-04-14 15:13:38,104 - INFO - Extracted startup #172: Netography
+2025-04-14 15:13:38,202 - INFO - Extracted startup #173: ThoughtSpot
+2025-04-14 15:13:38,288 - INFO - Extracted startup #174: Orderful
+2025-04-14 15:13:38,390 - INFO - Extracted startup #175: Applied Intuition
+2025-04-14 15:13:38,492 - INFO - Extracted startup #176: Density
+2025-04-14 15:13:38,585 - INFO - Extracted startup #177: VergeSense
+2025-04-14 15:13:38,671 - INFO - Extracted startup #178: Blotout
+2025-04-14 15:13:38,773 - INFO - Extracted startup #179: Everlaw
+2025-04-14 15:13:38,863 - INFO - Extracted startup #180: Zeit Medical
+2025-04-14 15:13:38,954 - INFO - Extracted startup #181: Drip Capital
+2025-04-14 15:13:39,029 - INFO - Extracted 18 startups from current page
+2025-04-14 15:13:39,031 - INFO - Navigating to page 11: https://topstartups.io/?hq_location=San+Francisco+Bay+Area&sort=funding&page=11
+2025-04-14 15:13:39,594 - INFO - Found 20 startup cards on current view
+2025-04-14 15:13:39,793 - INFO - Extracted startup #182: Truepill
+2025-04-14 15:13:39,892 - INFO - Extracted startup #183: Deel
+2025-04-14 15:13:39,995 - INFO - Extracted startup #184: Matik
+2025-04-14 15:13:40,091 - INFO - Extracted startup #185: Sprinter Health
+2025-04-14 15:13:40,190 - INFO - Extracted startup #186: All Day Kitchens
+2025-04-14 15:13:40,286 - INFO - Extracted startup #187: Wonolo
+2025-04-14 15:13:40,394 - INFO - Extracted startup #188: Ripple Foods
+2025-04-14 15:13:40,489 - INFO - Extracted startup #189: Osaro
+2025-04-14 15:13:40,581 - INFO - Extracted startup #190: Superhuman
+2025-04-14 15:13:40,681 - INFO - Extracted startup #191: Arevo
+2025-04-14 15:13:40,779 - INFO - Extracted startup #192: WorkRamp
+2025-04-14 15:13:40,877 - INFO - Extracted startup #193: Elemeno Health
+2025-04-14 15:13:40,979 - INFO - Extracted startup #194: Zenysis
+2025-04-14 15:13:41,067 - INFO - Extracted startup #195: HyperTrack
+2025-04-14 15:13:41,192 - INFO - Extracted startup #196: Nimble Pharmacy
+2025-04-14 15:13:41,289 - INFO - Extracted startup #197: Notion
+2025-04-14 15:13:41,382 - INFO - Extracted startup #198: Gem
+2025-04-14 15:13:41,467 - INFO - Extracted startup #199: Forta
+2025-04-14 15:13:41,532 - INFO - Extracted 18 startups from current page
+2025-04-14 15:13:41,534 - INFO - Navigating to page 12: https://topstartups.io/?hq_location=San+Francisco+Bay+Area&sort=funding&page=12
+2025-04-14 15:13:42,064 - INFO - Found 20 startup cards on current view
+2025-04-14 15:13:42,283 - INFO - Extracted startup #200: Loyal
+2025-04-14 15:13:42,382 - INFO - Extracted startup #201: Stardust
+2025-04-14 15:13:42,606 - INFO - Extracted startup #202: Beacons
+2025-04-14 15:13:42,722 - INFO - Extracted startup #203: GenEdit
+2025-04-14 15:13:42,826 - INFO - Extracted startup #204: Persona
+2025-04-14 15:13:43,031 - INFO - Extracted startup #205: Zapier
+2025-04-14 15:13:43,126 - INFO - Extracted startup #206: Rapid Robotics
+2025-04-14 15:13:43,227 - INFO - Extracted startup #207: Catch&Release
+2025-04-14 15:13:43,325 - INFO - Extracted startup #208: Monad
+2025-04-14 15:13:43,429 - INFO - Extracted startup #209: Aalto
+2025-04-14 15:13:43,520 - INFO - Extracted startup #210: Tabular Technologies
+2025-04-14 15:13:43,609 - INFO - Extracted startup #211: Firemaps
+2025-04-14 15:13:43,715 - INFO - Extracted startup #212: Robocorp
+2025-04-14 15:13:43,847 - INFO - Extracted startup #213: Dover
+2025-04-14 15:13:43,941 - INFO - Extracted startup #214: Origin
+2025-04-14 15:13:44,040 - INFO - Extracted startup #215: Juno
+2025-04-14 15:13:44,127 - INFO - Extracted startup #216: Hipcamp
+2025-04-14 15:13:44,222 - INFO - Extracted startup #217: Doxel
+2025-04-14 15:13:44,297 - INFO - Extracted 18 startups from current page
+2025-04-14 15:13:44,299 - INFO - Navigating to page 13: https://topstartups.io/?hq_location=San+Francisco+Bay+Area&sort=funding&page=13

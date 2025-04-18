@@ -1,0 +1,87 @@
+2025-04-07 04:43:58,717 - ERROR - Error processing card: 'NoneType' object has no attribute 'group'
+2025-04-07 04:44:00,173 - ERROR - Error processing card: 'NoneType' object has no attribute 'group'
+2025-04-07 04:48:36,705 - INFO - patching driver executable /Users/hk/Library/Application Support/undetected_chromedriver/undetected_chromedriver
+2025-04-07 04:48:39,631 - CRITICAL - Main execution failed: Message: unknown error: cannot connect to chrome at 127.0.0.1:49347
+from session not created: This version of ChromeDriver only supports Chrome version 114
+Current browser version is 134.0.6998.167
+Stacktrace:
+0   undetected_chromedriver             0x0000000104ba96b8 undetected_chromedriver + 4937400
+1   undetected_chromedriver             0x0000000104ba0b73 undetected_chromedriver + 4901747
+2   undetected_chromedriver             0x000000010475e616 undetected_chromedriver + 435734
+3   undetected_chromedriver             0x0000000104790d10 undetected_chromedriver + 642320
+4   undetected_chromedriver             0x0000000104787f98 undetected_chromedriver + 606104
+5   undetected_chromedriver             0x00000001047cfa08 undetected_chromedriver + 899592
+6   undetected_chromedriver             0x00000001047ceebf undetected_chromedriver + 896703
+7   undetected_chromedriver             0x00000001047c5de3 undetected_chromedriver + 859619
+8   undetected_chromedriver             0x0000000104793d7f undetected_chromedriver + 654719
+9   undetected_chromedriver             0x00000001047950de undetected_chromedriver + 659678
+10  undetected_chromedriver             0x0000000104b652ad undetected_chromedriver + 4657837
+11  undetected_chromedriver             0x0000000104b6a130 undetected_chromedriver + 4677936
+12  undetected_chromedriver             0x0000000104b70def undetected_chromedriver + 4705775
+13  undetected_chromedriver             0x0000000104b6b05a undetected_chromedriver + 4681818
+14  undetected_chromedriver             0x0000000104b3d92c undetected_chromedriver + 4495660
+15  undetected_chromedriver             0x0000000104b88838 undetected_chromedriver + 4802616
+16  undetected_chromedriver             0x0000000104b889b7 undetected_chromedriver + 4802999
+17  undetected_chromedriver             0x0000000104b9999f undetected_chromedriver + 4872607
+18  libsystem_pthread.dylib             0x00007ff8143d31d3 _pthread_start + 125
+19  libsystem_pthread.dylib             0x00007ff8143cebd3 thread_start + 15
+
+2025-04-07 04:48:39,657 - ERROR - Failed to send notification: [Errno 8] nodename nor servname provided, or not known
+2025-04-07 04:48:44,395 - INFO - patching driver executable /Users/hk/Library/Application Support/undetected_chromedriver/undetected_chromedriver
+2025-04-07 04:48:46,713 - CRITICAL - Main execution failed: Message: unknown error: cannot connect to chrome at 127.0.0.1:49394
+from session not created: This version of ChromeDriver only supports Chrome version 114
+Current browser version is 134.0.6998.167
+Stacktrace:
+0   undetected_chromedriver             0x00000001010876b8 undetected_chromedriver + 4937400
+1   undetected_chromedriver             0x000000010107eb73 undetected_chromedriver + 4901747
+2   undetected_chromedriver             0x0000000100c3c616 undetected_chromedriver + 435734
+3   undetected_chromedriver             0x0000000100c6ed10 undetected_chromedriver + 642320
+4   undetected_chromedriver             0x0000000100c65f98 undetected_chromedriver + 606104
+5   undetected_chromedriver             0x0000000100cada08 undetected_chromedriver + 899592
+6   undetected_chromedriver             0x0000000100cacebf undetected_chromedriver + 896703
+7   undetected_chromedriver             0x0000000100ca3de3 undetected_chromedriver + 859619
+8   undetected_chromedriver             0x0000000100c71d7f undetected_chromedriver + 654719
+9   undetected_chromedriver             0x0000000100c730de undetected_chromedriver + 659678
+10  undetected_chromedriver             0x00000001010432ad undetected_chromedriver + 4657837
+11  undetected_chromedriver             0x0000000101048130 undetected_chromedriver + 4677936
+12  undetected_chromedriver             0x000000010104edef undetected_chromedriver + 4705775
+13  undetected_chromedriver             0x000000010104905a undetected_chromedriver + 4681818
+14  undetected_chromedriver             0x000000010101b92c undetected_chromedriver + 4495660
+15  undetected_chromedriver             0x0000000101066838 undetected_chromedriver + 4802616
+16  undetected_chromedriver             0x00000001010669b7 undetected_chromedriver + 4802999
+17  undetected_chromedriver             0x000000010107799f undetected_chromedriver + 4872607
+18  libsystem_pthread.dylib             0x00007ff8143d31d3 _pthread_start + 125
+19  libsystem_pthread.dylib             0x00007ff8143cebd3 thread_start + 15
+
+2025-04-07 04:48:46,716 - ERROR - Failed to send notification: [Errno 8] nodename nor servname provided, or not known
+2025-04-07 04:49:15,526 - INFO - patching driver executable /Users/hk/Library/Application Support/undetected_chromedriver/undetected_chromedriver
+2025-04-07 04:49:18,349 - CRITICAL - Main execution failed: Message: unknown error: cannot connect to chrome at 127.0.0.1:49452
+from session not created: This version of ChromeDriver only supports Chrome version 114
+Current browser version is 134.0.6998.167
+Stacktrace:
+0   undetected_chromedriver             0x000000010124c6b8 undetected_chromedriver + 4937400
+1   undetected_chromedriver             0x0000000101243b73 undetected_chromedriver + 4901747
+2   undetected_chromedriver             0x0000000100e01616 undetected_chromedriver + 435734
+3   undetected_chromedriver             0x0000000100e33d10 undetected_chromedriver + 642320
+4   undetected_chromedriver             0x0000000100e2af98 undetected_chromedriver + 606104
+5   undetected_chromedriver             0x0000000100e72a08 undetected_chromedriver + 899592
+6   undetected_chromedriver             0x0000000100e71ebf undetected_chromedriver + 896703
+7   undetected_chromedriver             0x0000000100e68de3 undetected_chromedriver + 859619
+8   undetected_chromedriver             0x0000000100e36d7f undetected_chromedriver + 654719
+9   undetected_chromedriver             0x0000000100e380de undetected_chromedriver + 659678
+10  undetected_chromedriver             0x00000001012082ad undetected_chromedriver + 4657837
+11  undetected_chromedriver             0x000000010120d130 undetected_chromedriver + 4677936
+12  undetected_chromedriver             0x0000000101213def undetected_chromedriver + 4705775
+13  undetected_chromedriver             0x000000010120e05a undetected_chromedriver + 4681818
+14  undetected_chromedriver             0x00000001011e092c undetected_chromedriver + 4495660
+15  undetected_chromedriver             0x000000010122b838 undetected_chromedriver + 4802616
+16  undetected_chromedriver             0x000000010122b9b7 undetected_chromedriver + 4802999
+17  undetected_chromedriver             0x000000010123c99f undetected_chromedriver + 4872607
+18  libsystem_pthread.dylib             0x00007ff8143d31d3 _pthread_start + 125
+19  libsystem_pthread.dylib             0x00007ff8143cebd3 thread_start + 15
+
+2025-04-07 04:49:18,352 - ERROR - Failed to send notification: [Errno 8] nodename nor servname provided, or not known
+2025-04-07 04:52:25,845 - INFO - patching driver executable /Users/hk/Library/Application Support/undetected_chromedriver/undetected_chromedriver
+2025-04-07 04:52:26,362 - INFO - patching driver executable /Users/hk/Library/Application Support/undetected_chromedriver/undetected_chromedriver
+2025-04-07 04:52:26,397 - CRITICAL - Main execution failed: 'ChromeOptions' object has no attribute 'headless'
+2025-04-07 04:52:26,398 - ERROR - Failed to send notification: [Errno 8] nodename nor servname provided, or not known

@@ -1,0 +1,5 @@
+2025-04-09 05:33:20,753 - INFO - ====== WebDriver manager ======
+2025-04-09 05:33:20,917 - INFO - Get LATEST chromedriver version for google-chrome
+2025-04-09 05:33:20,966 - INFO - Get LATEST chromedriver version for google-chrome
+2025-04-09 05:33:21,000 - INFO - Driver [/Users/hk/.wdm/drivers/chromedriver/mac64/135.0.7049.84/chromedriver-mac-arm64/chromedriver] found in cache
+2025-04-09 05:33:22,736 - INFO - ✅ Browser initialized

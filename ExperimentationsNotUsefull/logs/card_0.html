@@ -1,0 +1,117 @@
+<div class="card card-body" id="item-card-filter">
+<form method="get" id="filter-form">
+<div class="row">
+  <div class="col-3 col-md-auto col-lg-1 mb-2">
+      <label id="filter-title">HQ:</label>
+  </div>
+  <div class="col-9 col-md-4 col-lg-4 mb-2">
+      <input type="search" name="hq_location" class="form-control ui-autocomplete-input" id="hq_location" placeholder="Any city, country or Remote" autocomplete="off">
+  </div>
+	  <div class="col-3 col-md-auto col-lg-1.5 mb-2">
+      <label id="filter-title">Industry:</label>
+  </div>
+  <div class="col-9 col-md-4 col-lg-4 mb-2">
+      <div class="dropdown bootstrap-select show-tick w-100"><select name="industries" class="selectpicker w-100 dropdown" multiple="" data-dropup-auto="false" placeholder="Any industry" id="multiselect">
+			<option value="Artificial Intelligence">AI/Machine Learning</option>
+			<option value="Analytics">Analytics</option>
+			<option value="Biotech">Biotech</option>
+			<option value="Collaboration">Collaboration</option>
+			<option value="Consumer">Consumer</option>
+			<option value="Crypto">Crypto/Blockchain</option>
+		  	<option value="Cybersecurity">Cybersecurity</option>
+			<option value="Data Science">Data Science</option>
+			<option value="E-Commerce">E-Commerce</option>
+			<option value="EdTech">EdTech</option>
+			<option value="Enterprise Software">Enterprise Software</option>
+			<option value="FinTech">FinTech</option>
+			<option value="Gaming">Gaming</option>
+			<option value="Hardware">Hardware</option>
+			<option value="Healthcare">Healthcare</option>
+			<option value="Marketplace">Marketplaces</option>
+			<option value="Media">Media</option>
+			<option value="Retail">Retail</option>
+			<option value="SaaS">SaaS</option>
+			<option value="Sales">Sales/Marketing</option>
+			<option value="Space">Space</option>
+			<option value="Sustainability">Sustainability</option>
+		</select><button type="button" tabindex="-1" class="btn dropdown-toggle bs-placeholder btn-light" data-bs-toggle="dropdown" role="combobox" aria-owns="bs-select-1" aria-haspopup="listbox" aria-expanded="false" title="Any industry" data-id="multiselect"><div class="filter-option"><div class="filter-option-inner"><div class="filter-option-inner-inner">Any industry</div></div> </div></button><div class="dropdown-menu "><div class="inner show" role="listbox" id="bs-select-1" tabindex="-1" aria-multiselectable="true"><ul class="dropdown-menu inner show" role="presentation"></ul></div></div></div>
+  </div>
+</div>
+	<div class="row">
+  <div class="col-3 col-md-auto col-lg-1 mb-2">
+      <label id="filter-title">Size:</label>
+  </div>
+  <div class="col-9 col-md-4 col-lg-4 mb-2">
+      <div class="dropdown bootstrap-select show-tick w-100"><select name="company_size" class="selectpicker w-100 dropdown" multiple="" data-dropup-auto="false" placeholder="Any size" id="multiselect">
+			<option value="1-10 employees">1-10 employees</option>
+			<option value="11-50 employees">11-50 employees</option>
+			<option value="51-100 employees">51-100 employees</option>
+			<option value="101-200 employees">101-200 employees</option>
+			<option value="201-500 employees">201-500 employees</option>
+			<option value="501-1000 employees">501-1000 employees</option>
+			<option value="1001-5000 employees">1001-5000 employees</option>xrb
+			<option value="5000+ employees">5000+ employees</option>
+		</select><button type="button" tabindex="-1" class="btn dropdown-toggle bs-placeholder btn-light" data-bs-toggle="dropdown" role="combobox" aria-owns="bs-select-2" aria-haspopup="listbox" aria-expanded="false" title="Any size" data-id="multiselect"><div class="filter-option"><div class="filter-option-inner"><div class="filter-option-inner-inner">Any size</div></div> </div></button><div class="dropdown-menu "><div class="inner show" role="listbox" id="bs-select-2" tabindex="-1" aria-multiselectable="true"><ul class="dropdown-menu inner show" role="presentation"></ul></div></div></div>
+  </div>
+	  <div class="col-3 col-md-auto col-lg-1.5 mb-2">
+      <label id="filter-title">Founded:</label>
+  </div>
+  <div class="col-9 col-md-4 col-lg-4 mb-2">
+		<div class="dropdown bootstrap-select show-tick w-100"><select name="founded_year" class="selectpicker w-100 dropdown" multiple="" data-dropup-auto="false" placeholder="Any year" id="multiselect">
+		<option value="2021">2021</option>
+		<option value="2020">2020</option>
+		<option value="2019">2019</option>
+		<option value="2018">2018</option>
+		<option value="2017">2017</option>
+		<option value="2016">2016</option>
+		<option value="2015">2015</option>
+		<option value="2014">2014</option>
+		<option value="2013">2013</option>
+		<option value="2012">2012</option>
+		<option value="2011">2011</option>
+	</select><button type="button" tabindex="-1" class="btn dropdown-toggle bs-placeholder btn-light" data-bs-toggle="dropdown" role="combobox" aria-owns="bs-select-3" aria-haspopup="listbox" aria-expanded="false" title="Any year" data-id="multiselect"><div class="filter-option"><div class="filter-option-inner"><div class="filter-option-inner-inner">Any year</div></div> </div></button><div class="dropdown-menu "><div class="inner show" role="listbox" id="bs-select-3" tabindex="-1" aria-multiselectable="true"><ul class="dropdown-menu inner show" role="presentation"></ul></div></div></div>
+  </div>
+</div>
+		<div class="row">
+  <div class="col-3 col-md-auto col-lg-1 mb-2">
+      <label id="filter-title">Stage:</label>
+  </div>
+  <div class="col-9 col-md-4 col-lg-4 mb-2">
+		<div class="dropdown bootstrap-select show-tick w-100"><select name="funding_round" class="selectpicker w-100 dropdown" multiple="" data-dropup-auto="false" placeholder="Any stage" id="multiselect">
+			<option value="Pre-Seed">Pre-Seed</option>
+			<option value="Seed">Seed</option>
+			<option value="Series A">Series A</option>
+			<option value="Series B">Series B</option>
+			<option value="Series C">Series C</option>
+			<option value="Series D">Series D</option>
+			<option value="Series E">Series E</option>
+			<option value="Series F">Series F</option>
+			<option value="Series G">Series G</option>
+			<option value="Series H">Series H</option>
+			<option value="Series I">Series I</option>
+			<option value="Post-IPO">Post-IPO</option>
+			<option value="Unknown">Unknown</option>
+		</select><button type="button" tabindex="-1" class="btn dropdown-toggle bs-placeholder btn-light" data-bs-toggle="dropdown" role="combobox" aria-owns="bs-select-4" aria-haspopup="listbox" aria-expanded="false" title="Any stage" data-id="multiselect"><div class="filter-option"><div class="filter-option-inner"><div class="filter-option-inner-inner">Any stage</div></div> </div></button><div class="dropdown-menu "><div class="inner show" role="listbox" id="bs-select-4" tabindex="-1" aria-multiselectable="true"><ul class="dropdown-menu inner show" role="presentation"></ul></div></div></div>
+  </div>
+	  <div class="col-3 col-md-auto col-lg-1.5 mb-2">
+      <label id="filter-title">Investor:</label>
+  </div>
+  <div class="col-9 col-md-4 col-lg-4 mb-2">
+	<div class="dropdown bootstrap-select show-tick w-100"><select name="investors" class="selectpicker w-100 dropdown" multiple="" data-dropup-auto="false" placeholder="Any investor" id="multiselect">
+		<option value="Accel">Accel</option>
+		<option value="Andreessen Horowitz">Andreessen Horowitz</option>
+		<option value="Benchmark">Benchmark</option>
+		<option value="Bessemer">Bessemer</option>
+		<option value="Founders Fund">Founders Fund</option>
+		<option value="Khosla Ventures">Khosla Ventures</option>
+		<option value="Kleiner Perkins">Kleiner Perkins</option>
+		<option value="Sequoia">Sequoia</option>
+		<option value="Y Combinator">Y Combinator</option>
+	</select><button type="button" tabindex="-1" class="btn dropdown-toggle bs-placeholder btn-light" data-bs-toggle="dropdown" role="combobox" aria-owns="bs-select-5" aria-haspopup="listbox" aria-expanded="false" title="Any investor" data-id="multiselect"><div class="filter-option"><div class="filter-option-inner"><div class="filter-option-inner-inner">Any investor</div></div> </div></button><div class="dropdown-menu "><div class="inner show" role="listbox" id="bs-select-5" tabindex="-1" aria-multiselectable="true"><ul class="dropdown-menu inner show" role="presentation"></ul></div></div></div>
+  </div>
+			<div class="col-12 col-md-auto">
+				<button type="submit" class="btn btn-primary" id="search-button">Find matches</button>
+			</div>
+		</div>
+	</form>
+</div>

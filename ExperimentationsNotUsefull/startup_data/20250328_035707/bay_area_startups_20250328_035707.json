@@ -1,0 +1,496 @@
+[
+    {
+        "name": "HQ:",
+        "description": "HQ:\nIndustry:\nAI/Machine Learning\nAnalytics\nBiotech\nCollaboration\nConsumer\nCrypto/Blockchain\nCybersecurity\nData Science\nE-Commerce\nEdTech\nEnterprise Software\nFinTech\nGaming\nHardware\nHealthcare\nMarketplaces\nMedia\nRetail\nSaaS\nSales/Marketing\nSpace\nSustainability\nAny industry",
+        "logo_url": null,
+        "tags": [],
+        "quick_facts": {
+            "hq": null,
+            "employees": "1-10 employees",
+            "founded": ""
+        },
+        "funding": {
+            "investors": [],
+            "details": [
+                "Series A",
+                "Series B",
+                "Series C",
+                "Series D",
+                "Series E",
+                "Series F",
+                "Series G",
+                "Series H",
+                "Series I"
+            ],
+            "valuation": null
+        },
+        "website_url": null,
+        "scraped_at": "2025-03-28 03:57:54"
+    },
+    {
+        "name": "Numeric",
+        "description": "Quick facts:\n📍HQ: San Francisco Bay Area, California, USA\n11-50 employees Founded: 2021",
+        "logo_url": "https://res.cloudinary.com/die3a7qhl/image/upload/v1729032535/numeric_ekspis.png",
+        "tags": [
+            "IVP",
+            "Enterprise Software",
+            "Founders Fund",
+            "Menlo VC",
+            "FinTech",
+            "Accounting"
+        ],
+        "quick_facts": {
+            "hq": null,
+            "employees": "11-50 employees",
+            "founded": "2021"
+        },
+        "funding": {
+            "investors": [],
+            "details": [
+                "$28M Series A in 2024"
+            ],
+            "valuation": null
+        },
+        "website_url": "https://www.numeric.io/?utm_source=topstartups.io",
+        "scraped_at": "2025-03-28 03:57:55"
+    },
+    {
+        "name": "Render",
+        "description": "Quick facts:\n📍HQ: San Francisco Bay Area, California, USA\n51-100 employees Founded: 2018",
+        "logo_url": "https://res.cloudinary.com/die3a7qhl/image/upload/v1739239915/render-logo_m6kuwe.svg",
+        "tags": [
+            "Bessemer",
+            "Enterprise Software",
+            "Developer Tools",
+            "SaaS",
+            "General Catalyst"
+        ],
+        "quick_facts": {
+            "hq": null,
+            "employees": "51-100 employees",
+            "founded": "2018"
+        },
+        "funding": {
+            "investors": [],
+            "details": [
+                "$80M Series C in 2025"
+            ],
+            "valuation": null
+        },
+        "website_url": "https://www.render.com/?utm_source=topstartups.io",
+        "scraped_at": "2025-03-28 03:57:55"
+    },
+    {
+        "name": "Harvey",
+        "description": "Quick facts:\n📍HQ: San Francisco Bay Area, California, USA\n201-500 employees Founded: 2021",
+        "logo_url": "https://images.crunchbase.com/image/upload/c_pad,f_auto,q_auto:eco,dpr_1/whp7nzng2urnf2voeikd",
+        "tags": [
+            "Sequoia",
+            "Artificial Intelligence",
+            "Legal",
+            "Kleiner Perkins"
+        ],
+        "quick_facts": {
+            "hq": null,
+            "employees": "201-500 employees",
+            "founded": "2021"
+        },
+        "funding": {
+            "investors": [],
+            "details": [
+                "$300M Series D in 2025"
+            ],
+            "valuation": "$3.0B valuation"
+        },
+        "website_url": "https://www.harvey.ai/?utm_source=topstartups.io",
+        "scraped_at": "2025-03-28 03:57:55"
+    },
+    {
+        "name": "Semgrep",
+        "description": "Quick facts:\n📍HQ: San Francisco Bay Area, California, USA\n201-500 employees Founded: 2017",
+        "logo_url": "https://images.crunchbase.com/image/upload/c_lpad,h_170,w_170,f_auto,b_white,q_auto:eco,dpr_1/z9okitrtwykeceivfrsh",
+        "tags": [
+            "Sequoia",
+            "SaaS",
+            "Cybersecurity"
+        ],
+        "quick_facts": {
+            "hq": null,
+            "employees": "201-500 employees",
+            "founded": "2017"
+        },
+        "funding": {
+            "investors": [],
+            "details": [
+                "$100M Series D in 2025"
+            ],
+            "valuation": null
+        },
+        "website_url": "https://semgrep.dev/?utm_source=topstartups.io",
+        "scraped_at": "2025-03-28 03:57:55"
+    },
+    {
+        "name": "HighTouch.io",
+        "description": "Quick facts:\n📍HQ: San Francisco Bay Area, California, USA\n11-50 employees Founded: 2018",
+        "logo_url": "https://images.crunchbase.com/image/upload/c_lpad,h_256,w_256,f_auto,q_auto:eco,dpr_1/uhsr0uetxgjuq84ksent",
+        "tags": [
+            "Sales",
+            "Enterprise Software",
+            "Y Combinator",
+            "SaaS",
+            "Marketing"
+        ],
+        "quick_facts": {
+            "hq": null,
+            "employees": "11-50 employees",
+            "founded": "2018"
+        },
+        "funding": {
+            "investors": [],
+            "details": [
+                "$80M Series C in 2025"
+            ],
+            "valuation": "$1.2B valuation"
+        },
+        "website_url": "http://www.hightouch.io/?utm_source=topstartups.io",
+        "scraped_at": "2025-03-28 03:57:55"
+    },
+    {
+        "name": "Qventus",
+        "description": "Quick facts:\n📍HQ: San Francisco Bay Area, California, USA\n101-200 employees Founded: 2012",
+        "logo_url": "https://images.crunchbase.com/image/upload/c_lpad,f_auto,q_auto:eco,dpr_1/v1504537466/sx7fkolgm56fkhqupehd.png",
+        "tags": [
+            "Y Combinator",
+            "Predictive Analytics",
+            "Bessemer",
+            "Healthcare"
+        ],
+        "quick_facts": {
+            "hq": null,
+            "employees": "101-200 employees",
+            "founded": "2012"
+        },
+        "funding": {
+            "investors": [],
+            "details": [
+                "$85M Series D in 2025"
+            ],
+            "valuation": null
+        },
+        "website_url": "http://www.qventus.com/?utm_source=topstartups.io",
+        "scraped_at": "2025-03-28 03:57:56"
+    },
+    {
+        "name": "Speak",
+        "description": "Quick facts:\n📍HQ: San Francisco Bay Area, California, USA\n11-50 employees Founded: 2016",
+        "logo_url": "https://images.crunchbase.com/image/upload/c_pad,h_120,w_120,f_auto,b_white,q_auto:eco,dpr_1/bc745592fc9144b09df643a736c5818a",
+        "tags": [
+            "Accel",
+            "SaaS",
+            "Artificial Intelligence",
+            "Consumer"
+        ],
+        "quick_facts": {
+            "hq": null,
+            "employees": "11-50 employees",
+            "founded": "2016"
+        },
+        "funding": {
+            "investors": [],
+            "details": [
+                "$78M Series C in 2024"
+            ],
+            "valuation": "$1.0B valuation"
+        },
+        "website_url": "https://www.speak.com/?utm_source=topstartups.io",
+        "scraped_at": "2025-03-28 03:57:56"
+    },
+    {
+        "name": "Databricks",
+        "description": "Quick facts:\n📍HQ: San Francisco Bay Area, California, USA\n5000+ employees Founded: 2013",
+        "logo_url": "https://images.crunchbase.com/image/upload/c_lpad,f_auto,q_auto:eco,dpr_1/w4fk7lg95vmrsqt6gire",
+        "tags": [
+            "Andreessen Horowitz",
+            "Analytics",
+            "SaaS",
+            "Artificial Intelligence",
+            "Data Science"
+        ],
+        "quick_facts": {
+            "hq": null,
+            "employees": "5000+ employees",
+            "founded": "2013"
+        },
+        "funding": {
+            "investors": [],
+            "details": [
+                "$10B Series J in 2024"
+            ],
+            "valuation": "$62.0B valuation"
+        },
+        "website_url": "http://databricks.com/?utm_source=topstartups.io",
+        "scraped_at": "2025-03-28 03:57:56"
+    },
+    {
+        "name": "Kong",
+        "description": "Quick facts:\n📍HQ: San Francisco Bay Area, California, USA\n201-500 employees Founded: 2017",
+        "logo_url": "https://img-cdn.tnwcdn.com/image?url=https%3A%2F%2Fpbs.twimg.com%2Fprofile_images%2F1412956907929620486%2FGkFcFJFf.jpg&signature=dbf80f029dc186893f337bf93a145d0b",
+        "tags": [
+            "Andreessen Horowitz",
+            "SaaS",
+            "Enterprise Software"
+        ],
+        "quick_facts": {
+            "hq": null,
+            "employees": "201-500 employees",
+            "founded": "2017"
+        },
+        "funding": {
+            "investors": [],
+            "details": [
+                "$175M Series E in 2024"
+            ],
+            "valuation": "$2.0B valuation"
+        },
+        "website_url": "https://konghq.com/?utm_source=topstartups.io",
+        "scraped_at": "2025-03-28 03:57:56"
+    },
+    {
+        "name": "Cresta",
+        "description": "Quick facts:\n📍HQ: San Francisco Bay Area, California, USA\n201-500 employees Founded: 2017",
+        "logo_url": "https://images.crunchbase.com/image/upload/ooblsjdblhfi601ujl7r",
+        "tags": [
+            "Sales",
+            "Andreessen Horowitz",
+            "Enterprise Software",
+            "Sequoia",
+            "Artificial Intelligence"
+        ],
+        "quick_facts": {
+            "hq": null,
+            "employees": "201-500 employees",
+            "founded": "2017"
+        },
+        "funding": {
+            "investors": [],
+            "details": [
+                "$125M Series D in 2024"
+            ],
+            "valuation": null
+        },
+        "website_url": "http://cresta.com/?utm_source=topstartups.io",
+        "scraped_at": "2025-03-28 03:57:56"
+    },
+    {
+        "name": "Infinitus",
+        "description": "Quick facts:\n📍HQ: San Francisco Bay Area, California, USA\n101-200 employees Founded: 2019",
+        "logo_url": "https://images.crunchbase.com/image/upload/c_pad,h_120,w_120,f_auto,b_white,q_auto:eco,dpr_1/dn00i7alw6rc3xla89km",
+        "tags": [
+            "Andreessen Horowitz",
+            "Artificial Intelligence",
+            "Health",
+            "Kleiner Perkins"
+        ],
+        "quick_facts": {
+            "hq": null,
+            "employees": "101-200 employees",
+            "founded": "2019"
+        },
+        "funding": {
+            "investors": [],
+            "details": [
+                "$51M Series C in 2024"
+            ],
+            "valuation": null
+        },
+        "website_url": "https://www.infinitus.ai/?utm_source=topstartups.io",
+        "scraped_at": "2025-03-28 03:57:57"
+    },
+    {
+        "name": "Nooks",
+        "description": "Quick facts:\n📍HQ: San Francisco Bay Area, California, USA\n51-100 employees Founded: 2020",
+        "logo_url": "https://images.crunchbase.com/image/upload/c_pad,h_120,w_120,f_auto,b_white,q_auto:eco,dpr_1/jbymoqcyqscp8fgvud6b",
+        "tags": [
+            "Sales",
+            "Artificial Intelligence",
+            "Kleiner Perkins"
+        ],
+        "quick_facts": {
+            "hq": null,
+            "employees": "51-100 employees",
+            "founded": "2020"
+        },
+        "funding": {
+            "investors": [],
+            "details": [
+                "$43M Series B in 2024"
+            ],
+            "valuation": null
+        },
+        "website_url": "https://www.nooks.ai/?utm_source=topstartups.io",
+        "scraped_at": "2025-03-28 03:57:57"
+    },
+    {
+        "name": "Decagon",
+        "description": "Quick facts:\n📍HQ: San Francisco Bay Area, California, USA\n11-50 employees Founded: 2023",
+        "logo_url": "https://images.crunchbase.com/image/upload/c_pad,f_auto,q_auto:eco,dpr_1/e0779b5e58c94c77bce457ce9a6ed2dc",
+        "tags": [
+            "Andreessen Horowitz",
+            "Accel",
+            "Artificial Intelligence",
+            "Enterprise Software"
+        ],
+        "quick_facts": {
+            "hq": null,
+            "employees": "11-50 employees",
+            "founded": "2023"
+        },
+        "funding": {
+            "investors": [],
+            "details": [
+                "$65M Series B in 2024"
+            ],
+            "valuation": null
+        },
+        "website_url": "https://decagon.ai/?utm_source=topstartups.io",
+        "scraped_at": "2025-03-28 03:57:57"
+    },
+    {
+        "name": "World Labs",
+        "description": "Quick facts:\n📍HQ: San Francisco Bay Area, California, USA\n11-50 employees Founded: 2023",
+        "logo_url": "https://images.crunchbase.com/image/upload/c_pad,f_auto,q_auto:eco,dpr_1/7e39375157714ef1b7733d002ebb3017",
+        "tags": [
+            "Andreessen Horowitz",
+            "Artificial Intelligence"
+        ],
+        "quick_facts": {
+            "hq": null,
+            "employees": "11-50 employees",
+            "founded": "2023"
+        },
+        "funding": {
+            "investors": [],
+            "details": [
+                "$230M Series A in 2024"
+            ],
+            "valuation": "$1.0B valuation"
+        },
+        "website_url": "https://www.worldlabs.ai/?utm_source=topstartups.io",
+        "scraped_at": "2025-03-28 03:57:57"
+    },
+    {
+        "name": "Safe Superintelligence",
+        "description": "Quick facts:\n📍HQ: San Francisco Bay Area, California, USA\n1-10 employees Founded: 2024",
+        "logo_url": "https://images.crunchbase.com/image/upload/c_pad,h_256,w_256,f_auto,q_auto:eco,dpr_1/b6ff26f22c0d4c5c8fec0811038f3e62",
+        "tags": [
+            "Andreessen Horowitz",
+            "Sequoia",
+            "Artificial Intelligence"
+        ],
+        "quick_facts": {
+            "hq": null,
+            "employees": "1-10 employees",
+            "founded": "2024"
+        },
+        "funding": {
+            "investors": [],
+            "details": [
+                "$1B Series A in 2024"
+            ],
+            "valuation": null
+        },
+        "website_url": "https://ssi.inc/?utm_source=topstartups.io",
+        "scraped_at": "2025-03-28 03:57:57"
+    },
+    {
+        "name": "Harmonic",
+        "description": "Quick facts:\n📍HQ: San Francisco Bay Area, California, USA\n11-50 employees Founded: 2023",
+        "logo_url": "https://images.crunchbase.com/image/upload/c_pad,f_auto,q_auto:eco,dpr_1/14620131a02b438192d571be5e2492f4",
+        "tags": [
+            "Sequoia",
+            "Artificial Intelligence"
+        ],
+        "quick_facts": {
+            "hq": null,
+            "employees": "11-50 employees",
+            "founded": "2023"
+        },
+        "funding": {
+            "investors": [],
+            "details": [
+                "$75M Series A in 2024"
+            ],
+            "valuation": null
+        },
+        "website_url": "https://harmonic.fun/index/?utm_source=topstartups.io",
+        "scraped_at": "2025-03-28 03:57:57"
+    },
+    {
+        "name": "Atlys",
+        "description": "Quick facts:\n📍HQ: San Francisco Bay Area, California, USA\n11-50 employees Founded: 2020",
+        "logo_url": "https://images.crunchbase.com/image/upload/c_lpad,h_170,w_170,f_auto,b_white,q_auto:eco,dpr_1/icjjhljnjqxdgepbytyz",
+        "tags": [
+            "Andreessen Horowitz",
+            "Immigration",
+            "Accel",
+            "Sequoia",
+            "Travel"
+        ],
+        "quick_facts": {
+            "hq": null,
+            "employees": "11-50 employees",
+            "founded": "2020"
+        },
+        "funding": {
+            "investors": [],
+            "details": [
+                "$20M Series B in 2024"
+            ],
+            "valuation": null
+        },
+        "website_url": "https://www.atlys.com/?utm_source=topstartups.io",
+        "scraped_at": "2025-03-28 03:57:58"
+    },
+    {
+        "name": "Cortex",
+        "description": "Quick facts:\n📍HQ: San Francisco Bay Area, California, USA\n101-200 employees Founded: 2019",
+        "logo_url": "https://images.crunchbase.com/image/upload/c_pad,h_256,w_256,f_auto,q_auto:eco,dpr_1/o9krgzpt5d7hmm5d5vp4",
+        "tags": [
+            "Sequoia",
+            "Enterprise Software",
+            "Developer Tools"
+        ],
+        "quick_facts": {
+            "hq": null,
+            "employees": "101-200 employees",
+            "founded": "2019"
+        },
+        "funding": {
+            "investors": [],
+            "details": [
+                "$60M Series C in 2024"
+            ],
+            "valuation": null
+        },
+        "website_url": "https://www.cortex.io/?utm_source=topstartups.io",
+        "scraped_at": "2025-03-28 03:57:58"
+    },
+    {
+        "name": "Get newly funded startups delivered to you weekly",
+        "description": "Get newly funded startups delivered to you weekly",
+        "logo_url": null,
+        "tags": [],
+        "quick_facts": {
+            "hq": null,
+            "employees": null,
+            "founded": null
+        },
+        "funding": {
+            "investors": [],
+            "details": [],
+            "valuation": null
+        },
+        "website_url": null,
+        "scraped_at": "2025-03-28 03:57:58"
+    }
+]

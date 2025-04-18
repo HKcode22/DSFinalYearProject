@@ -1,0 +1,164 @@
+[
+  {
+    "name": "Numeric",
+    "description": "Building the next-gen financial data platform\nEnterprise Software FinTech Accounting",
+    "hq": "San Francisco Bay Area, California, USA",
+    "funding": "Founders Fund Menlo VC IVP $28M Series A in 2024",
+    "website": "https://www.numeric.io/?utm_source=topstartups.io",
+    "employees_link": "https://www.linkedin.com/company/numeric-io",
+    "reviews_link": ""
+  },
+  {
+    "name": "Render",
+    "description": "Help 2M+ developers build, deploy, and scale apps with unparalleled ease\nSaaS Enterprise Software Developer Tools",
+    "hq": "San Francisco Bay Area, California, USA",
+    "funding": "Bessemer General Catalyst $80M Series C in 2025",
+    "website": "https://www.render.com/?utm_source=topstartups.io",
+    "employees_link": "https://www.linkedin.com/company/renderco",
+    "reviews_link": ""
+  },
+  {
+    "name": "Harvey",
+    "description": "AI provider for legal workers\nArtificial Intelligence Legal",
+    "hq": "San Francisco Bay Area, California, USA",
+    "funding": "Sequoia Kleiner Perkins $300M Series D in 2025 $3.0B valuation",
+    "website": "https://www.harvey.ai/?utm_source=topstartups.io",
+    "employees_link": "https://www.linkedin.com/company/harvey-ai/",
+    "reviews_link": ""
+  },
+  {
+    "name": "Semgrep",
+    "description": "Profoundly improving software security and reliability\nCybersecurity SaaS",
+    "hq": "San Francisco Bay Area, California, USA",
+    "funding": "Sequoia $100M Series D in 2025",
+    "website": "https://semgrep.dev/?utm_source=topstartups.io",
+    "employees_link": "https://www.linkedin.com/company/semgrep/",
+    "reviews_link": ""
+  },
+  {
+    "name": "HighTouch.io",
+    "description": "Sync customer data to your SaaS, marketing, sales, and success platforms.\nMarketing Enterprise Software SaaS Sales",
+    "hq": "San Francisco Bay Area, California, USA",
+    "funding": "Y Combinator $80M Series C in 2025 $1.2B valuation",
+    "website": "http://www.hightouch.io/?utm_source=topstartups.io",
+    "employees_link": "https://www.linkedin.com/company/hightouchio",
+    "reviews_link": ""
+  },
+  {
+    "name": "Qventus",
+    "description": "Qventus optimizes decisions in hospitals in real time to reduce costs, improve quality and experience.\nPredictive Analytics Healthcare",
+    "hq": "San Francisco Bay Area, California, USA",
+    "funding": "Bessemer Y Combinator $85M Series D in 2025",
+    "website": "http://www.qventus.com/?utm_source=topstartups.io",
+    "employees_link": "https://linkedin.com/company/qventus-inc",
+    "reviews_link": "https://www.glassdoor.com/Overview/Working-at-Qventus-EI_IE1687366.11,18.htm"
+  },
+  {
+    "name": "Speak",
+    "description": "Language learning app that gets you talking\nSaaS Consumer Artificial Intelligence",
+    "hq": "San Francisco Bay Area, California, USA",
+    "funding": "Accel $78M Series C in 2024 $1.0B valuation",
+    "website": "https://www.speak.com/?utm_source=topstartups.io",
+    "employees_link": "https://www.linkedin.com/company/usespeak",
+    "reviews_link": ""
+  },
+  {
+    "name": "Databricks",
+    "description": "Databricks is a data-and-AI company that interacts with corporate information stored in the public cloud.\nArtificial Intelligence SaaS Analytics Data Science",
+    "hq": "San Francisco Bay Area, California, USA",
+    "funding": "Andreessen Horowitz $10B Series J in 2024 $62.0B valuation",
+    "website": "http://databricks.com/?utm_source=topstartups.io",
+    "employees_link": "https://linkedin.com/company/databricks",
+    "reviews_link": "https://www.glassdoor.com/Reviews/Databricks-Reviews-E954734.htm"
+  },
+  {
+    "name": "Kong",
+    "description": "Kong offers the industry-leading service connectivity platform designed for modern architectures.\nEnterprise Software SaaS",
+    "hq": "San Francisco Bay Area, California, USA",
+    "funding": "Andreessen Horowitz $175M Series E in 2024 $2.0B valuation",
+    "website": "https://konghq.com/?utm_source=topstartups.io",
+    "employees_link": "https://www.linkedin.com/company/konghq/",
+    "reviews_link": "https://www.glassdoor.com/Reviews/Kong-Reviews-E801963.htm"
+  },
+  {
+    "name": "Cresta",
+    "description": "Cresta leverages artificial intelligence to help sales and service agents improve the quality of their customer service\nArtificial Intelligence Sales Enterprise Software",
+    "hq": "San Francisco Bay Area, California, USA",
+    "funding": "Sequoia Andreessen Horowitz $125M Series D in 2024",
+    "website": "http://cresta.com/?utm_source=topstartups.io",
+    "employees_link": "https://www.linkedin.com/company/cresta-inc/",
+    "reviews_link": "https://www.glassdoor.com/Reviews/Cresta-Reviews-E805613.htm"
+  },
+  {
+    "name": "Infinitus",
+    "description": "AI healthcare company focused on automating complex phone-based workflows\nHealth Artificial Intelligence",
+    "hq": "San Francisco Bay Area, California, USA",
+    "funding": "Andreessen Horowitz Kleiner Perkins $51M Series C in 2024",
+    "website": "https://www.infinitus.ai/?utm_source=topstartups.io",
+    "employees_link": "https://www.linkedin.com/company/infinitusai",
+    "reviews_link": ""
+  },
+  {
+    "name": "Nooks",
+    "description": "AI dialing and prospecting platform, trusted by thousands of SDRs & AEs to cut out the busywork\nArtificial Intelligence Sales",
+    "hq": "San Francisco Bay Area, California, USA",
+    "funding": "Kleiner Perkins $43M Series B in 2024",
+    "website": "https://www.nooks.ai/?utm_source=topstartups.io",
+    "employees_link": "https://www.linkedin.com/company/nooksapp",
+    "reviews_link": ""
+  },
+  {
+    "name": "Decagon",
+    "description": "Develops AI support agents for enterprise\nArtificial Intelligence Enterprise Software",
+    "hq": "San Francisco Bay Area, California, USA",
+    "funding": "Andreessen Horowitz Accel $65M Series B in 2024",
+    "website": "https://decagon.ai/?utm_source=topstartups.io",
+    "employees_link": "https://www.linkedin.com/company/decagon-ai/",
+    "reviews_link": ""
+  },
+  {
+    "name": "World Labs",
+    "description": "Develops AI models with spatial intelligence for 3D world perception and interaction\nArtificial Intelligence",
+    "hq": "San Francisco Bay Area, California, USA",
+    "funding": "Andreessen Horowitz $230M Series A in 2024 $1.0B valuation",
+    "website": "https://www.worldlabs.ai/?utm_source=topstartups.io",
+    "employees_link": "https://www.linkedin.com/company/world-labs/",
+    "reviews_link": ""
+  },
+  {
+    "name": "Safe Superintelligence",
+    "description": "World's first straight-shot safe superintelligence lab\nArtificial Intelligence",
+    "hq": "San Francisco Bay Area, California, USA",
+    "funding": "Sequoia Andreessen Horowitz $1B Series A in 2024",
+    "website": "https://ssi.inc/?utm_source=topstartups.io",
+    "employees_link": "https://topstartups.io/target=%22_blank%22",
+    "reviews_link": ""
+  },
+  {
+    "name": "Harmonic",
+    "description": "Building the world’s most advanced mathematical reasoning engine\nArtificial Intelligence",
+    "hq": "San Francisco Bay Area, California, USA",
+    "funding": "Sequoia $75M Series A in 2024",
+    "website": "https://harmonic.fun/index/?utm_source=topstartups.io",
+    "employees_link": "https://www.linkedin.com/company/harmonicmath/",
+    "reviews_link": ""
+  },
+  {
+    "name": "Atlys",
+    "description": "Atlys makes it fast for anyone to get a visa.\nImmigration Travel",
+    "hq": "San Francisco Bay Area, California, USA",
+    "funding": "Andreessen Horowitz Sequoia Accel $20M Series B in 2024",
+    "website": "https://www.atlys.com/?utm_source=topstartups.io",
+    "employees_link": "https://www.linkedin.com/company/getatlys/",
+    "reviews_link": ""
+  },
+  {
+    "name": "Cortex",
+    "description": "Cortex is a software platform that manages and operates microservices.\nEnterprise Software Developer Tools",
+    "hq": "San Francisco Bay Area, California, USA",
+    "funding": "Sequoia $60M Series C in 2024",
+    "website": "https://www.cortex.io/?utm_source=topstartups.io",
+    "employees_link": "https://www.linkedin.com/company/cortexapp/",
+    "reviews_link": ""
+  }
+]

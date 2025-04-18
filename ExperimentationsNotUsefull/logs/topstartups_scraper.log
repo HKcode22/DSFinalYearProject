@@ -1,0 +1,1468 @@
+2025-04-07 06:10:53,123 - WDM - INFO - ====== WebDriver manager ======
+2025-04-07 06:10:53,277 - WDM - INFO - Get LATEST chromedriver version for google-chrome
+2025-04-07 06:10:53,322 - WDM - INFO - Get LATEST chromedriver version for google-chrome
+2025-04-07 06:10:53,356 - WDM - INFO - Driver [/Users/hk/.wdm/drivers/chromedriver/mac64/134.0.6998.165/chromedriver-mac-arm64/chromedriver] found in cache
+2025-04-07 06:10:54,984 - __main__ - INFO - Chrome WebDriver initialized successfully
+2025-04-07 06:10:54,984 - __main__ - INFO - Navigating to https://topstartups.io/?hq_location=San+Francisco+Bay+Area&sort=funding
+2025-04-07 06:11:01,105 - __main__ - INFO - Loading all startups...
+2025-04-07 06:11:01,112 - __main__ - INFO - Scrolled to bottom (attempt 1)
+2025-04-07 06:11:04,142 - __main__ - INFO - Found 'Show more' element using text search
+2025-04-07 06:11:05,185 - __main__ - INFO - Clicked button using standard click
+2025-04-07 06:11:08,193 - __main__ - INFO - New content loaded, height changed from 13350 to 24679
+2025-04-07 06:11:08,195 - __main__ - INFO - Scrolled to bottom (attempt 2)
+2025-04-07 06:11:11,276 - __main__ - ERROR - Error: Message: stale element reference: stale element not found in the current frame
+  (Session info: chrome=134.0.6998.167); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#stale-element-reference-exception
+Stacktrace:
+0   chromedriver                        0x0000000102a076c8 cxxbridge1$str$ptr + 2791212
+1   chromedriver                        0x00000001029ffc9c cxxbridge1$str$ptr + 2759936
+2   chromedriver                        0x0000000102551e30 cxxbridge1$string$len + 92928
+3   chromedriver                        0x0000000102557c58 cxxbridge1$string$len + 117032
+4   chromedriver                        0x0000000102559f80 cxxbridge1$string$len + 126032
+5   chromedriver                        0x00000001025db3c4 cxxbridge1$string$len + 655508
+6   chromedriver                        0x00000001025da5f8 cxxbridge1$string$len + 651976
+7   chromedriver                        0x000000010258d2fc cxxbridge1$string$len + 335820
+8   chromedriver                        0x00000001029cc6c4 cxxbridge1$str$ptr + 2549544
+9   chromedriver                        0x00000001029cf988 cxxbridge1$str$ptr + 2562540
+10  chromedriver                        0x00000001029ac71c cxxbridge1$str$ptr + 2418560
+11  chromedriver                        0x00000001029d01e8 cxxbridge1$str$ptr + 2564684
+12  chromedriver                        0x000000010299d750 cxxbridge1$str$ptr + 2357172
+13  chromedriver                        0x00000001029eff58 cxxbridge1$str$ptr + 2695100
+14  chromedriver                        0x00000001029f00e0 cxxbridge1$str$ptr + 2695492
+15  chromedriver                        0x00000001029ff910 cxxbridge1$str$ptr + 2759028
+16  libsystem_pthread.dylib             0x0000000187e23fa8 _pthread_start + 148
+17  libsystem_pthread.dylib             0x0000000187e1eda0 thread_start + 8
+
+2025-04-07 06:11:17,971 - WDM - INFO - ====== WebDriver manager ======
+2025-04-07 06:11:18,060 - WDM - INFO - Get LATEST chromedriver version for google-chrome
+2025-04-07 06:11:18,108 - WDM - INFO - Get LATEST chromedriver version for google-chrome
+2025-04-07 06:11:18,145 - WDM - INFO - Driver [/Users/hk/.wdm/drivers/chromedriver/mac64/134.0.6998.165/chromedriver-mac-arm64/chromedriver] found in cache
+2025-04-07 06:11:18,952 - __main__ - INFO - Chrome WebDriver initialized successfully
+2025-04-07 06:11:18,952 - __main__ - INFO - Navigating to https://topstartups.io/?hq_location=San+Francisco+Bay+Area&sort=funding
+2025-04-07 06:11:25,026 - __main__ - INFO - Loading all startups...
+2025-04-07 06:11:25,031 - __main__ - INFO - Scrolled to bottom (attempt 1)
+2025-04-07 06:11:28,054 - __main__ - INFO - Found 'Show more' element using text search
+2025-04-07 06:11:29,099 - __main__ - INFO - Clicked button using standard click
+2025-04-07 06:11:32,104 - __main__ - INFO - New content loaded, height changed from 13350 to 24679
+2025-04-07 06:11:32,107 - __main__ - INFO - Scrolled to bottom (attempt 2)
+2025-04-07 06:11:35,135 - __main__ - INFO - Found 'Show more' element using text search
+2025-04-07 06:11:36,145 - __main__ - WARNING - Failed to click button with all methods
+2025-04-07 06:11:39,153 - __main__ - INFO - New content loaded, height changed from 24679 to 140993
+2025-04-07 06:11:39,156 - __main__ - INFO - Scrolled to bottom (attempt 3)
+2025-04-07 06:11:42,181 - __main__ - INFO - Found 'Show more' element using text search
+2025-04-07 06:11:43,195 - __main__ - WARNING - Failed to click button with all methods
+2025-04-07 06:11:46,204 - __main__ - INFO - New content loaded, height changed from 140993 to 234826
+2025-04-07 06:11:46,207 - __main__ - INFO - Scrolled to bottom (attempt 4)
+2025-04-07 06:11:49,236 - __main__ - INFO - Found 'Show more' element using text search
+2025-04-07 06:11:50,252 - __main__ - WARNING - Failed to click button with all methods
+2025-04-07 06:11:53,260 - __main__ - INFO - New content loaded, height changed from 234826 to 339471
+2025-04-07 06:11:53,263 - __main__ - INFO - Scrolled to bottom (attempt 5)
+2025-04-07 06:12:16,811 - __main__ - WARNING - Could not find 'Show more' button using any method
+2025-04-07 06:12:16,814 - __main__ - INFO - New content loaded, height changed from 339471 to 354332
+2025-04-07 06:12:16,902 - __main__ - INFO - Scrolled to bottom (attempt 6)
+2025-04-07 06:12:40,970 - __main__ - WARNING - Could not find 'Show more' button using any method
+2025-04-07 06:12:40,973 - __main__ - INFO - No new content detected, stopping scroll
+2025-04-07 06:12:41,060 - __main__ - INFO - Extracting startup data...
+2025-04-07 06:12:41,089 - __main__ - INFO - Found 577 startup cards using selector: div[class*='card']
+2025-04-07 06:12:41,089 - __main__ - INFO - Found 577 startup cards total
+2025-04-07 06:12:41,650 - __main__ - INFO - Extracted 10/577 startups
+2025-04-07 06:12:42,041 - __main__ - INFO - Extracted 20/577 startups
+2025-04-07 06:12:42,398 - __main__ - INFO - Extracted 30/577 startups
+2025-04-07 06:12:42,746 - __main__ - INFO - Extracted 40/577 startups
+2025-04-07 06:12:43,088 - __main__ - INFO - Extracted 50/577 startups
+2025-04-07 06:12:43,442 - __main__ - INFO - Extracted 60/577 startups
+2025-04-07 06:12:43,786 - __main__ - INFO - Extracted 70/577 startups
+2025-04-07 06:12:44,127 - __main__ - INFO - Extracted 80/577 startups
+2025-04-07 06:12:44,479 - __main__ - INFO - Extracted 90/577 startups
+2025-04-07 06:12:44,822 - __main__ - INFO - Extracted 100/577 startups
+2025-04-07 06:12:45,169 - __main__ - INFO - Extracted 110/577 startups
+2025-04-07 06:12:45,523 - __main__ - INFO - Extracted 120/577 startups
+2025-04-07 06:12:45,874 - __main__ - INFO - Extracted 130/577 startups
+2025-04-07 06:12:46,213 - __main__ - INFO - Extracted 140/577 startups
+2025-04-07 06:12:46,587 - __main__ - INFO - Extracted 150/577 startups
+2025-04-07 06:12:46,923 - __main__ - INFO - Extracted 160/577 startups
+2025-04-07 06:12:47,272 - __main__ - INFO - Extracted 170/577 startups
+2025-04-07 06:12:47,614 - __main__ - INFO - Extracted 180/577 startups
+2025-04-07 06:12:48,139 - __main__ - INFO - Extracted 190/577 startups
+2025-04-07 06:12:48,502 - __main__ - INFO - Extracted 200/577 startups
+2025-04-07 06:12:48,851 - __main__ - INFO - Extracted 210/577 startups
+2025-04-07 06:12:49,207 - __main__ - INFO - Extracted 220/577 startups
+2025-04-07 06:12:49,552 - __main__ - INFO - Extracted 230/577 startups
+2025-04-07 06:12:49,914 - __main__ - INFO - Extracted 240/577 startups
+2025-04-07 06:12:50,253 - __main__ - INFO - Extracted 250/577 startups
+2025-04-07 06:12:50,611 - __main__ - INFO - Extracted 260/577 startups
+2025-04-07 06:12:50,952 - __main__ - INFO - Extracted 270/577 startups
+2025-04-07 06:12:51,309 - __main__ - INFO - Extracted 280/577 startups
+2025-04-07 06:12:51,650 - __main__ - INFO - Extracted 290/577 startups
+2025-04-07 06:12:52,005 - __main__ - INFO - Extracted 300/577 startups
+2025-04-07 06:12:52,347 - __main__ - INFO - Extracted 310/577 startups
+2025-04-07 06:12:52,700 - __main__ - INFO - Extracted 320/577 startups
+2025-04-07 06:12:53,046 - __main__ - INFO - Extracted 330/577 startups
+2025-04-07 06:12:53,388 - __main__ - INFO - Extracted 340/577 startups
+2025-04-07 06:12:53,732 - __main__ - INFO - Extracted 350/577 startups
+2025-04-07 06:12:54,079 - __main__ - INFO - Extracted 360/577 startups
+2025-04-07 06:12:54,457 - __main__ - INFO - Extracted 370/577 startups
+2025-04-07 06:12:54,799 - __main__ - INFO - Extracted 380/577 startups
+2025-04-07 06:12:55,142 - __main__ - INFO - Extracted 390/577 startups
+2025-04-07 06:12:55,493 - __main__ - INFO - Extracted 400/577 startups
+2025-04-07 06:12:55,845 - __main__ - INFO - Extracted 410/577 startups
+2025-04-07 06:12:56,191 - __main__ - INFO - Extracted 420/577 startups
+2025-04-07 06:12:56,537 - __main__ - INFO - Extracted 430/577 startups
+2025-04-07 06:12:56,884 - __main__ - INFO - Extracted 440/577 startups
+2025-04-07 06:12:57,233 - __main__ - INFO - Extracted 450/577 startups
+2025-04-07 06:12:57,583 - __main__ - INFO - Extracted 460/577 startups
+2025-04-07 06:12:57,928 - __main__ - INFO - Extracted 470/577 startups
+2025-04-07 06:12:58,268 - __main__ - INFO - Extracted 480/577 startups
+2025-04-07 06:12:58,620 - __main__ - INFO - Extracted 490/577 startups
+2025-04-07 06:12:58,959 - __main__ - INFO - Extracted 500/577 startups
+2025-04-07 06:12:59,312 - __main__ - INFO - Extracted 510/577 startups
+2025-04-07 06:12:59,669 - __main__ - INFO - Extracted 520/577 startups
+2025-04-07 06:13:00,050 - __main__ - INFO - Extracted 530/577 startups
+2025-04-07 06:13:00,406 - __main__ - INFO - Extracted 540/577 startups
+2025-04-07 06:13:00,766 - __main__ - INFO - Extracted 550/577 startups
+2025-04-07 06:13:01,120 - __main__ - INFO - Extracted 560/577 startups
+2025-04-07 06:13:01,469 - __main__ - INFO - Extracted 570/577 startups
+2025-04-07 06:13:01,711 - __main__ - INFO - Saving data for 577 startups...
+2025-04-07 06:13:01,714 - __main__ - INFO - Data saved to data/json/bay_area_startups_20250407_061301.json
+2025-04-07 06:13:01,725 - __main__ - INFO - Data saved to data/csv/bay_area_startups_20250407_061301.csv
+2025-04-07 06:13:01,725 - __main__ - INFO - Scraping completed successfully
+2025-04-07 06:14:46,013 - WDM - INFO - ====== WebDriver manager ======
+2025-04-07 06:14:46,154 - WDM - INFO - Get LATEST chromedriver version for google-chrome
+2025-04-07 06:14:46,194 - WDM - INFO - Get LATEST chromedriver version for google-chrome
+2025-04-07 06:14:46,228 - WDM - INFO - Driver [/Users/hk/.wdm/drivers/chromedriver/mac64/134.0.6998.165/chromedriver-mac-arm64/chromedriver] found in cache
+2025-04-07 06:14:47,850 - __main__ - INFO - Chrome WebDriver initialized successfully
+2025-04-07 06:14:47,850 - __main__ - INFO - Navigating to https://topstartups.io/?hq_location=San+Francisco+Bay+Area&sort=funding
+2025-04-07 06:14:53,958 - __main__ - INFO - Loading all startups...
+2025-04-07 06:14:53,964 - __main__ - INFO - Scrolled to bottom (attempt 1)
+2025-04-07 06:14:56,999 - __main__ - INFO - Found 'Show more' element using text search
+2025-04-07 06:14:58,044 - __main__ - INFO - Clicked button using standard click
+2025-04-07 06:15:01,051 - __main__ - INFO - New content loaded, height changed from 13374 to 25017
+2025-04-07 06:15:01,054 - __main__ - INFO - Scrolled to bottom (attempt 2)
+2025-04-07 06:15:04,080 - __main__ - INFO - Found 'Show more' element using text search
+2025-04-07 06:15:05,093 - __main__ - WARNING - Failed to click button with all methods
+2025-04-07 06:15:08,101 - __main__ - INFO - New content loaded, height changed from 25017 to 131196
+2025-04-07 06:15:08,104 - __main__ - INFO - Scrolled to bottom (attempt 3)
+2025-04-07 06:15:11,124 - __main__ - INFO - Found 'Show more' element using text search
+2025-04-07 06:15:12,138 - __main__ - WARNING - Failed to click button with all methods
+2025-04-07 06:15:15,146 - __main__ - INFO - New content loaded, height changed from 131196 to 249490
+2025-04-07 06:15:15,149 - __main__ - INFO - Scrolled to bottom (attempt 4)
+2025-04-07 06:15:18,179 - __main__ - INFO - Found 'Show more' element using text search
+2025-04-07 06:15:19,193 - __main__ - WARNING - Failed to click button with all methods
+2025-04-07 06:15:22,200 - __main__ - INFO - New content loaded, height changed from 249490 to 358781
+2025-04-07 06:15:22,203 - __main__ - INFO - Scrolled to bottom (attempt 5)
+2025-04-07 06:15:46,400 - __main__ - WARNING - Could not find 'Show more' button using any method
+2025-04-07 06:15:46,403 - __main__ - INFO - No new content detected, stopping scroll
+2025-04-07 06:15:46,467 - __main__ - INFO - Extracting startup data...
+2025-04-07 06:15:46,499 - __main__ - INFO - Found 577 startup cards using selector: div[class*='card']
+2025-04-07 06:15:46,499 - __main__ - INFO - Found 577 startup cards total
+2025-04-07 06:15:47,053 - __main__ - INFO - Extracted 10/577 startups
+2025-04-07 06:15:47,450 - __main__ - INFO - Extracted 20/577 startups
+2025-04-07 06:15:47,824 - __main__ - INFO - Extracted 30/577 startups
+2025-04-07 06:15:48,173 - __main__ - INFO - Extracted 40/577 startups
+2025-04-07 06:15:48,529 - __main__ - INFO - Extracted 50/577 startups
+2025-04-07 06:15:48,889 - __main__ - INFO - Extracted 60/577 startups
+2025-04-07 06:15:49,238 - __main__ - INFO - Extracted 70/577 startups
+2025-04-07 06:15:49,587 - __main__ - INFO - Extracted 80/577 startups
+2025-04-07 06:15:49,945 - __main__ - INFO - Extracted 90/577 startups
+2025-04-07 06:15:50,305 - __main__ - INFO - Extracted 100/577 startups
+2025-04-07 06:15:50,654 - __main__ - INFO - Extracted 110/577 startups
+2025-04-07 06:15:50,995 - __main__ - INFO - Extracted 120/577 startups
+2025-04-07 06:15:51,339 - __main__ - INFO - Extracted 130/577 startups
+2025-04-07 06:15:51,677 - __main__ - INFO - Extracted 140/577 startups
+2025-04-07 06:15:52,029 - __main__ - INFO - Extracted 150/577 startups
+2025-04-07 06:15:52,368 - __main__ - INFO - Extracted 160/577 startups
+2025-04-07 06:15:52,723 - __main__ - INFO - Extracted 170/577 startups
+2025-04-07 06:15:53,062 - __main__ - INFO - Extracted 180/577 startups
+2025-04-07 06:15:53,407 - __main__ - INFO - Extracted 190/577 startups
+2025-04-07 06:15:53,759 - __main__ - INFO - Extracted 200/577 startups
+2025-04-07 06:15:54,098 - __main__ - INFO - Extracted 210/577 startups
+2025-04-07 06:15:54,449 - __main__ - INFO - Extracted 220/577 startups
+2025-04-07 06:15:54,793 - __main__ - INFO - Extracted 230/577 startups
+2025-04-07 06:15:55,141 - __main__ - INFO - Extracted 240/577 startups
+2025-04-07 06:15:55,484 - __main__ - INFO - Extracted 250/577 startups
+2025-04-07 06:15:55,832 - __main__ - INFO - Extracted 260/577 startups
+2025-04-07 06:15:56,173 - __main__ - INFO - Extracted 270/577 startups
+2025-04-07 06:15:56,522 - __main__ - INFO - Extracted 280/577 startups
+2025-04-07 06:15:56,862 - __main__ - INFO - Extracted 290/577 startups
+2025-04-07 06:15:57,227 - __main__ - INFO - Extracted 300/577 startups
+2025-04-07 06:15:57,568 - __main__ - INFO - Extracted 310/577 startups
+2025-04-07 06:15:57,916 - __main__ - INFO - Extracted 320/577 startups
+2025-04-07 06:15:58,324 - __main__ - INFO - Extracted 330/577 startups
+2025-04-07 06:15:58,672 - __main__ - INFO - Extracted 340/577 startups
+2025-04-07 06:15:59,016 - __main__ - INFO - Extracted 350/577 startups
+2025-04-07 06:15:59,363 - __main__ - INFO - Extracted 360/577 startups
+2025-04-07 06:15:59,701 - __main__ - INFO - Extracted 370/577 startups
+2025-04-07 06:16:00,050 - __main__ - INFO - Extracted 380/577 startups
+2025-04-07 06:16:00,391 - __main__ - INFO - Extracted 390/577 startups
+2025-04-07 06:16:00,739 - __main__ - INFO - Extracted 400/577 startups
+2025-04-07 06:16:01,084 - __main__ - INFO - Extracted 410/577 startups
+2025-04-07 06:16:01,435 - __main__ - INFO - Extracted 420/577 startups
+2025-04-07 06:16:01,783 - __main__ - INFO - Extracted 430/577 startups
+2025-04-07 06:16:02,140 - __main__ - INFO - Extracted 440/577 startups
+2025-04-07 06:16:02,484 - __main__ - INFO - Extracted 450/577 startups
+2025-04-07 06:16:02,820 - __main__ - INFO - Extracted 460/577 startups
+2025-04-07 06:16:03,170 - __main__ - INFO - Extracted 470/577 startups
+2025-04-07 06:16:03,510 - __main__ - INFO - Extracted 480/577 startups
+2025-04-07 06:16:03,865 - __main__ - INFO - Extracted 490/577 startups
+2025-04-07 06:16:04,205 - __main__ - INFO - Extracted 500/577 startups
+2025-04-07 06:16:04,558 - __main__ - INFO - Extracted 510/577 startups
+2025-04-07 06:16:04,898 - __main__ - INFO - Extracted 520/577 startups
+2025-04-07 06:16:05,250 - __main__ - INFO - Extracted 530/577 startups
+2025-04-07 06:16:05,596 - __main__ - INFO - Extracted 540/577 startups
+2025-04-07 06:16:05,941 - __main__ - INFO - Extracted 550/577 startups
+2025-04-07 06:16:06,299 - __main__ - INFO - Extracted 560/577 startups
+2025-04-07 06:16:06,645 - __main__ - INFO - Extracted 570/577 startups
+2025-04-07 06:16:06,876 - __main__ - INFO - Saving data for 577 startups...
+2025-04-07 06:16:06,879 - __main__ - INFO - Data saved to topstartio/json/bay_area_startups_20250407_061606.json
+2025-04-07 06:16:06,892 - __main__ - INFO - Data saved to topstartio/csv/bay_area_startups_20250407_061606.csv
+2025-04-07 06:16:06,892 - __main__ - INFO - Scraping completed successfully
+2025-04-07 06:23:34,541 - __main__ - INFO - Running initial data collection
+2025-04-07 06:23:34,542 - WDM - INFO - ====== WebDriver manager ======
+2025-04-07 06:23:34,903 - WDM - INFO - Get LATEST chromedriver version for google-chrome
+2025-04-07 06:23:34,995 - WDM - INFO - Get LATEST chromedriver version for google-chrome
+2025-04-07 06:23:35,039 - WDM - INFO - Driver [/Users/hk/.wdm/drivers/chromedriver/mac64/134.0.6998.165/chromedriver-mac-arm64/chromedriver] found in cache
+2025-04-07 06:23:38,508 - __main__ - INFO - Chrome WebDriver initialized successfully
+2025-04-07 06:23:38,509 - __main__ - INFO - Navigating to https://topstartups.io/?hq_location=San+Francisco+Bay+Area&sort=funding
+2025-04-07 06:23:45,190 - __main__ - INFO - Stored new content hash: 4cf6b79826...
+2025-04-07 06:23:45,191 - __main__ - INFO - Loading all startups...
+2025-04-07 06:23:45,202 - __main__ - INFO - Scrolled to bottom (attempt 1)
+2025-04-07 06:23:48,263 - __main__ - INFO - Found 'Show more' element using text search
+2025-04-07 06:23:49,355 - __main__ - INFO - Clicked button using standard click
+2025-04-07 06:23:52,378 - __main__ - INFO - New content loaded, height changed from 13317 to 24647
+2025-04-07 06:23:52,382 - __main__ - INFO - Scrolled to bottom (attempt 2)
+2025-04-07 06:23:55,420 - __main__ - INFO - Found 'Show more' element using text search
+2025-04-07 06:23:56,442 - __main__ - WARNING - Failed to click button with all methods
+2025-04-07 06:23:59,453 - __main__ - INFO - New content loaded, height changed from 24647 to 129126
+2025-04-07 06:23:59,455 - __main__ - INFO - Scrolled to bottom (attempt 3)
+2025-04-07 06:24:02,480 - __main__ - INFO - Found 'Show more' element using text search
+2025-04-07 06:24:03,493 - __main__ - WARNING - Failed to click button with all methods
+2025-04-07 06:24:06,503 - __main__ - INFO - New content loaded, height changed from 129126 to 210819
+2025-04-07 06:24:06,505 - __main__ - INFO - Scrolled to bottom (attempt 4)
+2025-04-07 06:24:09,532 - __main__ - INFO - Found 'Show more' element using text search
+2025-04-07 06:24:10,545 - __main__ - WARNING - Failed to click button with all methods
+2025-04-07 06:24:13,557 - __main__ - INFO - New content loaded, height changed from 210819 to 315841
+2025-04-07 06:24:13,559 - __main__ - INFO - Scrolled to bottom (attempt 5)
+2025-04-07 06:24:16,638 - __main__ - WARNING - Could not find 'Show more' button using any method
+2025-04-07 06:24:16,640 - __main__ - INFO - New content loaded, height changed from 315841 to 353737
+2025-04-07 06:24:16,642 - __main__ - INFO - Scrolled to bottom (attempt 6)
+2025-04-07 06:24:19,714 - __main__ - WARNING - Could not find 'Show more' button using any method
+2025-04-07 06:24:19,716 - __main__ - INFO - No new content detected, stopping scroll
+2025-04-07 06:24:19,717 - __main__ - INFO - Extracting startup data...
+2025-04-07 06:24:19,745 - __main__ - INFO - Found 577 startup cards using selector: div[class*='card']
+2025-04-07 06:24:19,745 - __main__ - INFO - Found 577 startup cards total
+2025-04-07 06:24:20,091 - __main__ - INFO - Extracted 10/577 startups
+2025-04-07 06:24:20,432 - __main__ - INFO - Extracted 20/577 startups
+2025-04-07 06:24:20,763 - __main__ - INFO - Extracted 30/577 startups
+2025-04-07 06:24:21,093 - __main__ - INFO - Extracted 40/577 startups
+2025-04-07 06:24:21,712 - __main__ - INFO - Extracted 50/577 startups
+2025-04-07 06:24:22,033 - __main__ - INFO - Extracted 60/577 startups
+2025-04-07 06:24:22,377 - __main__ - INFO - Extracted 70/577 startups
+2025-04-07 06:24:22,712 - __main__ - INFO - Extracted 80/577 startups
+2025-04-07 06:24:23,094 - __main__ - INFO - Extracted 90/577 startups
+2025-04-07 06:24:23,460 - __main__ - INFO - Extracted 100/577 startups
+2025-04-07 06:24:23,852 - __main__ - INFO - Extracted 110/577 startups
+2025-04-07 06:24:24,204 - __main__ - INFO - Extracted 120/577 startups
+2025-04-07 06:24:24,565 - __main__ - INFO - Extracted 130/577 startups
+2025-04-07 06:24:24,886 - __main__ - INFO - Extracted 140/577 startups
+2025-04-07 06:24:25,216 - __main__ - INFO - Extracted 150/577 startups
+2025-04-07 06:24:25,565 - __main__ - INFO - Extracted 160/577 startups
+2025-04-07 06:24:25,910 - __main__ - INFO - Extracted 170/577 startups
+2025-04-07 06:24:26,246 - __main__ - INFO - Extracted 180/577 startups
+2025-04-07 06:24:26,583 - __main__ - INFO - Extracted 190/577 startups
+2025-04-07 06:24:26,906 - __main__ - INFO - Extracted 200/577 startups
+2025-04-07 06:24:27,222 - __main__ - INFO - Extracted 210/577 startups
+2025-04-07 06:24:27,553 - __main__ - INFO - Extracted 220/577 startups
+2025-04-07 06:24:27,875 - __main__ - INFO - Extracted 230/577 startups
+2025-04-07 06:24:28,224 - __main__ - INFO - Extracted 240/577 startups
+2025-04-07 06:24:28,561 - __main__ - INFO - Extracted 250/577 startups
+2025-04-07 06:24:28,899 - __main__ - INFO - Extracted 260/577 startups
+2025-04-07 06:24:29,222 - __main__ - INFO - Extracted 270/577 startups
+2025-04-07 06:24:29,551 - __main__ - INFO - Extracted 280/577 startups
+2025-04-07 06:24:29,930 - __main__ - INFO - Extracted 290/577 startups
+2025-04-07 06:24:30,255 - __main__ - INFO - Extracted 300/577 startups
+2025-04-07 06:24:30,588 - __main__ - INFO - Extracted 310/577 startups
+2025-04-07 06:24:30,921 - __main__ - INFO - Extracted 320/577 startups
+2025-04-07 06:24:31,238 - __main__ - INFO - Extracted 330/577 startups
+2025-04-07 06:24:31,782 - __main__ - INFO - Extracted 340/577 startups
+2025-04-07 06:24:32,347 - __main__ - INFO - Extracted 350/577 startups
+2025-04-07 06:24:32,707 - __main__ - INFO - Extracted 360/577 startups
+2025-04-07 06:24:33,040 - __main__ - INFO - Extracted 370/577 startups
+2025-04-07 06:24:33,566 - __main__ - INFO - Extracted 380/577 startups
+2025-04-07 06:24:33,995 - __main__ - INFO - Extracted 390/577 startups
+2025-04-07 06:24:34,345 - __main__ - INFO - Extracted 400/577 startups
+2025-04-07 06:24:34,696 - __main__ - INFO - Extracted 410/577 startups
+2025-04-07 06:24:35,032 - __main__ - INFO - Extracted 420/577 startups
+2025-04-07 06:24:35,365 - __main__ - INFO - Extracted 430/577 startups
+2025-04-07 06:24:35,685 - __main__ - INFO - Extracted 440/577 startups
+2025-04-07 06:24:36,018 - __main__ - INFO - Extracted 450/577 startups
+2025-04-07 06:24:36,346 - __main__ - INFO - Extracted 460/577 startups
+2025-04-07 06:24:36,678 - __main__ - INFO - Extracted 470/577 startups
+2025-04-07 06:24:36,999 - __main__ - INFO - Extracted 480/577 startups
+2025-04-07 06:24:37,331 - __main__ - INFO - Extracted 490/577 startups
+2025-04-07 06:24:37,723 - __main__ - INFO - Extracted 500/577 startups
+2025-04-07 06:24:38,073 - __main__ - INFO - Extracted 510/577 startups
+2025-04-07 06:24:38,453 - __main__ - INFO - Extracted 520/577 startups
+2025-04-07 06:24:38,810 - __main__ - INFO - Extracted 530/577 startups
+2025-04-07 06:24:39,170 - __main__ - INFO - Extracted 540/577 startups
+2025-04-07 06:24:39,524 - __main__ - INFO - Extracted 550/577 startups
+2025-04-07 06:24:39,867 - __main__ - INFO - Extracted 560/577 startups
+2025-04-07 06:24:40,207 - __main__ - INFO - Extracted 570/577 startups
+2025-04-07 06:24:40,435 - __main__ - INFO - Saving data for 577 startups...
+2025-04-07 06:24:40,440 - __main__ - INFO - Data saved to topstartups_io/json/bay_area_startups_20250407_062440.json
+2025-04-07 06:24:40,498 - __main__ - INFO - Data saved to topstartups_io/csv/bay_area_startups_20250407_062440.csv
+2025-04-07 06:24:40,611 - __main__ - INFO - Initial scraping completed successfully
+2025-04-07 06:24:40,627 - apscheduler.scheduler - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-04-07 06:24:40,629 - apscheduler.scheduler - INFO - Added job "check_for_updates" to job store "default"
+2025-04-07 06:24:40,629 - apscheduler.scheduler - INFO - Scheduler started
+2025-04-07 06:24:40,630 - __main__ - INFO - Scheduler started - checking for updates every 24 hours
+2025-04-07 06:24:40,630 - __main__ - INFO - Monitoring for updates. Press Ctrl+C to exit.
+2025-04-07 06:36:30,540 - WDM - INFO - ====== WebDriver manager ======
+2025-04-07 06:36:30,691 - WDM - INFO - Get LATEST chromedriver version for google-chrome
+2025-04-07 06:36:30,745 - WDM - INFO - Get LATEST chromedriver version for google-chrome
+2025-04-07 06:36:30,779 - WDM - INFO - Driver [/Users/hk/.wdm/drivers/chromedriver/mac64/134.0.6998.165/chromedriver-mac-arm64/chromedriver] found in cache
+2025-04-07 06:36:33,122 - __main__ - INFO - Chrome WebDriver initialized successfully
+2025-04-07 06:36:39,261 - __main__ - INFO - Scrolled to bottom (attempt 1)
+2025-04-07 06:36:42,283 - __main__ - INFO - Found 0 startup cards
+2025-04-07 06:36:42,303 - __main__ - INFO - Saved 0 records to Topstartup_io_realtime/json/bay_area_startups_20250407_063642.json and Topstartup_io_realtime/csv/bay_area_startups_20250407_063642.csv
+2025-04-07 06:36:42,421 - apscheduler.scheduler - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-04-07 06:36:42,422 - apscheduler.scheduler - INFO - Added job "check_for_updates" to job store "default"
+2025-04-07 06:36:42,422 - apscheduler.scheduler - INFO - Scheduler started
+2025-04-07 06:36:42,422 - __main__ - INFO - Monitoring started. Checking every 6 hours.
+2025-04-07 06:40:53,323 - WDM - INFO - ====== WebDriver manager ======
+2025-04-07 06:40:53,461 - WDM - INFO - Get LATEST chromedriver version for google-chrome
+2025-04-07 06:40:53,515 - WDM - INFO - Get LATEST chromedriver version for google-chrome
+2025-04-07 06:40:53,550 - WDM - INFO - Driver [/Users/hk/.wdm/drivers/chromedriver/mac64/134.0.6998.165/chromedriver-mac-arm64/chromedriver] found in cache
+2025-04-07 06:40:55,064 - __main__ - INFO - Chrome WebDriver initialized successfully
+2025-04-07 06:41:01,174 - __main__ - INFO - Scrolled to bottom (attempt 1)
+2025-04-07 06:41:04,194 - __main__ - INFO - No new content detected
+2025-04-07 06:41:04,197 - __main__ - INFO - Found 0 startup cards
+2025-04-07 06:41:04,223 - __main__ - INFO - Saved 0 records to Topstartup_io_realtime/json/bay_area_startups_20250407_064104.json and Topstartup_io_realtime/csv/bay_area_startups_20250407_064104.csv
+2025-04-07 06:41:04,326 - apscheduler.scheduler - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-04-07 06:41:04,327 - apscheduler.scheduler - INFO - Added job "check_for_updates" to job store "default"
+2025-04-07 06:41:04,327 - apscheduler.scheduler - INFO - Scheduler started
+2025-04-07 06:41:04,328 - __main__ - INFO - Monitoring started. Checking every 6 hours.
+2025-04-07 06:51:08,028 - __main__ - INFO - Running initial data collection
+2025-04-07 06:51:08,029 - WDM - INFO - ====== WebDriver manager ======
+2025-04-07 06:51:08,179 - WDM - INFO - Get LATEST chromedriver version for google-chrome
+2025-04-07 06:51:08,243 - WDM - INFO - Get LATEST chromedriver version for google-chrome
+2025-04-07 06:51:08,277 - WDM - INFO - Driver [/Users/hk/.wdm/drivers/chromedriver/mac64/134.0.6998.165/chromedriver-mac-arm64/chromedriver] found in cache
+2025-04-07 06:51:09,989 - __main__ - INFO - Chrome WebDriver initialized successfully
+2025-04-07 06:51:09,989 - __main__ - INFO - Navigating to https://topstartups.io/?hq_location=San+Francisco+Bay+Area&sort=funding
+2025-04-07 06:51:16,095 - __main__ - INFO - Stored new content hash: 4cf6b79826...
+2025-04-07 06:51:16,095 - __main__ - INFO - Loading all startups...
+2025-04-07 06:51:16,100 - __main__ - INFO - Scrolled to bottom (attempt 1)
+2025-04-07 06:51:19,130 - __main__ - INFO - Found 'Show more' element using text search
+2025-04-07 06:51:20,176 - __main__ - INFO - Clicked button using standard click
+2025-04-07 06:51:23,184 - __main__ - INFO - New content loaded, height changed from 5236 to 9487
+2025-04-07 06:51:23,186 - __main__ - INFO - Scrolled to bottom (attempt 2)
+2025-04-07 06:51:26,211 - __main__ - INFO - Found 'Show more' element using text search
+2025-04-07 06:51:27,226 - __main__ - WARNING - Failed to click button with all methods
+2025-04-07 06:51:30,235 - __main__ - INFO - New content loaded, height changed from 9487 to 17890
+2025-04-07 06:51:30,237 - __main__ - INFO - Scrolled to bottom (attempt 3)
+2025-04-07 06:51:33,278 - __main__ - INFO - Found 'Show more' element using text search
+2025-04-07 06:51:34,301 - __main__ - WARNING - Failed to click button with all methods
+2025-04-07 06:51:37,310 - __main__ - INFO - New content loaded, height changed from 17890 to 71278
+2025-04-07 06:51:37,314 - __main__ - INFO - Scrolled to bottom (attempt 4)
+2025-04-07 06:51:40,336 - __main__ - INFO - Found 'Show more' element using text search
+2025-04-07 06:51:41,391 - __main__ - WARNING - Failed to click button with all methods
+2025-04-07 06:51:44,399 - __main__ - INFO - New content loaded, height changed from 71278 to 164156
+2025-04-07 06:51:44,401 - __main__ - INFO - Scrolled to bottom (attempt 5)
+2025-04-07 06:51:47,430 - __main__ - INFO - Found 'Show more' element using text search
+2025-04-07 06:51:48,439 - __main__ - WARNING - Failed to click button with all methods
+2025-04-07 06:51:51,450 - __main__ - INFO - New content loaded, height changed from 164156 to 281393
+2025-04-07 06:51:51,454 - __main__ - INFO - Scrolled to bottom (attempt 6)
+2025-04-07 06:51:54,596 - __main__ - WARNING - Could not find 'Show more' button using any method
+2025-04-07 06:51:54,599 - __main__ - INFO - New content loaded, height changed from 281393 to 354332
+2025-04-07 06:51:54,601 - __main__ - INFO - Scrolled to bottom (attempt 7)
+2025-04-07 06:51:57,710 - __main__ - WARNING - Could not find 'Show more' button using any method
+2025-04-07 06:51:57,712 - __main__ - INFO - No new content detected, stopping scroll
+2025-04-07 06:51:57,713 - __main__ - INFO - Extracting startup data...
+2025-04-07 06:51:57,810 - __main__ - INFO - Found 577 startup cards using selector: div[class*='card']
+2025-04-07 06:51:57,810 - __main__ - INFO - Found 577 startup cards total
+2025-04-07 06:51:58,034 - __main__ - WARNING - Error extracting data from card 1: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:51:58,140 - __main__ - WARNING - Error extracting data from card 2: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:51:58,206 - __main__ - WARNING - Error extracting data from card 3: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:51:58,269 - __main__ - WARNING - Error extracting data from card 4: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:51:58,337 - __main__ - WARNING - Error extracting data from card 5: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:51:58,378 - __main__ - WARNING - Error extracting data from card 6: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:51:58,424 - __main__ - WARNING - Error extracting data from card 7: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:51:58,494 - __main__ - WARNING - Error extracting data from card 8: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:51:58,582 - __main__ - WARNING - Error extracting data from card 9: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:51:58,634 - __main__ - WARNING - Error extracting data from card 10: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:51:58,690 - __main__ - WARNING - Error extracting data from card 11: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:51:58,743 - __main__ - WARNING - Error extracting data from card 12: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:51:58,785 - __main__ - WARNING - Error extracting data from card 13: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:51:58,846 - __main__ - WARNING - Error extracting data from card 14: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:51:58,895 - __main__ - WARNING - Error extracting data from card 15: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:51:58,947 - __main__ - WARNING - Error extracting data from card 16: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:51:58,990 - __main__ - WARNING - Error extracting data from card 17: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:51:59,029 - __main__ - WARNING - Error extracting data from card 18: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:51:59,077 - __main__ - WARNING - Error extracting data from card 19: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:51:59,109 - __main__ - WARNING - Error extracting data from card 20: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:51:59,149 - __main__ - WARNING - Error extracting data from card 21: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:51:59,189 - __main__ - WARNING - Error extracting data from card 22: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:51:59,227 - __main__ - WARNING - Error extracting data from card 23: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:51:59,263 - __main__ - WARNING - Error extracting data from card 24: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:51:59,304 - __main__ - WARNING - Error extracting data from card 25: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:51:59,346 - __main__ - WARNING - Error extracting data from card 26: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:51:59,392 - __main__ - WARNING - Error extracting data from card 27: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:51:59,430 - __main__ - WARNING - Error extracting data from card 28: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:51:59,470 - __main__ - WARNING - Error extracting data from card 29: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:51:59,511 - __main__ - WARNING - Error extracting data from card 30: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:51:59,561 - __main__ - WARNING - Error extracting data from card 31: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:51:59,614 - __main__ - WARNING - Error extracting data from card 32: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:51:59,663 - __main__ - WARNING - Error extracting data from card 33: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:51:59,704 - __main__ - WARNING - Error extracting data from card 34: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:51:59,745 - __main__ - WARNING - Error extracting data from card 35: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:51:59,787 - __main__ - WARNING - Error extracting data from card 36: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:51:59,827 - __main__ - WARNING - Error extracting data from card 37: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:51:59,881 - __main__ - WARNING - Error extracting data from card 38: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:51:59,915 - __main__ - WARNING - Error extracting data from card 39: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:51:59,955 - __main__ - WARNING - Error extracting data from card 40: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:51:59,993 - __main__ - WARNING - Error extracting data from card 41: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:00,035 - __main__ - WARNING - Error extracting data from card 42: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:00,077 - __main__ - WARNING - Error extracting data from card 43: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:00,116 - __main__ - WARNING - Error extracting data from card 44: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:00,155 - __main__ - WARNING - Error extracting data from card 45: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:00,197 - __main__ - WARNING - Error extracting data from card 46: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:00,237 - __main__ - WARNING - Error extracting data from card 47: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:00,278 - __main__ - WARNING - Error extracting data from card 48: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:00,316 - __main__ - WARNING - Error extracting data from card 49: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:00,366 - __main__ - WARNING - Error extracting data from card 50: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:00,405 - __main__ - WARNING - Error extracting data from card 51: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:00,441 - __main__ - WARNING - Error extracting data from card 52: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:00,478 - __main__ - WARNING - Error extracting data from card 53: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:00,515 - __main__ - WARNING - Error extracting data from card 54: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:00,566 - __main__ - WARNING - Error extracting data from card 55: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:00,602 - __main__ - WARNING - Error extracting data from card 56: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:00,641 - __main__ - WARNING - Error extracting data from card 57: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:00,673 - __main__ - WARNING - Error extracting data from card 58: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:00,710 - __main__ - WARNING - Error extracting data from card 59: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:00,745 - __main__ - WARNING - Error extracting data from card 60: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:00,781 - __main__ - WARNING - Error extracting data from card 61: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:00,844 - __main__ - WARNING - Error extracting data from card 62: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:00,885 - __main__ - WARNING - Error extracting data from card 63: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:00,922 - __main__ - WARNING - Error extracting data from card 64: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:00,962 - __main__ - WARNING - Error extracting data from card 65: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:00,999 - __main__ - WARNING - Error extracting data from card 66: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:01,041 - __main__ - WARNING - Error extracting data from card 67: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:01,082 - __main__ - WARNING - Error extracting data from card 68: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:01,121 - __main__ - WARNING - Error extracting data from card 69: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:01,160 - __main__ - WARNING - Error extracting data from card 70: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:01,201 - __main__ - WARNING - Error extracting data from card 71: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:01,248 - __main__ - WARNING - Error extracting data from card 72: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:01,288 - __main__ - WARNING - Error extracting data from card 73: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:01,326 - __main__ - WARNING - Error extracting data from card 74: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:01,363 - __main__ - WARNING - Error extracting data from card 75: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:01,404 - __main__ - WARNING - Error extracting data from card 76: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:01,436 - __main__ - WARNING - Error extracting data from card 77: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:01,480 - __main__ - WARNING - Error extracting data from card 78: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:01,529 - __main__ - WARNING - Error extracting data from card 79: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:01,583 - __main__ - WARNING - Error extracting data from card 80: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:01,624 - __main__ - WARNING - Error extracting data from card 81: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:01,664 - __main__ - WARNING - Error extracting data from card 82: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:01,761 - __main__ - WARNING - Error extracting data from card 83: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:01,799 - __main__ - WARNING - Error extracting data from card 84: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:01,870 - __main__ - WARNING - Error extracting data from card 85: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:01,919 - __main__ - WARNING - Error extracting data from card 86: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:02,018 - __main__ - WARNING - Error extracting data from card 87: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:02,054 - __main__ - WARNING - Error extracting data from card 88: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:02,103 - __main__ - WARNING - Error extracting data from card 89: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:02,165 - __main__ - WARNING - Error extracting data from card 90: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:02,260 - __main__ - WARNING - Error extracting data from card 91: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:02,323 - __main__ - WARNING - Error extracting data from card 92: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:02,365 - __main__ - WARNING - Error extracting data from card 93: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:02,409 - __main__ - WARNING - Error extracting data from card 94: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:02,455 - __main__ - WARNING - Error extracting data from card 95: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:02,496 - __main__ - WARNING - Error extracting data from card 96: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:02,536 - __main__ - WARNING - Error extracting data from card 97: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:02,640 - __main__ - WARNING - Error extracting data from card 98: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:02,678 - __main__ - WARNING - Error extracting data from card 99: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:02,719 - __main__ - WARNING - Error extracting data from card 100: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:02,759 - __main__ - WARNING - Error extracting data from card 101: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:02,797 - __main__ - WARNING - Error extracting data from card 102: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:02,834 - __main__ - WARNING - Error extracting data from card 103: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:02,875 - __main__ - WARNING - Error extracting data from card 104: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:02,916 - __main__ - WARNING - Error extracting data from card 105: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:02,955 - __main__ - WARNING - Error extracting data from card 106: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:02,991 - __main__ - WARNING - Error extracting data from card 107: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:03,029 - __main__ - WARNING - Error extracting data from card 108: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:03,069 - __main__ - WARNING - Error extracting data from card 109: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:03,107 - __main__ - WARNING - Error extracting data from card 110: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:03,149 - __main__ - WARNING - Error extracting data from card 111: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:03,205 - __main__ - WARNING - Error extracting data from card 112: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:03,242 - __main__ - WARNING - Error extracting data from card 113: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:03,282 - __main__ - WARNING - Error extracting data from card 114: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:03,318 - __main__ - WARNING - Error extracting data from card 115: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:03,368 - __main__ - WARNING - Error extracting data from card 116: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:03,414 - __main__ - WARNING - Error extracting data from card 117: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:03,455 - __main__ - WARNING - Error extracting data from card 118: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:03,494 - __main__ - WARNING - Error extracting data from card 119: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:03,532 - __main__ - WARNING - Error extracting data from card 120: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:03,585 - __main__ - WARNING - Error extracting data from card 121: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:03,625 - __main__ - WARNING - Error extracting data from card 122: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:03,661 - __main__ - WARNING - Error extracting data from card 123: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:03,698 - __main__ - WARNING - Error extracting data from card 124: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:03,735 - __main__ - WARNING - Error extracting data from card 125: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:03,868 - __main__ - WARNING - Error extracting data from card 126: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:04,163 - __main__ - WARNING - Error extracting data from card 127: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:04,205 - __main__ - WARNING - Error extracting data from card 128: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:04,244 - __main__ - WARNING - Error extracting data from card 129: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:04,286 - __main__ - WARNING - Error extracting data from card 130: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:04,322 - __main__ - WARNING - Error extracting data from card 131: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:04,363 - __main__ - WARNING - Error extracting data from card 132: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:04,483 - __main__ - WARNING - Error extracting data from card 133: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:04,546 - __main__ - WARNING - Error extracting data from card 134: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:04,625 - __main__ - WARNING - Error extracting data from card 135: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:04,669 - __main__ - WARNING - Error extracting data from card 136: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:04,708 - __main__ - WARNING - Error extracting data from card 137: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:04,749 - __main__ - WARNING - Error extracting data from card 138: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:04,789 - __main__ - WARNING - Error extracting data from card 139: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:04,830 - __main__ - WARNING - Error extracting data from card 140: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:04,870 - __main__ - WARNING - Error extracting data from card 141: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:05,066 - __main__ - WARNING - Error extracting data from card 142: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:05,321 - __main__ - WARNING - Error extracting data from card 143: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:05,502 - __main__ - WARNING - Error extracting data from card 144: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:06,422 - __main__ - WARNING - Error extracting data from card 145: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:06,543 - __main__ - WARNING - Error extracting data from card 146: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:06,707 - __main__ - WARNING - Error extracting data from card 147: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:06,911 - __main__ - WARNING - Error extracting data from card 148: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:07,172 - __main__ - WARNING - Error extracting data from card 149: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:07,328 - __main__ - WARNING - Error extracting data from card 150: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:07,534 - __main__ - WARNING - Error extracting data from card 151: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:07,765 - __main__ - WARNING - Error extracting data from card 152: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:07,861 - __main__ - WARNING - Error extracting data from card 153: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:08,057 - __main__ - WARNING - Error extracting data from card 154: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:08,252 - __main__ - WARNING - Error extracting data from card 155: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:08,442 - __main__ - WARNING - Error extracting data from card 156: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:08,535 - __main__ - WARNING - Error extracting data from card 157: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:08,734 - __main__ - WARNING - Error extracting data from card 158: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:08,868 - __main__ - WARNING - Error extracting data from card 159: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:08,973 - __main__ - WARNING - Error extracting data from card 160: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:09,144 - __main__ - WARNING - Error extracting data from card 161: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:09,278 - __main__ - WARNING - Error extracting data from card 162: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:09,366 - __main__ - WARNING - Error extracting data from card 163: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:09,434 - __main__ - WARNING - Error extracting data from card 164: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:09,477 - __main__ - WARNING - Error extracting data from card 165: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:09,523 - __main__ - WARNING - Error extracting data from card 166: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:09,562 - __main__ - WARNING - Error extracting data from card 167: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:09,603 - __main__ - WARNING - Error extracting data from card 168: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:09,652 - __main__ - WARNING - Error extracting data from card 169: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:09,697 - __main__ - WARNING - Error extracting data from card 170: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:09,736 - __main__ - WARNING - Error extracting data from card 171: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:09,769 - __main__ - WARNING - Error extracting data from card 172: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:09,811 - __main__ - WARNING - Error extracting data from card 173: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:09,852 - __main__ - WARNING - Error extracting data from card 174: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:09,913 - __main__ - WARNING - Error extracting data from card 175: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:09,950 - __main__ - WARNING - Error extracting data from card 176: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:09,989 - __main__ - WARNING - Error extracting data from card 177: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:10,046 - __main__ - WARNING - Error extracting data from card 178: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:10,124 - __main__ - WARNING - Error extracting data from card 179: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:10,160 - __main__ - WARNING - Error extracting data from card 180: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:10,192 - __main__ - WARNING - Error extracting data from card 181: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:10,224 - __main__ - WARNING - Error extracting data from card 182: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:10,260 - __main__ - WARNING - Error extracting data from card 183: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:10,293 - __main__ - WARNING - Error extracting data from card 184: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:10,327 - __main__ - WARNING - Error extracting data from card 185: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:10,362 - __main__ - WARNING - Error extracting data from card 186: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:10,401 - __main__ - WARNING - Error extracting data from card 187: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:10,441 - __main__ - WARNING - Error extracting data from card 188: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:10,475 - __main__ - WARNING - Error extracting data from card 189: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:10,509 - __main__ - WARNING - Error extracting data from card 190: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:10,538 - __main__ - WARNING - Error extracting data from card 191: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:10,571 - __main__ - WARNING - Error extracting data from card 192: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:10,605 - __main__ - WARNING - Error extracting data from card 193: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:10,639 - __main__ - WARNING - Error extracting data from card 194: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:10,678 - __main__ - WARNING - Error extracting data from card 195: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:10,718 - __main__ - WARNING - Error extracting data from card 196: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:10,752 - __main__ - WARNING - Error extracting data from card 197: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:10,787 - __main__ - WARNING - Error extracting data from card 198: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:10,824 - __main__ - WARNING - Error extracting data from card 199: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:10,867 - __main__ - WARNING - Error extracting data from card 200: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:10,907 - __main__ - WARNING - Error extracting data from card 201: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:10,941 - __main__ - WARNING - Error extracting data from card 202: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:10,975 - __main__ - WARNING - Error extracting data from card 203: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:11,007 - __main__ - WARNING - Error extracting data from card 204: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:11,040 - __main__ - WARNING - Error extracting data from card 205: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:11,072 - __main__ - WARNING - Error extracting data from card 206: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:11,113 - __main__ - WARNING - Error extracting data from card 207: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:11,153 - __main__ - WARNING - Error extracting data from card 208: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:11,187 - __main__ - WARNING - Error extracting data from card 209: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:11,217 - __main__ - WARNING - Error extracting data from card 210: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:11,252 - __main__ - WARNING - Error extracting data from card 211: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:11,285 - __main__ - WARNING - Error extracting data from card 212: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:11,325 - __main__ - WARNING - Error extracting data from card 213: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:11,363 - __main__ - WARNING - Error extracting data from card 214: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:11,398 - __main__ - WARNING - Error extracting data from card 215: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:11,432 - __main__ - WARNING - Error extracting data from card 216: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:11,466 - __main__ - WARNING - Error extracting data from card 217: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:11,500 - __main__ - WARNING - Error extracting data from card 218: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:11,534 - __main__ - WARNING - Error extracting data from card 219: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:11,568 - __main__ - WARNING - Error extracting data from card 220: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:11,604 - __main__ - WARNING - Error extracting data from card 221: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:11,638 - __main__ - WARNING - Error extracting data from card 222: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:11,672 - __main__ - WARNING - Error extracting data from card 223: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:11,708 - __main__ - WARNING - Error extracting data from card 224: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:11,747 - __main__ - WARNING - Error extracting data from card 225: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:11,785 - __main__ - WARNING - Error extracting data from card 226: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:11,820 - __main__ - WARNING - Error extracting data from card 227: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:11,852 - __main__ - WARNING - Error extracting data from card 228: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:11,883 - __main__ - WARNING - Error extracting data from card 229: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:11,919 - __main__ - WARNING - Error extracting data from card 230: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:11,953 - __main__ - WARNING - Error extracting data from card 231: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:11,987 - __main__ - WARNING - Error extracting data from card 232: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:12,037 - __main__ - WARNING - Error extracting data from card 233: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:12,071 - __main__ - WARNING - Error extracting data from card 234: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:12,107 - __main__ - WARNING - Error extracting data from card 235: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:12,144 - __main__ - WARNING - Error extracting data from card 236: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:12,179 - __main__ - WARNING - Error extracting data from card 237: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:12,213 - __main__ - WARNING - Error extracting data from card 238: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:12,246 - __main__ - WARNING - Error extracting data from card 239: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:12,280 - __main__ - WARNING - Error extracting data from card 240: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:12,326 - __main__ - WARNING - Error extracting data from card 241: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:12,365 - __main__ - WARNING - Error extracting data from card 242: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:12,399 - __main__ - WARNING - Error extracting data from card 243: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:12,435 - __main__ - WARNING - Error extracting data from card 244: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:12,469 - __main__ - WARNING - Error extracting data from card 245: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:12,506 - __main__ - WARNING - Error extracting data from card 246: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:12,540 - __main__ - WARNING - Error extracting data from card 247: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:12,576 - __main__ - WARNING - Error extracting data from card 248: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:12,616 - __main__ - WARNING - Error extracting data from card 249: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:12,648 - __main__ - WARNING - Error extracting data from card 250: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:12,682 - __main__ - WARNING - Error extracting data from card 251: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:12,715 - __main__ - WARNING - Error extracting data from card 252: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:12,748 - __main__ - WARNING - Error extracting data from card 253: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:12,782 - __main__ - WARNING - Error extracting data from card 254: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:12,816 - __main__ - WARNING - Error extracting data from card 255: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:12,851 - __main__ - WARNING - Error extracting data from card 256: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:12,885 - __main__ - WARNING - Error extracting data from card 257: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:12,920 - __main__ - WARNING - Error extracting data from card 258: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:12,953 - __main__ - WARNING - Error extracting data from card 259: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:12,987 - __main__ - WARNING - Error extracting data from card 260: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:13,025 - __main__ - WARNING - Error extracting data from card 261: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:13,067 - __main__ - WARNING - Error extracting data from card 262: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:13,107 - __main__ - WARNING - Error extracting data from card 263: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:13,142 - __main__ - WARNING - Error extracting data from card 264: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:13,177 - __main__ - WARNING - Error extracting data from card 265: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:13,211 - __main__ - WARNING - Error extracting data from card 266: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:13,240 - __main__ - WARNING - Error extracting data from card 267: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:13,273 - __main__ - WARNING - Error extracting data from card 268: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:13,311 - __main__ - WARNING - Error extracting data from card 269: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:13,373 - __main__ - WARNING - Error extracting data from card 270: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:13,413 - __main__ - WARNING - Error extracting data from card 271: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:13,452 - __main__ - WARNING - Error extracting data from card 272: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:13,486 - __main__ - WARNING - Error extracting data from card 273: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:13,521 - __main__ - WARNING - Error extracting data from card 274: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:13,555 - __main__ - WARNING - Error extracting data from card 275: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:13,590 - __main__ - WARNING - Error extracting data from card 276: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:13,624 - __main__ - WARNING - Error extracting data from card 277: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:13,658 - __main__ - WARNING - Error extracting data from card 278: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:13,693 - __main__ - WARNING - Error extracting data from card 279: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:13,727 - __main__ - WARNING - Error extracting data from card 280: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:13,762 - __main__ - WARNING - Error extracting data from card 281: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:13,797 - __main__ - WARNING - Error extracting data from card 282: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:13,834 - __main__ - WARNING - Error extracting data from card 283: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:13,872 - __main__ - WARNING - Error extracting data from card 284: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:13,906 - __main__ - WARNING - Error extracting data from card 285: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:13,935 - __main__ - WARNING - Error extracting data from card 286: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:13,969 - __main__ - WARNING - Error extracting data from card 287: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:14,002 - __main__ - WARNING - Error extracting data from card 288: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:14,036 - __main__ - WARNING - Error extracting data from card 289: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:14,070 - __main__ - WARNING - Error extracting data from card 290: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:14,104 - __main__ - WARNING - Error extracting data from card 291: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:14,138 - __main__ - WARNING - Error extracting data from card 292: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:14,172 - __main__ - WARNING - Error extracting data from card 293: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:14,205 - __main__ - WARNING - Error extracting data from card 294: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:14,239 - __main__ - WARNING - Error extracting data from card 295: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:14,273 - __main__ - WARNING - Error extracting data from card 296: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:14,307 - __main__ - WARNING - Error extracting data from card 297: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:14,341 - __main__ - WARNING - Error extracting data from card 298: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:14,375 - __main__ - WARNING - Error extracting data from card 299: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:14,408 - __main__ - WARNING - Error extracting data from card 300: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:14,443 - __main__ - WARNING - Error extracting data from card 301: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:14,478 - __main__ - WARNING - Error extracting data from card 302: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:14,513 - __main__ - WARNING - Error extracting data from card 303: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:14,547 - __main__ - WARNING - Error extracting data from card 304: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:14,575 - __main__ - WARNING - Error extracting data from card 305: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:14,611 - __main__ - WARNING - Error extracting data from card 306: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:14,646 - __main__ - WARNING - Error extracting data from card 307: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:14,683 - __main__ - WARNING - Error extracting data from card 308: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:14,718 - __main__ - WARNING - Error extracting data from card 309: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:14,751 - __main__ - WARNING - Error extracting data from card 310: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:14,785 - __main__ - WARNING - Error extracting data from card 311: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:14,820 - __main__ - WARNING - Error extracting data from card 312: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:14,855 - __main__ - WARNING - Error extracting data from card 313: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:14,887 - __main__ - WARNING - Error extracting data from card 314: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:14,925 - __main__ - WARNING - Error extracting data from card 315: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:14,959 - __main__ - WARNING - Error extracting data from card 316: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:14,993 - __main__ - WARNING - Error extracting data from card 317: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:15,027 - __main__ - WARNING - Error extracting data from card 318: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:15,060 - __main__ - WARNING - Error extracting data from card 319: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:15,093 - __main__ - WARNING - Error extracting data from card 320: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:15,127 - __main__ - WARNING - Error extracting data from card 321: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:15,160 - __main__ - WARNING - Error extracting data from card 322: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:15,194 - __main__ - WARNING - Error extracting data from card 323: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:15,223 - __main__ - WARNING - Error extracting data from card 324: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:15,256 - __main__ - WARNING - Error extracting data from card 325: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:15,288 - __main__ - WARNING - Error extracting data from card 326: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:15,322 - __main__ - WARNING - Error extracting data from card 327: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:15,355 - __main__ - WARNING - Error extracting data from card 328: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:15,393 - __main__ - WARNING - Error extracting data from card 329: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:15,426 - __main__ - WARNING - Error extracting data from card 330: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:15,460 - __main__ - WARNING - Error extracting data from card 331: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:15,496 - __main__ - WARNING - Error extracting data from card 332: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:15,532 - __main__ - WARNING - Error extracting data from card 333: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:15,565 - __main__ - WARNING - Error extracting data from card 334: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:15,599 - __main__ - WARNING - Error extracting data from card 335: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:15,633 - __main__ - WARNING - Error extracting data from card 336: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:15,667 - __main__ - WARNING - Error extracting data from card 337: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:15,701 - __main__ - WARNING - Error extracting data from card 338: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:15,733 - __main__ - WARNING - Error extracting data from card 339: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:15,767 - __main__ - WARNING - Error extracting data from card 340: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:15,802 - __main__ - WARNING - Error extracting data from card 341: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:15,837 - __main__ - WARNING - Error extracting data from card 342: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:15,866 - __main__ - WARNING - Error extracting data from card 343: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:15,900 - __main__ - WARNING - Error extracting data from card 344: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:15,952 - __main__ - WARNING - Error extracting data from card 345: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:16,110 - __main__ - WARNING - Error extracting data from card 346: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:16,143 - __main__ - WARNING - Error extracting data from card 347: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:16,180 - __main__ - WARNING - Error extracting data from card 348: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:16,222 - __main__ - WARNING - Error extracting data from card 349: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:16,257 - __main__ - WARNING - Error extracting data from card 350: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:16,292 - __main__ - WARNING - Error extracting data from card 351: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:16,330 - __main__ - WARNING - Error extracting data from card 352: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:16,363 - __main__ - WARNING - Error extracting data from card 353: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:16,398 - __main__ - WARNING - Error extracting data from card 354: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:16,434 - __main__ - WARNING - Error extracting data from card 355: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:16,476 - __main__ - WARNING - Error extracting data from card 356: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:16,509 - __main__ - WARNING - Error extracting data from card 357: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:16,543 - __main__ - WARNING - Error extracting data from card 358: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:16,576 - __main__ - WARNING - Error extracting data from card 359: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:16,612 - __main__ - WARNING - Error extracting data from card 360: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:16,645 - __main__ - WARNING - Error extracting data from card 361: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:16,674 - __main__ - WARNING - Error extracting data from card 362: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:16,709 - __main__ - WARNING - Error extracting data from card 363: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:16,742 - __main__ - WARNING - Error extracting data from card 364: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:16,777 - __main__ - WARNING - Error extracting data from card 365: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:16,811 - __main__ - WARNING - Error extracting data from card 366: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:16,846 - __main__ - WARNING - Error extracting data from card 367: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:16,880 - __main__ - WARNING - Error extracting data from card 368: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:16,923 - __main__ - WARNING - Error extracting data from card 369: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:16,957 - __main__ - WARNING - Error extracting data from card 370: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:16,992 - __main__ - WARNING - Error extracting data from card 371: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:17,026 - __main__ - WARNING - Error extracting data from card 372: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:17,060 - __main__ - WARNING - Error extracting data from card 373: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:17,093 - __main__ - WARNING - Error extracting data from card 374: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:17,130 - __main__ - WARNING - Error extracting data from card 375: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:17,163 - __main__ - WARNING - Error extracting data from card 376: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:17,199 - __main__ - WARNING - Error extracting data from card 377: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:17,234 - __main__ - WARNING - Error extracting data from card 378: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:17,276 - __main__ - WARNING - Error extracting data from card 379: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:17,317 - __main__ - WARNING - Error extracting data from card 380: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:17,357 - __main__ - WARNING - Error extracting data from card 381: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:17,402 - __main__ - WARNING - Error extracting data from card 382: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:17,437 - __main__ - WARNING - Error extracting data from card 383: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:17,488 - __main__ - WARNING - Error extracting data from card 384: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:17,526 - __main__ - WARNING - Error extracting data from card 385: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:17,575 - __main__ - WARNING - Error extracting data from card 386: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:17,622 - __main__ - WARNING - Error extracting data from card 387: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:17,657 - __main__ - WARNING - Error extracting data from card 388: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:17,693 - __main__ - WARNING - Error extracting data from card 389: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:17,730 - __main__ - WARNING - Error extracting data from card 390: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:17,774 - __main__ - WARNING - Error extracting data from card 391: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:17,809 - __main__ - WARNING - Error extracting data from card 392: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:17,844 - __main__ - WARNING - Error extracting data from card 393: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:17,878 - __main__ - WARNING - Error extracting data from card 394: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:17,912 - __main__ - WARNING - Error extracting data from card 395: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:17,947 - __main__ - WARNING - Error extracting data from card 396: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:17,982 - __main__ - WARNING - Error extracting data from card 397: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:18,023 - __main__ - WARNING - Error extracting data from card 398: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:18,072 - __main__ - WARNING - Error extracting data from card 399: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:18,110 - __main__ - WARNING - Error extracting data from card 400: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:18,156 - __main__ - WARNING - Error extracting data from card 401: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:18,208 - __main__ - WARNING - Error extracting data from card 402: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:18,261 - __main__ - WARNING - Error extracting data from card 403: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:18,344 - __main__ - WARNING - Error extracting data from card 404: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:18,407 - __main__ - WARNING - Error extracting data from card 405: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:18,453 - __main__ - WARNING - Error extracting data from card 406: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:18,500 - __main__ - WARNING - Error extracting data from card 407: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:18,551 - __main__ - WARNING - Error extracting data from card 408: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:18,594 - __main__ - WARNING - Error extracting data from card 409: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:18,648 - __main__ - WARNING - Error extracting data from card 410: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:18,711 - __main__ - WARNING - Error extracting data from card 411: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:18,745 - __main__ - WARNING - Error extracting data from card 412: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:18,788 - __main__ - WARNING - Error extracting data from card 413: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:18,829 - __main__ - WARNING - Error extracting data from card 414: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:18,863 - __main__ - WARNING - Error extracting data from card 415: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:18,898 - __main__ - WARNING - Error extracting data from card 416: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:18,935 - __main__ - WARNING - Error extracting data from card 417: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:18,975 - __main__ - WARNING - Error extracting data from card 418: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:19,009 - __main__ - WARNING - Error extracting data from card 419: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:19,049 - __main__ - WARNING - Error extracting data from card 420: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:19,096 - __main__ - WARNING - Error extracting data from card 421: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:19,145 - __main__ - WARNING - Error extracting data from card 422: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:19,178 - __main__ - WARNING - Error extracting data from card 423: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:19,213 - __main__ - WARNING - Error extracting data from card 424: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:19,249 - __main__ - WARNING - Error extracting data from card 425: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:19,284 - __main__ - WARNING - Error extracting data from card 426: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:19,319 - __main__ - WARNING - Error extracting data from card 427: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:19,355 - __main__ - WARNING - Error extracting data from card 428: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:19,392 - __main__ - WARNING - Error extracting data from card 429: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:19,425 - __main__ - WARNING - Error extracting data from card 430: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:19,460 - __main__ - WARNING - Error extracting data from card 431: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:19,494 - __main__ - WARNING - Error extracting data from card 432: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:19,528 - __main__ - WARNING - Error extracting data from card 433: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:19,562 - __main__ - WARNING - Error extracting data from card 434: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:19,602 - __main__ - WARNING - Error extracting data from card 435: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:19,640 - __main__ - WARNING - Error extracting data from card 436: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:19,676 - __main__ - WARNING - Error extracting data from card 437: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:19,707 - __main__ - WARNING - Error extracting data from card 438: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:19,742 - __main__ - WARNING - Error extracting data from card 439: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:19,779 - __main__ - WARNING - Error extracting data from card 440: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:19,813 - __main__ - WARNING - Error extracting data from card 441: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:19,848 - __main__ - WARNING - Error extracting data from card 442: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:19,882 - __main__ - WARNING - Error extracting data from card 443: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:19,915 - __main__ - WARNING - Error extracting data from card 444: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:19,951 - __main__ - WARNING - Error extracting data from card 445: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:19,983 - __main__ - WARNING - Error extracting data from card 446: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:20,019 - __main__ - WARNING - Error extracting data from card 447: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:20,061 - __main__ - WARNING - Error extracting data from card 448: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:20,093 - __main__ - WARNING - Error extracting data from card 449: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:20,127 - __main__ - WARNING - Error extracting data from card 450: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:20,161 - __main__ - WARNING - Error extracting data from card 451: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:20,195 - __main__ - WARNING - Error extracting data from card 452: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:20,229 - __main__ - WARNING - Error extracting data from card 453: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:20,264 - __main__ - WARNING - Error extracting data from card 454: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:20,299 - __main__ - WARNING - Error extracting data from card 455: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:20,333 - __main__ - WARNING - Error extracting data from card 456: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:20,362 - __main__ - WARNING - Error extracting data from card 457: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:20,395 - __main__ - WARNING - Error extracting data from card 458: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:20,429 - __main__ - WARNING - Error extracting data from card 459: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:20,464 - __main__ - WARNING - Error extracting data from card 460: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:20,498 - __main__ - WARNING - Error extracting data from card 461: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:20,533 - __main__ - WARNING - Error extracting data from card 462: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:20,616 - __main__ - WARNING - Error extracting data from card 463: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:20,649 - __main__ - WARNING - Error extracting data from card 464: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:20,683 - __main__ - WARNING - Error extracting data from card 465: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:20,717 - __main__ - WARNING - Error extracting data from card 466: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:20,773 - __main__ - WARNING - Error extracting data from card 467: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:20,813 - __main__ - WARNING - Error extracting data from card 468: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:20,849 - __main__ - WARNING - Error extracting data from card 469: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:20,884 - __main__ - WARNING - Error extracting data from card 470: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:20,919 - __main__ - WARNING - Error extracting data from card 471: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:20,953 - __main__ - WARNING - Error extracting data from card 472: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:20,988 - __main__ - WARNING - Error extracting data from card 473: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:21,023 - __main__ - WARNING - Error extracting data from card 474: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:21,057 - __main__ - WARNING - Error extracting data from card 475: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:21,086 - __main__ - WARNING - Error extracting data from card 476: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:21,121 - __main__ - WARNING - Error extracting data from card 477: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:21,155 - __main__ - WARNING - Error extracting data from card 478: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:21,190 - __main__ - WARNING - Error extracting data from card 479: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:21,224 - __main__ - WARNING - Error extracting data from card 480: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:21,259 - __main__ - WARNING - Error extracting data from card 481: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:21,293 - __main__ - WARNING - Error extracting data from card 482: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:21,333 - __main__ - WARNING - Error extracting data from card 483: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:21,372 - __main__ - WARNING - Error extracting data from card 484: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:21,412 - __main__ - WARNING - Error extracting data from card 485: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:21,462 - __main__ - WARNING - Error extracting data from card 486: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:21,496 - __main__ - WARNING - Error extracting data from card 487: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:21,530 - __main__ - WARNING - Error extracting data from card 488: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:21,564 - __main__ - WARNING - Error extracting data from card 489: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:21,598 - __main__ - WARNING - Error extracting data from card 490: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:21,634 - __main__ - WARNING - Error extracting data from card 491: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:21,669 - __main__ - WARNING - Error extracting data from card 492: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:21,702 - __main__ - WARNING - Error extracting data from card 493: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:21,736 - __main__ - WARNING - Error extracting data from card 494: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:21,765 - __main__ - WARNING - Error extracting data from card 495: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:21,799 - __main__ - WARNING - Error extracting data from card 496: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:21,833 - __main__ - WARNING - Error extracting data from card 497: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:21,867 - __main__ - WARNING - Error extracting data from card 498: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:21,901 - __main__ - WARNING - Error extracting data from card 499: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:21,935 - __main__ - WARNING - Error extracting data from card 500: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:21,970 - __main__ - WARNING - Error extracting data from card 501: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:22,004 - __main__ - WARNING - Error extracting data from card 502: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:22,037 - __main__ - WARNING - Error extracting data from card 503: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:22,070 - __main__ - WARNING - Error extracting data from card 504: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:22,104 - __main__ - WARNING - Error extracting data from card 505: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:22,138 - __main__ - WARNING - Error extracting data from card 506: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:22,174 - __main__ - WARNING - Error extracting data from card 507: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:22,209 - __main__ - WARNING - Error extracting data from card 508: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:22,244 - __main__ - WARNING - Error extracting data from card 509: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:22,278 - __main__ - WARNING - Error extracting data from card 510: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:22,311 - __main__ - WARNING - Error extracting data from card 511: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:22,345 - __main__ - WARNING - Error extracting data from card 512: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:22,383 - __main__ - WARNING - Error extracting data from card 513: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:22,412 - __main__ - WARNING - Error extracting data from card 514: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:22,446 - __main__ - WARNING - Error extracting data from card 515: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:22,488 - __main__ - WARNING - Error extracting data from card 516: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:22,524 - __main__ - WARNING - Error extracting data from card 517: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:22,559 - __main__ - WARNING - Error extracting data from card 518: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:22,592 - __main__ - WARNING - Error extracting data from card 519: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:22,636 - __main__ - WARNING - Error extracting data from card 520: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:22,670 - __main__ - WARNING - Error extracting data from card 521: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:22,704 - __main__ - WARNING - Error extracting data from card 522: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:22,738 - __main__ - WARNING - Error extracting data from card 523: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:22,772 - __main__ - WARNING - Error extracting data from card 524: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:22,807 - __main__ - WARNING - Error extracting data from card 525: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:22,842 - __main__ - WARNING - Error extracting data from card 526: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:22,876 - __main__ - WARNING - Error extracting data from card 527: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:22,910 - __main__ - WARNING - Error extracting data from card 528: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:22,943 - __main__ - WARNING - Error extracting data from card 529: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:22,976 - __main__ - WARNING - Error extracting data from card 530: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:23,010 - __main__ - WARNING - Error extracting data from card 531: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:23,044 - __main__ - WARNING - Error extracting data from card 532: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:23,072 - __main__ - WARNING - Error extracting data from card 533: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:23,106 - __main__ - WARNING - Error extracting data from card 534: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:23,141 - __main__ - WARNING - Error extracting data from card 535: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:23,178 - __main__ - WARNING - Error extracting data from card 536: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:23,212 - __main__ - WARNING - Error extracting data from card 537: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:23,246 - __main__ - WARNING - Error extracting data from card 538: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:23,281 - __main__ - WARNING - Error extracting data from card 539: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:23,324 - __main__ - WARNING - Error extracting data from card 540: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:23,362 - __main__ - WARNING - Error extracting data from card 541: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:23,396 - __main__ - WARNING - Error extracting data from card 542: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:23,431 - __main__ - WARNING - Error extracting data from card 543: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:23,464 - __main__ - WARNING - Error extracting data from card 544: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:23,499 - __main__ - WARNING - Error extracting data from card 545: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:23,533 - __main__ - WARNING - Error extracting data from card 546: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:23,566 - __main__ - WARNING - Error extracting data from card 547: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:23,600 - __main__ - WARNING - Error extracting data from card 548: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:23,634 - __main__ - WARNING - Error extracting data from card 549: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:23,669 - __main__ - WARNING - Error extracting data from card 550: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:23,702 - __main__ - WARNING - Error extracting data from card 551: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:23,730 - __main__ - WARNING - Error extracting data from card 552: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:23,765 - __main__ - WARNING - Error extracting data from card 553: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:23,799 - __main__ - WARNING - Error extracting data from card 554: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:23,833 - __main__ - WARNING - Error extracting data from card 555: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:23,868 - __main__ - WARNING - Error extracting data from card 556: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:23,902 - __main__ - WARNING - Error extracting data from card 557: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:23,936 - __main__ - WARNING - Error extracting data from card 558: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:23,974 - __main__ - WARNING - Error extracting data from card 559: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:24,008 - __main__ - WARNING - Error extracting data from card 560: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:24,042 - __main__ - WARNING - Error extracting data from card 561: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:24,076 - __main__ - WARNING - Error extracting data from card 562: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:24,110 - __main__ - WARNING - Error extracting data from card 563: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:24,144 - __main__ - WARNING - Error extracting data from card 564: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:24,178 - __main__ - WARNING - Error extracting data from card 565: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:24,213 - __main__ - WARNING - Error extracting data from card 566: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:24,248 - __main__ - WARNING - Error extracting data from card 567: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:24,282 - __main__ - WARNING - Error extracting data from card 568: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:24,316 - __main__ - WARNING - Error extracting data from card 569: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:24,350 - __main__ - WARNING - Error extracting data from card 570: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:24,379 - __main__ - WARNING - Error extracting data from card 571: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:24,413 - __main__ - WARNING - Error extracting data from card 572: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:24,447 - __main__ - WARNING - Error extracting data from card 573: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:24,481 - __main__ - WARNING - Error extracting data from card 574: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:24,515 - __main__ - WARNING - Error extracting data from card 575: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:24,555 - __main__ - WARNING - Error extracting data from card 576: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:24,589 - __main__ - WARNING - Error extracting data from card 577: cannot access local variable 'funding_text' where it is not associated with a value
+2025-04-07 06:52:24,599 - __main__ - INFO - Saving data for 0 startups...
+2025-04-07 06:52:24,601 - __main__ - INFO - Data saved to topstartups_io/json/bay_area_startups_20250407_065224.json
+2025-04-07 06:52:24,653 - __main__ - INFO - Data saved to topstartups_io/csv/bay_area_startups_20250407_065224.csv
+2025-04-07 06:52:24,786 - __main__ - INFO - Initial scraping completed successfully
+2025-04-07 06:52:24,791 - apscheduler.scheduler - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-04-07 06:52:24,793 - apscheduler.scheduler - INFO - Added job "check_for_updates" to job store "default"
+2025-04-07 06:52:24,793 - apscheduler.scheduler - INFO - Scheduler started
+2025-04-07 06:52:24,794 - __main__ - INFO - Scheduler started - checking for updates every 24 hours
+2025-04-07 06:52:24,794 - __main__ - INFO - Monitoring for updates. Press Ctrl+C to exit.
+2025-04-07 06:57:33,562 - __main__ - INFO - Running initial data collection
+2025-04-07 06:57:33,562 - WDM - INFO - ====== WebDriver manager ======
+2025-04-07 06:57:33,711 - WDM - INFO - Get LATEST chromedriver version for google-chrome
+2025-04-07 06:57:33,768 - WDM - INFO - Get LATEST chromedriver version for google-chrome
+2025-04-07 06:57:33,805 - WDM - INFO - Driver [/Users/hk/.wdm/drivers/chromedriver/mac64/134.0.6998.165/chromedriver-mac-arm64/chromedriver] found in cache
+2025-04-07 06:57:35,545 - __main__ - INFO - Chrome WebDriver initialized successfully
+2025-04-07 06:57:35,547 - __main__ - INFO - Navigating to https://topstartups.io/?hq_location=San+Francisco+Bay+Area&sort=funding
+2025-04-07 06:57:41,611 - __main__ - INFO - Stored new content hash: d41d8cd98f...
+2025-04-07 06:57:41,611 - __main__ - INFO - Loading all startups...
+2025-04-07 06:57:41,665 - __main__ - INFO - Scrolled to bottom (attempt 1)
+2025-04-07 06:57:44,695 - __main__ - INFO - Found 'Show more' element using text search
+2025-04-07 06:57:45,737 - __main__ - INFO - Clicked button using standard click
+2025-04-07 06:57:48,745 - __main__ - INFO - New content loaded, height changed from 7171 to 24679
+2025-04-07 06:57:48,747 - __main__ - INFO - Scrolled to bottom (attempt 2)
+2025-04-07 06:57:51,778 - __main__ - INFO - Found 'Show more' element using text search
+2025-04-07 06:57:52,799 - __main__ - WARNING - Failed to click button with all methods
+2025-04-07 06:57:55,807 - __main__ - INFO - New content loaded, height changed from 24679 to 140993
+2025-04-07 06:57:55,810 - __main__ - INFO - Scrolled to bottom (attempt 3)
+2025-04-07 06:57:58,838 - __main__ - INFO - Found 'Show more' element using text search
+2025-04-07 06:57:59,849 - __main__ - WARNING - Failed to click button with all methods
+2025-04-07 06:58:02,854 - __main__ - INFO - New content loaded, height changed from 140993 to 257887
+2025-04-07 06:58:02,857 - __main__ - INFO - Scrolled to bottom (attempt 4)
+2025-04-07 06:58:05,896 - __main__ - INFO - Found 'Show more' element using text search
+2025-04-07 06:58:06,910 - __main__ - WARNING - Failed to click button with all methods
+2025-04-07 06:58:09,919 - __main__ - INFO - New content loaded, height changed from 257887 to 354332
+2025-04-07 06:58:09,922 - __main__ - INFO - Scrolled to bottom (attempt 5)
+2025-04-07 06:58:13,037 - __main__ - WARNING - Could not find 'Show more' button using any method
+2025-04-07 06:58:13,039 - __main__ - INFO - No new content detected, stopping scroll
+2025-04-07 06:58:13,039 - __main__ - INFO - Extracting startup data...
+2025-04-07 06:58:13,045 - __main__ - INFO - Saving data for 0 startups...
+2025-04-07 06:58:13,047 - __main__ - INFO - Data saved to topstartups_io/json/bay_area_startups_20250407_065813.json
+2025-04-07 06:58:13,075 - __main__ - INFO - Data saved to topstartups_io/csv/bay_area_startups_20250407_065813.csv
+2025-04-07 06:58:13,183 - __main__ - INFO - Initial scraping completed successfully
+2025-04-07 06:58:13,188 - apscheduler.scheduler - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-04-07 06:58:13,189 - apscheduler.scheduler - INFO - Added job "check_for_updates" to job store "default"
+2025-04-07 06:58:13,189 - apscheduler.scheduler - INFO - Scheduler started
+2025-04-07 06:58:13,189 - __main__ - INFO - Scheduler started - checking for updates every 24 hours
+2025-04-07 06:58:13,189 - __main__ - INFO - Monitoring for updates. Press Ctrl+C to exit.
+2025-04-07 07:04:40,425 - __main__ - INFO - Running initial data collection
+2025-04-07 07:04:40,426 - WDM - INFO - ====== WebDriver manager ======
+2025-04-07 07:04:40,569 - WDM - INFO - Get LATEST chromedriver version for google-chrome
+2025-04-07 07:04:40,642 - WDM - INFO - Get LATEST chromedriver version for google-chrome
+2025-04-07 07:04:40,678 - WDM - INFO - Driver [/Users/hk/.wdm/drivers/chromedriver/mac64/134.0.6998.165/chromedriver-mac-arm64/chromedriver] found in cache
+2025-04-07 07:04:42,351 - __main__ - INFO - Chrome WebDriver initialized successfully
+2025-04-07 07:04:42,352 - __main__ - INFO - Navigating to https://topstartups.io/?hq_location=San+Francisco+Bay+Area&sort=funding
+2025-04-07 07:04:48,302 - __main__ - INFO - Stored new content hash: d41d8cd98f...
+2025-04-07 07:04:48,302 - __main__ - INFO - Loading all startups...
+2025-04-07 07:04:48,307 - __main__ - INFO - Scrolled to bottom (attempt 1)
+2025-04-07 07:04:51,336 - __main__ - INFO - Found 'Show more' element using text search
+2025-04-07 07:04:52,379 - __main__ - INFO - Clicked button using standard click
+2025-04-07 07:04:55,387 - __main__ - INFO - New content loaded, height changed from 13350 to 24679
+2025-04-07 07:04:55,389 - __main__ - INFO - Scrolled to bottom (attempt 2)
+2025-04-07 07:04:58,439 - __main__ - INFO - Found 'Show more' element using text search
+2025-04-07 07:04:59,455 - __main__ - WARNING - Failed to click button with all methods
+2025-04-07 07:05:02,466 - __main__ - INFO - New content loaded, height changed from 24679 to 152433
+2025-04-07 07:05:02,470 - __main__ - INFO - Scrolled to bottom (attempt 3)
+2025-04-07 07:05:05,495 - __main__ - INFO - Found 'Show more' element using text search
+2025-04-07 07:05:06,510 - __main__ - WARNING - Failed to click button with all methods
+2025-04-07 07:05:09,518 - __main__ - INFO - New content loaded, height changed from 152433 to 257887
+2025-04-07 07:05:09,520 - __main__ - INFO - Scrolled to bottom (attempt 4)
+2025-04-07 07:05:12,545 - __main__ - INFO - Found 'Show more' element using text search
+2025-04-07 07:05:13,560 - __main__ - WARNING - Failed to click button with all methods
+2025-04-07 07:05:16,567 - __main__ - INFO - New content loaded, height changed from 257887 to 354332
+2025-04-07 07:05:16,570 - __main__ - INFO - Scrolled to bottom (attempt 5)
+2025-04-07 07:05:19,655 - __main__ - WARNING - Could not find 'Show more' button using any method
+2025-04-07 07:05:19,657 - __main__ - INFO - No new content detected, stopping scroll
+2025-04-07 07:05:19,657 - __main__ - INFO - Extracting startup data...
+2025-04-07 07:05:40,063 - __main__ - ERROR - Error in main process: Message: 
+Stacktrace:
+0   chromedriver                        0x0000000100edf6c8 cxxbridge1$str$ptr + 2791212
+1   chromedriver                        0x0000000100ed7c9c cxxbridge1$str$ptr + 2759936
+2   chromedriver                        0x0000000100a29e30 cxxbridge1$string$len + 92928
+3   chromedriver                        0x0000000100a71170 cxxbridge1$string$len + 384576
+4   chromedriver                        0x0000000100ab25f8 cxxbridge1$string$len + 651976
+5   chromedriver                        0x0000000100a652fc cxxbridge1$string$len + 335820
+6   chromedriver                        0x0000000100ea46c4 cxxbridge1$str$ptr + 2549544
+7   chromedriver                        0x0000000100ea7988 cxxbridge1$str$ptr + 2562540
+8   chromedriver                        0x0000000100e8471c cxxbridge1$str$ptr + 2418560
+9   chromedriver                        0x0000000100ea81e8 cxxbridge1$str$ptr + 2564684
+10  chromedriver                        0x0000000100e75750 cxxbridge1$str$ptr + 2357172
+11  chromedriver                        0x0000000100ec7f58 cxxbridge1$str$ptr + 2695100
+12  chromedriver                        0x0000000100ec80e0 cxxbridge1$str$ptr + 2695492
+13  chromedriver                        0x0000000100ed7910 cxxbridge1$str$ptr + 2759028
+14  libsystem_pthread.dylib             0x0000000187e23fa8 _pthread_start + 148
+15  libsystem_pthread.dylib             0x0000000187e1eda0 thread_start + 8
+
+2025-04-07 07:05:52,908 - __main__ - INFO - Running initial data collection
+2025-04-07 07:05:52,908 - WDM - INFO - ====== WebDriver manager ======
+2025-04-07 07:05:53,061 - WDM - INFO - Get LATEST chromedriver version for google-chrome
+2025-04-07 07:05:53,098 - WDM - INFO - Get LATEST chromedriver version for google-chrome
+2025-04-07 07:05:53,131 - WDM - INFO - Driver [/Users/hk/.wdm/drivers/chromedriver/mac64/134.0.6998.165/chromedriver-mac-arm64/chromedriver] found in cache
+2025-04-07 07:05:54,427 - __main__ - INFO - Chrome WebDriver initialized successfully
+2025-04-07 07:05:54,427 - __main__ - INFO - Navigating to https://topstartups.io/?hq_location=San+Francisco+Bay+Area&sort=funding
+2025-04-07 07:06:00,407 - __main__ - INFO - Stored new content hash: d41d8cd98f...
+2025-04-07 07:06:00,407 - __main__ - INFO - Loading all startups...
+2025-04-07 07:06:00,412 - __main__ - INFO - Scrolled to bottom (attempt 1)
+2025-04-07 07:06:03,458 - __main__ - INFO - Found 'Show more' element using text search
+2025-04-07 07:06:04,546 - __main__ - INFO - Clicked button using standard click
+2025-04-07 07:06:07,560 - __main__ - INFO - New content loaded, height changed from 13538 to 25097
+2025-04-07 07:06:07,575 - __main__ - INFO - Scrolled to bottom (attempt 2)
+2025-04-07 07:06:10,606 - __main__ - INFO - Found 'Show more' element using text search
+2025-04-07 07:06:13,018 - __main__ - INFO - Clicked button using JavaScript
+2025-04-07 07:06:16,351 - __main__ - INFO - New content loaded, height changed from 25097 to 13734
+2025-04-07 07:06:16,354 - __main__ - INFO - Scrolled to bottom (attempt 3)
+2025-04-07 07:06:19,376 - __main__ - INFO - Found 'Show more' element using text search
+2025-04-07 07:06:21,494 - __main__ - INFO - Clicked button using JavaScript
+2025-04-07 07:06:24,533 - __main__ - INFO - No new content detected, stopping scroll
+2025-04-07 07:06:24,534 - __main__ - INFO - Extracting startup data...
+2025-04-07 07:06:45,054 - __main__ - ERROR - Error in main process: Message: 
+Stacktrace:
+0   chromedriver                        0x0000000102f936c8 cxxbridge1$str$ptr + 2791212
+1   chromedriver                        0x0000000102f8bc9c cxxbridge1$str$ptr + 2759936
+2   chromedriver                        0x0000000102adde30 cxxbridge1$string$len + 92928
+3   chromedriver                        0x0000000102b25170 cxxbridge1$string$len + 384576
+4   chromedriver                        0x0000000102b665f8 cxxbridge1$string$len + 651976
+5   chromedriver                        0x0000000102b192fc cxxbridge1$string$len + 335820
+6   chromedriver                        0x0000000102f586c4 cxxbridge1$str$ptr + 2549544
+7   chromedriver                        0x0000000102f5b988 cxxbridge1$str$ptr + 2562540
+8   chromedriver                        0x0000000102f3871c cxxbridge1$str$ptr + 2418560
+9   chromedriver                        0x0000000102f5c1e8 cxxbridge1$str$ptr + 2564684
+10  chromedriver                        0x0000000102f29750 cxxbridge1$str$ptr + 2357172
+11  chromedriver                        0x0000000102f7bf58 cxxbridge1$str$ptr + 2695100
+12  chromedriver                        0x0000000102f7c0e0 cxxbridge1$str$ptr + 2695492
+13  chromedriver                        0x0000000102f8b910 cxxbridge1$str$ptr + 2759028
+14  libsystem_pthread.dylib             0x0000000187e23fa8 _pthread_start + 148
+15  libsystem_pthread.dylib             0x0000000187e1eda0 thread_start + 8
+
+2025-04-07 07:12:36,986 - __main__ - INFO - Running initial data collection
+2025-04-07 07:12:36,987 - WDM - INFO - ====== WebDriver manager ======
+2025-04-07 07:12:37,129 - WDM - INFO - Get LATEST chromedriver version for google-chrome
+2025-04-07 07:12:37,178 - WDM - INFO - Get LATEST chromedriver version for google-chrome
+2025-04-07 07:12:37,213 - WDM - INFO - Driver [/Users/hk/.wdm/drivers/chromedriver/mac64/134.0.6998.165/chromedriver-mac-arm64/chromedriver] found in cache
+2025-04-07 07:12:39,012 - __main__ - INFO - Chrome WebDriver initialized successfully
+2025-04-07 07:12:39,012 - __main__ - INFO - Navigating to https://topstartups.io/?hq_location=San+Francisco+Bay+Area&sort=funding
+2025-04-07 07:12:44,997 - __main__ - INFO - Stored new content hash: d41d8cd98f...
+2025-04-07 07:12:44,998 - __main__ - INFO - Loading all startups...
+2025-04-07 07:12:45,003 - __main__ - INFO - Scrolled to bottom (attempt 1)
+2025-04-07 07:12:48,054 - __main__ - INFO - Found 'Show more' element using text search
+2025-04-07 07:12:49,136 - __main__ - INFO - Clicked button using standard click
+2025-04-07 07:12:52,146 - __main__ - INFO - New content loaded, height changed from 13538 to 25097
+2025-04-07 07:12:52,150 - __main__ - ERROR - Error in main process: Message: stale element reference: stale element not found in the current frame
+  (Session info: chrome=134.0.6998.167); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#stale-element-reference-exception
+Stacktrace:
+0   chromedriver                        0x0000000102bbb6c8 cxxbridge1$str$ptr + 2791212
+1   chromedriver                        0x0000000102bb3c9c cxxbridge1$str$ptr + 2759936
+2   chromedriver                        0x0000000102705e30 cxxbridge1$string$len + 92928
+3   chromedriver                        0x000000010270bc58 cxxbridge1$string$len + 117032
+4   chromedriver                        0x000000010270dcfc cxxbridge1$string$len + 125388
+5   chromedriver                        0x000000010270dda4 cxxbridge1$string$len + 125556
+6   chromedriver                        0x000000010274ea24 cxxbridge1$string$len + 390900
+7   chromedriver                        0x0000000102742d00 cxxbridge1$string$len + 342480
+8   chromedriver                        0x0000000102742818 cxxbridge1$string$len + 341224
+9   chromedriver                        0x000000010278e5f8 cxxbridge1$string$len + 651976
+10  chromedriver                        0x00000001027412fc cxxbridge1$string$len + 335820
+11  chromedriver                        0x0000000102b806c4 cxxbridge1$str$ptr + 2549544
+12  chromedriver                        0x0000000102b83988 cxxbridge1$str$ptr + 2562540
+13  chromedriver                        0x0000000102b6071c cxxbridge1$str$ptr + 2418560
+14  chromedriver                        0x0000000102b841e8 cxxbridge1$str$ptr + 2564684
+15  chromedriver                        0x0000000102b51750 cxxbridge1$str$ptr + 2357172
+16  chromedriver                        0x0000000102ba3f58 cxxbridge1$str$ptr + 2695100
+17  chromedriver                        0x0000000102ba40e0 cxxbridge1$str$ptr + 2695492
+18  chromedriver                        0x0000000102bb3910 cxxbridge1$str$ptr + 2759028
+19  libsystem_pthread.dylib             0x0000000187e23fa8 _pthread_start + 148
+20  libsystem_pthread.dylib             0x0000000187e1eda0 thread_start + 8
+
+2025-04-07 07:30:47,737 - __main__ - INFO - Running initial data collection
+2025-04-07 07:30:47,738 - WDM - INFO - ====== WebDriver manager ======
+2025-04-07 07:30:47,928 - WDM - INFO - Get LATEST chromedriver version for google-chrome
+2025-04-07 07:30:48,001 - WDM - INFO - Get LATEST chromedriver version for google-chrome
+2025-04-07 07:30:48,038 - WDM - INFO - Driver [/Users/hk/.wdm/drivers/chromedriver/mac64/134.0.6998.165/chromedriver-mac-arm64/chromedriver] found in cache
+2025-04-07 07:30:50,141 - __main__ - INFO - Chrome WebDriver initialized successfully
+2025-04-07 07:30:50,141 - __main__ - INFO - Navigating to https://topstartups.io/?hq_location=San+Francisco+Bay+Area&sort=funding
+2025-04-07 07:30:56,108 - __main__ - INFO - Stored new content hash: d41d8cd98f...
+2025-04-07 07:30:56,109 - __main__ - INFO - Loading all startups...
+2025-04-07 07:30:56,114 - __main__ - INFO - Scrolled to bottom (attempt 1)
+2025-04-07 07:30:59,152 - __main__ - INFO - Found 'Show more' element using text search
+2025-04-07 07:31:00,198 - __main__ - INFO - Clicked button using standard click
+2025-04-07 07:31:06,212 - __main__ - INFO - New content loaded, height changed from 13350 to 24679
+2025-04-07 07:31:06,218 - __main__ - INFO - Scrolled to bottom (attempt 1)
+2025-04-07 07:31:09,261 - __main__ - INFO - Found 'Show more' element using text search
+2025-04-07 07:31:10,277 - __main__ - WARNING - Failed to click button with all methods: Message: stale element reference: stale element not found in the current frame
+  (Session info: chrome=134.0.6998.167); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#stale-element-reference-exception
+Stacktrace:
+0   chromedriver                        0x0000000100b576c8 cxxbridge1$str$ptr + 2791212
+1   chromedriver                        0x0000000100b4fc9c cxxbridge1$str$ptr + 2759936
+2   chromedriver                        0x00000001006a1e30 cxxbridge1$string$len + 92928
+3   chromedriver                        0x00000001006a7c58 cxxbridge1$string$len + 117032
+4   chromedriver                        0x00000001006a9f80 cxxbridge1$string$len + 126032
+5   chromedriver                        0x000000010072b3c4 cxxbridge1$string$len + 655508
+6   chromedriver                        0x000000010072a5f8 cxxbridge1$string$len + 651976
+7   chromedriver                        0x00000001006dd2fc cxxbridge1$string$len + 335820
+8   chromedriver                        0x0000000100b1c6c4 cxxbridge1$str$ptr + 2549544
+9   chromedriver                        0x0000000100b1f988 cxxbridge1$str$ptr + 2562540
+10  chromedriver                        0x0000000100afc71c cxxbridge1$str$ptr + 2418560
+11  chromedriver                        0x0000000100b201e8 cxxbridge1$str$ptr + 2564684
+12  chromedriver                        0x0000000100aed750 cxxbridge1$str$ptr + 2357172
+13  chromedriver                        0x0000000100b3ff58 cxxbridge1$str$ptr + 2695100
+14  chromedriver                        0x0000000100b400e0 cxxbridge1$str$ptr + 2695492
+15  chromedriver                        0x0000000100b4f910 cxxbridge1$str$ptr + 2759028
+16  libsystem_pthread.dylib             0x0000000187e23fa8 _pthread_start + 148
+17  libsystem_pthread.dylib             0x0000000187e1eda0 thread_start + 8
+
+2025-04-07 07:31:16,287 - __main__ - INFO - New content loaded, height changed from 24679 to 140993
+2025-04-07 07:31:16,292 - __main__ - INFO - Scrolled to bottom (attempt 1)
+2025-04-07 07:31:19,329 - __main__ - INFO - Found 'Show more' element using text search
+2025-04-07 07:31:20,341 - __main__ - WARNING - Failed to click button with all methods: Message: stale element reference: stale element not found in the current frame
+  (Session info: chrome=134.0.6998.167); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#stale-element-reference-exception
+Stacktrace:
+0   chromedriver                        0x0000000100b576c8 cxxbridge1$str$ptr + 2791212
+1   chromedriver                        0x0000000100b4fc9c cxxbridge1$str$ptr + 2759936
+2   chromedriver                        0x00000001006a1e30 cxxbridge1$string$len + 92928
+3   chromedriver                        0x00000001006a7c58 cxxbridge1$string$len + 117032
+4   chromedriver                        0x00000001006a9f80 cxxbridge1$string$len + 126032
+5   chromedriver                        0x000000010072b3c4 cxxbridge1$string$len + 655508
+6   chromedriver                        0x000000010072a5f8 cxxbridge1$string$len + 651976
+7   chromedriver                        0x00000001006dd2fc cxxbridge1$string$len + 335820
+8   chromedriver                        0x0000000100b1c6c4 cxxbridge1$str$ptr + 2549544
+9   chromedriver                        0x0000000100b1f988 cxxbridge1$str$ptr + 2562540
+10  chromedriver                        0x0000000100afc71c cxxbridge1$str$ptr + 2418560
+11  chromedriver                        0x0000000100b201e8 cxxbridge1$str$ptr + 2564684
+12  chromedriver                        0x0000000100aed750 cxxbridge1$str$ptr + 2357172
+13  chromedriver                        0x0000000100b3ff58 cxxbridge1$str$ptr + 2695100
+14  chromedriver                        0x0000000100b400e0 cxxbridge1$str$ptr + 2695492
+15  chromedriver                        0x0000000100b4f910 cxxbridge1$str$ptr + 2759028
+16  libsystem_pthread.dylib             0x0000000187e23fa8 _pthread_start + 148
+17  libsystem_pthread.dylib             0x0000000187e1eda0 thread_start + 8
+
+2025-04-07 07:31:26,350 - __main__ - INFO - New content loaded, height changed from 140993 to 257887
+2025-04-07 07:31:26,353 - __main__ - INFO - Scrolled to bottom (attempt 1)
+2025-04-07 07:31:29,386 - __main__ - INFO - Found 'Show more' element using text search
+2025-04-07 07:31:30,401 - __main__ - WARNING - Failed to click button with all methods: Message: stale element reference: stale element not found in the current frame
+  (Session info: chrome=134.0.6998.167); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#stale-element-reference-exception
+Stacktrace:
+0   chromedriver                        0x0000000100b576c8 cxxbridge1$str$ptr + 2791212
+1   chromedriver                        0x0000000100b4fc9c cxxbridge1$str$ptr + 2759936
+2   chromedriver                        0x00000001006a1e30 cxxbridge1$string$len + 92928
+3   chromedriver                        0x00000001006a7c58 cxxbridge1$string$len + 117032
+4   chromedriver                        0x00000001006a9f80 cxxbridge1$string$len + 126032
+5   chromedriver                        0x000000010072b3c4 cxxbridge1$string$len + 655508
+6   chromedriver                        0x000000010072a5f8 cxxbridge1$string$len + 651976
+7   chromedriver                        0x00000001006dd2fc cxxbridge1$string$len + 335820
+8   chromedriver                        0x0000000100b1c6c4 cxxbridge1$str$ptr + 2549544
+9   chromedriver                        0x0000000100b1f988 cxxbridge1$str$ptr + 2562540
+10  chromedriver                        0x0000000100afc71c cxxbridge1$str$ptr + 2418560
+11  chromedriver                        0x0000000100b201e8 cxxbridge1$str$ptr + 2564684
+12  chromedriver                        0x0000000100aed750 cxxbridge1$str$ptr + 2357172
+13  chromedriver                        0x0000000100b3ff58 cxxbridge1$str$ptr + 2695100
+14  chromedriver                        0x0000000100b400e0 cxxbridge1$str$ptr + 2695492
+15  chromedriver                        0x0000000100b4f910 cxxbridge1$str$ptr + 2759028
+16  libsystem_pthread.dylib             0x0000000187e23fa8 _pthread_start + 148
+17  libsystem_pthread.dylib             0x0000000187e1eda0 thread_start + 8
+
+2025-04-07 07:31:36,409 - __main__ - INFO - New content loaded, height changed from 257887 to 354332
+2025-04-07 07:31:36,412 - __main__ - INFO - Scrolled to bottom (attempt 1)
+2025-04-07 07:31:39,492 - __main__ - WARNING - Could not find 'Show more' button using any method
+2025-04-07 07:31:39,492 - __main__ - INFO - No 'Show more' button found, may have reached the end
+2025-04-07 07:31:39,493 - __main__ - INFO - No height change detected (attempt 2)
+2025-04-07 07:31:39,495 - __main__ - INFO - Scrolled to bottom (attempt 3)
+2025-04-07 07:31:42,584 - __main__ - WARNING - Could not find 'Show more' button using any method
+2025-04-07 07:31:42,584 - __main__ - INFO - No 'Show more' button found, may have reached the end
+2025-04-07 07:31:42,586 - __main__ - INFO - No height change detected (attempt 4)
+2025-04-07 07:31:42,586 - __main__ - INFO - No new content after multiple attempts, stopping scroll
+2025-04-07 07:31:42,586 - __main__ - INFO - Extracting startup data...
+2025-04-07 07:32:02,967 - __main__ - WARNING - Timeout waiting for startup cards to load
+2025-04-07 07:32:02,968 - __main__ - ERROR - No startup data extracted - check selectors
+2025-04-07 07:40:30,005 - __main__ - INFO - Starting initial scrape
+2025-04-07 07:40:30,005 - WDM - INFO - ====== WebDriver manager ======
+2025-04-07 07:40:30,139 - WDM - INFO - Get LATEST chromedriver version for google-chrome
+2025-04-07 07:40:30,181 - WDM - INFO - Get LATEST chromedriver version for google-chrome
+2025-04-07 07:40:30,221 - WDM - INFO - Driver [/Users/hk/.wdm/drivers/chromedriver/mac64/134.0.6998.165/chromedriver-mac-arm64/chromedriver] found in cache
+2025-04-07 07:40:31,943 - __main__ - INFO - Chrome WebDriver initialized successfully
+2025-04-07 07:40:52,940 - __main__ - WARNING - Load attempt failed: 'NoneType' object has no attribute 'is_displayed'
+2025-04-07 07:40:52,941 - __main__ - ERROR - Fatal error: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=134.0.6998.167)
+Stacktrace:
+0   chromedriver                        0x000000010059f6c8 cxxbridge1$str$ptr + 2791212
+1   chromedriver                        0x0000000100597c9c cxxbridge1$str$ptr + 2759936
+2   chromedriver                        0x00000001000e9e30 cxxbridge1$string$len + 92928
+3   chromedriver                        0x00000001000c3a00 chromedriver + 129536
+4   chromedriver                        0x0000000100159418 cxxbridge1$string$len + 549096
+5   chromedriver                        0x00000001001720f8 cxxbridge1$string$len + 650696
+6   chromedriver                        0x00000001001252fc cxxbridge1$string$len + 335820
+7   chromedriver                        0x00000001005646c4 cxxbridge1$str$ptr + 2549544
+8   chromedriver                        0x0000000100567988 cxxbridge1$str$ptr + 2562540
+9   chromedriver                        0x000000010054471c cxxbridge1$str$ptr + 2418560
+10  chromedriver                        0x00000001005681e8 cxxbridge1$str$ptr + 2564684
+11  chromedriver                        0x0000000100535750 cxxbridge1$str$ptr + 2357172
+12  chromedriver                        0x0000000100587f58 cxxbridge1$str$ptr + 2695100
+13  chromedriver                        0x00000001005880e0 cxxbridge1$str$ptr + 2695492
+14  chromedriver                        0x0000000100597910 cxxbridge1$str$ptr + 2759028
+15  libsystem_pthread.dylib             0x0000000187e23fa8 _pthread_start + 148
+16  libsystem_pthread.dylib             0x0000000187e1eda0 thread_start + 8
+
+2025-04-07 07:41:29,220 - __main__ - INFO - Starting initial scrape
+2025-04-07 07:41:29,220 - WDM - INFO - ====== WebDriver manager ======
+2025-04-07 07:41:29,348 - WDM - INFO - Get LATEST chromedriver version for google-chrome
+2025-04-07 07:41:29,402 - WDM - INFO - Get LATEST chromedriver version for google-chrome
+2025-04-07 07:41:29,435 - WDM - INFO - Driver [/Users/hk/.wdm/drivers/chromedriver/mac64/134.0.6998.165/chromedriver-mac-arm64/chromedriver] found in cache
+2025-04-07 07:41:30,648 - __main__ - INFO - Chrome WebDriver initialized successfully
+2025-04-07 07:41:53,961 - __main__ - WARNING - Could not find 'Show more' button using any method
+2025-04-07 07:42:04,640 - __main__ - WARNING - Load attempt failed: 'NoneType' object has no attribute 'is_displayed'
+2025-04-07 07:42:04,644 - __main__ - ERROR - Fatal error: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=134.0.6998.167)
+Stacktrace:
+0   chromedriver                        0x0000000102b0f6c8 cxxbridge1$str$ptr + 2791212
+1   chromedriver                        0x0000000102b07c9c cxxbridge1$str$ptr + 2759936
+2   chromedriver                        0x0000000102659e30 cxxbridge1$string$len + 92928
+3   chromedriver                        0x0000000102633a00 chromedriver + 129536
+4   chromedriver                        0x00000001026c9418 cxxbridge1$string$len + 549096
+5   chromedriver                        0x00000001026e20f8 cxxbridge1$string$len + 650696
+6   chromedriver                        0x00000001026952fc cxxbridge1$string$len + 335820
+7   chromedriver                        0x0000000102ad46c4 cxxbridge1$str$ptr + 2549544
+8   chromedriver                        0x0000000102ad7988 cxxbridge1$str$ptr + 2562540
+9   chromedriver                        0x0000000102ab471c cxxbridge1$str$ptr + 2418560
+10  chromedriver                        0x0000000102ad81e8 cxxbridge1$str$ptr + 2564684
+11  chromedriver                        0x0000000102aa5750 cxxbridge1$str$ptr + 2357172
+12  chromedriver                        0x0000000102af7f58 cxxbridge1$str$ptr + 2695100
+13  chromedriver                        0x0000000102af80e0 cxxbridge1$str$ptr + 2695492
+14  chromedriver                        0x0000000102b07910 cxxbridge1$str$ptr + 2759028
+15  libsystem_pthread.dylib             0x0000000187e23fa8 _pthread_start + 148
+16  libsystem_pthread.dylib             0x0000000187e1eda0 thread_start + 8
+
+2025-04-07 07:51:30,957 - __main__ - INFO - Running initial data collection
+2025-04-07 07:51:30,957 - WDM - INFO - ====== WebDriver manager ======
+2025-04-07 07:51:31,127 - WDM - INFO - Get LATEST chromedriver version for google-chrome
+2025-04-07 07:51:31,189 - WDM - INFO - Get LATEST chromedriver version for google-chrome
+2025-04-07 07:51:31,225 - WDM - INFO - Driver [/Users/hk/.wdm/drivers/chromedriver/mac64/134.0.6998.165/chromedriver-mac-arm64/chromedriver] found in cache
+2025-04-07 07:51:32,795 - __main__ - INFO - Chrome WebDriver initialized successfully
+2025-04-07 07:51:32,795 - __main__ - INFO - Navigating to https://topstartups.io/?hq_location=San+Francisco+Bay+Area&sort=funding
+2025-04-07 07:51:38,692 - __main__ - INFO - Stored new content hash: d41d8cd98f...
+2025-04-07 07:51:38,693 - __main__ - INFO - Loading all startups...
+2025-04-07 07:51:41,729 - __main__ - INFO - Found 'Show more' element using text search
+2025-04-07 07:51:51,919 - __main__ - WARNING - Button click failed: Message: 
+
+2025-04-07 07:51:54,946 - __main__ - INFO - Found 'Show more' element using text search
+2025-04-07 07:52:06,794 - __main__ - WARNING - Button click failed: Message: 
+
+2025-04-07 07:52:09,822 - __main__ - INFO - Found 'Show more' element using text search
+2025-04-07 07:52:20,003 - __main__ - WARNING - Button click failed: Message: 
+
+2025-04-07 07:52:20,004 - __main__ - INFO - No new content after 3 attempts
+2025-04-07 07:52:20,004 - __main__ - INFO - Extracting startup data...
+2025-04-07 07:58:15,416 - WDM - INFO - ====== WebDriver manager ======
+2025-04-07 07:58:15,515 - WDM - INFO - Get LATEST chromedriver version for google-chrome
+2025-04-07 07:58:15,557 - WDM - INFO - Get LATEST chromedriver version for google-chrome
+2025-04-07 07:58:15,595 - WDM - INFO - Driver [/Users/hk/.wdm/drivers/chromedriver/mac64/134.0.6998.165/chromedriver-mac-arm64/chromedriver] found in cache
+2025-04-07 07:58:17,590 - __main__ - INFO - Chrome WebDriver initialized successfully
+2025-04-07 07:59:06,308 - __main__ - ERROR - Main execution failed: Message: 
+Stacktrace:
+0   chromedriver                        0x0000000102d3b6c8 cxxbridge1$str$ptr + 2791212
+1   chromedriver                        0x0000000102d33c9c cxxbridge1$str$ptr + 2759936
+2   chromedriver                        0x0000000102885e30 cxxbridge1$string$len + 92928
+3   chromedriver                        0x00000001028cd170 cxxbridge1$string$len + 384576
+4   chromedriver                        0x000000010290e5f8 cxxbridge1$string$len + 651976
+5   chromedriver                        0x00000001028c12fc cxxbridge1$string$len + 335820
+6   chromedriver                        0x0000000102d006c4 cxxbridge1$str$ptr + 2549544
+7   chromedriver                        0x0000000102d03988 cxxbridge1$str$ptr + 2562540
+8   chromedriver                        0x0000000102ce071c cxxbridge1$str$ptr + 2418560
+9   chromedriver                        0x0000000102d041e8 cxxbridge1$str$ptr + 2564684
+10  chromedriver                        0x0000000102cd1750 cxxbridge1$str$ptr + 2357172
+11  chromedriver                        0x0000000102d23f58 cxxbridge1$str$ptr + 2695100
+12  chromedriver                        0x0000000102d240e0 cxxbridge1$str$ptr + 2695492
+13  chromedriver                        0x0000000102d33910 cxxbridge1$str$ptr + 2759028
+14  libsystem_pthread.dylib             0x0000000187e23fa8 _pthread_start + 148
+15  libsystem_pthread.dylib             0x0000000187e1eda0 thread_start + 8
+
+2025-04-07 08:41:53,552 - TopStartupsScraper - INFO - Directory structure created
+2025-04-07 08:41:53,555 - TopStartupsScraper - INFO - Starting TopStartups.io scraper
+2025-04-07 08:41:53,555 - TopStartupsScraper - INFO - Setting up Chrome browser...
+2025-04-07 08:41:53,555 - WDM - INFO - ====== WebDriver manager ======
+2025-04-07 08:41:53,729 - WDM - INFO - Get LATEST chromedriver version for google-chrome
+2025-04-07 08:41:53,777 - WDM - INFO - Get LATEST chromedriver version for google-chrome
+2025-04-07 08:41:53,810 - WDM - INFO - Driver [/Users/hk/.wdm/drivers/chromedriver/mac64/134.0.6998.165/chromedriver-mac-arm64/chromedriver] found in cache
+2025-04-07 08:41:55,581 - TopStartupsScraper - INFO - Loading initial page: https://topstartups.io/?hq_location=San+Francisco+Bay+Area&sort=funding
+2025-04-07 08:42:01,143 - TopStartupsScraper - INFO - Found 20 startup cards (was 0)
+2025-04-07 08:42:01,954 - TopStartupsScraper - INFO - Clicked 'Show More' button (Attempt 1)
+2025-04-07 08:42:05,469 - TopStartupsScraper - INFO - Found 58 startup cards (was 20)
+2025-04-07 08:42:07,228 - TopStartupsScraper - INFO - Clicked 'Show More' button (Attempt 2)
+2025-04-07 08:42:11,286 - TopStartupsScraper - INFO - Clicked 'Show More' button (Attempt 3)
+2025-04-07 08:42:16,355 - TopStartupsScraper - ERROR - Critical error: Message: element click intercepted: Element is not clickable at point (720, 961)
+  (Session info: chrome=134.0.6998.167)
+Stacktrace:
+0   chromedriver                        0x000000010147f6c8 cxxbridge1$str$ptr + 2791212
+1   chromedriver                        0x0000000101477c9c cxxbridge1$str$ptr + 2759936
+2   chromedriver                        0x0000000100fc9e30 cxxbridge1$string$len + 92928
+3   chromedriver                        0x0000000101016be8 cxxbridge1$string$len + 407736
+4   chromedriver                        0x0000000101015178 cxxbridge1$string$len + 400968
+5   chromedriver                        0x0000000101012f8c cxxbridge1$string$len + 392284
+6   chromedriver                        0x0000000101012388 cxxbridge1$string$len + 389208
+7   chromedriver                        0x0000000101006d8c cxxbridge1$string$len + 342620
+8   chromedriver                        0x0000000101006818 cxxbridge1$string$len + 341224
+9   chromedriver                        0x00000001010525f8 cxxbridge1$string$len + 651976
+10  chromedriver                        0x00000001010052fc cxxbridge1$string$len + 335820
+11  chromedriver                        0x00000001014446c4 cxxbridge1$str$ptr + 2549544
+12  chromedriver                        0x0000000101447988 cxxbridge1$str$ptr + 2562540
+13  chromedriver                        0x000000010142471c cxxbridge1$str$ptr + 2418560
+14  chromedriver                        0x00000001014481e8 cxxbridge1$str$ptr + 2564684
+15  chromedriver                        0x0000000101415750 cxxbridge1$str$ptr + 2357172
+16  chromedriver                        0x0000000101467f58 cxxbridge1$str$ptr + 2695100
+17  chromedriver                        0x00000001014680e0 cxxbridge1$str$ptr + 2695492
+18  chromedriver                        0x0000000101477910 cxxbridge1$str$ptr + 2759028
+19  libsystem_pthread.dylib             0x0000000187e23fa8 _pthread_start + 148
+20  libsystem_pthread.dylib             0x0000000187e1eda0 thread_start + 8
+
+2025-04-07 08:42:16,360 - TopStartupsScraper - ERROR - Traceback (most recent call last):
+  File "/Users/hk/Downloads/DSFinalYearProject/ArealTimeData/TopStartupIo.py", line 273, in run
+    self.load_all_content()
+  File "/Users/hk/Downloads/DSFinalYearProject/ArealTimeData/TopStartupIo.py", line 108, in load_all_content
+    show_more_button.click()
+  File "/Users/hk/Downloads/DSFinalYearProject/.venv/lib/python3.12/site-packages/selenium/webdriver/remote/webelement.py", line 119, in click
+    self._execute(Command.CLICK_ELEMENT)
+  File "/Users/hk/Downloads/DSFinalYearProject/.venv/lib/python3.12/site-packages/selenium/webdriver/remote/webelement.py", line 572, in _execute
+    return self._parent.execute(command, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/hk/Downloads/DSFinalYearProject/.venv/lib/python3.12/site-packages/selenium/webdriver/remote/webdriver.py", line 429, in execute
+    self.error_handler.check_response(response)
+  File "/Users/hk/Downloads/DSFinalYearProject/.venv/lib/python3.12/site-packages/selenium/webdriver/remote/errorhandler.py", line 232, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.ElementClickInterceptedException: Message: element click intercepted: Element is not clickable at point (720, 961)
+  (Session info: chrome=134.0.6998.167)
+Stacktrace:
+0   chromedriver                        0x000000010147f6c8 cxxbridge1$str$ptr + 2791212
+1   chromedriver                        0x0000000101477c9c cxxbridge1$str$ptr + 2759936
+2   chromedriver                        0x0000000100fc9e30 cxxbridge1$string$len + 92928
+3   chromedriver                        0x0000000101016be8 cxxbridge1$string$len + 407736
+4   chromedriver                        0x0000000101015178 cxxbridge1$string$len + 400968
+5   chromedriver                        0x0000000101012f8c cxxbridge1$string$len + 392284
+6   chromedriver                        0x0000000101012388 cxxbridge1$string$len + 389208
+7   chromedriver                        0x0000000101006d8c cxxbridge1$string$len + 342620
+8   chromedriver                        0x0000000101006818 cxxbridge1$string$len + 341224
+9   chromedriver                        0x00000001010525f8 cxxbridge1$string$len + 651976
+10  chromedriver                        0x00000001010052fc cxxbridge1$string$len + 335820
+11  chromedriver                        0x00000001014446c4 cxxbridge1$str$ptr + 2549544
+12  chromedriver                        0x0000000101447988 cxxbridge1$str$ptr + 2562540
+13  chromedriver                        0x000000010142471c cxxbridge1$str$ptr + 2418560
+14  chromedriver                        0x00000001014481e8 cxxbridge1$str$ptr + 2564684
+15  chromedriver                        0x0000000101415750 cxxbridge1$str$ptr + 2357172
+16  chromedriver                        0x0000000101467f58 cxxbridge1$str$ptr + 2695100
+17  chromedriver                        0x00000001014680e0 cxxbridge1$str$ptr + 2695492
+18  chromedriver                        0x0000000101477910 cxxbridge1$str$ptr + 2759028
+19  libsystem_pthread.dylib             0x0000000187e23fa8 _pthread_start + 148
+20  libsystem_pthread.dylib             0x0000000187e1eda0 thread_start + 8
+
+
+2025-04-07 08:42:16,523 - TopStartupsScraper - INFO - Browser closed
+2025-04-07 08:45:52,346 - TopStartupsScraper - INFO - Directory structure created
+2025-04-07 08:46:57,641 - TopStartupsScraper - INFO - Directory structure created
+2025-04-07 08:46:57,644 - TopStartupsScraper - INFO - Starting TopStartups.io scraper
+2025-04-07 08:46:57,644 - TopStartupsScraper - INFO - Setting up Chrome browser...
+2025-04-07 08:46:57,644 - WDM - INFO - ====== WebDriver manager ======
+2025-04-07 08:46:57,791 - WDM - INFO - Get LATEST chromedriver version for google-chrome
+2025-04-07 08:46:57,835 - WDM - INFO - Get LATEST chromedriver version for google-chrome
+2025-04-07 08:46:57,870 - WDM - INFO - Driver [/Users/hk/.wdm/drivers/chromedriver/mac64/134.0.6998.165/chromedriver-mac-arm64/chromedriver] found in cache
+2025-04-07 08:46:59,564 - TopStartupsScraper - INFO - Loading initial page: https://topstartups.io/?hq_location=San+Francisco+Bay+Area&sort=funding
+2025-04-07 08:47:25,493 - TopStartupsScraper - INFO - No more content to load
+2025-04-07 08:47:25,494 - TopStartupsScraper - INFO - Finished loading after 0 attempts
+2025-04-07 08:47:25,494 - TopStartupsScraper - INFO - Starting data extraction...
+2025-04-07 08:47:25,502 - TopStartupsScraper - INFO - Found 20 startup cards to process
+2025-04-07 08:47:25,615 - TopStartupsScraper - INFO - Processed 20/20 startup cards
+2025-04-07 08:47:25,615 - TopStartupsScraper - INFO - Successfully extracted 20 startups
+2025-04-07 08:47:25,616 - TopStartupsScraper - INFO - Saved 20 startups to data/json/bay_area_startups_20250407_084725.json
+2025-04-07 08:47:25,617 - TopStartupsScraper - INFO - Saved 20 startups to data/csv/bay_area_startups_20250407_084725.csv
+2025-04-07 08:47:25,617 - TopStartupsScraper - INFO - Scraping completed successfully
+2025-04-07 08:47:25,807 - TopStartupsScraper - INFO - Browser closed
+2025-04-07 08:48:00,174 - TopStartupsScraper - INFO - Directory structure created
+2025-04-07 08:48:00,176 - TopStartupsScraper - INFO - Starting TopStartups.io scraper
+2025-04-07 08:48:00,176 - TopStartupsScraper - INFO - Setting up Chrome browser...
+2025-04-07 08:48:00,176 - WDM - INFO - ====== WebDriver manager ======
+2025-04-07 08:48:00,304 - WDM - INFO - Get LATEST chromedriver version for google-chrome
+2025-04-07 08:48:00,353 - WDM - INFO - Get LATEST chromedriver version for google-chrome
+2025-04-07 08:48:00,396 - WDM - INFO - Driver [/Users/hk/.wdm/drivers/chromedriver/mac64/134.0.6998.165/chromedriver-mac-arm64/chromedriver] found in cache
+2025-04-07 08:48:01,689 - TopStartupsScraper - INFO - Loading initial page: https://topstartups.io/?hq_location=San+Francisco+Bay+Area&sort=funding
+2025-04-07 08:48:28,627 - TopStartupsScraper - INFO - No more content to load
+2025-04-07 08:48:28,629 - TopStartupsScraper - INFO - Finished loading after 0 attempts
+2025-04-07 08:48:28,629 - TopStartupsScraper - INFO - Starting data extraction...
+2025-04-07 08:48:28,636 - TopStartupsScraper - INFO - Found 20 startup cards to process
+2025-04-07 08:48:28,713 - TopStartupsScraper - INFO - Processed 20/20 startup cards
+2025-04-07 08:48:28,713 - TopStartupsScraper - INFO - Successfully extracted 20 startups
+2025-04-07 08:48:28,715 - TopStartupsScraper - INFO - Saved 20 startups to data/json/bay_area_startups_20250407_084828.json
+2025-04-07 08:48:28,716 - TopStartupsScraper - INFO - Saved 20 startups to data/csv/bay_area_startups_20250407_084828.csv
+2025-04-07 08:48:28,717 - TopStartupsScraper - INFO - Scraping completed successfully
+2025-04-07 08:48:28,954 - TopStartupsScraper - INFO - Browser closed
+2025-04-07 08:50:20,267 - TopStartupsScraper - INFO - Directory structure created
+2025-04-07 08:50:20,270 - TopStartupsScraper - INFO - Starting TopStartups.io scraper
+2025-04-07 08:50:20,270 - TopStartupsScraper - INFO - Setting up Chrome browser...
+2025-04-07 08:50:20,270 - WDM - INFO - ====== WebDriver manager ======
+2025-04-07 08:50:20,406 - WDM - INFO - Get LATEST chromedriver version for google-chrome
+2025-04-07 08:50:20,450 - WDM - INFO - Get LATEST chromedriver version for google-chrome
+2025-04-07 08:50:20,487 - WDM - INFO - Driver [/Users/hk/.wdm/drivers/chromedriver/mac64/134.0.6998.165/chromedriver-mac-arm64/chromedriver] found in cache
+2025-04-07 08:50:21,952 - TopStartupsScraper - INFO - Loading initial page: https://topstartups.io/?hq_location=San+Francisco+Bay+Area&sort=funding
+2025-04-07 08:50:44,798 - TopStartupsScraper - INFO - No more content to load
+2025-04-07 08:50:44,799 - TopStartupsScraper - INFO - Final count: 0 startups loaded
+2025-04-07 08:50:44,800 - TopStartupsScraper - INFO - Starting data extraction...
+2025-04-07 08:50:44,806 - TopStartupsScraper - INFO - Found 20 startup cards to process
+2025-04-07 08:50:44,911 - TopStartupsScraper - INFO - Processed 20/20 startup cards
+2025-04-07 08:50:44,911 - TopStartupsScraper - INFO - Successfully extracted 20 startups
+2025-04-07 08:50:44,911 - TopStartupsScraper - INFO - Saved 20 startups to data/json/bay_area_startups_20250407_085044.json
+2025-04-07 08:50:44,911 - TopStartupsScraper - INFO - Saved 20 startups to data/csv/bay_area_startups_20250407_085044.csv
+2025-04-07 08:50:44,911 - TopStartupsScraper - INFO - Scraping completed successfully
+2025-04-07 08:50:45,013 - TopStartupsScraper - INFO - Browser closed

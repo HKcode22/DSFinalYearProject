@@ -1,0 +1,144 @@
+API Data Sources
+DataSF API
+
+https://data.sfgov.org/resource/g8m3-pdis.json (Registered Business Locations)
+
+https://data.sfgov.org/resource/i98e-djp9.json (Building Permits)
+
+RocketReach API (simulated)
+
+https://api.rocketreach.co/v2/api/company/list
+
+GitHub Repositories
+https://raw.githubusercontent.com/kyang01/startup-analysis/master/data/funding.csv
+
+https://raw.githubusercontent.com/nihalrai/tech-companies-bay-area/main/Bay-Area-Companies-List.csv
+
+https://raw.githubusercontent.com/connor11528/tech-companies-and-startups/master/silicon-valley-companies.csv
+
+Web Scraping Targets
+Y Combinator
+
+https://www.ycombinator.com/companies/location/san-francisco-bay-area
+
+https://www.ycombinator.com/companies/industry/developer-tools/san-francisco-bay-area
+
+https://www.ycombinator.com/companies/industry/saas/san-francisco-bay-area
+
+https://www.ycombinator.com/companies/industry/data-engineering/san-francisco-bay-area
+
+https://www.ycombinator.com/companies/industry/api/san-francisco-bay-area
+
+https://www.ycombinator.com/companies/industry/operations/san-francisco-bay-area
+
+AngelList/Wellfound
+
+https://wellfound.com/startups/location/san-francisco-bay-area
+
+https://wellfound.com/job-collections/fastest-growing-startups-in-san-francisco-hiring-now
+
+Growth List
+
+https://growthlist.co/san-francisco-startups/
+
+CB Insights
+
+https://www.cbinsights.com/research/top-venture-capital-partners-unicorns/
+
+StartupBlink
+
+https://www.startupblink.com/top-startups/san-francisco-ca-us
+
+TechCrunch
+
+https://techcrunch.com/search/San+Francisco+startup
+
+Venture Capital Portfolio Pages
+https://a16z.com/portfolio/ (Andreessen Horowitz)
+
+https://www.sequoiacap.com/companies/ (Sequoia Capital)
+
+https://greylock.com/companies/ (Greylock)
+
+https://www.khoslaventures.com/portfolio (Khosla Ventures)
+
+https://www.accel.com/companies (Accel)
+
+Economic Development Organizations
+https://www.samceda.org/tech-companies (San Mateo County)
+
+https://siliconvalleycentralchamber.org/membership-directory/ (Santa Clara County)
+
+These links represent the primary sources of data used in the Python scripts to gather information on Bay Area startups, including company details, funding information, and business registrations.
+
+DataSF API:
+
+https://data.sfgov.org/resource/g8m3-pdis.json (Registered Business Locations)
+
+https://data.sfgov.org/resource/i98e-djp9.json (Building Permits)
+
+https://data.sfgov.org/resource/u6xu-nkq2.json (Business Register)
+
+Y Combinator:
+
+https://www.ycombinator.com/companies/location/san-francisco-bay-area
+
+https://www.ycombinator.com/companies/industry/developer-tools/san-francisco-bay-area
+
+https://www.ycombinator.com/companies/industry/saas/san-francisco-bay-area
+
+https://www.ycombinator.com/companies/industry/data-engineering/san-francisco-bay-area
+
+https://www.ycombinator.com/companies/industry/api/san-francisco-bay-area
+
+https://www.ycombinator.com/companies/industry/operations/san-francisco-bay-area
+
+https://www.ycombinator.com/companies/industry/design-tools/san-francisco-bay-area
+
+https://www.ycombinator.com/companies/industry/engineering-product-and-design/san-francisco-bay-area
+
+https://www.ycombinator.com/companies/industry/ai/san-francisco-bay-area
+
+https://www.ycombinator.com/companies/industry/b2b/san-francisco-bay-area
+
+https://www.ycombinator.com/companies/industry/fintech/san-francisco-bay-area
+
+AngelList/Wellfound:
+
+https://wellfound.com/startups/location/san-francisco-bay-area
+
+https://wellfound.com/job-collections/fastest-growing-startups-in-san-francisco-hiring-now
+
+GitHub Repositories:
+
+https://raw.githubusercontent.com/kyang01/startup-analysis/master/data/funding.csv
+
+https://raw.githubusercontent.com/nihalrai/tech-companies-bay-area/main/Bay-Area-Companies-List.csv
+
+https://raw.githubusercontent.com/connor11528/tech-companies-and-startups/master/silicon-valley-companies.csv
+
+Growth List:
+
+https://growthlist.co/san-francisco-startups/
+
+TechCrunch:
+
+https://techcrunch.com/search/San+Francisco+startup
+
+Crunchbase API (simulated):
+
+https://api.crunchbase.com/api/v4/searches/organizations
+
+RocketReach API (simulated):
+
+https://api.rocketreach.co/v2/api/company/list
+
+CB Insights:
+
+https://www.cbinsights.com/research/top-venture-capital-partners-unicorns/
+
+StartupBlink:
+
+https://www.startupblink.com/top-startups/san-francisco-ca-us
+
+These sources are used across the provided Python files to gather information on Bay Area startups, including company details, funding information, and business registrations.

@@ -1,0 +1,91 @@
+2025-04-07 08:55:46,503 - TopStartupsScraper - INFO - Initializing Chrome browser
+2025-04-07 08:55:46,503 - WDM - INFO - ====== WebDriver manager ======
+2025-04-07 08:55:46,642 - WDM - INFO - Get LATEST chromedriver version for google-chrome
+2025-04-07 08:55:46,699 - WDM - INFO - Get LATEST chromedriver version for google-chrome
+2025-04-07 08:55:46,741 - WDM - INFO - Driver [/Users/hk/.wdm/drivers/chromedriver/mac64/134.0.6998.165/chromedriver-mac-arm64/chromedriver] found in cache
+2025-04-07 08:55:48,212 - TopStartupsScraper - INFO - Loading https://topstartups.io/?hq_location=San+Francisco+Bay+Area&sort=funding
+2025-04-07 08:55:54,193 - TopStartupsScraper - INFO - Removed overlays
+2025-04-07 08:56:09,502 - TopStartupsScraper - WARNING - Click attempt 1 failed: Message: 
+Stacktrace:
+0   chromedriver                        0x0000000102ed36c8 cxxbridge1$str$ptr + 2791212
+1   chromedriver                        0x0000000102ecbc9c cxxbridge1$str$ptr + 2759936
+2   chromedriver                        0x0000000102a1de30 cxxbridge1$string$len + 92928
+3   chromedriver                        0x0000000102a65170 cxxbridge1$string$len + 384576
+4   chromedriver                        0x0000000102aa65f8 cxxbridge1$string$len + 651976
+5   chromedriver                        0x0000000102a592fc cxxbridge1$string$len + 335820
+6   chromedriver                        0x0000000102e986c4 cxxbridge1$str$ptr + 2549544
+7   chromedriver                        0x0000000102e9b988 cxxbridge1$str$ptr + 2562540
+8   chromedriver                        0x0000000102e7871c cxxbridge1$str$ptr + 2418560
+9   chromedriver                        0x0000000102e9c1e8 cxxbridge1$str$ptr + 2564684
+10  chromedriver                        0x0000000102e69750 cxxbridge1$str$ptr + 2357172
+11  chromedriver                        0x0000000102ebbf58 cxxbridge1$str$ptr + 2695100
+12  chromedriver                        0x0000000102ebc0e0 cxxbridge1$str$ptr + 2695492
+13  chromedriver                        0x0000000102ecb910 cxxbridge1$str$ptr + 2759028
+14  libsystem_pthread.dylib             0x0000000187e23fa8 _pthread_start + 148
+15  libsystem_pthread.dylib             0x0000000187e1eda0 thread_start + 8
+
+2025-04-07 08:56:11,513 - TopStartupsScraper - INFO - Removed overlays
+2025-04-07 08:56:26,801 - TopStartupsScraper - WARNING - Click attempt 2 failed: Message: 
+Stacktrace:
+0   chromedriver                        0x0000000102ed36c8 cxxbridge1$str$ptr + 2791212
+1   chromedriver                        0x0000000102ecbc9c cxxbridge1$str$ptr + 2759936
+2   chromedriver                        0x0000000102a1de30 cxxbridge1$string$len + 92928
+3   chromedriver                        0x0000000102a65170 cxxbridge1$string$len + 384576
+4   chromedriver                        0x0000000102aa65f8 cxxbridge1$string$len + 651976
+5   chromedriver                        0x0000000102a592fc cxxbridge1$string$len + 335820
+6   chromedriver                        0x0000000102e986c4 cxxbridge1$str$ptr + 2549544
+7   chromedriver                        0x0000000102e9b988 cxxbridge1$str$ptr + 2562540
+8   chromedriver                        0x0000000102e7871c cxxbridge1$str$ptr + 2418560
+9   chromedriver                        0x0000000102e9c1e8 cxxbridge1$str$ptr + 2564684
+10  chromedriver                        0x0000000102e69750 cxxbridge1$str$ptr + 2357172
+11  chromedriver                        0x0000000102ebbf58 cxxbridge1$str$ptr + 2695100
+12  chromedriver                        0x0000000102ebc0e0 cxxbridge1$str$ptr + 2695492
+13  chromedriver                        0x0000000102ecb910 cxxbridge1$str$ptr + 2759028
+14  libsystem_pthread.dylib             0x0000000187e23fa8 _pthread_start + 148
+15  libsystem_pthread.dylib             0x0000000187e1eda0 thread_start + 8
+
+2025-04-07 08:56:28,810 - TopStartupsScraper - INFO - Removed overlays
+2025-04-07 08:56:44,080 - TopStartupsScraper - WARNING - Click attempt 3 failed: Message: 
+Stacktrace:
+0   chromedriver                        0x0000000102ed36c8 cxxbridge1$str$ptr + 2791212
+1   chromedriver                        0x0000000102ecbc9c cxxbridge1$str$ptr + 2759936
+2   chromedriver                        0x0000000102a1de30 cxxbridge1$string$len + 92928
+3   chromedriver                        0x0000000102a65170 cxxbridge1$string$len + 384576
+4   chromedriver                        0x0000000102aa65f8 cxxbridge1$string$len + 651976
+5   chromedriver                        0x0000000102a592fc cxxbridge1$string$len + 335820
+6   chromedriver                        0x0000000102e986c4 cxxbridge1$str$ptr + 2549544
+7   chromedriver                        0x0000000102e9b988 cxxbridge1$str$ptr + 2562540
+8   chromedriver                        0x0000000102e7871c cxxbridge1$str$ptr + 2418560
+9   chromedriver                        0x0000000102e9c1e8 cxxbridge1$str$ptr + 2564684
+10  chromedriver                        0x0000000102e69750 cxxbridge1$str$ptr + 2357172
+11  chromedriver                        0x0000000102ebbf58 cxxbridge1$str$ptr + 2695100
+12  chromedriver                        0x0000000102ebc0e0 cxxbridge1$str$ptr + 2695492
+13  chromedriver                        0x0000000102ecb910 cxxbridge1$str$ptr + 2759028
+14  libsystem_pthread.dylib             0x0000000187e23fa8 _pthread_start + 148
+15  libsystem_pthread.dylib             0x0000000187e1eda0 thread_start + 8
+
+2025-04-07 08:56:46,086 - TopStartupsScraper - INFO - No more 'Show More' buttons found
+2025-04-07 08:56:46,086 - TopStartupsScraper - INFO - Loaded 0 startup cards
+2025-04-07 08:56:46,086 - TopStartupsScraper - INFO - Extracting startup data
+2025-04-07 08:56:46,115 - TopStartupsScraper - ERROR - Error processing card 2: 'NoneType' object has no attribute 'text'
+2025-04-07 08:56:46,119 - TopStartupsScraper - ERROR - Error processing card 3: 'NoneType' object has no attribute 'text'
+2025-04-07 08:56:46,122 - TopStartupsScraper - ERROR - Error processing card 4: 'NoneType' object has no attribute 'text'
+2025-04-07 08:56:46,124 - TopStartupsScraper - ERROR - Error processing card 5: 'NoneType' object has no attribute 'text'
+2025-04-07 08:56:46,128 - TopStartupsScraper - ERROR - Error processing card 6: 'NoneType' object has no attribute 'text'
+2025-04-07 08:56:46,132 - TopStartupsScraper - ERROR - Error processing card 7: 'NoneType' object has no attribute 'text'
+2025-04-07 08:56:46,136 - TopStartupsScraper - ERROR - Error processing card 8: 'NoneType' object has no attribute 'text'
+2025-04-07 08:56:46,139 - TopStartupsScraper - ERROR - Error processing card 9: 'NoneType' object has no attribute 'text'
+2025-04-07 08:56:46,142 - TopStartupsScraper - ERROR - Error processing card 10: 'NoneType' object has no attribute 'text'
+2025-04-07 08:56:46,145 - TopStartupsScraper - ERROR - Error processing card 11: 'NoneType' object has no attribute 'text'
+2025-04-07 08:56:46,148 - TopStartupsScraper - ERROR - Error processing card 12: 'NoneType' object has no attribute 'text'
+2025-04-07 08:56:46,152 - TopStartupsScraper - ERROR - Error processing card 13: 'NoneType' object has no attribute 'text'
+2025-04-07 08:56:46,155 - TopStartupsScraper - ERROR - Error processing card 14: 'NoneType' object has no attribute 'text'
+2025-04-07 08:56:46,158 - TopStartupsScraper - ERROR - Error processing card 15: 'NoneType' object has no attribute 'text'
+2025-04-07 08:56:46,161 - TopStartupsScraper - ERROR - Error processing card 16: 'NoneType' object has no attribute 'text'
+2025-04-07 08:56:46,164 - TopStartupsScraper - ERROR - Error processing card 17: 'NoneType' object has no attribute 'text'
+2025-04-07 08:56:46,168 - TopStartupsScraper - ERROR - Error processing card 18: 'NoneType' object has no attribute 'text'
+2025-04-07 08:56:46,171 - TopStartupsScraper - ERROR - Error processing card 19: 'NoneType' object has no attribute 'text'
+2025-04-07 08:56:46,174 - TopStartupsScraper - INFO - Extracted 2 startups
+2025-04-07 08:56:46,175 - TopStartupsScraper - INFO - Saved JSON to data/json/startups_20250407_085646.json
+2025-04-07 08:56:46,176 - TopStartupsScraper - INFO - Saved CSV to data/csv/startups_20250407_085646.csv
+2025-04-07 08:56:46,269 - TopStartupsScraper - INFO - Browser closed

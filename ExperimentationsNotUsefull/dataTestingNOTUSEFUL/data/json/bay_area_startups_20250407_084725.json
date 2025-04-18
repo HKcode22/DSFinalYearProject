@@ -1,0 +1,332 @@
+[
+  {
+    "name": "Unknown",
+    "description": "N/A",
+    "headquarters": "N/A",
+    "funding": [],
+    "website": "N/A",
+    "industries": [],
+    "company_size": "N/A",
+    "founded": "N/A"
+  },
+  {
+    "name": "Numeric",
+    "description": "Building the next-gen financial data platformEnterprise SoftwareFinTechAccounting",
+    "headquarters": "San Francisco Bay Area, California, USA",
+    "funding": [
+      "Founders Fund",
+      "Menlo VC",
+      "IVP",
+      "$28M Series A in 2024"
+    ],
+    "website": "https://www.numeric.io/?utm_source=topstartups.io",
+    "industries": [
+      "Enterprise Software",
+      "FinTech",
+      "Accounting"
+    ],
+    "company_size": "11-50 employees",
+    "founded": "2021"
+  },
+  {
+    "name": "Render",
+    "description": "Help 2M+ developers build, deploy, and scale apps with unparalleled easeSaaSEnterprise SoftwareDeveloper Tools",
+    "headquarters": "San Francisco Bay Area, California, USA",
+    "funding": [
+      "Bessemer",
+      "General Catalyst",
+      "$80M Series C in 2025"
+    ],
+    "website": "https://www.render.com/?utm_source=topstartups.io",
+    "industries": [
+      "SaaS",
+      "Enterprise Software",
+      "Developer Tools"
+    ],
+    "company_size": "51-100 employees",
+    "founded": "2018"
+  },
+  {
+    "name": "Harvey",
+    "description": "AI provider for legal workersArtificial IntelligenceLegal",
+    "headquarters": "San Francisco Bay Area, California, USA",
+    "funding": [
+      "Sequoia",
+      "Kleiner Perkins",
+      "$300M Series D in 2025",
+      "$3.0B valuation"
+    ],
+    "website": "https://www.harvey.ai/?utm_source=topstartups.io",
+    "industries": [
+      "Artificial Intelligence",
+      "Legal"
+    ],
+    "company_size": "201-500 employees",
+    "founded": "2021"
+  },
+  {
+    "name": "Semgrep",
+    "description": "Profoundly improving software security and reliabilityCybersecuritySaaS",
+    "headquarters": "San Francisco Bay Area, California, USA",
+    "funding": [
+      "Sequoia",
+      "$100M Series D in 2025"
+    ],
+    "website": "https://semgrep.dev/?utm_source=topstartups.io",
+    "industries": [
+      "Cybersecurity",
+      "SaaS"
+    ],
+    "company_size": "201-500 employees",
+    "founded": "2017"
+  },
+  {
+    "name": "HighTouch.io",
+    "description": "Sync customer data to your SaaS, marketing, sales, and success platforms.MarketingEnterprise SoftwareSaaSSales",
+    "headquarters": "San Francisco Bay Area, California, USA",
+    "funding": [
+      "Y Combinator",
+      "$80M Series C in 2025",
+      "$1.2B valuation"
+    ],
+    "website": "http://www.hightouch.io/?utm_source=topstartups.io",
+    "industries": [
+      "Marketing",
+      "Enterprise Software",
+      "SaaS",
+      "Sales"
+    ],
+    "company_size": "11-50 employees",
+    "founded": "2018"
+  },
+  {
+    "name": "Qventus",
+    "description": "Qventus optimizes decisions in hospitals in real time to reduce costs, improve quality and experience.Predictive AnalyticsHealthcare",
+    "headquarters": "San Francisco Bay Area, California, USA",
+    "funding": [
+      "Bessemer",
+      "Y Combinator",
+      "$85M Series D in 2025"
+    ],
+    "website": "http://www.qventus.com/?utm_source=topstartups.io",
+    "industries": [
+      "Predictive Analytics",
+      "Healthcare"
+    ],
+    "company_size": "101-200 employees",
+    "founded": "2012"
+  },
+  {
+    "name": "Speak",
+    "description": "Language learning app that gets you talkingSaaSConsumerArtificial Intelligence",
+    "headquarters": "San Francisco Bay Area, California, USA",
+    "funding": [
+      "Accel",
+      "$78M Series C in 2024",
+      "$1.0B valuation"
+    ],
+    "website": "https://www.speak.com/?utm_source=topstartups.io",
+    "industries": [
+      "SaaS",
+      "Consumer",
+      "Artificial Intelligence"
+    ],
+    "company_size": "11-50 employees",
+    "founded": "2016"
+  },
+  {
+    "name": "Databricks",
+    "description": "Databricks is a data-and-AI company that interacts with corporate information stored in the public cloud.Artificial IntelligenceSaaSAnalyticsData Science",
+    "headquarters": "San Francisco Bay Area, California, USA",
+    "funding": [
+      "Andreessen Horowitz",
+      "$10B Series J in 2024",
+      "$62.0B valuation"
+    ],
+    "website": "http://databricks.com/?utm_source=topstartups.io",
+    "industries": [
+      "Artificial Intelligence",
+      "SaaS",
+      "Analytics",
+      "Data Science"
+    ],
+    "company_size": "5000+ employees",
+    "founded": "2013"
+  },
+  {
+    "name": "Kong",
+    "description": "Kong offers the industry-leading service connectivity platform designed for modern architectures.Enterprise SoftwareSaaS",
+    "headquarters": "San Francisco Bay Area, California, USA",
+    "funding": [
+      "Andreessen Horowitz",
+      "$175M Series E in 2024",
+      "$2.0B valuation"
+    ],
+    "website": "https://konghq.com/?utm_source=topstartups.io",
+    "industries": [
+      "Enterprise Software",
+      "SaaS"
+    ],
+    "company_size": "201-500 employees",
+    "founded": "2017"
+  },
+  {
+    "name": "Cresta",
+    "description": "Cresta leverages artificial intelligence to help sales and service agents improve the quality of their customer serviceArtificial IntelligenceSalesEnterprise Software",
+    "headquarters": "San Francisco Bay Area, California, USA",
+    "funding": [
+      "Sequoia",
+      "Andreessen Horowitz",
+      "$125M Series D in 2024"
+    ],
+    "website": "http://cresta.com/?utm_source=topstartups.io",
+    "industries": [
+      "Artificial Intelligence",
+      "Sales",
+      "Enterprise Software"
+    ],
+    "company_size": "201-500 employees",
+    "founded": "2017"
+  },
+  {
+    "name": "Infinitus",
+    "description": "AI healthcare company focused on automating complex phone-based workflowsHealthArtificial Intelligence",
+    "headquarters": "San Francisco Bay Area, California, USA",
+    "funding": [
+      "Andreessen Horowitz",
+      "Kleiner Perkins",
+      "$51M Series C in 2024"
+    ],
+    "website": "https://www.infinitus.ai/?utm_source=topstartups.io",
+    "industries": [
+      "Health",
+      "Artificial Intelligence"
+    ],
+    "company_size": "101-200 employees",
+    "founded": "2019"
+  },
+  {
+    "name": "Nooks",
+    "description": "AI dialing and prospecting platform, trusted by thousands of SDRs & AEs to cut out the busyworkArtificial IntelligenceSales",
+    "headquarters": "San Francisco Bay Area, California, USA",
+    "funding": [
+      "Kleiner Perkins",
+      "$43M Series B in 2024"
+    ],
+    "website": "https://www.nooks.ai/?utm_source=topstartups.io",
+    "industries": [
+      "Artificial Intelligence",
+      "Sales"
+    ],
+    "company_size": "51-100 employees",
+    "founded": "2020"
+  },
+  {
+    "name": "Decagon",
+    "description": "Develops AI support agents for enterpriseArtificial IntelligenceEnterprise Software",
+    "headquarters": "San Francisco Bay Area, California, USA",
+    "funding": [
+      "Andreessen Horowitz",
+      "Accel",
+      "$65M Series B in 2024"
+    ],
+    "website": "https://decagon.ai/?utm_source=topstartups.io",
+    "industries": [
+      "Artificial Intelligence",
+      "Enterprise Software"
+    ],
+    "company_size": "11-50 employees",
+    "founded": "2023"
+  },
+  {
+    "name": "World Labs",
+    "description": "Develops AI models with spatial intelligence for 3D world perception and interactionArtificial Intelligence",
+    "headquarters": "San Francisco Bay Area, California, USA",
+    "funding": [
+      "Andreessen Horowitz",
+      "$230M Series A in 2024",
+      "$1.0B valuation"
+    ],
+    "website": "https://www.worldlabs.ai/?utm_source=topstartups.io",
+    "industries": [
+      "Artificial Intelligence"
+    ],
+    "company_size": "11-50 employees",
+    "founded": "2023"
+  },
+  {
+    "name": "Safe Superintelligence",
+    "description": "World's first straight-shot safe superintelligence labArtificial Intelligence",
+    "headquarters": "San Francisco Bay Area, California, USA",
+    "funding": [
+      "Sequoia",
+      "Andreessen Horowitz",
+      "$1B Series A in 2024"
+    ],
+    "website": "https://ssi.inc/?utm_source=topstartups.io",
+    "industries": [
+      "Artificial Intelligence"
+    ],
+    "company_size": "1-10 employees",
+    "founded": "2024"
+  },
+  {
+    "name": "Harmonic",
+    "description": "Building the world’s most advanced mathematical reasoning engineArtificial Intelligence",
+    "headquarters": "San Francisco Bay Area, California, USA",
+    "funding": [
+      "Sequoia",
+      "$75M Series A in 2024"
+    ],
+    "website": "https://harmonic.fun/index/?utm_source=topstartups.io",
+    "industries": [
+      "Artificial Intelligence"
+    ],
+    "company_size": "11-50 employees",
+    "founded": "2023"
+  },
+  {
+    "name": "Atlys",
+    "description": "Atlys makes it fast for anyone to get a visa.ImmigrationTravel",
+    "headquarters": "San Francisco Bay Area, California, USA",
+    "funding": [
+      "Andreessen Horowitz",
+      "Sequoia",
+      "Accel",
+      "$20M Series B in 2024"
+    ],
+    "website": "https://www.atlys.com/?utm_source=topstartups.io",
+    "industries": [
+      "Immigration",
+      "Travel"
+    ],
+    "company_size": "11-50 employees",
+    "founded": "2020"
+  },
+  {
+    "name": "Cortex",
+    "description": "Cortex is a software platform that manages and operates microservices.Enterprise SoftwareDeveloper Tools",
+    "headquarters": "San Francisco Bay Area, California, USA",
+    "funding": [
+      "Sequoia",
+      "$60M Series C in 2024"
+    ],
+    "website": "https://www.cortex.io/?utm_source=topstartups.io",
+    "industries": [
+      "Enterprise Software",
+      "Developer Tools"
+    ],
+    "company_size": "101-200 employees",
+    "founded": "2019"
+  },
+  {
+    "name": "Get newly funded startups delivered to you weekly",
+    "description": "N/A",
+    "headquarters": "N/A",
+    "funding": [],
+    "website": "N/A",
+    "industries": [],
+    "company_size": "N/A",
+    "founded": "N/A"
+  }
+]

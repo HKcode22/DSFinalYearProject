@@ -1,0 +1,750 @@
+[
+    {
+        "name": "Unknown Company",
+        "description": null,
+        "logo_url": null,
+        "tags": [],
+        "quick_facts": {
+            "hq": null,
+            "employees": "1-10 employees",
+            "founded": null
+        },
+        "funding": {
+            "investors": [],
+            "details": [],
+            "valuation": null
+        },
+        "website_url": null,
+        "scraped_at": "2025-03-28 06:34:40"
+    },
+    {
+        "name": "Unknown Company",
+        "description": "Quick facts:\n📍HQ: San Francisco Bay Area, California, USA\n51-100 employees Founded: 2010",
+        "logo_url": "https://images.crunchbase.com/image/upload/c_lpad,h_170,w_170,f_auto,b_white,q_auto:eco,dpr_1/xnpnyd2pafa4blsvwjfu",
+        "tags": [
+            "Hardware",
+            "Robotics",
+            "Restaurants",
+            "51-100 employees",
+            "Founded: 2010",
+            "Khosla Ventures",
+            "Raised $18M in 2017"
+        ],
+        "quick_facts": {
+            "hq": null,
+            "employees": "51-100 employees",
+            "founded": "2010"
+        },
+        "funding": {
+            "investors": [
+                "Khosla Ventures"
+            ],
+            "details": [
+                "Raised $18M in 2017"
+            ],
+            "valuation": null
+        },
+        "website_url": "http://momentummachines.com/?utm_source=topstartups.io",
+        "scraped_at": "2025-03-28 06:34:40"
+    },
+    {
+        "name": "Unknown Company",
+        "description": "Quick facts:\n📍HQ: San Francisco Bay Area, California, USA\n51-100 employees Founded: 2010",
+        "logo_url": "https://img-cdn.tnwcdn.com/image?url=https%3A%2F%2Fpbs.twimg.com%2Fprofile_images%2F1117854469499150338%2FfSg7U74N.png&signature=0cc7ba5b79db26c362f32d414bf24023",
+        "tags": [
+            "Food & Drinks",
+            "Delivery",
+            "51-100 employees",
+            "Founded: 2010",
+            "Khosla Ventures",
+            "Andreessen Horowitz",
+            "$27M Series B in 2017"
+        ],
+        "quick_facts": {
+            "hq": null,
+            "employees": "51-100 employees",
+            "founded": "2010"
+        },
+        "funding": {
+            "investors": [
+                "Khosla Ventures",
+                "Andreessen Horowitz"
+            ],
+            "details": [
+                "$27M Series B in 2017"
+            ],
+            "valuation": null
+        },
+        "website_url": "http://gobble.com/?utm_source=topstartups.io",
+        "scraped_at": "2025-03-28 06:34:40"
+    },
+    {
+        "name": "Unknown Company",
+        "description": "Quick facts:\n📍HQ: San Francisco Bay Area, California, USA\n11-50 employees Founded: 2014",
+        "logo_url": "https://img-cdn.tnwcdn.com/image?url=https%3A%2F%2Fpbs.twimg.com%2Fprofile_images%2F588144994982039552%2FqOstDO8Z.png&signature=18358e61866ded3aa692ea0c5c24a188",
+        "tags": [
+            "Artificial Intelligence",
+            "Healthcare",
+            "Robotics",
+            "Hardware",
+            "11-50 employees",
+            "Founded: 2014",
+            "Khosla Ventures",
+            "Raised $5M in 2017"
+        ],
+        "quick_facts": {
+            "hq": null,
+            "employees": "11-50 employees",
+            "founded": "2014"
+        },
+        "funding": {
+            "investors": [
+                "Khosla Ventures"
+            ],
+            "details": [
+                "Raised $5M in 2017"
+            ],
+            "valuation": null
+        },
+        "website_url": "http://cataliahealth.com/?utm_source=topstartups.io",
+        "scraped_at": "2025-03-28 06:34:40"
+    },
+    {
+        "name": "Unknown Company",
+        "description": "Quick facts:\n📍HQ: San Francisco Bay Area, California, USA\n11-50 employees Founded: 2013",
+        "logo_url": "https://img-cdn.tnwcdn.com/image?url=https%3A%2F%2Fpbs.twimg.com%2Fprofile_images%2F570186072630386688%2FSybuW2vi.png&signature=8964f2e64fa78eaa4bada651c747e2bd",
+        "tags": [
+            "Consumer",
+            "Artificial Intelligence",
+            "11-50 employees",
+            "Founded: 2013",
+            "Khosla Ventures",
+            "Y Combinator",
+            "$6M Series A in 2017"
+        ],
+        "quick_facts": {
+            "hq": null,
+            "employees": "11-50 employees",
+            "founded": "2013"
+        },
+        "funding": {
+            "investors": [
+                "Khosla Ventures",
+                "Y Combinator"
+            ],
+            "details": [
+                "$6M Series A in 2017"
+            ],
+            "valuation": null
+        },
+        "website_url": "http://replika.ai/?utm_source=topstartups.io",
+        "scraped_at": "2025-03-28 06:34:40"
+    },
+    {
+        "name": "Unknown Company",
+        "description": "Quick facts:\n📍HQ: San Francisco Bay Area, California, USA\n5000+ employees Founded: 2011",
+        "logo_url": "https://img-cdn.tnwcdn.com/image?url=https%3A%2F%2Fpbs.twimg.com%2Fprofile_images%2F1410632725048958977%2FuAfhOs6R.jpg&signature=1cfbcc7d9aef3ea1d64d77c060c734c3",
+        "tags": [
+            "Enterprise Software",
+            "SaaS",
+            "Collaboration",
+            "Meeting Software",
+            "5000+ employees",
+            "Founded: 2011",
+            "Sequoia",
+            "Post-IPO",
+            "$23.0B valuation"
+        ],
+        "quick_facts": {
+            "hq": null,
+            "employees": "5000+ employees",
+            "founded": "2011"
+        },
+        "funding": {
+            "investors": [
+                "Sequoia",
+                "Post-IPO"
+            ],
+            "details": [
+                "$23.0B valuation"
+            ],
+            "valuation": "$23.0B valuation"
+        },
+        "website_url": "http://zoom.us/?utm_source=topstartups.io",
+        "scraped_at": "2025-03-28 06:34:40"
+    },
+    {
+        "name": "Unknown Company",
+        "description": "Quick facts:\n📍HQ: San Francisco Bay Area, California, USA\n1001-5000 employees Founded: 2012",
+        "logo_url": "https://img-cdn.tnwcdn.com/image?url=https%3A%2F%2Fpbs.twimg.com%2Fprofile_images%2F1047971818169090050%2FZ7PYbFgj.jpg&signature=d51cf3fc316d2c27de3e35a3d33fa1f8",
+        "tags": [
+            "Biotech",
+            "Healthcare",
+            "1001-5000 employees",
+            "Founded: 2012",
+            "Sequoia",
+            "Khosla Ventures",
+            "Post-IPO",
+            "$5.0B valuation"
+        ],
+        "quick_facts": {
+            "hq": null,
+            "employees": "1001-5000 employees",
+            "founded": "2012"
+        },
+        "funding": {
+            "investors": [
+                "Sequoia",
+                "Khosla Ventures",
+                "Post-IPO"
+            ],
+            "details": [
+                "$5.0B valuation"
+            ],
+            "valuation": "$5.0B valuation"
+        },
+        "website_url": "http://www.guardanthealth.com/?utm_source=topstartups.io",
+        "scraped_at": "2025-03-28 06:34:40"
+    },
+    {
+        "name": "Unknown Company",
+        "description": "Quick facts:\n📍HQ: San Francisco Bay Area, California, USA\n11-50 employees Founded: 2014",
+        "logo_url": "https://img-cdn.tnwcdn.com/image?url=https%3A%2F%2Fpbs.twimg.com%2Fprofile_images%2F1316854732686794753%2FqKZIEW56.png&signature=7e8779f3e558290665f7d129d877a072",
+        "tags": [
+            "Cyptocurrency",
+            "11-50 employees",
+            "Founded: 2014",
+            "Sequoia",
+            "Andreessen Horowitz",
+            "Raised $257M in 2017"
+        ],
+        "quick_facts": {
+            "hq": null,
+            "employees": "11-50 employees",
+            "founded": "2014"
+        },
+        "funding": {
+            "investors": [
+                "Sequoia",
+                "Andreessen Horowitz"
+            ],
+            "details": [
+                "Raised $257M in 2017"
+            ],
+            "valuation": null
+        },
+        "website_url": "http://filecoin.io/?utm_source=topstartups.io",
+        "scraped_at": "2025-03-28 06:34:41"
+    },
+    {
+        "name": "Unknown Company",
+        "description": "Quick facts:\n📍HQ: San Francisco Bay Area, California, USA\n51-100 employees Founded: 2015",
+        "logo_url": "https://img-cdn.tnwcdn.com/image?url=https%3A%2F%2Fpbs.twimg.com%2Fprofile_images%2F740289631338397696%2FzDGlt55h.jpg&signature=79643b3b9ffc2c5d1496cdc150a2c500",
+        "tags": [
+            "Cybersecurity",
+            "Data Science",
+            "Machine Learning",
+            "Artificial Intelligence",
+            "51-100 employees",
+            "Founded: 2015",
+            "Accel",
+            "Raised $17M in 2016"
+        ],
+        "quick_facts": {
+            "hq": null,
+            "employees": "51-100 employees",
+            "founded": "2015"
+        },
+        "funding": {
+            "investors": [
+                "Accel"
+            ],
+            "details": [
+                "Raised $17M in 2016"
+            ],
+            "valuation": null
+        },
+        "website_url": "http://www.acalvio.com/?utm_source=topstartups.io",
+        "scraped_at": "2025-03-28 06:34:41"
+    },
+    {
+        "name": "Unknown Company",
+        "description": "Quick facts:\n📍HQ: San Francisco Bay Area, California, USA\n11-50 employees Founded: 2011",
+        "logo_url": "https://img-cdn.tnwcdn.com/image?url=https%3A%2F%2Fpbs.twimg.com%2Fprofile_images%2F998605002632445952%2FLyRlB68F.jpg&signature=42fc9d0eddcf6df27ffc42941671fb73",
+        "tags": [
+            "Enterprise Software",
+            "Sales and Marketing",
+            "Sales Automation",
+            "11-50 employees",
+            "Founded: 2011",
+            "Y Combinator",
+            "$20M Series B in 2016"
+        ],
+        "quick_facts": {
+            "hq": null,
+            "employees": "11-50 employees",
+            "founded": "2011"
+        },
+        "funding": {
+            "investors": [
+                "Y Combinator"
+            ],
+            "details": [
+                "$20M Series B in 2016"
+            ],
+            "valuation": null
+        },
+        "website_url": "http://www.leadgenius.com/?utm_source=topstartups.io",
+        "scraped_at": "2025-03-28 06:34:41"
+    },
+    {
+        "name": "Unknown Company",
+        "description": "Quick facts:\n📍HQ: San Francisco Bay Area, California, USA\n11-50 employees Founded: 2016",
+        "logo_url": "https://img-cdn.tnwcdn.com/image?url=https%3A%2F%2Fpbs.twimg.com%2Fprofile_images%2F751639147509493760%2F4irbvv-f.jpg&signature=3971ee3a66b944054b24fac2bc39fbc2",
+        "tags": [
+            "Nonprofit",
+            "Politics",
+            "11-50 employees",
+            "Founded: 2016",
+            "Y Combinator",
+            "$120K Seed in 2016"
+        ],
+        "quick_facts": {
+            "hq": null,
+            "employees": "11-50 employees",
+            "founded": "2016"
+        },
+        "funding": {
+            "investors": [
+                "Y Combinator"
+            ],
+            "details": [
+                "$120K Seed in 2016"
+            ],
+            "valuation": null
+        },
+        "website_url": "http://www.vote.org/?utm_source=topstartups.io",
+        "scraped_at": "2025-03-28 06:34:41"
+    },
+    {
+        "name": "Unknown Company",
+        "description": "Quick facts:\n📍HQ: San Francisco Bay Area, California, USA\n1-10 employees Founded: 2014",
+        "logo_url": "https://img-cdn.tnwcdn.com/image?url=https%3A%2F%2Fpbs.twimg.com%2Fprofile_images%2F1153815792917463042%2FoCxDX0Mf.jpg&signature=cb236a85f2a468349bbd64a410aca660",
+        "tags": [
+            "Travel",
+            "Luxury",
+            "1-10 employees",
+            "Founded: 2014",
+            "Y Combinator",
+            "$6M Series A in 2016"
+        ],
+        "quick_facts": {
+            "hq": null,
+            "employees": "1-10 employees",
+            "founded": "2014"
+        },
+        "funding": {
+            "investors": [
+                "Y Combinator"
+            ],
+            "details": [
+                "$6M Series A in 2016"
+            ],
+            "valuation": null
+        },
+        "website_url": "http://www.suiteness.com/?utm_source=topstartups.io",
+        "scraped_at": "2025-03-28 06:34:41"
+    },
+    {
+        "name": "Unknown Company",
+        "description": "Quick facts:\n📍HQ: San Francisco Bay Area, California, USA\n51-100 employees Founded: 2014",
+        "logo_url": "https://img-cdn.tnwcdn.com/image?url=https%3A%2F%2Fpbs.twimg.com%2Fprofile_images%2F502171171870097408%2Fkei0C2b2.jpeg&signature=21ff0336f6a250613481da75b1eb4cc6",
+        "tags": [
+            "Mobile Healthcare",
+            "Healthcare",
+            "Medical Devices",
+            "Diagnostics",
+            "51-100 employees",
+            "Founded: 2014",
+            "Y Combinator",
+            "Raised $120K in 2016"
+        ],
+        "quick_facts": {
+            "hq": null,
+            "employees": "51-100 employees",
+            "founded": "2014"
+        },
+        "funding": {
+            "investors": [
+                "Y Combinator"
+            ],
+            "details": [
+                "Raised $120K in 2016"
+            ],
+            "valuation": null
+        },
+        "website_url": "http://www.luminostics.com/?utm_source=topstartups.io",
+        "scraped_at": "2025-03-28 06:34:41"
+    },
+    {
+        "name": "Unknown Company",
+        "description": "Quick facts:\n📍HQ: San Francisco Bay Area, California, USA\n1-10 employees Founded: 2015",
+        "logo_url": "https://img-cdn.tnwcdn.com/image?url=https%3A%2F%2Fpbs.twimg.com%2Fprofile_images%2F976036700974698496%2Fd2GmPGcU.jpg&signature=d0205b5a45124af6142176eecd081025",
+        "tags": [
+            "Drones",
+            "Cybersecurity",
+            "Hardware",
+            "1-10 employees",
+            "Founded: 2015",
+            "Y Combinator",
+            "Raised $0 in 2016"
+        ],
+        "quick_facts": {
+            "hq": null,
+            "employees": "1-10 employees",
+            "founded": "2015"
+        },
+        "funding": {
+            "investors": [
+                "Y Combinator"
+            ],
+            "details": [
+                "Raised $0 in 2016"
+            ],
+            "valuation": null
+        },
+        "website_url": "http://apolloshield.com/?utm_source=topstartups.io",
+        "scraped_at": "2025-03-28 06:34:41"
+    },
+    {
+        "name": "Unknown Company",
+        "description": "Quick facts:\n📍HQ: San Francisco Bay Area, California, USA\n101-200 employees Founded: 2008",
+        "logo_url": "https://img-cdn.tnwcdn.com/image?url=https%3A%2F%2Fpbs.twimg.com%2Fprofile_images%2F1399756606087131147%2FZUD3zBgA.png&signature=08ebfb3ef6720e8a8f5f0d4314dfd34d",
+        "tags": [
+            "Crowdfunding",
+            "101-200 employees",
+            "Founded: 2008",
+            "Kleiner Perkins",
+            "$74M Series C in 2016"
+        ],
+        "quick_facts": {
+            "hq": null,
+            "employees": "101-200 employees",
+            "founded": "2008"
+        },
+        "funding": {
+            "investors": [
+                "Kleiner Perkins"
+            ],
+            "details": [
+                "$74M Series C in 2016"
+            ],
+            "valuation": null
+        },
+        "website_url": "http://www.indiegogo.com/?utm_source=topstartups.io",
+        "scraped_at": "2025-03-28 06:34:41"
+    },
+    {
+        "name": "Unknown Company",
+        "description": "Quick facts:\n📍HQ: San Francisco Bay Area, California, USA\n101-200 employees Founded: 2013",
+        "logo_url": "https://img-cdn.tnwcdn.com/image?url=https%3A%2F%2Fpbs.twimg.com%2Fprofile_images%2F1217557327856857088%2F24gbqgBz.jpg&signature=ef44abc367ecfc22bd5aaa4990a47c68",
+        "tags": [
+            "SaaS",
+            "Employee Benefits",
+            "Loyalty Programs",
+            "101-200 employees",
+            "Founded: 2013",
+            "Andreessen Horowitz",
+            "$26M Series A in 2016"
+        ],
+        "quick_facts": {
+            "hq": null,
+            "employees": "101-200 employees",
+            "founded": "2013"
+        },
+        "funding": {
+            "investors": [
+                "Andreessen Horowitz"
+            ],
+            "details": [
+                "$26M Series A in 2016"
+            ],
+            "valuation": null
+        },
+        "website_url": "http://www.anyperk.com/?utm_source=topstartups.io",
+        "scraped_at": "2025-03-28 06:34:41"
+    },
+    {
+        "name": "Unknown Company",
+        "description": "Quick facts:\n📍HQ: San Francisco Bay Area, California, USA\n51-100 employees Founded: 2009",
+        "logo_url": "https://img-cdn.tnwcdn.com/image?url=https%3A%2F%2Fpbs.twimg.com%2Fprofile_images%2F796087678798163968%2F_9k-Kq79.jpg&signature=b210dc5b6f567bfd98df9b90c1b788e9",
+        "tags": [
+            "Enterprise Software",
+            "51-100 employees",
+            "Founded: 2009",
+            "Khosla Ventures",
+            "Y Combinator",
+            "$22M Series B in 2016"
+        ],
+        "quick_facts": {
+            "hq": null,
+            "employees": "51-100 employees",
+            "founded": "2009"
+        },
+        "funding": {
+            "investors": [
+                "Khosla Ventures",
+                "Y Combinator"
+            ],
+            "details": [
+                "$22M Series B in 2016"
+            ],
+            "valuation": null
+        },
+        "website_url": "http://www.quartzy.com/?utm_source=topstartups.io",
+        "scraped_at": "2025-03-28 06:34:42"
+    },
+    {
+        "name": "Unknown Company",
+        "description": "Quick facts:\n📍HQ: San Francisco Bay Area, California, USA\n11-50 employees Founded: 2011",
+        "logo_url": "https://img-cdn.tnwcdn.com/image?url=https%3A%2F%2Fpbs.twimg.com%2Fprofile_images%2F378800000667447069%2F4f4aadad9772dd9eeaa6be6b5dd42dce.png&signature=ef57768f80c0e7b2cb9c5e59b81ac7c1",
+        "tags": [
+            "Mobile",
+            "Wireless",
+            "11-50 employees",
+            "Founded: 2011",
+            "Khosla Ventures",
+            "$45M Series C in 2016"
+        ],
+        "quick_facts": {
+            "hq": null,
+            "employees": "11-50 employees",
+            "founded": "2011"
+        },
+        "funding": {
+            "investors": [
+                "Khosla Ventures"
+            ],
+            "details": [
+                "$45M Series C in 2016"
+            ],
+            "valuation": null
+        },
+        "website_url": "http://www.kumunetworks.com/?utm_source=topstartups.io",
+        "scraped_at": "2025-03-28 06:34:42"
+    },
+    {
+        "name": "Unknown Company",
+        "description": "Quick facts:\n📍HQ: San Francisco Bay Area, California, USA\n11-50 employees Founded: 2014",
+        "logo_url": "https://img-cdn.tnwcdn.com/image?url=https%3A%2F%2Fpbs.twimg.com%2Fprofile_images%2F880875087276064768%2FgFve90xX.jpg&signature=42eb425b3b334b2efe345a1be5590ecf",
+        "tags": [
+            "E-Commerce",
+            "Food & Drinks",
+            "11-50 employees",
+            "Founded: 2014",
+            "Khosla Ventures",
+            "Seed in 2016"
+        ],
+        "quick_facts": {
+            "hq": null,
+            "employees": "11-50 employees",
+            "founded": "2014"
+        },
+        "funding": {
+            "investors": [
+                "Khosla Ventures",
+                "Seed in 2016"
+            ],
+            "details": [],
+            "valuation": null
+        },
+        "website_url": "http://bit.ly/3-piquetea?utm_source=topstartups.io",
+        "scraped_at": "2025-03-28 06:34:42"
+    },
+    {
+        "name": "Unknown Company",
+        "description": null,
+        "logo_url": null,
+        "tags": [],
+        "quick_facts": {
+            "hq": null,
+            "employees": null,
+            "founded": null
+        },
+        "funding": {
+            "investors": [],
+            "details": [],
+            "valuation": null
+        },
+        "website_url": null,
+        "scraped_at": "2025-03-28 06:34:42"
+    },
+    {
+        "name": "Unknown Company",
+        "description": "Quick facts:\n📍HQ: San Francisco Bay Area, California, USA\n11-50 employees Founded: 2012",
+        "logo_url": "https://img-cdn.tnwcdn.com/image?url=https%3A%2F%2Fpbs.twimg.com%2Fprofile_images%2F1280215066520870914%2FkxkaF5E3.png&signature=6c2efea6694720445e1a3fac8b2a5ff1",
+        "tags": [
+            "Healthcare",
+            "Fitness",
+            "Employee Benefits",
+            "11-50 employees",
+            "Founded: 2012",
+            "Khosla Ventures",
+            "$7M Series B in 2016"
+        ],
+        "quick_facts": {
+            "hq": null,
+            "employees": "11-50 employees",
+            "founded": "2012"
+        },
+        "funding": {
+            "investors": [
+                "Khosla Ventures"
+            ],
+            "details": [
+                "$7M Series B in 2016"
+            ],
+            "valuation": null
+        },
+        "website_url": "http://www.grokker.com/?utm_source=topstartups.io",
+        "scraped_at": "2025-03-28 06:34:42"
+    },
+    {
+        "name": "Unknown Company",
+        "description": "Quick facts:\n📍HQ: San Francisco Bay Area, California, USA\n501-1000 employees Founded: 2010",
+        "logo_url": "https://img-cdn.tnwcdn.com/image?url=https%3A%2F%2Fpbs.twimg.com%2Fprofile_images%2F1368729223121231875%2FvqJ0WtX3.jpg&signature=1541c1754f8569e99a67d54ee136e47c",
+        "tags": [
+            "Mobile Analytics",
+            "SaaS",
+            "Enterprise Software",
+            "501-1000 employees",
+            "Founded: 2010",
+            "Sequoia",
+            "$157M Series E in 2016",
+            "$450M valuation"
+        ],
+        "quick_facts": {
+            "hq": null,
+            "employees": "501-1000 employees",
+            "founded": "2010"
+        },
+        "funding": {
+            "investors": [
+                "Sequoia"
+            ],
+            "details": [
+                "$157M Series E in 2016",
+                "$450M valuation"
+            ],
+            "valuation": "$450M valuation"
+        },
+        "website_url": "https://www.data.ai/en/?utm_source=topstartups.io",
+        "scraped_at": "2025-03-28 06:34:42"
+    },
+    {
+        "name": "Unknown Company",
+        "description": "Quick facts:\n📍HQ: San Francisco Bay Area, California, USA\n11-50 employees Founded: 2013",
+        "logo_url": "https://img-cdn.tnwcdn.com/image?url=https%3A%2F%2Fpbs.twimg.com%2Fprofile_images%2F575529646520819712%2Fmwwxp0Pz.png&signature=a53562e710d1b414276307ddbc70ed64",
+        "tags": [
+            "Music",
+            "11-50 employees",
+            "Founded: 2013",
+            "Sequoia",
+            "$10M Series B in 2016"
+        ],
+        "quick_facts": {
+            "hq": null,
+            "employees": "11-50 employees",
+            "founded": "2013"
+        },
+        "funding": {
+            "investors": [
+                "Sequoia"
+            ],
+            "details": [
+                "$10M Series B in 2016"
+            ],
+            "valuation": null
+        },
+        "website_url": "http://www.smartpiano.com/?utm_source=topstartups.io",
+        "scraped_at": "2025-03-28 06:34:42"
+    },
+    {
+        "name": "Unknown Company",
+        "description": "Quick facts:\n📍HQ: San Francisco Bay Area, California, USA\n501-1000 employees Founded: 2014",
+        "logo_url": "https://img-cdn.tnwcdn.com/image?url=https%3A%2F%2Fpbs.twimg.com%2Fprofile_images%2F616011573136470016%2FJ9u9lrfw.jpg&signature=8775e92219767969ee3666e4a2ea628c",
+        "tags": [
+            "Healthcare",
+            "Insurance",
+            "501-1000 employees",
+            "Founded: 2014",
+            "Sequoia",
+            "Post-IPO",
+            "$1.0B valuation"
+        ],
+        "quick_facts": {
+            "hq": null,
+            "employees": "501-1000 employees",
+            "founded": "2014"
+        },
+        "funding": {
+            "investors": [
+                "Sequoia",
+                "Post-IPO"
+            ],
+            "details": [
+                "$1.0B valuation"
+            ],
+            "valuation": "$1.0B valuation"
+        },
+        "website_url": "http://www.cloverhealth.com/?utm_source=topstartups.io",
+        "scraped_at": "2025-03-28 06:34:42"
+    },
+    {
+        "name": "Unknown Company",
+        "description": "Quick facts:\n📍HQ: San Francisco Bay Area, California, USA\n11-50 employees Founded: 2012",
+        "logo_url": "https://img-cdn.tnwcdn.com/image?url=https%3A%2F%2Fpbs.twimg.com%2Fprofile_images%2F1171453426678415367%2FU64UY39B.jpg&signature=7ef739ac301bfd6fb1fac07ef1e3f8a6",
+        "tags": [
+            "E-Commerce",
+            "Loyalty Programs",
+            "11-50 employees",
+            "Founded: 2012",
+            "Sequoia",
+            "$23M Series B in 2016"
+        ],
+        "quick_facts": {
+            "hq": null,
+            "employees": "11-50 employees",
+            "founded": "2012"
+        },
+        "funding": {
+            "investors": [
+                "Sequoia"
+            ],
+            "details": [
+                "$23M Series B in 2016"
+            ],
+            "valuation": null
+        },
+        "website_url": "http://www.thanx.com/?utm_source=topstartups.io",
+        "scraped_at": "2025-03-28 06:34:42"
+    },
+    {
+        "name": "Unknown Company",
+        "description": null,
+        "logo_url": null,
+        "tags": [],
+        "quick_facts": {
+            "hq": null,
+            "employees": null,
+            "founded": null
+        },
+        "funding": {
+            "investors": [],
+            "details": [],
+            "valuation": null
+        },
+        "website_url": null,
+        "scraped_at": "2025-03-28 06:34:42"
+    }
+]

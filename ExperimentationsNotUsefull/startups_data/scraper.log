@@ -1,0 +1,23 @@
+[05:38:58] 🚀 Scraper instance initialized
+[05:39:00] ✅ Browser initialized successfully
+[05:39:00] 🌐 Navigating to target URL...
+[05:39:21] ❌ Navigation failed: Message: 
+Stacktrace:
+0   chromedriver                        0x0000000104af2dec cxxbridge1$str$ptr + 2817040
+1   chromedriver                        0x0000000104aeb088 cxxbridge1$str$ptr + 2784940
+2   chromedriver                        0x00000001046328d8 cxxbridge1$string$len + 93028
+3   chromedriver                        0x00000001046796a0 cxxbridge1$string$len + 383276
+4   chromedriver                        0x00000001046ba7b8 cxxbridge1$string$len + 649796
+5   chromedriver                        0x000000010466da80 cxxbridge1$string$len + 335116
+6   chromedriver                        0x0000000104ab7c74 cxxbridge1$str$ptr + 2575000
+7   chromedriver                        0x0000000104abaf40 cxxbridge1$str$ptr + 2588004
+8   chromedriver                        0x0000000104a979fc cxxbridge1$str$ptr + 2443296
+9   chromedriver                        0x0000000104abb7bc cxxbridge1$str$ptr + 2590176
+10  chromedriver                        0x0000000104a88af0 cxxbridge1$str$ptr + 2382100
+11  chromedriver                        0x0000000104adb9a0 cxxbridge1$str$ptr + 2721732
+12  chromedriver                        0x0000000104adbb2c cxxbridge1$str$ptr + 2722128
+13  chromedriver                        0x0000000104aeacd4 cxxbridge1$str$ptr + 2783992
+14  libsystem_pthread.dylib             0x0000000187e23fa8 _pthread_start + 148
+15  libsystem_pthread.dylib             0x0000000187e1eda0 thread_start + 8
+
+[05:39:21] 🛑 Browser closed

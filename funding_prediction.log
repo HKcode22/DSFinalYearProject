@@ -1,0 +1,60 @@
+2025-04-17 23:04:05,460 - __main__ - INFO - Historical database initialized
+2025-04-17 23:04:05,460 - __main__ - INFO - Running pipeline once
+2025-04-17 23:04:05,460 - __main__ - INFO - Starting funding stage prediction pipeline
+2025-04-17 23:04:05,460 - __main__ - INFO - Step 1: Loading and merging data...
+2025-04-17 23:04:05,467 - __main__ - INFO - Loaded 1103 records from fundraiser data
+2025-04-17 23:04:05,469 - __main__ - INFO - Loaded 100 records from growthlist data
+2025-04-17 23:04:05,473 - __main__ - INFO - Loaded 545 records from topstartup data
+2025-04-17 23:04:05,514 - __main__ - INFO - Successfully merged 1747 records
+2025-04-17 23:04:05,514 - __main__ - INFO - Step 2: Extracting features...
+2025-04-17 23:04:05,534 - __main__ - INFO - Feature engineering complete: 122 features created
+2025-04-17 23:04:05,534 - __main__ - INFO - Step 3: Preparing model data...
+2025-04-17 23:04:05,537 - __main__ - INFO - Prepared model data: X shape=(1747, 7), y shape=(1747,)
+2025-04-17 23:04:05,537 - __main__ - INFO - Step 4: Training models...
+2025-04-17 23:04:05,537 - __main__ - INFO - Training Random Forest model...
+2025-04-17 23:04:05,733 - __main__ - INFO - Random Forest accuracy: 0.6086
+2025-04-17 23:04:05,733 - __main__ - INFO - Classification report:
+              precision    recall  f1-score   support
+
+           0       0.63      0.63      0.63        19
+           1       0.62      0.77      0.69        60
+           2       0.47      0.44      0.46        43
+           3       0.29      0.30      0.30        23
+           4       0.40      0.29      0.33        21
+           5       0.00      0.00      0.00         7
+           6       0.00      0.00      0.00         2
+           8       0.20      0.33      0.25         3
+           9       0.29      0.25      0.27        32
+          10       0.11      0.12      0.12         8
+          11       0.33      0.24      0.28        17
+          12       0.94      0.95      0.94       115
+
+    accuracy                           0.61       350
+   macro avg       0.36      0.36      0.36       350
+weighted avg       0.60      0.61      0.60       350
+
+2025-04-17 23:04:05,796 - __main__ - INFO - Training XGBoost model...
+2025-04-17 23:04:07,695 - __main__ - INFO - XGBoost accuracy: 0.6029
+2025-04-17 23:04:07,695 - __main__ - INFO - Classification report:
+              precision    recall  f1-score   support
+
+           0       0.63      0.63      0.63        19
+           1       0.62      0.77      0.69        60
+           2       0.56      0.47      0.51        43
+           3       0.29      0.30      0.30        23
+           4       0.33      0.24      0.28        21
+           5       0.00      0.00      0.00         7
+           6       0.00      0.00      0.00         2
+           8       0.17      0.33      0.22         3
+           9       0.21      0.19      0.20        32
+          10       0.22      0.25      0.24         8
+          11       0.25      0.18      0.21        17
+          12       0.94      0.95      0.94       115
+
+    accuracy                           0.60       350
+   macro avg       0.35      0.36      0.35       350
+weighted avg       0.60      0.60      0.60       350
+
+2025-04-17 23:04:07,722 - __main__ - INFO - Step 5: Creating visualizations...
+2025-04-17 23:04:08,559 - __main__ - INFO - Step 6: Saving summary report...
+2025-04-17 23:04:08,560 - __main__ - INFO - Pipeline completed successfully!

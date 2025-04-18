@@ -1,0 +1,613 @@
+d="footer">General</h6>
+		<a href="https://topstartups.substack.com/about" target="_blank">About </a><br>
+		<a href="/">Startups </a><br>
+		<a href="/jobs/">Jobs </a><br>
+		<a href="/startup-salary-equity-database/">Salary &amp; Equity </a><br>
+		<a href="/startup-salary-equity-negotiation/">Negotiation Coaching </a><br>
+		<a href="https://giddy-amusement-c74.notion.site/Top-Startups-Refund-Policy-ec244c2f8a3b4fc9a1ae9559e68d413b" target="_blank">Fulfillment Policy </a><br>
+		<a href="https://airtable.com/shrxE33nk4Qfzx2K9" target="_blank"><span id="orange-gradient" style="font-weight:700;">Add Startup or Job </span> 👋</a><br><br>
+	</div>
+	<div class="col-12 col-md-3 footer-link">
+		<h6 id="footer">Industry</h6>
+		<a href="/?industries=Artificial%20Intelligence">AI startups </a><br>
+		<a href="/?industries=Biotech">Biotech startups </a><br>
+		<a href="/?industries=Cybersecurity">Cybersecurity startups </a><br>
+		<a href="/?industries=E-Commerce">E-Commerce startups </a><br>
+		<a href="/?industries=EdTech">EdTech startups </a><br>
+		<a href="/?industries=FinTech">FinTech startups </a><br>
+		<a href="/?industries=Healthcare">Healthcare startups </a><br>
+		<a href="/?industries=Marketplace">Marketplace startups </a><br>
+		<a href="/?industries=SaaS">SaaS startups </a><br>
+		<a href="/?industries=Sustainability">Sustainability startups </a><br><br>
+	</div>
+		<div class="col-12 col-md-3 footer-link">
+		<h6 id="footer">Stage</h6>
+		<a href="/?funding_round=Pre-Seed&amp;funding_round=Seed&amp;funding_round=Series+A&amp;funding_round=Series+B">Early-stage startups </a><br>
+		<a href="/?funding_round=Series+C&amp;funding_round=Series+D&amp;funding_round=Series+E&amp;funding_round=Series+F">Growth-stage startups </a><br>
+		<a href="/?funding_round=Series+G&amp;funding_round=Series+H&amp;funding_round=Series+I&amp;funding_round=Post-IPO">Mature startups </a><br><br>
+		<a href="/?company_size=1-10+employees&amp;company_size=11-50+employees">Under 50 employees </a><br>
+		<a href="/?company_size=1-10+employees&amp;company_size=11-50+employees&amp;company_size=51-100+employees">Under 100 employees </a><br>
+		<a href="/?company_size=1-10+employees&amp;company_size=11-50+employees&amp;company_size=51-100+employees&amp;company_size=101-200+employees&amp;company_size=201-500+employees">Under 500 employees </a><br><br>
+		<a href="/?founded_year=2021">Founded in 2021 </a><br>
+		<a href="/?founded_year=2020">Founded in 2020 </a><br><br>
+	</div>
+	<div class="col-12 col-md-3 footer-link">
+		<h6 id="footer">HQ location</h6>
+		<a href="/?hq_location=Remote">Remote Startups </a><br>
+		<a href="/?hq_location=New%20York">Startups in New York </a><br>
+		<a href="/?hq_location=Boston">Startups in Boston </a><br>
+		<a href="/?hq_location=San%20Francisco">Startups in San Francisco </a><br>
+		<a href="/?hq_location=Los%20Angeles">Startups in Los Angeles </a><br>
+		<a href="/?hq_location=Seattle">Startups in Seattle </a><br>
+		<a href="/?hq_location=Austin">Startups in Austin </a><br>
+		<a href="/?hq_location=India">Startups in India </a><br>
+		<a href="/?hq_location=London">Startups in London </a><br>
+		<a href="/?hq_location=Canada">Startups in Canada </a><br>
+	</div>
+</div>
+
+<script src="/static/js/jquery.waypoints.min.7d05f92297de.js"></script>
+<script src="/static/js/infinite.min.js"></script>
+<script>
+if ("funding"){
+	const params = new URLSearchParams(window.location.search);
+	params.set("sort", "funding");
+	window.history.replaceState({}, '', `${location.pathname}?${params}`);
+}
+(function(){
+	const params = new URLSearchParams(window.location.search)
+	$('[name="hq_location"]').val(params.getAll("hq_location"));
+	$('[name="company_size"]').val(params.getAll("company_size"));
+	$('[name="founded_year"]').val(params.getAll("founded_year"));
+	$('[name="funding_round"]').val(params.getAll("funding_round"));
+	$('[name="investors"]').val(params.getAll("investors"));
+	$('[name="industries"]').val(params.getAll("industries"));
+})()
+	$('.infinite-more-link').on('click', function(e) {
+		e.preventDefault();
+		var infinite = new Waypoint.Infinite({
+			element: $('.infinite-container')[0],
+		})
+	});
+$( function() {
+	var availableTags = [
+	
+	
+		"Amsterdam,\xa0Netherlands",
+	
+	
+	
+		"Ann Arbor, Michigan, USA",
+	
+	
+	
+		"Arlington, Virginia, USA",
+	
+	
+	
+		"Atlanta, Georgia, USA",
+	
+	
+	
+		"Augsburg, Germany",
+	
+	
+	
+		"Austin, Texas, USA",
+	
+	
+	
+		"Bangalore, India",
+	
+	
+	
+		"Bengaluru, India",
+	
+	
+	
+		"Berlin, Germany",
+	
+	
+	
+		"Bogotá,\xa0Colombia",
+	
+	
+	
+		"Boise, Idaho, USA",
+	
+	
+	
+		"Boston, Massachusetts, USA",
+	
+	
+	
+		"Boulder, Colorado, USA",
+	
+	
+	
+		"Bozeman, Montana, USA",
+	
+	
+	
+		"Braddock, Pennsylvania, USA",
+	
+	
+	
+		"Brisbane, Australia",
+	
+	
+	
+		"Bristol, United Kingdom",
+	
+	
+	
+		"Budapest,\xa0Hungary",
+	
+	
+	
+		"Burlington, Vermont, USA",
+	
+	
+	
+		"California City, California, USA",
+	
+	
+	
+		"Cary, North Carolina, USA",
+	
+	
+	
+		"Charlottesville, Virginia, USA",
+	
+	
+	
+		"Chicago, Illinois, USA",
+	
+	
+	
+		"Cologne,\xa0Germany",
+	
+	
+	
+		"Colombia",
+	
+	
+	
+		"Columbia, Missouri, USA",
+	
+	
+	
+		"Columbus, Ohio, USA",
+	
+	
+	
+		"Copenhagen,\xa0Denmark",
+	
+	
+	
+		"Dakar, Senegal",
+	
+	
+	
+		"Dakar,\xa0Senegal",
+	
+	
+	
+		"Dallas, Texas, USA",
+	
+	
+	
+		"Dania, Florida, USA",
+	
+	
+	
+		"Davis, California, USA",
+	
+	
+	
+		"Delanco, New Jersey, USA",
+	
+	
+	
+		"Denver, Colorado, USA",
+	
+	
+	
+		"Dhaka,\xa0Bangladesh",
+	
+	
+	
+		"Dubai, United Arab Emirates",
+	
+	
+	
+		"Dublin,\xa0 Ireland",
+	
+	
+	
+		"El Segundo, California, USA",
+	
+	
+	
+		"Estonia",
+	
+	
+	
+		"Florianopolis, Brazil",
+	
+	
+	
+		"Gurgaon, India",
+	
+	
+	
+		"Helsinki,\xa0Finland",
+	
+	
+	
+		"Ho Chi Minh City, Vietnam",
+	
+	
+	
+		"Hong Kong",
+	
+	
+	
+		"Honolulu, Hawaii, USA",
+	
+	
+	
+		"Houston, Texas, USA",
+	
+	
+	
+		"Israel",
+	
+	
+	
+		"Istanbul, Turkey",
+	
+	
+	
+		"Jackson, Wyoming, USA",
+	
+	
+	
+		"Jaipur, India",
+	
+	
+	
+		"Jakarta, Indonesia",
+	
+	
+	
+		"Kissimmee, Florida, USA",
+	
+	
+	
+		"Kolkata, India",
+	
+	
+	
+		"Kormangala, India",
+	
+	
+	
+		"Kuala Lumpur,\xa0 Malaysia",
+	
+	
+	
+		"Lagos, Nigeria",
+	
+	
+	
+		"Las Vegas, Nevada, USA",
+	
+	
+	
+		"Lehi, Utah, USA",
+	
+	
+	
+		"Lincoln, Nebraska, USA",
+	
+	
+	
+		"London, England, United Kingdom",
+	
+	
+	
+		"London, England, United Kingdom; New York, New York, USA",
+	
+	
+	
+		"Los Angeles, California, USA",
+	
+	
+	
+		"Madrid,\xa0Spain",
+	
+	
+	
+		"Manila,\xa0Philippines",
+	
+	
+	
+		"Mclean, Virginia, USA",
+	
+	
+	
+		"Melbourne, Australia",
+	
+	
+	
+		"Mexico City, Mexico",
+	
+	
+	
+		"Miami, Florida, USA",
+	
+	
+	
+		"Miami, Florida, USA; San Francisco Bay Area, California, USA",
+	
+	
+	
+		"Minneapolis, Minnesota, USA",
+	
+	
+	
+		"Missoula, Montana, USA",
+	
+	
+	
+		"Montreal, Quebec, Canada",
+	
+	
+	
+		"Mumbai, India",
+	
+	
+	
+		"Naarden, Netherlands",
+	
+	
+	
+		"Nairobi,\xa0 Kenya",
+	
+	
+	
+		"Nashville,\xa0Tennessee, USA",
+	
+	
+	
+		"New Delhi, India",
+	
+	
+	
+		"New Haven, Connecticut, USA",
+	
+	
+	
+		"New Orleans, Louisiana, USA",
+	
+	
+	
+		"New York, New York, USA",
+	
+	
+	
+		"New Zealand",
+	
+	
+	
+		"Nigeria",
+	
+	
+	
+		"Noida, India",
+	
+	
+	
+		"Oslo, Norway",
+	
+	
+	
+		"Ottawa, Ontario, Canada",
+	
+	
+	
+		"Paris, France",
+	
+	
+	
+		"Philadelphia, Pennsylvania, USA",
+	
+	
+	
+		"Pittsburgh, Pennsylvania, USA",
+	
+	
+	
+		"Portland, Oregon, USA",
+	
+	
+	
+		"Prague,\xa0Czech Republic",
+	
+	
+	
+		"Provo, Utah, USA",
+	
+	
+	
+		"Pune, India",
+	
+	
+	
+		"Raipur, India",
+	
+	
+	
+		"Remote",
+	
+	
+	
+		"Remote East Coast US and Europe",
+	
+	
+	
+		"Remote US",
+	
+	
+	
+		"Reno, Nevada, USA",
+	
+	
+	
+		"Riga, Latvia",
+	
+	
+	
+		"Saint Louis, Missouri, USA",
+	
+	
+	
+		"Salt Lake City, Utah, USA",
+	
+	
+	
+		"San Diego, California, USA",
+	
+	
+	
+		"San Francisco Bay Area, California, USA",
+	
+	
+	
+		"San Francisco Bay Area, California, USA; New York, New York, USA",
+	
+	
+	
+		"San Francisco, California, USA",
+	
+	
+	
+		"Santa Barbara, California, USA",
+	
+	
+	
+		"Sao Paulo, Brazil",
+	
+	
+	
+		"Scottsdale, Arizona, USA",
+	
+	
+	
+		"Seattle, Washington, USA",
+	
+	
+	
+		"Seoul, South Korea",
+	
+	
+	
+		"Singapore, Singapore",
+	
+	
+	
+		"Sweden",
+	
+	
+	
+		"Switzerland",
+	
+	
+	
+		"Sydney, Australia",
+	
+	
+	
+		"Tel Aviv, Israel",
+	
+	
+	
+		"Tempe, Arizona, USA",
+	
+	
+	
+		"Tokyo,\xa0Japan",
+	
+	
+	
+		"Toronto, Ontario, Canada",
+	
+	
+	
+		"Vancouver, British Columbia, Canada",
+	
+	
+	
+		"Victoria, British Columbia, Canada",
+	
+	
+	
+		"Vienna,\xa0Austria",
+	
+	
+	
+		"Warsaw,\xa0Poland",
+	
+	
+	
+		"Washington DC Metro Area, USA",
+	
+	
+	
+		"Winnipeg, Manitoba, Canada",
+	
+	
+    ];
+	$("#hq_location").autocomplete({
+	    source: function( request, response ) {
+          var matcher = new RegExp( "^" + $.ui.autocomplete.escapeRegex( request.term ), "i" );
+          response( $.grep( availableTags, function( item ){
+              return matcher.test( item );
+          }) );
+      }
+	});
+} );
+</script>
+
+    <a href="#item-card-filter" class="btn btn-primary show" id="floating-btn">Filter</a>
+    </div>
+    <br>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap-select@1.14.0-beta2/dist/js/bootstrap-select.min.js"></script>
+<script>
+$('form#filter-form').submit(function() {
+    $(':input', this).each(function() {
+        this.disabled = !($(this).val());
+    });
+});
+var filterButton = document.getElementById("floating-btn");
+$(document).ready(function() {
+  $(window).scroll(function() {
+	if ($(this).scrollTop() > 1000) {
+	  filterButton.classList.add("show");
+	  console.log("activate")
+	} else {
+	  filterButton.classList.remove("show");
+	}
+  })
+});
+</script>
+
+<hr>
+<!--<h5>Our Footer</h5>-->
+
+
+
+<ul id="ui-id-1" tabindex="0" class="ui-menu ui-widget ui-widget-content ui-autocomplete ui-front" unselectable="on" style="display: none;"></ul><div role="status" aria-live="assertive" aria-relevant="additions" class="ui-helper-hidden-accessible"></div>

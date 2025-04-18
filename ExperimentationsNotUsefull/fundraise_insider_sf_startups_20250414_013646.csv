@@ -1,0 +1,87 @@
+Company,Total_Employees,Industry,Website,Funding_Date,Funding_Type,Extraction_Time,Page
+Rembrand,56,0,http://www.rembrand.com,2-Jan-25,Series A,2025-04-14 01:31:34,1
+Wurthy,13,0,http://www.wurthy.co,30-Dec-24,Seed,2025-04-14 01:31:34,1
+Frontier Bio,14,research,http://www.frontierbio.com,25-Dec-24,Seed,2025-04-14 01:31:34,1
+Courtyard,28,0,http://www.courtyard.io,23-Dec-24,Venture - Series Unknown,2025-04-14 01:31:34,1
+Pasadena Private Lending,9,financial services,http://www.pasadena-private-lending.com,19-Dec-24,Debt Financing,2025-04-14 01:31:34,1
+Tenor,5,information technology & services,http://www.tenorhq.com,19-Dec-24,Seed,2025-04-14 01:31:35,1
+Earli,37,research,http://www.earli.com,19-Dec-24,Undisclosed,2025-04-14 01:31:35,1
+Child Family Health International,68,nonprofit organization management,http://www.cfhi.org,19-Dec-24,Grant,2025-04-14 01:31:35,1
+SandboxAQ,290,information technology & services,http://www.sandboxaq.com,18-Dec-24,Private Equity,2025-04-14 01:31:35,1
+Plume Network,29,information technology & services,http://www.plumenetwork.xyz,18-Dec-24,Series A,2025-04-14 01:31:35,1
+Hamming AI,12,0,http://www.hamming.ai,18-Dec-24,Seed,2025-04-14 01:31:35,1
+CourtScribes,21,legal services,http://www.courtscribes.com,18-Dec-24,Undisclosed,2025-04-14 01:31:35,1
+Perplexity,300,information technology & services,http://www.perplexity.ai,18-Dec-24,Private Equity,2025-04-14 01:31:35,1
+Lyten,290,mechanical or industrial engineering,http://www.lyten.com,18-Dec-24,Debt Financing,2025-04-14 01:31:35,1
+Fairbanc,38,information technology & services,http://www.fairbanc.app,18-Dec-24,Debt Financing,2025-04-14 01:31:35,1
+Mojave Energy Systems,40,machinery,http://www.mojavehvac.com,18-Dec-24,Series A,2025-04-14 01:31:35,1
+Fraction AI,6,information technology & services,http://www.fractionai.xyz,18-Dec-24,Pre-Seed,2025-04-14 01:31:35,1
+Schwarm Technologies Inc.,27,information technology & services,http://www.schwarm.com,17-Dec-24,Undisclosed,2025-04-14 01:31:35,1
+Landbase,45,0,http://www.landbase.com,17-Dec-24,Venture - Series Unknown,2025-04-14 01:31:35,1
+Acre,15,real estate,http://www.acrehomes.com,17-Dec-24,Seed,2025-04-14 01:31:35,1
+Perplexity AI,36,information technology & services,http://www.perplexity.ai,4-Jan-24,Series B,2025-04-14 01:31:49,2
+GSI Technology,240,semiconductors,http://www.gsitechnology.com,3-Jan-24,Grant,2025-04-14 01:31:49,2
+Paceline,60,"health, wellness & fitness",http://www.paceline.fit,1-Jan-24,Series A,2025-04-14 01:31:49,2
+Perplexity AI,36,information technology & services,http://www.perplexity.ai,4-Jan-24,Series B,2025-04-14 01:32:03,3
+GSI Technology,240,semiconductors,http://www.gsitechnology.com,3-Jan-24,Grant,2025-04-14 01:32:03,3
+Paceline,60,"health, wellness & fitness",http://www.paceline.fit,1-Jan-24,Series A,2025-04-14 01:32:03,3
+Perplexity AI,36,information technology & services,http://www.perplexity.ai,4-Jan-24,Series B,2025-04-14 01:32:17,4
+GSI Technology,240,semiconductors,http://www.gsitechnology.com,3-Jan-24,Grant,2025-04-14 01:32:17,4
+Paceline,60,"health, wellness & fitness",http://www.paceline.fit,1-Jan-24,Series A,2025-04-14 01:32:17,4
+Perplexity AI,36,information technology & services,http://www.perplexity.ai,4-Jan-24,Series B,2025-04-14 01:32:31,5
+GSI Technology,240,semiconductors,http://www.gsitechnology.com,3-Jan-24,Grant,2025-04-14 01:32:31,5
+Paceline,60,"health, wellness & fitness",http://www.paceline.fit,1-Jan-24,Series A,2025-04-14 01:32:31,5
+Perplexity AI,36,information technology & services,http://www.perplexity.ai,4-Jan-24,Series B,2025-04-14 01:32:45,6
+GSI Technology,240,semiconductors,http://www.gsitechnology.com,3-Jan-24,Grant,2025-04-14 01:32:45,6
+Paceline,60,"health, wellness & fitness",http://www.paceline.fit,1-Jan-24,Series A,2025-04-14 01:32:45,6
+Perplexity AI,36,information technology & services,http://www.perplexity.ai,4-Jan-24,Series B,2025-04-14 01:32:59,7
+GSI Technology,240,semiconductors,http://www.gsitechnology.com,3-Jan-24,Grant,2025-04-14 01:32:59,7
+Paceline,60,"health, wellness & fitness",http://www.paceline.fit,1-Jan-24,Series A,2025-04-14 01:32:59,7
+Perplexity AI,36,information technology & services,http://www.perplexity.ai,4-Jan-24,Series B,2025-04-14 01:33:13,8
+GSI Technology,240,semiconductors,http://www.gsitechnology.com,3-Jan-24,Grant,2025-04-14 01:33:13,8
+Paceline,60,"health, wellness & fitness",http://www.paceline.fit,1-Jan-24,Series A,2025-04-14 01:33:13,8
+Perplexity AI,36,information technology & services,http://www.perplexity.ai,4-Jan-24,Series B,2025-04-14 01:33:27,9
+GSI Technology,240,semiconductors,http://www.gsitechnology.com,3-Jan-24,Grant,2025-04-14 01:33:27,9
+Paceline,60,"health, wellness & fitness",http://www.paceline.fit,1-Jan-24,Series A,2025-04-14 01:33:27,9
+Perplexity AI,36,information technology & services,http://www.perplexity.ai,4-Jan-24,Series B,2025-04-14 01:33:41,10
+GSI Technology,240,semiconductors,http://www.gsitechnology.com,3-Jan-24,Grant,2025-04-14 01:33:41,10
+Paceline,60,"health, wellness & fitness",http://www.paceline.fit,1-Jan-24,Series A,2025-04-14 01:33:41,10
+Perplexity AI,36,information technology & services,http://www.perplexity.ai,4-Jan-24,Series B,2025-04-14 01:33:54,11
+GSI Technology,240,semiconductors,http://www.gsitechnology.com,3-Jan-24,Grant,2025-04-14 01:33:55,11
+Paceline,60,"health, wellness & fitness",http://www.paceline.fit,1-Jan-24,Series A,2025-04-14 01:33:55,11
+Perplexity AI,36,information technology & services,http://www.perplexity.ai,4-Jan-24,Series B,2025-04-14 01:34:08,12
+GSI Technology,240,semiconductors,http://www.gsitechnology.com,3-Jan-24,Grant,2025-04-14 01:34:08,12
+Paceline,60,"health, wellness & fitness",http://www.paceline.fit,1-Jan-24,Series A,2025-04-14 01:34:08,12
+Perplexity AI,36,information technology & services,http://www.perplexity.ai,4-Jan-24,Series B,2025-04-14 01:34:22,13
+GSI Technology,240,semiconductors,http://www.gsitechnology.com,3-Jan-24,Grant,2025-04-14 01:34:22,13
+Paceline,60,"health, wellness & fitness",http://www.paceline.fit,1-Jan-24,Series A,2025-04-14 01:34:22,13
+Perplexity AI,36,information technology & services,http://www.perplexity.ai,4-Jan-24,Series B,2025-04-14 01:34:36,14
+GSI Technology,240,semiconductors,http://www.gsitechnology.com,3-Jan-24,Grant,2025-04-14 01:34:36,14
+Paceline,60,"health, wellness & fitness",http://www.paceline.fit,1-Jan-24,Series A,2025-04-14 01:34:36,14
+Perplexity AI,36,information technology & services,http://www.perplexity.ai,4-Jan-24,Series B,2025-04-14 01:34:50,15
+GSI Technology,240,semiconductors,http://www.gsitechnology.com,3-Jan-24,Grant,2025-04-14 01:34:50,15
+Paceline,60,"health, wellness & fitness",http://www.paceline.fit,1-Jan-24,Series A,2025-04-14 01:34:50,15
+Perplexity AI,36,information technology & services,http://www.perplexity.ai,4-Jan-24,Series B,2025-04-14 01:35:04,16
+GSI Technology,240,semiconductors,http://www.gsitechnology.com,3-Jan-24,Grant,2025-04-14 01:35:04,16
+Paceline,60,"health, wellness & fitness",http://www.paceline.fit,1-Jan-24,Series A,2025-04-14 01:35:04,16
+Perplexity AI,36,information technology & services,http://www.perplexity.ai,4-Jan-24,Series B,2025-04-14 01:35:18,17
+GSI Technology,240,semiconductors,http://www.gsitechnology.com,3-Jan-24,Grant,2025-04-14 01:35:18,17
+Paceline,60,"health, wellness & fitness",http://www.paceline.fit,1-Jan-24,Series A,2025-04-14 01:35:18,17
+Perplexity AI,36,information technology & services,http://www.perplexity.ai,4-Jan-24,Series B,2025-04-14 01:35:32,18
+GSI Technology,240,semiconductors,http://www.gsitechnology.com,3-Jan-24,Grant,2025-04-14 01:35:32,18
+Paceline,60,"health, wellness & fitness",http://www.paceline.fit,1-Jan-24,Series A,2025-04-14 01:35:32,18
+Perplexity AI,36,information technology & services,http://www.perplexity.ai,4-Jan-24,Series B,2025-04-14 01:35:45,19
+GSI Technology,240,semiconductors,http://www.gsitechnology.com,3-Jan-24,Grant,2025-04-14 01:35:45,19
+Paceline,60,"health, wellness & fitness",http://www.paceline.fit,1-Jan-24,Series A,2025-04-14 01:35:45,19
+Perplexity AI,36,information technology & services,http://www.perplexity.ai,4-Jan-24,Series B,2025-04-14 01:35:59,20
+GSI Technology,240,semiconductors,http://www.gsitechnology.com,3-Jan-24,Grant,2025-04-14 01:35:59,20
+Paceline,60,"health, wellness & fitness",http://www.paceline.fit,1-Jan-24,Series A,2025-04-14 01:35:59,20
+Perplexity AI,36,information technology & services,http://www.perplexity.ai,4-Jan-24,Series B,2025-04-14 01:36:13,21
+GSI Technology,240,semiconductors,http://www.gsitechnology.com,3-Jan-24,Grant,2025-04-14 01:36:13,21
+Paceline,60,"health, wellness & fitness",http://www.paceline.fit,1-Jan-24,Series A,2025-04-14 01:36:13,21
+Perplexity AI,36,information technology & services,http://www.perplexity.ai,4-Jan-24,Series B,2025-04-14 01:36:27,22
+GSI Technology,240,semiconductors,http://www.gsitechnology.com,3-Jan-24,Grant,2025-04-14 01:36:27,22
+Paceline,60,"health, wellness & fitness",http://www.paceline.fit,1-Jan-24,Series A,2025-04-14 01:36:27,22
+Perplexity AI,36,information technology & services,http://www.perplexity.ai,4-Jan-24,Series B,2025-04-14 01:36:41,23
+GSI Technology,240,semiconductors,http://www.gsitechnology.com,3-Jan-24,Grant,2025-04-14 01:36:41,23
+Paceline,60,"health, wellness & fitness",http://www.paceline.fit,1-Jan-24,Series A,2025-04-14 01:36:41,23

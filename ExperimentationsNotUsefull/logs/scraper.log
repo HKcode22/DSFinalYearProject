@@ -1,0 +1,706 @@
+2025-04-07 08:59:46,319 - WDM - INFO - ====== WebDriver manager ======
+2025-04-07 08:59:46,411 - WDM - INFO - Get LATEST chromedriver version for google-chrome
+2025-04-07 08:59:46,460 - WDM - INFO - Get LATEST chromedriver version for google-chrome
+2025-04-07 08:59:46,493 - WDM - INFO - Driver [/Users/hk/.wdm/drivers/chromedriver/mac64/134.0.6998.165/chromedriver-mac-arm64/chromedriver] found in cache
+2025-04-07 08:59:51,906 - TopStartupsScraper - INFO - Removed obstructive elements
+2025-04-07 09:00:13,495 - TopStartupsScraper - INFO - No more Show More buttons found
+2025-04-07 09:00:13,517 - TopStartupsScraper - INFO - Found 20 startup cards
+2025-04-07 09:00:13,657 - TopStartupsScraper - ERROR - Error extracting card: 'NoneType' object has no attribute 'get_text'
+2025-04-07 09:00:13,878 - TopStartupsScraper - INFO - Successfully saved 19 startups
+2025-04-07 09:00:14,073 - TopStartupsScraper - INFO - Browser closed
+2025-04-07 09:02:44,966 - WDM - INFO - ====== WebDriver manager ======
+2025-04-07 09:02:45,156 - WDM - INFO - Get LATEST chromedriver version for google-chrome
+2025-04-07 09:02:45,214 - WDM - INFO - Get LATEST chromedriver version for google-chrome
+2025-04-07 09:02:45,257 - WDM - INFO - Driver [/Users/hk/.wdm/drivers/chromedriver/mac64/134.0.6998.165/chromedriver-mac-arm64/chromedriver] found in cache
+2025-04-07 09:02:50,702 - TopStartupsScraper - INFO - Removed obstructive elements
+2025-04-07 09:03:12,619 - TopStartupsScraper - INFO - No more Show More buttons found
+2025-04-07 09:03:12,626 - TopStartupsScraper - INFO - Found 20 startup cards
+2025-04-07 09:03:12,637 - TopStartupsScraper - WARNING - Couldn't extract name
+2025-04-07 09:03:12,678 - TopStartupsScraper - INFO - Processed 10/20 cards
+2025-04-07 09:03:12,729 - TopStartupsScraper - INFO - Processed 20/20 cards
+2025-04-07 09:03:12,734 - TopStartupsScraper - INFO - Successfully saved 20 startups
+2025-04-07 09:03:12,825 - TopStartupsScraper - INFO - Browser closed
+2025-04-07 09:06:45,686 - WDM - INFO - ====== WebDriver manager ======
+2025-04-07 09:06:45,770 - WDM - INFO - Get LATEST chromedriver version for google-chrome
+2025-04-07 09:06:45,954 - WDM - INFO - Get LATEST chromedriver version for google-chrome
+2025-04-07 09:06:45,996 - WDM - INFO - Driver [/Users/hk/.wdm/drivers/chromedriver/mac64/134.0.6998.165/chromedriver-mac-arm64/chromedriver] found in cache
+2025-04-07 09:06:51,342 - TopStartupsScraper - INFO - Current startup count: 20
+2025-04-07 09:07:06,654 - TopStartupsScraper - INFO - Waiting for content to load...
+2025-04-07 09:07:23,952 - TopStartupsScraper - INFO - Waiting for content to load...
+2025-04-07 09:07:41,250 - TopStartupsScraper - INFO - Waiting for content to load...
+2025-04-07 09:07:58,538 - TopStartupsScraper - INFO - Waiting for content to load...
+2025-04-07 09:08:16,022 - TopStartupsScraper - INFO - Waiting for content to load...
+2025-04-07 09:08:18,028 - TopStartupsScraper - WARNING - Failed to click Show More after multiple attempts
+2025-04-07 09:08:18,048 - TopStartupsScraper - INFO - Processing 20 startups
+2025-04-07 09:08:18,128 - TopStartupsScraper - INFO - Processed 10/20 cards
+2025-04-07 09:08:18,197 - TopStartupsScraper - INFO - Processed 20/20 cards
+2025-04-07 09:08:18,199 - TopStartupsScraper - INFO - Successfully saved 20 startups
+2025-04-07 09:08:18,327 - TopStartupsScraper - INFO - Browser closed
+2025-04-07 09:13:48,736 - WDM - INFO - ====== WebDriver manager ======
+2025-04-07 09:13:48,856 - WDM - INFO - Get LATEST chromedriver version for google-chrome
+2025-04-07 09:13:48,898 - WDM - INFO - Get LATEST chromedriver version for google-chrome
+2025-04-07 09:13:48,933 - WDM - INFO - Driver [/Users/hk/.wdm/drivers/chromedriver/mac64/134.0.6998.165/chromedriver-mac-arm64/chromedriver] found in cache
+2025-04-07 09:13:54,277 - TopStartupsScraper - INFO - Initial startup count: 20
+2025-04-07 09:14:54,561 - TopStartupsScraper - INFO - Processing 20 startups
+2025-04-07 09:14:54,605 - TopStartupsScraper - INFO - Processed 10/20 cards
+2025-04-07 09:14:54,664 - TopStartupsScraper - INFO - Processed 20/20 cards
+2025-04-07 09:14:54,666 - TopStartupsScraper - INFO - Successfully saved 20 startups
+2025-04-07 09:14:54,779 - TopStartupsScraper - INFO - Browser closed
+2025-04-07 09:18:36,542 - WDM - INFO - ====== WebDriver manager ======
+2025-04-07 09:18:36,685 - WDM - INFO - Get LATEST chromedriver version for google-chrome
+2025-04-07 09:18:36,729 - WDM - INFO - Get LATEST chromedriver version for google-chrome
+2025-04-07 09:18:36,764 - WDM - INFO - Driver [/Users/hk/.wdm/drivers/chromedriver/mac64/134.0.6998.165/chromedriver-mac-arm64/chromedriver] found in cache
+2025-04-07 09:18:42,164 - TopStartupsScraper - INFO - Current startup count: 20
+2025-04-07 09:19:02,558 - TopStartupsScraper - WARNING - Selenium click failed: Message: 
+Stacktrace:
+0   chromedriver                        0x000000010276b6c8 cxxbridge1$str$ptr + 2791212
+1   chromedriver                        0x0000000102763c9c cxxbridge1$str$ptr + 2759936
+2   chromedriver                        0x00000001022b5e30 cxxbridge1$string$len + 92928
+3   chromedriver                        0x00000001022fd170 cxxbridge1$string$len + 384576
+4   chromedriver                        0x000000010233e5f8 cxxbridge1$string$len + 651976
+5   chromedriver                        0x00000001022f12fc cxxbridge1$string$len + 335820
+6   chromedriver                        0x00000001027306c4 cxxbridge1$str$ptr + 2549544
+7   chromedriver                        0x0000000102733988 cxxbridge1$str$ptr + 2562540
+8   chromedriver                        0x000000010271071c cxxbridge1$str$ptr + 2418560
+9   chromedriver                        0x00000001027341e8 cxxbridge1$str$ptr + 2564684
+10  chromedriver                        0x0000000102701750 cxxbridge1$str$ptr + 2357172
+11  chromedriver                        0x0000000102753f58 cxxbridge1$str$ptr + 2695100
+12  chromedriver                        0x00000001027540e0 cxxbridge1$str$ptr + 2695492
+13  chromedriver                        0x0000000102763910 cxxbridge1$str$ptr + 2759028
+14  libsystem_pthread.dylib             0x0000000187e23fa8 _pthread_start + 148
+15  libsystem_pthread.dylib             0x0000000187e1eda0 thread_start + 8
+
+2025-04-07 09:19:02,564 - TopStartupsScraper - INFO - Clicked 'Show More' using JavaScript.
+2025-04-07 09:19:05,574 - TopStartupsScraper - INFO - No new content loaded.
+2025-04-07 09:19:05,578 - TopStartupsScraper - INFO - Found 20 startup cards.
+2025-04-07 09:19:05,623 - TopStartupsScraper - INFO - Processed 10/20 cards.
+2025-04-07 09:19:05,685 - TopStartupsScraper - INFO - Processed 20/20 cards.
+2025-04-07 09:19:05,702 - TopStartupsScraper - INFO - Saved data to data/json/startups_20250407_091905.json and data/csv/startups_20250407_091905.csv.
+2025-04-07 09:19:06,382 - TopStartupsScraper - INFO - Browser closed.
+2025-04-07 09:25:08,001 - WDM - INFO - ====== WebDriver manager ======
+2025-04-07 09:25:08,163 - WDM - INFO - Get LATEST chromedriver version for google-chrome
+2025-04-07 09:25:08,204 - WDM - INFO - Get LATEST chromedriver version for google-chrome
+2025-04-07 09:25:08,238 - WDM - INFO - Driver [/Users/hk/.wdm/drivers/chromedriver/mac64/134.0.6998.165/chromedriver-mac-arm64/chromedriver] found in cache
+2025-04-07 09:25:10,063 - WDM - INFO - ====== WebDriver manager ======
+2025-04-07 09:25:10,151 - WDM - INFO - Get LATEST chromedriver version for google-chrome
+2025-04-07 09:25:10,271 - WDM - INFO - Get LATEST chromedriver version for google-chrome
+2025-04-07 09:25:10,309 - WDM - INFO - Driver [/Users/hk/.wdm/drivers/chromedriver/mac64/134.0.6998.165/chromedriver-mac-arm64/chromedriver] found in cache
+2025-04-07 09:25:14,936 - WDM - INFO - ====== WebDriver manager ======
+2025-04-07 09:25:15,030 - WDM - INFO - Get LATEST chromedriver version for google-chrome
+2025-04-07 09:25:15,138 - WDM - INFO - Get LATEST chromedriver version for google-chrome
+2025-04-07 09:25:15,180 - WDM - INFO - Driver [/Users/hk/.wdm/drivers/chromedriver/mac64/134.0.6998.165/chromedriver-mac-arm64/chromedriver] found in cache
+2025-04-07 09:25:18,638 - WDM - INFO - ====== WebDriver manager ======
+2025-04-07 09:25:18,715 - WDM - INFO - Get LATEST chromedriver version for google-chrome
+2025-04-07 09:25:18,755 - WDM - INFO - Get LATEST chromedriver version for google-chrome
+2025-04-07 09:25:18,794 - WDM - INFO - Driver [/Users/hk/.wdm/drivers/chromedriver/mac64/134.0.6998.165/chromedriver-mac-arm64/chromedriver] found in cache
+2025-04-07 09:25:19,406 - WDM - INFO - ====== WebDriver manager ======
+2025-04-07 09:25:19,492 - WDM - INFO - Get LATEST chromedriver version for google-chrome
+2025-04-07 09:25:19,605 - WDM - INFO - Get LATEST chromedriver version for google-chrome
+2025-04-07 09:25:19,643 - WDM - INFO - Driver [/Users/hk/.wdm/drivers/chromedriver/mac64/134.0.6998.165/chromedriver-mac-arm64/chromedriver] found in cache
+2025-04-09 06:59:49,406 - UltimateStartupScraper - INFO - Attempt 1/5
+2025-04-09 06:59:51,579 - UltimateStartupScraper - INFO - Stealth driver initialized successfully
+2025-04-09 06:59:51,579 - UltimateStartupScraper - INFO - Navigating to: https://topstartups.io/?hq_location=San+Francisco+Bay+Area
+2025-04-09 06:59:53,469 - UltimateStartupScraper - INFO - Page navigation and verification successful
+2025-04-09 07:05:17,294 - UltimateStartupScraper - INFO - Attempt 1/5
+2025-04-09 07:05:20,070 - UltimateStartupScraper - INFO - Stealth driver initialized successfully
+2025-04-09 07:05:20,070 - UltimateStartupScraper - INFO - Navigating to: https://topstartups.io/?hq_location=San+Francisco+Bay+Area
+2025-04-09 07:05:20,939 - UltimateStartupScraper - INFO - Page navigation and verification successful
+2025-04-09 07:05:31,480 - UltimateStartupScraper - ERROR - Attempt 1 failed: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=135.0.7049.84)
+Stacktrace:
+0   chromedriver                        0x0000000104ee6dec cxxbridge1$str$ptr + 2817040
+1   chromedriver                        0x0000000104edf088 cxxbridge1$str$ptr + 2784940
+2   chromedriver                        0x0000000104a268d8 cxxbridge1$string$len + 93028
+3   chromedriver                        0x0000000104a00758 chromedriver + 132952
+4   chromedriver                        0x0000000104a95734 cxxbridge1$string$len + 547264
+5   chromedriver                        0x0000000104aae2c4 cxxbridge1$string$len + 648528
+6   chromedriver                        0x0000000104a61a80 cxxbridge1$string$len + 335116
+7   chromedriver                        0x0000000104eabc74 cxxbridge1$str$ptr + 2575000
+8   chromedriver                        0x0000000104eaef40 cxxbridge1$str$ptr + 2588004
+9   chromedriver                        0x0000000104e8b9fc cxxbridge1$str$ptr + 2443296
+10  chromedriver                        0x0000000104eaf7bc cxxbridge1$str$ptr + 2590176
+11  chromedriver                        0x0000000104e7caf0 cxxbridge1$str$ptr + 2382100
+12  chromedriver                        0x0000000104ecf9a0 cxxbridge1$str$ptr + 2721732
+13  chromedriver                        0x0000000104ecfb2c cxxbridge1$str$ptr + 2722128
+14  chromedriver                        0x0000000104edecd4 cxxbridge1$str$ptr + 2783992
+15  libsystem_pthread.dylib             0x0000000187e23fa8 _pthread_start + 148
+16  libsystem_pthread.dylib             0x0000000187e1eda0 thread_start + 8
+
+2025-04-09 07:05:31,484 - UltimateStartupScraper - ERROR - Failed to capture screenshot: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=135.0.7049.84)
+Stacktrace:
+0   chromedriver                        0x0000000104ee6dec cxxbridge1$str$ptr + 2817040
+1   chromedriver                        0x0000000104edf088 cxxbridge1$str$ptr + 2784940
+2   chromedriver                        0x0000000104a268d8 cxxbridge1$string$len + 93028
+3   chromedriver                        0x0000000104a00758 chromedriver + 132952
+4   chromedriver                        0x0000000104a95734 cxxbridge1$string$len + 547264
+5   chromedriver                        0x0000000104aae2c4 cxxbridge1$string$len + 648528
+6   chromedriver                        0x0000000104a61a80 cxxbridge1$string$len + 335116
+7   chromedriver                        0x0000000104eabc74 cxxbridge1$str$ptr + 2575000
+8   chromedriver                        0x0000000104eaef40 cxxbridge1$str$ptr + 2588004
+9   chromedriver                        0x0000000104e8b9fc cxxbridge1$str$ptr + 2443296
+10  chromedriver                        0x0000000104eaf7bc cxxbridge1$str$ptr + 2590176
+11  chromedriver                        0x0000000104e7caf0 cxxbridge1$str$ptr + 2382100
+12  chromedriver                        0x0000000104ecf9a0 cxxbridge1$str$ptr + 2721732
+13  chromedriver                        0x0000000104ecfb2c cxxbridge1$str$ptr + 2722128
+14  chromedriver                        0x0000000104edecd4 cxxbridge1$str$ptr + 2783992
+15  libsystem_pthread.dylib             0x0000000187e23fa8 _pthread_start + 148
+16  libsystem_pthread.dylib             0x0000000187e1eda0 thread_start + 8
+
+2025-04-09 07:05:31,485 - UltimateStartupScraper - INFO - Retrying in 10 seconds...
+2025-04-09 07:05:41,590 - UltimateStartupScraper - INFO - Browser session terminated
+2025-04-09 07:05:41,590 - UltimateStartupScraper - INFO - Attempt 2/5
+2025-04-09 07:05:42,900 - UltimateStartupScraper - INFO - Stealth driver initialized successfully
+2025-04-09 07:05:42,900 - UltimateStartupScraper - INFO - Navigating to: https://topstartups.io/?hq_location=San+Francisco+Bay+Area
+2025-04-09 07:05:43,834 - UltimateStartupScraper - INFO - Page navigation and verification successful
+2025-04-09 07:05:45,790 - UltimateStartupScraper - ERROR - Attempt 2 failed: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=135.0.7049.84)
+Stacktrace:
+0   chromedriver                        0x00000001053a2dec cxxbridge1$str$ptr + 2817040
+1   chromedriver                        0x000000010539b088 cxxbridge1$str$ptr + 2784940
+2   chromedriver                        0x0000000104ee28d8 cxxbridge1$string$len + 93028
+3   chromedriver                        0x0000000104ebc758 chromedriver + 132952
+4   chromedriver                        0x0000000104f51734 cxxbridge1$string$len + 547264
+5   chromedriver                        0x0000000104f6a2c4 cxxbridge1$string$len + 648528
+6   chromedriver                        0x0000000104f1da80 cxxbridge1$string$len + 335116
+7   chromedriver                        0x0000000105367c74 cxxbridge1$str$ptr + 2575000
+8   chromedriver                        0x000000010536af40 cxxbridge1$str$ptr + 2588004
+9   chromedriver                        0x00000001053479fc cxxbridge1$str$ptr + 2443296
+10  chromedriver                        0x000000010536b7bc cxxbridge1$str$ptr + 2590176
+11  chromedriver                        0x0000000105338af0 cxxbridge1$str$ptr + 2382100
+12  chromedriver                        0x000000010538b9a0 cxxbridge1$str$ptr + 2721732
+13  chromedriver                        0x000000010538bb2c cxxbridge1$str$ptr + 2722128
+14  chromedriver                        0x000000010539acd4 cxxbridge1$str$ptr + 2783992
+15  libsystem_pthread.dylib             0x0000000187e23fa8 _pthread_start + 148
+16  libsystem_pthread.dylib             0x0000000187e1eda0 thread_start + 8
+
+2025-04-09 07:05:45,792 - UltimateStartupScraper - ERROR - Failed to capture screenshot: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=135.0.7049.84)
+Stacktrace:
+0   chromedriver                        0x00000001053a2dec cxxbridge1$str$ptr + 2817040
+1   chromedriver                        0x000000010539b088 cxxbridge1$str$ptr + 2784940
+2   chromedriver                        0x0000000104ee28d8 cxxbridge1$string$len + 93028
+3   chromedriver                        0x0000000104ebc758 chromedriver + 132952
+4   chromedriver                        0x0000000104f51734 cxxbridge1$string$len + 547264
+5   chromedriver                        0x0000000104f6a2c4 cxxbridge1$string$len + 648528
+6   chromedriver                        0x0000000104f1da80 cxxbridge1$string$len + 335116
+7   chromedriver                        0x0000000105367c74 cxxbridge1$str$ptr + 2575000
+8   chromedriver                        0x000000010536af40 cxxbridge1$str$ptr + 2588004
+9   chromedriver                        0x00000001053479fc cxxbridge1$str$ptr + 2443296
+10  chromedriver                        0x000000010536b7bc cxxbridge1$str$ptr + 2590176
+11  chromedriver                        0x0000000105338af0 cxxbridge1$str$ptr + 2382100
+12  chromedriver                        0x000000010538b9a0 cxxbridge1$str$ptr + 2721732
+13  chromedriver                        0x000000010538bb2c cxxbridge1$str$ptr + 2722128
+14  chromedriver                        0x000000010539acd4 cxxbridge1$str$ptr + 2783992
+15  libsystem_pthread.dylib             0x0000000187e23fa8 _pthread_start + 148
+16  libsystem_pthread.dylib             0x0000000187e1eda0 thread_start + 8
+
+2025-04-09 07:05:45,792 - UltimateStartupScraper - INFO - Retrying in 20 seconds...
+2025-04-09 16:55:37,289 - UltimateStartupScraper - INFO - Attempt 1/5
+2025-04-09 16:55:39,244 - UltimateStartupScraper - INFO - Stealth driver initialized successfully
+2025-04-09 16:55:39,245 - UltimateStartupScraper - INFO - Navigating to: https://topstartups.io/?hq_location=San+Francisco+Bay+Area
+2025-04-09 16:55:40,103 - UltimateStartupScraper - INFO - Page navigation and verification successful
+2025-04-09 16:56:47,367 - UltimateStartupScraper - INFO - Scroll completed after 5 attempts
+2025-04-09 16:56:47,368 - UltimateStartupScraper - INFO - Starting data extraction process
+2025-04-09 16:56:47,395 - UltimateStartupScraper - ERROR - Attempt 1 failed: No valid startup containers found
+2025-04-09 16:56:48,227 - UltimateStartupScraper - INFO - Screenshot saved: error_attempt_1_165647.png
+2025-04-09 16:56:48,228 - UltimateStartupScraper - INFO - Retrying in 10 seconds...
+2025-04-09 16:56:58,382 - UltimateStartupScraper - INFO - Browser session terminated
+2025-04-09 16:56:58,382 - UltimateStartupScraper - INFO - Attempt 2/5
+2025-04-09 16:56:59,801 - UltimateStartupScraper - INFO - Stealth driver initialized successfully
+2025-04-09 16:56:59,801 - UltimateStartupScraper - INFO - Navigating to: https://topstartups.io/?hq_location=San+Francisco+Bay+Area
+2025-04-09 16:57:00,742 - UltimateStartupScraper - INFO - Page navigation and verification successful
+2025-04-09 16:57:05,688 - UltimateStartupScraper - ERROR - Attempt 2 failed: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=135.0.7049.84)
+Stacktrace:
+0   chromedriver                        0x0000000104516dec cxxbridge1$str$ptr + 2817040
+1   chromedriver                        0x000000010450f088 cxxbridge1$str$ptr + 2784940
+2   chromedriver                        0x00000001040568d8 cxxbridge1$string$len + 93028
+3   chromedriver                        0x0000000104030758 chromedriver + 132952
+4   chromedriver                        0x00000001040c5734 cxxbridge1$string$len + 547264
+5   chromedriver                        0x00000001040de2c4 cxxbridge1$string$len + 648528
+6   chromedriver                        0x0000000104091a80 cxxbridge1$string$len + 335116
+7   chromedriver                        0x00000001044dbc74 cxxbridge1$str$ptr + 2575000
+8   chromedriver                        0x00000001044def40 cxxbridge1$str$ptr + 2588004
+9   chromedriver                        0x00000001044bb9fc cxxbridge1$str$ptr + 2443296
+10  chromedriver                        0x00000001044df7bc cxxbridge1$str$ptr + 2590176
+11  chromedriver                        0x00000001044acaf0 cxxbridge1$str$ptr + 2382100
+12  chromedriver                        0x00000001044ff9a0 cxxbridge1$str$ptr + 2721732
+13  chromedriver                        0x00000001044ffb2c cxxbridge1$str$ptr + 2722128
+14  chromedriver                        0x000000010450ecd4 cxxbridge1$str$ptr + 2783992
+15  libsystem_pthread.dylib             0x0000000187e23fa8 _pthread_start + 148
+16  libsystem_pthread.dylib             0x0000000187e1eda0 thread_start + 8
+
+2025-04-09 16:57:05,691 - UltimateStartupScraper - ERROR - Failed to capture screenshot: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=135.0.7049.84)
+Stacktrace:
+0   chromedriver                        0x0000000104516dec cxxbridge1$str$ptr + 2817040
+1   chromedriver                        0x000000010450f088 cxxbridge1$str$ptr + 2784940
+2   chromedriver                        0x00000001040568d8 cxxbridge1$string$len + 93028
+3   chromedriver                        0x0000000104030758 chromedriver + 132952
+4   chromedriver                        0x00000001040c5734 cxxbridge1$string$len + 547264
+5   chromedriver                        0x00000001040de2c4 cxxbridge1$string$len + 648528
+6   chromedriver                        0x0000000104091a80 cxxbridge1$string$len + 335116
+7   chromedriver                        0x00000001044dbc74 cxxbridge1$str$ptr + 2575000
+8   chromedriver                        0x00000001044def40 cxxbridge1$str$ptr + 2588004
+9   chromedriver                        0x00000001044bb9fc cxxbridge1$str$ptr + 2443296
+10  chromedriver                        0x00000001044df7bc cxxbridge1$str$ptr + 2590176
+11  chromedriver                        0x00000001044acaf0 cxxbridge1$str$ptr + 2382100
+12  chromedriver                        0x00000001044ff9a0 cxxbridge1$str$ptr + 2721732
+13  chromedriver                        0x00000001044ffb2c cxxbridge1$str$ptr + 2722128
+14  chromedriver                        0x000000010450ecd4 cxxbridge1$str$ptr + 2783992
+15  libsystem_pthread.dylib             0x0000000187e23fa8 _pthread_start + 148
+16  libsystem_pthread.dylib             0x0000000187e1eda0 thread_start + 8
+
+2025-04-09 16:57:05,691 - UltimateStartupScraper - INFO - Retrying in 20 seconds...
+2025-04-09 16:57:25,801 - UltimateStartupScraper - INFO - Browser session terminated
+2025-04-09 16:57:25,802 - UltimateStartupScraper - INFO - Attempt 3/5
+2025-04-09 16:57:27,115 - UltimateStartupScraper - INFO - Stealth driver initialized successfully
+2025-04-09 16:57:27,115 - UltimateStartupScraper - INFO - Navigating to: https://topstartups.io/?hq_location=San+Francisco+Bay+Area
+2025-04-09 16:57:28,468 - UltimateStartupScraper - INFO - Page navigation and verification successful
+2025-04-09 16:57:30,260 - UltimateStartupScraper - ERROR - Attempt 3 failed: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=135.0.7049.84)
+Stacktrace:
+0   chromedriver                        0x00000001012e2dec cxxbridge1$str$ptr + 2817040
+1   chromedriver                        0x00000001012db088 cxxbridge1$str$ptr + 2784940
+2   chromedriver                        0x0000000100e228d8 cxxbridge1$string$len + 93028
+3   chromedriver                        0x0000000100dfc758 chromedriver + 132952
+4   chromedriver                        0x0000000100e91734 cxxbridge1$string$len + 547264
+5   chromedriver                        0x0000000100eaa2c4 cxxbridge1$string$len + 648528
+6   chromedriver                        0x0000000100e5da80 cxxbridge1$string$len + 335116
+7   chromedriver                        0x00000001012a7c74 cxxbridge1$str$ptr + 2575000
+8   chromedriver                        0x00000001012aaf40 cxxbridge1$str$ptr + 2588004
+9   chromedriver                        0x00000001012879fc cxxbridge1$str$ptr + 2443296
+10  chromedriver                        0x00000001012ab7bc cxxbridge1$str$ptr + 2590176
+11  chromedriver                        0x0000000101278af0 cxxbridge1$str$ptr + 2382100
+12  chromedriver                        0x00000001012cb9a0 cxxbridge1$str$ptr + 2721732
+13  chromedriver                        0x00000001012cbb2c cxxbridge1$str$ptr + 2722128
+14  chromedriver                        0x00000001012dacd4 cxxbridge1$str$ptr + 2783992
+15  libsystem_pthread.dylib             0x0000000187e23fa8 _pthread_start + 148
+16  libsystem_pthread.dylib             0x0000000187e1eda0 thread_start + 8
+
+2025-04-09 16:57:30,262 - UltimateStartupScraper - ERROR - Failed to capture screenshot: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=135.0.7049.84)
+Stacktrace:
+0   chromedriver                        0x00000001012e2dec cxxbridge1$str$ptr + 2817040
+1   chromedriver                        0x00000001012db088 cxxbridge1$str$ptr + 2784940
+2   chromedriver                        0x0000000100e228d8 cxxbridge1$string$len + 93028
+3   chromedriver                        0x0000000100dfc758 chromedriver + 132952
+4   chromedriver                        0x0000000100e91734 cxxbridge1$string$len + 547264
+5   chromedriver                        0x0000000100eaa2c4 cxxbridge1$string$len + 648528
+6   chromedriver                        0x0000000100e5da80 cxxbridge1$string$len + 335116
+7   chromedriver                        0x00000001012a7c74 cxxbridge1$str$ptr + 2575000
+8   chromedriver                        0x00000001012aaf40 cxxbridge1$str$ptr + 2588004
+9   chromedriver                        0x00000001012879fc cxxbridge1$str$ptr + 2443296
+10  chromedriver                        0x00000001012ab7bc cxxbridge1$str$ptr + 2590176
+11  chromedriver                        0x0000000101278af0 cxxbridge1$str$ptr + 2382100
+12  chromedriver                        0x00000001012cb9a0 cxxbridge1$str$ptr + 2721732
+13  chromedriver                        0x00000001012cbb2c cxxbridge1$str$ptr + 2722128
+14  chromedriver                        0x00000001012dacd4 cxxbridge1$str$ptr + 2783992
+15  libsystem_pthread.dylib             0x0000000187e23fa8 _pthread_start + 148
+16  libsystem_pthread.dylib             0x0000000187e1eda0 thread_start + 8
+
+2025-04-09 16:57:30,263 - UltimateStartupScraper - INFO - Retrying in 40 seconds...
+2025-04-09 17:03:55,083 - UltimateStartupScraper - INFO - Attempt 1/5
+2025-04-09 17:03:57,000 - UltimateStartupScraper - INFO - Stealth driver initialized successfully
+2025-04-09 17:03:57,001 - UltimateStartupScraper - INFO - Navigating to: https://topstartups.io/?hq_location=San+Francisco+Bay+Area
+2025-04-09 17:04:27,973 - UltimateStartupScraper - ERROR - Navigation failed: Message: 
+Stacktrace:
+0   chromedriver                        0x0000000103132dec cxxbridge1$str$ptr + 2817040
+1   chromedriver                        0x000000010312b088 cxxbridge1$str$ptr + 2784940
+2   chromedriver                        0x0000000102c728d8 cxxbridge1$string$len + 93028
+3   chromedriver                        0x0000000102cb96a0 cxxbridge1$string$len + 383276
+4   chromedriver                        0x0000000102cfa7b8 cxxbridge1$string$len + 649796
+5   chromedriver                        0x0000000102cada80 cxxbridge1$string$len + 335116
+6   chromedriver                        0x00000001030f7c74 cxxbridge1$str$ptr + 2575000
+7   chromedriver                        0x00000001030faf40 cxxbridge1$str$ptr + 2588004
+8   chromedriver                        0x00000001030d79fc cxxbridge1$str$ptr + 2443296
+9   chromedriver                        0x00000001030fb7bc cxxbridge1$str$ptr + 2590176
+10  chromedriver                        0x00000001030c8af0 cxxbridge1$str$ptr + 2382100
+11  chromedriver                        0x000000010311b9a0 cxxbridge1$str$ptr + 2721732
+12  chromedriver                        0x000000010311bb2c cxxbridge1$str$ptr + 2722128
+13  chromedriver                        0x000000010312acd4 cxxbridge1$str$ptr + 2783992
+14  libsystem_pthread.dylib             0x0000000187e23fa8 _pthread_start + 148
+15  libsystem_pthread.dylib             0x0000000187e1eda0 thread_start + 8
+
+2025-04-09 17:04:27,974 - UltimateStartupScraper - ERROR - Attempt 1 failed: Message: 
+Stacktrace:
+0   chromedriver                        0x0000000103132dec cxxbridge1$str$ptr + 2817040
+1   chromedriver                        0x000000010312b088 cxxbridge1$str$ptr + 2784940
+2   chromedriver                        0x0000000102c728d8 cxxbridge1$string$len + 93028
+3   chromedriver                        0x0000000102cb96a0 cxxbridge1$string$len + 383276
+4   chromedriver                        0x0000000102cfa7b8 cxxbridge1$string$len + 649796
+5   chromedriver                        0x0000000102cada80 cxxbridge1$string$len + 335116
+6   chromedriver                        0x00000001030f7c74 cxxbridge1$str$ptr + 2575000
+7   chromedriver                        0x00000001030faf40 cxxbridge1$str$ptr + 2588004
+8   chromedriver                        0x00000001030d79fc cxxbridge1$str$ptr + 2443296
+9   chromedriver                        0x00000001030fb7bc cxxbridge1$str$ptr + 2590176
+10  chromedriver                        0x00000001030c8af0 cxxbridge1$str$ptr + 2382100
+11  chromedriver                        0x000000010311b9a0 cxxbridge1$str$ptr + 2721732
+12  chromedriver                        0x000000010311bb2c cxxbridge1$str$ptr + 2722128
+13  chromedriver                        0x000000010312acd4 cxxbridge1$str$ptr + 2783992
+14  libsystem_pthread.dylib             0x0000000187e23fa8 _pthread_start + 148
+15  libsystem_pthread.dylib             0x0000000187e1eda0 thread_start + 8
+
+2025-04-09 17:04:28,179 - UltimateStartupScraper - INFO - Screenshot saved: error_attempt_1_170427.png
+2025-04-09 17:04:28,179 - UltimateStartupScraper - INFO - Retrying in 10 seconds...
+2025-04-09 17:04:38,185 - UltimateStartupScraper - INFO - Attempt 2/5
+2025-04-09 17:04:38,185 - UltimateStartupScraper - INFO - Navigating to: https://topstartups.io/?hq_location=San+Francisco+Bay+Area
+2025-04-09 17:04:38,187 - UltimateStartupScraper - ERROR - Navigation failed: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=135.0.7049.84)
+Stacktrace:
+0   chromedriver                        0x0000000103132dec cxxbridge1$str$ptr + 2817040
+1   chromedriver                        0x000000010312b088 cxxbridge1$str$ptr + 2784940
+2   chromedriver                        0x0000000102c728d8 cxxbridge1$string$len + 93028
+3   chromedriver                        0x0000000102c4c758 chromedriver + 132952
+4   chromedriver                        0x0000000102ce1734 cxxbridge1$string$len + 547264
+5   chromedriver                        0x0000000102ce8f64 cxxbridge1$string$len + 578032
+6   chromedriver                        0x0000000102cada80 cxxbridge1$string$len + 335116
+7   chromedriver                        0x00000001030f7c74 cxxbridge1$str$ptr + 2575000
+8   chromedriver                        0x00000001030faf40 cxxbridge1$str$ptr + 2588004
+9   chromedriver                        0x00000001030d79fc cxxbridge1$str$ptr + 2443296
+10  chromedriver                        0x00000001030fb7bc cxxbridge1$str$ptr + 2590176
+11  chromedriver                        0x00000001030c8af0 cxxbridge1$str$ptr + 2382100
+12  chromedriver                        0x000000010311b9a0 cxxbridge1$str$ptr + 2721732
+13  chromedriver                        0x000000010311bb2c cxxbridge1$str$ptr + 2722128
+14  chromedriver                        0x000000010312acd4 cxxbridge1$str$ptr + 2783992
+15  libsystem_pthread.dylib             0x0000000187e23fa8 _pthread_start + 148
+16  libsystem_pthread.dylib             0x0000000187e1eda0 thread_start + 8
+
+2025-04-09 17:04:38,187 - UltimateStartupScraper - ERROR - Window closed unexpectedly, reinitializing driver
+2025-04-09 17:04:39,325 - UltimateStartupScraper - INFO - Stealth driver initialized successfully
+2025-04-09 17:04:39,325 - UltimateStartupScraper - INFO - Attempt 2/5
+2025-04-09 17:04:39,325 - UltimateStartupScraper - INFO - Navigating to: https://topstartups.io/?hq_location=San+Francisco+Bay+Area
+2025-04-09 17:04:41,177 - UltimateStartupScraper - ERROR - Navigation failed: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=135.0.7049.84)
+Stacktrace:
+0   chromedriver                        0x0000000100cb6dec cxxbridge1$str$ptr + 2817040
+1   chromedriver                        0x0000000100caf088 cxxbridge1$str$ptr + 2784940
+2   chromedriver                        0x00000001007f68d8 cxxbridge1$string$len + 93028
+3   chromedriver                        0x00000001007d0758 chromedriver + 132952
+4   chromedriver                        0x0000000100865734 cxxbridge1$string$len + 547264
+5   chromedriver                        0x000000010087e2c4 cxxbridge1$string$len + 648528
+6   chromedriver                        0x0000000100831a80 cxxbridge1$string$len + 335116
+7   chromedriver                        0x0000000100c7bc74 cxxbridge1$str$ptr + 2575000
+8   chromedriver                        0x0000000100c7ef40 cxxbridge1$str$ptr + 2588004
+9   chromedriver                        0x0000000100c5b9fc cxxbridge1$str$ptr + 2443296
+10  chromedriver                        0x0000000100c7f7bc cxxbridge1$str$ptr + 2590176
+11  chromedriver                        0x0000000100c4caf0 cxxbridge1$str$ptr + 2382100
+12  chromedriver                        0x0000000100c9f9a0 cxxbridge1$str$ptr + 2721732
+13  chromedriver                        0x0000000100c9fb2c cxxbridge1$str$ptr + 2722128
+14  chromedriver                        0x0000000100caecd4 cxxbridge1$str$ptr + 2783992
+15  libsystem_pthread.dylib             0x0000000187e23fa8 _pthread_start + 148
+16  libsystem_pthread.dylib             0x0000000187e1eda0 thread_start + 8
+
+2025-04-09 17:04:41,178 - UltimateStartupScraper - ERROR - Window closed unexpectedly, reinitializing driver
+2025-04-09 17:04:42,131 - UltimateStartupScraper - INFO - Stealth driver initialized successfully
+2025-04-09 17:04:42,131 - UltimateStartupScraper - INFO - Attempt 2/5
+2025-04-09 17:04:42,131 - UltimateStartupScraper - INFO - Navigating to: https://topstartups.io/?hq_location=San+Francisco+Bay+Area
+2025-04-09 17:04:44,452 - UltimateStartupScraper - ERROR - Navigation failed: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=135.0.7049.84)
+Stacktrace:
+0   chromedriver                        0x0000000104686dec cxxbridge1$str$ptr + 2817040
+1   chromedriver                        0x000000010467f088 cxxbridge1$str$ptr + 2784940
+2   chromedriver                        0x00000001041c68d8 cxxbridge1$string$len + 93028
+3   chromedriver                        0x00000001041a0758 chromedriver + 132952
+4   chromedriver                        0x0000000104235734 cxxbridge1$string$len + 547264
+5   chromedriver                        0x000000010424e2c4 cxxbridge1$string$len + 648528
+6   chromedriver                        0x0000000104201a80 cxxbridge1$string$len + 335116
+7   chromedriver                        0x000000010464bc74 cxxbridge1$str$ptr + 2575000
+8   chromedriver                        0x000000010464ef40 cxxbridge1$str$ptr + 2588004
+9   chromedriver                        0x000000010462b9fc cxxbridge1$str$ptr + 2443296
+10  chromedriver                        0x000000010464f7bc cxxbridge1$str$ptr + 2590176
+11  chromedriver                        0x000000010461caf0 cxxbridge1$str$ptr + 2382100
+12  chromedriver                        0x000000010466f9a0 cxxbridge1$str$ptr + 2721732
+13  chromedriver                        0x000000010466fb2c cxxbridge1$str$ptr + 2722128
+14  chromedriver                        0x000000010467ecd4 cxxbridge1$str$ptr + 2783992
+15  libsystem_pthread.dylib             0x0000000187e23fa8 _pthread_start + 148
+16  libsystem_pthread.dylib             0x0000000187e1eda0 thread_start + 8
+
+2025-04-09 17:04:44,454 - UltimateStartupScraper - ERROR - Window closed unexpectedly, reinitializing driver
+2025-04-09 17:14:02,803 - ERROR - Critical error: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=135.0.7049.84)
+Stacktrace:
+0   chromedriver                        0x0000000102f2edec cxxbridge1$str$ptr + 2817040
+1   chromedriver                        0x0000000102f27088 cxxbridge1$str$ptr + 2784940
+2   chromedriver                        0x0000000102a6e8d8 cxxbridge1$string$len + 93028
+3   chromedriver                        0x0000000102a48758 chromedriver + 132952
+4   chromedriver                        0x0000000102add734 cxxbridge1$string$len + 547264
+5   chromedriver                        0x0000000102af62c4 cxxbridge1$string$len + 648528
+6   chromedriver                        0x0000000102aa9a80 cxxbridge1$string$len + 335116
+7   chromedriver                        0x0000000102ef3c74 cxxbridge1$str$ptr + 2575000
+8   chromedriver                        0x0000000102ef6f40 cxxbridge1$str$ptr + 2588004
+9   chromedriver                        0x0000000102ed39fc cxxbridge1$str$ptr + 2443296
+10  chromedriver                        0x0000000102ef77bc cxxbridge1$str$ptr + 2590176
+11  chromedriver                        0x0000000102ec4af0 cxxbridge1$str$ptr + 2382100
+12  chromedriver                        0x0000000102f179a0 cxxbridge1$str$ptr + 2721732
+13  chromedriver                        0x0000000102f17b2c cxxbridge1$str$ptr + 2722128
+14  chromedriver                        0x0000000102f26cd4 cxxbridge1$str$ptr + 2783992
+15  libsystem_pthread.dylib             0x0000000187e23fa8 _pthread_start + 148
+16  libsystem_pthread.dylib             0x0000000187e1eda0 thread_start + 8
+
+2025-04-09 17:24:37,411 [INFO] Attempt 1/5
+2025-04-09 17:24:39,319 [INFO] Stealth driver initialized successfully
+2025-04-09 17:24:39,319 [INFO] Navigating to: https://topstartups.io/?hq_location=San+Francisco+Bay+Area
+2025-04-09 17:25:10,242 [ERROR] Navigation failed: Message: 
+Stacktrace:
+0   chromedriver                        0x000000010127edec cxxbridge1$str$ptr + 2817040
+1   chromedriver                        0x0000000101277088 cxxbridge1$str$ptr + 2784940
+2   chromedriver                        0x0000000100dbe8d8 cxxbridge1$string$len + 93028
+3   chromedriver                        0x0000000100e056a0 cxxbridge1$string$len + 383276
+4   chromedriver                        0x0000000100e467b8 cxxbridge1$string$len + 649796
+5   chromedriver                        0x0000000100df9a80 cxxbridge1$string$len + 335116
+6   chromedriver                        0x0000000101243c74 cxxbridge1$str$ptr + 2575000
+7   chromedriver                        0x0000000101246f40 cxxbridge1$str$ptr + 2588004
+8   chromedriver                        0x00000001012239fc cxxbridge1$str$ptr + 2443296
+9   chromedriver                        0x00000001012477bc cxxbridge1$str$ptr + 2590176
+10  chromedriver                        0x0000000101214af0 cxxbridge1$str$ptr + 2382100
+11  chromedriver                        0x00000001012679a0 cxxbridge1$str$ptr + 2721732
+12  chromedriver                        0x0000000101267b2c cxxbridge1$str$ptr + 2722128
+13  chromedriver                        0x0000000101276cd4 cxxbridge1$str$ptr + 2783992
+14  libsystem_pthread.dylib             0x0000000187e23fa8 _pthread_start + 148
+15  libsystem_pthread.dylib             0x0000000187e1eda0 thread_start + 8
+
+2025-04-09 17:25:10,245 [ERROR] Attempt 1 failed: Message: 
+Stacktrace:
+0   chromedriver                        0x000000010127edec cxxbridge1$str$ptr + 2817040
+1   chromedriver                        0x0000000101277088 cxxbridge1$str$ptr + 2784940
+2   chromedriver                        0x0000000100dbe8d8 cxxbridge1$string$len + 93028
+3   chromedriver                        0x0000000100e056a0 cxxbridge1$string$len + 383276
+4   chromedriver                        0x0000000100e467b8 cxxbridge1$string$len + 649796
+5   chromedriver                        0x0000000100df9a80 cxxbridge1$string$len + 335116
+6   chromedriver                        0x0000000101243c74 cxxbridge1$str$ptr + 2575000
+7   chromedriver                        0x0000000101246f40 cxxbridge1$str$ptr + 2588004
+8   chromedriver                        0x00000001012239fc cxxbridge1$str$ptr + 2443296
+9   chromedriver                        0x00000001012477bc cxxbridge1$str$ptr + 2590176
+10  chromedriver                        0x0000000101214af0 cxxbridge1$str$ptr + 2382100
+11  chromedriver                        0x00000001012679a0 cxxbridge1$str$ptr + 2721732
+12  chromedriver                        0x0000000101267b2c cxxbridge1$str$ptr + 2722128
+13  chromedriver                        0x0000000101276cd4 cxxbridge1$str$ptr + 2783992
+14  libsystem_pthread.dylib             0x0000000187e23fa8 _pthread_start + 148
+15  libsystem_pthread.dylib             0x0000000187e1eda0 thread_start + 8
+
+2025-04-09 17:25:10,459 [INFO] Screenshot saved: error_attempt_1_172510.png
+2025-04-09 17:25:10,460 [INFO] Retrying in 10 seconds...
+2025-04-09 17:25:20,455 [INFO] Attempt 2/5
+2025-04-09 17:25:20,456 [INFO] Navigating to: https://topstartups.io/?hq_location=San+Francisco+Bay+Area
+2025-04-09 17:25:51,377 [ERROR] Navigation failed: Message: 
+Stacktrace:
+0   chromedriver                        0x000000010127edec cxxbridge1$str$ptr + 2817040
+1   chromedriver                        0x0000000101277088 cxxbridge1$str$ptr + 2784940
+2   chromedriver                        0x0000000100dbe8d8 cxxbridge1$string$len + 93028
+3   chromedriver                        0x0000000100e056a0 cxxbridge1$string$len + 383276
+4   chromedriver                        0x0000000100e467b8 cxxbridge1$string$len + 649796
+5   chromedriver                        0x0000000100df9a80 cxxbridge1$string$len + 335116
+6   chromedriver                        0x0000000101243c74 cxxbridge1$str$ptr + 2575000
+7   chromedriver                        0x0000000101246f40 cxxbridge1$str$ptr + 2588004
+8   chromedriver                        0x00000001012239fc cxxbridge1$str$ptr + 2443296
+9   chromedriver                        0x00000001012477bc cxxbridge1$str$ptr + 2590176
+10  chromedriver                        0x0000000101214af0 cxxbridge1$str$ptr + 2382100
+11  chromedriver                        0x00000001012679a0 cxxbridge1$str$ptr + 2721732
+12  chromedriver                        0x0000000101267b2c cxxbridge1$str$ptr + 2722128
+13  chromedriver                        0x0000000101276cd4 cxxbridge1$str$ptr + 2783992
+14  libsystem_pthread.dylib             0x0000000187e23fa8 _pthread_start + 148
+15  libsystem_pthread.dylib             0x0000000187e1eda0 thread_start + 8
+
+2025-04-09 17:25:51,379 [ERROR] Attempt 2 failed: Message: 
+Stacktrace:
+0   chromedriver                        0x000000010127edec cxxbridge1$str$ptr + 2817040
+1   chromedriver                        0x0000000101277088 cxxbridge1$str$ptr + 2784940
+2   chromedriver                        0x0000000100dbe8d8 cxxbridge1$string$len + 93028
+3   chromedriver                        0x0000000100e056a0 cxxbridge1$string$len + 383276
+4   chromedriver                        0x0000000100e467b8 cxxbridge1$string$len + 649796
+5   chromedriver                        0x0000000100df9a80 cxxbridge1$string$len + 335116
+6   chromedriver                        0x0000000101243c74 cxxbridge1$str$ptr + 2575000
+7   chromedriver                        0x0000000101246f40 cxxbridge1$str$ptr + 2588004
+8   chromedriver                        0x00000001012239fc cxxbridge1$str$ptr + 2443296
+9   chromedriver                        0x00000001012477bc cxxbridge1$str$ptr + 2590176
+10  chromedriver                        0x0000000101214af0 cxxbridge1$str$ptr + 2382100
+11  chromedriver                        0x00000001012679a0 cxxbridge1$str$ptr + 2721732
+12  chromedriver                        0x0000000101267b2c cxxbridge1$str$ptr + 2722128
+13  chromedriver                        0x0000000101276cd4 cxxbridge1$str$ptr + 2783992
+14  libsystem_pthread.dylib             0x0000000187e23fa8 _pthread_start + 148
+15  libsystem_pthread.dylib             0x0000000187e1eda0 thread_start + 8
+
+2025-04-09 17:25:51,707 [INFO] Screenshot saved: error_attempt_2_172551.png
+2025-04-09 17:25:51,707 [INFO] Retrying in 20 seconds...
+2025-04-09 17:26:11,712 [INFO] Attempt 3/5
+2025-04-09 17:26:11,713 [INFO] Navigating to: https://topstartups.io/?hq_location=San+Francisco+Bay+Area
+2025-04-09 17:26:42,649 [ERROR] Navigation failed: Message: 
+Stacktrace:
+0   chromedriver                        0x000000010127edec cxxbridge1$str$ptr + 2817040
+1   chromedriver                        0x0000000101277088 cxxbridge1$str$ptr + 2784940
+2   chromedriver                        0x0000000100dbe8d8 cxxbridge1$string$len + 93028
+3   chromedriver                        0x0000000100e056a0 cxxbridge1$string$len + 383276
+4   chromedriver                        0x0000000100e467b8 cxxbridge1$string$len + 649796
+5   chromedriver                        0x0000000100df9a80 cxxbridge1$string$len + 335116
+6   chromedriver                        0x0000000101243c74 cxxbridge1$str$ptr + 2575000
+7   chromedriver                        0x0000000101246f40 cxxbridge1$str$ptr + 2588004
+8   chromedriver                        0x00000001012239fc cxxbridge1$str$ptr + 2443296
+9   chromedriver                        0x00000001012477bc cxxbridge1$str$ptr + 2590176
+10  chromedriver                        0x0000000101214af0 cxxbridge1$str$ptr + 2382100
+11  chromedriver                        0x00000001012679a0 cxxbridge1$str$ptr + 2721732
+12  chromedriver                        0x0000000101267b2c cxxbridge1$str$ptr + 2722128
+13  chromedriver                        0x0000000101276cd4 cxxbridge1$str$ptr + 2783992
+14  libsystem_pthread.dylib             0x0000000187e23fa8 _pthread_start + 148
+15  libsystem_pthread.dylib             0x0000000187e1eda0 thread_start + 8
+
+2025-04-09 17:26:42,667 [ERROR] Attempt 3 failed: Message: 
+Stacktrace:
+0   chromedriver                        0x000000010127edec cxxbridge1$str$ptr + 2817040
+1   chromedriver                        0x0000000101277088 cxxbridge1$str$ptr + 2784940
+2   chromedriver                        0x0000000100dbe8d8 cxxbridge1$string$len + 93028
+3   chromedriver                        0x0000000100e056a0 cxxbridge1$string$len + 383276
+4   chromedriver                        0x0000000100e467b8 cxxbridge1$string$len + 649796
+5   chromedriver                        0x0000000100df9a80 cxxbridge1$string$len + 335116
+6   chromedriver                        0x0000000101243c74 cxxbridge1$str$ptr + 2575000
+7   chromedriver                        0x0000000101246f40 cxxbridge1$str$ptr + 2588004
+8   chromedriver                        0x00000001012239fc cxxbridge1$str$ptr + 2443296
+9   chromedriver                        0x00000001012477bc cxxbridge1$str$ptr + 2590176
+10  chromedriver                        0x0000000101214af0 cxxbridge1$str$ptr + 2382100
+11  chromedriver                        0x00000001012679a0 cxxbridge1$str$ptr + 2721732
+12  chromedriver                        0x0000000101267b2c cxxbridge1$str$ptr + 2722128
+13  chromedriver                        0x0000000101276cd4 cxxbridge1$str$ptr + 2783992
+14  libsystem_pthread.dylib             0x0000000187e23fa8 _pthread_start + 148
+15  libsystem_pthread.dylib             0x0000000187e1eda0 thread_start + 8
+
+2025-04-09 17:26:42,963 [INFO] Screenshot saved: error_attempt_3_172642.png
+2025-04-09 17:26:42,964 [INFO] Retrying in 40 seconds...
+2025-04-09 17:27:22,971 [INFO] Attempt 4/5
+2025-04-09 17:27:22,974 [INFO] Navigating to: https://topstartups.io/?hq_location=San+Francisco+Bay+Area
+2025-04-09 17:27:53,543 [ERROR] Navigation failed: Message: 
+Stacktrace:
+0   chromedriver                        0x000000010127edec cxxbridge1$str$ptr + 2817040
+1   chromedriver                        0x0000000101277088 cxxbridge1$str$ptr + 2784940
+2   chromedriver                        0x0000000100dbe8d8 cxxbridge1$string$len + 93028
+3   chromedriver                        0x0000000100e056a0 cxxbridge1$string$len + 383276
+4   chromedriver                        0x0000000100e467b8 cxxbridge1$string$len + 649796
+5   chromedriver                        0x0000000100df9a80 cxxbridge1$string$len + 335116
+6   chromedriver                        0x0000000101243c74 cxxbridge1$str$ptr + 2575000
+7   chromedriver                        0x0000000101246f40 cxxbridge1$str$ptr + 2588004
+8   chromedriver                        0x00000001012239fc cxxbridge1$str$ptr + 2443296
+9   chromedriver                        0x00000001012477bc cxxbridge1$str$ptr + 2590176
+10  chromedriver                        0x0000000101214af0 cxxbridge1$str$ptr + 2382100
+11  chromedriver                        0x00000001012679a0 cxxbridge1$str$ptr + 2721732
+12  chromedriver                        0x0000000101267b2c cxxbridge1$str$ptr + 2722128
+13  chromedriver                        0x0000000101276cd4 cxxbridge1$str$ptr + 2783992
+14  libsystem_pthread.dylib             0x0000000187e23fa8 _pthread_start + 148
+15  libsystem_pthread.dylib             0x0000000187e1eda0 thread_start + 8
+
+2025-04-09 17:27:53,545 [ERROR] Attempt 4 failed: Message: 
+Stacktrace:
+0   chromedriver                        0x000000010127edec cxxbridge1$str$ptr + 2817040
+1   chromedriver                        0x0000000101277088 cxxbridge1$str$ptr + 2784940
+2   chromedriver                        0x0000000100dbe8d8 cxxbridge1$string$len + 93028
+3   chromedriver                        0x0000000100e056a0 cxxbridge1$string$len + 383276
+4   chromedriver                        0x0000000100e467b8 cxxbridge1$string$len + 649796
+5   chromedriver                        0x0000000100df9a80 cxxbridge1$string$len + 335116
+6   chromedriver                        0x0000000101243c74 cxxbridge1$str$ptr + 2575000
+7   chromedriver                        0x0000000101246f40 cxxbridge1$str$ptr + 2588004
+8   chromedriver                        0x00000001012239fc cxxbridge1$str$ptr + 2443296
+9   chromedriver                        0x00000001012477bc cxxbridge1$str$ptr + 2590176
+10  chromedriver                        0x0000000101214af0 cxxbridge1$str$ptr + 2382100
+11  chromedriver                        0x00000001012679a0 cxxbridge1$str$ptr + 2721732
+12  chromedriver                        0x0000000101267b2c cxxbridge1$str$ptr + 2722128
+13  chromedriver                        0x0000000101276cd4 cxxbridge1$str$ptr + 2783992
+14  libsystem_pthread.dylib             0x0000000187e23fa8 _pthread_start + 148
+15  libsystem_pthread.dylib             0x0000000187e1eda0 thread_start + 8
+
+2025-04-09 17:27:53,915 [INFO] Screenshot saved: error_attempt_4_172753.png
+2025-04-09 17:27:53,915 [INFO] Retrying in 80 seconds...
+2025-04-09 17:29:13,922 [INFO] Attempt 5/5
+2025-04-09 17:29:13,924 [INFO] Navigating to: https://topstartups.io/?hq_location=San+Francisco+Bay+Area
+2025-04-09 17:29:44,988 [ERROR] Navigation failed: Message: 
+Stacktrace:
+0   chromedriver                        0x000000010127edec cxxbridge1$str$ptr + 2817040
+1   chromedriver                        0x0000000101277088 cxxbridge1$str$ptr + 2784940
+2   chromedriver                        0x0000000100dbe8d8 cxxbridge1$string$len + 93028
+3   chromedriver                        0x0000000100e056a0 cxxbridge1$string$len + 383276
+4   chromedriver                        0x0000000100e467b8 cxxbridge1$string$len + 649796
+5   chromedriver                        0x0000000100df9a80 cxxbridge1$string$len + 335116
+6   chromedriver                        0x0000000101243c74 cxxbridge1$str$ptr + 2575000
+7   chromedriver                        0x0000000101246f40 cxxbridge1$str$ptr + 2588004
+8   chromedriver                        0x00000001012239fc cxxbridge1$str$ptr + 2443296
+9   chromedriver                        0x00000001012477bc cxxbridge1$str$ptr + 2590176
+10  chromedriver                        0x0000000101214af0 cxxbridge1$str$ptr + 2382100
+11  chromedriver                        0x00000001012679a0 cxxbridge1$str$ptr + 2721732
+12  chromedriver                        0x0000000101267b2c cxxbridge1$str$ptr + 2722128
+13  chromedriver                        0x0000000101276cd4 cxxbridge1$str$ptr + 2783992
+14  libsystem_pthread.dylib             0x0000000187e23fa8 _pthread_start + 148
+15  libsystem_pthread.dylib             0x0000000187e1eda0 thread_start + 8
+
+2025-04-09 17:29:44,990 [ERROR] Attempt 5 failed: Message: 
+Stacktrace:
+0   chromedriver                        0x000000010127edec cxxbridge1$str$ptr + 2817040
+1   chromedriver                        0x0000000101277088 cxxbridge1$str$ptr + 2784940
+2   chromedriver                        0x0000000100dbe8d8 cxxbridge1$string$len + 93028
+3   chromedriver                        0x0000000100e056a0 cxxbridge1$string$len + 383276
+4   chromedriver                        0x0000000100e467b8 cxxbridge1$string$len + 649796
+5   chromedriver                        0x0000000100df9a80 cxxbridge1$string$len + 335116
+6   chromedriver                        0x0000000101243c74 cxxbridge1$str$ptr + 2575000
+7   chromedriver                        0x0000000101246f40 cxxbridge1$str$ptr + 2588004
+8   chromedriver                        0x00000001012239fc cxxbridge1$str$ptr + 2443296
+9   chromedriver                        0x00000001012477bc cxxbridge1$str$ptr + 2590176
+10  chromedriver                        0x0000000101214af0 cxxbridge1$str$ptr + 2382100
+11  chromedriver                        0x00000001012679a0 cxxbridge1$str$ptr + 2721732
+12  chromedriver                        0x0000000101267b2c cxxbridge1$str$ptr + 2722128
+13  chromedriver                        0x0000000101276cd4 cxxbridge1$str$ptr + 2783992
+14  libsystem_pthread.dylib             0x0000000187e23fa8 _pthread_start + 148
+15  libsystem_pthread.dylib             0x0000000187e1eda0 thread_start + 8
+
+2025-04-09 17:29:45,196 [INFO] Screenshot saved: error_attempt_5_172944.png
+2025-04-09 17:29:45,455 [ERROR] All scraping attempts failed
+2025-04-09 17:34:27,148 [INFO] Starting scraping attempt 1/5
+2025-04-09 17:34:29,027 [INFO] Enhanced stealth driver initialized successfully
+2025-04-09 17:34:29,027 [INFO] Navigating to: https://topstartups.io/?hq_location=San+Francisco+Bay+Area
+2025-04-09 17:34:29,955 [INFO] Basic page load complete
+2025-04-09 17:35:10,049 [INFO] Content verified using: //*[contains(text(), 'What they do')]
+2025-04-09 17:36:51,427 [INFO] Starting enhanced scrolling sequence
+2025-04-09 17:37:11,472 [INFO] Scroll attempt 1: Found 0 startup elements
+2025-04-09 17:37:11,474 [INFO] No new elements found (attempt 1/5)
+2025-04-09 17:37:34,330 [INFO] Scroll attempt 2: Found 0 startup elements
+2025-04-09 17:37:34,333 [INFO] No new elements found (attempt 2/5)
+2025-04-09 17:37:57,738 [INFO] Scroll attempt 3: Found 0 startup elements
+2025-04-09 17:37:57,740 [INFO] No new elements found (attempt 3/5)
+2025-04-09 17:37:57,740 [INFO] Searching for 'Show More' button
+2025-04-09 17:39:57,970 [WARNING] No 'Show More' button found or clickable
+2025-04-09 17:40:23,008 [INFO] Scroll attempt 4: Found 0 startup elements
+2025-04-09 17:40:23,009 [INFO] No new elements found (attempt 4/5)
+2025-04-09 17:40:23,009 [INFO] Searching for 'Show More' button
+2025-04-09 17:42:23,332 [WARNING] No 'Show More' button found or clickable
+2025-04-09 17:42:47,051 [INFO] Scroll attempt 5: Found 0 startup elements
+2025-04-09 17:42:47,053 [INFO] No new elements found (attempt 5/5)
+2025-04-09 17:42:47,053 [INFO] Searching for 'Show More' button
+2025-04-13 15:42:40,482 [INFO] Starting scraping attempt 1/5
+2025-04-13 15:42:41,570 [INFO] Enhanced stealth driver initialized successfully
+2025-04-13 15:42:41,570 [INFO] Navigating to: https://topstartups.io/?hq_location=San+Francisco+Bay+Area
+2025-04-13 15:42:42,418 [INFO] Basic page load complete
+2025-04-13 15:42:55,264 [ERROR] Navigation failed: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+2025-04-13 15:42:55,267 [ERROR] Failed to capture screenshot: HTTPConnectionPool(host='localhost', port=55626): Max retries exceeded with url: /session/1d9c70348d1c4da3f1b70db96b4ebd9d/screenshot (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x10269aff0>: Failed to establish a new connection: [Errno 61] Connection refused'))
+2025-04-13 15:42:55,267 [ERROR] Navigation failed: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+2025-04-13 15:42:55,267 [ERROR] Attempt 1 failed: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+2025-04-13 15:42:55,269 [ERROR] Failed to capture screenshot: HTTPConnectionPool(host='localhost', port=55626): Max retries exceeded with url: /session/1d9c70348d1c4da3f1b70db96b4ebd9d/screenshot (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x10269be60>: Failed to establish a new connection: [Errno 61] Connection refused'))
+2025-04-13 15:42:55,269 [INFO] Retrying in 10 seconds...
+2025-04-13 15:43:05,282 [ERROR] Cleanup failed: HTTPConnectionPool(host='localhost', port=55626): Max retries exceeded with url: /session/1d9c70348d1c4da3f1b70db96b4ebd9d/window/handles (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x10269b1a0>: Failed to establish a new connection: [Errno 61] Connection refused'))
+2025-04-13 15:43:05,283 [INFO] Starting scraping attempt 2/5
+2025-04-13 15:43:06,254 [INFO] Enhanced stealth driver initialized successfully
+2025-04-13 15:43:06,255 [INFO] Navigating to: https://topstartups.io/?hq_location=San+Francisco+Bay+Area
+2025-04-13 15:43:07,079 [INFO] Basic page load complete
+2025-04-13 15:43:07,535 [ERROR] Navigation failed: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+2025-04-13 15:43:07,537 [ERROR] Failed to capture screenshot: HTTPConnectionPool(host='localhost', port=55699): Max retries exceeded with url: /session/1541d29921be96a7615e9827ead733fa/screenshot (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x10269a5a0>: Failed to establish a new connection: [Errno 61] Connection refused'))
+2025-04-13 15:43:07,537 [ERROR] Navigation failed: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+2025-04-13 15:43:07,537 [ERROR] Attempt 2 failed: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+2025-04-13 15:43:07,539 [ERROR] Failed to capture screenshot: HTTPConnectionPool(host='localhost', port=55699): Max retries exceeded with url: /session/1541d29921be96a7615e9827ead733fa/screenshot (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x1026dc200>: Failed to establish a new connection: [Errno 61] Connection refused'))
+2025-04-13 15:43:07,539 [INFO] Retrying in 20 seconds...

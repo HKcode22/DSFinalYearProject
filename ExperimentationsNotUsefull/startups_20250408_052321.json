@@ -1,0 +1,274 @@
+[
+    {
+        "name": "Unknown Company 1",
+        "description": "",
+        "funding": "Unknown",
+        "location": "HQ:",
+        "links": {},
+        "extracted_at": "2025-04-08T05:10:26.577623"
+    },
+    {
+        "name": "Numeric",
+        "description": "",
+        "funding": "Unknown",
+        "location": "San Francisco Bay Area",
+        "links": {
+            "Website": "https://www.numeric.io/?utm_source=topstartups.io",
+            "Numeric": "https://www.numeric.io/?utm_source=topstartups.io",
+            "See who works here 🤝": "https://www.linkedin.com/company/numeric-io",
+            "Check company site 📌": "https://www.numeric.io/?utm_source=topstartups.io",
+            "View Jobs": "https://jobs.ashbyhq.com/numeric?utm_source=topstartups.io"
+        },
+        "extracted_at": "2025-04-08T05:11:06.775135"
+    },
+    {
+        "name": "Render",
+        "description": "",
+        "funding": "Unknown",
+        "location": "San Francisco Bay Area",
+        "links": {
+            "Website": "https://www.render.com/?utm_source=topstartups.io",
+            "Render": "https://www.render.com/?utm_source=topstartups.io",
+            "See who works here 🤝": "https://www.linkedin.com/company/renderco",
+            "Check company site 📌": "https://www.render.com/?utm_source=topstartups.io",
+            "View Jobs": "https://render.com/careers?utm_source=topstartups.io"
+        },
+        "extracted_at": "2025-04-08T05:11:46.925989"
+    },
+    {
+        "name": "Harvey",
+        "description": "",
+        "funding": "Unknown",
+        "location": "San Francisco Bay Area",
+        "links": {
+            "Website": "https://www.harvey.ai/?utm_source=topstartups.io",
+            "Harvey": "https://www.harvey.ai/?utm_source=topstartups.io",
+            "See who works here 🤝": "https://www.linkedin.com/company/harvey-ai/",
+            "Check company site 📌": "https://www.harvey.ai/?utm_source=topstartups.io",
+            "View Jobs": "https://jobs.ashbyhq.com/harvey?utm_source=topstartups.io"
+        },
+        "extracted_at": "2025-04-08T05:12:27.142183"
+    },
+    {
+        "name": "Semgrep",
+        "description": "",
+        "funding": "Unknown",
+        "location": "San Francisco Bay Area",
+        "links": {
+            "Website": "https://semgrep.dev/?utm_source=topstartups.io",
+            "Semgrep": "https://semgrep.dev/?utm_source=topstartups.io",
+            "See who works here 🤝": "https://www.linkedin.com/company/semgrep/",
+            "Check company site 📌": "https://semgrep.dev/?utm_source=topstartups.io",
+            "View Jobs": "https://boards.greenhouse.io/semgrep?utm_source=topstartups.io"
+        },
+        "extracted_at": "2025-04-08T05:13:07.390432"
+    },
+    {
+        "name": "HighTouch.io",
+        "description": "",
+        "funding": "Unknown",
+        "location": "San Francisco Bay Area",
+        "links": {
+            "Website": "http://www.hightouch.io/?utm_source=topstartups.io",
+            "HighTouch.io": "http://www.hightouch.io/?utm_source=topstartups.io",
+            "See who works here 🤝": "https://www.linkedin.com/company/hightouchio",
+            "Check company site 📌": "http://www.hightouch.io/?utm_source=topstartups.io",
+            "View Jobs": "https://boards.greenhouse.io/hightouch/?utm_source=topstartups.io"
+        },
+        "extracted_at": "2025-04-08T05:13:47.550486"
+    },
+    {
+        "name": "Qventus",
+        "description": "",
+        "funding": "Unknown",
+        "location": "San Francisco Bay Area",
+        "links": {
+            "Website": "http://www.qventus.com/?utm_source=topstartups.io",
+            "Qventus": "http://www.qventus.com/?utm_source=topstartups.io",
+            "See who works here 🤝": "https://linkedin.com/company/qventus-inc",
+            "Read reviews ⭐": "https://www.glassdoor.com/Overview/Working-at-Qventus-EI_IE1687366.11,18.htm",
+            "Check company site 📌": "http://www.qventus.com/?utm_source=topstartups.io",
+            "View Jobs": "https://jobs.ashbyhq.com/qventus?utm_source=topstartups.io"
+        },
+        "extracted_at": "2025-04-08T05:14:27.695954"
+    },
+    {
+        "name": "Speak",
+        "description": "",
+        "funding": "Unknown",
+        "location": "San Francisco Bay Area",
+        "links": {
+            "Website": "https://www.speak.com/?utm_source=topstartups.io",
+            "Speak": "https://www.speak.com/?utm_source=topstartups.io",
+            "See who works here 🤝": "https://www.linkedin.com/company/usespeak",
+            "Check company site 📌": "https://www.speak.com/?utm_source=topstartups.io",
+            "View Jobs": "https://jobs.ashbyhq.com/speak/?utm_source=topstartups.io"
+        },
+        "extracted_at": "2025-04-08T05:15:07.897725"
+    },
+    {
+        "name": "Databricks",
+        "description": "",
+        "funding": "Unknown",
+        "location": "San Francisco Bay Area",
+        "links": {
+            "Website": "http://databricks.com/?utm_source=topstartups.io",
+            "Databricks": "http://databricks.com/?utm_source=topstartups.io",
+            "See who works here 🤝": "https://linkedin.com/company/databricks",
+            "Read reviews ⭐": "https://www.glassdoor.com/Reviews/Databricks-Reviews-E954734.htm",
+            "Check company site 📌": "http://databricks.com/?utm_source=topstartups.io",
+            "View Jobs": "https://boards.greenhouse.io/embed/job_board?for=Databricks"
+        },
+        "extracted_at": "2025-04-08T05:15:48.147253"
+    },
+    {
+        "name": "Kong",
+        "description": "",
+        "funding": "Unknown",
+        "location": "San Francisco Bay Area",
+        "links": {
+            "Website": "https://konghq.com/?utm_source=topstartups.io",
+            "Kong": "https://konghq.com/?utm_source=topstartups.io",
+            "See who works here 🤝": "https://www.linkedin.com/company/konghq/",
+            "Read reviews ⭐": "https://www.glassdoor.com/Reviews/Kong-Reviews-E801963.htm",
+            "Check company site 📌": "https://konghq.com/?utm_source=topstartups.io",
+            "View Jobs": "https://jobs.lever.co/kong?utm_source=topstartups.io"
+        },
+        "extracted_at": "2025-04-08T05:16:28.344773"
+    },
+    {
+        "name": "Cresta",
+        "description": "",
+        "funding": "Unknown",
+        "location": "San Francisco Bay Area",
+        "links": {
+            "Website": "http://cresta.com/?utm_source=topstartups.io",
+            "Cresta": "http://cresta.com/?utm_source=topstartups.io",
+            "See who works here 🤝": "https://www.linkedin.com/company/cresta-inc/",
+            "Read reviews ⭐": "https://www.glassdoor.com/Reviews/Cresta-Reviews-E805613.htm",
+            "Check company site 📌": "http://cresta.com/?utm_source=topstartups.io",
+            "View Jobs": "https://job-boards.greenhouse.io/cresta/?utm_source=topstartups.io"
+        },
+        "extracted_at": "2025-04-08T05:17:08.589076"
+    },
+    {
+        "name": "Infinitus",
+        "description": "",
+        "funding": "Unknown",
+        "location": "San Francisco Bay Area",
+        "links": {
+            "Website": "https://www.infinitus.ai/?utm_source=topstartups.io",
+            "Infinitus": "https://www.infinitus.ai/?utm_source=topstartups.io",
+            "See who works here 🤝": "https://www.linkedin.com/company/infinitusai",
+            "Check company site 📌": "https://www.infinitus.ai/?utm_source=topstartups.io",
+            "View Jobs": "https://www.infinitus.ai/careers/?utm_source=topstartups.io"
+        },
+        "extracted_at": "2025-04-08T05:17:49.011034"
+    },
+    {
+        "name": "Nooks",
+        "description": "",
+        "funding": "Unknown",
+        "location": "San Francisco Bay Area",
+        "links": {
+            "Website": "https://www.nooks.ai/?utm_source=topstartups.io",
+            "Nooks": "https://www.nooks.ai/?utm_source=topstartups.io",
+            "See who works here 🤝": "https://www.linkedin.com/company/nooksapp",
+            "Check company site 📌": "https://www.nooks.ai/?utm_source=topstartups.io",
+            "View Jobs": "https://nooks.breezy.hr/?utm_source=topstartups.io"
+        },
+        "extracted_at": "2025-04-08T05:18:29.357482"
+    },
+    {
+        "name": "Decagon",
+        "description": "",
+        "funding": "Unknown",
+        "location": "San Francisco Bay Area",
+        "links": {
+            "Website": "https://decagon.ai/?utm_source=topstartups.io",
+            "Decagon": "https://decagon.ai/?utm_source=topstartups.io",
+            "See who works here 🤝": "https://www.linkedin.com/company/decagon-ai/",
+            "Check company site 📌": "https://decagon.ai/?utm_source=topstartups.io",
+            "View Jobs": "https://jobs.ashbyhq.com/decagon?utm_source=topstartups.io"
+        },
+        "extracted_at": "2025-04-08T05:19:09.556146"
+    },
+    {
+        "name": "World Labs",
+        "description": "",
+        "funding": "Unknown",
+        "location": "San Francisco Bay Area",
+        "links": {
+            "Website": "https://www.worldlabs.ai/?utm_source=topstartups.io",
+            "World Labs": "https://www.worldlabs.ai/?utm_source=topstartups.io",
+            "See who works here 🤝": "https://www.linkedin.com/company/world-labs/",
+            "Check company site 📌": "https://www.worldlabs.ai/?utm_source=topstartups.io",
+            "View Jobs": "https://jobs.ashbyhq.com/worldlabs?utm_source=topstartups.io"
+        },
+        "extracted_at": "2025-04-08T05:19:49.751753"
+    },
+    {
+        "name": "Safe Superintelligence",
+        "description": "",
+        "funding": "Unknown",
+        "location": "San Francisco Bay Area",
+        "links": {
+            "Website": "https://ssi.inc/?utm_source=topstartups.io",
+            "Safe Superintelligence": "https://ssi.inc/?utm_source=topstartups.io",
+            "See who works here 🤝": "https://topstartups.io/target=%22_blank%22",
+            "Check company site 📌": "https://ssi.inc/?utm_source=topstartups.io",
+            "View Jobs": "https://jobs.ashbyhq.com/ssi/b91659e4-9352-46fa-b3c5-4fb28827eb2e?utm_source=topstartups.io"
+        },
+        "extracted_at": "2025-04-08T05:20:30.000149"
+    },
+    {
+        "name": "Harmonic",
+        "description": "",
+        "funding": "Unknown",
+        "location": "San Francisco Bay Area",
+        "links": {
+            "Website": "https://harmonic.fun/index/?utm_source=topstartups.io",
+            "Harmonic": "https://harmonic.fun/index/?utm_source=topstartups.io",
+            "See who works here 🤝": "https://www.linkedin.com/company/harmonicmath/",
+            "Check company site 📌": "https://harmonic.fun/index/?utm_source=topstartups.io",
+            "View Jobs": "https://jobs.ashbyhq.com/Harmonic?utm_source=topstartups.io"
+        },
+        "extracted_at": "2025-04-08T05:21:10.327229"
+    },
+    {
+        "name": "Atlys",
+        "description": "",
+        "funding": "Unknown",
+        "location": "San Francisco Bay Area",
+        "links": {
+            "Website": "https://www.atlys.com/?utm_source=topstartups.io",
+            "Atlys": "https://www.atlys.com/?utm_source=topstartups.io",
+            "See who works here 🤝": "https://www.linkedin.com/company/getatlys/",
+            "Check company site 📌": "https://www.atlys.com/?utm_source=topstartups.io",
+            "View Jobs": "https://careers.atlys.com/?utm_source=topstartups.io"
+        },
+        "extracted_at": "2025-04-08T05:21:50.656318"
+    },
+    {
+        "name": "Cortex",
+        "description": "",
+        "funding": "Unknown",
+        "location": "San Francisco Bay Area",
+        "links": {
+            "Website": "https://www.cortex.io/?utm_source=topstartups.io",
+            "Cortex": "https://www.cortex.io/?utm_source=topstartups.io",
+            "See who works here 🤝": "https://www.linkedin.com/company/cortexapp/",
+            "Check company site 📌": "https://www.cortex.io/?utm_source=topstartups.io",
+            "View Jobs": "https://boards.greenhouse.io/cortex/?utm_source=topstartups.io"
+        },
+        "extracted_at": "2025-04-08T05:22:30.853612"
+    },
+    {
+        "name": "Get newly funded startups delivered to you weekly",
+        "description": "",
+        "funding": "Unknown",
+        "location": "San Francisco Bay Area",
+        "links": {},
+        "extracted_at": "2025-04-08T05:23:21.056684"
+    }
+]
