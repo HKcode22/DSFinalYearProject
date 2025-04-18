@@ -1,18 +1,3 @@
-name,description,logo_url,website_url,scraped_at,tags,hq_location,employee_count,founded_year,investors,funding_details,valuation
-Unknown Company,,,,2025-03-28 06:45:15,,,1-10 employees,,,,
-Unknown Company,"Quick facts:
-📍HQ: San Francisco Bay Area, California, USA
-11-50 employees Founded: 2012",https://img-cdn.tnwcdn.com/image?url=https%3A%2F%2Fpbs.twimg.com%2Fprofile_images%2F1280215066520870914%2FkxkaF5E3.png&signature=6c2efea6694720445e1a3fac8b2a5ff1,http://www.grokker.com/?utm_source=topstartups.io,2025-03-28 06:45:15,"Healthcare, Fitness, Employee Benefits, 11-50 employees, Founded: 2012, Khosla Ventures, $7M Series B in 2016",,11-50 employees,2012,Khosla Ventures,$7M Series B in 2016,
-Unknown Company,"Quick facts:
-📍HQ: San Francisco Bay Area, California, USA
-501-1000 employees Founded: 2010",https://img-cdn.tnwcdn.com/image?url=https%3A%2F%2Fpbs.twimg.com%2Fprofile_images%2F1368729223121231875%2FvqJ0WtX3.jpg&signature=1541c1754f8569e99a67d54ee136e47c,https://www.data.ai/en/?utm_source=topstartups.io,2025-03-28 06:45:15,"Mobile Analytics, SaaS, Enterprise Software, 501-1000 employees, Founded: 2010, Sequoia, $157M Series E in 2016, $450M valuation",,501-1000 employees,2010,Sequoia,"$157M Series E in 2016, $450M valuation",$450M valuation
-Unknown Company,"Quick facts:
-📍HQ: San Francisco Bay Area, California, USA
-11-50 employees Founded: 2013",https://img-cdn.tnwcdn.com/image?url=https%3A%2F%2Fpbs.twimg.com%2Fprofile_images%2F575529646520819712%2Fmwwxp0Pz.png&signature=a53562e710d1b414276307ddbc70ed64,http://www.smartpiano.com/?utm_source=topstartups.io,2025-03-28 06:45:16,"Music, 11-50 employees, Founded: 2013, Sequoia, $10M Series B in 2016",,11-50 employees,2013,Sequoia,$10M Series B in 2016,
-Unknown Company,"Quick facts:
-📍HQ: San Francisco Bay Area, California, USA
-501-1000 employees Founded: 2014",https://img-cdn.tnwcdn.com/image?url=https%3A%2F%2Fpbs.twimg.com%2Fprofile_images%2F616011573136470016%2FJ9u9lrfw.jpg&signature=8775e92219767969ee3666e4a2ea628c,http://www.cloverhealth.com/?utm_source=topstartups.io,2025-03-28 06:45:16,"Healthcare, Insurance, 501-1000 employees, Founded: 2014, Sequoia, Post-IPO, $1.0B valuation",,501-1000 employees,2014,"Sequoia, Post-IPO",$1.0B valuation,$1.0B valuation
-Unknown Company,"Quick facts:
-📍HQ: San Francisco Bay Area, California, USA
-11-50 employees Founded: 2012",https://img-cdn.tnwcdn.com/image?url=https%3A%2F%2Fpbs.twimg.com%2Fprofile_images%2F1171453426678415367%2FU64UY39B.jpg&signature=7ef739ac301bfd6fb1fac07ef1e3f8a6,http://www.thanx.com/?utm_source=topstartups.io,2025-03-28 06:45:16,"E-Commerce, Loyalty Programs, 11-50 employees, Founded: 2012, Sequoia, $23M Series B in 2016",,11-50 employees,2012,Sequoia,$23M Series B in 2016,
-Unknown Company,,,,2025-03-28 06:45:16,,,,,,,
+version https://git-lfs.github.com/spec/v1
+oid sha256:071fa17e361989b4d5c4adde899b52af9bd38f3bb9df204967435826537a2718
+size 2790

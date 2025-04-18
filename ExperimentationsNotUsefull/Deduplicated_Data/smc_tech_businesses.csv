@@ -1,7 +1,3 @@
-company_name,location,data_source
-Meta,Menlo Park,Fallback Silicon Valley Data
-Google,Mountain View,Fallback Silicon Valley Data
-Apple,Cupertino,Fallback Silicon Valley Data
-Netflix,Los Gatos,Fallback Silicon Valley Data
-Adobe,San Jose,Fallback Silicon Valley Data
-Nvidia,Santa Clara,Fallback Silicon Valley Data
+version https://git-lfs.github.com/spec/v1
+oid sha256:2f0a79ee706da2f3cb206d6476b7e1104905deb728d43156ef2a45290419558c
+size 313

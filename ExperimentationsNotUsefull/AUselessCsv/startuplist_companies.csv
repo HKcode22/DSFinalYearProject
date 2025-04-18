@@ -1,6 +1,3 @@
-name,description,data_source
-Stripe,Payment processing platform,StartupList
-Airtable,Collaborative database platform,StartupList
-Rippling,Employee management platform,StartupList
-Notion,All-in-one workspace,StartupList
-Figma,Collaborative design platform,StartupList
+version https://git-lfs.github.com/spec/v1
+oid sha256:05b982da4f7562d4bb79b1f6ad007130690e94446dfd7e087559f5bf20f54344
+size 267

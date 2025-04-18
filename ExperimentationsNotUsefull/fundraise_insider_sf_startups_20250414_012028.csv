@@ -1,21 +1,3 @@
-Company,Total_Employees,Industry,Website,Funding_Date,Funding_Type,Extraction_Time,Page
-Rembrand,56,0,http://www.rembrand.com,2-Jan-25,Series A,2025-04-14 01:20:25,1
-Wurthy,13,0,http://www.wurthy.co,30-Dec-24,Seed,2025-04-14 01:20:25,1
-Frontier Bio,14,research,http://www.frontierbio.com,25-Dec-24,Seed,2025-04-14 01:20:25,1
-Courtyard,28,0,http://www.courtyard.io,23-Dec-24,Venture - Series Unknown,2025-04-14 01:20:25,1
-Pasadena Private Lending,9,financial services,http://www.pasadena-private-lending.com,19-Dec-24,Debt Financing,2025-04-14 01:20:25,1
-Tenor,5,information technology & services,http://www.tenorhq.com,19-Dec-24,Seed,2025-04-14 01:20:25,1
-Earli,37,research,http://www.earli.com,19-Dec-24,Undisclosed,2025-04-14 01:20:25,1
-Child Family Health International,68,nonprofit organization management,http://www.cfhi.org,19-Dec-24,Grant,2025-04-14 01:20:25,1
-SandboxAQ,290,information technology & services,http://www.sandboxaq.com,18-Dec-24,Private Equity,2025-04-14 01:20:25,1
-Plume Network,29,information technology & services,http://www.plumenetwork.xyz,18-Dec-24,Series A,2025-04-14 01:20:25,1
-Hamming AI,12,0,http://www.hamming.ai,18-Dec-24,Seed,2025-04-14 01:20:25,1
-CourtScribes,21,legal services,http://www.courtscribes.com,18-Dec-24,Undisclosed,2025-04-14 01:20:25,1
-Perplexity,300,information technology & services,http://www.perplexity.ai,18-Dec-24,Private Equity,2025-04-14 01:20:25,1
-Lyten,290,mechanical or industrial engineering,http://www.lyten.com,18-Dec-24,Debt Financing,2025-04-14 01:20:25,1
-Fairbanc,38,information technology & services,http://www.fairbanc.app,18-Dec-24,Debt Financing,2025-04-14 01:20:25,1
-Mojave Energy Systems,40,machinery,http://www.mojavehvac.com,18-Dec-24,Series A,2025-04-14 01:20:25,1
-Fraction AI,6,information technology & services,http://www.fractionai.xyz,18-Dec-24,Pre-Seed,2025-04-14 01:20:25,1
-Schwarm Technologies Inc.,27,information technology & services,http://www.schwarm.com,17-Dec-24,Undisclosed,2025-04-14 01:20:25,1
-Landbase,45,0,http://www.landbase.com,17-Dec-24,Venture - Series Unknown,2025-04-14 01:20:25,1
-Acre,15,real estate,http://www.acrehomes.com,17-Dec-24,Seed,2025-04-14 01:20:25,1
+version https://git-lfs.github.com/spec/v1
+oid sha256:552a4542224e3c53fdb8fb5865affda5a094830c76fb30e2527bad838bb10a2e
+size 2184
