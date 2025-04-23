@@ -11,6 +11,7 @@ from pathlib import Path
 from datetime import datetime, timedelta
 import argparse
 import schedule
+import shutil
 
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
@@ -30,7 +31,13 @@ from selenium.webdriver.common.action_chains import ActionChains
 from webdriver_manager.chrome import ChromeDriverManager
 import pandas as pd
 
-# Create directory for storing data
+# Define paths for data storage
+PROJECT_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+JSON_FOLDER = os.path.join(PROJECT_ROOT, "JSONFolder")
+if not os.path.exists(JSON_FOLDER):
+    os.makedirs(JSON_FOLDER, exist_ok=True)
+
+# Keep original data dir for logs and local data
 DATA_DIR = Path("topstartiorealtimedata")
 DATA_DIR.mkdir(exist_ok=True)
 
@@ -129,9 +136,9 @@ class TopStartupsScraperConfig:
     MAX_RETRIES = 2  # Reduced from 3
     RETRY_DELAY = 1  # Reduced from 2
     
-    # Output file paths - UPDATED FOR NEW DIRECTORY
-    CSV_OUTPUT_PATH = str(DATA_DIR / "topstartups_data.csv")
-    JSON_OUTPUT_PATH = str(DATA_DIR / "topstartups_data.json")
+    # Output file paths - UPDATED FOR JSONFOLDER
+    CSV_OUTPUT_PATH = str(os.path.join(JSON_FOLDER, "topstartupio50.csv"))
+    JSON_OUTPUT_PATH = str(os.path.join(JSON_FOLDER, "topstartupio50.json"))
 
 class HumanLikeBehavior:
     """Class to simulate human-like browsing behavior - EXTREMELY FAST"""
@@ -540,223 +547,132 @@ class TopStartupsScraper:
             else:
                 return f"{self.config.BASE_URL}{query}?page={page_number}"
 
-    def save_results(self) -> Tuple[str, str]:
-        """Save the extracted startup data to CSV and JSON files"""
+    def save_results(self):
+        """Save results to JSONFolder and historical copies"""
         if not self.startups:
-            logger.warning("No startups to save")
             return None, None
+
+        # Save CSV (overwrite)
+        csv_path = self.config.CSV_OUTPUT_PATH
+        with open(csv_path, 'w', newline='', encoding='utf-8') as f:
+            # Include all fields including category and others
+            writer = csv.DictWriter(f, fieldnames=['name', 'description', 'headquarters', 'funding', 
+                                               'website', 'has_reviews', 'category', 'employees', 
+                                               'founding_year', 'other_details'])
+            writer.writeheader()
+            
+            # Convert dataclass objects to dictionaries, handling nested other_details
+            rows = []
+            for startup in self.startups:
+                row_dict = asdict(startup)
+                
+                # Convert other_details to string if present
+                if row_dict['other_details']:
+                    row_dict['other_details'] = json.dumps(row_dict['other_details'])
+                else:
+                    row_dict['other_details'] = ""
+                    
+                rows.append(row_dict)
+                
+            writer.writerows(rows)
+        logger.info(f"Saved CSV data to {csv_path}")
+
+        # Save JSON (overwrite)
+        json_path = self.config.JSON_OUTPUT_PATH
+        with open(json_path, 'w', encoding='utf-8') as f:
+            json.dump([asdict(startup) for startup in self.startups], f, indent=4)
+        logger.info(f"Saved JSON data to {json_path}")
+
+        # Create historical data directory
+        current_date = datetime.now().strftime("%Y-%m-%d")
+        historical_dir = os.path.join(PROJECT_ROOT, "data_archive", current_date)
+        os.makedirs(historical_dir, exist_ok=True)
+
+        # Save historical copies
+        historical_csv = os.path.join(historical_dir, "topstartupio50.csv")
+        historical_json = os.path.join(historical_dir, "topstartupio50.json")
         
         try:
-            # Save to CSV
-            with open(self.config.CSV_OUTPUT_PATH, 'w', newline='', encoding='utf-8') as csv_file:
-                fieldnames = ['name', 'description', 'headquarters', 'funding', 'website', 'has_reviews', 
-                             'employees', 'founding_year']
-                writer = csv.DictWriter(csv_file, fieldnames=fieldnames)
-                writer.writeheader()
-                
-                for startup in self.startups:
-                    # Convert dataclass to dict and write to CSV
-                    startup_dict = {k: v for k, v in asdict(startup).items() if k in fieldnames}
-                    writer.writerow(startup_dict)
-            
-            logger.info(f"Saved data to CSV: {self.config.CSV_OUTPUT_PATH}")
-            
-            # Save to JSON
-            startup_list = [asdict(startup) for startup in self.startups]
-            with open(self.config.JSON_OUTPUT_PATH, 'w', encoding='utf-8') as json_file:
-                json.dump(startup_list, json_file, indent=4, ensure_ascii=False)
-            
-            logger.info(f"Saved data to JSON: {self.config.JSON_OUTPUT_PATH}")
-            
-            return self.config.CSV_OUTPUT_PATH, self.config.JSON_OUTPUT_PATH
-            
+            shutil.copy2(csv_path, historical_csv)
+            shutil.copy2(json_path, historical_json)
+            logger.info(f"Saved historical copies to {historical_dir}")
         except Exception as e:
-            logger.error(f"Error saving results: {str(e)}")
-            return None, None
+            logger.error(f"Error saving historical copies: {e}")
+
+        return csv_path, json_path
 
     def cleanup(self):
         """Close the WebDriver and perform cleanup"""
         try:
             self.driver.quit()
             logger.info("WebDriver closed successfully")
-        except:
-            logger.warning("Error closing WebDriver")
+        except Exception as e:
+            logger.warning(f"Error closing WebDriver: {str(e)}")
 
-def update_latest_data_links(current_date):
-    """Update symbolic links to latest data files"""
-    latest_csv = DATA_DIR / "latest_data.csv"
-    latest_json = DATA_DIR / "latest_data.json"
+def main():
+    """Main function to run the scraper"""
+    logger.info("Initializing TopStartups.io scraper")
     
-    # Source files
-    source_csv = DATA_DIR / current_date / "topstartups_data.csv"
-    source_json = DATA_DIR / current_date / "topstartups_data.json"
+    scraper = TopStartupsScraper(headless=False)  # Set to True for headless mode
     
-    # Update symlinks or copy files
-    if os.path.exists(latest_csv):
-        os.remove(latest_csv)
-    if os.path.exists(latest_json):
-        os.remove(latest_json)
-        
     try:
-        os.symlink(source_csv, latest_csv)
-        os.symlink(source_json, latest_json)
-    except:
-        import shutil
-        shutil.copy2(source_csv, latest_csv)
-        shutil.copy2(source_json, latest_json)
-    
-    logger.info(f"Updated latest data links to {current_date} version")
-
-def check_for_changes(current_date):
-    """Compare current data with previous data to detect changes"""
-    date_dirs = sorted([d for d in DATA_DIR.iterdir() if d.is_dir() and d.name != current_date])
-    
-    if not date_dirs:
-        logger.info("No previous data found for comparison")
-        return
-    
-    prev_date_dir = date_dirs[-1]
-    prev_json = prev_date_dir / "topstartups_data.json"
-    current_json = DATA_DIR / current_date / "topstartups_data.json"
-    
-    if not prev_json.exists() or not current_json.exists():
-        logger.warning("Cannot compare data: missing files")
-        return
-    
-    with open(prev_json, 'r') as f:
-        prev_data = json.load(f)
-    with open(current_json, 'r') as f:
-        current_data = json.load(f)
-    
-    prev_map = {s['name']: s for s in prev_data}
-    current_map = {s['name']: s for s in current_data}
-    
-    new_startups = [s for s in current_data if s['name'] not in prev_map]
-    updated_startups = []
-    for startup in current_data:
-        name = startup['name']
-        if name in prev_map:
-            prev = prev_map[name]
-            for field in ['funding', 'employees', 'website']:
-                if startup.get(field) != prev.get(field) and startup.get(field) and prev.get(field):
-                    updated_startups.append({
-                        'name': name,
-                        'field': field,
-                        'old_value': prev.get(field),
-                        'new_value': startup.get(field)
-                    })
-    
-    changes_file = DATA_DIR / current_date / "changes_report.json"
-    changes_report = {
-        'date': current_date,
-        'previous_date': prev_date_dir.name,
-        'new_startups_count': len(new_startups),
-        'updated_startups_count': len(updated_startups),
-        'new_startups': new_startups,
-        'updated_startups': updated_startups
-    }
-    
-    with open(changes_file, 'w') as f:
-        json.dump(changes_report, f, indent=4)
-    
-    logger.info(f"Change detection completed. Found {len(new_startups)} new and {len(updated_startups)} updated startups.")
+        # Start the scraping process
+        start_time = datetime.now()
+        logger.info(f"Starting data collection cycle at {start_time}")
+        
+        # Perform the scrape
+        scraper.scrape_startups(max_startups=None)
+        scraper.save_results()
+        
+        # Calculate runtime
+        end_time = datetime.now()
+        duration = end_time - start_time
+        logger.info(f"Collection cycle completed in {duration}.")
+        
+    except Exception as e:
+        logger.error(f"Error during scraping cycle: {str(e)}")
+        
+    finally:
+        # Ensure proper cleanup
+        scraper.cleanup()
 
 def scheduled_data_collection():
     """Run the scraper on a schedule and manage data versioning"""
     def job():
-        current_date = datetime.now().strftime("%Y-%m-%d")
-        logger.info(f"Starting scheduled data collection for {current_date}")
-        
-        version_dir = DATA_DIR / current_date
-        version_dir.mkdir(exist_ok=True)
-        
-        TopStartupsScraperConfig.CSV_OUTPUT_PATH = str(version_dir / "topstartups_data.csv")
-        TopStartupsScraperConfig.JSON_OUTPUT_PATH = str(version_dir / "topstartups_data.json")
+        logger.info("Starting scheduled data collection")
         
         scraper = TopStartupsScraper(headless=True)
         
         try:
             scraper.scrape_startups(max_startups=None)
             scraper.save_results()
-            update_latest_data_links(current_date)
-            check_for_changes(current_date)
-            logger.info(f"Scheduled data collection completed for {current_date}")
+            logger.info("Scheduled data collection completed")
         except Exception as e:
             logger.error(f"Scheduled job failed: {str(e)}")
         finally:
             scraper.cleanup()
     
-    schedule.every().day.at("03:00").do(job)
-    logger.info("Scheduler started. Data collection will run daily at 03:00")
+    # Run immediately first
+    job()
     
-    while True:
-        schedule.run_pending()
-        time.sleep(60)
-
-def main():
-    """Main function to run the scraper with scheduling"""
-    logger.info("Initializing TopStartups.io scraper")
+    # Schedule future runs
+    schedule.every(24).hours.do(job)
+    logger.info("Scheduler started. Data collection will run daily at the same time")
     
-    while True:
-        scraper = TopStartupsScraper(headless=False)  # Set to True for headless mode
-        
-        try:
-            # Start the scraping process
-            start_time = datetime.now()
-            logger.info(f"Starting new data collection cycle at {start_time}")
-            
-            # Run with date versioning
-            current_date = datetime.now().strftime("%Y-%m-%d")
-            version_dir = DATA_DIR / current_date
-            version_dir.mkdir(exist_ok=True)
-            
-            # Configure versioned output paths
-            TopStartupsScraperConfig.CSV_OUTPUT_PATH = str(version_dir / "topstartups_data.csv")
-            TopStartupsScraperConfig.JSON_OUTPUT_PATH = str(version_dir / "topstartups_data.json")
-            
-            # Perform the scrape
-            scraper.scrape_startups(max_startups=None)
-            scraper.save_results()
-            
-            # Update latest symlinks
-            update_latest_data_links(current_date)
-            
-            # Calculate next run time
-            end_time = datetime.now()
-            duration = end_time - start_time
-            next_run = end_time + timedelta(hours=24)
-            logger.info(f"Collection cycle completed in {duration}. Next run at {next_run}")
-            
-        except Exception as e:
-            logger.error(f"Error during scraping cycle: {str(e)}")
-            
-        finally:
-            # Ensure proper cleanup
-            scraper.cleanup()
-            
-            # Calculate sleep time (24 hours from start time)
-            sleep_time = (24 * 3600) - duration.total_seconds()
-            if sleep_time < 0:
-                sleep_time = 0
-                
-            logger.info(f"Sleeping for {sleep_time/3600:.2f} hours until next cycle")
-            time.sleep(sleep_time)
+    try:
+        while True:
+            schedule.run_pending()
+            time.sleep(60)
+    except KeyboardInterrupt:
+        logger.info("Scheduled collection terminated by user")
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description='TopStartups.io Scraper')
     parser.add_argument('--once', action='store_true', help='Run once and exit')
+    parser.add_argument('--schedule', action='store_true', help='Run on a schedule (every 24h)')
     args = parser.parse_args()
     
-    if args.once:
-        # Single run mode
-        scraper = TopStartupsScraper(headless=False)
-        try:
-            scraper.scrape_startups(max_startups=None)
-            scraper.save_results()
-        finally:
-            scraper.cleanup()
+    if args.schedule:
+        scheduled_data_collection()
     else:
-        # Start continuous collection
-        logger.info("Starting continuous data collection service")
-        logger.info("Data will be collected every 24 hours")
-        main()
+        main()  # Run once by default

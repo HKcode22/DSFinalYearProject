@@ -1,0 +1,403 @@
+2025-04-22 21:52:28,130 - success_failure_prediction - INFO - Success/Failure Prediction Engine initialized
+2025-04-22 21:52:28,131 - success_failure_prediction - INFO - Starting success/failure prediction analysis
+2025-04-22 21:52:28,131 - success_failure_prediction - INFO - Step 1: Loading data...
+2025-04-22 21:52:28,131 - success_failure_prediction - INFO - Loading data from JSON files
+2025-04-22 21:52:28,137 - success_failure_prediction - INFO - Loaded 1103 records from fundraiser data
+2025-04-22 21:52:28,140 - success_failure_prediction - INFO - Loaded 100 records from growthlist data
+2025-04-22 21:52:28,143 - success_failure_prediction - INFO - Loaded 546 records from topstartup data
+2025-04-22 21:52:28,205 - success_failure_prediction - INFO - Final combined dataset: 1211 records
+2025-04-22 21:52:28,206 - success_failure_prediction - INFO - Step 2: Initializing component models...
+2025-04-22 21:52:28,206 - success_failure_prediction - INFO - Initializing component prediction systems
+2025-04-22 21:52:28,214 - success_failure_prediction - INFO - Initialized funding stage prediction model
+2025-04-22 21:52:28,215 - success_failure_prediction - INFO - Initialized funding continuation analysis model
+2025-04-22 21:52:28,216 - success_failure_prediction - INFO - Initialized funding amount forecast model
+2025-04-22 21:52:28,216 - success_failure_prediction - INFO - Initialized funding anomaly detection model
+2025-04-22 21:52:28,216 - success_failure_prediction - INFO - Initialized industry trend analysis model
+2025-04-22 21:52:28,216 - success_failure_prediction - INFO - All component models initialized successfully
+2025-04-22 21:52:28,216 - success_failure_prediction - INFO - Step 3: Running component analyses...
+2025-04-22 21:52:28,216 - success_failure_prediction - INFO - Running component analyses
+2025-04-22 21:52:28,217 - success_failure_prediction - INFO - Running funding stage prediction...
+2025-04-22 21:52:28,218 - success_failure_prediction - INFO - Running funding continuation analysis...
+2025-04-22 21:52:28,218 - success_failure_prediction - INFO - Running funding amount forecast...
+2025-04-22 21:52:28,231 - success_failure_prediction - ERROR - Error running component analyses: agg function failed [how->mean,dtype->object]
+2025-04-22 21:52:28,241 - success_failure_prediction - ERROR - Traceback (most recent call last):
+  File "/Users/hk/Downloads/DSFinalYearProject/.venv/lib/python3.12/site-packages/pandas/core/groupby/groupby.py", line 1942, in _agg_py_fallback
+    res_values = self._grouper.agg_series(ser, alt, preserve_dtype=True)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/hk/Downloads/DSFinalYearProject/.venv/lib/python3.12/site-packages/pandas/core/groupby/ops.py", line 864, in agg_series
+    result = self._aggregate_series_pure_python(obj, func)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/hk/Downloads/DSFinalYearProject/.venv/lib/python3.12/site-packages/pandas/core/groupby/ops.py", line 885, in _aggregate_series_pure_python
+    res = func(group)
+          ^^^^^^^^^^^
+  File "/Users/hk/Downloads/DSFinalYearProject/.venv/lib/python3.12/site-packages/pandas/core/groupby/groupby.py", line 2454, in <lambda>
+    alt=lambda x: Series(x, copy=False).mean(numeric_only=numeric_only),
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/hk/Downloads/DSFinalYearProject/.venv/lib/python3.12/site-packages/pandas/core/series.py", line 6549, in mean
+    return NDFrame.mean(self, axis, skipna, numeric_only, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/hk/Downloads/DSFinalYearProject/.venv/lib/python3.12/site-packages/pandas/core/generic.py", line 12420, in mean
+    return self._stat_function(
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/Users/hk/Downloads/DSFinalYearProject/.venv/lib/python3.12/site-packages/pandas/core/generic.py", line 12377, in _stat_function
+    return self._reduce(
+           ^^^^^^^^^^^^^
+  File "/Users/hk/Downloads/DSFinalYearProject/.venv/lib/python3.12/site-packages/pandas/core/series.py", line 6457, in _reduce
+    return op(delegate, skipna=skipna, **kwds)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/hk/Downloads/DSFinalYearProject/.venv/lib/python3.12/site-packages/pandas/core/nanops.py", line 147, in f
+    result = alt(values, axis=axis, skipna=skipna, **kwds)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/hk/Downloads/DSFinalYearProject/.venv/lib/python3.12/site-packages/pandas/core/nanops.py", line 404, in new_func
+    result = func(values, axis=axis, skipna=skipna, mask=mask, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/hk/Downloads/DSFinalYearProject/.venv/lib/python3.12/site-packages/pandas/core/nanops.py", line 719, in nanmean
+    the_sum = values.sum(axis, dtype=dtype_sum)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/hk/Downloads/DSFinalYearProject/.venv/lib/python3.12/site-packages/numpy/_core/_methods.py", line 52, in _sum
+    return umr_sum(a, axis, dtype, out, keepdims, initial, where)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: can only concatenate str (not "float") to str
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/hk/Downloads/DSFinalYearProject/MLPredictiveAnalysis/success_failure_prediction.py", line 469, in run_component_analyses
+    forecast_results = self.amount_forecaster.run_analysis(data)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/hk/Downloads/DSFinalYearProject/MLPredictiveAnalysis/funding_amount_forecast.py", line 2203, in run_analysis
+    feature_data = self.create_forecast_features(data)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/hk/Downloads/DSFinalYearProject/MLPredictiveAnalysis/funding_amount_forecast.py", line 457, in create_forecast_features
+    industry_stats = industry_df.groupby('industry').agg({
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/hk/Downloads/DSFinalYearProject/.venv/lib/python3.12/site-packages/pandas/core/groupby/generic.py", line 1432, in aggregate
+    result = op.agg()
+             ^^^^^^^^
+  File "/Users/hk/Downloads/DSFinalYearProject/.venv/lib/python3.12/site-packages/pandas/core/apply.py", line 190, in agg
+    return self.agg_dict_like()
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/Users/hk/Downloads/DSFinalYearProject/.venv/lib/python3.12/site-packages/pandas/core/apply.py", line 423, in agg_dict_like
+    return self.agg_or_apply_dict_like(op_name="agg")
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/hk/Downloads/DSFinalYearProject/.venv/lib/python3.12/site-packages/pandas/core/apply.py", line 1608, in agg_or_apply_dict_like
+    result_index, result_data = self.compute_dict_like(
+                                ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/hk/Downloads/DSFinalYearProject/.venv/lib/python3.12/site-packages/pandas/core/apply.py", line 497, in compute_dict_like
+    getattr(obj._gotitem(key, ndim=1), op_name)(how, **kwargs)
+  File "/Users/hk/Downloads/DSFinalYearProject/.venv/lib/python3.12/site-packages/pandas/core/groupby/generic.py", line 257, in aggregate
+    ret = self._aggregate_multiple_funcs(func, *args, **kwargs)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/hk/Downloads/DSFinalYearProject/.venv/lib/python3.12/site-packages/pandas/core/groupby/generic.py", line 362, in _aggregate_multiple_funcs
+    results[key] = self.aggregate(func, *args, **kwargs)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/hk/Downloads/DSFinalYearProject/.venv/lib/python3.12/site-packages/pandas/core/groupby/generic.py", line 249, in aggregate
+    return getattr(self, func)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/hk/Downloads/DSFinalYearProject/.venv/lib/python3.12/site-packages/pandas/core/groupby/groupby.py", line 2452, in mean
+    result = self._cython_agg_general(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/hk/Downloads/DSFinalYearProject/.venv/lib/python3.12/site-packages/pandas/core/groupby/groupby.py", line 1998, in _cython_agg_general
+    new_mgr = data.grouped_reduce(array_func)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/hk/Downloads/DSFinalYearProject/.venv/lib/python3.12/site-packages/pandas/core/internals/base.py", line 367, in grouped_reduce
+    res = func(arr)
+          ^^^^^^^^^
+  File "/Users/hk/Downloads/DSFinalYearProject/.venv/lib/python3.12/site-packages/pandas/core/groupby/groupby.py", line 1995, in array_func
+    result = self._agg_py_fallback(how, values, ndim=data.ndim, alt=alt)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/hk/Downloads/DSFinalYearProject/.venv/lib/python3.12/site-packages/pandas/core/groupby/groupby.py", line 1946, in _agg_py_fallback
+    raise type(err)(msg) from err
+TypeError: agg function failed [how->mean,dtype->object]
+
+2025-04-22 21:52:28,242 - success_failure_prediction - ERROR - Error in analysis: agg function failed [how->mean,dtype->object]
+2025-04-22 21:52:28,243 - success_failure_prediction - ERROR - Traceback (most recent call last):
+  File "/Users/hk/Downloads/DSFinalYearProject/.venv/lib/python3.12/site-packages/pandas/core/groupby/groupby.py", line 1942, in _agg_py_fallback
+    res_values = self._grouper.agg_series(ser, alt, preserve_dtype=True)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/hk/Downloads/DSFinalYearProject/.venv/lib/python3.12/site-packages/pandas/core/groupby/ops.py", line 864, in agg_series
+    result = self._aggregate_series_pure_python(obj, func)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/hk/Downloads/DSFinalYearProject/.venv/lib/python3.12/site-packages/pandas/core/groupby/ops.py", line 885, in _aggregate_series_pure_python
+    res = func(group)
+          ^^^^^^^^^^^
+  File "/Users/hk/Downloads/DSFinalYearProject/.venv/lib/python3.12/site-packages/pandas/core/groupby/groupby.py", line 2454, in <lambda>
+    alt=lambda x: Series(x, copy=False).mean(numeric_only=numeric_only),
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/hk/Downloads/DSFinalYearProject/.venv/lib/python3.12/site-packages/pandas/core/series.py", line 6549, in mean
+    return NDFrame.mean(self, axis, skipna, numeric_only, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/hk/Downloads/DSFinalYearProject/.venv/lib/python3.12/site-packages/pandas/core/generic.py", line 12420, in mean
+    return self._stat_function(
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/Users/hk/Downloads/DSFinalYearProject/.venv/lib/python3.12/site-packages/pandas/core/generic.py", line 12377, in _stat_function
+    return self._reduce(
+           ^^^^^^^^^^^^^
+  File "/Users/hk/Downloads/DSFinalYearProject/.venv/lib/python3.12/site-packages/pandas/core/series.py", line 6457, in _reduce
+    return op(delegate, skipna=skipna, **kwds)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/hk/Downloads/DSFinalYearProject/.venv/lib/python3.12/site-packages/pandas/core/nanops.py", line 147, in f
+    result = alt(values, axis=axis, skipna=skipna, **kwds)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/hk/Downloads/DSFinalYearProject/.venv/lib/python3.12/site-packages/pandas/core/nanops.py", line 404, in new_func
+    result = func(values, axis=axis, skipna=skipna, mask=mask, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/hk/Downloads/DSFinalYearProject/.venv/lib/python3.12/site-packages/pandas/core/nanops.py", line 719, in nanmean
+    the_sum = values.sum(axis, dtype=dtype_sum)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/hk/Downloads/DSFinalYearProject/.venv/lib/python3.12/site-packages/numpy/_core/_methods.py", line 52, in _sum
+    return umr_sum(a, axis, dtype, out, keepdims, initial, where)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: can only concatenate str (not "float") to str
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/hk/Downloads/DSFinalYearProject/MLPredictiveAnalysis/success_failure_prediction.py", line 1403, in run_analysis
+    component_results = self.run_component_analyses(data)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/hk/Downloads/DSFinalYearProject/MLPredictiveAnalysis/success_failure_prediction.py", line 469, in run_component_analyses
+    forecast_results = self.amount_forecaster.run_analysis(data)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/hk/Downloads/DSFinalYearProject/MLPredictiveAnalysis/funding_amount_forecast.py", line 2203, in run_analysis
+    feature_data = self.create_forecast_features(data)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/hk/Downloads/DSFinalYearProject/MLPredictiveAnalysis/funding_amount_forecast.py", line 457, in create_forecast_features
+    industry_stats = industry_df.groupby('industry').agg({
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/hk/Downloads/DSFinalYearProject/.venv/lib/python3.12/site-packages/pandas/core/groupby/generic.py", line 1432, in aggregate
+    result = op.agg()
+             ^^^^^^^^
+  File "/Users/hk/Downloads/DSFinalYearProject/.venv/lib/python3.12/site-packages/pandas/core/apply.py", line 190, in agg
+    return self.agg_dict_like()
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/Users/hk/Downloads/DSFinalYearProject/.venv/lib/python3.12/site-packages/pandas/core/apply.py", line 423, in agg_dict_like
+    return self.agg_or_apply_dict_like(op_name="agg")
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/hk/Downloads/DSFinalYearProject/.venv/lib/python3.12/site-packages/pandas/core/apply.py", line 1608, in agg_or_apply_dict_like
+    result_index, result_data = self.compute_dict_like(
+                                ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/hk/Downloads/DSFinalYearProject/.venv/lib/python3.12/site-packages/pandas/core/apply.py", line 497, in compute_dict_like
+    getattr(obj._gotitem(key, ndim=1), op_name)(how, **kwargs)
+  File "/Users/hk/Downloads/DSFinalYearProject/.venv/lib/python3.12/site-packages/pandas/core/groupby/generic.py", line 257, in aggregate
+    ret = self._aggregate_multiple_funcs(func, *args, **kwargs)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/hk/Downloads/DSFinalYearProject/.venv/lib/python3.12/site-packages/pandas/core/groupby/generic.py", line 362, in _aggregate_multiple_funcs
+    results[key] = self.aggregate(func, *args, **kwargs)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/hk/Downloads/DSFinalYearProject/.venv/lib/python3.12/site-packages/pandas/core/groupby/generic.py", line 249, in aggregate
+    return getattr(self, func)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/hk/Downloads/DSFinalYearProject/.venv/lib/python3.12/site-packages/pandas/core/groupby/groupby.py", line 2452, in mean
+    result = self._cython_agg_general(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/hk/Downloads/DSFinalYearProject/.venv/lib/python3.12/site-packages/pandas/core/groupby/groupby.py", line 1998, in _cython_agg_general
+    new_mgr = data.grouped_reduce(array_func)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/hk/Downloads/DSFinalYearProject/.venv/lib/python3.12/site-packages/pandas/core/internals/base.py", line 367, in grouped_reduce
+    res = func(arr)
+          ^^^^^^^^^
+  File "/Users/hk/Downloads/DSFinalYearProject/.venv/lib/python3.12/site-packages/pandas/core/groupby/groupby.py", line 1995, in array_func
+    result = self._agg_py_fallback(how, values, ndim=data.ndim, alt=alt)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/hk/Downloads/DSFinalYearProject/.venv/lib/python3.12/site-packages/pandas/core/groupby/groupby.py", line 1946, in _agg_py_fallback
+    raise type(err)(msg) from err
+TypeError: agg function failed [how->mean,dtype->object]
+
+2025-04-22 21:53:19,202 - success_failure_prediction - INFO - Success/Failure Prediction Engine initialized
+2025-04-22 21:53:19,202 - success_failure_prediction - INFO - Starting success/failure prediction analysis
+2025-04-22 21:53:19,202 - success_failure_prediction - INFO - Step 1: Loading data...
+2025-04-22 21:53:19,203 - success_failure_prediction - INFO - Loading data from JSON files
+2025-04-22 21:53:19,208 - success_failure_prediction - INFO - Loaded 1103 records from fundraiser data
+2025-04-22 21:53:19,210 - success_failure_prediction - INFO - Loaded 100 records from growthlist data
+2025-04-22 21:53:19,213 - success_failure_prediction - INFO - Loaded 546 records from topstartup data
+2025-04-22 21:53:19,282 - success_failure_prediction - INFO - Final combined dataset: 1211 records
+2025-04-22 21:53:19,283 - success_failure_prediction - INFO - Step 2: Initializing component models...
+2025-04-22 21:53:19,283 - success_failure_prediction - INFO - Initializing component prediction systems
+2025-04-22 21:53:19,288 - success_failure_prediction - INFO - Initialized funding stage prediction model
+2025-04-22 21:53:19,289 - success_failure_prediction - INFO - Initialized funding continuation analysis model
+2025-04-22 21:53:19,290 - success_failure_prediction - INFO - Initialized funding amount forecast model
+2025-04-22 21:53:19,290 - success_failure_prediction - INFO - Initialized funding anomaly detection model
+2025-04-22 21:53:19,290 - success_failure_prediction - INFO - Initialized industry trend analysis model
+2025-04-22 21:53:19,291 - success_failure_prediction - INFO - All component models initialized successfully
+2025-04-22 21:53:19,291 - success_failure_prediction - INFO - Step 3: Running component analyses...
+2025-04-22 21:53:19,291 - success_failure_prediction - INFO - Running component analyses
+2025-04-22 21:53:19,291 - success_failure_prediction - INFO - Running funding stage prediction...
+2025-04-22 21:53:19,292 - success_failure_prediction - INFO - Running funding continuation analysis...
+2025-04-22 21:53:19,292 - success_failure_prediction - INFO - Running funding amount forecast...
+2025-04-22 21:53:19,843 - success_failure_prediction - ERROR - Error running component analyses: 'funding_growth_rate'
+2025-04-22 21:53:19,848 - success_failure_prediction - ERROR - Traceback (most recent call last):
+  File "/Users/hk/Downloads/DSFinalYearProject/.venv/lib/python3.12/site-packages/pandas/core/indexes/base.py", line 3805, in get_loc
+    return self._engine.get_loc(casted_key)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "index.pyx", line 167, in pandas._libs.index.IndexEngine.get_loc
+  File "index.pyx", line 196, in pandas._libs.index.IndexEngine.get_loc
+  File "pandas/_libs/hashtable_class_helper.pxi", line 7081, in pandas._libs.hashtable.PyObjectHashTable.get_item
+  File "pandas/_libs/hashtable_class_helper.pxi", line 7089, in pandas._libs.hashtable.PyObjectHashTable.get_item
+KeyError: 'funding_growth_rate'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/hk/Downloads/DSFinalYearProject/MLPredictiveAnalysis/success_failure_prediction.py", line 472, in run_component_analyses
+    forecast_results = self.amount_forecaster.run_analysis(data)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/hk/Downloads/DSFinalYearProject/MLPredictiveAnalysis/funding_amount_forecast.py", line 2203, in run_analysis
+    feature_data = self.create_forecast_features(data)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/hk/Downloads/DSFinalYearProject/MLPredictiveAnalysis/funding_amount_forecast.py", line 635, in create_forecast_features
+    current_row['funding_growth_rate'] if not pd.isna(current_row['funding_growth_rate']) else 2.0
+                                                      ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/hk/Downloads/DSFinalYearProject/.venv/lib/python3.12/site-packages/pandas/core/series.py", line 1121, in __getitem__
+    return self._get_value(key)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/Users/hk/Downloads/DSFinalYearProject/.venv/lib/python3.12/site-packages/pandas/core/series.py", line 1237, in _get_value
+    loc = self.index.get_loc(label)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/hk/Downloads/DSFinalYearProject/.venv/lib/python3.12/site-packages/pandas/core/indexes/base.py", line 3812, in get_loc
+    raise KeyError(key) from err
+KeyError: 'funding_growth_rate'
+
+2025-04-22 21:53:19,849 - success_failure_prediction - ERROR - Error in analysis: 'funding_growth_rate'
+2025-04-22 21:53:19,849 - success_failure_prediction - ERROR - Traceback (most recent call last):
+  File "/Users/hk/Downloads/DSFinalYearProject/.venv/lib/python3.12/site-packages/pandas/core/indexes/base.py", line 3805, in get_loc
+    return self._engine.get_loc(casted_key)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "index.pyx", line 167, in pandas._libs.index.IndexEngine.get_loc
+  File "index.pyx", line 196, in pandas._libs.index.IndexEngine.get_loc
+  File "pandas/_libs/hashtable_class_helper.pxi", line 7081, in pandas._libs.hashtable.PyObjectHashTable.get_item
+  File "pandas/_libs/hashtable_class_helper.pxi", line 7089, in pandas._libs.hashtable.PyObjectHashTable.get_item
+KeyError: 'funding_growth_rate'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/hk/Downloads/DSFinalYearProject/MLPredictiveAnalysis/success_failure_prediction.py", line 1406, in run_analysis
+    component_results = self.run_component_analyses(data)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/hk/Downloads/DSFinalYearProject/MLPredictiveAnalysis/success_failure_prediction.py", line 472, in run_component_analyses
+    forecast_results = self.amount_forecaster.run_analysis(data)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/hk/Downloads/DSFinalYearProject/MLPredictiveAnalysis/funding_amount_forecast.py", line 2203, in run_analysis
+    feature_data = self.create_forecast_features(data)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/hk/Downloads/DSFinalYearProject/MLPredictiveAnalysis/funding_amount_forecast.py", line 635, in create_forecast_features
+    current_row['funding_growth_rate'] if not pd.isna(current_row['funding_growth_rate']) else 2.0
+                                                      ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/hk/Downloads/DSFinalYearProject/.venv/lib/python3.12/site-packages/pandas/core/series.py", line 1121, in __getitem__
+    return self._get_value(key)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/Users/hk/Downloads/DSFinalYearProject/.venv/lib/python3.12/site-packages/pandas/core/series.py", line 1237, in _get_value
+    loc = self.index.get_loc(label)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/hk/Downloads/DSFinalYearProject/.venv/lib/python3.12/site-packages/pandas/core/indexes/base.py", line 3812, in get_loc
+    raise KeyError(key) from err
+KeyError: 'funding_growth_rate'
+
+2025-04-22 22:07:23,023 - success_failure_prediction - INFO - Success/Failure Prediction Engine initialized
+2025-04-22 22:07:23,024 - success_failure_prediction - INFO - Starting success/failure prediction analysis
+2025-04-22 22:07:23,024 - success_failure_prediction - INFO - Step 1: Loading data...
+2025-04-22 22:07:23,024 - success_failure_prediction - INFO - Loading data from JSON files
+2025-04-22 22:07:23,030 - success_failure_prediction - INFO - Loaded 1103 records from fundraiser data
+2025-04-22 22:07:23,033 - success_failure_prediction - INFO - Loaded 100 records from growthlist data
+2025-04-22 22:07:23,037 - success_failure_prediction - INFO - Loaded 546 records from topstartup data
+2025-04-22 22:07:23,097 - success_failure_prediction - INFO - Final combined dataset: 1211 records
+2025-04-22 22:07:23,097 - success_failure_prediction - INFO - Step 2: Initializing component models...
+2025-04-22 22:07:23,098 - success_failure_prediction - INFO - Initializing component prediction systems
+2025-04-22 22:07:23,102 - success_failure_prediction - INFO - Initialized funding stage prediction model
+2025-04-22 22:07:23,103 - success_failure_prediction - INFO - Initialized funding continuation analysis model
+2025-04-22 22:07:23,103 - success_failure_prediction - INFO - Initialized funding amount forecast model
+2025-04-22 22:07:23,103 - success_failure_prediction - INFO - Initialized funding anomaly detection model
+2025-04-22 22:07:23,104 - success_failure_prediction - INFO - Initialized industry trend analysis model
+2025-04-22 22:07:23,104 - success_failure_prediction - INFO - All component models initialized successfully
+2025-04-22 22:07:23,104 - success_failure_prediction - INFO - Step 3: Running component analyses...
+2025-04-22 22:07:23,104 - success_failure_prediction - INFO - Running component analyses
+2025-04-22 22:07:23,104 - success_failure_prediction - INFO - Running funding stage prediction...
+2025-04-22 22:07:23,105 - success_failure_prediction - INFO - Running funding continuation analysis...
+2025-04-22 22:07:23,105 - success_failure_prediction - INFO - Running funding anomaly detection...
+2025-04-22 22:07:23,278 - success_failure_prediction - INFO - Running industry trend analysis...
+2025-04-22 22:07:23,310 - success_failure_prediction - INFO - Component analyses completed with available data
+2025-04-22 22:07:23,310 - success_failure_prediction - INFO - Step 4: Creating meta-features...
+2025-04-22 22:07:23,310 - success_failure_prediction - INFO - Creating meta-model features
+2025-04-22 22:07:23,786 - success_failure_prediction - INFO - Determining success/failure labels
+2025-04-22 22:07:24,211 - success_failure_prediction - INFO - Determined success labels: 64.0 successes, 576 failures
+2025-04-22 22:07:24,212 - success_failure_prediction - INFO - Created meta-features for 641 companies
+2025-04-22 22:07:24,212 - success_failure_prediction - INFO - Step 5: Training meta-model...
+2025-04-22 22:07:24,212 - success_failure_prediction - INFO - Training success/failure meta-model
+2025-04-22 22:07:24,219 - success_failure_prediction - INFO - Training gradient boosting model
+2025-04-22 22:07:24,464 - success_failure_prediction - INFO - Meta-model trained successfully: Accuracy=0.988, AUC=1.000
+2025-04-22 22:07:24,465 - success_failure_prediction - INFO - Step 6: Creating visualizations...
+2025-04-22 22:07:24,465 - success_failure_prediction - INFO - Creating visualizations of meta-model results
+2025-04-22 22:07:24,571 - success_failure_prediction - INFO - Visualizations created successfully
+2025-04-22 22:07:24,571 - success_failure_prediction - INFO - Step 7: Generating report...
+2025-04-22 22:07:24,571 - success_failure_prediction - INFO - Generating success/failure prediction report
+2025-04-22 22:07:24,573 - success_failure_prediction - INFO - Report generated successfully at /Users/hk/Downloads/DSFinalYearProject/outputSuccessFailure/success_failure_report.md
+2025-04-22 22:07:24,573 - success_failure_prediction - INFO - Step 8: Saving model...
+2025-04-22 22:07:24,575 - success_failure_prediction - INFO - Model saved to /Users/hk/Downloads/DSFinalYearProject/outputSuccessFailure/success_failure_model.pkl
+2025-04-22 22:07:24,575 - success_failure_prediction - INFO - Success/failure prediction analysis completed successfully
+2025-04-22 22:14:11,617 - success_failure_prediction - INFO - Success/Failure Prediction Engine initialized
+2025-04-22 22:14:11,617 - success_failure_prediction - INFO - Starting success/failure prediction analysis
+2025-04-22 22:14:11,618 - success_failure_prediction - INFO - Step 1: Loading data...
+2025-04-22 22:14:11,618 - success_failure_prediction - INFO - Loading data from JSON files
+2025-04-22 22:14:11,624 - success_failure_prediction - INFO - Loaded 1103 records from fundraiser data
+2025-04-22 22:14:11,629 - success_failure_prediction - INFO - Loaded 100 records from growthlist data
+2025-04-22 22:14:11,634 - success_failure_prediction - INFO - Loaded 546 records from topstartup data
+2025-04-22 22:14:11,699 - success_failure_prediction - INFO - Final combined dataset: 1211 records
+2025-04-22 22:14:11,700 - success_failure_prediction - INFO - Step 2: Initializing component models...
+2025-04-22 22:14:11,700 - success_failure_prediction - INFO - Initializing component prediction systems
+2025-04-22 22:14:11,706 - success_failure_prediction - INFO - Initialized funding stage prediction model
+2025-04-22 22:14:11,707 - success_failure_prediction - INFO - Initialized funding continuation analysis model
+2025-04-22 22:14:11,708 - success_failure_prediction - INFO - Initialized funding amount forecast model
+2025-04-22 22:14:11,708 - success_failure_prediction - INFO - Initialized funding anomaly detection model
+2025-04-22 22:14:11,709 - success_failure_prediction - INFO - Initialized industry trend analysis model
+2025-04-22 22:14:11,709 - success_failure_prediction - INFO - All component models initialized successfully
+2025-04-22 22:14:11,709 - success_failure_prediction - INFO - Step 3: Running component analyses...
+2025-04-22 22:14:11,709 - success_failure_prediction - INFO - Running component analyses
+2025-04-22 22:14:11,709 - success_failure_prediction - INFO - Running funding stage prediction...
+2025-04-22 22:14:11,710 - success_failure_prediction - INFO - Running funding continuation analysis...
+2025-04-22 22:14:11,710 - success_failure_prediction - INFO - Running funding anomaly detection...
+2025-04-22 22:14:11,935 - success_failure_prediction - INFO - Running industry trend analysis...
+2025-04-22 22:14:11,971 - success_failure_prediction - INFO - Component analyses completed with available data
+2025-04-22 22:14:11,972 - success_failure_prediction - INFO - Step 4: Creating meta-features...
+2025-04-22 22:14:11,972 - success_failure_prediction - INFO - Creating meta-model features
+2025-04-22 22:14:17,076 - success_failure_prediction - INFO - Success/Failure Prediction Engine initialized
+2025-04-22 22:14:17,076 - success_failure_prediction - INFO - Starting success/failure prediction analysis
+2025-04-22 22:14:17,076 - success_failure_prediction - INFO - Step 1: Loading data...
+2025-04-22 22:14:17,076 - success_failure_prediction - INFO - Loading data from JSON files
+2025-04-22 22:14:17,082 - success_failure_prediction - INFO - Loaded 1103 records from fundraiser data
+2025-04-22 22:14:17,084 - success_failure_prediction - INFO - Loaded 100 records from growthlist data
+2025-04-22 22:14:17,087 - success_failure_prediction - INFO - Loaded 546 records from topstartup data
+2025-04-22 22:14:17,147 - success_failure_prediction - INFO - Final combined dataset: 1211 records
+2025-04-22 22:14:17,148 - success_failure_prediction - INFO - Step 2: Initializing component models...
+2025-04-22 22:14:17,148 - success_failure_prediction - INFO - Initializing component prediction systems
+2025-04-22 22:14:17,151 - success_failure_prediction - INFO - Initialized funding stage prediction model
+2025-04-22 22:14:17,152 - success_failure_prediction - INFO - Initialized funding continuation analysis model
+2025-04-22 22:14:17,152 - success_failure_prediction - INFO - Initialized funding amount forecast model
+2025-04-22 22:14:17,153 - success_failure_prediction - INFO - Initialized funding anomaly detection model
+2025-04-22 22:14:17,153 - success_failure_prediction - INFO - Initialized industry trend analysis model
+2025-04-22 22:14:17,153 - success_failure_prediction - INFO - All component models initialized successfully
+2025-04-22 22:14:17,153 - success_failure_prediction - INFO - Step 3: Running component analyses...
+2025-04-22 22:14:17,153 - success_failure_prediction - INFO - Running component analyses
+2025-04-22 22:14:17,153 - success_failure_prediction - INFO - Running funding stage prediction...
+2025-04-22 22:14:17,154 - success_failure_prediction - INFO - Running funding continuation analysis...
+2025-04-22 22:14:17,154 - success_failure_prediction - INFO - Running funding anomaly detection...
+2025-04-22 22:14:17,333 - success_failure_prediction - INFO - Running industry trend analysis...
+2025-04-22 22:14:17,365 - success_failure_prediction - INFO - Component analyses completed with available data
+2025-04-22 22:14:17,365 - success_failure_prediction - INFO - Step 4: Creating meta-features...
+2025-04-22 22:14:17,365 - success_failure_prediction - INFO - Creating meta-model features
+2025-04-22 22:14:17,850 - success_failure_prediction - INFO - Determining success/failure labels
+2025-04-22 22:14:18,243 - success_failure_prediction - INFO - Determined success labels: 64.0 successes, 576 failures
+2025-04-22 22:14:18,243 - success_failure_prediction - INFO - Created meta-features for 641 companies
+2025-04-22 22:14:18,243 - success_failure_prediction - INFO - Step 5: Training meta-model...
+2025-04-22 22:14:18,244 - success_failure_prediction - INFO - Training success/failure meta-model
+2025-04-22 22:14:18,252 - success_failure_prediction - INFO - Training gradient boosting model
+2025-04-22 22:14:18,499 - success_failure_prediction - INFO - Meta-model trained successfully: Accuracy=0.988, AUC=1.000
+2025-04-22 22:14:18,500 - success_failure_prediction - INFO - Step 6: Creating visualizations...
+2025-04-22 22:14:18,500 - success_failure_prediction - INFO - Creating visualizations of meta-model results
+2025-04-22 22:14:19,370 - success_failure_prediction - INFO - Visualizations created successfully
+2025-04-22 22:14:19,370 - success_failure_prediction - INFO - Step 7: Generating report...
+2025-04-22 22:14:19,370 - success_failure_prediction - INFO - Generating success/failure prediction report
+2025-04-22 22:14:19,371 - success_failure_prediction - INFO - Report generated successfully at /Users/hk/Downloads/DSFinalYearProject/outputSuccessFailure/success_failure_report.md
+2025-04-22 22:14:19,372 - success_failure_prediction - INFO - Step 8: Saving model...
+2025-04-22 22:14:19,374 - success_failure_prediction - INFO - Model saved to /Users/hk/Downloads/DSFinalYearProject/outputSuccessFailure/success_failure_model.pkl
+2025-04-22 22:14:19,374 - success_failure_prediction - INFO - Success/failure prediction analysis completed successfully

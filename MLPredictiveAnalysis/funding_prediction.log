@@ -1,0 +1,1370 @@
+2025-04-20 03:57:12,075 - __main__ - INFO - Historical database initialized
+2025-04-20 03:57:12,075 - __main__ - INFO - Created archive directory: ./data_archive/2025-04-20
+2025-04-20 03:57:12,077 - __main__ - INFO - Initialized model directory structure at ./output/models
+2025-04-20 03:57:12,077 - __main__ - INFO - Running pipeline once
+2025-04-20 03:57:12,077 - __main__ - INFO - Starting funding stage prediction pipeline
+2025-04-20 03:57:12,077 - __main__ - ERROR - Error loading fundraiser data: [Errno 2] No such file or directory: './fundraise_data/fundraise_data_20250414_152644/startups_20250414_152644.json'
+2025-04-20 03:57:12,078 - __main__ - ERROR - Error loading growthlist data: [Errno 2] No such file or directory: './growthlist_data/growthlist_startups.json'
+2025-04-20 03:57:12,078 - __main__ - ERROR - Error loading topstartup data: [Errno 2] No such file or directory: './topstartiorealtimedata/2025-04-14/topstartups_data.json'
+2025-04-20 03:57:12,078 - __main__ - WARNING - No records available after merging
+2025-04-20 03:57:12,078 - __main__ - ERROR - No data available. Exiting pipeline.
+2025-04-22 22:04:50,377 - success_failure_prediction - INFO - Success/Failure Prediction Engine initialized
+2025-04-22 22:04:50,378 - success_failure_prediction - INFO - Starting success/failure prediction analysis
+2025-04-22 22:04:50,378 - success_failure_prediction - INFO - Step 1: Loading data...
+2025-04-22 22:04:50,378 - success_failure_prediction - INFO - Loading data from JSON files
+2025-04-22 22:04:50,378 - success_failure_prediction - ERROR - File not found: /Users/hk/Downloads/DSFinalYearProject/MLPredictiveAnalysis/JSONFolder/fundraisestartup50.json
+2025-04-22 22:04:50,378 - success_failure_prediction - ERROR - Error in analysis: Required data file not found: /Users/hk/Downloads/DSFinalYearProject/MLPredictiveAnalysis/JSONFolder/fundraisestartup50.json
+2025-04-22 22:04:50,379 - success_failure_prediction - ERROR - Traceback (most recent call last):
+  File "/Users/hk/Downloads/DSFinalYearProject/MLPredictiveAnalysis/success_failure_prediction.py", line 1753, in run_analysis
+    data = self.load_data_from_json_files()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/hk/Downloads/DSFinalYearProject/MLPredictiveAnalysis/success_failure_prediction.py", line 155, in load_data_from_json_files
+    raise FileNotFoundError(f"Required data file not found: {file_path}")
+FileNotFoundError: Required data file not found: /Users/hk/Downloads/DSFinalYearProject/MLPredictiveAnalysis/JSONFolder/fundraisestartup50.json
+
+2025-04-22 22:04:56,738 - success_failure_prediction - INFO - Success/Failure Prediction Engine initialized
+2025-04-22 22:04:56,738 - success_failure_prediction - INFO - Starting success/failure prediction analysis
+2025-04-22 22:04:56,738 - success_failure_prediction - INFO - Step 1: Loading data...
+2025-04-22 22:04:56,739 - success_failure_prediction - INFO - Loading data from JSON files
+2025-04-22 22:04:56,747 - success_failure_prediction - INFO - Loaded 1103 records from fundraiser data
+2025-04-22 22:04:56,752 - success_failure_prediction - INFO - Loaded 100 records from growthlist data
+2025-04-22 22:04:56,755 - success_failure_prediction - INFO - Loaded 546 records from topstartup data
+2025-04-22 22:04:56,857 - success_failure_prediction - INFO - Final combined dataset: 1211 records
+2025-04-22 22:04:56,857 - success_failure_prediction - INFO - Step 2: Initializing component models...
+2025-04-22 22:04:56,857 - success_failure_prediction - INFO - Initializing component prediction systems
+2025-04-22 22:04:56,862 - MLPredictiveAnalysis.funding_stage_prediction - INFO - Historical database initialized
+2025-04-22 22:04:56,862 - MLPredictiveAnalysis.funding_stage_prediction - INFO - Created visualization directory: ./outputFundingStagePrediction/visualizations
+2025-04-22 22:04:56,865 - MLPredictiveAnalysis.funding_stage_prediction - INFO - Created visualization directory: ./outputFundingStagePrediction/visualizations
+2025-04-22 22:04:56,866 - MLPredictiveAnalysis.funding_stage_prediction - INFO - Initialized model directory structure at ./outputFundingStagePrediction/models
+2025-04-22 22:04:56,867 - success_failure_prediction - INFO - Initialized funding stage prediction model
+2025-04-22 22:04:56,867 - success_failure_prediction - INFO - Initialized funding continuation analysis model
+2025-04-22 22:04:56,868 - funding_amount_forecast - INFO - Funding Amount Forecast initialized
+2025-04-22 22:04:56,868 - success_failure_prediction - INFO - Initialized funding amount forecast model
+2025-04-22 22:04:56,868 - success_failure_prediction - INFO - Initialized funding anomaly detection model
+2025-04-22 22:04:56,868 - success_failure_prediction - INFO - Initialized industry trend analysis model
+2025-04-22 22:04:56,868 - success_failure_prediction - INFO - All component models initialized successfully
+2025-04-22 22:04:56,868 - success_failure_prediction - INFO - Step 3: Running component analyses...
+2025-04-22 22:04:56,869 - success_failure_prediction - INFO - Running component analyses
+2025-04-22 22:04:56,869 - success_failure_prediction - INFO - Running funding stage prediction...
+2025-04-22 22:04:56,869 - MLPredictiveAnalysis.funding_stage_prediction - INFO - Starting funding stage prediction pipeline
+2025-04-22 22:04:56,869 - MLPredictiveAnalysis.funding_stage_prediction - ERROR - Error loading fundraiser data: [Errno 2] No such file or directory: '/Users/hk/Downloads/DSFinalYearProject/JSONFolder/JSONFolder/fundraisestartup50.json'
+2025-04-22 22:04:56,869 - MLPredictiveAnalysis.funding_stage_prediction - ERROR - Error loading growthlist data: [Errno 2] No such file or directory: '/Users/hk/Downloads/DSFinalYearProject/JSONFolder/JSONFolder/growthlistscrapper.json'
+2025-04-22 22:04:56,869 - MLPredictiveAnalysis.funding_stage_prediction - ERROR - Error loading topstartup data: [Errno 2] No such file or directory: '/Users/hk/Downloads/DSFinalYearProject/JSONFolder/JSONFolder/topstartupio50.json'
+2025-04-22 22:04:56,869 - MLPredictiveAnalysis.funding_stage_prediction - WARNING - No records available after merging
+2025-04-22 22:04:56,870 - MLPredictiveAnalysis.funding_stage_prediction - ERROR - No data available. Exiting pipeline.
+2025-04-22 22:04:56,871 - success_failure_prediction - INFO - Running funding continuation analysis...
+2025-04-22 22:04:56,872 - MLPredictiveAnalysis.funding_continuation - INFO - Starting funding continuation analysis pipeline
+2025-04-22 22:04:56,872 - MLPredictiveAnalysis.funding_continuation - ERROR - No data available for analysis
+2025-04-22 22:04:56,872 - success_failure_prediction - INFO - Running funding anomaly detection...
+2025-04-22 22:04:56,872 - FundingAnomalyDetection - INFO - Creating features for anomaly detection
+2025-04-22 22:04:56,873 - FundingAnomalyDetection - INFO - Created funding_per_employee feature
+2025-04-22 22:04:56,908 - FundingAnomalyDetection - INFO - Created 3 features for anomaly detection
+2025-04-22 22:04:56,909 - FundingAnomalyDetection - INFO - Detecting anomalies in funding data
+2025-04-22 22:04:56,909 - FundingAnomalyDetection - INFO - Fitting Isolation Forest with contamination=0.01
+2025-04-22 22:04:57,136 - FundingAnomalyDetection - INFO - Isolation Forest model trained successfully
+2025-04-22 22:04:57,167 - FundingAnomalyDetection - INFO - Detected 14 anomalies (1.16%)
+2025-04-22 22:04:57,168 - success_failure_prediction - INFO - Running industry trend analysis...
+2025-04-22 22:04:57,202 - success_failure_prediction - INFO - Component analyses completed with available data
+2025-04-22 22:04:57,202 - success_failure_prediction - INFO - Step 4: Creating meta-features...
+2025-04-22 22:04:57,202 - success_failure_prediction - INFO - Creating meta-model features
+2025-04-22 22:04:57,769 - success_failure_prediction - INFO - Determining success/failure labels
+2025-04-22 22:04:58,986 - success_failure_prediction - INFO - Determined success labels: 64.0 successes, 576 failures
+2025-04-22 22:04:58,988 - success_failure_prediction - INFO - Created meta-features for 641 companies
+2025-04-22 22:04:58,988 - success_failure_prediction - INFO - Step 5: Training meta-model...
+2025-04-22 22:04:58,988 - success_failure_prediction - INFO - Training success/failure meta-model
+2025-04-22 22:04:58,990 - success_failure_prediction - ERROR - Error training meta-model: Cannot convert non-finite values (NA or inf) to integer
+2025-04-22 22:04:59,044 - success_failure_prediction - ERROR - Traceback (most recent call last):
+  File "/Users/hk/Downloads/DSFinalYearProject/MLPredictiveAnalysis/success_failure_prediction.py", line 964, in train_meta_model
+    y = meta_features['success_label'].astype(int)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/hk/Downloads/DSFinalYearProject/.venv/lib/python3.12/site-packages/pandas/core/generic.py", line 6643, in astype
+    new_data = self._mgr.astype(dtype=dtype, copy=copy, errors=errors)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/hk/Downloads/DSFinalYearProject/.venv/lib/python3.12/site-packages/pandas/core/internals/managers.py", line 430, in astype
+    return self.apply(
+           ^^^^^^^^^^^
+  File "/Users/hk/Downloads/DSFinalYearProject/.venv/lib/python3.12/site-packages/pandas/core/internals/managers.py", line 363, in apply
+    applied = getattr(b, f)(**kwargs)
+              ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/hk/Downloads/DSFinalYearProject/.venv/lib/python3.12/site-packages/pandas/core/internals/blocks.py", line 758, in astype
+    new_values = astype_array_safe(values, dtype, copy=copy, errors=errors)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/hk/Downloads/DSFinalYearProject/.venv/lib/python3.12/site-packages/pandas/core/dtypes/astype.py", line 237, in astype_array_safe
+    new_values = astype_array(values, dtype, copy=copy)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/hk/Downloads/DSFinalYearProject/.venv/lib/python3.12/site-packages/pandas/core/dtypes/astype.py", line 182, in astype_array
+    values = _astype_nansafe(values, dtype, copy=copy)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/hk/Downloads/DSFinalYearProject/.venv/lib/python3.12/site-packages/pandas/core/dtypes/astype.py", line 101, in _astype_nansafe
+    return _astype_float_to_int_nansafe(arr, dtype, copy)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/hk/Downloads/DSFinalYearProject/.venv/lib/python3.12/site-packages/pandas/core/dtypes/astype.py", line 145, in _astype_float_to_int_nansafe
+    raise IntCastingNaNError(
+pandas.errors.IntCastingNaNError: Cannot convert non-finite values (NA or inf) to integer
+
+2025-04-22 22:04:59,113 - success_failure_prediction - INFO - Step 6: Creating visualizations...
+2025-04-22 22:04:59,113 - success_failure_prediction - INFO - Creating visualizations of meta-model results
+2025-04-22 22:04:59,246 - success_failure_prediction - INFO - Visualizations created successfully
+2025-04-22 22:04:59,246 - success_failure_prediction - INFO - Step 7: Generating report...
+2025-04-22 22:04:59,246 - success_failure_prediction - INFO - Generating success/failure prediction report
+2025-04-22 22:04:59,247 - success_failure_prediction - INFO - Report generated successfully at /Users/hk/Downloads/DSFinalYearProject/MLPredictiveAnalysis/outputSuccessFailure/success_failure_report.md
+2025-04-22 22:04:59,248 - success_failure_prediction - INFO - Step 8: Saving model...
+2025-04-22 22:04:59,250 - success_failure_prediction - INFO - Model saved to /Users/hk/Downloads/DSFinalYearProject/MLPredictiveAnalysis/outputSuccessFailure/success_failure_model.pkl
+2025-04-22 22:04:59,251 - success_failure_prediction - INFO - Success/failure prediction analysis completed successfully
+2025-04-22 22:05:41,482 - success_failure_prediction - INFO - Success/Failure Prediction Engine initialized
+2025-04-22 22:05:41,482 - success_failure_prediction - INFO - Starting success/failure prediction analysis
+2025-04-22 22:05:41,482 - success_failure_prediction - INFO - Step 1: Loading data...
+2025-04-22 22:05:41,482 - success_failure_prediction - INFO - Loading data from JSON files
+2025-04-22 22:05:41,487 - success_failure_prediction - INFO - Loaded 1103 records from fundraiser data
+2025-04-22 22:05:41,490 - success_failure_prediction - INFO - Loaded 100 records from growthlist data
+2025-04-22 22:05:41,492 - success_failure_prediction - INFO - Loaded 546 records from topstartup data
+2025-04-22 22:05:41,552 - success_failure_prediction - INFO - Final combined dataset: 1211 records
+2025-04-22 22:05:41,553 - success_failure_prediction - INFO - Step 2: Initializing component models...
+2025-04-22 22:05:41,553 - success_failure_prediction - INFO - Initializing component prediction systems
+2025-04-22 22:05:41,556 - MLPredictiveAnalysis.funding_stage_prediction - INFO - Historical database initialized
+2025-04-22 22:05:41,556 - MLPredictiveAnalysis.funding_stage_prediction - INFO - Created visualization directory: ./outputFundingStagePrediction/visualizations
+2025-04-22 22:05:41,557 - MLPredictiveAnalysis.funding_stage_prediction - INFO - Created visualization directory: ./outputFundingStagePrediction/visualizations
+2025-04-22 22:05:41,558 - MLPredictiveAnalysis.funding_stage_prediction - INFO - Initialized model directory structure at ./outputFundingStagePrediction/models
+2025-04-22 22:05:41,558 - success_failure_prediction - INFO - Initialized funding stage prediction model
+2025-04-22 22:05:41,559 - success_failure_prediction - INFO - Initialized funding continuation analysis model
+2025-04-22 22:05:41,559 - funding_amount_forecast - INFO - Funding Amount Forecast initialized
+2025-04-22 22:05:41,559 - success_failure_prediction - INFO - Initialized funding amount forecast model
+2025-04-22 22:05:41,560 - success_failure_prediction - INFO - Initialized funding anomaly detection model
+2025-04-22 22:05:41,560 - success_failure_prediction - INFO - Initialized industry trend analysis model
+2025-04-22 22:05:41,560 - success_failure_prediction - INFO - All component models initialized successfully
+2025-04-22 22:05:41,560 - success_failure_prediction - INFO - Step 3: Running component analyses...
+2025-04-22 22:05:41,560 - success_failure_prediction - INFO - Running component analyses
+2025-04-22 22:05:41,560 - success_failure_prediction - INFO - Running funding stage prediction...
+2025-04-22 22:05:41,560 - MLPredictiveAnalysis.funding_stage_prediction - INFO - Starting funding stage prediction pipeline
+2025-04-22 22:05:41,560 - MLPredictiveAnalysis.funding_stage_prediction - ERROR - Error loading fundraiser data: [Errno 2] No such file or directory: '/Users/hk/Downloads/DSFinalYearProject/JSONFolder/JSONFolder/fundraisestartup50.json'
+2025-04-22 22:05:41,560 - MLPredictiveAnalysis.funding_stage_prediction - ERROR - Error loading growthlist data: [Errno 2] No such file or directory: '/Users/hk/Downloads/DSFinalYearProject/JSONFolder/JSONFolder/growthlistscrapper.json'
+2025-04-22 22:05:41,561 - MLPredictiveAnalysis.funding_stage_prediction - ERROR - Error loading topstartup data: [Errno 2] No such file or directory: '/Users/hk/Downloads/DSFinalYearProject/JSONFolder/JSONFolder/topstartupio50.json'
+2025-04-22 22:05:41,561 - MLPredictiveAnalysis.funding_stage_prediction - WARNING - No records available after merging
+2025-04-22 22:05:41,561 - MLPredictiveAnalysis.funding_stage_prediction - ERROR - No data available. Exiting pipeline.
+2025-04-22 22:05:41,561 - success_failure_prediction - INFO - Running funding continuation analysis...
+2025-04-22 22:05:41,561 - MLPredictiveAnalysis.funding_continuation - INFO - Starting funding continuation analysis pipeline
+2025-04-22 22:05:41,561 - MLPredictiveAnalysis.funding_continuation - ERROR - No data available for analysis
+2025-04-22 22:05:41,561 - success_failure_prediction - INFO - Running funding anomaly detection...
+2025-04-22 22:05:41,561 - FundingAnomalyDetection - INFO - Creating features for anomaly detection
+2025-04-22 22:05:41,563 - FundingAnomalyDetection - INFO - Created funding_per_employee feature
+2025-04-22 22:05:41,590 - FundingAnomalyDetection - INFO - Created 3 features for anomaly detection
+2025-04-22 22:05:41,590 - FundingAnomalyDetection - INFO - Detecting anomalies in funding data
+2025-04-22 22:05:41,590 - FundingAnomalyDetection - INFO - Fitting Isolation Forest with contamination=0.01
+2025-04-22 22:05:41,708 - FundingAnomalyDetection - INFO - Isolation Forest model trained successfully
+2025-04-22 22:05:41,731 - FundingAnomalyDetection - INFO - Detected 14 anomalies (1.16%)
+2025-04-22 22:05:41,732 - success_failure_prediction - INFO - Running industry trend analysis...
+2025-04-22 22:05:41,765 - success_failure_prediction - INFO - Component analyses completed with available data
+2025-04-22 22:05:41,765 - success_failure_prediction - INFO - Step 4: Creating meta-features...
+2025-04-22 22:05:41,765 - success_failure_prediction - INFO - Creating meta-model features
+2025-04-22 22:05:42,298 - success_failure_prediction - INFO - Determining success/failure labels
+2025-04-22 22:05:42,718 - success_failure_prediction - INFO - Determined success labels: 64.0 successes, 576 failures
+2025-04-22 22:05:42,718 - success_failure_prediction - INFO - Created meta-features for 641 companies
+2025-04-22 22:05:42,719 - success_failure_prediction - INFO - Step 5: Training meta-model...
+2025-04-22 22:05:42,719 - success_failure_prediction - INFO - Training success/failure meta-model
+2025-04-22 22:05:42,725 - success_failure_prediction - INFO - Training gradient boosting model
+2025-04-22 22:05:42,726 - success_failure_prediction - ERROR - Error training meta-model: Input X contains NaN.
+GradientBoostingClassifier does not accept missing values encoded as NaN natively. For supervised learning, you might want to consider sklearn.ensemble.HistGradientBoostingClassifier and Regressor which accept missing values encoded as NaNs natively. Alternatively, it is possible to preprocess the data, for instance by using an imputer transformer in a pipeline or drop samples with missing values. See https://scikit-learn.org/stable/modules/impute.html You can find a list of all estimators that handle NaN values at the following page: https://scikit-learn.org/stable/modules/impute.html#estimators-that-handle-nan-values
+2025-04-22 22:05:42,729 - success_failure_prediction - ERROR - Traceback (most recent call last):
+  File "/Users/hk/Downloads/DSFinalYearProject/MLPredictiveAnalysis/success_failure_prediction.py", line 1039, in train_meta_model
+    model.fit(X_train_scaled, y_train)
+  File "/Users/hk/Downloads/DSFinalYearProject/.venv/lib/python3.12/site-packages/sklearn/base.py", line 1389, in wrapper
+    return fit_method(estimator, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/hk/Downloads/DSFinalYearProject/.venv/lib/python3.12/site-packages/sklearn/ensemble/_gb.py", line 658, in fit
+    X, y = validate_data(
+           ^^^^^^^^^^^^^^
+  File "/Users/hk/Downloads/DSFinalYearProject/.venv/lib/python3.12/site-packages/sklearn/utils/validation.py", line 2961, in validate_data
+    X, y = check_X_y(X, y, **check_params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/hk/Downloads/DSFinalYearProject/.venv/lib/python3.12/site-packages/sklearn/utils/validation.py", line 1370, in check_X_y
+    X = check_array(
+        ^^^^^^^^^^^^
+  File "/Users/hk/Downloads/DSFinalYearProject/.venv/lib/python3.12/site-packages/sklearn/utils/validation.py", line 1107, in check_array
+    _assert_all_finite(
+  File "/Users/hk/Downloads/DSFinalYearProject/.venv/lib/python3.12/site-packages/sklearn/utils/validation.py", line 120, in _assert_all_finite
+    _assert_all_finite_element_wise(
+  File "/Users/hk/Downloads/DSFinalYearProject/.venv/lib/python3.12/site-packages/sklearn/utils/validation.py", line 169, in _assert_all_finite_element_wise
+    raise ValueError(msg_err)
+ValueError: Input X contains NaN.
+GradientBoostingClassifier does not accept missing values encoded as NaN natively. For supervised learning, you might want to consider sklearn.ensemble.HistGradientBoostingClassifier and Regressor which accept missing values encoded as NaNs natively. Alternatively, it is possible to preprocess the data, for instance by using an imputer transformer in a pipeline or drop samples with missing values. See https://scikit-learn.org/stable/modules/impute.html You can find a list of all estimators that handle NaN values at the following page: https://scikit-learn.org/stable/modules/impute.html#estimators-that-handle-nan-values
+
+2025-04-22 22:05:42,760 - success_failure_prediction - INFO - Step 6: Creating visualizations...
+2025-04-22 22:05:42,760 - success_failure_prediction - INFO - Creating visualizations of meta-model results
+2025-04-22 22:05:42,836 - success_failure_prediction - INFO - Visualizations created successfully
+2025-04-22 22:05:42,836 - success_failure_prediction - INFO - Step 7: Generating report...
+2025-04-22 22:05:42,836 - success_failure_prediction - INFO - Generating success/failure prediction report
+2025-04-22 22:05:42,837 - success_failure_prediction - INFO - Report generated successfully at /Users/hk/Downloads/DSFinalYearProject/MLPredictiveAnalysis/outputSuccessFailure/success_failure_report.md
+2025-04-22 22:05:42,837 - success_failure_prediction - INFO - Step 8: Saving model...
+2025-04-22 22:05:42,840 - success_failure_prediction - INFO - Model saved to /Users/hk/Downloads/DSFinalYearProject/MLPredictiveAnalysis/outputSuccessFailure/success_failure_model.pkl
+2025-04-22 22:05:42,840 - success_failure_prediction - INFO - Success/failure prediction analysis completed successfully
+2025-04-22 22:06:07,051 - success_failure_prediction - INFO - Success/Failure Prediction Engine initialized
+2025-04-22 22:06:07,051 - success_failure_prediction - INFO - Starting success/failure prediction analysis
+2025-04-22 22:06:07,052 - success_failure_prediction - INFO - Step 1: Loading data...
+2025-04-22 22:06:07,052 - success_failure_prediction - INFO - Loading data from JSON files
+2025-04-22 22:06:07,056 - success_failure_prediction - INFO - Loaded 1103 records from fundraiser data
+2025-04-22 22:06:07,058 - success_failure_prediction - INFO - Loaded 100 records from growthlist data
+2025-04-22 22:06:07,061 - success_failure_prediction - INFO - Loaded 546 records from topstartup data
+2025-04-22 22:06:07,115 - success_failure_prediction - INFO - Final combined dataset: 1211 records
+2025-04-22 22:06:07,116 - success_failure_prediction - INFO - Step 2: Initializing component models...
+2025-04-22 22:06:07,116 - success_failure_prediction - INFO - Initializing component prediction systems
+2025-04-22 22:06:07,119 - MLPredictiveAnalysis.funding_stage_prediction - INFO - Historical database initialized
+2025-04-22 22:06:07,120 - MLPredictiveAnalysis.funding_stage_prediction - INFO - Created visualization directory: ./outputFundingStagePrediction/visualizations
+2025-04-22 22:06:07,121 - MLPredictiveAnalysis.funding_stage_prediction - INFO - Created visualization directory: ./outputFundingStagePrediction/visualizations
+2025-04-22 22:06:07,122 - MLPredictiveAnalysis.funding_stage_prediction - INFO - Initialized model directory structure at ./outputFundingStagePrediction/models
+2025-04-22 22:06:07,122 - success_failure_prediction - INFO - Initialized funding stage prediction model
+2025-04-22 22:06:07,123 - success_failure_prediction - INFO - Initialized funding continuation analysis model
+2025-04-22 22:06:07,123 - funding_amount_forecast - INFO - Funding Amount Forecast initialized
+2025-04-22 22:06:07,124 - success_failure_prediction - INFO - Initialized funding amount forecast model
+2025-04-22 22:06:07,124 - success_failure_prediction - INFO - Initialized funding anomaly detection model
+2025-04-22 22:06:07,124 - success_failure_prediction - INFO - Initialized industry trend analysis model
+2025-04-22 22:06:07,124 - success_failure_prediction - INFO - All component models initialized successfully
+2025-04-22 22:06:07,124 - success_failure_prediction - INFO - Step 3: Running component analyses...
+2025-04-22 22:06:07,124 - success_failure_prediction - INFO - Running component analyses
+2025-04-22 22:06:07,124 - success_failure_prediction - INFO - Running funding stage prediction...
+2025-04-22 22:06:07,124 - MLPredictiveAnalysis.funding_stage_prediction - INFO - Starting funding stage prediction pipeline
+2025-04-22 22:06:07,125 - MLPredictiveAnalysis.funding_stage_prediction - ERROR - Error loading fundraiser data: [Errno 2] No such file or directory: '/Users/hk/Downloads/DSFinalYearProject/JSONFolder/JSONFolder/fundraisestartup50.json'
+2025-04-22 22:06:07,125 - MLPredictiveAnalysis.funding_stage_prediction - ERROR - Error loading growthlist data: [Errno 2] No such file or directory: '/Users/hk/Downloads/DSFinalYearProject/JSONFolder/JSONFolder/growthlistscrapper.json'
+2025-04-22 22:06:07,125 - MLPredictiveAnalysis.funding_stage_prediction - ERROR - Error loading topstartup data: [Errno 2] No such file or directory: '/Users/hk/Downloads/DSFinalYearProject/JSONFolder/JSONFolder/topstartupio50.json'
+2025-04-22 22:06:07,125 - MLPredictiveAnalysis.funding_stage_prediction - WARNING - No records available after merging
+2025-04-22 22:06:07,126 - MLPredictiveAnalysis.funding_stage_prediction - ERROR - No data available. Exiting pipeline.
+2025-04-22 22:06:07,126 - success_failure_prediction - INFO - Running funding continuation analysis...
+2025-04-22 22:06:07,126 - MLPredictiveAnalysis.funding_continuation - INFO - Starting funding continuation analysis pipeline
+2025-04-22 22:06:07,126 - MLPredictiveAnalysis.funding_continuation - ERROR - No data available for analysis
+2025-04-22 22:06:07,126 - success_failure_prediction - INFO - Running funding anomaly detection...
+2025-04-22 22:06:07,126 - FundingAnomalyDetection - INFO - Creating features for anomaly detection
+2025-04-22 22:06:07,127 - FundingAnomalyDetection - INFO - Created funding_per_employee feature
+2025-04-22 22:06:07,151 - FundingAnomalyDetection - INFO - Created 3 features for anomaly detection
+2025-04-22 22:06:07,151 - FundingAnomalyDetection - INFO - Detecting anomalies in funding data
+2025-04-22 22:06:07,151 - FundingAnomalyDetection - INFO - Fitting Isolation Forest with contamination=0.01
+2025-04-22 22:06:07,288 - FundingAnomalyDetection - INFO - Isolation Forest model trained successfully
+2025-04-22 22:06:07,393 - FundingAnomalyDetection - INFO - Detected 14 anomalies (1.16%)
+2025-04-22 22:06:07,393 - success_failure_prediction - INFO - Running industry trend analysis...
+2025-04-22 22:06:07,428 - success_failure_prediction - INFO - Component analyses completed with available data
+2025-04-22 22:06:07,428 - success_failure_prediction - INFO - Step 4: Creating meta-features...
+2025-04-22 22:06:07,428 - success_failure_prediction - INFO - Creating meta-model features
+2025-04-22 22:06:07,897 - success_failure_prediction - INFO - Determining success/failure labels
+2025-04-22 22:06:08,403 - success_failure_prediction - INFO - Determined success labels: 64.0 successes, 576 failures
+2025-04-22 22:06:08,403 - success_failure_prediction - INFO - Created meta-features for 641 companies
+2025-04-22 22:06:08,404 - success_failure_prediction - INFO - Step 5: Training meta-model...
+2025-04-22 22:06:08,404 - success_failure_prediction - INFO - Training success/failure meta-model
+2025-04-22 22:06:08,408 - success_failure_prediction - INFO - Training gradient boosting model
+2025-04-22 22:06:08,653 - success_failure_prediction - INFO - Meta-model trained successfully: Accuracy=0.988, AUC=1.000
+2025-04-22 22:06:08,653 - success_failure_prediction - INFO - Step 6: Creating visualizations...
+2025-04-22 22:06:08,653 - success_failure_prediction - INFO - Creating visualizations of meta-model results
+2025-04-22 22:06:08,757 - success_failure_prediction - INFO - Visualizations created successfully
+2025-04-22 22:06:08,757 - success_failure_prediction - INFO - Step 7: Generating report...
+2025-04-22 22:06:08,757 - success_failure_prediction - INFO - Generating success/failure prediction report
+2025-04-22 22:06:08,759 - success_failure_prediction - INFO - Report generated successfully at /Users/hk/Downloads/DSFinalYearProject/MLPredictiveAnalysis/outputSuccessFailure/success_failure_report.md
+2025-04-22 22:06:08,759 - success_failure_prediction - INFO - Step 8: Saving model...
+2025-04-22 22:06:08,761 - success_failure_prediction - INFO - Model saved to /Users/hk/Downloads/DSFinalYearProject/MLPredictiveAnalysis/outputSuccessFailure/success_failure_model.pkl
+2025-04-22 22:06:08,761 - success_failure_prediction - INFO - Success/failure prediction analysis completed successfully
+2025-04-22 22:12:13,484 - success_failure_prediction - INFO - Success/Failure Prediction Engine initialized
+2025-04-22 22:12:13,484 - success_failure_prediction - INFO - Starting success/failure prediction analysis
+2025-04-22 22:12:13,485 - success_failure_prediction - INFO - Step 1: Loading data...
+2025-04-22 22:12:13,485 - success_failure_prediction - INFO - Loading data from JSON files
+2025-04-22 22:12:13,489 - success_failure_prediction - INFO - Loaded 1103 records from fundraiser data
+2025-04-22 22:12:13,492 - success_failure_prediction - INFO - Loaded 100 records from growthlist data
+2025-04-22 22:12:13,496 - success_failure_prediction - INFO - Loaded 546 records from topstartup data
+2025-04-22 22:12:13,553 - success_failure_prediction - INFO - Final combined dataset: 1211 records
+2025-04-22 22:12:13,554 - success_failure_prediction - INFO - Step 2: Initializing component models...
+2025-04-22 22:12:13,554 - success_failure_prediction - INFO - Initializing component prediction systems
+2025-04-22 22:12:13,557 - MLPredictiveAnalysis.funding_stage_prediction - INFO - Historical database initialized
+2025-04-22 22:12:13,557 - MLPredictiveAnalysis.funding_stage_prediction - INFO - Created visualization directory: ./outputFundingStagePrediction/visualizations
+2025-04-22 22:12:13,558 - MLPredictiveAnalysis.funding_stage_prediction - INFO - Created visualization directory: ./outputFundingStagePrediction/visualizations
+2025-04-22 22:12:13,559 - MLPredictiveAnalysis.funding_stage_prediction - INFO - Initialized model directory structure at ./outputFundingStagePrediction/models
+2025-04-22 22:12:13,559 - success_failure_prediction - INFO - Initialized funding stage prediction model
+2025-04-22 22:12:13,560 - success_failure_prediction - INFO - Initialized funding continuation analysis model
+2025-04-22 22:12:13,561 - funding_amount_forecast - INFO - Funding Amount Forecast initialized
+2025-04-22 22:12:13,561 - success_failure_prediction - INFO - Initialized funding amount forecast model
+2025-04-22 22:12:13,561 - success_failure_prediction - INFO - Initialized funding anomaly detection model
+2025-04-22 22:12:13,561 - success_failure_prediction - INFO - Initialized industry trend analysis model
+2025-04-22 22:12:13,561 - success_failure_prediction - INFO - All component models initialized successfully
+2025-04-22 22:12:13,561 - success_failure_prediction - INFO - Step 3: Running component analyses...
+2025-04-22 22:12:13,562 - success_failure_prediction - INFO - Running component analyses
+2025-04-22 22:12:13,562 - success_failure_prediction - INFO - Running funding stage prediction...
+2025-04-22 22:12:13,562 - MLPredictiveAnalysis.funding_stage_prediction - INFO - Starting funding stage prediction pipeline
+2025-04-22 22:12:13,562 - MLPredictiveAnalysis.funding_stage_prediction - ERROR - Error loading fundraiser data: [Errno 2] No such file or directory: '/Users/hk/Downloads/DSFinalYearProject/JSONFolder/JSONFolder/fundraisestartup50.json'
+2025-04-22 22:12:13,562 - MLPredictiveAnalysis.funding_stage_prediction - ERROR - Error loading growthlist data: [Errno 2] No such file or directory: '/Users/hk/Downloads/DSFinalYearProject/JSONFolder/JSONFolder/growthlistscrapper.json'
+2025-04-22 22:12:13,562 - MLPredictiveAnalysis.funding_stage_prediction - ERROR - Error loading topstartup data: [Errno 2] No such file or directory: '/Users/hk/Downloads/DSFinalYearProject/JSONFolder/JSONFolder/topstartupio50.json'
+2025-04-22 22:12:13,562 - MLPredictiveAnalysis.funding_stage_prediction - WARNING - No records available after merging
+2025-04-22 22:12:13,563 - MLPredictiveAnalysis.funding_stage_prediction - ERROR - No data available. Exiting pipeline.
+2025-04-22 22:12:13,563 - success_failure_prediction - INFO - Running funding continuation analysis...
+2025-04-22 22:12:13,563 - MLPredictiveAnalysis.funding_continuation - INFO - Starting funding continuation analysis pipeline
+2025-04-22 22:12:13,563 - MLPredictiveAnalysis.funding_continuation - ERROR - No data available for analysis
+2025-04-22 22:12:13,563 - success_failure_prediction - INFO - Running funding anomaly detection...
+2025-04-22 22:12:13,563 - FundingAnomalyDetection - INFO - Creating features for anomaly detection
+2025-04-22 22:12:13,564 - FundingAnomalyDetection - INFO - Created funding_per_employee feature
+2025-04-22 22:12:13,593 - FundingAnomalyDetection - INFO - Created 3 features for anomaly detection
+2025-04-22 22:12:13,593 - FundingAnomalyDetection - INFO - Detecting anomalies in funding data
+2025-04-22 22:12:13,594 - FundingAnomalyDetection - INFO - Fitting Isolation Forest with contamination=0.01
+2025-04-22 22:12:13,714 - FundingAnomalyDetection - INFO - Isolation Forest model trained successfully
+2025-04-22 22:12:13,737 - FundingAnomalyDetection - INFO - Detected 14 anomalies (1.16%)
+2025-04-22 22:12:13,737 - success_failure_prediction - INFO - Running industry trend analysis...
+2025-04-22 22:12:13,771 - success_failure_prediction - INFO - Component analyses completed with available data
+2025-04-22 22:12:13,771 - success_failure_prediction - INFO - Step 4: Creating meta-features...
+2025-04-22 22:12:13,772 - success_failure_prediction - INFO - Creating meta-model features
+2025-04-22 22:12:14,270 - success_failure_prediction - INFO - Determining success/failure labels
+2025-04-22 22:12:14,697 - success_failure_prediction - INFO - Determined success labels: 64.0 successes, 576 failures
+2025-04-22 22:12:14,697 - success_failure_prediction - INFO - Created meta-features for 641 companies
+2025-04-22 22:12:14,698 - success_failure_prediction - INFO - Step 5: Training meta-model...
+2025-04-22 22:12:14,698 - success_failure_prediction - INFO - Training success/failure meta-model
+2025-04-22 22:12:14,706 - success_failure_prediction - INFO - Training gradient boosting model
+2025-04-22 22:12:14,954 - success_failure_prediction - INFO - Meta-model trained successfully: Accuracy=0.988, AUC=1.000
+2025-04-22 22:12:14,955 - success_failure_prediction - INFO - Step 6: Creating visualizations...
+2025-04-22 22:12:14,955 - success_failure_prediction - INFO - Creating visualizations of meta-model results
+2025-04-22 22:12:15,839 - success_failure_prediction - INFO - Visualizations created successfully
+2025-04-22 22:12:15,839 - success_failure_prediction - INFO - Step 7: Generating report...
+2025-04-22 22:12:15,840 - success_failure_prediction - INFO - Generating success/failure prediction report
+2025-04-22 22:12:15,841 - success_failure_prediction - INFO - Report generated successfully at /Users/hk/Downloads/DSFinalYearProject/MLPredictiveAnalysis/outputSuccessFailure/success_failure_report.md
+2025-04-22 22:12:15,841 - success_failure_prediction - INFO - Step 8: Saving model...
+2025-04-22 22:12:15,844 - success_failure_prediction - INFO - Model saved to /Users/hk/Downloads/DSFinalYearProject/MLPredictiveAnalysis/outputSuccessFailure/success_failure_model.pkl
+2025-04-22 22:12:15,844 - success_failure_prediction - INFO - Success/failure prediction analysis completed successfully
+2025-04-22 22:12:54,158 - success_failure_prediction - INFO - Success/Failure Prediction Engine initialized
+2025-04-22 22:12:54,159 - success_failure_prediction - INFO - Starting success/failure prediction analysis
+2025-04-22 22:12:54,159 - success_failure_prediction - INFO - Step 1: Loading data...
+2025-04-22 22:12:54,159 - success_failure_prediction - INFO - Loading data from JSON files
+2025-04-22 22:12:54,167 - success_failure_prediction - INFO - Loaded 1103 records from fundraiser data
+2025-04-22 22:12:54,170 - success_failure_prediction - INFO - Loaded 100 records from growthlist data
+2025-04-22 22:12:54,174 - success_failure_prediction - INFO - Loaded 546 records from topstartup data
+2025-04-22 22:12:54,231 - success_failure_prediction - INFO - Final combined dataset: 1211 records
+2025-04-22 22:12:54,232 - success_failure_prediction - INFO - Step 2: Initializing component models...
+2025-04-22 22:12:54,232 - success_failure_prediction - INFO - Initializing component prediction systems
+2025-04-22 22:12:54,234 - MLPredictiveAnalysis.funding_stage_prediction - INFO - Historical database initialized
+2025-04-22 22:12:54,234 - MLPredictiveAnalysis.funding_stage_prediction - INFO - Created visualization directory: ./outputFundingStagePrediction/visualizations
+2025-04-22 22:12:54,235 - MLPredictiveAnalysis.funding_stage_prediction - INFO - Created visualization directory: ./outputFundingStagePrediction/visualizations
+2025-04-22 22:12:54,236 - MLPredictiveAnalysis.funding_stage_prediction - INFO - Initialized model directory structure at ./outputFundingStagePrediction/models
+2025-04-22 22:12:54,236 - success_failure_prediction - INFO - Initialized funding stage prediction model
+2025-04-22 22:12:54,237 - success_failure_prediction - INFO - Initialized funding continuation analysis model
+2025-04-22 22:12:54,237 - funding_amount_forecast - INFO - Funding Amount Forecast initialized
+2025-04-22 22:12:54,238 - success_failure_prediction - INFO - Initialized funding amount forecast model
+2025-04-22 22:12:54,238 - success_failure_prediction - INFO - Initialized funding anomaly detection model
+2025-04-22 22:12:54,238 - success_failure_prediction - INFO - Initialized industry trend analysis model
+2025-04-22 22:12:54,238 - success_failure_prediction - INFO - All component models initialized successfully
+2025-04-22 22:12:54,238 - success_failure_prediction - INFO - Step 3: Running component analyses...
+2025-04-22 22:12:54,238 - success_failure_prediction - INFO - Running component analyses
+2025-04-22 22:12:54,239 - success_failure_prediction - INFO - Running funding stage prediction...
+2025-04-22 22:12:54,239 - MLPredictiveAnalysis.funding_stage_prediction - INFO - Starting funding stage prediction pipeline
+2025-04-22 22:12:54,239 - MLPredictiveAnalysis.funding_stage_prediction - ERROR - Error loading fundraiser data: [Errno 2] No such file or directory: '/Users/hk/Downloads/DSFinalYearProject/JSONFolder/JSONFolder/fundraisestartup50.json'
+2025-04-22 22:12:54,239 - MLPredictiveAnalysis.funding_stage_prediction - ERROR - Error loading growthlist data: [Errno 2] No such file or directory: '/Users/hk/Downloads/DSFinalYearProject/JSONFolder/JSONFolder/growthlistscrapper.json'
+2025-04-22 22:12:54,239 - MLPredictiveAnalysis.funding_stage_prediction - ERROR - Error loading topstartup data: [Errno 2] No such file or directory: '/Users/hk/Downloads/DSFinalYearProject/JSONFolder/JSONFolder/topstartupio50.json'
+2025-04-22 22:12:54,239 - MLPredictiveAnalysis.funding_stage_prediction - WARNING - No records available after merging
+2025-04-22 22:12:54,239 - MLPredictiveAnalysis.funding_stage_prediction - ERROR - No data available. Exiting pipeline.
+2025-04-22 22:12:54,240 - success_failure_prediction - INFO - Running funding continuation analysis...
+2025-04-22 22:12:54,240 - MLPredictiveAnalysis.funding_continuation - INFO - Starting funding continuation analysis pipeline
+2025-04-22 22:12:54,240 - MLPredictiveAnalysis.funding_continuation - ERROR - No data available for analysis
+2025-04-22 22:12:54,240 - success_failure_prediction - INFO - Running funding anomaly detection...
+2025-04-22 22:12:54,240 - FundingAnomalyDetection - INFO - Creating features for anomaly detection
+2025-04-22 22:12:54,242 - FundingAnomalyDetection - INFO - Created funding_per_employee feature
+2025-04-22 22:12:54,269 - FundingAnomalyDetection - INFO - Created 3 features for anomaly detection
+2025-04-22 22:12:54,269 - FundingAnomalyDetection - INFO - Detecting anomalies in funding data
+2025-04-22 22:12:54,269 - FundingAnomalyDetection - INFO - Fitting Isolation Forest with contamination=0.01
+2025-04-22 22:12:54,401 - FundingAnomalyDetection - INFO - Isolation Forest model trained successfully
+2025-04-22 22:12:54,424 - FundingAnomalyDetection - INFO - Detected 14 anomalies (1.16%)
+2025-04-22 22:12:54,424 - success_failure_prediction - INFO - Running industry trend analysis...
+2025-04-22 22:12:54,459 - success_failure_prediction - INFO - Component analyses completed with available data
+2025-04-22 22:12:54,459 - success_failure_prediction - INFO - Step 4: Creating meta-features...
+2025-04-22 22:12:54,459 - success_failure_prediction - INFO - Creating meta-model features
+2025-04-22 22:12:55,052 - success_failure_prediction - INFO - Determining success/failure labels
+2025-04-22 22:12:55,450 - success_failure_prediction - INFO - Determined success labels: 64.0 successes, 576 failures
+2025-04-22 22:12:55,451 - success_failure_prediction - INFO - Created meta-features for 641 companies
+2025-04-22 22:12:55,451 - success_failure_prediction - INFO - Step 5: Training meta-model...
+2025-04-22 22:12:55,451 - success_failure_prediction - INFO - Training success/failure meta-model
+2025-04-22 22:12:55,458 - success_failure_prediction - INFO - Training gradient boosting model
+2025-04-22 22:12:55,701 - success_failure_prediction - INFO - Meta-model trained successfully: Accuracy=0.988, AUC=1.000
+2025-04-22 22:12:55,702 - success_failure_prediction - INFO - Step 6: Creating visualizations...
+2025-04-22 22:12:55,702 - success_failure_prediction - INFO - Creating visualizations of meta-model results
+2025-04-22 22:12:56,531 - success_failure_prediction - INFO - Visualizations created successfully
+2025-04-22 22:12:56,531 - success_failure_prediction - INFO - Step 7: Generating report...
+2025-04-22 22:12:56,531 - success_failure_prediction - INFO - Generating success/failure prediction report
+2025-04-22 22:12:56,532 - success_failure_prediction - INFO - Report generated successfully at /Users/hk/Downloads/DSFinalYearProject/MLPredictiveAnalysis/outputSuccessFailure/success_failure_report.md
+2025-04-22 22:12:56,532 - success_failure_prediction - INFO - Step 8: Saving model...
+2025-04-22 22:12:56,534 - success_failure_prediction - INFO - Model saved to /Users/hk/Downloads/DSFinalYearProject/MLPredictiveAnalysis/outputSuccessFailure/success_failure_model.pkl
+2025-04-22 22:12:56,535 - success_failure_prediction - INFO - Success/failure prediction analysis completed successfully
+2025-04-22 22:37:43,178 - success_failure_prediction - INFO - Success/Failure Prediction system initialized
+2025-04-22 22:37:43,179 - success_failure_prediction - INFO - Starting success/failure prediction analysis
+2025-04-22 22:37:43,179 - success_failure_prediction - INFO - Step 1: Initializing component models
+2025-04-22 22:37:43,179 - success_failure_prediction - INFO - Initializing component prediction systems
+2025-04-22 22:37:43,182 - funding_stage_prediction - INFO - Historical database initialized
+2025-04-22 22:37:43,182 - funding_stage_prediction - INFO - Created visualization directory: ./outputFundingStagePrediction/visualizations
+2025-04-22 22:37:43,184 - funding_stage_prediction - INFO - Created visualization directory: ./outputFundingStagePrediction/visualizations
+2025-04-22 22:37:43,185 - funding_stage_prediction - INFO - Initialized model directory structure at ./outputFundingStagePrediction/models
+2025-04-22 22:37:43,186 - funding_amount_forecast - INFO - Funding Amount Forecast initialized
+2025-04-22 22:37:43,186 - success_failure_prediction - ERROR - Error initializing components: [Errno 2] No such file or directory: '/Users/hk/Downloads/DSFinalYearProject/MLPredictiveAnalysis/outputSuccessFailure/anomaly_detection/anomaly_detection.log'
+2025-04-22 22:37:43,188 - success_failure_prediction - ERROR - Traceback (most recent call last):
+  File "/Users/hk/Downloads/DSFinalYearProject/MLPredictiveAnalysis/success_failure_prediction.py", line 146, in initialize_components
+    self.anomaly_detector = FundingAnomalyDetection(
+                            ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/hk/Downloads/DSFinalYearProject/MLPredictiveAnalysis/funding_anomaly_detection.py", line 48, in __init__
+    self.logger = self._setup_logging()
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/hk/Downloads/DSFinalYearProject/MLPredictiveAnalysis/funding_anomaly_detection.py", line 60, in _setup_logging
+    f_handler = logging.FileHandler(os.path.join(self.output_dir, 'anomaly_detection.log'))
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/logging/__init__.py", line 1231, in __init__
+    StreamHandler.__init__(self, self._open())
+                                 ^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/logging/__init__.py", line 1263, in _open
+    return open_func(self.baseFilename, self.mode,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '/Users/hk/Downloads/DSFinalYearProject/MLPredictiveAnalysis/outputSuccessFailure/anomaly_detection/anomaly_detection.log'
+
+2025-04-22 22:37:43,188 - success_failure_prediction - INFO - Step 2: Running component analyses
+2025-04-22 22:37:43,189 - success_failure_prediction - INFO - Running component analyses
+2025-04-22 22:37:43,189 - success_failure_prediction - INFO - Initializing component prediction systems
+2025-04-22 22:37:43,189 - funding_stage_prediction - INFO - Historical database initialized
+2025-04-22 22:37:43,189 - funding_stage_prediction - INFO - Created visualization directory: ./outputFundingStagePrediction/visualizations
+2025-04-22 22:37:43,190 - funding_stage_prediction - INFO - Created visualization directory: ./outputFundingStagePrediction/visualizations
+2025-04-22 22:37:43,191 - funding_stage_prediction - INFO - Initialized model directory structure at ./outputFundingStagePrediction/models
+2025-04-22 22:37:43,193 - funding_amount_forecast - INFO - Funding Amount Forecast initialized
+2025-04-22 22:37:43,193 - success_failure_prediction - ERROR - Error initializing components: [Errno 2] No such file or directory: '/Users/hk/Downloads/DSFinalYearProject/MLPredictiveAnalysis/outputSuccessFailure/anomaly_detection/anomaly_detection.log'
+2025-04-22 22:37:43,194 - success_failure_prediction - ERROR - Traceback (most recent call last):
+  File "/Users/hk/Downloads/DSFinalYearProject/MLPredictiveAnalysis/success_failure_prediction.py", line 146, in initialize_components
+    self.anomaly_detector = FundingAnomalyDetection(
+                            ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/hk/Downloads/DSFinalYearProject/MLPredictiveAnalysis/funding_anomaly_detection.py", line 48, in __init__
+    self.logger = self._setup_logging()
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/hk/Downloads/DSFinalYearProject/MLPredictiveAnalysis/funding_anomaly_detection.py", line 60, in _setup_logging
+    f_handler = logging.FileHandler(os.path.join(self.output_dir, 'anomaly_detection.log'))
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/logging/__init__.py", line 1231, in __init__
+    StreamHandler.__init__(self, self._open())
+                                 ^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/logging/__init__.py", line 1263, in _open
+    return open_func(self.baseFilename, self.mode,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '/Users/hk/Downloads/DSFinalYearProject/MLPredictiveAnalysis/outputSuccessFailure/anomaly_detection/anomaly_detection.log'
+
+2025-04-22 22:37:43,194 - success_failure_prediction - INFO - Running funding stage prediction
+2025-04-22 22:37:43,194 - funding_stage_prediction - INFO - Starting funding stage prediction pipeline
+2025-04-22 22:37:43,195 - funding_stage_prediction - ERROR - Error loading fundraiser data: [Errno 2] No such file or directory: '../JSONFolder/JSONFolder/fundraisestartup50.json'
+2025-04-22 22:37:43,196 - funding_stage_prediction - ERROR - Error loading growthlist data: [Errno 2] No such file or directory: '../JSONFolder/JSONFolder/growthlistscrapper.json'
+2025-04-22 22:37:43,196 - funding_stage_prediction - ERROR - Error loading topstartup data: [Errno 2] No such file or directory: '../JSONFolder/JSONFolder/topstartupio50.json'
+2025-04-22 22:37:43,196 - funding_stage_prediction - WARNING - No records available after merging
+2025-04-22 22:37:43,196 - funding_stage_prediction - ERROR - No data available. Exiting pipeline.
+2025-04-22 22:37:43,196 - success_failure_prediction - INFO - Running funding continuation analysis
+2025-04-22 22:37:43,197 - funding_continuation - INFO - Starting funding continuation analysis pipeline
+2025-04-22 22:37:43,197 - funding_continuation - ERROR - No data available for analysis
+2025-04-22 22:37:43,197 - success_failure_prediction - INFO - Running funding amount forecast
+2025-04-22 22:37:43,197 - funding_amount_forecast - INFO - Starting funding amount forecast analysis
+2025-04-22 22:37:43,197 - funding_amount_forecast - INFO - Loading data from JSON files
+2025-04-22 22:37:43,200 - funding_amount_forecast - INFO - Loaded 1103 records from fundraiser data
+2025-04-22 22:37:43,200 - funding_amount_forecast - INFO - Loaded 100 records from growthlist data
+2025-04-22 22:37:43,202 - funding_amount_forecast - INFO - Loaded 546 records from topstartup data
+2025-04-22 22:37:43,209 - funding_amount_forecast - INFO - Created DataFrame with 1749 records and 27 columns
+2025-04-22 22:37:43,210 - funding_amount_forecast - INFO - Standardizing DataFrame
+2025-04-22 22:37:43,244 - funding_amount_forecast - INFO - DataFrame standardization complete with 1749 records
+2025-04-22 22:37:43,245 - funding_amount_forecast - INFO - Creating features for funding amount forecasting
+2025-04-22 22:37:43,247 - funding_amount_forecast - INFO - Kept 1727 records with valid funding amounts
+2025-04-22 22:37:43,248 - funding_amount_forecast - INFO - Converting funding_date to datetime
+2025-04-22 22:37:44,293 - funding_amount_forecast - INFO - Estimating next round amounts for 623 companies without actual next round data
+2025-04-22 22:37:44,625 - funding_amount_forecast - INFO - Feature engineering complete. Created 47 features.
+2025-04-22 22:37:44,626 - funding_amount_forecast - INFO - Preparing data for model training
+2025-04-22 22:37:44,627 - funding_amount_forecast - WARNING - Column funding_usd contains all NaN values and will be excluded from features
+2025-04-22 22:37:44,629 - funding_amount_forecast - WARNING - Column avg_time_between_rounds contains all NaN values and will be excluded from features
+2025-04-22 22:37:44,630 - funding_amount_forecast - INFO - Filling missing values with median
+2025-04-22 22:37:44,632 - funding_amount_forecast - INFO - Using 1104 records with actual next round data for validation
+2025-04-22 22:37:44,635 - funding_amount_forecast - INFO - Training set: 1395 records (772 actual, 623 estimated)
+2025-04-22 22:37:44,635 - funding_amount_forecast - INFO - Test set: 332 records (all actual data)
+2025-04-22 22:37:44,641 - funding_amount_forecast - INFO - Training models...
+2025-04-22 22:37:44,641 - funding_amount_forecast - INFO - Training quantile regression forest with quantiles: [0.1, 0.5, 0.9]
+2025-04-22 22:37:44,641 - funding_amount_forecast - INFO - Training model for quantile 0.1
+2025-04-22 22:37:45,601 - funding_amount_forecast - INFO - Trained model for quantile 0.1
+2025-04-22 22:37:45,602 - funding_amount_forecast - INFO - Training model for quantile 0.5
+2025-04-22 22:37:46,099 - funding_amount_forecast - INFO - Trained model for quantile 0.5
+2025-04-22 22:37:46,099 - funding_amount_forecast - INFO - Training model for quantile 0.9
+2025-04-22 22:37:46,507 - funding_amount_forecast - INFO - Trained model for quantile 0.9
+2025-04-22 22:37:46,508 - funding_amount_forecast - INFO - Training ensemble model
+2025-04-22 22:37:47,268 - funding_amount_forecast - INFO - Evaluating models...
+2025-04-22 22:37:47,269 - funding_amount_forecast - INFO - Evaluating model performance
+2025-04-22 22:37:47,273 - funding_amount_forecast - INFO - Quantile Regression Forest Metrics: RMSE=$112368137.10, MAE=$38483137.85, R2=-0.0133, Log-R2=-0.2714, Within 20%=0.08, Same order of magnitude=0.76
+2025-04-22 22:37:47,276 - funding_amount_forecast - INFO - 80% Prediction Interval Coverage: 0.6747
+2025-04-22 22:37:47,276 - funding_amount_forecast - INFO - Evaluating model performance
+2025-04-22 22:37:47,304 - funding_amount_forecast - INFO - random_forest Metrics: RMSE=$275977583.35, MAE=$62463900.28, R2=-5.1124, Log-R2=-0.2721, Within 20%=0.0973, Same order=0.7416
+2025-04-22 22:37:47,307 - funding_amount_forecast - INFO - gradient_boosting Metrics: RMSE=$630766563.78, MAE=$105261940.61, R2=-30.9302, Log-R2=-0.3358, Within 20%=0.0805, Same order=0.7416
+2025-04-22 22:37:47,336 - funding_amount_forecast - INFO - extra_trees Metrics: RMSE=$141301227.24, MAE=$62510945.12, R2=-0.6023, Log-R2=-0.3560, Within 20%=0.0671, Same order=0.6812
+2025-04-22 22:37:47,338 - funding_amount_forecast - INFO - Ensemble Metrics: RMSE=$274241305.05, MAE=$75104364.16, R2=-5.0357, Log-R2=-0.3406, Within 20%=0.0906, Same order=0.7181
+2025-04-22 22:37:47,397 - funding_amount_forecast - INFO - Creating visualizations...
+2025-04-22 22:37:47,398 - funding_amount_forecast - INFO - Creating funding by stage visualization
+2025-04-22 22:37:48,016 - funding_amount_forecast - INFO - Saved funding by stage visualization to ./outputSuccessFailure/amount_forecast/funding_by_stage.png
+2025-04-22 22:37:48,017 - funding_amount_forecast - INFO - Creating funding by industry visualization
+2025-04-22 22:37:49,009 - funding_amount_forecast - INFO - Saved funding by industry visualizations to ./outputSuccessFailure/amount_forecast/funding_by_industry_average.png and ./outputSuccessFailure/amount_forecast/funding_by_industry_distribution.png
+2025-04-22 22:37:49,009 - funding_amount_forecast - INFO - Creating prediction accuracy visualization
+2025-04-22 22:37:49,329 - funding_amount_forecast - INFO - Saved prediction accuracy visualization to ./outputSuccessFailure/amount_forecast/prediction_accuracy.png
+2025-04-22 22:37:49,329 - funding_amount_forecast - INFO - Creating feature importance visualization
+2025-04-22 22:37:49,623 - funding_amount_forecast - INFO - Saved feature importance visualization to ./outputSuccessFailure/amount_forecast/feature_importance.png
+2025-04-22 22:37:49,623 - funding_amount_forecast - INFO - Creating model calibration visualization
+2025-04-22 22:37:49,881 - funding_amount_forecast - INFO - Saved model calibration visualization to ./outputSuccessFailure/amount_forecast/model_calibration.png
+2025-04-22 22:37:49,881 - funding_amount_forecast - INFO - Creating error distribution visualization
+2025-04-22 22:37:51,238 - funding_amount_forecast - INFO - Saved error distribution visualization to ./outputSuccessFailure/amount_forecast/error_distribution.png
+2025-04-22 22:37:51,239 - funding_amount_forecast - INFO - Creating prediction intervals visualization
+2025-04-22 22:37:51,598 - funding_amount_forecast - INFO - Saved prediction intervals visualization to ./outputSuccessFailure/amount_forecast/prediction_intervals.png
+2025-04-22 22:37:51,599 - funding_amount_forecast - INFO - Generating report...
+2025-04-22 22:37:51,599 - funding_amount_forecast - INFO - Generating funding amount forecast report
+2025-04-22 22:37:51,640 - funding_amount_forecast - INFO - Funding amount forecast report saved to ./outputSuccessFailure/amount_forecast/funding_amount_forecast_report.md
+2025-04-22 22:37:51,640 - funding_amount_forecast - INFO - markdown2 package not available, skipping HTML conversion
+2025-04-22 22:37:51,640 - funding_amount_forecast - INFO - Saving model...
+2025-04-22 22:37:51,641 - funding_amount_forecast - INFO - Saving model to /Users/hk/Downloads/DSFinalYearProject/MLPredictiveAnalysis/outputSuccessFailure/amount_forecast/funding_amount_forecast_model.pkl
+2025-04-22 22:37:51,724 - funding_amount_forecast - INFO - Model saved successfully to /Users/hk/Downloads/DSFinalYearProject/MLPredictiveAnalysis/outputSuccessFailure/amount_forecast/funding_amount_forecast_model.pkl
+2025-04-22 22:37:51,724 - funding_amount_forecast - INFO - Funding amount forecast analysis completed successfully
+2025-04-22 22:37:51,725 - success_failure_prediction - INFO - Running funding anomaly detection
+2025-04-22 22:37:51,725 - success_failure_prediction - ERROR - Error running component analyses: 'NoneType' object has no attribute 'run_analysis'
+2025-04-22 22:37:51,727 - success_failure_prediction - ERROR - Traceback (most recent call last):
+  File "/Users/hk/Downloads/DSFinalYearProject/MLPredictiveAnalysis/success_failure_prediction.py", line 195, in run_components
+    anomaly_results = self.anomaly_detector.run_analysis()
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'run_analysis'
+
+2025-04-22 22:37:51,729 - success_failure_prediction - INFO - Step 3: Integrating data
+2025-04-22 22:37:51,729 - success_failure_prediction - INFO - Integrating data from all components
+2025-04-22 22:37:51,729 - success_failure_prediction - WARNING - No base data found from component analyses, loading directly
+2025-04-22 22:37:51,729 - funding_continuation - INFO - Loading data from JSON files
+2025-04-22 22:37:51,729 - funding_continuation - ERROR - Required file not found: ./JSONFolder/fundraisestartup50.json
+2025-04-22 22:37:51,730 - success_failure_prediction - ERROR - Error integrating data: object of type 'NoneType' has no len()
+2025-04-22 22:37:51,730 - success_failure_prediction - ERROR - Traceback (most recent call last):
+  File "/Users/hk/Downloads/DSFinalYearProject/MLPredictiveAnalysis/success_failure_prediction.py", line 260, in integrate_data
+    self.logger.info(f"Loaded base data from continuation analyzer: {len(base_data)} records")
+                                                                     ^^^^^^^^^^^^^^
+TypeError: object of type 'NoneType' has no len()
+
+2025-04-22 22:37:51,730 - success_failure_prediction - INFO - Step 4: Calculating success scores
+2025-04-22 22:37:51,730 - success_failure_prediction - INFO - Calculating success scores
+2025-04-22 22:37:51,730 - success_failure_prediction - WARNING - No stage information available, using default score
+2025-04-22 22:37:51,731 - success_failure_prediction - WARNING - No survival information available, estimating from stage
+2025-04-22 22:37:51,731 - success_failure_prediction - WARNING - No funding adequacy information available, using neutral score
+2025-04-22 22:37:51,731 - success_failure_prediction - WARNING - No industry momentum information available, using neutral score
+2025-04-22 22:37:51,732 - success_failure_prediction - WARNING - No anomaly detection information available, using optimistic score
+2025-04-22 22:37:51,733 - success_failure_prediction - INFO - Success scores calculated successfully
+2025-04-22 22:37:51,733 - success_failure_prediction - INFO - Step 5: Classifying startups
+2025-04-22 22:37:51,733 - success_failure_prediction - INFO - Classifying companies by success potential
+2025-04-22 22:37:51,736 - success_failure_prediction - INFO - Classification results: {'High Failure Risk': np.int64(0), 'Moderate Failure Risk': np.int64(0), 'Moderate Success Potential': np.int64(0), 'High Success Potential': np.int64(0)}
+2025-04-22 22:37:51,739 - success_failure_prediction - INFO - Classification completed successfully
+2025-04-22 22:37:51,740 - success_failure_prediction - INFO - Step 6: Generating visualizations
+2025-04-22 22:37:51,740 - success_failure_prediction - INFO - Generating visualizations
+2025-04-22 22:37:52,145 - success_failure_prediction - ERROR - Error generating visualizations: Could not interpret value `company_name` for `y`. An entry with this name does not appear in `data`.
+2025-04-22 22:37:52,148 - success_failure_prediction - ERROR - Traceback (most recent call last):
+  File "/Users/hk/Downloads/DSFinalYearProject/MLPredictiveAnalysis/success_failure_prediction.py", line 909, in visualize_results
+    ax = sns.barplot(x='success_score', y='company_name', data=top_companies)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/hk/Downloads/DSFinalYearProject/.venv/lib/python3.12/site-packages/seaborn/categorical.py", line 2341, in barplot
+    p = _CategoricalAggPlotter(
+        ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/hk/Downloads/DSFinalYearProject/.venv/lib/python3.12/site-packages/seaborn/categorical.py", line 67, in __init__
+    super().__init__(data=data, variables=variables)
+  File "/Users/hk/Downloads/DSFinalYearProject/.venv/lib/python3.12/site-packages/seaborn/_base.py", line 634, in __init__
+    self.assign_variables(data, variables)
+  File "/Users/hk/Downloads/DSFinalYearProject/.venv/lib/python3.12/site-packages/seaborn/_base.py", line 679, in assign_variables
+    plot_data = PlotData(data, variables)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/hk/Downloads/DSFinalYearProject/.venv/lib/python3.12/site-packages/seaborn/_core/data.py", line 58, in __init__
+    frame, names, ids = self._assign_variables(data, variables)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/hk/Downloads/DSFinalYearProject/.venv/lib/python3.12/site-packages/seaborn/_core/data.py", line 232, in _assign_variables
+    raise ValueError(err)
+ValueError: Could not interpret value `company_name` for `y`. An entry with this name does not appear in `data`.
+
+2025-04-22 22:37:52,149 - success_failure_prediction - INFO - Step 7: Generating report
+2025-04-22 22:37:52,149 - success_failure_prediction - INFO - Generating success/failure prediction report
+2025-04-22 22:37:52,149 - success_failure_prediction - ERROR - Error generating report: division by zero
+2025-04-22 22:37:52,150 - success_failure_prediction - ERROR - Traceback (most recent call last):
+  File "/Users/hk/Downloads/DSFinalYearProject/MLPredictiveAnalysis/success_failure_prediction.py", line 997, in generate_report
+    percentage = count / len(classified_data) * 100
+                 ~~~~~~^~~~~~~~~~~~~~~~~~~~~~
+ZeroDivisionError: division by zero
+
+2025-04-22 22:37:52,151 - success_failure_prediction - INFO - Saved predictions to: ./outputSuccessFailure/success_failure_predictions.csv
+2025-04-22 22:37:52,151 - success_failure_prediction - INFO - Analysis complete. Overall success rate: nan%
+2025-04-22 22:37:52,151 - success_failure_prediction - INFO - Total companies analyzed: 0
+2025-04-22 22:37:52,151 - success_failure_prediction - INFO - Predicted successful: 0 (nan%)
+2025-04-22 22:37:52,151 - success_failure_prediction - INFO - Predicted unsuccessful: 0 (nan%)
+2025-04-22 22:39:44,223 - success_failure_prediction - INFO - Success/Failure Prediction system initialized
+2025-04-22 22:39:44,223 - success_failure_prediction - INFO - Starting success/failure prediction analysis
+2025-04-22 22:39:44,223 - success_failure_prediction - INFO - Step 1: Initializing component models
+2025-04-22 22:39:44,223 - success_failure_prediction - INFO - Initializing component prediction systems
+2025-04-22 22:39:44,227 - funding_stage_prediction - INFO - Historical database initialized
+2025-04-22 22:39:44,227 - funding_stage_prediction - INFO - Created visualization directory: ./outputFundingStagePrediction/visualizations
+2025-04-22 22:39:44,228 - funding_stage_prediction - INFO - Created visualization directory: ./outputFundingStagePrediction/visualizations
+2025-04-22 22:39:44,229 - funding_stage_prediction - INFO - Initialized model directory structure at ./outputFundingStagePrediction/models
+2025-04-22 22:39:44,230 - funding_amount_forecast - INFO - Funding Amount Forecast initialized
+2025-04-22 22:39:44,231 - success_failure_prediction - INFO - All component systems initialized successfully
+2025-04-22 22:39:44,231 - success_failure_prediction - INFO - Step 2: Running component analyses
+2025-04-22 22:39:44,231 - success_failure_prediction - INFO - Running component analyses
+2025-04-22 22:39:44,231 - success_failure_prediction - INFO - Running funding stage prediction
+2025-04-22 22:39:44,231 - funding_stage_prediction - INFO - Starting funding stage prediction pipeline
+2025-04-22 22:39:44,231 - funding_stage_prediction - ERROR - Error loading fundraiser data: [Errno 2] No such file or directory: '../JSONFolder/JSONFolder/fundraisestartup50.json'
+2025-04-22 22:39:44,232 - funding_stage_prediction - ERROR - Error loading growthlist data: [Errno 2] No such file or directory: '../JSONFolder/JSONFolder/growthlistscrapper.json'
+2025-04-22 22:39:44,232 - funding_stage_prediction - ERROR - Error loading topstartup data: [Errno 2] No such file or directory: '../JSONFolder/JSONFolder/topstartupio50.json'
+2025-04-22 22:39:44,232 - funding_stage_prediction - WARNING - No records available after merging
+2025-04-22 22:39:44,232 - funding_stage_prediction - ERROR - No data available. Exiting pipeline.
+2025-04-22 22:39:44,232 - success_failure_prediction - INFO - Running funding continuation analysis
+2025-04-22 22:39:44,232 - funding_continuation - INFO - Starting funding continuation analysis pipeline
+2025-04-22 22:39:44,232 - funding_continuation - ERROR - No data available for analysis
+2025-04-22 22:39:44,232 - success_failure_prediction - INFO - Running funding amount forecast
+2025-04-22 22:39:44,232 - funding_amount_forecast - INFO - Starting funding amount forecast analysis
+2025-04-22 22:39:44,232 - funding_amount_forecast - INFO - Loading data from JSON files
+2025-04-22 22:39:44,235 - funding_amount_forecast - INFO - Loaded 1103 records from fundraiser data
+2025-04-22 22:39:44,236 - funding_amount_forecast - INFO - Loaded 100 records from growthlist data
+2025-04-22 22:39:44,239 - funding_amount_forecast - INFO - Loaded 546 records from topstartup data
+2025-04-22 22:39:44,248 - funding_amount_forecast - INFO - Created DataFrame with 1749 records and 27 columns
+2025-04-22 22:39:44,248 - funding_amount_forecast - INFO - Standardizing DataFrame
+2025-04-22 22:39:44,277 - funding_amount_forecast - INFO - DataFrame standardization complete with 1749 records
+2025-04-22 22:39:44,278 - funding_amount_forecast - INFO - Creating features for funding amount forecasting
+2025-04-22 22:39:44,280 - funding_amount_forecast - INFO - Kept 1727 records with valid funding amounts
+2025-04-22 22:39:44,280 - funding_amount_forecast - INFO - Converting funding_date to datetime
+2025-04-22 22:39:45,381 - funding_amount_forecast - INFO - Estimating next round amounts for 623 companies without actual next round data
+2025-04-22 22:39:45,703 - funding_amount_forecast - INFO - Feature engineering complete. Created 47 features.
+2025-04-22 22:39:45,704 - funding_amount_forecast - INFO - Preparing data for model training
+2025-04-22 22:39:45,706 - funding_amount_forecast - WARNING - Column funding_usd contains all NaN values and will be excluded from features
+2025-04-22 22:39:45,707 - funding_amount_forecast - WARNING - Column avg_time_between_rounds contains all NaN values and will be excluded from features
+2025-04-22 22:39:45,709 - funding_amount_forecast - INFO - Filling missing values with median
+2025-04-22 22:39:45,711 - funding_amount_forecast - INFO - Using 1104 records with actual next round data for validation
+2025-04-22 22:39:45,714 - funding_amount_forecast - INFO - Training set: 1395 records (772 actual, 623 estimated)
+2025-04-22 22:39:45,714 - funding_amount_forecast - INFO - Test set: 332 records (all actual data)
+2025-04-22 22:39:45,719 - funding_amount_forecast - INFO - Training models...
+2025-04-22 22:39:45,719 - funding_amount_forecast - INFO - Training quantile regression forest with quantiles: [0.1, 0.5, 0.9]
+2025-04-22 22:39:45,719 - funding_amount_forecast - INFO - Training model for quantile 0.1
+2025-04-22 22:39:46,533 - funding_amount_forecast - INFO - Trained model for quantile 0.1
+2025-04-22 22:39:46,534 - funding_amount_forecast - INFO - Training model for quantile 0.5
+2025-04-22 22:39:47,002 - funding_amount_forecast - INFO - Trained model for quantile 0.5
+2025-04-22 22:39:47,002 - funding_amount_forecast - INFO - Training model for quantile 0.9
+2025-04-22 22:39:47,424 - funding_amount_forecast - INFO - Trained model for quantile 0.9
+2025-04-22 22:39:47,424 - funding_amount_forecast - INFO - Training ensemble model
+2025-04-22 22:39:48,214 - funding_amount_forecast - INFO - Evaluating models...
+2025-04-22 22:39:48,214 - funding_amount_forecast - INFO - Evaluating model performance
+2025-04-22 22:39:48,221 - funding_amount_forecast - INFO - Quantile Regression Forest Metrics: RMSE=$112269812.26, MAE=$38347724.74, R2=-0.0116, Log-R2=-0.1649, Within 20%=0.09, Same order of magnitude=0.76
+2025-04-22 22:39:48,225 - funding_amount_forecast - INFO - 80% Prediction Interval Coverage: 0.6627
+2025-04-22 22:39:48,225 - funding_amount_forecast - INFO - Evaluating model performance
+2025-04-22 22:39:48,255 - funding_amount_forecast - INFO - random_forest Metrics: RMSE=$275991920.43, MAE=$62383064.40, R2=-5.1130, Log-R2=-0.2718, Within 20%=0.1040, Same order=0.7416
+2025-04-22 22:39:48,257 - funding_amount_forecast - INFO - gradient_boosting Metrics: RMSE=$616730819.27, MAE=$100586994.07, R2=-29.5250, Log-R2=-0.3651, Within 20%=0.0973, Same order=0.7248
+2025-04-22 22:39:48,286 - funding_amount_forecast - INFO - extra_trees Metrics: RMSE=$137602633.60, MAE=$62272990.03, R2=-0.5196, Log-R2=-0.3562, Within 20%=0.0671, Same order=0.6812
+2025-04-22 22:39:48,288 - funding_amount_forecast - INFO - Ensemble Metrics: RMSE=$260371327.76, MAE=$73366614.27, R2=-4.4406, Log-R2=-0.3417, Within 20%=0.1007, Same order=0.7181
+2025-04-22 22:39:48,349 - funding_amount_forecast - INFO - Creating visualizations...
+2025-04-22 22:39:48,349 - funding_amount_forecast - INFO - Creating funding by stage visualization
+2025-04-22 22:39:48,957 - funding_amount_forecast - INFO - Saved funding by stage visualization to ./outputSuccessFailure/amount_forecast/funding_by_stage.png
+2025-04-22 22:39:48,957 - funding_amount_forecast - INFO - Creating funding by industry visualization
+2025-04-22 22:39:49,922 - funding_amount_forecast - INFO - Saved funding by industry visualizations to ./outputSuccessFailure/amount_forecast/funding_by_industry_average.png and ./outputSuccessFailure/amount_forecast/funding_by_industry_distribution.png
+2025-04-22 22:39:49,922 - funding_amount_forecast - INFO - Creating prediction accuracy visualization
+2025-04-22 22:39:50,327 - funding_amount_forecast - INFO - Saved prediction accuracy visualization to ./outputSuccessFailure/amount_forecast/prediction_accuracy.png
+2025-04-22 22:39:50,327 - funding_amount_forecast - INFO - Creating feature importance visualization
+2025-04-22 22:39:50,649 - funding_amount_forecast - INFO - Saved feature importance visualization to ./outputSuccessFailure/amount_forecast/feature_importance.png
+2025-04-22 22:39:50,649 - funding_amount_forecast - INFO - Creating model calibration visualization
+2025-04-22 22:39:50,898 - funding_amount_forecast - INFO - Saved model calibration visualization to ./outputSuccessFailure/amount_forecast/model_calibration.png
+2025-04-22 22:39:50,898 - funding_amount_forecast - INFO - Creating error distribution visualization
+2025-04-22 22:39:52,324 - funding_amount_forecast - INFO - Saved error distribution visualization to ./outputSuccessFailure/amount_forecast/error_distribution.png
+2025-04-22 22:39:52,324 - funding_amount_forecast - INFO - Creating prediction intervals visualization
+2025-04-22 22:39:52,661 - funding_amount_forecast - INFO - Saved prediction intervals visualization to ./outputSuccessFailure/amount_forecast/prediction_intervals.png
+2025-04-22 22:39:52,661 - funding_amount_forecast - INFO - Generating report...
+2025-04-22 22:39:52,661 - funding_amount_forecast - INFO - Generating funding amount forecast report
+2025-04-22 22:39:52,705 - funding_amount_forecast - INFO - Funding amount forecast report saved to ./outputSuccessFailure/amount_forecast/funding_amount_forecast_report.md
+2025-04-22 22:39:52,705 - funding_amount_forecast - INFO - markdown2 package not available, skipping HTML conversion
+2025-04-22 22:39:52,705 - funding_amount_forecast - INFO - Saving model...
+2025-04-22 22:39:52,705 - funding_amount_forecast - INFO - Saving model to /Users/hk/Downloads/DSFinalYearProject/MLPredictiveAnalysis/outputSuccessFailure/amount_forecast/funding_amount_forecast_model.pkl
+2025-04-22 22:39:52,872 - funding_amount_forecast - INFO - Model saved successfully to /Users/hk/Downloads/DSFinalYearProject/MLPredictiveAnalysis/outputSuccessFailure/amount_forecast/funding_amount_forecast_model.pkl
+2025-04-22 22:39:52,872 - funding_amount_forecast - INFO - Funding amount forecast analysis completed successfully
+2025-04-22 22:39:52,873 - success_failure_prediction - INFO - Running funding anomaly detection
+2025-04-22 22:39:52,874 - FundingAnomalyDetection - INFO - Starting anomaly detection analysis
+2025-04-22 22:39:52,874 - FundingAnomalyDetection - INFO - Loading data from JSON files in ../JSONFolder
+2025-04-22 22:39:52,874 - FundingAnomalyDetection - INFO - Processing ../JSONFolder/growthlist_industry_analysis.json
+2025-04-22 22:39:52,876 - FundingAnomalyDetection - WARNING - Skipping ../JSONFolder/growthlist_industry_analysis.json - not a list of records or doesn't have a companies array
+2025-04-22 22:39:52,876 - FundingAnomalyDetection - INFO - Processing ../JSONFolder/fundraise_insider_stats.json
+2025-04-22 22:39:52,876 - FundingAnomalyDetection - WARNING - Skipping ../JSONFolder/fundraise_insider_stats.json - not a list of records or doesn't have a companies array
+2025-04-22 22:39:52,876 - FundingAnomalyDetection - INFO - Processing ../JSONFolder/growthlistscrapper.json
+2025-04-22 22:39:52,877 - FundingAnomalyDetection - INFO - Added 100 records from growthlistscrapper.json
+2025-04-22 22:39:52,877 - FundingAnomalyDetection - INFO - Processing ../JSONFolder/topstartupio50.json
+2025-04-22 22:39:52,878 - FundingAnomalyDetection - INFO - Added 546 records from topstartupio50.json
+2025-04-22 22:39:52,878 - FundingAnomalyDetection - INFO - Processing ../JSONFolder/fundraisestartup50.json
+2025-04-22 22:39:52,880 - FundingAnomalyDetection - INFO - Found nested companies array with 1103 records in fundraisestartup50.json
+2025-04-22 22:39:52,881 - FundingAnomalyDetection - INFO - Added 1103 records from fundraisestartup50.json
+2025-04-22 22:39:52,888 - FundingAnomalyDetection - INFO - Loaded 1749 records from JSON files
+2025-04-22 22:39:52,889 - FundingAnomalyDetection - INFO - Creating features for anomaly detection
+2025-04-22 22:39:52,890 - FundingAnomalyDetection - INFO - Created funding_per_employee feature
+2025-04-22 22:39:52,914 - FundingAnomalyDetection - INFO - Created 4 features for anomaly detection
+2025-04-22 22:39:52,914 - FundingAnomalyDetection - INFO - Detecting anomalies in funding data
+2025-04-22 22:39:52,915 - FundingAnomalyDetection - INFO - Fitting Isolation Forest with contamination=0.01
+2025-04-22 22:39:53,019 - FundingAnomalyDetection - INFO - Isolation Forest model trained successfully
+2025-04-22 22:39:53,039 - FundingAnomalyDetection - INFO - Detected 19 anomalies (1.09%)
+2025-04-22 22:39:53,039 - FundingAnomalyDetection - INFO - Creating anomaly visualizations
+2025-04-22 22:39:54,169 - FundingAnomalyDetection - INFO - Creating model calibration and performance visualizations
+2025-04-22 22:39:54,169 - FundingAnomalyDetection - INFO - Creating features for anomaly detection
+2025-04-22 22:39:54,172 - FundingAnomalyDetection - INFO - Created funding_per_employee feature
+2025-04-22 22:39:54,188 - FundingAnomalyDetection - INFO - Created 4 features for anomaly detection
+2025-04-22 22:39:54,192 - FundingAnomalyDetection - INFO - Fitting Isolation Forest with contamination=None
+2025-04-22 22:39:54,296 - FundingAnomalyDetection - INFO - Isolation Forest model trained successfully
+2025-04-22 22:39:55,063 - FundingAnomalyDetection - INFO - Model performance: Accuracy=0.994, Precision=1.000, Recall=0.500, F1=0.667, RMSE=0.422
+2025-04-22 22:39:55,064 - FundingAnomalyDetection - INFO - Anomaly visualizations created successfully
+2025-04-22 22:39:55,064 - FundingAnomalyDetection - INFO - Generating anomaly detection report
+2025-04-22 22:39:55,069 - FundingAnomalyDetection - INFO - Anomaly report saved to ./outputSuccessFailure/anomaly_detection/anomaly_report.csv
+2025-04-22 22:39:55,071 - FundingAnomalyDetection - INFO - Integration data saved to ./outputSuccessFailure/anomaly_detection/anomaly_results.json
+2025-04-22 22:39:55,074 - FundingAnomalyDetection - INFO - Model saved to ./outputSuccessFailure/anomaly_detection/anomaly_model_20250422_223955.pkl
+2025-04-22 22:39:55,074 - FundingAnomalyDetection - INFO - Anomaly detection analysis completed
+2025-04-22 22:39:55,074 - success_failure_prediction - INFO - Running industry trend analysis
+2025-04-22 22:39:55,074 - IndustryTrendAnalysis - INFO - Generating industry trend report...
+2025-04-22 22:39:55,075 - IndustryTrendAnalysis - INFO - Report saved to ./outputSuccessFailure/industry_trends/industry_trend_report.json
+2025-04-22 22:39:55,075 - success_failure_prediction - INFO - All component analyses completed successfully
+2025-04-22 22:39:55,075 - success_failure_prediction - INFO - Step 3: Integrating data
+2025-04-22 22:39:55,075 - success_failure_prediction - INFO - Integrating data from all components
+2025-04-22 22:39:55,075 - success_failure_prediction - INFO - Loading data directly from JSON files
+2025-04-22 22:39:55,079 - success_failure_prediction - INFO - Loaded 100 records from growthlistscrapper.json
+2025-04-22 22:39:55,081 - success_failure_prediction - INFO - Loaded 546 records from topstartupio50.json
+2025-04-22 22:39:55,082 - success_failure_prediction - INFO - Combined 646 records from all JSON files
+2025-04-22 22:39:55,083 - success_failure_prediction - INFO - Successfully integrated data: 646 records with 20 features
+2025-04-22 22:39:55,083 - success_failure_prediction - INFO - Step 4: Calculating success scores
+2025-04-22 22:39:55,083 - success_failure_prediction - INFO - Calculating success scores
+2025-04-22 22:39:55,085 - success_failure_prediction - WARNING - No survival information available, estimating from stage
+2025-04-22 22:39:55,089 - success_failure_prediction - WARNING - No anomaly detection information available, using optimistic score
+2025-04-22 22:39:55,090 - success_failure_prediction - INFO - Success scores calculated successfully
+2025-04-22 22:39:55,090 - success_failure_prediction - INFO - Step 5: Classifying startups
+2025-04-22 22:39:55,090 - success_failure_prediction - INFO - Classifying companies by success potential
+2025-04-22 22:39:55,093 - success_failure_prediction - INFO - Classification results: {'High Failure Risk': np.int64(24), 'Moderate Failure Risk': np.int64(7), 'Moderate Success Potential': np.int64(1), 'High Success Potential': np.int64(0)}
+2025-04-22 22:39:55,096 - success_failure_prediction - INFO - Classification completed successfully
+2025-04-22 22:39:55,096 - success_failure_prediction - INFO - Step 6: Generating visualizations
+2025-04-22 22:39:55,096 - success_failure_prediction - INFO - Generating visualizations
+2025-04-22 22:39:56,061 - success_failure_prediction - INFO - Generated visualizations successfully in ./outputSuccessFailure/visualizations
+2025-04-22 22:39:56,062 - success_failure_prediction - INFO - Step 7: Generating report
+2025-04-22 22:39:56,062 - success_failure_prediction - INFO - Generating success/failure prediction report
+2025-04-22 22:39:56,066 - success_failure_prediction - INFO - Generated report successfully: ./outputSuccessFailure/success_failure_report.txt
+2025-04-22 22:39:56,073 - success_failure_prediction - INFO - Saved predictions to: ./outputSuccessFailure/success_failure_predictions.csv
+2025-04-22 22:39:56,073 - success_failure_prediction - INFO - Analysis complete. Overall success rate: 0.2%
+2025-04-22 22:39:56,074 - success_failure_prediction - INFO - Total companies analyzed: 646
+2025-04-22 22:39:56,074 - success_failure_prediction - INFO - Predicted successful: 1 (0.2%)
+2025-04-22 22:39:56,074 - success_failure_prediction - INFO - Predicted unsuccessful: 645 (99.8%)
+2025-04-22 23:30:43,872 - success_failure_prediction - INFO - Success/Failure Prediction system initialized
+2025-04-22 23:30:43,872 - success_failure_prediction - INFO - Starting success/failure prediction analysis
+2025-04-22 23:30:43,872 - success_failure_prediction - INFO - Step 1: Initializing component models
+2025-04-22 23:30:43,872 - success_failure_prediction - INFO - Initializing component prediction systems
+2025-04-22 23:30:43,873 - success_failure_prediction - ERROR - Error initializing components: unable to open database file
+2025-04-22 23:30:43,875 - success_failure_prediction - ERROR - Traceback (most recent call last):
+  File "/Users/hk/Downloads/DSFinalYearProject/MLPredictiveAnalysis/success_failure_prediction.py", line 140, in initialize_components
+    self.stage_predictor = FundingStagePipeline(
+                           ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/hk/Downloads/DSFinalYearProject/MLPredictiveAnalysis/funding_stage_prediction.py", line 1390, in __init__
+    super().__init__(*args, **kwargs)
+  File "/Users/hk/Downloads/DSFinalYearProject/MLPredictiveAnalysis/funding_stage_prediction.py", line 1244, in __init__
+    self.data_loader = DataLoader(base_dir, archive=archive)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/hk/Downloads/DSFinalYearProject/MLPredictiveAnalysis/funding_stage_prediction.py", line 56, in __init__
+    self._init_historical_db()
+  File "/Users/hk/Downloads/DSFinalYearProject/MLPredictiveAnalysis/funding_stage_prediction.py", line 92, in _init_historical_db
+    conn = sqlite3.connect(self.historical_db)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+sqlite3.OperationalError: unable to open database file
+
+2025-04-22 23:30:43,875 - success_failure_prediction - INFO - Step 2: Running component analyses
+2025-04-22 23:30:43,875 - success_failure_prediction - INFO - Running component analyses
+2025-04-22 23:30:43,875 - success_failure_prediction - INFO - Initializing component prediction systems
+2025-04-22 23:30:43,875 - success_failure_prediction - ERROR - Error initializing components: unable to open database file
+2025-04-22 23:30:43,876 - success_failure_prediction - ERROR - Traceback (most recent call last):
+  File "/Users/hk/Downloads/DSFinalYearProject/MLPredictiveAnalysis/success_failure_prediction.py", line 140, in initialize_components
+    self.stage_predictor = FundingStagePipeline(
+                           ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/hk/Downloads/DSFinalYearProject/MLPredictiveAnalysis/funding_stage_prediction.py", line 1390, in __init__
+    super().__init__(*args, **kwargs)
+  File "/Users/hk/Downloads/DSFinalYearProject/MLPredictiveAnalysis/funding_stage_prediction.py", line 1244, in __init__
+    self.data_loader = DataLoader(base_dir, archive=archive)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/hk/Downloads/DSFinalYearProject/MLPredictiveAnalysis/funding_stage_prediction.py", line 56, in __init__
+    self._init_historical_db()
+  File "/Users/hk/Downloads/DSFinalYearProject/MLPredictiveAnalysis/funding_stage_prediction.py", line 92, in _init_historical_db
+    conn = sqlite3.connect(self.historical_db)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+sqlite3.OperationalError: unable to open database file
+
+2025-04-22 23:30:43,876 - success_failure_prediction - INFO - Running funding stage prediction
+2025-04-22 23:30:43,876 - success_failure_prediction - ERROR - Error running component analyses: 'NoneType' object has no attribute 'run'
+2025-04-22 23:30:43,876 - success_failure_prediction - ERROR - Traceback (most recent call last):
+  File "/Users/hk/Downloads/DSFinalYearProject/MLPredictiveAnalysis/success_failure_prediction.py", line 193, in run_components
+    stage_results = self.stage_predictor.run()
+                    ^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'run'
+
+2025-04-22 23:30:43,876 - success_failure_prediction - INFO - Step 3: Integrating data
+2025-04-22 23:30:43,876 - success_failure_prediction - INFO - Integrating data from all components
+2025-04-22 23:30:43,876 - success_failure_prediction - INFO - Loading data directly from JSON files
+2025-04-22 23:30:43,877 - success_failure_prediction - ERROR - Failed to load any data from JSON files
+2025-04-22 23:30:43,877 - success_failure_prediction - INFO - Step 4: Calculating success scores
+2025-04-22 23:30:43,877 - success_failure_prediction - INFO - Calculating success scores
+2025-04-22 23:30:43,877 - success_failure_prediction - WARNING - No stage information available, using default score
+2025-04-22 23:30:43,879 - success_failure_prediction - WARNING - No survival information available, estimating from stage
+2025-04-22 23:30:43,879 - success_failure_prediction - WARNING - No funding adequacy information available, using neutral score
+2025-04-22 23:30:43,879 - success_failure_prediction - WARNING - No industry momentum information available, using neutral score
+2025-04-22 23:30:43,880 - success_failure_prediction - WARNING - No anomaly detection information available, using optimistic score
+2025-04-22 23:30:43,882 - success_failure_prediction - INFO - Success scores calculated successfully
+2025-04-22 23:30:43,882 - success_failure_prediction - INFO - Step 5: Classifying startups
+2025-04-22 23:30:43,882 - success_failure_prediction - INFO - Classifying companies by success potential
+2025-04-22 23:30:43,889 - success_failure_prediction - INFO - Classification results: {'High Failure Risk': np.int64(0), 'Moderate Failure Risk': np.int64(0), 'Moderate Success Potential': np.int64(0), 'High Success Potential': np.int64(0)}
+2025-04-22 23:30:43,891 - success_failure_prediction - INFO - Classification completed successfully
+2025-04-22 23:30:43,891 - success_failure_prediction - INFO - Step 6: Generating visualizations
+2025-04-22 23:30:43,891 - success_failure_prediction - INFO - Generating visualizations
+2025-04-22 23:30:43,892 - success_failure_prediction - ERROR - No data available for visualization
+2025-04-22 23:30:43,892 - success_failure_prediction - INFO - Step 7: Generating report
+2025-04-22 23:30:43,892 - success_failure_prediction - INFO - Generating success/failure prediction report
+2025-04-22 23:30:43,892 - success_failure_prediction - ERROR - No data available for report generation
+2025-04-22 23:30:43,893 - success_failure_prediction - INFO - Saved predictions to: /Users/hk/Downloads/DSFinalYearProject/MLPredictiveAnalysis/outputSuccessFailure/success_failure_predictions.csv
+2025-04-22 23:30:43,894 - success_failure_prediction - INFO - Analysis complete. Overall success rate: nan%
+2025-04-22 23:30:43,894 - success_failure_prediction - INFO - Total companies analyzed: 0
+2025-04-22 23:30:43,894 - success_failure_prediction - INFO - Predicted successful: 0 (nan%)
+2025-04-22 23:30:43,894 - success_failure_prediction - INFO - Predicted unsuccessful: 0 (nan%)
+2025-04-22 23:31:41,274 - success_failure_prediction - INFO - Success/Failure Prediction system initialized
+2025-04-22 23:31:41,275 - success_failure_prediction - INFO - Starting success/failure prediction analysis
+2025-04-22 23:31:41,275 - success_failure_prediction - INFO - Step 1: Initializing component models
+2025-04-22 23:31:41,275 - success_failure_prediction - INFO - Initializing component prediction systems
+2025-04-22 23:31:41,278 - funding_stage_prediction - INFO - Historical database initialized
+2025-04-22 23:31:41,278 - funding_stage_prediction - INFO - Created visualization directory: ./outputFundingStagePrediction/visualizations
+2025-04-22 23:31:41,280 - funding_stage_prediction - INFO - Created visualization directory: ./outputFundingStagePrediction/visualizations
+2025-04-22 23:31:41,281 - funding_stage_prediction - INFO - Initialized model directory structure at ./outputFundingStagePrediction/models
+2025-04-22 23:31:41,282 - funding_amount_forecast - INFO - Funding Amount Forecast initialized
+2025-04-22 23:31:41,283 - success_failure_prediction - INFO - All component systems initialized successfully
+2025-04-22 23:31:41,283 - success_failure_prediction - INFO - Step 2: Running component analyses
+2025-04-22 23:31:41,283 - success_failure_prediction - INFO - Running component analyses
+2025-04-22 23:31:41,283 - success_failure_prediction - INFO - Running funding stage prediction
+2025-04-22 23:31:41,283 - funding_stage_prediction - INFO - Starting funding stage prediction pipeline
+2025-04-22 23:31:41,293 - funding_stage_prediction - INFO - Loaded 1103 records from fundraiser data
+2025-04-22 23:31:41,295 - funding_stage_prediction - INFO - Loaded 100 records from growthlist data
+2025-04-22 23:31:41,302 - funding_stage_prediction - INFO - Loaded 546 records from topstartup data
+2025-04-22 23:31:41,367 - funding_stage_prediction - INFO - Successfully merged 1748 records
+2025-04-22 23:31:41,396 - funding_stage_prediction - INFO - Feature engineering complete: 122 features created
+2025-04-22 23:31:41,399 - funding_stage_prediction - INFO - Prepared model data: X shape=(1748, 7), y shape=(1748,)
+2025-04-22 23:31:41,400 - funding_stage_prediction - INFO - Initial class mapping: {np.int64(0): 0, np.int64(1): 1, np.int64(2): 2, np.int64(3): 3, np.int64(4): 4, np.int64(5): 5, np.int64(6): 6, np.int64(7): 7, np.int64(8): 8, np.int64(9): 9, np.int64(10): 10, np.int64(11): 11, np.int64(12): 12, np.int64(13): 13, np.int64(14): 14, np.int64(15): 15, np.int64(16): 16, np.int64(17): 17}
+2025-04-22 23:31:41,401 - funding_stage_prediction - INFO - Merged rare classes into majority class 16
+2025-04-22 23:31:41,401 - funding_stage_prediction - INFO - Final class mapping after merging rare classes: {np.int64(1): 0, np.int64(2): 1, np.int64(4): 2, np.int64(5): 3, np.int64(6): 4, np.int64(7): 5, np.int64(8): 6, np.int64(9): 7, np.int64(10): 8, np.int64(11): 9, np.int64(15): 10, np.int64(16): 11, np.int64(17): 12}
+2025-04-22 23:31:41,467 - funding_stage_prediction - INFO - Applied SMOTE. New shape: (7202, 7)
+2025-04-22 23:31:48,128 - funding_stage_prediction - INFO - Selected features shape: (7202, 4)
+2025-04-22 23:31:48,129 - funding_stage_prediction - INFO - Step 4: Tuning and training models...
+2025-04-22 23:33:26,304 - funding_stage_prediction - INFO - Best RF params: {'class_weight': 'balanced', 'max_depth': None, 'min_samples_split': 2, 'n_estimators': 300}
+2025-04-22 23:33:26,305 - funding_stage_prediction - INFO - Best RF accuracy: 0.6933
+2025-04-22 23:34:08,327 - funding_stage_prediction - INFO - Best XGB params: {'colsample_bytree': np.float64(0.9769241954475325), 'gamma': np.float64(0.10072606969386005), 'learning_rate': np.float64(0.23065558596768113), 'max_depth': 8, 'num_class': 13, 'subsample': np.float64(0.9008426092530372)}
+2025-04-22 23:34:08,329 - funding_stage_prediction - INFO - Best XGB accuracy: 0.6895
+2025-04-22 23:34:38,351 - funding_stage_prediction - INFO - Step 5: Creating advanced visualizations...
+2025-04-22 23:34:56,636 - funding_stage_prediction - INFO - Pipeline completed successfully!
+2025-04-22 23:34:56,636 - success_failure_prediction - INFO - Running funding continuation analysis
+2025-04-22 23:34:56,636 - funding_continuation - INFO - Starting funding continuation analysis pipeline
+2025-04-22 23:34:56,636 - funding_continuation - ERROR - No data available for analysis
+2025-04-22 23:34:56,637 - success_failure_prediction - INFO - Running funding amount forecast
+2025-04-22 23:34:56,637 - funding_amount_forecast - INFO - Starting funding amount forecast analysis
+2025-04-22 23:34:56,637 - funding_amount_forecast - INFO - Loading data from JSON files
+2025-04-22 23:34:56,640 - funding_amount_forecast - INFO - Loaded 1103 records from fundraiser data
+2025-04-22 23:34:56,641 - funding_amount_forecast - INFO - Loaded 100 records from growthlist data
+2025-04-22 23:34:56,643 - funding_amount_forecast - INFO - Loaded 546 records from topstartup data
+2025-04-22 23:34:56,649 - funding_amount_forecast - INFO - Created DataFrame with 1749 records and 27 columns
+2025-04-22 23:34:56,649 - funding_amount_forecast - INFO - Standardizing DataFrame
+2025-04-22 23:34:56,668 - funding_amount_forecast - INFO - DataFrame standardization complete with 1749 records
+2025-04-22 23:34:56,668 - funding_amount_forecast - INFO - Creating features for funding amount forecasting
+2025-04-22 23:34:56,670 - funding_amount_forecast - INFO - Kept 1727 records with valid funding amounts
+2025-04-22 23:34:56,670 - funding_amount_forecast - INFO - Converting funding_date to datetime
+2025-04-22 23:34:57,855 - funding_amount_forecast - INFO - Estimating next round amounts for 623 companies without actual next round data
+2025-04-22 23:34:58,017 - funding_amount_forecast - INFO - Feature engineering complete. Created 47 features.
+2025-04-22 23:34:58,018 - funding_amount_forecast - INFO - Preparing data for model training
+2025-04-22 23:34:58,019 - funding_amount_forecast - WARNING - Column funding_usd contains all NaN values and will be excluded from features
+2025-04-22 23:34:58,020 - funding_amount_forecast - WARNING - Column avg_time_between_rounds contains all NaN values and will be excluded from features
+2025-04-22 23:34:58,022 - funding_amount_forecast - INFO - Filling missing values with median
+2025-04-22 23:34:58,023 - funding_amount_forecast - INFO - Using 1104 records with actual next round data for validation
+2025-04-22 23:34:58,025 - funding_amount_forecast - INFO - Training set: 1395 records (772 actual, 623 estimated)
+2025-04-22 23:34:58,025 - funding_amount_forecast - INFO - Test set: 332 records (all actual data)
+2025-04-22 23:34:58,033 - funding_amount_forecast - INFO - Training models...
+2025-04-22 23:34:58,033 - funding_amount_forecast - INFO - Training quantile regression forest with quantiles: [0.1, 0.5, 0.9]
+2025-04-22 23:34:58,033 - funding_amount_forecast - INFO - Training model for quantile 0.1
+2025-04-22 23:34:58,463 - funding_amount_forecast - INFO - Trained model for quantile 0.1
+2025-04-22 23:34:58,463 - funding_amount_forecast - INFO - Training model for quantile 0.5
+2025-04-22 23:34:59,007 - funding_amount_forecast - INFO - Trained model for quantile 0.5
+2025-04-22 23:34:59,008 - funding_amount_forecast - INFO - Training model for quantile 0.9
+2025-04-22 23:34:59,436 - funding_amount_forecast - INFO - Trained model for quantile 0.9
+2025-04-22 23:34:59,437 - funding_amount_forecast - INFO - Training ensemble model
+2025-04-22 23:35:00,232 - funding_amount_forecast - INFO - Evaluating models...
+2025-04-22 23:35:00,232 - funding_amount_forecast - INFO - Evaluating model performance
+2025-04-22 23:35:00,236 - funding_amount_forecast - INFO - Quantile Regression Forest Metrics: RMSE=$112468667.22, MAE=$38595483.53, R2=-0.0151, Log-R2=-0.1638, Within 20%=0.07, Same order of magnitude=0.76
+2025-04-22 23:35:00,238 - funding_amount_forecast - INFO - 80% Prediction Interval Coverage: 0.6657
+2025-04-22 23:35:00,238 - funding_amount_forecast - INFO - Evaluating model performance
+2025-04-22 23:35:00,270 - funding_amount_forecast - INFO - random_forest Metrics: RMSE=$275910024.77, MAE=$62367679.46, R2=-5.1094, Log-R2=-0.2721, Within 20%=0.0973, Same order=0.7450
+2025-04-22 23:35:00,277 - funding_amount_forecast - INFO - gradient_boosting Metrics: RMSE=$603771825.23, MAE=$99415611.50, R2=-28.2557, Log-R2=-0.4289, Within 20%=0.1007, Same order=0.7349
+2025-04-22 23:35:00,307 - funding_amount_forecast - INFO - extra_trees Metrics: RMSE=$143004069.83, MAE=$62455750.05, R2=-0.6412, Log-R2=-0.3553, Within 20%=0.0671, Same order=0.6846
+2025-04-22 23:35:00,308 - funding_amount_forecast - INFO - Ensemble Metrics: RMSE=$256515227.27, MAE=$72954221.37, R2=-4.2807, Log-R2=-0.3413, Within 20%=0.0940, Same order=0.7148
+2025-04-22 23:35:00,468 - funding_amount_forecast - INFO - Creating visualizations...
+2025-04-22 23:35:00,469 - funding_amount_forecast - INFO - Creating funding by stage visualization
+2025-04-22 23:35:01,467 - funding_amount_forecast - INFO - Saved funding by stage visualization to /Users/hk/Downloads/DSFinalYearProject/MLPredictiveAnalysis/outputSuccessFailure/amount_forecast/funding_by_stage.png
+2025-04-22 23:35:01,468 - funding_amount_forecast - INFO - Creating funding by industry visualization
+2025-04-22 23:35:02,705 - funding_amount_forecast - INFO - Saved funding by industry visualizations to /Users/hk/Downloads/DSFinalYearProject/MLPredictiveAnalysis/outputSuccessFailure/amount_forecast/funding_by_industry_average.png and /Users/hk/Downloads/DSFinalYearProject/MLPredictiveAnalysis/outputSuccessFailure/amount_forecast/funding_by_industry_distribution.png
+2025-04-22 23:35:02,706 - funding_amount_forecast - INFO - Creating prediction accuracy visualization
+2025-04-22 23:35:03,026 - funding_amount_forecast - INFO - Saved prediction accuracy visualization to /Users/hk/Downloads/DSFinalYearProject/MLPredictiveAnalysis/outputSuccessFailure/amount_forecast/prediction_accuracy.png
+2025-04-22 23:35:03,026 - funding_amount_forecast - INFO - Creating feature importance visualization
+2025-04-22 23:35:03,323 - funding_amount_forecast - INFO - Saved feature importance visualization to /Users/hk/Downloads/DSFinalYearProject/MLPredictiveAnalysis/outputSuccessFailure/amount_forecast/feature_importance.png
+2025-04-22 23:35:03,323 - funding_amount_forecast - INFO - Creating model calibration visualization
+2025-04-22 23:35:03,582 - funding_amount_forecast - INFO - Saved model calibration visualization to /Users/hk/Downloads/DSFinalYearProject/MLPredictiveAnalysis/outputSuccessFailure/amount_forecast/model_calibration.png
+2025-04-22 23:35:03,582 - funding_amount_forecast - INFO - Creating error distribution visualization
+2025-04-22 23:35:04,989 - funding_amount_forecast - INFO - Saved error distribution visualization to /Users/hk/Downloads/DSFinalYearProject/MLPredictiveAnalysis/outputSuccessFailure/amount_forecast/error_distribution.png
+2025-04-22 23:35:04,989 - funding_amount_forecast - INFO - Creating prediction intervals visualization
+2025-04-22 23:35:05,289 - funding_amount_forecast - INFO - Saved prediction intervals visualization to /Users/hk/Downloads/DSFinalYearProject/MLPredictiveAnalysis/outputSuccessFailure/amount_forecast/prediction_intervals.png
+2025-04-22 23:35:05,289 - funding_amount_forecast - INFO - Generating report...
+2025-04-22 23:35:05,289 - funding_amount_forecast - INFO - Generating funding amount forecast report
+2025-04-22 23:35:05,322 - funding_amount_forecast - INFO - Funding amount forecast report saved to /Users/hk/Downloads/DSFinalYearProject/MLPredictiveAnalysis/outputSuccessFailure/amount_forecast/funding_amount_forecast_report.md
+2025-04-22 23:35:05,322 - funding_amount_forecast - INFO - markdown2 package not available, skipping HTML conversion
+2025-04-22 23:35:05,322 - funding_amount_forecast - INFO - Saving model...
+2025-04-22 23:35:05,322 - funding_amount_forecast - INFO - Saving model to /Users/hk/Downloads/DSFinalYearProject/MLPredictiveAnalysis/outputSuccessFailure/amount_forecast/funding_amount_forecast_model.pkl
+2025-04-22 23:35:05,404 - funding_amount_forecast - INFO - Model saved successfully to /Users/hk/Downloads/DSFinalYearProject/MLPredictiveAnalysis/outputSuccessFailure/amount_forecast/funding_amount_forecast_model.pkl
+2025-04-22 23:35:05,404 - funding_amount_forecast - INFO - Funding amount forecast analysis completed successfully
+2025-04-22 23:35:05,405 - success_failure_prediction - INFO - Running funding anomaly detection
+2025-04-22 23:35:05,406 - FundingAnomalyDetection - INFO - Starting anomaly detection analysis
+2025-04-22 23:35:05,408 - FundingAnomalyDetection - INFO - Loading data from JSON files in /Users/hk/Downloads/DSFinalYearProject/JSONFolder
+2025-04-22 23:35:05,408 - FundingAnomalyDetection - INFO - Processing /Users/hk/Downloads/DSFinalYearProject/JSONFolder/growthlist_industry_analysis.json
+2025-04-22 23:35:05,408 - FundingAnomalyDetection - WARNING - Skipping /Users/hk/Downloads/DSFinalYearProject/JSONFolder/growthlist_industry_analysis.json - not a list of records or doesn't have a companies array
+2025-04-22 23:35:05,408 - FundingAnomalyDetection - INFO - Processing /Users/hk/Downloads/DSFinalYearProject/JSONFolder/fundraise_insider_stats.json
+2025-04-22 23:35:05,409 - FundingAnomalyDetection - WARNING - Skipping /Users/hk/Downloads/DSFinalYearProject/JSONFolder/fundraise_insider_stats.json - not a list of records or doesn't have a companies array
+2025-04-22 23:35:05,409 - FundingAnomalyDetection - INFO - Processing /Users/hk/Downloads/DSFinalYearProject/JSONFolder/growthlistscrapper.json
+2025-04-22 23:35:05,409 - FundingAnomalyDetection - INFO - Added 100 records from growthlistscrapper.json
+2025-04-22 23:35:05,410 - FundingAnomalyDetection - INFO - Processing /Users/hk/Downloads/DSFinalYearProject/JSONFolder/topstartupio50.json
+2025-04-22 23:35:05,411 - FundingAnomalyDetection - INFO - Added 546 records from topstartupio50.json
+2025-04-22 23:35:05,411 - FundingAnomalyDetection - INFO - Processing /Users/hk/Downloads/DSFinalYearProject/JSONFolder/fundraisestartup50.json
+2025-04-22 23:35:05,414 - FundingAnomalyDetection - INFO - Found nested companies array with 1103 records in fundraisestartup50.json
+2025-04-22 23:35:05,414 - FundingAnomalyDetection - INFO - Added 1103 records from fundraisestartup50.json
+2025-04-22 23:35:05,423 - FundingAnomalyDetection - INFO - Loaded 1749 records from JSON files
+2025-04-22 23:35:05,423 - FundingAnomalyDetection - INFO - Creating features for anomaly detection
+2025-04-22 23:35:05,426 - FundingAnomalyDetection - INFO - Created funding_per_employee feature
+2025-04-22 23:35:05,446 - FundingAnomalyDetection - INFO - Created 4 features for anomaly detection
+2025-04-22 23:35:05,447 - FundingAnomalyDetection - INFO - Detecting anomalies in funding data
+2025-04-22 23:35:05,447 - FundingAnomalyDetection - INFO - Fitting Isolation Forest with contamination=0.01
+2025-04-22 23:35:05,589 - FundingAnomalyDetection - INFO - Isolation Forest model trained successfully
+2025-04-22 23:35:05,616 - FundingAnomalyDetection - INFO - Detected 19 anomalies (1.09%)
+2025-04-22 23:35:05,616 - FundingAnomalyDetection - INFO - Creating anomaly visualizations
+2025-04-22 23:35:06,976 - FundingAnomalyDetection - INFO - Creating model calibration and performance visualizations
+2025-04-22 23:35:06,977 - FundingAnomalyDetection - INFO - Creating features for anomaly detection
+2025-04-22 23:35:06,979 - FundingAnomalyDetection - INFO - Created funding_per_employee feature
+2025-04-22 23:35:06,996 - FundingAnomalyDetection - INFO - Created 4 features for anomaly detection
+2025-04-22 23:35:06,998 - FundingAnomalyDetection - INFO - Fitting Isolation Forest with contamination=None
+2025-04-22 23:35:07,112 - FundingAnomalyDetection - INFO - Isolation Forest model trained successfully
+2025-04-22 23:35:07,717 - FundingAnomalyDetection - INFO - Model performance: Accuracy=0.994, Precision=1.000, Recall=0.500, F1=0.667, RMSE=0.422
+2025-04-22 23:35:07,717 - FundingAnomalyDetection - INFO - Anomaly visualizations created successfully
+2025-04-22 23:35:07,718 - FundingAnomalyDetection - INFO - Generating anomaly detection report
+2025-04-22 23:35:07,724 - FundingAnomalyDetection - INFO - Anomaly report saved to /Users/hk/Downloads/DSFinalYearProject/MLPredictiveAnalysis/outputSuccessFailure/anomaly_detection/anomaly_report.csv
+2025-04-22 23:35:07,725 - FundingAnomalyDetection - INFO - Integration data saved to /Users/hk/Downloads/DSFinalYearProject/MLPredictiveAnalysis/outputSuccessFailure/anomaly_detection/anomaly_results.json
+2025-04-22 23:35:07,727 - FundingAnomalyDetection - INFO - Model saved to /Users/hk/Downloads/DSFinalYearProject/MLPredictiveAnalysis/outputSuccessFailure/anomaly_detection/anomaly_model_20250422_233507.pkl
+2025-04-22 23:35:07,727 - FundingAnomalyDetection - INFO - Anomaly detection analysis completed
+2025-04-22 23:35:07,728 - success_failure_prediction - INFO - Running industry trend analysis
+2025-04-22 23:35:07,728 - IndustryTrendAnalysis - INFO - Generating industry trend report...
+2025-04-22 23:35:07,728 - IndustryTrendAnalysis - INFO - Report saved to /Users/hk/Downloads/DSFinalYearProject/MLPredictiveAnalysis/outputSuccessFailure/industry_trends/industry_trend_report.json
+2025-04-22 23:35:07,728 - success_failure_prediction - INFO - All component analyses completed successfully
+2025-04-22 23:35:07,728 - success_failure_prediction - INFO - Step 3: Integrating data
+2025-04-22 23:35:07,728 - success_failure_prediction - INFO - Integrating data from all components
+2025-04-22 23:35:07,728 - success_failure_prediction - INFO - Loading data directly from JSON files
+2025-04-22 23:35:07,728 - success_failure_prediction - INFO - Checking file existence: /Users/hk/Downloads/DSFinalYearProject/JSONFolder/fundraisestartup50.json, exists: True
+2025-04-22 23:35:07,728 - success_failure_prediction - INFO - Checking file existence: /Users/hk/Downloads/DSFinalYearProject/JSONFolder/growthlistscrapper.json, exists: True
+2025-04-22 23:35:07,728 - success_failure_prediction - INFO - Checking file existence: /Users/hk/Downloads/DSFinalYearProject/JSONFolder/topstartupio50.json, exists: True
+2025-04-22 23:35:07,733 - success_failure_prediction - INFO - Loaded 1103 records from fundraisestartup50.json
+2025-04-22 23:35:07,734 - success_failure_prediction - INFO - Loaded 100 records from growthlistscrapper.json
+2025-04-22 23:35:07,737 - success_failure_prediction - INFO - Loaded 546 records from topstartupio50.json
+2025-04-22 23:35:07,780 - success_failure_prediction - INFO - Combined 1749 records from all JSON files
+2025-04-22 23:35:07,791 - success_failure_prediction - INFO - Successfully integrated data: 1748 records with 30 features
+2025-04-22 23:35:07,791 - success_failure_prediction - INFO - Step 4: Calculating success scores
+2025-04-22 23:35:07,791 - success_failure_prediction - INFO - Calculating success scores
+2025-04-22 23:35:07,793 - success_failure_prediction - WARNING - No survival information available, estimating from stage
+2025-04-22 23:35:07,801 - success_failure_prediction - WARNING - No anomaly detection information available, using optimistic score
+2025-04-22 23:35:07,802 - success_failure_prediction - INFO - Success scores calculated successfully
+2025-04-22 23:35:07,803 - success_failure_prediction - INFO - Step 5: Classifying startups
+2025-04-22 23:35:07,803 - success_failure_prediction - INFO - Classifying companies by success potential
+2025-04-22 23:35:07,806 - success_failure_prediction - INFO - Classification results: {'Moderate Failure Risk': np.int64(789), 'High Failure Risk': np.int64(407), 'Moderate Success Potential': np.int64(399), 'High Success Potential': np.int64(62)}
+2025-04-22 23:35:07,815 - success_failure_prediction - INFO - Classification completed successfully
+2025-04-22 23:35:07,815 - success_failure_prediction - INFO - Step 6: Generating visualizations
+2025-04-22 23:35:07,815 - success_failure_prediction - INFO - Generating visualizations
+2025-04-22 23:35:08,998 - success_failure_prediction - INFO - Generated visualizations successfully in /Users/hk/Downloads/DSFinalYearProject/MLPredictiveAnalysis/outputSuccessFailure/visualizations
+2025-04-22 23:35:08,999 - success_failure_prediction - INFO - Step 7: Generating report
+2025-04-22 23:35:08,999 - success_failure_prediction - INFO - Generating success/failure prediction report
+2025-04-22 23:35:09,005 - success_failure_prediction - INFO - Generated report successfully: /Users/hk/Downloads/DSFinalYearProject/MLPredictiveAnalysis/outputSuccessFailure/success_failure_report.txt
+2025-04-22 23:35:09,027 - success_failure_prediction - INFO - Saved predictions to: /Users/hk/Downloads/DSFinalYearProject/MLPredictiveAnalysis/outputSuccessFailure/success_failure_predictions.csv
+2025-04-22 23:35:09,027 - success_failure_prediction - INFO - Analysis complete. Overall success rate: 26.4%
+2025-04-22 23:35:09,027 - success_failure_prediction - INFO - Total companies analyzed: 1748
+2025-04-22 23:35:09,027 - success_failure_prediction - INFO - Predicted successful: 461 (26.4%)
+2025-04-22 23:35:09,027 - success_failure_prediction - INFO - Predicted unsuccessful: 1287 (73.6%)
+2025-04-22 23:43:58,384 - success_failure_prediction - INFO - Success/Failure Prediction system initialized
+2025-04-22 23:43:58,385 - success_failure_prediction - INFO - Starting success/failure prediction analysis
+2025-04-22 23:43:58,385 - success_failure_prediction - INFO - Step 1: Initializing component models
+2025-04-22 23:43:58,385 - success_failure_prediction - INFO - Initializing component prediction systems
+2025-04-22 23:43:58,389 - funding_stage_prediction - INFO - Historical database initialized
+2025-04-22 23:43:58,389 - funding_stage_prediction - INFO - Created visualization directory: ./outputFundingStagePrediction/visualizations
+2025-04-22 23:43:58,390 - funding_stage_prediction - INFO - Created visualization directory: ./outputFundingStagePrediction/visualizations
+2025-04-22 23:43:58,391 - funding_stage_prediction - INFO - Initialized model directory structure at ./outputFundingStagePrediction/models
+2025-04-22 23:43:58,392 - funding_amount_forecast - INFO - Funding Amount Forecast initialized
+2025-04-22 23:43:58,393 - success_failure_prediction - INFO - All component systems initialized successfully
+2025-04-22 23:43:58,393 - success_failure_prediction - INFO - Step 2: Running component analyses
+2025-04-22 23:43:58,393 - success_failure_prediction - INFO - Running component analyses
+2025-04-22 23:43:58,393 - success_failure_prediction - INFO - Running funding stage prediction
+2025-04-22 23:43:58,393 - funding_stage_prediction - INFO - Starting funding stage prediction pipeline
+2025-04-22 23:43:58,401 - funding_stage_prediction - INFO - Loaded 1103 records from fundraiser data
+2025-04-22 23:43:58,403 - funding_stage_prediction - INFO - Loaded 100 records from growthlist data
+2025-04-22 23:43:58,406 - funding_stage_prediction - INFO - Loaded 546 records from topstartup data
+2025-04-22 23:43:58,469 - funding_stage_prediction - INFO - Successfully merged 1748 records
+2025-04-22 23:43:58,497 - funding_stage_prediction - INFO - Feature engineering complete: 122 features created
+2025-04-22 23:43:58,501 - funding_stage_prediction - INFO - Prepared model data: X shape=(1748, 7), y shape=(1748,)
+2025-04-22 23:43:58,502 - funding_stage_prediction - INFO - Initial class mapping: {np.int64(0): 0, np.int64(1): 1, np.int64(2): 2, np.int64(3): 3, np.int64(4): 4, np.int64(5): 5, np.int64(6): 6, np.int64(7): 7, np.int64(8): 8, np.int64(9): 9, np.int64(10): 10, np.int64(11): 11, np.int64(12): 12, np.int64(13): 13, np.int64(14): 14, np.int64(15): 15, np.int64(16): 16, np.int64(17): 17}
+2025-04-22 23:43:58,504 - funding_stage_prediction - INFO - Merged rare classes into majority class 16
+2025-04-22 23:43:58,504 - funding_stage_prediction - INFO - Final class mapping after merging rare classes: {np.int64(1): 0, np.int64(2): 1, np.int64(4): 2, np.int64(5): 3, np.int64(6): 4, np.int64(7): 5, np.int64(8): 6, np.int64(9): 7, np.int64(10): 8, np.int64(11): 9, np.int64(15): 10, np.int64(16): 11, np.int64(17): 12}
+2025-04-22 23:43:58,568 - funding_stage_prediction - INFO - Applied SMOTE. New shape: (7202, 7)
+2025-04-22 23:44:05,417 - funding_stage_prediction - INFO - Selected features shape: (7202, 4)
+2025-04-22 23:44:05,417 - funding_stage_prediction - INFO - Step 4: Tuning and training models...
+2025-04-22 23:45:43,521 - funding_stage_prediction - INFO - Best RF params: {'class_weight': 'balanced', 'max_depth': None, 'min_samples_split': 2, 'n_estimators': 300}
+2025-04-22 23:45:43,523 - funding_stage_prediction - INFO - Best RF accuracy: 0.6933
+2025-04-22 23:46:20,655 - funding_stage_prediction - INFO - Best XGB params: {'colsample_bytree': np.float64(0.9913756878487556), 'gamma': np.float64(0.10374142297800282), 'learning_rate': np.float64(0.2095547812115982), 'max_depth': 8, 'num_class': 13, 'subsample': np.float64(0.9238727350992234)}
+2025-04-22 23:46:20,656 - funding_stage_prediction - INFO - Best XGB accuracy: 0.6919
+2025-04-22 23:46:49,656 - funding_stage_prediction - INFO - Step 5: Creating advanced visualizations...
+2025-04-22 23:47:08,377 - funding_stage_prediction - INFO - Pipeline completed successfully!
+2025-04-22 23:47:08,377 - success_failure_prediction - INFO - Running funding continuation analysis
+2025-04-22 23:47:08,377 - funding_continuation - INFO - Starting funding continuation analysis pipeline
+2025-04-22 23:47:08,377 - funding_continuation - ERROR - No data available for analysis
+2025-04-22 23:47:08,377 - success_failure_prediction - INFO - Running funding amount forecast
+2025-04-22 23:47:08,377 - funding_amount_forecast - INFO - Starting funding amount forecast analysis
+2025-04-22 23:47:08,378 - funding_amount_forecast - INFO - Loading data from JSON files
+2025-04-22 23:47:08,380 - funding_amount_forecast - INFO - Loaded 1103 records from fundraiser data
+2025-04-22 23:47:08,381 - funding_amount_forecast - INFO - Loaded 100 records from growthlist data
+2025-04-22 23:47:08,385 - funding_amount_forecast - INFO - Loaded 546 records from topstartup data
+2025-04-22 23:47:08,585 - funding_amount_forecast - INFO - Created DataFrame with 1749 records and 27 columns
+2025-04-22 23:47:08,585 - funding_amount_forecast - INFO - Standardizing DataFrame
+2025-04-22 23:47:08,610 - funding_amount_forecast - INFO - DataFrame standardization complete with 1749 records
+2025-04-22 23:47:08,612 - funding_amount_forecast - INFO - Creating features for funding amount forecasting
+2025-04-22 23:47:08,616 - funding_amount_forecast - INFO - Kept 1727 records with valid funding amounts
+2025-04-22 23:47:08,619 - funding_amount_forecast - INFO - Converting funding_date to datetime
+2025-04-22 23:47:10,266 - funding_amount_forecast - INFO - Estimating next round amounts for 623 companies without actual next round data
+2025-04-22 23:47:10,433 - funding_amount_forecast - INFO - Feature engineering complete. Created 47 features.
+2025-04-22 23:47:10,435 - funding_amount_forecast - INFO - Preparing data for model training
+2025-04-22 23:47:10,436 - funding_amount_forecast - WARNING - Column funding_usd contains all NaN values and will be excluded from features
+2025-04-22 23:47:10,437 - funding_amount_forecast - WARNING - Column avg_time_between_rounds contains all NaN values and will be excluded from features
+2025-04-22 23:47:10,438 - funding_amount_forecast - INFO - Filling missing values with median
+2025-04-22 23:47:10,441 - funding_amount_forecast - INFO - Using 1104 records with actual next round data for validation
+2025-04-22 23:47:10,443 - funding_amount_forecast - INFO - Training set: 1395 records (772 actual, 623 estimated)
+2025-04-22 23:47:10,443 - funding_amount_forecast - INFO - Test set: 332 records (all actual data)
+2025-04-22 23:47:10,448 - funding_amount_forecast - INFO - Training models...
+2025-04-22 23:47:10,448 - funding_amount_forecast - INFO - Training quantile regression forest with quantiles: [0.1, 0.5, 0.9]
+2025-04-22 23:47:10,448 - funding_amount_forecast - INFO - Training model for quantile 0.1
+2025-04-22 23:47:10,889 - funding_amount_forecast - INFO - Trained model for quantile 0.1
+2025-04-22 23:47:10,889 - funding_amount_forecast - INFO - Training model for quantile 0.5
+2025-04-22 23:47:11,346 - funding_amount_forecast - INFO - Trained model for quantile 0.5
+2025-04-22 23:47:11,346 - funding_amount_forecast - INFO - Training model for quantile 0.9
+2025-04-22 23:47:11,899 - funding_amount_forecast - INFO - Trained model for quantile 0.9
+2025-04-22 23:47:11,900 - funding_amount_forecast - INFO - Training ensemble model
+2025-04-22 23:47:13,086 - funding_amount_forecast - INFO - Evaluating models...
+2025-04-22 23:47:13,087 - funding_amount_forecast - INFO - Evaluating model performance
+2025-04-22 23:47:13,090 - funding_amount_forecast - INFO - Quantile Regression Forest Metrics: RMSE=$112243327.74, MAE=$38568060.30, R2=-0.0111, Log-R2=-0.1716, Within 20%=0.09, Same order of magnitude=0.77
+2025-04-22 23:47:13,093 - funding_amount_forecast - INFO - 80% Prediction Interval Coverage: 0.6687
+2025-04-22 23:47:13,093 - funding_amount_forecast - INFO - Evaluating model performance
+2025-04-22 23:47:13,122 - funding_amount_forecast - INFO - random_forest Metrics: RMSE=$276760259.05, MAE=$63381584.15, R2=-5.1471, Log-R2=-0.2724, Within 20%=0.0973, Same order=0.7383
+2025-04-22 23:47:13,124 - funding_amount_forecast - INFO - gradient_boosting Metrics: RMSE=$659138888.09, MAE=$106868953.18, R2=-33.8673, Log-R2=-0.3718, Within 20%=0.0872, Same order=0.7349
+2025-04-22 23:47:13,153 - funding_amount_forecast - INFO - extra_trees Metrics: RMSE=$140194012.02, MAE=$62456453.78, R2=-0.5773, Log-R2=-0.3560, Within 20%=0.0671, Same order=0.6812
+2025-04-22 23:47:13,154 - funding_amount_forecast - INFO - Ensemble Metrics: RMSE=$274882694.87, MAE=$75203444.21, R2=-5.0640, Log-R2=-0.3418, Within 20%=0.0940, Same order=0.7081
+2025-04-22 23:47:13,214 - funding_amount_forecast - INFO - Creating visualizations...
+2025-04-22 23:47:13,215 - funding_amount_forecast - INFO - Creating funding by stage visualization
+2025-04-22 23:47:13,821 - funding_amount_forecast - INFO - Saved funding by stage visualization to /Users/hk/Downloads/DSFinalYearProject/MLPredictiveAnalysis/outputSuccessFailure/amount_forecast/funding_by_stage.png
+2025-04-22 23:47:13,821 - funding_amount_forecast - INFO - Creating funding by industry visualization
+2025-04-22 23:47:14,930 - funding_amount_forecast - INFO - Saved funding by industry visualizations to /Users/hk/Downloads/DSFinalYearProject/MLPredictiveAnalysis/outputSuccessFailure/amount_forecast/funding_by_industry_average.png and /Users/hk/Downloads/DSFinalYearProject/MLPredictiveAnalysis/outputSuccessFailure/amount_forecast/funding_by_industry_distribution.png
+2025-04-22 23:47:14,932 - funding_amount_forecast - INFO - Creating prediction accuracy visualization
+2025-04-22 23:47:15,318 - funding_amount_forecast - INFO - Saved prediction accuracy visualization to /Users/hk/Downloads/DSFinalYearProject/MLPredictiveAnalysis/outputSuccessFailure/amount_forecast/prediction_accuracy.png
+2025-04-22 23:47:15,318 - funding_amount_forecast - INFO - Creating feature importance visualization
+2025-04-22 23:47:15,702 - funding_amount_forecast - INFO - Saved feature importance visualization to /Users/hk/Downloads/DSFinalYearProject/MLPredictiveAnalysis/outputSuccessFailure/amount_forecast/feature_importance.png
+2025-04-22 23:47:15,704 - funding_amount_forecast - INFO - Creating model calibration visualization
+2025-04-22 23:47:16,026 - funding_amount_forecast - INFO - Saved model calibration visualization to /Users/hk/Downloads/DSFinalYearProject/MLPredictiveAnalysis/outputSuccessFailure/amount_forecast/model_calibration.png
+2025-04-22 23:47:16,026 - funding_amount_forecast - INFO - Creating error distribution visualization
+2025-04-22 23:47:17,791 - funding_amount_forecast - INFO - Saved error distribution visualization to /Users/hk/Downloads/DSFinalYearProject/MLPredictiveAnalysis/outputSuccessFailure/amount_forecast/error_distribution.png
+2025-04-22 23:47:17,791 - funding_amount_forecast - INFO - Creating prediction intervals visualization
+2025-04-22 23:47:18,089 - funding_amount_forecast - INFO - Saved prediction intervals visualization to /Users/hk/Downloads/DSFinalYearProject/MLPredictiveAnalysis/outputSuccessFailure/amount_forecast/prediction_intervals.png
+2025-04-22 23:47:18,089 - funding_amount_forecast - INFO - Generating report...
+2025-04-22 23:47:18,089 - funding_amount_forecast - INFO - Generating funding amount forecast report
+2025-04-22 23:47:18,131 - funding_amount_forecast - INFO - Funding amount forecast report saved to /Users/hk/Downloads/DSFinalYearProject/MLPredictiveAnalysis/outputSuccessFailure/amount_forecast/funding_amount_forecast_report.md
+2025-04-22 23:47:18,131 - funding_amount_forecast - INFO - markdown2 package not available, skipping HTML conversion
+2025-04-22 23:47:18,132 - funding_amount_forecast - INFO - Saving model...
+2025-04-22 23:47:18,132 - funding_amount_forecast - INFO - Saving model to /Users/hk/Downloads/DSFinalYearProject/MLPredictiveAnalysis/outputSuccessFailure/amount_forecast/funding_amount_forecast_model.pkl
+2025-04-22 23:47:18,208 - funding_amount_forecast - INFO - Model saved successfully to /Users/hk/Downloads/DSFinalYearProject/MLPredictiveAnalysis/outputSuccessFailure/amount_forecast/funding_amount_forecast_model.pkl
+2025-04-22 23:47:18,208 - funding_amount_forecast - INFO - Funding amount forecast analysis completed successfully
+2025-04-22 23:47:18,209 - success_failure_prediction - INFO - Running funding anomaly detection
+2025-04-22 23:47:18,211 - FundingAnomalyDetection - INFO - Starting anomaly detection analysis
+2025-04-22 23:47:18,212 - FundingAnomalyDetection - INFO - Loading data from JSON files in /Users/hk/Downloads/DSFinalYearProject/JSONFolder
+2025-04-22 23:47:18,212 - FundingAnomalyDetection - INFO - Processing /Users/hk/Downloads/DSFinalYearProject/JSONFolder/growthlist_industry_analysis.json
+2025-04-22 23:47:18,213 - FundingAnomalyDetection - WARNING - Skipping /Users/hk/Downloads/DSFinalYearProject/JSONFolder/growthlist_industry_analysis.json - not a list of records or doesn't have a companies array
+2025-04-22 23:47:18,213 - FundingAnomalyDetection - INFO - Processing /Users/hk/Downloads/DSFinalYearProject/JSONFolder/fundraise_insider_stats.json
+2025-04-22 23:47:18,213 - FundingAnomalyDetection - WARNING - Skipping /Users/hk/Downloads/DSFinalYearProject/JSONFolder/fundraise_insider_stats.json - not a list of records or doesn't have a companies array
+2025-04-22 23:47:18,213 - FundingAnomalyDetection - INFO - Processing /Users/hk/Downloads/DSFinalYearProject/JSONFolder/growthlistscrapper.json
+2025-04-22 23:47:18,214 - FundingAnomalyDetection - INFO - Added 100 records from growthlistscrapper.json
+2025-04-22 23:47:18,214 - FundingAnomalyDetection - INFO - Processing /Users/hk/Downloads/DSFinalYearProject/JSONFolder/topstartupio50.json
+2025-04-22 23:47:18,215 - FundingAnomalyDetection - INFO - Added 546 records from topstartupio50.json
+2025-04-22 23:47:18,216 - FundingAnomalyDetection - INFO - Processing /Users/hk/Downloads/DSFinalYearProject/JSONFolder/fundraisestartup50.json
+2025-04-22 23:47:18,218 - FundingAnomalyDetection - INFO - Found nested companies array with 1103 records in fundraisestartup50.json
+2025-04-22 23:47:18,219 - FundingAnomalyDetection - INFO - Added 1103 records from fundraisestartup50.json
+2025-04-22 23:47:18,227 - FundingAnomalyDetection - INFO - Loaded 1749 records from JSON files
+2025-04-22 23:47:18,227 - FundingAnomalyDetection - INFO - Creating features for anomaly detection
+2025-04-22 23:47:18,229 - FundingAnomalyDetection - INFO - Created funding_per_employee feature
+2025-04-22 23:47:18,246 - FundingAnomalyDetection - INFO - Created 4 features for anomaly detection
+2025-04-22 23:47:18,246 - FundingAnomalyDetection - INFO - Detecting anomalies in funding data
+2025-04-22 23:47:18,247 - FundingAnomalyDetection - INFO - Fitting Isolation Forest with contamination=0.01
+2025-04-22 23:47:18,353 - FundingAnomalyDetection - INFO - Isolation Forest model trained successfully
+2025-04-22 23:47:18,372 - FundingAnomalyDetection - INFO - Detected 19 anomalies (1.09%)
+2025-04-22 23:47:18,372 - FundingAnomalyDetection - INFO - Creating anomaly visualizations
+2025-04-22 23:47:19,491 - FundingAnomalyDetection - INFO - Creating model calibration and performance visualizations
+2025-04-22 23:47:19,491 - FundingAnomalyDetection - INFO - Creating features for anomaly detection
+2025-04-22 23:47:19,494 - FundingAnomalyDetection - INFO - Created funding_per_employee feature
+2025-04-22 23:47:19,511 - FundingAnomalyDetection - INFO - Created 4 features for anomaly detection
+2025-04-22 23:47:19,513 - FundingAnomalyDetection - INFO - Fitting Isolation Forest with contamination=None
+2025-04-22 23:47:19,613 - FundingAnomalyDetection - INFO - Isolation Forest model trained successfully
+2025-04-22 23:47:20,209 - FundingAnomalyDetection - INFO - Model performance: Accuracy=0.994, Precision=1.000, Recall=0.500, F1=0.667, RMSE=0.422
+2025-04-22 23:47:20,209 - FundingAnomalyDetection - INFO - Anomaly visualizations created successfully
+2025-04-22 23:47:20,209 - FundingAnomalyDetection - INFO - Generating anomaly detection report
+2025-04-22 23:47:20,215 - FundingAnomalyDetection - INFO - Anomaly report saved to /Users/hk/Downloads/DSFinalYearProject/MLPredictiveAnalysis/outputSuccessFailure/anomaly_detection/anomaly_report.csv
+2025-04-22 23:47:20,218 - FundingAnomalyDetection - INFO - Integration data saved to /Users/hk/Downloads/DSFinalYearProject/MLPredictiveAnalysis/outputSuccessFailure/anomaly_detection/anomaly_results.json
+2025-04-22 23:47:20,222 - FundingAnomalyDetection - INFO - Model saved to /Users/hk/Downloads/DSFinalYearProject/MLPredictiveAnalysis/outputSuccessFailure/anomaly_detection/anomaly_model_20250422_234720.pkl
+2025-04-22 23:47:20,222 - FundingAnomalyDetection - INFO - Anomaly detection analysis completed
+2025-04-22 23:47:20,222 - success_failure_prediction - INFO - Running industry trend analysis
+2025-04-22 23:47:20,223 - IndustryTrendAnalysis - INFO - Generating industry trend report...
+2025-04-22 23:47:20,223 - IndustryTrendAnalysis - INFO - Report saved to /Users/hk/Downloads/DSFinalYearProject/MLPredictiveAnalysis/outputSuccessFailure/industry_trends/industry_trend_report.json
+2025-04-22 23:47:20,223 - success_failure_prediction - INFO - All component analyses completed successfully
+2025-04-22 23:47:20,223 - success_failure_prediction - INFO - Step 3: Integrating data
+2025-04-22 23:47:20,223 - success_failure_prediction - INFO - Integrating data from all components
+2025-04-22 23:47:20,223 - success_failure_prediction - INFO - Loading data directly from JSON files
+2025-04-22 23:47:20,224 - success_failure_prediction - INFO - Checking file existence: /Users/hk/Downloads/DSFinalYearProject/JSONFolder/fundraisestartup50.json, exists: True
+2025-04-22 23:47:20,224 - success_failure_prediction - INFO - Checking file existence: /Users/hk/Downloads/DSFinalYearProject/JSONFolder/growthlistscrapper.json, exists: True
+2025-04-22 23:47:20,224 - success_failure_prediction - INFO - Checking file existence: /Users/hk/Downloads/DSFinalYearProject/JSONFolder/topstartupio50.json, exists: True
+2025-04-22 23:47:20,227 - success_failure_prediction - INFO - Loaded 1103 records from fundraisestartup50.json
+2025-04-22 23:47:20,229 - success_failure_prediction - INFO - Loaded 100 records from growthlistscrapper.json
+2025-04-22 23:47:20,234 - success_failure_prediction - INFO - Loaded 546 records from topstartupio50.json
+2025-04-22 23:47:20,277 - success_failure_prediction - INFO - Combined 1749 records from all JSON files
+2025-04-22 23:47:20,286 - success_failure_prediction - INFO - Successfully integrated data: 1748 records with 30 features
+2025-04-22 23:47:20,287 - success_failure_prediction - INFO - Step 4: Calculating success scores
+2025-04-22 23:47:20,287 - success_failure_prediction - INFO - Calculating success scores
+2025-04-22 23:47:20,298 - success_failure_prediction - WARNING - No survival information available, estimating from stage and funding
+2025-04-22 23:47:20,320 - success_failure_prediction - WARNING - No anomaly detection information available, using optimistic score
+2025-04-22 23:47:20,321 - success_failure_prediction - INFO - Success scores calculated successfully
+2025-04-22 23:47:20,321 - success_failure_prediction - INFO - Step 5: Classifying startups
+2025-04-22 23:47:20,322 - success_failure_prediction - INFO - Classifying companies by success potential
+2025-04-22 23:47:20,323 - success_failure_prediction - INFO - Dynamic thresholds - Low: 41.6, Medium: 50.3, High: 58.9
+2025-04-22 23:47:20,325 - success_failure_prediction - INFO - Classification results: {'Moderate Success Potential': np.int64(488), 'Moderate Failure Risk': np.int64(424), 'High Failure Risk': np.int64(386), 'High Success Potential': np.int64(359)}
+2025-04-22 23:47:20,336 - success_failure_prediction - INFO - Classification completed successfully
+2025-04-22 23:47:20,336 - success_failure_prediction - INFO - Step 6: Generating visualizations
+2025-04-22 23:47:20,336 - success_failure_prediction - INFO - Generating visualizations
+2025-04-22 23:47:21,420 - success_failure_prediction - INFO - Generated visualizations successfully in /Users/hk/Downloads/DSFinalYearProject/MLPredictiveAnalysis/outputSuccessFailure/visualizations
+2025-04-22 23:47:21,420 - success_failure_prediction - INFO - Step 7: Generating report
+2025-04-22 23:47:21,420 - success_failure_prediction - INFO - Generating success/failure prediction report
+2025-04-22 23:47:21,427 - success_failure_prediction - INFO - Generated report successfully: /Users/hk/Downloads/DSFinalYearProject/MLPredictiveAnalysis/outputSuccessFailure/success_failure_report.txt
+2025-04-22 23:47:21,457 - success_failure_prediction - INFO - Saved predictions to: /Users/hk/Downloads/DSFinalYearProject/MLPredictiveAnalysis/outputSuccessFailure/success_failure_predictions.csv
+2025-04-22 23:47:21,459 - success_failure_prediction - INFO - Analysis complete. Overall success rate: 48.5%
+2025-04-22 23:47:21,459 - success_failure_prediction - INFO - Total companies analyzed: 1748
+2025-04-22 23:47:21,459 - success_failure_prediction - INFO - Predicted successful: 847 (48.5%)
+2025-04-22 23:47:21,459 - success_failure_prediction - INFO - Predicted unsuccessful: 901 (51.5%)
+2025-04-22 23:47:21,459 - success_failure_prediction - INFO - Classification breakdown:
+2025-04-22 23:47:21,459 - success_failure_prediction - INFO - - High Success Potential: 359 (20.5%)
+2025-04-22 23:47:21,459 - success_failure_prediction - INFO - - Moderate Success Potential: 488 (27.9%)
+2025-04-22 23:47:21,460 - success_failure_prediction - INFO - - Moderate Failure Risk: 424 (24.3%)
+2025-04-22 23:47:21,460 - success_failure_prediction - INFO - - High Failure Risk: 386 (22.1%)
+2025-04-22 23:47:21,462 - success_failure_prediction - INFO - Top performing industries:
+2025-04-22 23:47:21,462 - success_failure_prediction - INFO - - : 86.5% success rate (based on 547 companies)
+2025-04-22 23:47:21,462 - success_failure_prediction - INFO - - mechanical or industrial engineering: 66.7% success rate (based on 3 companies)
+2025-04-22 23:47:21,462 - success_failure_prediction - INFO - - information technology & services: 62.8% success rate (based on 446 companies)
+2025-04-22 23:47:21,463 - success_failure_prediction - INFO - Lowest performing industries:
+2025-04-22 23:47:21,463 - success_failure_prediction - INFO - - Aerospace: 0.0% success rate (based on 1 companies)
+2025-04-22 23:47:21,463 - success_failure_prediction - INFO - - Agriculture, Food and Beverage, Artificial Intelligence, E-commerce: 0.0% success rate (based on 1 companies)
+2025-04-22 23:47:21,463 - success_failure_prediction - INFO - - Architecture, Media: 0.0% success rate (based on 1 companies)
+2025-04-22 23:47:21,465 - success_failure_prediction - INFO - Success rate by funding stage:
+2025-04-22 23:47:21,465 - success_failure_prediction - INFO - - Series D: 100.0% success rate (based on 84 companies)
+2025-04-22 23:47:21,465 - success_failure_prediction - INFO - - Series E: 100.0% success rate (based on 39 companies)
+2025-04-22 23:47:21,466 - success_failure_prediction - INFO - - Series F: 100.0% success rate (based on 23 companies)
+2025-04-22 23:47:21,466 - success_failure_prediction - INFO - - Series C: 92.2% success rate (based on 179 companies)
+2025-04-22 23:47:21,466 - success_failure_prediction - INFO - - Private Equity: 85.7% success rate (based on 28 companies)
+2025-04-22 23:47:21,466 - success_failure_prediction - INFO - - Series G: 85.7% success rate (based on 7 companies)
+2025-04-22 23:47:21,466 - success_failure_prediction - INFO - - Series B: 77.1% success rate (based on 223 companies)
+2025-04-22 23:47:21,466 - success_failure_prediction - INFO - - Series A: 60.1% success rate (based on 313 companies)
+2025-04-22 23:47:21,466 - success_failure_prediction - INFO - - Debt Financing: 53.5% success rate (based on 43 companies)
+2025-04-22 23:47:21,466 - success_failure_prediction - INFO - - Venture - Series Unknown: 30.8% success rate (based on 172 companies)
+2025-04-22 23:47:21,466 - success_failure_prediction - INFO - - Series H: 28.6% success rate (based on 7 companies)
+2025-04-22 23:47:21,466 - success_failure_prediction - INFO - - Undisclosed: 20.0% success rate (based on 25 companies)
+2025-04-22 23:47:21,466 - success_failure_prediction - INFO - - Seed: 7.2% success rate (based on 349 companies)
+2025-04-22 23:47:21,466 - success_failure_prediction - INFO - - Pre-Seed: 1.6% success rate (based on 122 companies)
+2025-04-22 23:47:21,466 - success_failure_prediction - INFO - - Grant: 0.0% success rate (based on 67 companies)
+2025-04-22 23:54:45,925 - success_failure_prediction - INFO - Success/Failure Prediction system initialized
+2025-04-22 23:54:45,926 - success_failure_prediction - INFO - Starting success/failure prediction analysis
+2025-04-22 23:54:45,926 - success_failure_prediction - INFO - Step 1: Initializing component models
+2025-04-22 23:54:45,926 - success_failure_prediction - INFO - Initializing component prediction systems
+2025-04-22 23:54:45,929 - funding_stage_prediction - INFO - Historical database initialized
+2025-04-22 23:54:45,930 - funding_stage_prediction - INFO - Created visualization directory: ./outputFundingStagePrediction/visualizations
+2025-04-22 23:54:45,932 - funding_stage_prediction - INFO - Created visualization directory: ./outputFundingStagePrediction/visualizations
+2025-04-22 23:54:45,933 - funding_stage_prediction - INFO - Initialized model directory structure at ./outputFundingStagePrediction/models
+2025-04-22 23:54:45,934 - funding_amount_forecast - INFO - Funding Amount Forecast initialized
+2025-04-22 23:54:45,934 - success_failure_prediction - INFO - All component systems initialized successfully
+2025-04-22 23:54:45,934 - success_failure_prediction - INFO - Step 2: Running component analyses
+2025-04-22 23:54:45,935 - success_failure_prediction - INFO - Running component analyses
+2025-04-22 23:54:45,935 - success_failure_prediction - INFO - Running funding stage prediction
+2025-04-22 23:54:45,935 - funding_stage_prediction - INFO - Starting funding stage prediction pipeline
+2025-04-22 23:54:45,943 - funding_stage_prediction - INFO - Loaded 1103 records from fundraiser data
+2025-04-22 23:54:45,945 - funding_stage_prediction - INFO - Loaded 100 records from growthlist data
+2025-04-22 23:54:45,950 - funding_stage_prediction - INFO - Loaded 546 records from topstartup data
+2025-04-22 23:54:46,015 - funding_stage_prediction - INFO - Successfully merged 1748 records
+2025-04-22 23:54:46,044 - funding_stage_prediction - INFO - Feature engineering complete: 122 features created
+2025-04-22 23:54:46,048 - funding_stage_prediction - INFO - Prepared model data: X shape=(1748, 7), y shape=(1748,)
+2025-04-22 23:54:46,048 - funding_stage_prediction - INFO - Initial class mapping: {np.int64(0): 0, np.int64(1): 1, np.int64(2): 2, np.int64(3): 3, np.int64(4): 4, np.int64(5): 5, np.int64(6): 6, np.int64(7): 7, np.int64(8): 8, np.int64(9): 9, np.int64(10): 10, np.int64(11): 11, np.int64(12): 12, np.int64(13): 13, np.int64(14): 14, np.int64(15): 15, np.int64(16): 16, np.int64(17): 17}
+2025-04-22 23:54:46,049 - funding_stage_prediction - INFO - Merged rare classes into majority class 16
+2025-04-22 23:54:46,050 - funding_stage_prediction - INFO - Final class mapping after merging rare classes: {np.int64(1): 0, np.int64(2): 1, np.int64(4): 2, np.int64(5): 3, np.int64(6): 4, np.int64(7): 5, np.int64(8): 6, np.int64(9): 7, np.int64(10): 8, np.int64(11): 9, np.int64(15): 10, np.int64(16): 11, np.int64(17): 12}
+2025-04-22 23:54:46,297 - funding_stage_prediction - INFO - Applied SMOTE. New shape: (7202, 7)
+2025-04-22 23:54:53,107 - funding_stage_prediction - INFO - Selected features shape: (7202, 4)
+2025-04-22 23:54:53,107 - funding_stage_prediction - INFO - Step 4: Tuning and training models...
+2025-04-22 23:56:44,669 - funding_stage_prediction - INFO - Best RF params: {'class_weight': 'balanced', 'max_depth': None, 'min_samples_split': 2, 'n_estimators': 300}
+2025-04-22 23:56:44,674 - funding_stage_prediction - INFO - Best RF accuracy: 0.6933
+2025-04-22 23:57:37,770 - funding_stage_prediction - INFO - Best XGB params: {'colsample_bytree': np.float64(0.8040506099249731), 'gamma': np.float64(0.048147578869005), 'learning_rate': np.float64(0.08217472089272432), 'max_depth': 7, 'num_class': 13, 'subsample': np.float64(0.9511834232893064)}
+2025-04-22 23:57:37,771 - funding_stage_prediction - INFO - Best XGB accuracy: 0.6905
+2025-04-22 23:58:16,549 - funding_stage_prediction - INFO - Step 5: Creating advanced visualizations...
+2025-04-22 23:58:42,306 - funding_stage_prediction - INFO - Pipeline completed successfully!
+2025-04-22 23:58:42,307 - success_failure_prediction - INFO - Running funding continuation analysis
+2025-04-22 23:58:42,307 - funding_continuation - INFO - Starting funding continuation analysis pipeline
+2025-04-22 23:58:42,307 - funding_continuation - ERROR - No data available for analysis
+2025-04-22 23:58:42,307 - success_failure_prediction - INFO - Running funding amount forecast
+2025-04-22 23:58:42,307 - funding_amount_forecast - INFO - Starting funding amount forecast analysis
+2025-04-22 23:58:42,308 - funding_amount_forecast - INFO - Loading data from JSON files
+2025-04-22 23:58:42,312 - funding_amount_forecast - INFO - Loaded 1103 records from fundraiser data
+2025-04-22 23:58:42,314 - funding_amount_forecast - INFO - Loaded 100 records from growthlist data
+2025-04-22 23:58:42,318 - funding_amount_forecast - INFO - Loaded 546 records from topstartup data
+2025-04-22 23:58:42,328 - funding_amount_forecast - INFO - Created DataFrame with 1749 records and 27 columns
+2025-04-22 23:58:42,328 - funding_amount_forecast - INFO - Standardizing DataFrame
+2025-04-22 23:58:42,351 - funding_amount_forecast - INFO - DataFrame standardization complete with 1749 records
+2025-04-22 23:58:42,352 - funding_amount_forecast - INFO - Creating features for funding amount forecasting
+2025-04-22 23:58:42,353 - funding_amount_forecast - INFO - Kept 1727 records with valid funding amounts
+2025-04-22 23:58:42,354 - funding_amount_forecast - INFO - Converting funding_date to datetime
+2025-04-22 23:58:43,902 - funding_amount_forecast - INFO - Estimating next round amounts for 623 companies without actual next round data
+2025-04-22 23:58:44,102 - funding_amount_forecast - INFO - Feature engineering complete. Created 47 features.
+2025-04-22 23:58:44,103 - funding_amount_forecast - INFO - Preparing data for model training
+2025-04-22 23:58:44,105 - funding_amount_forecast - WARNING - Column funding_usd contains all NaN values and will be excluded from features
+2025-04-22 23:58:44,106 - funding_amount_forecast - WARNING - Column avg_time_between_rounds contains all NaN values and will be excluded from features
+2025-04-22 23:58:44,108 - funding_amount_forecast - INFO - Filling missing values with median
+2025-04-22 23:58:44,110 - funding_amount_forecast - INFO - Using 1104 records with actual next round data for validation
+2025-04-22 23:58:44,113 - funding_amount_forecast - INFO - Training set: 1395 records (772 actual, 623 estimated)
+2025-04-22 23:58:44,113 - funding_amount_forecast - INFO - Test set: 332 records (all actual data)
+2025-04-22 23:58:44,118 - funding_amount_forecast - INFO - Training models...
+2025-04-22 23:58:44,118 - funding_amount_forecast - INFO - Training quantile regression forest with quantiles: [0.1, 0.5, 0.9]
+2025-04-22 23:58:44,118 - funding_amount_forecast - INFO - Training model for quantile 0.1
+2025-04-22 23:58:44,625 - funding_amount_forecast - INFO - Trained model for quantile 0.1
+2025-04-22 23:58:44,625 - funding_amount_forecast - INFO - Training model for quantile 0.5
+2025-04-22 23:58:45,126 - funding_amount_forecast - INFO - Trained model for quantile 0.5
+2025-04-22 23:58:45,126 - funding_amount_forecast - INFO - Training model for quantile 0.9
+2025-04-22 23:58:45,954 - funding_amount_forecast - INFO - Trained model for quantile 0.9
+2025-04-22 23:58:45,954 - funding_amount_forecast - INFO - Training ensemble model
+2025-04-22 23:58:46,909 - funding_amount_forecast - INFO - Evaluating models...
+2025-04-22 23:58:46,910 - funding_amount_forecast - INFO - Evaluating model performance
+2025-04-22 23:58:46,914 - funding_amount_forecast - INFO - Quantile Regression Forest Metrics: RMSE=$112302500.05, MAE=$38379605.71, R2=-0.0121, Log-R2=-0.1705, Within 20%=0.09, Same order of magnitude=0.76
+2025-04-22 23:58:46,917 - funding_amount_forecast - INFO - 80% Prediction Interval Coverage: 0.6657
+2025-04-22 23:58:46,917 - funding_amount_forecast - INFO - Evaluating model performance
+2025-04-22 23:58:46,946 - funding_amount_forecast - INFO - random_forest Metrics: RMSE=$269893696.29, MAE=$62018285.31, R2=-4.8459, Log-R2=-0.2712, Within 20%=0.1040, Same order=0.7416
+2025-04-22 23:58:46,948 - funding_amount_forecast - INFO - gradient_boosting Metrics: RMSE=$642472777.80, MAE=$104201196.69, R2=-32.1264, Log-R2=-0.4038, Within 20%=0.0839, Same order=0.7315
+2025-04-22 23:58:46,977 - funding_amount_forecast - INFO - extra_trees Metrics: RMSE=$137076074.22, MAE=$62157504.15, R2=-0.5080, Log-R2=-0.3561, Within 20%=0.0671, Same order=0.6812
+2025-04-22 23:58:46,978 - funding_amount_forecast - INFO - Ensemble Metrics: RMSE=$272093678.31, MAE=$74422490.85, R2=-4.9416, Log-R2=-0.3415, Within 20%=0.0940, Same order=0.7081
+2025-04-22 23:58:47,040 - funding_amount_forecast - INFO - Creating visualizations...
+2025-04-22 23:58:47,041 - funding_amount_forecast - INFO - Creating funding by stage visualization
+2025-04-22 23:58:47,584 - funding_amount_forecast - INFO - Saved funding by stage visualization to /Users/hk/Downloads/DSFinalYearProject/MLPredictiveAnalysis/outputSuccessFailure/amount_forecast/funding_by_stage.png
+2025-04-22 23:58:47,585 - funding_amount_forecast - INFO - Creating funding by industry visualization
+2025-04-22 23:58:48,743 - funding_amount_forecast - INFO - Saved funding by industry visualizations to /Users/hk/Downloads/DSFinalYearProject/MLPredictiveAnalysis/outputSuccessFailure/amount_forecast/funding_by_industry_average.png and /Users/hk/Downloads/DSFinalYearProject/MLPredictiveAnalysis/outputSuccessFailure/amount_forecast/funding_by_industry_distribution.png
+2025-04-22 23:58:48,743 - funding_amount_forecast - INFO - Creating prediction accuracy visualization
+2025-04-22 23:58:49,153 - funding_amount_forecast - INFO - Saved prediction accuracy visualization to /Users/hk/Downloads/DSFinalYearProject/MLPredictiveAnalysis/outputSuccessFailure/amount_forecast/prediction_accuracy.png
+2025-04-22 23:58:49,153 - funding_amount_forecast - INFO - Creating feature importance visualization
+2025-04-22 23:58:49,495 - funding_amount_forecast - INFO - Saved feature importance visualization to /Users/hk/Downloads/DSFinalYearProject/MLPredictiveAnalysis/outputSuccessFailure/amount_forecast/feature_importance.png
+2025-04-22 23:58:49,496 - funding_amount_forecast - INFO - Creating model calibration visualization
+2025-04-22 23:58:49,793 - funding_amount_forecast - INFO - Saved model calibration visualization to /Users/hk/Downloads/DSFinalYearProject/MLPredictiveAnalysis/outputSuccessFailure/amount_forecast/model_calibration.png
+2025-04-22 23:58:49,793 - funding_amount_forecast - INFO - Creating error distribution visualization
+2025-04-22 23:58:51,709 - funding_amount_forecast - INFO - Saved error distribution visualization to /Users/hk/Downloads/DSFinalYearProject/MLPredictiveAnalysis/outputSuccessFailure/amount_forecast/error_distribution.png
+2025-04-22 23:58:51,710 - funding_amount_forecast - INFO - Creating prediction intervals visualization
+2025-04-22 23:58:52,028 - funding_amount_forecast - INFO - Saved prediction intervals visualization to /Users/hk/Downloads/DSFinalYearProject/MLPredictiveAnalysis/outputSuccessFailure/amount_forecast/prediction_intervals.png
+2025-04-22 23:58:52,029 - funding_amount_forecast - INFO - Generating report...
+2025-04-22 23:58:52,029 - funding_amount_forecast - INFO - Generating funding amount forecast report
+2025-04-22 23:58:52,078 - funding_amount_forecast - INFO - Funding amount forecast report saved to /Users/hk/Downloads/DSFinalYearProject/MLPredictiveAnalysis/outputSuccessFailure/amount_forecast/funding_amount_forecast_report.md
+2025-04-22 23:58:52,078 - funding_amount_forecast - INFO - markdown2 package not available, skipping HTML conversion
+2025-04-22 23:58:52,079 - funding_amount_forecast - INFO - Saving model...
+2025-04-22 23:58:52,079 - funding_amount_forecast - INFO - Saving model to /Users/hk/Downloads/DSFinalYearProject/MLPredictiveAnalysis/outputSuccessFailure/amount_forecast/funding_amount_forecast_model.pkl
+2025-04-22 23:58:52,187 - funding_amount_forecast - INFO - Model saved successfully to /Users/hk/Downloads/DSFinalYearProject/MLPredictiveAnalysis/outputSuccessFailure/amount_forecast/funding_amount_forecast_model.pkl
+2025-04-22 23:58:52,187 - funding_amount_forecast - INFO - Funding amount forecast analysis completed successfully
+2025-04-22 23:58:52,189 - success_failure_prediction - INFO - Running funding anomaly detection
+2025-04-22 23:58:52,190 - FundingAnomalyDetection - INFO - Starting anomaly detection analysis
+2025-04-22 23:58:52,190 - FundingAnomalyDetection - INFO - Loading data from JSON files in /Users/hk/Downloads/DSFinalYearProject/JSONFolder
+2025-04-22 23:58:52,191 - FundingAnomalyDetection - INFO - Processing /Users/hk/Downloads/DSFinalYearProject/JSONFolder/growthlist_industry_analysis.json
+2025-04-22 23:58:52,191 - FundingAnomalyDetection - WARNING - Skipping /Users/hk/Downloads/DSFinalYearProject/JSONFolder/growthlist_industry_analysis.json - not a list of records or doesn't have a companies array
+2025-04-22 23:58:52,191 - FundingAnomalyDetection - INFO - Processing /Users/hk/Downloads/DSFinalYearProject/JSONFolder/fundraise_insider_stats.json
+2025-04-22 23:58:52,192 - FundingAnomalyDetection - WARNING - Skipping /Users/hk/Downloads/DSFinalYearProject/JSONFolder/fundraise_insider_stats.json - not a list of records or doesn't have a companies array
+2025-04-22 23:58:52,192 - FundingAnomalyDetection - INFO - Processing /Users/hk/Downloads/DSFinalYearProject/JSONFolder/growthlistscrapper.json
+2025-04-22 23:58:52,192 - FundingAnomalyDetection - INFO - Added 100 records from growthlistscrapper.json
+2025-04-22 23:58:52,193 - FundingAnomalyDetection - INFO - Processing /Users/hk/Downloads/DSFinalYearProject/JSONFolder/topstartupio50.json
+2025-04-22 23:58:52,196 - FundingAnomalyDetection - INFO - Added 546 records from topstartupio50.json
+2025-04-22 23:58:52,197 - FundingAnomalyDetection - INFO - Processing /Users/hk/Downloads/DSFinalYearProject/JSONFolder/fundraisestartup50.json
+2025-04-22 23:58:52,204 - FundingAnomalyDetection - INFO - Found nested companies array with 1103 records in fundraisestartup50.json
+2025-04-22 23:58:52,205 - FundingAnomalyDetection - INFO - Added 1103 records from fundraisestartup50.json
+2025-04-22 23:58:52,214 - FundingAnomalyDetection - INFO - Loaded 1749 records from JSON files
+2025-04-22 23:58:52,215 - FundingAnomalyDetection - INFO - Creating features for anomaly detection
+2025-04-22 23:58:52,217 - FundingAnomalyDetection - INFO - Created funding_per_employee feature
+2025-04-22 23:58:52,240 - FundingAnomalyDetection - INFO - Created 4 features for anomaly detection
+2025-04-22 23:58:52,241 - FundingAnomalyDetection - INFO - Detecting anomalies in funding data
+2025-04-22 23:58:52,241 - FundingAnomalyDetection - INFO - Fitting Isolation Forest with contamination=0.01
+2025-04-22 23:58:52,373 - FundingAnomalyDetection - INFO - Isolation Forest model trained successfully
+2025-04-22 23:58:52,395 - FundingAnomalyDetection - INFO - Detected 19 anomalies (1.09%)
+2025-04-22 23:58:52,395 - FundingAnomalyDetection - INFO - Creating anomaly visualizations
+2025-04-22 23:58:53,573 - FundingAnomalyDetection - INFO - Creating model calibration and performance visualizations
+2025-04-22 23:58:53,573 - FundingAnomalyDetection - INFO - Creating features for anomaly detection
+2025-04-22 23:58:53,581 - FundingAnomalyDetection - INFO - Created funding_per_employee feature
+2025-04-22 23:58:53,599 - FundingAnomalyDetection - INFO - Created 4 features for anomaly detection
+2025-04-22 23:58:53,601 - FundingAnomalyDetection - INFO - Fitting Isolation Forest with contamination=None
+2025-04-22 23:58:53,708 - FundingAnomalyDetection - INFO - Isolation Forest model trained successfully
+2025-04-22 23:58:54,409 - FundingAnomalyDetection - INFO - Model performance: Accuracy=0.994, Precision=1.000, Recall=0.500, F1=0.667, RMSE=0.422
+2025-04-22 23:58:54,410 - FundingAnomalyDetection - INFO - Anomaly visualizations created successfully
+2025-04-22 23:58:54,410 - FundingAnomalyDetection - INFO - Generating anomaly detection report
+2025-04-22 23:58:54,417 - FundingAnomalyDetection - INFO - Anomaly report saved to /Users/hk/Downloads/DSFinalYearProject/MLPredictiveAnalysis/outputSuccessFailure/anomaly_detection/anomaly_report.csv
+2025-04-22 23:58:54,419 - FundingAnomalyDetection - INFO - Integration data saved to /Users/hk/Downloads/DSFinalYearProject/MLPredictiveAnalysis/outputSuccessFailure/anomaly_detection/anomaly_results.json
+2025-04-22 23:58:54,421 - FundingAnomalyDetection - INFO - Model saved to /Users/hk/Downloads/DSFinalYearProject/MLPredictiveAnalysis/outputSuccessFailure/anomaly_detection/anomaly_model_20250422_235854.pkl
+2025-04-22 23:58:54,422 - FundingAnomalyDetection - INFO - Anomaly detection analysis completed
+2025-04-22 23:58:54,422 - success_failure_prediction - INFO - Running industry trend analysis
+2025-04-22 23:58:54,422 - IndustryTrendAnalysis - INFO - Generating industry trend report...
+2025-04-22 23:58:54,422 - IndustryTrendAnalysis - INFO - Report saved to /Users/hk/Downloads/DSFinalYearProject/MLPredictiveAnalysis/outputSuccessFailure/industry_trends/industry_trend_report.json
+2025-04-22 23:58:54,422 - success_failure_prediction - INFO - All component analyses completed successfully
+2025-04-22 23:58:54,422 - success_failure_prediction - INFO - Step 3: Integrating data
+2025-04-22 23:58:54,423 - success_failure_prediction - INFO - Integrating data from all components
+2025-04-22 23:58:54,423 - success_failure_prediction - INFO - Loading data directly from JSON files
+2025-04-22 23:58:54,423 - success_failure_prediction - INFO - Checking file existence: /Users/hk/Downloads/DSFinalYearProject/JSONFolder/fundraisestartup50.json, exists: True
+2025-04-22 23:58:54,423 - success_failure_prediction - INFO - Checking file existence: /Users/hk/Downloads/DSFinalYearProject/JSONFolder/growthlistscrapper.json, exists: True
+2025-04-22 23:58:54,426 - success_failure_prediction - INFO - Checking file existence: /Users/hk/Downloads/DSFinalYearProject/JSONFolder/topstartupio50.json, exists: True
+2025-04-22 23:58:54,431 - success_failure_prediction - INFO - Loaded 1103 records from fundraisestartup50.json
+2025-04-22 23:58:54,432 - success_failure_prediction - INFO - Loaded 100 records from growthlistscrapper.json
+2025-04-22 23:58:54,435 - success_failure_prediction - INFO - Loaded 546 records from topstartupio50.json
+2025-04-22 23:58:54,480 - success_failure_prediction - INFO - Combined 1749 records from all JSON files
+2025-04-22 23:58:54,491 - success_failure_prediction - INFO - Successfully integrated data: 1748 records with 30 features
+2025-04-22 23:58:54,491 - success_failure_prediction - INFO - Step 4: Calculating success scores
+2025-04-22 23:58:54,492 - success_failure_prediction - INFO - Calculating success scores
+2025-04-22 23:58:54,504 - success_failure_prediction - WARNING - No survival information available, estimating from stage and funding
+2025-04-22 23:58:54,526 - success_failure_prediction - WARNING - No anomaly detection information available, using optimistic score
+2025-04-22 23:58:54,527 - success_failure_prediction - INFO - Success scores calculated successfully
+2025-04-22 23:58:54,527 - success_failure_prediction - INFO - Step 5: Classifying startups
+2025-04-22 23:58:54,527 - success_failure_prediction - INFO - Classifying companies by success potential
+2025-04-22 23:58:54,534 - success_failure_prediction - INFO - Optimistic thresholds - Low: 36.7, Medium: 45.2, High: 56.1
+2025-04-22 23:58:54,536 - success_failure_prediction - INFO - Classification results: {'Moderate Success Potential': np.int64(487), 'High Success Potential': np.int64(431), 'Moderate Failure Risk': np.int64(387), 'High Failure Risk': np.int64(352)}
+2025-04-22 23:58:54,549 - success_failure_prediction - INFO - Risk level distribution: {'Medium Risk': '718 (41.1%)', 'Low Risk': '477 (27.3%)', 'High Risk': '382 (21.9%)', 'Minimal Risk': '171 (9.8%)'}
+2025-04-22 23:58:54,549 - success_failure_prediction - INFO - Step 6: Generating visualizations
+2025-04-22 23:58:54,549 - success_failure_prediction - INFO - Generating visualizations
+2025-04-22 23:58:55,749 - success_failure_prediction - INFO - Generated visualizations successfully in /Users/hk/Downloads/DSFinalYearProject/MLPredictiveAnalysis/outputSuccessFailure/visualizations
+2025-04-22 23:58:55,750 - success_failure_prediction - INFO - Step 7: Generating report
+2025-04-22 23:58:55,750 - success_failure_prediction - INFO - Generating success/failure prediction report
+2025-04-22 23:58:55,755 - success_failure_prediction - INFO - Generated report successfully: /Users/hk/Downloads/DSFinalYearProject/MLPredictiveAnalysis/outputSuccessFailure/success_failure_report.txt
+2025-04-22 23:58:55,794 - success_failure_prediction - INFO - Saved predictions to: /Users/hk/Downloads/DSFinalYearProject/MLPredictiveAnalysis/outputSuccessFailure/success_failure_predictions.csv
+2025-04-22 23:58:55,795 - success_failure_prediction - INFO - Analysis complete. Overall success rate: 52.5%
+2025-04-22 23:58:55,795 - success_failure_prediction - INFO - Total companies analyzed: 1748
+2025-04-22 23:58:55,795 - success_failure_prediction - INFO - Predicted successful: 918 (52.5%)
+2025-04-22 23:58:55,795 - success_failure_prediction - INFO - Predicted unsuccessful: 830 (47.5%)
+2025-04-22 23:58:55,795 - success_failure_prediction - INFO - Classification breakdown:
+2025-04-22 23:58:55,795 - success_failure_prediction - INFO - - High Success Potential: 431 (24.7%)
+2025-04-22 23:58:55,795 - success_failure_prediction - INFO - - Moderate Success Potential: 487 (27.9%)
+2025-04-22 23:58:55,795 - success_failure_prediction - INFO - - Moderate Failure Risk: 387 (22.1%)
+2025-04-22 23:58:55,795 - success_failure_prediction - INFO - - High Failure Risk: 352 (20.1%)
+2025-04-22 23:58:55,797 - success_failure_prediction - INFO - Top performing industries:
+2025-04-22 23:58:55,797 - success_failure_prediction - INFO - - medical practice: 100.0% success rate (based on 2 companies)
+2025-04-22 23:58:55,797 - success_failure_prediction - INFO - - : 88.8% success rate (based on 547 companies)
+2025-04-22 23:58:55,797 - success_failure_prediction - INFO - - computer hardware: 70.0% success rate (based on 10 companies)
+2025-04-22 23:58:55,797 - success_failure_prediction - INFO - Lowest performing industries:
+2025-04-22 23:58:55,797 - success_failure_prediction - INFO - - Aerospace: 0.0% success rate (based on 1 companies)
+2025-04-22 23:58:55,797 - success_failure_prediction - INFO - - Agriculture, Food and Beverage, Artificial Intelligence, E-commerce: 0.0% success rate (based on 1 companies)
+2025-04-22 23:58:55,797 - success_failure_prediction - INFO - - Architecture, Media: 0.0% success rate (based on 1 companies)
+2025-04-22 23:58:55,799 - success_failure_prediction - INFO - Success rate by funding stage:
+2025-04-22 23:58:55,799 - success_failure_prediction - INFO - - Series D: 100.0% success rate (based on 84 companies)
+2025-04-22 23:58:55,799 - success_failure_prediction - INFO - - Series E: 100.0% success rate (based on 39 companies)
+2025-04-22 23:58:55,799 - success_failure_prediction - INFO - - Series F: 100.0% success rate (based on 23 companies)
+2025-04-22 23:58:55,799 - success_failure_prediction - INFO - - Series H: 100.0% success rate (based on 7 companies)
+2025-04-22 23:58:55,799 - success_failure_prediction - INFO - - Series C: 96.6% success rate (based on 179 companies)
+2025-04-22 23:58:55,799 - success_failure_prediction - INFO - - Series B: 93.7% success rate (based on 223 companies)
+2025-04-22 23:58:55,799 - success_failure_prediction - INFO - - Private Equity: 89.3% success rate (based on 28 companies)
+2025-04-22 23:58:55,799 - success_failure_prediction - INFO - - Series G: 85.7% success rate (based on 7 companies)
+2025-04-22 23:58:55,799 - success_failure_prediction - INFO - - Debt Financing: 76.7% success rate (based on 43 companies)
+2025-04-22 23:58:55,799 - success_failure_prediction - INFO - - Series A: 62.0% success rate (based on 313 companies)
+2025-04-22 23:58:55,800 - success_failure_prediction - INFO - - Venture - Series Unknown: 43.0% success rate (based on 172 companies)
+2025-04-22 23:58:55,800 - success_failure_prediction - INFO - - Undisclosed: 4.0% success rate (based on 25 companies)
+2025-04-22 23:58:55,800 - success_failure_prediction - INFO - - Seed: 0.6% success rate (based on 349 companies)
+2025-04-22 23:58:55,800 - success_failure_prediction - INFO - - Pre-Seed: 0.0% success rate (based on 122 companies)
+2025-04-22 23:58:55,800 - success_failure_prediction - INFO - - Grant: 0.0% success rate (based on 67 companies)

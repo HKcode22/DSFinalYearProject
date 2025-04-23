@@ -1,0 +1,209 @@
+{
+  "anomalies": [
+    {
+      "name": "Augment",
+      "industry": "Information Technology, Augmented Reality, Virtual Reality",
+      "funding_amount": "$25,000,000",
+      "funding_type": "Seed",
+      "last_funding_date": "Mar 2025",
+      "anomaly_score": -0.054257107523902115,
+      "anomaly_severity": 0.5135609502789662,
+      "anomaly_type": "Complex Pattern"
+    },
+    {
+      "name": "Abound",
+      "industry": "Human Resources",
+      "funding_amount": "$14,000,000",
+      "funding_type": "Seed",
+      "last_funding_date": "Mar 2025",
+      "anomaly_score": -0.03352901187779478,
+      "anomaly_severity": 0.5083814677840655,
+      "anomaly_type": "Complex Pattern"
+    },
+    {
+      "name": "Manas AI",
+      "industry": "Artificial Intelligence",
+      "funding_amount": "$24,600,000",
+      "funding_type": "Seed",
+      "last_funding_date": "Feb 2025",
+      "anomaly_score": -0.032243697831395135,
+      "anomaly_severity": 0.5080602261480422,
+      "anomaly_type": "Complex Pattern"
+    },
+    {
+      "name": "GuidenAI",
+      "industry": "Artificial Intelligence",
+      "funding_amount": "$25,000",
+      "funding_type": "Pre-Seed",
+      "last_funding_date": "Mar 2025",
+      "anomaly_score": -0.030474925800324515,
+      "anomaly_severity": 0.5076181418651143,
+      "anomaly_type": "Complex Pattern"
+    },
+    {
+      "name": "Safely You",
+      "industry": "Healthcare, Family",
+      "funding_amount": "$43,000,000",
+      "funding_type": "Series C",
+      "last_funding_date": "Feb 2025",
+      "anomaly_score": -0.02933701936036215,
+      "anomaly_severity": 0.5073337288599478,
+      "anomaly_type": "Complex Pattern"
+    },
+    {
+      "name": "Cloudike",
+      "industry": "Information Technology, Cloud Computing",
+      "funding_amount": "$2,557,959",
+      "funding_type": "Venture - Series Unknown",
+      "last_funding_date": "Mar 2025",
+      "anomaly_score": -0.025906449828715483,
+      "anomaly_severity": 0.5064762502531116,
+      "anomaly_type": "Complex Pattern"
+    },
+    {
+      "name": "BuildClub",
+      "industry": "Construction, Materials",
+      "funding_amount": "$500,000",
+      "funding_type": "Venture - Series Unknown",
+      "last_funding_date": "Mar 2025",
+      "anomaly_score": -0.02581471986258177,
+      "anomaly_severity": 0.5064533215952947,
+      "anomaly_type": "Complex Pattern"
+    },
+    {
+      "name": "T-robotics",
+      "industry": "Robotics, Artificial Intelligence",
+      "funding_amount": "$575,000",
+      "funding_type": "Seed",
+      "last_funding_date": "Mar 2025",
+      "anomaly_score": -0.024298252028198575,
+      "anomaly_severity": 0.506074264153637,
+      "anomaly_type": "Complex Pattern"
+    },
+    {
+      "name": "Mercury",
+      "industry": "FinTech",
+      "funding_amount": "$300,000,000",
+      "funding_type": "Series C",
+      "last_funding_date": "Mar 2025",
+      "anomaly_score": -0.023909754443160125,
+      "anomaly_severity": 0.5059771538637072,
+      "anomaly_type": "Complex Pattern"
+    },
+    {
+      "name": "NeuronX",
+      "industry": "Artificial Intelligence, Data, Mental Health, Wellness",
+      "funding_amount": "$1,000,000",
+      "funding_type": "Pre-Seed",
+      "last_funding_date": "Mar 2025",
+      "anomaly_score": -0.023373441107387927,
+      "anomaly_severity": 0.5058430942637603,
+      "anomaly_type": "Complex Pattern"
+    },
+    {
+      "name": "SimCare AI",
+      "industry": "Biotechnology, Healthcare, Artificial Intelligence",
+      "funding_amount": "$2,000,000",
+      "funding_type": "Seed",
+      "last_funding_date": "Mar 2025",
+      "anomaly_score": -0.019356458845701252,
+      "anomaly_severity": 0.5048389636268192,
+      "anomaly_type": "Complex Pattern"
+    },
+    {
+      "name": "Loyal",
+      "industry": "Biotechnology",
+      "funding_amount": "$22,000,000",
+      "funding_type": "Series B",
+      "last_funding_date": "Mar 2025",
+      "anomaly_score": -0.013888178697785802,
+      "anomaly_severity": 0.5034719888677552,
+      "anomaly_type": "Complex Pattern"
+    },
+    {
+      "name": "Taxflow",
+      "industry": "FinTech, Finance",
+      "funding_amount": "$750,000",
+      "funding_type": "Pre-Seed",
+      "last_funding_date": "Feb 2025",
+      "anomaly_score": -0.012092837652302624,
+      "anomaly_severity": 0.5030231725715948,
+      "anomaly_type": "Complex Pattern"
+    },
+    {
+      "name": "Motif",
+      "industry": "Augmented Reality",
+      "funding_amount": "$46,000,000",
+      "funding_type": "Series A",
+      "last_funding_date": "Feb 2025",
+      "anomaly_score": -0.010970670607655664,
+      "anomaly_severity": 0.5027426401442909,
+      "anomaly_type": "Complex Pattern"
+    },
+    {
+      "name": "Ellipsis Health",
+      "industry": "Healthcare, Artificial Intelligence, Mental Health, Wellness",
+      "funding_amount": "$38,000,000",
+      "funding_type": "Series A",
+      "last_funding_date": "Mar 2025",
+      "anomaly_score": -0.009566012475530239,
+      "anomaly_severity": 0.5023914848821254,
+      "anomaly_type": "Complex Pattern"
+    },
+    {
+      "name": "Anthropic",
+      "industry": "Artificial Intelligence",
+      "funding_amount": "$3,500,000,000",
+      "funding_type": "Series E",
+      "last_funding_date": "Mar 2025",
+      "anomaly_score": -0.005101471397698454,
+      "anomaly_severity": 0.5012753650834767,
+      "anomaly_type": "Industry Outlier, Funding/Employee Ratio"
+    },
+    {
+      "name": "Beacon.li",
+      "industry": "Cloud Computing, Electronics",
+      "funding_amount": "$7,000,000",
+      "funding_type": "Series A",
+      "last_funding_date": "Mar 2025",
+      "anomaly_score": -0.005023865065692745,
+      "anomaly_severity": 0.5012559636247957,
+      "anomaly_type": "Complex Pattern"
+    },
+    {
+      "name": "Rakurai",
+      "industry": "Cloud Computing",
+      "funding_amount": "$3,000,000",
+      "funding_type": "Seed",
+      "last_funding_date": "Mar 2025",
+      "anomaly_score": -4.8632864543485255e-05,
+      "anomaly_severity": 0.5000121582161335,
+      "anomaly_type": "Complex Pattern"
+    },
+    {
+      "name": "Sayso",
+      "industry": "Artificial Intelligence, Cloud Computing",
+      "funding_amount": "$40,000,000",
+      "funding_type": "Seed",
+      "last_funding_date": "Mar 2025",
+      "anomaly_score": 0.012190297106435488,
+      "anomaly_severity": 0.4969524634628076,
+      "anomaly_type": "Unusual for Funding Stage"
+    }
+  ],
+  "summary": {
+    "total_companies": 1749,
+    "total_anomalies": 19,
+    "anomaly_rate": 0.010863350485991996,
+    "anomaly_by_funding_type": {
+      "Seed": 7,
+      "Pre-Seed": 3,
+      "Series A": 3,
+      "Series C": 2,
+      "Venture - Series Unknown": 2,
+      "Series B": 1,
+      "Series E": 1
+    },
+    "timestamp": "2025-04-22T23:58:54.418807"
+  }
+}

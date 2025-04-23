@@ -1,0 +1,16 @@
+from setuptools import setup, find_packages
+
+setup(
+    name="MLPredictiveAnalysis",
+    version="0.1",
+    packages=find_packages(),
+    install_requires=[
+        "pandas>=1.3.0",
+        "numpy>=1.21.0",
+        "matplotlib>=3.4.0",
+        "seaborn>=0.11.0",
+        "lifelines>=0.26.0",
+        "joblib>=1.0.0",
+        "schedule>=1.1.0",
+    ],
+) 

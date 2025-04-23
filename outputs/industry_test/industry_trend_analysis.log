@@ -1,0 +1,46 @@
+2025-04-22 17:38:32,425 - industry_trend_analysis - INFO - Industry Trend Analysis initialized
+2025-04-22 17:38:32,426 - industry_trend_analysis - INFO - Created default industry mappings at ./outputs/industry_test/industry_mappings.json
+2025-04-22 17:38:32,426 - industry_trend_analysis - INFO - Starting industry trend analysis pipeline
+2025-04-22 17:38:32,426 - industry_trend_analysis - INFO - Loading data from JSON files
+2025-04-22 17:38:32,429 - industry_trend_analysis - INFO - Loaded 1103 records from fundraiser data
+2025-04-22 17:38:32,429 - industry_trend_analysis - INFO - Loaded 100 records from growthlist data
+2025-04-22 17:38:32,431 - industry_trend_analysis - INFO - Loaded 546 records from topstartup data
+2025-04-22 17:38:32,436 - industry_trend_analysis - INFO - Created DataFrame with 1749 records and 27 columns
+2025-04-22 17:38:32,436 - industry_trend_analysis - INFO - Standardizing DataFrame
+2025-04-22 17:38:32,437 - industry_trend_analysis - INFO - Handling duplicate column: company_name
+2025-04-22 17:38:32,439 - industry_trend_analysis - INFO - Handling duplicate column: employees
+2025-04-22 17:38:32,440 - industry_trend_analysis - INFO - Handling duplicate column: industry
+2025-04-22 17:38:32,442 - industry_trend_analysis - INFO - Handling duplicate column: funding_date
+2025-04-22 17:38:32,443 - industry_trend_analysis - INFO - Handling duplicate column: funding_stage
+2025-04-22 17:38:32,454 - industry_trend_analysis - INFO - DataFrame standardization complete. Result has 1749 rows and 25 columns
+2025-04-22 17:38:32,454 - industry_trend_analysis - INFO - Standardizing DataFrame
+2025-04-22 17:38:32,460 - industry_trend_analysis - INFO - DataFrame standardization complete. Result has 1749 rows and 25 columns
+2025-04-22 17:38:32,460 - industry_trend_analysis - INFO - Normalizing industry categories
+2025-04-22 17:38:32,501 - industry_trend_analysis - INFO - Normalized to 132 industry categories
+2025-04-22 17:38:32,502 - industry_trend_analysis - INFO - Creating trend features for analysis
+2025-04-22 17:38:32,792 - industry_trend_analysis - INFO - Created time series features with 15 time periods
+2025-04-22 17:38:32,793 - industry_trend_analysis - INFO - Applying STL decomposition for trend analysis
+2025-04-22 17:38:32,989 - industry_trend_analysis - INFO - Completed trend analysis for 113 industries
+2025-04-22 17:38:32,989 - industry_trend_analysis - INFO - Identifying emerging industries
+2025-04-22 17:38:33,016 - industry_trend_analysis - INFO - Identified 0 emerging industries
+2025-04-22 17:38:33,017 - industry_trend_analysis - INFO - Identifying saturated industries
+2025-04-22 17:38:33,017 - industry_trend_analysis - INFO - Found 113 industries to analyze for saturation
+2025-04-22 17:38:33,018 - industry_trend_analysis - INFO - Decline-based saturated industry: Architecture, decline: -84.00%
+2025-04-22 17:38:33,019 - industry_trend_analysis - INFO - Decline-based saturated industry: Cloud Computing, decline: -90.00%
+2025-04-22 17:38:33,021 - industry_trend_analysis - INFO - Decline-based saturated industry: Energy, decline: -33.18%
+2025-04-22 17:38:33,023 - industry_trend_analysis - INFO - Decline-based saturated industry: Healthcare, decline: -50.00%
+2025-04-22 17:38:33,026 - industry_trend_analysis - INFO - Saturated industry candidate: Telecommunications, momentum: -0.6667, avg_momentum: -0.0684
+2025-04-22 17:38:33,026 - industry_trend_analysis - INFO - Decline calculation for Telecommunications: latest=82000000.0, max=164000000.0, decline=-50.00%
+2025-04-22 17:38:33,046 - industry_trend_analysis - INFO - Top saturated industry 1: Telecommunications, momentum: -66.67%, decline: -50.00%
+2025-04-22 17:38:33,046 - industry_trend_analysis - INFO - Top saturated industry 2: Cloud Computing, momentum: 0.00%, decline: -90.00%
+2025-04-22 17:38:33,046 - industry_trend_analysis - INFO - Top saturated industry 3: Architecture, momentum: 0.00%, decline: -84.00%
+2025-04-22 17:38:33,046 - industry_trend_analysis - INFO - Top saturated industry 4: Healthcare, momentum: 0.00%, decline: -50.00%
+2025-04-22 17:38:33,046 - industry_trend_analysis - INFO - Top saturated industry 5: Energy, momentum: 0.00%, decline: -33.18%
+2025-04-22 17:38:33,046 - industry_trend_analysis - INFO - Identified 1 potentially saturated industries
+2025-04-22 17:38:54,986 - industry_trend_analysis - INFO - Industry trend visualizations saved to outputs/industry_trends
+2025-04-22 17:38:54,986 - industry_trend_analysis - WARNING - No emerging industries to visualize
+2025-04-22 17:38:54,986 - industry_trend_analysis - INFO - Emerging industries visualization saved to outputs/industry_trends
+2025-04-22 17:38:55,082 - industry_trend_analysis - INFO - Created saturated industries visualization with 1 industries
+2025-04-22 17:38:55,082 - industry_trend_analysis - INFO - Saturated industries visualization saved to outputs/industry_trends
+2025-04-22 17:38:55,086 - industry_trend_analysis - INFO - Industry trend report generated at outputs/industry_trends/industry_trend_report.html
+2025-04-22 17:38:55,086 - industry_trend_analysis - INFO - Industry trend report generated: outputs/industry_trends/industry_trend_report.html

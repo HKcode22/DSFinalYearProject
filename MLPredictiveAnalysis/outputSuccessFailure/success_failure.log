@@ -1,0 +1,424 @@
+2025-04-22 22:37:43,178 - success_failure_prediction - INFO - Success/Failure Prediction system initialized
+2025-04-22 22:37:43,179 - success_failure_prediction - INFO - Starting success/failure prediction analysis
+2025-04-22 22:37:43,179 - success_failure_prediction - INFO - Step 1: Initializing component models
+2025-04-22 22:37:43,179 - success_failure_prediction - INFO - Initializing component prediction systems
+2025-04-22 22:37:43,186 - success_failure_prediction - ERROR - Error initializing components: [Errno 2] No such file or directory: '/Users/hk/Downloads/DSFinalYearProject/MLPredictiveAnalysis/outputSuccessFailure/anomaly_detection/anomaly_detection.log'
+2025-04-22 22:37:43,188 - success_failure_prediction - ERROR - Traceback (most recent call last):
+  File "/Users/hk/Downloads/DSFinalYearProject/MLPredictiveAnalysis/success_failure_prediction.py", line 146, in initialize_components
+    self.anomaly_detector = FundingAnomalyDetection(
+                            ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/hk/Downloads/DSFinalYearProject/MLPredictiveAnalysis/funding_anomaly_detection.py", line 48, in __init__
+    self.logger = self._setup_logging()
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/hk/Downloads/DSFinalYearProject/MLPredictiveAnalysis/funding_anomaly_detection.py", line 60, in _setup_logging
+    f_handler = logging.FileHandler(os.path.join(self.output_dir, 'anomaly_detection.log'))
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/logging/__init__.py", line 1231, in __init__
+    StreamHandler.__init__(self, self._open())
+                                 ^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/logging/__init__.py", line 1263, in _open
+    return open_func(self.baseFilename, self.mode,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '/Users/hk/Downloads/DSFinalYearProject/MLPredictiveAnalysis/outputSuccessFailure/anomaly_detection/anomaly_detection.log'
+
+2025-04-22 22:37:43,188 - success_failure_prediction - INFO - Step 2: Running component analyses
+2025-04-22 22:37:43,189 - success_failure_prediction - INFO - Running component analyses
+2025-04-22 22:37:43,189 - success_failure_prediction - INFO - Initializing component prediction systems
+2025-04-22 22:37:43,193 - success_failure_prediction - ERROR - Error initializing components: [Errno 2] No such file or directory: '/Users/hk/Downloads/DSFinalYearProject/MLPredictiveAnalysis/outputSuccessFailure/anomaly_detection/anomaly_detection.log'
+2025-04-22 22:37:43,194 - success_failure_prediction - ERROR - Traceback (most recent call last):
+  File "/Users/hk/Downloads/DSFinalYearProject/MLPredictiveAnalysis/success_failure_prediction.py", line 146, in initialize_components
+    self.anomaly_detector = FundingAnomalyDetection(
+                            ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/hk/Downloads/DSFinalYearProject/MLPredictiveAnalysis/funding_anomaly_detection.py", line 48, in __init__
+    self.logger = self._setup_logging()
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/hk/Downloads/DSFinalYearProject/MLPredictiveAnalysis/funding_anomaly_detection.py", line 60, in _setup_logging
+    f_handler = logging.FileHandler(os.path.join(self.output_dir, 'anomaly_detection.log'))
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/logging/__init__.py", line 1231, in __init__
+    StreamHandler.__init__(self, self._open())
+                                 ^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/logging/__init__.py", line 1263, in _open
+    return open_func(self.baseFilename, self.mode,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '/Users/hk/Downloads/DSFinalYearProject/MLPredictiveAnalysis/outputSuccessFailure/anomaly_detection/anomaly_detection.log'
+
+2025-04-22 22:37:43,194 - success_failure_prediction - INFO - Running funding stage prediction
+2025-04-22 22:37:43,196 - success_failure_prediction - INFO - Running funding continuation analysis
+2025-04-22 22:37:43,197 - success_failure_prediction - INFO - Running funding amount forecast
+2025-04-22 22:37:51,725 - success_failure_prediction - INFO - Running funding anomaly detection
+2025-04-22 22:37:51,725 - success_failure_prediction - ERROR - Error running component analyses: 'NoneType' object has no attribute 'run_analysis'
+2025-04-22 22:37:51,727 - success_failure_prediction - ERROR - Traceback (most recent call last):
+  File "/Users/hk/Downloads/DSFinalYearProject/MLPredictiveAnalysis/success_failure_prediction.py", line 195, in run_components
+    anomaly_results = self.anomaly_detector.run_analysis()
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'run_analysis'
+
+2025-04-22 22:37:51,729 - success_failure_prediction - INFO - Step 3: Integrating data
+2025-04-22 22:37:51,729 - success_failure_prediction - INFO - Integrating data from all components
+2025-04-22 22:37:51,729 - success_failure_prediction - WARNING - No base data found from component analyses, loading directly
+2025-04-22 22:37:51,730 - success_failure_prediction - ERROR - Error integrating data: object of type 'NoneType' has no len()
+2025-04-22 22:37:51,730 - success_failure_prediction - ERROR - Traceback (most recent call last):
+  File "/Users/hk/Downloads/DSFinalYearProject/MLPredictiveAnalysis/success_failure_prediction.py", line 260, in integrate_data
+    self.logger.info(f"Loaded base data from continuation analyzer: {len(base_data)} records")
+                                                                     ^^^^^^^^^^^^^^
+TypeError: object of type 'NoneType' has no len()
+
+2025-04-22 22:37:51,730 - success_failure_prediction - INFO - Step 4: Calculating success scores
+2025-04-22 22:37:51,730 - success_failure_prediction - INFO - Calculating success scores
+2025-04-22 22:37:51,730 - success_failure_prediction - WARNING - No stage information available, using default score
+2025-04-22 22:37:51,731 - success_failure_prediction - WARNING - No survival information available, estimating from stage
+2025-04-22 22:37:51,731 - success_failure_prediction - WARNING - No funding adequacy information available, using neutral score
+2025-04-22 22:37:51,731 - success_failure_prediction - WARNING - No industry momentum information available, using neutral score
+2025-04-22 22:37:51,732 - success_failure_prediction - WARNING - No anomaly detection information available, using optimistic score
+2025-04-22 22:37:51,733 - success_failure_prediction - INFO - Success scores calculated successfully
+2025-04-22 22:37:51,733 - success_failure_prediction - INFO - Step 5: Classifying startups
+2025-04-22 22:37:51,733 - success_failure_prediction - INFO - Classifying companies by success potential
+2025-04-22 22:37:51,736 - success_failure_prediction - INFO - Classification results: {'High Failure Risk': np.int64(0), 'Moderate Failure Risk': np.int64(0), 'Moderate Success Potential': np.int64(0), 'High Success Potential': np.int64(0)}
+2025-04-22 22:37:51,739 - success_failure_prediction - INFO - Classification completed successfully
+2025-04-22 22:37:51,740 - success_failure_prediction - INFO - Step 6: Generating visualizations
+2025-04-22 22:37:51,740 - success_failure_prediction - INFO - Generating visualizations
+2025-04-22 22:37:52,145 - success_failure_prediction - ERROR - Error generating visualizations: Could not interpret value `company_name` for `y`. An entry with this name does not appear in `data`.
+2025-04-22 22:37:52,148 - success_failure_prediction - ERROR - Traceback (most recent call last):
+  File "/Users/hk/Downloads/DSFinalYearProject/MLPredictiveAnalysis/success_failure_prediction.py", line 909, in visualize_results
+    ax = sns.barplot(x='success_score', y='company_name', data=top_companies)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/hk/Downloads/DSFinalYearProject/.venv/lib/python3.12/site-packages/seaborn/categorical.py", line 2341, in barplot
+    p = _CategoricalAggPlotter(
+        ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/hk/Downloads/DSFinalYearProject/.venv/lib/python3.12/site-packages/seaborn/categorical.py", line 67, in __init__
+    super().__init__(data=data, variables=variables)
+  File "/Users/hk/Downloads/DSFinalYearProject/.venv/lib/python3.12/site-packages/seaborn/_base.py", line 634, in __init__
+    self.assign_variables(data, variables)
+  File "/Users/hk/Downloads/DSFinalYearProject/.venv/lib/python3.12/site-packages/seaborn/_base.py", line 679, in assign_variables
+    plot_data = PlotData(data, variables)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/hk/Downloads/DSFinalYearProject/.venv/lib/python3.12/site-packages/seaborn/_core/data.py", line 58, in __init__
+    frame, names, ids = self._assign_variables(data, variables)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/hk/Downloads/DSFinalYearProject/.venv/lib/python3.12/site-packages/seaborn/_core/data.py", line 232, in _assign_variables
+    raise ValueError(err)
+ValueError: Could not interpret value `company_name` for `y`. An entry with this name does not appear in `data`.
+
+2025-04-22 22:37:52,149 - success_failure_prediction - INFO - Step 7: Generating report
+2025-04-22 22:37:52,149 - success_failure_prediction - INFO - Generating success/failure prediction report
+2025-04-22 22:37:52,149 - success_failure_prediction - ERROR - Error generating report: division by zero
+2025-04-22 22:37:52,150 - success_failure_prediction - ERROR - Traceback (most recent call last):
+  File "/Users/hk/Downloads/DSFinalYearProject/MLPredictiveAnalysis/success_failure_prediction.py", line 997, in generate_report
+    percentage = count / len(classified_data) * 100
+                 ~~~~~~^~~~~~~~~~~~~~~~~~~~~~
+ZeroDivisionError: division by zero
+
+2025-04-22 22:37:52,151 - success_failure_prediction - INFO - Saved predictions to: ./outputSuccessFailure/success_failure_predictions.csv
+2025-04-22 22:37:52,151 - success_failure_prediction - INFO - Analysis complete. Overall success rate: nan%
+2025-04-22 22:37:52,151 - success_failure_prediction - INFO - Total companies analyzed: 0
+2025-04-22 22:37:52,151 - success_failure_prediction - INFO - Predicted successful: 0 (nan%)
+2025-04-22 22:37:52,151 - success_failure_prediction - INFO - Predicted unsuccessful: 0 (nan%)
+2025-04-22 22:39:44,223 - success_failure_prediction - INFO - Success/Failure Prediction system initialized
+2025-04-22 22:39:44,223 - success_failure_prediction - INFO - Starting success/failure prediction analysis
+2025-04-22 22:39:44,223 - success_failure_prediction - INFO - Step 1: Initializing component models
+2025-04-22 22:39:44,223 - success_failure_prediction - INFO - Initializing component prediction systems
+2025-04-22 22:39:44,231 - success_failure_prediction - INFO - All component systems initialized successfully
+2025-04-22 22:39:44,231 - success_failure_prediction - INFO - Step 2: Running component analyses
+2025-04-22 22:39:44,231 - success_failure_prediction - INFO - Running component analyses
+2025-04-22 22:39:44,231 - success_failure_prediction - INFO - Running funding stage prediction
+2025-04-22 22:39:44,232 - success_failure_prediction - INFO - Running funding continuation analysis
+2025-04-22 22:39:44,232 - success_failure_prediction - INFO - Running funding amount forecast
+2025-04-22 22:39:52,873 - success_failure_prediction - INFO - Running funding anomaly detection
+2025-04-22 22:39:55,074 - success_failure_prediction - INFO - Running industry trend analysis
+2025-04-22 22:39:55,075 - success_failure_prediction - INFO - All component analyses completed successfully
+2025-04-22 22:39:55,075 - success_failure_prediction - INFO - Step 3: Integrating data
+2025-04-22 22:39:55,075 - success_failure_prediction - INFO - Integrating data from all components
+2025-04-22 22:39:55,075 - success_failure_prediction - INFO - Loading data directly from JSON files
+2025-04-22 22:39:55,079 - success_failure_prediction - INFO - Loaded 100 records from growthlistscrapper.json
+2025-04-22 22:39:55,081 - success_failure_prediction - INFO - Loaded 546 records from topstartupio50.json
+2025-04-22 22:39:55,082 - success_failure_prediction - INFO - Combined 646 records from all JSON files
+2025-04-22 22:39:55,083 - success_failure_prediction - INFO - Successfully integrated data: 646 records with 20 features
+2025-04-22 22:39:55,083 - success_failure_prediction - INFO - Step 4: Calculating success scores
+2025-04-22 22:39:55,083 - success_failure_prediction - INFO - Calculating success scores
+2025-04-22 22:39:55,085 - success_failure_prediction - WARNING - No survival information available, estimating from stage
+2025-04-22 22:39:55,089 - success_failure_prediction - WARNING - No anomaly detection information available, using optimistic score
+2025-04-22 22:39:55,090 - success_failure_prediction - INFO - Success scores calculated successfully
+2025-04-22 22:39:55,090 - success_failure_prediction - INFO - Step 5: Classifying startups
+2025-04-22 22:39:55,090 - success_failure_prediction - INFO - Classifying companies by success potential
+2025-04-22 22:39:55,093 - success_failure_prediction - INFO - Classification results: {'High Failure Risk': np.int64(24), 'Moderate Failure Risk': np.int64(7), 'Moderate Success Potential': np.int64(1), 'High Success Potential': np.int64(0)}
+2025-04-22 22:39:55,096 - success_failure_prediction - INFO - Classification completed successfully
+2025-04-22 22:39:55,096 - success_failure_prediction - INFO - Step 6: Generating visualizations
+2025-04-22 22:39:55,096 - success_failure_prediction - INFO - Generating visualizations
+2025-04-22 22:39:56,061 - success_failure_prediction - INFO - Generated visualizations successfully in ./outputSuccessFailure/visualizations
+2025-04-22 22:39:56,062 - success_failure_prediction - INFO - Step 7: Generating report
+2025-04-22 22:39:56,062 - success_failure_prediction - INFO - Generating success/failure prediction report
+2025-04-22 22:39:56,066 - success_failure_prediction - INFO - Generated report successfully: ./outputSuccessFailure/success_failure_report.txt
+2025-04-22 22:39:56,073 - success_failure_prediction - INFO - Saved predictions to: ./outputSuccessFailure/success_failure_predictions.csv
+2025-04-22 22:39:56,073 - success_failure_prediction - INFO - Analysis complete. Overall success rate: 0.2%
+2025-04-22 22:39:56,074 - success_failure_prediction - INFO - Total companies analyzed: 646
+2025-04-22 22:39:56,074 - success_failure_prediction - INFO - Predicted successful: 1 (0.2%)
+2025-04-22 22:39:56,074 - success_failure_prediction - INFO - Predicted unsuccessful: 645 (99.8%)
+2025-04-22 23:30:43,872 - success_failure_prediction - INFO - Success/Failure Prediction system initialized
+2025-04-22 23:30:43,872 - success_failure_prediction - INFO - Starting success/failure prediction analysis
+2025-04-22 23:30:43,872 - success_failure_prediction - INFO - Step 1: Initializing component models
+2025-04-22 23:30:43,872 - success_failure_prediction - INFO - Initializing component prediction systems
+2025-04-22 23:30:43,873 - success_failure_prediction - ERROR - Error initializing components: unable to open database file
+2025-04-22 23:30:43,875 - success_failure_prediction - ERROR - Traceback (most recent call last):
+  File "/Users/hk/Downloads/DSFinalYearProject/MLPredictiveAnalysis/success_failure_prediction.py", line 140, in initialize_components
+    self.stage_predictor = FundingStagePipeline(
+                           ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/hk/Downloads/DSFinalYearProject/MLPredictiveAnalysis/funding_stage_prediction.py", line 1390, in __init__
+    super().__init__(*args, **kwargs)
+  File "/Users/hk/Downloads/DSFinalYearProject/MLPredictiveAnalysis/funding_stage_prediction.py", line 1244, in __init__
+    self.data_loader = DataLoader(base_dir, archive=archive)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/hk/Downloads/DSFinalYearProject/MLPredictiveAnalysis/funding_stage_prediction.py", line 56, in __init__
+    self._init_historical_db()
+  File "/Users/hk/Downloads/DSFinalYearProject/MLPredictiveAnalysis/funding_stage_prediction.py", line 92, in _init_historical_db
+    conn = sqlite3.connect(self.historical_db)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+sqlite3.OperationalError: unable to open database file
+
+2025-04-22 23:30:43,875 - success_failure_prediction - INFO - Step 2: Running component analyses
+2025-04-22 23:30:43,875 - success_failure_prediction - INFO - Running component analyses
+2025-04-22 23:30:43,875 - success_failure_prediction - INFO - Initializing component prediction systems
+2025-04-22 23:30:43,875 - success_failure_prediction - ERROR - Error initializing components: unable to open database file
+2025-04-22 23:30:43,876 - success_failure_prediction - ERROR - Traceback (most recent call last):
+  File "/Users/hk/Downloads/DSFinalYearProject/MLPredictiveAnalysis/success_failure_prediction.py", line 140, in initialize_components
+    self.stage_predictor = FundingStagePipeline(
+                           ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/hk/Downloads/DSFinalYearProject/MLPredictiveAnalysis/funding_stage_prediction.py", line 1390, in __init__
+    super().__init__(*args, **kwargs)
+  File "/Users/hk/Downloads/DSFinalYearProject/MLPredictiveAnalysis/funding_stage_prediction.py", line 1244, in __init__
+    self.data_loader = DataLoader(base_dir, archive=archive)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/hk/Downloads/DSFinalYearProject/MLPredictiveAnalysis/funding_stage_prediction.py", line 56, in __init__
+    self._init_historical_db()
+  File "/Users/hk/Downloads/DSFinalYearProject/MLPredictiveAnalysis/funding_stage_prediction.py", line 92, in _init_historical_db
+    conn = sqlite3.connect(self.historical_db)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+sqlite3.OperationalError: unable to open database file
+
+2025-04-22 23:30:43,876 - success_failure_prediction - INFO - Running funding stage prediction
+2025-04-22 23:30:43,876 - success_failure_prediction - ERROR - Error running component analyses: 'NoneType' object has no attribute 'run'
+2025-04-22 23:30:43,876 - success_failure_prediction - ERROR - Traceback (most recent call last):
+  File "/Users/hk/Downloads/DSFinalYearProject/MLPredictiveAnalysis/success_failure_prediction.py", line 193, in run_components
+    stage_results = self.stage_predictor.run()
+                    ^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'run'
+
+2025-04-22 23:30:43,876 - success_failure_prediction - INFO - Step 3: Integrating data
+2025-04-22 23:30:43,876 - success_failure_prediction - INFO - Integrating data from all components
+2025-04-22 23:30:43,876 - success_failure_prediction - INFO - Loading data directly from JSON files
+2025-04-22 23:30:43,877 - success_failure_prediction - ERROR - Failed to load any data from JSON files
+2025-04-22 23:30:43,877 - success_failure_prediction - INFO - Step 4: Calculating success scores
+2025-04-22 23:30:43,877 - success_failure_prediction - INFO - Calculating success scores
+2025-04-22 23:30:43,877 - success_failure_prediction - WARNING - No stage information available, using default score
+2025-04-22 23:30:43,879 - success_failure_prediction - WARNING - No survival information available, estimating from stage
+2025-04-22 23:30:43,879 - success_failure_prediction - WARNING - No funding adequacy information available, using neutral score
+2025-04-22 23:30:43,879 - success_failure_prediction - WARNING - No industry momentum information available, using neutral score
+2025-04-22 23:30:43,880 - success_failure_prediction - WARNING - No anomaly detection information available, using optimistic score
+2025-04-22 23:30:43,882 - success_failure_prediction - INFO - Success scores calculated successfully
+2025-04-22 23:30:43,882 - success_failure_prediction - INFO - Step 5: Classifying startups
+2025-04-22 23:30:43,882 - success_failure_prediction - INFO - Classifying companies by success potential
+2025-04-22 23:30:43,889 - success_failure_prediction - INFO - Classification results: {'High Failure Risk': np.int64(0), 'Moderate Failure Risk': np.int64(0), 'Moderate Success Potential': np.int64(0), 'High Success Potential': np.int64(0)}
+2025-04-22 23:30:43,891 - success_failure_prediction - INFO - Classification completed successfully
+2025-04-22 23:30:43,891 - success_failure_prediction - INFO - Step 6: Generating visualizations
+2025-04-22 23:30:43,891 - success_failure_prediction - INFO - Generating visualizations
+2025-04-22 23:30:43,892 - success_failure_prediction - ERROR - No data available for visualization
+2025-04-22 23:30:43,892 - success_failure_prediction - INFO - Step 7: Generating report
+2025-04-22 23:30:43,892 - success_failure_prediction - INFO - Generating success/failure prediction report
+2025-04-22 23:30:43,892 - success_failure_prediction - ERROR - No data available for report generation
+2025-04-22 23:30:43,893 - success_failure_prediction - INFO - Saved predictions to: /Users/hk/Downloads/DSFinalYearProject/MLPredictiveAnalysis/outputSuccessFailure/success_failure_predictions.csv
+2025-04-22 23:30:43,894 - success_failure_prediction - INFO - Analysis complete. Overall success rate: nan%
+2025-04-22 23:30:43,894 - success_failure_prediction - INFO - Total companies analyzed: 0
+2025-04-22 23:30:43,894 - success_failure_prediction - INFO - Predicted successful: 0 (nan%)
+2025-04-22 23:30:43,894 - success_failure_prediction - INFO - Predicted unsuccessful: 0 (nan%)
+2025-04-22 23:31:41,274 - success_failure_prediction - INFO - Success/Failure Prediction system initialized
+2025-04-22 23:31:41,275 - success_failure_prediction - INFO - Starting success/failure prediction analysis
+2025-04-22 23:31:41,275 - success_failure_prediction - INFO - Step 1: Initializing component models
+2025-04-22 23:31:41,275 - success_failure_prediction - INFO - Initializing component prediction systems
+2025-04-22 23:31:41,283 - success_failure_prediction - INFO - All component systems initialized successfully
+2025-04-22 23:31:41,283 - success_failure_prediction - INFO - Step 2: Running component analyses
+2025-04-22 23:31:41,283 - success_failure_prediction - INFO - Running component analyses
+2025-04-22 23:31:41,283 - success_failure_prediction - INFO - Running funding stage prediction
+2025-04-22 23:34:56,636 - success_failure_prediction - INFO - Running funding continuation analysis
+2025-04-22 23:34:56,637 - success_failure_prediction - INFO - Running funding amount forecast
+2025-04-22 23:35:05,405 - success_failure_prediction - INFO - Running funding anomaly detection
+2025-04-22 23:35:07,728 - success_failure_prediction - INFO - Running industry trend analysis
+2025-04-22 23:35:07,728 - success_failure_prediction - INFO - All component analyses completed successfully
+2025-04-22 23:35:07,728 - success_failure_prediction - INFO - Step 3: Integrating data
+2025-04-22 23:35:07,728 - success_failure_prediction - INFO - Integrating data from all components
+2025-04-22 23:35:07,728 - success_failure_prediction - INFO - Loading data directly from JSON files
+2025-04-22 23:35:07,728 - success_failure_prediction - INFO - Checking file existence: /Users/hk/Downloads/DSFinalYearProject/JSONFolder/fundraisestartup50.json, exists: True
+2025-04-22 23:35:07,728 - success_failure_prediction - INFO - Checking file existence: /Users/hk/Downloads/DSFinalYearProject/JSONFolder/growthlistscrapper.json, exists: True
+2025-04-22 23:35:07,728 - success_failure_prediction - INFO - Checking file existence: /Users/hk/Downloads/DSFinalYearProject/JSONFolder/topstartupio50.json, exists: True
+2025-04-22 23:35:07,733 - success_failure_prediction - INFO - Loaded 1103 records from fundraisestartup50.json
+2025-04-22 23:35:07,734 - success_failure_prediction - INFO - Loaded 100 records from growthlistscrapper.json
+2025-04-22 23:35:07,737 - success_failure_prediction - INFO - Loaded 546 records from topstartupio50.json
+2025-04-22 23:35:07,780 - success_failure_prediction - INFO - Combined 1749 records from all JSON files
+2025-04-22 23:35:07,791 - success_failure_prediction - INFO - Successfully integrated data: 1748 records with 30 features
+2025-04-22 23:35:07,791 - success_failure_prediction - INFO - Step 4: Calculating success scores
+2025-04-22 23:35:07,791 - success_failure_prediction - INFO - Calculating success scores
+2025-04-22 23:35:07,793 - success_failure_prediction - WARNING - No survival information available, estimating from stage
+2025-04-22 23:35:07,801 - success_failure_prediction - WARNING - No anomaly detection information available, using optimistic score
+2025-04-22 23:35:07,802 - success_failure_prediction - INFO - Success scores calculated successfully
+2025-04-22 23:35:07,803 - success_failure_prediction - INFO - Step 5: Classifying startups
+2025-04-22 23:35:07,803 - success_failure_prediction - INFO - Classifying companies by success potential
+2025-04-22 23:35:07,806 - success_failure_prediction - INFO - Classification results: {'Moderate Failure Risk': np.int64(789), 'High Failure Risk': np.int64(407), 'Moderate Success Potential': np.int64(399), 'High Success Potential': np.int64(62)}
+2025-04-22 23:35:07,815 - success_failure_prediction - INFO - Classification completed successfully
+2025-04-22 23:35:07,815 - success_failure_prediction - INFO - Step 6: Generating visualizations
+2025-04-22 23:35:07,815 - success_failure_prediction - INFO - Generating visualizations
+2025-04-22 23:35:08,998 - success_failure_prediction - INFO - Generated visualizations successfully in /Users/hk/Downloads/DSFinalYearProject/MLPredictiveAnalysis/outputSuccessFailure/visualizations
+2025-04-22 23:35:08,999 - success_failure_prediction - INFO - Step 7: Generating report
+2025-04-22 23:35:08,999 - success_failure_prediction - INFO - Generating success/failure prediction report
+2025-04-22 23:35:09,005 - success_failure_prediction - INFO - Generated report successfully: /Users/hk/Downloads/DSFinalYearProject/MLPredictiveAnalysis/outputSuccessFailure/success_failure_report.txt
+2025-04-22 23:35:09,027 - success_failure_prediction - INFO - Saved predictions to: /Users/hk/Downloads/DSFinalYearProject/MLPredictiveAnalysis/outputSuccessFailure/success_failure_predictions.csv
+2025-04-22 23:35:09,027 - success_failure_prediction - INFO - Analysis complete. Overall success rate: 26.4%
+2025-04-22 23:35:09,027 - success_failure_prediction - INFO - Total companies analyzed: 1748
+2025-04-22 23:35:09,027 - success_failure_prediction - INFO - Predicted successful: 461 (26.4%)
+2025-04-22 23:35:09,027 - success_failure_prediction - INFO - Predicted unsuccessful: 1287 (73.6%)
+2025-04-22 23:43:58,384 - success_failure_prediction - INFO - Success/Failure Prediction system initialized
+2025-04-22 23:43:58,385 - success_failure_prediction - INFO - Starting success/failure prediction analysis
+2025-04-22 23:43:58,385 - success_failure_prediction - INFO - Step 1: Initializing component models
+2025-04-22 23:43:58,385 - success_failure_prediction - INFO - Initializing component prediction systems
+2025-04-22 23:43:58,393 - success_failure_prediction - INFO - All component systems initialized successfully
+2025-04-22 23:43:58,393 - success_failure_prediction - INFO - Step 2: Running component analyses
+2025-04-22 23:43:58,393 - success_failure_prediction - INFO - Running component analyses
+2025-04-22 23:43:58,393 - success_failure_prediction - INFO - Running funding stage prediction
+2025-04-22 23:47:08,377 - success_failure_prediction - INFO - Running funding continuation analysis
+2025-04-22 23:47:08,377 - success_failure_prediction - INFO - Running funding amount forecast
+2025-04-22 23:47:18,209 - success_failure_prediction - INFO - Running funding anomaly detection
+2025-04-22 23:47:20,222 - success_failure_prediction - INFO - Running industry trend analysis
+2025-04-22 23:47:20,223 - success_failure_prediction - INFO - All component analyses completed successfully
+2025-04-22 23:47:20,223 - success_failure_prediction - INFO - Step 3: Integrating data
+2025-04-22 23:47:20,223 - success_failure_prediction - INFO - Integrating data from all components
+2025-04-22 23:47:20,223 - success_failure_prediction - INFO - Loading data directly from JSON files
+2025-04-22 23:47:20,224 - success_failure_prediction - INFO - Checking file existence: /Users/hk/Downloads/DSFinalYearProject/JSONFolder/fundraisestartup50.json, exists: True
+2025-04-22 23:47:20,224 - success_failure_prediction - INFO - Checking file existence: /Users/hk/Downloads/DSFinalYearProject/JSONFolder/growthlistscrapper.json, exists: True
+2025-04-22 23:47:20,224 - success_failure_prediction - INFO - Checking file existence: /Users/hk/Downloads/DSFinalYearProject/JSONFolder/topstartupio50.json, exists: True
+2025-04-22 23:47:20,227 - success_failure_prediction - INFO - Loaded 1103 records from fundraisestartup50.json
+2025-04-22 23:47:20,229 - success_failure_prediction - INFO - Loaded 100 records from growthlistscrapper.json
+2025-04-22 23:47:20,234 - success_failure_prediction - INFO - Loaded 546 records from topstartupio50.json
+2025-04-22 23:47:20,277 - success_failure_prediction - INFO - Combined 1749 records from all JSON files
+2025-04-22 23:47:20,286 - success_failure_prediction - INFO - Successfully integrated data: 1748 records with 30 features
+2025-04-22 23:47:20,287 - success_failure_prediction - INFO - Step 4: Calculating success scores
+2025-04-22 23:47:20,287 - success_failure_prediction - INFO - Calculating success scores
+2025-04-22 23:47:20,298 - success_failure_prediction - WARNING - No survival information available, estimating from stage and funding
+2025-04-22 23:47:20,320 - success_failure_prediction - WARNING - No anomaly detection information available, using optimistic score
+2025-04-22 23:47:20,321 - success_failure_prediction - INFO - Success scores calculated successfully
+2025-04-22 23:47:20,321 - success_failure_prediction - INFO - Step 5: Classifying startups
+2025-04-22 23:47:20,322 - success_failure_prediction - INFO - Classifying companies by success potential
+2025-04-22 23:47:20,323 - success_failure_prediction - INFO - Dynamic thresholds - Low: 41.6, Medium: 50.3, High: 58.9
+2025-04-22 23:47:20,325 - success_failure_prediction - INFO - Classification results: {'Moderate Success Potential': np.int64(488), 'Moderate Failure Risk': np.int64(424), 'High Failure Risk': np.int64(386), 'High Success Potential': np.int64(359)}
+2025-04-22 23:47:20,336 - success_failure_prediction - INFO - Classification completed successfully
+2025-04-22 23:47:20,336 - success_failure_prediction - INFO - Step 6: Generating visualizations
+2025-04-22 23:47:20,336 - success_failure_prediction - INFO - Generating visualizations
+2025-04-22 23:47:21,420 - success_failure_prediction - INFO - Generated visualizations successfully in /Users/hk/Downloads/DSFinalYearProject/MLPredictiveAnalysis/outputSuccessFailure/visualizations
+2025-04-22 23:47:21,420 - success_failure_prediction - INFO - Step 7: Generating report
+2025-04-22 23:47:21,420 - success_failure_prediction - INFO - Generating success/failure prediction report
+2025-04-22 23:47:21,427 - success_failure_prediction - INFO - Generated report successfully: /Users/hk/Downloads/DSFinalYearProject/MLPredictiveAnalysis/outputSuccessFailure/success_failure_report.txt
+2025-04-22 23:47:21,457 - success_failure_prediction - INFO - Saved predictions to: /Users/hk/Downloads/DSFinalYearProject/MLPredictiveAnalysis/outputSuccessFailure/success_failure_predictions.csv
+2025-04-22 23:47:21,459 - success_failure_prediction - INFO - Analysis complete. Overall success rate: 48.5%
+2025-04-22 23:47:21,459 - success_failure_prediction - INFO - Total companies analyzed: 1748
+2025-04-22 23:47:21,459 - success_failure_prediction - INFO - Predicted successful: 847 (48.5%)
+2025-04-22 23:47:21,459 - success_failure_prediction - INFO - Predicted unsuccessful: 901 (51.5%)
+2025-04-22 23:47:21,459 - success_failure_prediction - INFO - Classification breakdown:
+2025-04-22 23:47:21,459 - success_failure_prediction - INFO - - High Success Potential: 359 (20.5%)
+2025-04-22 23:47:21,459 - success_failure_prediction - INFO - - Moderate Success Potential: 488 (27.9%)
+2025-04-22 23:47:21,460 - success_failure_prediction - INFO - - Moderate Failure Risk: 424 (24.3%)
+2025-04-22 23:47:21,460 - success_failure_prediction - INFO - - High Failure Risk: 386 (22.1%)
+2025-04-22 23:47:21,462 - success_failure_prediction - INFO - Top performing industries:
+2025-04-22 23:47:21,462 - success_failure_prediction - INFO - - : 86.5% success rate (based on 547 companies)
+2025-04-22 23:47:21,462 - success_failure_prediction - INFO - - mechanical or industrial engineering: 66.7% success rate (based on 3 companies)
+2025-04-22 23:47:21,462 - success_failure_prediction - INFO - - information technology & services: 62.8% success rate (based on 446 companies)
+2025-04-22 23:47:21,463 - success_failure_prediction - INFO - Lowest performing industries:
+2025-04-22 23:47:21,463 - success_failure_prediction - INFO - - Aerospace: 0.0% success rate (based on 1 companies)
+2025-04-22 23:47:21,463 - success_failure_prediction - INFO - - Agriculture, Food and Beverage, Artificial Intelligence, E-commerce: 0.0% success rate (based on 1 companies)
+2025-04-22 23:47:21,463 - success_failure_prediction - INFO - - Architecture, Media: 0.0% success rate (based on 1 companies)
+2025-04-22 23:47:21,465 - success_failure_prediction - INFO - Success rate by funding stage:
+2025-04-22 23:47:21,465 - success_failure_prediction - INFO - - Series D: 100.0% success rate (based on 84 companies)
+2025-04-22 23:47:21,465 - success_failure_prediction - INFO - - Series E: 100.0% success rate (based on 39 companies)
+2025-04-22 23:47:21,466 - success_failure_prediction - INFO - - Series F: 100.0% success rate (based on 23 companies)
+2025-04-22 23:47:21,466 - success_failure_prediction - INFO - - Series C: 92.2% success rate (based on 179 companies)
+2025-04-22 23:47:21,466 - success_failure_prediction - INFO - - Private Equity: 85.7% success rate (based on 28 companies)
+2025-04-22 23:47:21,466 - success_failure_prediction - INFO - - Series G: 85.7% success rate (based on 7 companies)
+2025-04-22 23:47:21,466 - success_failure_prediction - INFO - - Series B: 77.1% success rate (based on 223 companies)
+2025-04-22 23:47:21,466 - success_failure_prediction - INFO - - Series A: 60.1% success rate (based on 313 companies)
+2025-04-22 23:47:21,466 - success_failure_prediction - INFO - - Debt Financing: 53.5% success rate (based on 43 companies)
+2025-04-22 23:47:21,466 - success_failure_prediction - INFO - - Venture - Series Unknown: 30.8% success rate (based on 172 companies)
+2025-04-22 23:47:21,466 - success_failure_prediction - INFO - - Series H: 28.6% success rate (based on 7 companies)
+2025-04-22 23:47:21,466 - success_failure_prediction - INFO - - Undisclosed: 20.0% success rate (based on 25 companies)
+2025-04-22 23:47:21,466 - success_failure_prediction - INFO - - Seed: 7.2% success rate (based on 349 companies)
+2025-04-22 23:47:21,466 - success_failure_prediction - INFO - - Pre-Seed: 1.6% success rate (based on 122 companies)
+2025-04-22 23:47:21,466 - success_failure_prediction - INFO - - Grant: 0.0% success rate (based on 67 companies)
+2025-04-22 23:54:45,925 - success_failure_prediction - INFO - Success/Failure Prediction system initialized
+2025-04-22 23:54:45,926 - success_failure_prediction - INFO - Starting success/failure prediction analysis
+2025-04-22 23:54:45,926 - success_failure_prediction - INFO - Step 1: Initializing component models
+2025-04-22 23:54:45,926 - success_failure_prediction - INFO - Initializing component prediction systems
+2025-04-22 23:54:45,934 - success_failure_prediction - INFO - All component systems initialized successfully
+2025-04-22 23:54:45,934 - success_failure_prediction - INFO - Step 2: Running component analyses
+2025-04-22 23:54:45,935 - success_failure_prediction - INFO - Running component analyses
+2025-04-22 23:54:45,935 - success_failure_prediction - INFO - Running funding stage prediction
+2025-04-22 23:58:42,307 - success_failure_prediction - INFO - Running funding continuation analysis
+2025-04-22 23:58:42,307 - success_failure_prediction - INFO - Running funding amount forecast
+2025-04-22 23:58:52,189 - success_failure_prediction - INFO - Running funding anomaly detection
+2025-04-22 23:58:54,422 - success_failure_prediction - INFO - Running industry trend analysis
+2025-04-22 23:58:54,422 - success_failure_prediction - INFO - All component analyses completed successfully
+2025-04-22 23:58:54,422 - success_failure_prediction - INFO - Step 3: Integrating data
+2025-04-22 23:58:54,423 - success_failure_prediction - INFO - Integrating data from all components
+2025-04-22 23:58:54,423 - success_failure_prediction - INFO - Loading data directly from JSON files
+2025-04-22 23:58:54,423 - success_failure_prediction - INFO - Checking file existence: /Users/hk/Downloads/DSFinalYearProject/JSONFolder/fundraisestartup50.json, exists: True
+2025-04-22 23:58:54,423 - success_failure_prediction - INFO - Checking file existence: /Users/hk/Downloads/DSFinalYearProject/JSONFolder/growthlistscrapper.json, exists: True
+2025-04-22 23:58:54,426 - success_failure_prediction - INFO - Checking file existence: /Users/hk/Downloads/DSFinalYearProject/JSONFolder/topstartupio50.json, exists: True
+2025-04-22 23:58:54,431 - success_failure_prediction - INFO - Loaded 1103 records from fundraisestartup50.json
+2025-04-22 23:58:54,432 - success_failure_prediction - INFO - Loaded 100 records from growthlistscrapper.json
+2025-04-22 23:58:54,435 - success_failure_prediction - INFO - Loaded 546 records from topstartupio50.json
+2025-04-22 23:58:54,480 - success_failure_prediction - INFO - Combined 1749 records from all JSON files
+2025-04-22 23:58:54,491 - success_failure_prediction - INFO - Successfully integrated data: 1748 records with 30 features
+2025-04-22 23:58:54,491 - success_failure_prediction - INFO - Step 4: Calculating success scores
+2025-04-22 23:58:54,492 - success_failure_prediction - INFO - Calculating success scores
+2025-04-22 23:58:54,504 - success_failure_prediction - WARNING - No survival information available, estimating from stage and funding
+2025-04-22 23:58:54,526 - success_failure_prediction - WARNING - No anomaly detection information available, using optimistic score
+2025-04-22 23:58:54,527 - success_failure_prediction - INFO - Success scores calculated successfully
+2025-04-22 23:58:54,527 - success_failure_prediction - INFO - Step 5: Classifying startups
+2025-04-22 23:58:54,527 - success_failure_prediction - INFO - Classifying companies by success potential
+2025-04-22 23:58:54,534 - success_failure_prediction - INFO - Optimistic thresholds - Low: 36.7, Medium: 45.2, High: 56.1
+2025-04-22 23:58:54,536 - success_failure_prediction - INFO - Classification results: {'Moderate Success Potential': np.int64(487), 'High Success Potential': np.int64(431), 'Moderate Failure Risk': np.int64(387), 'High Failure Risk': np.int64(352)}
+2025-04-22 23:58:54,549 - success_failure_prediction - INFO - Risk level distribution: {'Medium Risk': '718 (41.1%)', 'Low Risk': '477 (27.3%)', 'High Risk': '382 (21.9%)', 'Minimal Risk': '171 (9.8%)'}
+2025-04-22 23:58:54,549 - success_failure_prediction - INFO - Step 6: Generating visualizations
+2025-04-22 23:58:54,549 - success_failure_prediction - INFO - Generating visualizations
+2025-04-22 23:58:55,749 - success_failure_prediction - INFO - Generated visualizations successfully in /Users/hk/Downloads/DSFinalYearProject/MLPredictiveAnalysis/outputSuccessFailure/visualizations
+2025-04-22 23:58:55,750 - success_failure_prediction - INFO - Step 7: Generating report
+2025-04-22 23:58:55,750 - success_failure_prediction - INFO - Generating success/failure prediction report
+2025-04-22 23:58:55,755 - success_failure_prediction - INFO - Generated report successfully: /Users/hk/Downloads/DSFinalYearProject/MLPredictiveAnalysis/outputSuccessFailure/success_failure_report.txt
+2025-04-22 23:58:55,794 - success_failure_prediction - INFO - Saved predictions to: /Users/hk/Downloads/DSFinalYearProject/MLPredictiveAnalysis/outputSuccessFailure/success_failure_predictions.csv
+2025-04-22 23:58:55,795 - success_failure_prediction - INFO - Analysis complete. Overall success rate: 52.5%
+2025-04-22 23:58:55,795 - success_failure_prediction - INFO - Total companies analyzed: 1748
+2025-04-22 23:58:55,795 - success_failure_prediction - INFO - Predicted successful: 918 (52.5%)
+2025-04-22 23:58:55,795 - success_failure_prediction - INFO - Predicted unsuccessful: 830 (47.5%)
+2025-04-22 23:58:55,795 - success_failure_prediction - INFO - Classification breakdown:
+2025-04-22 23:58:55,795 - success_failure_prediction - INFO - - High Success Potential: 431 (24.7%)
+2025-04-22 23:58:55,795 - success_failure_prediction - INFO - - Moderate Success Potential: 487 (27.9%)
+2025-04-22 23:58:55,795 - success_failure_prediction - INFO - - Moderate Failure Risk: 387 (22.1%)
+2025-04-22 23:58:55,795 - success_failure_prediction - INFO - - High Failure Risk: 352 (20.1%)
+2025-04-22 23:58:55,797 - success_failure_prediction - INFO - Top performing industries:
+2025-04-22 23:58:55,797 - success_failure_prediction - INFO - - medical practice: 100.0% success rate (based on 2 companies)
+2025-04-22 23:58:55,797 - success_failure_prediction - INFO - - : 88.8% success rate (based on 547 companies)
+2025-04-22 23:58:55,797 - success_failure_prediction - INFO - - computer hardware: 70.0% success rate (based on 10 companies)
+2025-04-22 23:58:55,797 - success_failure_prediction - INFO - Lowest performing industries:
+2025-04-22 23:58:55,797 - success_failure_prediction - INFO - - Aerospace: 0.0% success rate (based on 1 companies)
+2025-04-22 23:58:55,797 - success_failure_prediction - INFO - - Agriculture, Food and Beverage, Artificial Intelligence, E-commerce: 0.0% success rate (based on 1 companies)
+2025-04-22 23:58:55,797 - success_failure_prediction - INFO - - Architecture, Media: 0.0% success rate (based on 1 companies)
+2025-04-22 23:58:55,799 - success_failure_prediction - INFO - Success rate by funding stage:
+2025-04-22 23:58:55,799 - success_failure_prediction - INFO - - Series D: 100.0% success rate (based on 84 companies)
+2025-04-22 23:58:55,799 - success_failure_prediction - INFO - - Series E: 100.0% success rate (based on 39 companies)
+2025-04-22 23:58:55,799 - success_failure_prediction - INFO - - Series F: 100.0% success rate (based on 23 companies)
+2025-04-22 23:58:55,799 - success_failure_prediction - INFO - - Series H: 100.0% success rate (based on 7 companies)
+2025-04-22 23:58:55,799 - success_failure_prediction - INFO - - Series C: 96.6% success rate (based on 179 companies)
+2025-04-22 23:58:55,799 - success_failure_prediction - INFO - - Series B: 93.7% success rate (based on 223 companies)
+2025-04-22 23:58:55,799 - success_failure_prediction - INFO - - Private Equity: 89.3% success rate (based on 28 companies)
+2025-04-22 23:58:55,799 - success_failure_prediction - INFO - - Series G: 85.7% success rate (based on 7 companies)
+2025-04-22 23:58:55,799 - success_failure_prediction - INFO - - Debt Financing: 76.7% success rate (based on 43 companies)
+2025-04-22 23:58:55,799 - success_failure_prediction - INFO - - Series A: 62.0% success rate (based on 313 companies)
+2025-04-22 23:58:55,800 - success_failure_prediction - INFO - - Venture - Series Unknown: 43.0% success rate (based on 172 companies)
+2025-04-22 23:58:55,800 - success_failure_prediction - INFO - - Undisclosed: 4.0% success rate (based on 25 companies)
+2025-04-22 23:58:55,800 - success_failure_prediction - INFO - - Seed: 0.6% success rate (based on 349 companies)
+2025-04-22 23:58:55,800 - success_failure_prediction - INFO - - Pre-Seed: 0.0% success rate (based on 122 companies)
+2025-04-22 23:58:55,800 - success_failure_prediction - INFO - - Grant: 0.0% success rate (based on 67 companies)

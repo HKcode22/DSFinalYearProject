@@ -4,15 +4,26 @@ import pandas as pd
 import numpy as np
 from datetime import datetime
 import logging
+import matplotlib
+# Set non-interactive backend before importing pyplot
+matplotlib.use('Agg')  # Use Agg backend which doesn't require a display
 import matplotlib.pyplot as plt
 import seaborn as sns
-from sklearn.model_selection import train_test_split
-from sklearn.ensemble import RandomForestClassifier
-from sklearn.metrics import accuracy_score, classification_report, confusion_matrix
+from sklearn.model_selection import train_test_split, GridSearchCV, RandomizedSearchCV
+from sklearn.ensemble import RandomForestClassifier, VotingClassifier
+from sklearn.metrics import (accuracy_score, classification_report, confusion_matrix, 
+                           roc_auc_score, roc_curve, auc)
+from sklearn.calibration import calibration_curve
+from sklearn.feature_selection import SelectFromModel
+from sklearn.preprocessing import label_binarize
+from scipy.stats import randint, uniform
+from imblearn.over_sampling import SMOTE
 import xgboost as xgb
 import joblib
 import sqlite3
 import traceback
+import glob
+import shutil
 
 # Configure logging
 logging.basicConfig(level=logging.INFO, 
@@ -22,22 +33,59 @@ logging.basicConfig(level=logging.INFO,
 logger = logging.getLogger(__name__)
 
 class DataLoader:
-    def __init__(self, base_dir="./"):
+    def __init__(self, base_dir="./", archive=False):
         """Initialize data loader with paths to data sources and historical database"""
         self.base_dir = base_dir
+        self.archive = archive
+        self.archive_dir = None
         self.historical_db = os.path.join(base_dir, "historical_funding_data.db")
         
-        # Define paths to source files
-        self.fundraiser_path = os.path.join(base_dir, "fundraise_data", 
-                                          "fundraise_data_20250414_152644", 
-                                          "startups_20250414_152644.json")
-        self.growthlist_path = os.path.join(base_dir, "growthlist_data", 
-                                          "growthlist_startups.json")
-        self.topstartup_path = os.path.join(base_dir, "topstartiorealtimedata", 
-                                          "2025-04-14", "topstartups_data.json")
+        # Define paths to source files in JSONFolder - fix for duplicated path
+        # If base_dir already contains JSONFolder, don't add it again
+        if os.path.basename(base_dir) == "JSONFolder" or os.path.exists(os.path.join(base_dir, "fundraisestartup50.json")):
+            self.json_folder = base_dir
+        else:
+            self.json_folder = os.path.join(base_dir, "JSONFolder")
+        
+        # Use the fixed json_folder path for file paths
+        self.fundraiser_path = os.path.join(self.json_folder, "fundraisestartup50.json")
+        self.growthlist_path = os.path.join(self.json_folder, "growthlistscrapper.json")
+        self.topstartup_path = os.path.join(self.json_folder, "topstartupio50.json")
         
         # Initialize the database for historical data
         self._init_historical_db()
+
+        # Archive data if enabled
+        if self.archive:
+            self.archive_dir = self._create_archive_dir()
+            self._archive_current_data()
+    
+    def _create_archive_dir(self):
+        """Create a timestamped archive directory for this run"""
+        archive_root = os.path.join(self.base_dir, "data_archive")
+        os.makedirs(archive_root, exist_ok=True)
+        timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
+        archive_dir = os.path.join(archive_root, timestamp)
+        os.makedirs(archive_dir, exist_ok=True)
+        return archive_dir
+
+    def _archive_current_data(self):
+        """Copy current data files into the archive directory"""
+        try:
+            if not self.archive_dir:
+                return
+            # Archive fundraiser data
+            if os.path.isfile(self.fundraiser_path):
+                shutil.copy2(self.fundraiser_path, os.path.join(self.archive_dir, "fundraiser.json"))
+            # Archive growthlist data
+            if os.path.isfile(self.growthlist_path):
+                shutil.copy2(self.growthlist_path, os.path.join(self.archive_dir, "growthlist.json"))
+            # Archive topstartup data
+            if os.path.isfile(self.topstartup_path):
+                shutil.copy2(self.topstartup_path, os.path.join(self.archive_dir, "topstartup.json"))
+            logger.info(f"Archived data files to {self.archive_dir}")
+        except Exception as e:
+            logger.error(f"Error archiving data: {e}")
     
     def _init_historical_db(self):
         """Create SQLite database tables if they don't exist"""
@@ -346,32 +394,24 @@ class DataLoader:
 
 class FeatureEngineering:
     def __init__(self):
-        """Initialize with funding stage mapping dictionary"""
-        self.funding_stage_map = {
-            'Pre-Seed': 0,
-            'Seed': 1,
-            'Series A': 2,
-            'Series B': 3,
-            'Series C': 4,
-            'Series D': 5,
-            'Series E': 6,
-            'Series F': 7,
-            'Private Equity': 8,
-            'Venture - Series Unknown': 9,
-            'Debt Financing': 10,
-            'Grant': 11,
-            'Unknown': 12  # Add Unknown stage mapping
-        }
-        
+        """Initialize with dynamic funding stage mapping"""
+        self.funding_stage_map = {}  # Will be populated dynamically
+
     def extract_features(self, df):
-        """Extract and engineer features from merged dataset"""
-        # Create a copy to avoid modifying original
+        """Dynamically create funding stage mapping"""
         data = df.copy()
         
-        # Convert funding stage to numeric (for ordered classification)
-        data['funding_stage_numeric'] = data['funding_stage'].apply(
-            lambda x: next((v for k, v in self.funding_stage_map.items() 
-                           if k in str(x)), self.funding_stage_map['Unknown'])
+        # Get unique stages from data
+        valid_stages = data['funding_stage'].dropna().unique()
+        self.funding_stage_map = {stage: idx for idx, stage in enumerate(sorted(valid_stages))}
+        
+        # Add Unknown category if needed
+        if 'Unknown' not in self.funding_stage_map:
+            self.funding_stage_map['Unknown'] = len(self.funding_stage_map)
+        
+        # Convert funding stage to numeric
+        data['funding_stage_numeric'] = data['funding_stage'].map(
+            lambda x: self.funding_stage_map.get(x, self.funding_stage_map['Unknown'])
         )
         
         # Handle dates and extract temporal features
@@ -438,9 +478,9 @@ class FeatureEngineering:
                 lambda x: x.split(',')[-1].strip() if isinstance(x, str) and ',' in x else x
             )
             
-            # Create location dummies
-            location_dummies = pd.get_dummies(data['location_category'], prefix='location')
-            data = pd.concat([data, location_dummies], axis=1)
+            # # Create location dummies
+            # location_dummies = pd.get_dummies(data['location_category'], prefix='location')
+            # data = pd.concat([data, location_dummies], axis=1)
         
         # Funding frequency features
         company_funding_counts = data.groupby('company_name').size()
@@ -599,13 +639,155 @@ class ModelTrainer:
             'label_map': label_map
         }
 
+class EnhancedModelTrainer(ModelTrainer):
+    def tune_random_forest(self, X, y):
+        """Hyperparameter tuning for Random Forest"""
+        param_grid = {
+            'n_estimators': [100, 200, 300],
+            'max_depth': [None, 10, 20],
+            'min_samples_split': [2, 5, 10],
+            'class_weight': ['balanced', None]
+        }
+        
+        rf = RandomForestClassifier(random_state=42)
+        grid_search = GridSearchCV(rf, param_grid, cv=3, scoring='accuracy', n_jobs=-1)
+        grid_search.fit(X, y)
+        
+        logger.info(f"Best RF params: {grid_search.best_params_}")
+        logger.info(f"Best RF accuracy: {grid_search.best_score_:.4f}")
+        return grid_search.best_estimator_
+
+    def tune_xgboost(self, X, y):
+        """Handle dynamic class counts in XGBoost"""
+        unique_classes = np.unique(y)
+        num_classes = len(unique_classes)
+        
+        param_dist = {
+            'learning_rate': uniform(0.01, 0.3),
+            'max_depth': randint(3, 10),
+            'subsample': uniform(0.6, 0.4),
+            'colsample_bytree': uniform(0.6, 0.4),
+            'gamma': uniform(0, 0.5),
+            'num_class': [num_classes]  # Critical fix
+        }
+        
+        xgb_model = xgb.XGBClassifier(
+            objective='multi:softmax',
+            n_estimators=200,
+            random_state=42
+        )
+        
+        random_search = RandomizedSearchCV(
+            xgb_model, param_dist, n_iter=25,
+            cv=3, scoring='accuracy', n_jobs=-1,
+            error_score='raise'  # Get detailed error reports
+        )
+        random_search.fit(X, y)
+        
+        logger.info(f"Best XGB params: {random_search.best_params_}")
+        logger.info(f"Best XGB accuracy: {random_search.best_score_:.4f}")
+        return random_search.best_estimator_
+
+class ModelManager:
+    """Manages model loading, versioning and prediction"""
+    def __init__(self, models_dir="./models"):
+        self.models_dir = models_dir
+        os.makedirs(models_dir, exist_ok=True)
+        self.loaded_models = {}
+
+    def load_model(self, model_path=None, model_type="latest"):
+        """Load a specific model or latest version"""
+        if model_path:
+            model = joblib.load(model_path)
+            return model
+
+        # Find latest model of specified type
+        model_files = glob.glob(os.path.join(self.models_dir, f"{model_type}_*.joblib"))
+        if not model_files:
+            raise FileNotFoundError(f"No {model_type} models found in {self.models_dir}")
+
+        # Sort by timestamp in filename
+        latest_model = sorted(model_files)[-1]
+
+        logger.info(f"Loading model: {latest_model}")
+        model = joblib.load(latest_model)
+        self.loaded_models[model_type] = model
+        return model
+
+    def save_model(self, model, model_type, metadata=None):
+        """Save model with versioning"""
+        timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
+        model_path = os.path.join(self.models_dir, f"{model_type}_{timestamp}.joblib")
+
+        # Save model with metadata
+        model_data = {
+            'model': model,
+            'metadata': metadata or {},
+            'timestamp': timestamp,
+            'type': model_type
+        }
+
+        joblib.dump(model_data, model_path)
+        logger.info(f"Saved {model_type} model to {model_path}")
+        return model_path
+
+    def predict(self, features, model_type="ensemble"):
+        """Make prediction using loaded model"""
+        if model_type not in self.loaded_models:
+            self.load_model(model_type=model_type)
+
+        model_data = self.loaded_models[model_type]
+
+        # Handle different model storage formats
+        if isinstance(model_data, dict) and 'model' in model_data:
+            model = model_data['model']
+        else:
+            model = model_data
+
+        # Handle different model types
+        if model_type == 'xgboost' and hasattr(model, 'predict_proba'):
+            return model.predict_proba([features])[0]
+
+        return model.predict([features])[0]
+
+    def predict_proba(self, features, model_type="ensemble"):
+        """Return prediction probabilities using loaded model"""
+        if model_type not in self.loaded_models:
+            self.load_model(model_type=model_type)
+        model_data = self.loaded_models[model_type]
+        if isinstance(model_data, dict) and 'model' in model_data:
+            model = model_data['model']
+        else:
+            model = model_data
+        if hasattr(model, 'predict_proba'):
+            return model.predict_proba([features])[0]
+        else:
+            return None
+
 class Visualizer:
-    def __init__(self, output_dir="./visualizations"):
+    def __init__(self, output_dir="./visualizations", interactive=False):
         """Initialize visualizer with output directory"""
         self.output_dir = output_dir
-        os.makedirs(output_dir, exist_ok=True)
+        self.interactive = interactive  # Set to False to prevent blocking terminal
+        
+        # Ensure output directory exists - critical fix
+        try:
+            os.makedirs(output_dir, exist_ok=True)
+            logger.info(f"Created visualization directory: {output_dir}")
+        except Exception as e:
+            logger.error(f"Error creating visualization directory: {e}")
+            # Fallback to a directory we know exists
+            self.output_dir = "./outputFundingStagePrediction/visualizations"
+            os.makedirs(self.output_dir, exist_ok=True)
+            
         self.timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
-    
+        self.palette = sns.color_palette("husl", 8)
+        self.feature_palettes = {
+            'categorical': sns.color_palette("Set3", 12),
+            'sequential': sns.color_palette("viridis", 8),
+            'diverging': sns.color_palette("RdYlBu", 11)
+        }
+
     def plot_funding_stage_distribution(self, data):
         """Visualize the distribution of funding stages"""
         plt.figure(figsize=(12, 6))
@@ -636,6 +818,8 @@ class Visualizer:
         
         plt.tight_layout()
         plt.savefig(os.path.join(self.output_dir, f"funding_stage_dist_{self.timestamp}.png"))
+        if self.interactive:
+            plt.show()
         plt.close()
     
     def plot_feature_importance(self, model, feature_names):
@@ -656,6 +840,8 @@ class Visualizer:
             plt.tight_layout()
             plt.savefig(os.path.join(self.output_dir, 
                                      f"feature_importance_{type(model).__name__}_{self.timestamp}.png"))
+            if self.interactive:
+                plt.show()
             plt.close()
     
     def plot_model_comparison(self, model_results):
@@ -681,6 +867,8 @@ class Visualizer:
         
         plt.tight_layout()
         plt.savefig(os.path.join(self.output_dir, f"model_comparison_{self.timestamp}.png"))
+        if self.interactive:
+            plt.show()
         plt.close()
     
     def plot_confusion_matrices(self, model_results):
@@ -698,6 +886,8 @@ class Visualizer:
         
         plt.tight_layout()
         plt.savefig(os.path.join(self.output_dir, f"confusion_matrices_{self.timestamp}.png"))
+        if self.interactive:
+            plt.show()
         plt.close()
     
     def plot_funding_vs_employees(self, data):
@@ -742,12 +932,304 @@ class Visualizer:
         
         plt.tight_layout()
         plt.savefig(os.path.join(self.output_dir, f"funding_vs_employees_{self.timestamp}.png"))
+        if self.interactive:
+            plt.show()
         plt.close()
 
+    def plot_feature_comparison_matrix(self, data, features):
+        """Create a grid of scatterplots for feature comparisons"""
+        plt.figure(figsize=(20, 15))
+        g = sns.PairGrid(data[features], palette=self.palette)
+        g.map_upper(sns.scatterplot, alpha=0.6)
+        g.map_lower(sns.kdeplot, fill=True)
+        g.map_diag(sns.histplot, kde=True)
+        plt.suptitle('Feature Comparison Matrix', y=1.02)
+        plt.savefig(os.path.join(self.output_dir, f"feature_matrix_{self.timestamp}.png"))
+        if self.interactive:
+            plt.show()
+        plt.close()
 
+    def plot_correlation_heatmap(self, data):
+        """Visualize feature correlations with funding stage"""
+        plt.figure(figsize=(15, 12))
+        corr = data.corr(numeric_only=True)
+        mask = np.triu(np.ones_like(corr, dtype=bool))
+        sns.heatmap(corr, mask=mask, annot=True, fmt=".2f", cmap='coolwarm', center=0)
+        plt.title("Feature Correlation Heatmap")
+        plt.xticks(rotation=45, ha='right')
+        plt.tight_layout()
+        plt.savefig(os.path.join(self.output_dir, f"correlation_heatmap_{self.timestamp}.png"))
+        if self.interactive:
+            plt.show()
+        plt.close()
+
+    def plot_temporal_trends(self, data):
+        """Analyze funding trends over time with industry breakdown"""
+        plt.figure(figsize=(18, 8))
+        
+        plt.subplot(1, 2, 1)
+        sns.lineplot(data=data, x='funding_year', y='funding_amount', 
+                    hue='industry_category', estimator='median', errorbar=None)
+        plt.title('Median Funding Amount by Year')
+        plt.ylabel('USD (log scale)')
+        plt.yscale('log')
+        
+        plt.subplot(1, 2, 2)
+        funding_counts = data.groupby(['funding_year', 'industry_category']).size().reset_index()
+        sns.lineplot(data=funding_counts, x='funding_year', y=0, hue='industry_category')
+        plt.title('Funding Round Frequency by Year')
+        plt.ylabel('Number of Rounds')
+        
+        plt.tight_layout()
+        plt.savefig(os.path.join(self.output_dir, f"temporal_trends_{self.timestamp}.png"))
+        if self.interactive:
+            plt.show()
+        plt.close()
+
+    def plot_industry_distributions(self, data):
+        """Compare funding patterns across industries"""
+        plt.figure(figsize=(15, 8))
+        
+        plt.subplot(1, 2, 1)
+        sns.boxplot(data=data, x='industry_category', y='funding_amount', showfliers=False)
+        plt.yscale('log')
+        plt.title('Funding Amount Distribution by Industry')
+        plt.xticks(rotation=45)
+        
+        plt.subplot(1, 2, 2)
+        stage_dist = data.groupby(['industry_category', 'funding_stage']).size().unstack()
+        stage_dist.plot(kind='bar', stacked=True, ax=plt.gca())
+        plt.title('Funding Stage Distribution by Industry')
+        plt.ylabel('Number of Companies')
+        plt.xticks(rotation=45)
+        
+        plt.tight_layout()
+        plt.savefig(os.path.join(self.output_dir, f"industry_analysis_{self.timestamp}.png"))
+        if self.interactive:
+            plt.show()
+        plt.close()
+
+    def plot_advanced_feature_correlations(self, data, features):
+        """Create detailed feature correlation visualizations"""
+        plt.figure(figsize=(20, 16))
+        
+        # Advanced correlation heatmap
+        plt.subplot(2, 2, 1)
+        corr = data[features].corr()
+        mask = np.triu(np.ones_like(corr, dtype=bool))
+        sns.heatmap(corr, mask=mask, annot=True, fmt='.2f', 
+                   cmap='coolwarm', center=0, square=True)
+        plt.title('Feature Correlation Matrix')
+        
+        # Feature clustering
+        plt.subplot(2, 2, 2)
+        from scipy.cluster import hierarchy
+        corr_linkage = hierarchy.ward(corr)
+        sns.clustermap(corr, method='ward', cmap='coolwarm', 
+                      annot=True, fmt='.2f', figsize=(10, 10))
+        
+        # 3D scatter plot of top 3 features
+        plt.subplot(2, 2, 3, projection='3d')
+        top_features = features[:3]  # Use first 3 features
+        ax = plt.gca()
+        scatter = ax.scatter(data[top_features[0]], 
+                           data[top_features[1]], 
+                           data[top_features[2]],
+                           c=data['funding_stage_numeric'],
+                           cmap='viridis')
+        ax.set_xlabel(top_features[0])
+        ax.set_ylabel(top_features[1])
+        ax.set_zlabel(top_features[2])
+        plt.colorbar(scatter, label='Funding Stage')
+        
+        plt.tight_layout()
+        plt.savefig(os.path.join(self.output_dir, 
+                                f"advanced_correlations_{self.timestamp}.png"))
+        if self.interactive:
+            plt.show()
+        plt.close()
+
+    def plot_feature_distributions(self, data, features):
+        """Plot detailed feature distributions"""
+        n_features = len(features)
+        fig = plt.figure(figsize=(15, n_features * 3))
+        
+        for idx, feature in enumerate(features, 1):
+            # Distribution plot
+            plt.subplot(n_features, 2, 2*idx-1)
+            sns.histplot(data=data, x=feature, hue='funding_stage',
+                        multiple="stack", palette=self.feature_palettes['categorical'])
+            plt.title(f'{feature} Distribution by Funding Stage')
+            plt.xticks(rotation=45)
+            
+            # Box plot
+            plt.subplot(n_features, 2, 2*idx)
+            sns.boxplot(data=data, y=feature, x='funding_stage',
+                       palette=self.feature_palettes['sequential'])
+            plt.xticks(rotation=45)
+            plt.title(f'{feature} Range by Funding Stage')
+        
+        plt.tight_layout()
+        plt.savefig(os.path.join(self.output_dir, 
+                                f"feature_distributions_{self.timestamp}.png"))
+        if self.interactive:
+            plt.show()
+        plt.close()
+
+    def plot_funding_patterns(self, data):
+        """Visualize complex funding patterns with interactive display"""
+        plt.figure(figsize=(20, 10))
+
+        # Funding amount distribution over time
+        plt.subplot(2, 2, 1)
+        sns.boxenplot(data=data, x='funding_year', y='funding_amount_log',
+                     palette=self.feature_palettes['sequential'])
+        plt.title('Funding Amount Distribution Over Time')
+        plt.xticks(rotation=45)
+
+        # Employee count vs Funding amount
+        plt.subplot(2, 2, 2)
+        sns.scatterplot(data=data, x='employees', y='funding_amount',
+                       hue='funding_stage', size='employee_efficiency',
+                       sizes=(20, 200), alpha=0.6,
+                       palette=self.feature_palettes['categorical'])
+        plt.yscale('log')
+        plt.xscale('log')
+        plt.title('Funding Amount vs Employee Count')
+
+        # Industry funding distribution
+        plt.subplot(2, 2, (3, 4))
+        industry_funding = data.groupby('industry_category')['funding_amount'].sum()
+        industry_funding.sort_values(ascending=True).plot(kind='barh',
+            color=self.feature_palettes['sequential'])
+        plt.title('Total Funding by Industry')
+
+        plt.tight_layout()
+        plt.savefig(os.path.join(self.output_dir, 
+                                f"funding_patterns_{self.timestamp}.png"))
+        if self.interactive:
+            plt.show()
+        plt.close()
+
+    def plot_pairwise_features(self, data, features):
+        """Plot pairwise feature relationships (scatter matrix)"""
+        sns.set(style="ticks")
+        pairplot = sns.pairplot(data[features + ['funding_stage']], hue='funding_stage', palette='tab10', diag_kind='kde')
+        plt.suptitle('Pairwise Feature Relationships', y=1.02)
+        plt.tight_layout()
+        plt.savefig(os.path.join(self.output_dir, f"pairwise_features_{self.timestamp}.png"))
+        if self.interactive:
+            plt.show()
+        plt.close()
+
+    def plot_full_correlation_heatmap(self, data):
+        """Plot a full correlation heatmap for all numeric features"""
+        plt.figure(figsize=(18, 14))
+        corr = data.corr(numeric_only=True)
+        mask = np.triu(np.ones_like(corr, dtype=bool))
+        sns.heatmap(corr, mask=mask, annot=True, fmt=".2f", cmap='coolwarm', center=0)
+        plt.title("Full Feature Correlation Heatmap")
+        plt.xticks(rotation=45, ha='right')
+        plt.tight_layout()
+        plt.savefig(os.path.join(self.output_dir, f"full_correlation_heatmap_{self.timestamp}.png"))
+        if self.interactive:
+            plt.show()
+        plt.close()
+
+    def plot_violin_funding_by_stage(self, data):
+        """Plot violin plot of funding amount by funding stage"""
+        plt.figure(figsize=(14, 8))
+        sns.violinplot(data=data, x='funding_stage', y='funding_amount', scale='width', inner='quartile', palette='Set2')
+        plt.yscale('log')
+        plt.title('Funding Amount Distribution by Stage (Violin Plot)')
+        plt.xticks(rotation=45)
+        plt.tight_layout()
+        plt.savefig(os.path.join(self.output_dir, f"violin_funding_by_stage_{self.timestamp}.png"))
+        if self.interactive:
+            plt.show()
+        plt.close()
+
+class AdvancedVisualizer(Visualizer):
+    def plot_roc_curves(self, y_true, y_proba, classes):
+        plt.figure(figsize=(10, 8))
+        y_bin = label_binarize(y_true, classes=classes)
+        n_classes = len(classes)
+        fpr = dict()
+        tpr = dict()
+        roc_auc = dict()
+        for i in range(n_classes):
+            fpr[i], tpr[i], _ = roc_curve(y_bin[:, i], y_proba[:, i])
+            roc_auc[i] = auc(fpr[i], tpr[i])
+        colors = plt.colormaps['tab10'](np.linspace(0, 1, n_classes))
+        for i, color in zip(range(n_classes), colors):
+            plt.plot(fpr[i], tpr[i], color=color, lw=2,
+                    label=f'ROC curve (class {classes[i]}, AUC = {roc_auc[i]:0.2f})')
+        plt.plot([0, 1], [0, 1], 'k--', lw=2)
+        plt.xlim([0.0, 1.0])
+        plt.ylim([0.0, 1.05])
+        plt.xlabel('False Positive Rate')
+        plt.ylabel('True Positive Rate')
+        plt.title('ROC Curves')
+        plt.legend(loc="lower right", fontsize='small')
+        plt.grid(True, alpha=0.3)
+        plt.savefig(os.path.join(self.output_dir, "roc_curves.png"))
+        if self.interactive:
+            plt.show()
+        plt.close()
+
+    def plot_calibration(self, y_true, y_proba, n_bins=10):
+        plt.figure(figsize=(10, 6))
+        if y_proba.ndim == 1:
+            logger.warning("Converting 1D probability array to 2D")
+            y_proba = np.column_stack([1 - y_proba, y_proba])
+        n_classes = y_proba.shape[1]
+        for class_idx in range(n_classes):
+            try:
+                binary_y = (y_true == class_idx).astype(int)
+                class_proba = y_proba[:, class_idx]
+                prob_true, prob_pred = calibration_curve(
+                    binary_y, class_proba, n_bins=n_bins, strategy='quantile'
+                )
+                plt.plot(prob_pred, prob_true, marker='o', 
+                        label=f'Class {class_idx}', alpha=0.7)
+            except Exception as e:
+                logger.warning(f"Skipping calibration for class {class_idx}: {str(e)}")
+                continue
+        plt.plot([0, 1], [0, 1], linestyle='--', color='gray')
+        plt.xlabel('Mean Predicted Probability')
+        plt.ylabel('Observed Fraction')
+        plt.title('Calibration Plot (One-vs-Rest)')
+        plt.legend(loc='upper left', fontsize='small')
+        plt.grid(True, alpha=0.3)
+        plt.savefig(os.path.join(self.output_dir, "calibration_plot.png"))
+        if self.interactive:
+            plt.show()
+        plt.close()
+
+    def plot_confidence_intervals(self, y_true, y_pred, y_proba):
+        plt.figure(figsize=(12, 6))
+        confidence = np.max(y_proba, axis=1)
+        bins = np.linspace(0, 1, 11)
+        bin_centers = (bins[:-1] + bins[1:]) / 2
+        accuracies = []
+        for i in range(len(bins)-1):
+            mask = (confidence >= bins[i]) & (confidence < bins[i+1])
+            if mask.sum() > 0:
+                acc = accuracy_score(y_true[mask], y_pred[mask])
+            else:
+                acc = 0
+            accuracies.append(acc)
+        plt.errorbar(bin_centers, accuracies, xerr=0.05, fmt='o')
+        plt.xlabel('Prediction Confidence')
+        plt.ylabel('Accuracy')
+        plt.title('Confidence vs Accuracy')
+        plt.savefig(os.path.join(self.output_dir, "confidence_intervals.png"))
+        if self.interactive:
+            plt.show()
+        plt.close()
 
 class FundingStagePredictionPipeline:
-    def __init__(self, base_dir="./", output_dir="./output"):
+    def __init__(self, base_dir="./", output_dir="./output", archive=False):
         """Initialize the complete pipeline"""
         self.base_dir = base_dir
         self.output_dir = output_dir
@@ -759,7 +1241,7 @@ class FundingStagePredictionPipeline:
         os.makedirs(self.viz_dir, exist_ok=True)
         
         # Initialize components
-        self.data_loader = DataLoader(base_dir)
+        self.data_loader = DataLoader(base_dir, archive=archive)
         self.feature_engineer = FeatureEngineering()
         self.model_trainer = ModelTrainer(self.models_dir)
         self.visualizer = Visualizer(self.viz_dir)
@@ -806,6 +1288,25 @@ class FundingStagePredictionPipeline:
             self.visualizer.plot_feature_importance(xgb_model, X.columns)
             self.visualizer.plot_model_comparison(model_results)
             self.visualizer.plot_funding_vs_employees(processed_data)
+
+            # Enhanced visualizations
+            key_features = [
+                'funding_amount_log', 'employees',
+                'employee_efficiency', 'previous_rounds',
+                'months_since_first_funding', 'funding_year', 'funding_month'
+            ]
+            
+            self.visualizer.plot_feature_comparison_matrix(processed_data, key_features)
+            self.visualizer.plot_correlation_heatmap(processed_data)
+            self.visualizer.plot_temporal_trends(processed_data)
+            self.visualizer.plot_industry_distributions(processed_data)
+            self.visualizer.plot_advanced_feature_correlations(processed_data, key_features)
+            self.visualizer.plot_feature_distributions(processed_data, key_features)
+            self.visualizer.plot_funding_patterns(processed_data)
+            # --- NEW VISUALIZATIONS ---
+            self.visualizer.plot_pairwise_features(processed_data, key_features)
+            self.visualizer.plot_full_correlation_heatmap(processed_data)
+            self.visualizer.plot_violin_funding_by_stage(processed_data)
             
             # Step 6: Save summary report
             logger.info("Step 6: Saving summary report...")
@@ -858,33 +1359,303 @@ class FundingStagePredictionPipeline:
             schedule.run_pending()
             time.sleep(60)
 
+    def _init_model_directory(self):
+        """Create organized model directory structure"""
+        # Create main models directory
+        os.makedirs(self.models_dir, exist_ok=True)
 
+        # Create subdirectories for different model types
+        model_types = ['random_forest', 'xgboost', 'ensemble']
+        for model_type in model_types:
+            os.makedirs(os.path.join(self.models_dir, model_type), exist_ok=True)
+
+        # Create evaluation directory for model performance metrics
+        os.makedirs(os.path.join(self.models_dir, 'evaluation'), exist_ok=True)
+
+        logger.info(f"Initialized model directory structure at {self.models_dir}")
+
+class EnhancedPipeline(FundingStagePredictionPipeline):
+    def __init__(self, *args, **kwargs):
+        # Override the output_dir with our custom path
+        if 'output_dir' in kwargs:
+            kwargs['output_dir'] = './outputFundingStagePrediction'
+        else:
+            args = list(args)
+            if len(args) > 1:
+                args[1] = './outputFundingStagePrediction'
+            else:
+                args.append('./outputFundingStagePrediction')
+            args = tuple(args)
+            
+        super().__init__(*args, **kwargs)
+        self.model_trainer = EnhancedModelTrainer(self.models_dir)
+        
+        # Ensure all required directories exist before creating visualizer
+        os.makedirs(self.viz_dir, exist_ok=True)
+        os.makedirs(self.models_dir, exist_ok=True)
+        
+        self.visualizer = AdvancedVisualizer(self.viz_dir, interactive=False)  # Set to False to prevent interactive display
+        self.model_manager = ModelManager(self.models_dir)
+        self._init_model_directory()
+
+    def run(self):
+        try:
+            logger.info("Starting funding stage prediction pipeline")
+            
+            # Steps 1-3: Existing data loading and feature engineering
+            merged_data = self.data_loader.merge_datasets()
+            if merged_data.empty:
+                logger.error("No data available. Exiting pipeline.")
+                return False
+            
+            processed_data = self.feature_engineer.extract_features(merged_data)
+            X, y = self.feature_engineer.prepare_model_data(processed_data)
+            
+            # First remap all classes to be continuous from 0
+            def remap_classes(y_series):
+                unique_classes = sorted(y_series.unique())
+                class_map = {old_label: idx for idx, old_label in enumerate(unique_classes)}
+                return y_series.map(class_map), class_map
+            
+            y, initial_map = remap_classes(y)
+            logger.info(f"Initial class mapping: {initial_map}")
+            
+            # Handle rare classes
+            class_counts = pd.Series(y).value_counts()
+            rare_classes = class_counts[class_counts < 5].index.tolist()
+            if rare_classes:
+                majority_class = class_counts.idxmax()
+                y = y.apply(lambda x: majority_class if x in rare_classes else x)
+                logger.info(f"Merged rare classes into majority class {majority_class}")
+            
+            # Remap again after merging rare classes to ensure continuous labels
+            y, final_map = remap_classes(y)
+            logger.info(f"Final class mapping after merging rare classes: {final_map}")
+            
+            # Now apply SMOTE if viable
+            if len(np.unique(y)) > 1:
+                smote = SMOTE(random_state=42)
+                X, y = smote.fit_resample(X, y)
+                logger.info(f"Applied SMOTE. New shape: {X.shape}")
+            
+            # Feature selection with proper classes
+            n_classes = len(np.unique(y))
+            selector = SelectFromModel(
+                xgb.XGBClassifier(
+                    objective='multi:softmax',
+                    num_class=n_classes,
+                    random_state=42
+                ),
+                threshold="median"
+            )
+            X = selector.fit_transform(X, y)
+            logger.info(f"Selected features shape: {X.shape}")
+            
+            # Step 4: Enhanced model training
+            logger.info("Step 4: Tuning and training models...")
+            best_rf = self.model_trainer.tune_random_forest(X, y)
+            best_xgb = self.model_trainer.tune_xgboost(X, y)
+            
+            # Create ensemble
+            ensemble = VotingClassifier(
+                estimators=[('rf', best_rf), ('xgb', best_xgb)],
+                voting='soft'
+            )
+            
+            # Train models
+            rf_model, rf_results = self._train_final_model(best_rf, X, y, 'Random Forest')
+            xgb_model, xgb_results = self._train_final_model(best_xgb, X, y, 'XGBoost')
+            ensemble_model, ensemble_results = self._train_final_model(ensemble, X, y, 'Ensemble')
+            
+            # Step 5: Advanced visualizations
+            logger.info("Step 5: Creating advanced visualizations...")
+            self._create_advanced_visualizations(rf_model, xgb_model, rf_results, xgb_results, y)
+            # --- NEW VISUALIZATIONS ---
+            key_features = [
+                'funding_amount_log', 'employees',
+                'employee_efficiency', 'previous_rounds',
+                'months_since_first_funding', 'funding_year', 'funding_month'
+            ]
+            self.visualizer.plot_pairwise_features(processed_data, key_features)
+            self.visualizer.plot_full_correlation_heatmap(processed_data)
+            self.visualizer.plot_violin_funding_by_stage(processed_data)
+            
+            # Save results with all models
+            model_results = {
+                'Random Forest': rf_results,
+                'XGBoost': xgb_results,
+                'Ensemble': ensemble_results
+            }
+            
+            self._save_summary(merged_data, X, model_results)
+            
+            logger.info("Pipeline completed successfully!")
+            return True
+            
+        except Exception as e:
+            logger.error(f"Enhanced pipeline error: {str(e)}")
+            logger.error(traceback.format_exc())
+            return False
+
+    def _train_final_model(self, model, X, y, name):
+        """Helper method to train final models"""
+        X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
+        model.fit(X_train, y_train)
+        y_pred = model.predict(X_test)
+        y_proba = model.predict_proba(X_test)
+        
+        return model, {
+            'accuracy': accuracy_score(y_test, y_pred),
+            'X_test': X_test,
+            'y_test': y_test,
+            'y_pred': y_pred,
+            'y_proba': y_proba,
+            'feature_names': X.columns if hasattr(X, 'columns') else None
+        }
+
+    def _create_advanced_visualizations(self, rf_model, xgb_model, rf_results, xgb_results, y):
+        """Generate advanced model diagnostics"""
+        try:
+            # Plot ROC curves
+            self.visualizer.plot_roc_curves(rf_results['y_test'], rf_results['y_proba'], classes=np.unique(y))
+            self.visualizer.plot_roc_curves(xgb_results['y_test'], xgb_results['y_proba'], classes=np.unique(y))
+            
+            # Plot calibration curves (using full probability matrix)
+            self.visualizer.plot_calibration(rf_results['y_test'], rf_results['y_proba'])
+            self.visualizer.plot_calibration(xgb_results['y_test'], xgb_results['y_proba'])
+            
+            # Plot confidence intervals
+            self.visualizer.plot_confidence_intervals(
+                rf_results['y_test'], 
+                rf_results['y_pred'],
+                rf_results['y_proba']
+            )
+            self.visualizer.plot_confidence_intervals(
+                xgb_results['y_test'],
+                xgb_results['y_pred'],
+                xgb_results['y_proba']
+            )
+        except Exception as e:
+            logger.error(f"Error creating visualizations: {str(e)}")
+            logger.error(traceback.format_exc())
+
+    def _save_summary(self, merged_data, X, model_results):
+        """Save pipeline summary with extended metrics"""
+        summary = {
+            'timestamp': self.timestamp,
+            'data_records': len(merged_data),
+            'features': X.columns.tolist() if hasattr(X, 'columns') else [],
+            'model_results': {
+                name: {
+                    'accuracy': float(results['accuracy']),
+                    'model_path': results.get('model_path', 'Not saved')
+                }
+                for name, results in model_results.items()
+            }
+        }
+        
+        with open(os.path.join(self.output_dir, f"summary_{self.timestamp}.json"), 'w') as f:
+            json.dump(summary, f, indent=4)
+
+    def make_prediction(self, sample_data):
+        """Make prediction with best available model"""
+        # Load the ensemble model (or best model if ensemble not available)
+        try:
+            model = self.model_manager.load_model(model_type="ensemble")
+        except FileNotFoundError:
+            model = self.model_manager.load_model(model_type="xgboost")
+
+        # Format sample data
+        if isinstance(sample_data, dict):
+            # Use the same order as feature columns
+            feature_columns = [
+                'funding_amount_log', 'employees', 'employee_efficiency',
+                'previous_rounds', 'funding_year', 'funding_month', 'months_since_first_funding'
+            ]
+            features = [sample_data.get(col, 0) for col in feature_columns]
+        else:
+            features = sample_data
+
+        # Make prediction
+        prediction = self.model_manager.predict(features)
+        # Map back to original funding stage
+        if hasattr(self.feature_engineer, 'funding_stage_map'):
+            reverse_map = {v: k for k, v in self.feature_engineer.funding_stage_map.items()}
+            if isinstance(prediction, (int, float)):
+                prediction = reverse_map.get(int(prediction), f"Unknown (Class {prediction})")
+        return prediction
 
 def main():
     """Main entry point with command line options"""
     import argparse
+    import schedule
+    import time
+    from datetime import datetime, timedelta
     
     parser = argparse.ArgumentParser(description='Funding Stage Prediction System')
     parser.add_argument('--data-dir', type=str, default='./', help='Base directory with data')
-    parser.add_argument('--output-dir', type=str, default='./output', help='Output directory')
+    parser.add_argument('--output-dir', type=str, default='./outputFundingStagePrediction', help='Output directory')
     parser.add_argument('--schedule', action='store_true', help='Run on a schedule')
     parser.add_argument('--interval', type=int, default=24, help='Hours between runs')
     parser.add_argument('--reset-db', action='store_true', help='Reset the database before running')
+    parser.add_argument('--continuous', action='store_true', help='Run continuously with scheduling')
+    parser.add_argument('--start-time', type=str, help='Start time in HH:MM format (24h)', default='00:00')
+    parser.add_argument('--archive', action='store_true',
+                        help='Enable data archiving (required for scheduled runs)')
+    parser.add_argument('--once', action='store_true', help='Run once without scheduling')
     
     args = parser.parse_args()
     
-    # Initialize and run the pipeline
-    pipeline = FundingStagePredictionPipeline(args.data_dir, args.output_dir)
+    # Initialize pipeline
+    pipeline = EnhancedPipeline(args.data_dir, args.output_dir, archive=True)  # Always enable archive
     
     if args.reset_db:
         pipeline.data_loader.reset_database()
-    
-    if args.schedule:
-        logger.info(f"Starting scheduled runs every {args.interval} hours")
-        pipeline.schedule_run(args.interval)
-    else:
-        logger.info("Running pipeline once")
+
+    # Define the job function
+    def scheduled_job():
+        logger.info(f"Running scheduled job at {datetime.now()}")
         pipeline.run()
+    
+    # Run the job immediately regardless of scheduling options
+    logger.info(f"Running funding prediction job at {datetime.now()}")
+    pipeline.run()
+    
+    # Only run once and exit if specifically requested with --once flag
+    # Otherwise, default behavior is to schedule future runs
+    if args.once:
+        logger.info("Job completed - exiting")
+    else:
+        # Configure scheduling parameters
+        interval_hours = args.interval
+        
+        # Schedule the job - either at a specific time each day or on an interval
+        if args.start_time:
+            # Schedule for specific time each day
+            schedule.every().day.at(args.start_time).do(scheduled_job)
+            logger.info(f"Scheduled to run daily at {args.start_time}")
+            
+            # Calculate next run time
+            hour, minute = map(int, args.start_time.split(':'))
+            next_run = datetime.now().replace(hour=hour, minute=minute)
+            if next_run < datetime.now():
+                next_run += timedelta(days=1)
+        else:
+            # Schedule to run on an interval
+            schedule.every(interval_hours).hours.do(scheduled_job)
+            logger.info(f"Scheduled to run every {interval_hours} hours")
+            next_run = datetime.now() + timedelta(hours=interval_hours)
+            
+        logger.info(f"Next scheduled run: {next_run}")
+        
+        # Keep the script running for scheduled jobs
+        try:
+            logger.info("Scheduler active - process will remain running")
+            while True:
+                schedule.run_pending()
+                time.sleep(60)  # Check every minute
+        except KeyboardInterrupt:
+            logger.info("Scheduler stopped by user")
 
 if __name__ == "__main__":
     main()

@@ -1,0 +1,2729 @@
+2025-04-21 00:53:51,688 - INFO - Setting up scheduled extraction (every 24 hours)
+2025-04-21 00:53:51,688 - INFO - Starting extraction process
+2025-04-21 00:53:51,688 - INFO - Setting up Chrome WebDriver...
+2025-04-21 00:53:51,688 - INFO - ====== WebDriver manager ======
+2025-04-21 00:53:52,128 - INFO - Get LATEST chromedriver version for google-chrome
+2025-04-21 00:53:52,189 - INFO - Get LATEST chromedriver version for google-chrome
+2025-04-21 00:53:52,231 - INFO - Get LATEST chromedriver version for google-chrome
+2025-04-21 00:53:52,326 - INFO - WebDriver version 135.0.7049.95 selected
+2025-04-21 00:53:52,328 - INFO - Modern chrome version https://storage.googleapis.com/chrome-for-testing-public/135.0.7049.95/mac-arm64/chromedriver-mac-arm64.zip
+2025-04-21 00:53:52,328 - INFO - About to download new driver from https://storage.googleapis.com/chrome-for-testing-public/135.0.7049.95/mac-arm64/chromedriver-mac-arm64.zip
+2025-04-21 00:53:52,401 - INFO - Driver downloading response is 200
+2025-04-21 00:53:52,754 - INFO - Get LATEST chromedriver version for google-chrome
+2025-04-21 00:53:52,967 - INFO - Driver has been saved in cache [/Users/hk/.wdm/drivers/chromedriver/mac64/135.0.7049.95]
+2025-04-21 00:53:55,453 - INFO - WebDriver setup completed successfully
+2025-04-21 00:53:55,453 - INFO - Navigating to https://fundraiseinsider.com/blog/recently-funded-startups-san-francisco/#showform-238066
+2025-04-21 00:53:57,390 - INFO - Found overlay using selector: //div[contains(@class, 'conv-wrap')]
+2025-04-21 00:53:57,400 - INFO - No close button found, removing overlay with JavaScript
+2025-04-21 00:53:57,904 - INFO - Found overlay using selector: //div[contains(@class, 'overlay')]
+2025-04-21 00:53:57,907 - INFO - No close button found, removing overlay with JavaScript
+2025-04-21 00:54:15,267 - INFO - Performing efficient scrolling...
+2025-04-21 00:54:18,195 - INFO - Scrolling completed
+2025-04-21 00:54:19,171 - INFO - Extracting data from page 1
+2025-04-21 00:54:20,389 - INFO - Trying standard table extraction
+2025-04-21 00:54:20,447 - INFO - Found funding amount column at index 6
+2025-04-21 00:54:20,454 - INFO - Found headquarters column at index 7
+2025-04-21 00:54:20,471 - INFO - Found 22 potential data rows
+2025-04-21 00:54:20,557 - INFO - Extracted: Rembrand - 2-Jan-25
+2025-04-21 00:54:20,558 - INFO - Found funding amount: 23000000
+2025-04-21 00:54:20,602 - INFO - Extracted: Wurthy - 30-Dec-24
+2025-04-21 00:54:20,603 - INFO - Found funding amount: 0
+2025-04-21 00:54:20,653 - INFO - Extracted: Frontier Bio - 25-Dec-24
+2025-04-21 00:54:20,653 - INFO - Found funding amount: 1300000
+2025-04-21 00:54:20,725 - INFO - Extracted: Courtyard - 23-Dec-24
+2025-04-21 00:54:20,725 - INFO - Found funding amount: 4500000
+2025-04-21 00:54:20,765 - INFO - Extracted: Pasadena Private Lending - 19-Dec-24
+2025-04-21 00:54:20,765 - INFO - Found funding amount: 50000000
+2025-04-21 00:54:20,806 - INFO - Extracted: Tenor - 19-Dec-24
+2025-04-21 00:54:20,806 - INFO - Found funding amount: 5400000
+2025-04-21 00:54:20,857 - INFO - Extracted: Earli - 19-Dec-24
+2025-04-21 00:54:20,857 - INFO - Found funding amount: 60000000
+2025-04-21 00:54:20,901 - INFO - Extracted: Child Family Health International - 19-Dec-24
+2025-04-21 00:54:20,901 - INFO - Found funding amount: 7500
+2025-04-21 00:54:20,945 - INFO - Extracted: SandboxAQ - 18-Dec-24
+2025-04-21 00:54:20,945 - INFO - Found funding amount: 300000000
+2025-04-21 00:54:20,989 - INFO - Extracted: Plume Network - 18-Dec-24
+2025-04-21 00:54:20,989 - INFO - Found funding amount: 20000000
+2025-04-21 00:54:21,050 - INFO - Extracted: Hamming AI - 18-Dec-24
+2025-04-21 00:54:21,050 - INFO - Found funding amount: 3800000
+2025-04-21 00:54:21,108 - INFO - Extracted: CourtScribes - 18-Dec-24
+2025-04-21 00:54:21,108 - INFO - Found funding amount: 512474
+2025-04-21 00:54:21,144 - INFO - Extracted: Perplexity - 18-Dec-24
+2025-04-21 00:54:21,144 - INFO - Found funding amount: 500000000
+2025-04-21 00:54:21,261 - INFO - Extracted: Lyten - 18-Dec-24
+2025-04-21 00:54:21,261 - INFO - Found funding amount: 650000000
+2025-04-21 00:54:21,348 - INFO - Extracted: Fairbanc - 18-Dec-24
+2025-04-21 00:54:21,348 - INFO - Found funding amount: 50000000000
+2025-04-21 00:54:21,404 - INFO - Extracted: Mojave Energy Systems - 18-Dec-24
+2025-04-21 00:54:21,405 - INFO - Found funding amount: 9500000
+2025-04-21 00:54:21,443 - INFO - Extracted: Fraction AI - 18-Dec-24
+2025-04-21 00:54:21,443 - INFO - Found funding amount: 6000000
+2025-04-21 00:54:21,496 - INFO - Extracted: Schwarm Technologies Inc. - 17-Dec-24
+2025-04-21 00:54:21,496 - INFO - Found funding amount: 3027055
+2025-04-21 00:54:21,544 - INFO - Extracted: Landbase - 17-Dec-24
+2025-04-21 00:54:21,544 - INFO - Found funding amount: 12500000
+2025-04-21 00:54:21,604 - INFO - Extracted: Acre - 17-Dec-24
+2025-04-21 00:54:21,604 - INFO - Found funding amount: 10000000
+2025-04-21 00:54:21,604 - INFO - Successfully extracted 20 new companies from page 1
+2025-04-21 00:54:21,605 - INFO - Attempting to navigate from page 1
+2025-04-21 00:54:29,167 - INFO - JavaScript verification confirmed page changed
+2025-04-21 00:54:30,120 - INFO - Extracting data from page 2
+2025-04-21 00:54:31,248 - INFO - Trying standard table extraction
+2025-04-21 00:54:31,287 - INFO - Found funding amount column at index 6
+2025-04-21 00:54:31,293 - INFO - Found headquarters column at index 7
+2025-04-21 00:54:31,302 - INFO - Found 22 potential data rows
+2025-04-21 00:54:31,368 - INFO - Extracted: Finexio - 17-Dec-24
+2025-04-21 00:54:31,368 - INFO - Found funding amount: 10000000
+2025-04-21 00:54:31,409 - INFO - Extracted: Anatomy Financial - 17-Dec-24
+2025-04-21 00:54:31,409 - INFO - Found funding amount: 19000000
+2025-04-21 00:54:31,449 - INFO - Extracted: Serverfarm - 17-Dec-24
+2025-04-21 00:54:31,449 - INFO - Found funding amount: 1637000000
+2025-04-21 00:54:31,509 - INFO - Extracted: Flair - 17-Dec-24
+2025-04-21 00:54:31,509 - INFO - Found funding amount: 0
+2025-04-21 00:54:31,552 - INFO - Extracted: Leapfin - 17-Dec-24
+2025-04-21 00:54:31,552 - INFO - Found funding amount: 1000000
+2025-04-21 00:54:31,594 - INFO - Extracted: Parafin - 17-Dec-24
+2025-04-21 00:54:31,594 - INFO - Found funding amount: 100000000
+2025-04-21 00:54:31,630 - INFO - Extracted: Indapta Therapeutics - 17-Dec-24
+2025-04-21 00:54:31,631 - INFO - Found funding amount: 22500000
+2025-04-21 00:54:31,687 - INFO - Extracted: Xcell Biosciences - 17-Dec-24
+2025-04-21 00:54:31,687 - INFO - Found funding amount: 1400000
+2025-04-21 00:54:31,722 - INFO - Extracted: Jiko - 12-Dec-24
+2025-04-21 00:54:31,723 - INFO - Found funding amount: 29000000
+2025-04-21 00:54:31,760 - INFO - Extracted: One - 12-Dec-24
+2025-04-21 00:54:31,760 - INFO - Found funding amount: 300000000
+2025-04-21 00:54:31,795 - INFO - Extracted: Evinced - 12-Dec-24
+2025-04-21 00:54:31,795 - INFO - Found funding amount: 55000000
+2025-04-21 00:54:31,831 - INFO - Extracted: Twelve Labs - 12-Dec-24
+2025-04-21 00:54:31,831 - INFO - Found funding amount: 30000000
+2025-04-21 00:54:31,867 - INFO - Extracted: Terradot - 12-Dec-24
+2025-04-21 00:54:31,867 - INFO - Found funding amount: 54000000
+2025-04-21 00:54:31,901 - INFO - Extracted: Cartesia - 12-Dec-24
+2025-04-21 00:54:31,901 - INFO - Found funding amount: 22000000
+2025-04-21 00:54:31,941 - INFO - Extracted: Vantis Vascular - 12-Dec-24
+2025-04-21 00:54:31,942 - INFO - Found funding amount: 10000000
+2025-04-21 00:54:31,981 - INFO - Extracted: Alessa Therapeutics - 12-Dec-24
+2025-04-21 00:54:31,981 - INFO - Found funding amount: 15000000
+2025-04-21 00:54:32,018 - INFO - Extracted: Gigs - 12-Dec-24
+2025-04-21 00:54:32,018 - INFO - Found funding amount: 73000000
+2025-04-21 00:54:32,056 - INFO - Extracted: Immi - 12-Dec-24
+2025-04-21 00:54:32,056 - INFO - Found funding amount: 3000000
+2025-04-21 00:54:32,090 - INFO - Extracted: Albert Invent - 11-Dec-24
+2025-04-21 00:54:32,091 - INFO - Found funding amount: 22500000
+2025-04-21 00:54:32,126 - INFO - Extracted: Strategic Venue Partners - 11-Dec-24
+2025-04-21 00:54:32,126 - INFO - Found funding amount: 0
+2025-04-21 00:54:32,126 - INFO - Successfully extracted 20 new companies from page 2
+2025-04-21 00:54:32,126 - INFO - Attempting to navigate from page 2
+2025-04-21 00:54:38,174 - INFO - JavaScript verification confirmed page changed
+2025-04-21 00:54:38,576 - INFO - Extracting data from page 3
+2025-04-21 00:54:39,264 - INFO - Trying standard table extraction
+2025-04-21 00:54:39,301 - INFO - Found funding amount column at index 6
+2025-04-21 00:54:39,307 - INFO - Found headquarters column at index 7
+2025-04-21 00:54:39,323 - INFO - Found 22 potential data rows
+2025-04-21 00:54:39,385 - INFO - Extracted: Parsec Education - 11-Dec-24
+2025-04-21 00:54:39,385 - INFO - Found funding amount: 8000000
+2025-04-21 00:54:39,443 - INFO - Extracted: Saltmine - 11-Dec-24
+2025-04-21 00:54:39,443 - INFO - Found funding amount: 0
+2025-04-21 00:54:39,483 - INFO - Extracted: NeuBird - 11-Dec-24
+2025-04-21 00:54:39,483 - INFO - Found funding amount: 22500000
+2025-04-21 00:54:39,518 - INFO - Extracted: Aimon Labs - 11-Dec-24
+2025-04-21 00:54:39,518 - INFO - Found funding amount: 2300000
+2025-04-21 00:54:39,731 - INFO - Extracted: Ayar Labs - 11-Dec-24
+2025-04-21 00:54:39,731 - INFO - Found funding amount: 155000000
+2025-04-21 00:54:39,877 - INFO - Extracted: Vapi - 11-Dec-24
+2025-04-21 00:54:39,877 - INFO - Found funding amount: 20000000
+2025-04-21 00:54:39,945 - INFO - Extracted: EzDubs - 11-Dec-24
+2025-04-21 00:54:39,945 - INFO - Found funding amount: 4200000
+2025-04-21 00:54:40,063 - INFO - Extracted: Capstan Medical - 11-Dec-24
+2025-04-21 00:54:40,063 - INFO - Found funding amount: 110000000
+2025-04-21 00:54:40,151 - INFO - Extracted: Reveal Technology - 11-Dec-24
+2025-04-21 00:54:40,151 - INFO - Found funding amount: 11200000
+2025-04-21 00:54:40,192 - INFO - Extracted: Tosi - 11-Dec-24
+2025-04-21 00:54:40,192 - INFO - Found funding amount: 15805308
+2025-04-21 00:54:40,241 - INFO - Extracted: Azimuth AI - 11-Dec-24
+2025-04-21 00:54:40,242 - INFO - Found funding amount: 11500000
+2025-04-21 00:54:40,299 - INFO - Extracted: Cohesity - 10-Dec-24
+2025-04-21 00:54:40,299 - INFO - Found funding amount: 0
+2025-04-21 00:54:40,338 - INFO - Extracted: Speak - 10-Dec-24
+2025-04-21 00:54:40,338 - INFO - Found funding amount: 78000000
+2025-04-21 00:54:40,375 - INFO - Extracted: Mainframe - 10-Dec-24
+2025-04-21 00:54:40,375 - INFO - Found funding amount: 5500000
+2025-04-21 00:54:40,412 - INFO - Extracted: Gyaan - 10-Dec-24
+2025-04-21 00:54:40,412 - INFO - Found funding amount: 5000000
+2025-04-21 00:54:40,450 - INFO - Extracted: WeaveGrid - 10-Dec-24
+2025-04-21 00:54:40,450 - INFO - Found funding amount: 28000000
+2025-04-21 00:54:40,497 - INFO - Extracted: WindBorne Systems - 10-Dec-24
+2025-04-21 00:54:40,498 - INFO - Found funding amount: 5000000
+2025-04-21 00:54:40,542 - INFO - Extracted: Exabits AI - 10-Dec-24
+2025-04-21 00:54:40,542 - INFO - Found funding amount: 15000000
+2025-04-21 00:54:40,582 - INFO - Extracted: Gentrace - 10-Dec-24
+2025-04-21 00:54:40,582 - INFO - Found funding amount: 8000000
+2025-04-21 00:54:40,623 - INFO - Extracted: LambdaTest - 10-Dec-24
+2025-04-21 00:54:40,623 - INFO - Found funding amount: 38000000
+2025-04-21 00:54:40,623 - INFO - Successfully extracted 20 new companies from page 3
+2025-04-21 00:54:40,623 - INFO - Attempting to navigate from page 3
+2025-04-21 00:54:46,977 - INFO - JavaScript verification confirmed page changed
+2025-04-21 00:54:47,853 - INFO - Extracting data from page 4
+2025-04-21 00:54:48,486 - INFO - Trying standard table extraction
+2025-04-21 00:54:48,518 - INFO - Found funding amount column at index 6
+2025-04-21 00:54:48,521 - INFO - Found headquarters column at index 7
+2025-04-21 00:54:48,530 - INFO - Found 22 potential data rows
+2025-04-21 00:54:48,577 - INFO - Extracted: Aarvik Therapeutics - 10-Dec-24
+2025-04-21 00:54:48,577 - INFO - Found funding amount: 1165000
+2025-04-21 00:54:48,611 - INFO - Extracted: WaveForms AI - 10-Dec-24
+2025-04-21 00:54:48,611 - INFO - Found funding amount: 40000000
+2025-04-21 00:54:48,643 - INFO - Extracted: Wald.ai - 10-Dec-24
+2025-04-21 00:54:48,644 - INFO - Found funding amount: 4000000
+2025-04-21 00:54:48,683 - INFO - Extracted: Wildflower Health - 10-Dec-24
+2025-04-21 00:54:48,683 - INFO - Found funding amount: 17939793
+2025-04-21 00:54:48,726 - INFO - Extracted: Aampe - 10-Dec-24
+2025-04-21 00:54:48,726 - INFO - Found funding amount: 18000000
+2025-04-21 00:54:48,763 - INFO - Extracted: Cala Health - 9-Dec-24
+2025-04-21 00:54:48,763 - INFO - Found funding amount: 50000000
+2025-04-21 00:54:48,793 - INFO - Extracted: Sofar Ocean - 9-Dec-24
+2025-04-21 00:54:48,793 - INFO - Found funding amount: 18250002
+2025-04-21 00:54:48,823 - INFO - Extracted: Friend - 9-Dec-24
+2025-04-21 00:54:48,823 - INFO - Found funding amount: 5400000
+2025-04-21 00:54:48,859 - INFO - Extracted: Lava - 9-Dec-24
+2025-04-21 00:54:48,859 - INFO - Found funding amount: 10000000
+2025-04-21 00:54:48,896 - INFO - Extracted: MiSalud - 9-Dec-24
+2025-04-21 00:54:48,896 - INFO - Found funding amount: 8000000
+2025-04-21 00:54:48,933 - INFO - Extracted: Lucra Sports - 5-Dec-24
+2025-04-21 00:54:48,933 - INFO - Found funding amount: 10000000
+2025-04-21 00:54:48,974 - INFO - Extracted: Across AI - 5-Dec-24
+2025-04-21 00:54:48,975 - INFO - Found funding amount: 5750000
+2025-04-21 00:54:49,009 - INFO - Extracted: BITKRAFT Ventures - 5-Dec-24
+2025-04-21 00:54:49,009 - INFO - Found funding amount: 0
+2025-04-21 00:54:49,050 - INFO - Extracted: Nuvig Therapeutics - 5-Dec-24
+2025-04-21 00:54:49,050 - INFO - Found funding amount: 161000000
+2025-04-21 00:54:49,088 - INFO - Extracted: FutureSearch - 5-Dec-24
+2025-04-21 00:54:49,088 - INFO - Found funding amount: 5794991
+2025-04-21 00:54:49,125 - INFO - Extracted: Solana - 5-Dec-24
+2025-04-21 00:54:49,125 - INFO - Found funding amount: 1500000
+2025-04-21 00:54:49,161 - INFO - Extracted: Rubi Laboratories - 5-Dec-24
+2025-04-21 00:54:49,161 - INFO - Found funding amount: 969961
+2025-04-21 00:54:49,197 - INFO - Extracted: East Oakland Youth Development Center - 5-Dec-24
+2025-04-21 00:54:49,197 - INFO - Found funding amount: 0
+2025-04-21 00:54:49,232 - INFO - Extracted: Axiado Corporation - 4-Dec-24
+2025-04-21 00:54:49,232 - INFO - Found funding amount: 60000000
+2025-04-21 00:54:49,271 - INFO - Extracted: Enterpret - 4-Dec-24
+2025-04-21 00:54:49,271 - INFO - Found funding amount: 20800000
+2025-04-21 00:54:49,271 - INFO - Successfully extracted 20 new companies from page 4
+2025-04-21 00:54:49,272 - INFO - Attempting to navigate from page 4
+2025-04-21 00:54:55,111 - INFO - JavaScript verification confirmed page changed
+2025-04-21 00:54:56,319 - INFO - Extracting data from page 5
+2025-04-21 00:54:56,753 - INFO - Trying standard table extraction
+2025-04-21 00:54:56,788 - INFO - Found funding amount column at index 6
+2025-04-21 00:54:56,793 - INFO - Found headquarters column at index 7
+2025-04-21 00:54:56,806 - INFO - Found 22 potential data rows
+2025-04-21 00:54:56,866 - INFO - Extracted: HappyRobot - 4-Dec-24
+2025-04-21 00:54:56,866 - INFO - Found funding amount: 15600000
+2025-04-21 00:54:56,913 - INFO - Extracted: Offcall - 4-Dec-24
+2025-04-21 00:54:56,913 - INFO - Found funding amount: 2000000
+2025-04-21 00:54:56,953 - INFO - Extracted: Etestho - 4-Dec-24
+2025-04-21 00:54:56,953 - INFO - Found funding amount: 0
+2025-04-21 00:54:56,990 - INFO - Extracted: Antheia - 3-Dec-24
+2025-04-21 00:54:56,990 - INFO - Found funding amount: 12000000
+2025-04-21 00:54:57,027 - INFO - Extracted: Aerospike - 3-Dec-24
+2025-04-21 00:54:57,027 - INFO - Found funding amount: 109000000
+2025-04-21 00:54:57,062 - INFO - Extracted: Yurts Technologies Inc - 3-Dec-24
+2025-04-21 00:54:57,062 - INFO - Found funding amount: 40000000
+2025-04-21 00:54:57,098 - INFO - Extracted: The Tech Interactive - 3-Dec-24
+2025-04-21 00:54:57,098 - INFO - Found funding amount: 0
+2025-04-21 00:54:57,132 - INFO - Extracted: Maze Therapeutics - 3-Dec-24
+2025-04-21 00:54:57,132 - INFO - Found funding amount: 115000000
+2025-04-21 00:54:57,167 - INFO - Extracted: MakersHub - 3-Dec-24
+2025-04-21 00:54:57,167 - INFO - Found funding amount: 7000000
+2025-04-21 00:54:57,206 - INFO - Extracted: Vooma - 2-Dec-24
+2025-04-21 00:54:57,206 - INFO - Found funding amount: 13000000
+2025-04-21 00:54:57,240 - INFO - Extracted: Lumin Digital - 2-Dec-24
+2025-04-21 00:54:57,240 - INFO - Found funding amount: 160000000
+2025-04-21 00:54:57,277 - INFO - Extracted: Upwind Security - 2-Dec-24
+2025-04-21 00:54:57,277 - INFO - Found funding amount: 100000000
+2025-04-21 00:54:57,311 - INFO - Extracted: CSpeed - 2-Dec-24
+2025-04-21 00:54:57,311 - INFO - Found funding amount: 28349982
+2025-04-21 00:54:57,347 - INFO - Extracted: Cardless - 26-Nov-24
+2025-04-21 00:54:57,347 - INFO - Found funding amount: 30000000
+2025-04-21 00:54:57,381 - INFO - Extracted: Sirona Medical - 26-Nov-24
+2025-04-21 00:54:57,381 - INFO - Found funding amount: 42000000
+2025-04-21 00:54:57,418 - INFO - Extracted: Wherobots Inc. - 26-Nov-24
+2025-04-21 00:54:57,418 - INFO - Found funding amount: 21500000
+2025-04-21 00:54:57,456 - INFO - Extracted: Circleback - 26-Nov-24
+2025-04-21 00:54:57,456 - INFO - Found funding amount: 2500000
+2025-04-21 00:54:57,493 - INFO - Extracted: Mindstate Design Labs - 26-Nov-24
+2025-04-21 00:54:57,493 - INFO - Found funding amount: 12698587
+2025-04-21 00:54:57,529 - INFO - Extracted: Femtosense - 26-Nov-24
+2025-04-21 00:54:57,529 - INFO - Found funding amount: 4258347
+2025-04-21 00:54:57,565 - INFO - Extracted: Play.ht - 25-Nov-24
+2025-04-21 00:54:57,565 - INFO - Found funding amount: 21000000
+2025-04-21 00:54:57,566 - INFO - Successfully extracted 20 new companies from page 5
+2025-04-21 00:54:57,566 - INFO - Attempting to navigate from page 5
+2025-04-21 00:55:03,396 - INFO - JavaScript verification confirmed page changed
+2025-04-21 00:55:04,361 - INFO - Extracting data from page 6
+2025-04-21 00:55:05,325 - INFO - Trying standard table extraction
+2025-04-21 00:55:05,368 - INFO - Found funding amount column at index 6
+2025-04-21 00:55:05,373 - INFO - Found headquarters column at index 7
+2025-04-21 00:55:05,382 - INFO - Found 22 potential data rows
+2025-04-21 00:55:05,434 - INFO - Extracted: Tempest DX - 25-Nov-24
+2025-04-21 00:55:05,434 - INFO - Found funding amount: 3200000
+2025-04-21 00:55:05,469 - INFO - Extracted: Trustero - 21-Nov-24
+2025-04-21 00:55:05,469 - INFO - Found funding amount: 10350000
+2025-04-21 00:55:05,505 - INFO - Extracted: Epic Cleantec - 21-Nov-24
+2025-04-21 00:55:05,505 - INFO - Found funding amount: 12000000
+2025-04-21 00:55:05,547 - INFO - Extracted: VISO TRUST - 21-Nov-24
+2025-04-21 00:55:05,547 - INFO - Found funding amount: 7000000
+2025-04-21 00:55:05,584 - INFO - Extracted: Aviz Networks - 21-Nov-24
+2025-04-21 00:55:05,584 - INFO - Found funding amount: 17000000
+2025-04-21 00:55:05,628 - INFO - Extracted: Arcade - 21-Nov-24
+2025-04-21 00:55:05,628 - INFO - Found funding amount: 14000000
+2025-04-21 00:55:05,667 - INFO - Extracted: Anomalo - 21-Nov-24
+2025-04-21 00:55:05,667 - INFO - Found funding amount: 10000000
+2025-04-21 00:55:05,702 - INFO - Extracted: Teleo - 21-Nov-24
+2025-04-21 00:55:05,703 - INFO - Found funding amount: 7000000
+2025-04-21 00:55:05,738 - INFO - Extracted: Wordware - 21-Nov-24
+2025-04-21 00:55:05,738 - INFO - Found funding amount: 30000000
+2025-04-21 00:55:05,774 - INFO - Extracted: Aira Technologies - 20-Nov-24
+2025-04-21 00:55:05,774 - INFO - Found funding amount: 14500000
+2025-04-21 00:55:05,810 - INFO - Extracted: Generate Capital - 20-Nov-24
+2025-04-21 00:55:05,810 - INFO - Found funding amount: 1200000000
+2025-04-21 00:55:05,850 - INFO - Extracted: Rox - 20-Nov-24
+2025-04-21 00:55:05,850 - INFO - Found funding amount: 50000000
+2025-04-21 00:55:05,891 - INFO - Extracted: Aethero - 20-Nov-24
+2025-04-21 00:55:05,891 - INFO - Found funding amount: 0
+2025-04-21 00:55:05,931 - INFO - Extracted: Federato - 20-Nov-24
+2025-04-21 00:55:05,931 - INFO - Found funding amount: 40000000
+2025-04-21 00:55:05,967 - INFO - Extracted: Distru - 20-Nov-24
+2025-04-21 00:55:05,967 - INFO - Found funding amount: 6000000
+2025-04-21 00:55:06,004 - INFO - Extracted: THEO AI - 20-Nov-24
+2025-04-21 00:55:06,004 - INFO - Found funding amount: 2200000
+2025-04-21 00:55:06,037 - INFO - Extracted: Shinami - 20-Nov-24
+2025-04-21 00:55:06,037 - INFO - Found funding amount: 5650000
+2025-04-21 00:55:06,075 - INFO - Extracted: PostSig - 20-Nov-24
+2025-04-21 00:55:06,075 - INFO - Found funding amount: 1200000
+2025-04-21 00:55:06,118 - INFO - Extracted: Flywheel Dynamix - 20-Nov-24
+2025-04-21 00:55:06,118 - INFO - Found funding amount: 7000000
+2025-04-21 00:55:06,151 - INFO - Extracted: New Lantern - 20-Nov-24
+2025-04-21 00:55:06,152 - INFO - Found funding amount: 19000000
+2025-04-21 00:55:06,152 - INFO - Successfully extracted 20 new companies from page 6
+2025-04-21 00:55:06,152 - INFO - Attempting to navigate from page 6
+2025-04-21 00:55:11,989 - INFO - JavaScript verification confirmed page changed
+2025-04-21 00:55:12,827 - INFO - Extracting data from page 7
+2025-04-21 00:55:13,308 - INFO - Trying standard table extraction
+2025-04-21 00:55:13,360 - INFO - Found funding amount column at index 6
+2025-04-21 00:55:13,364 - INFO - Found headquarters column at index 7
+2025-04-21 00:55:13,373 - INFO - Found 22 potential data rows
+2025-04-21 00:55:13,424 - INFO - Extracted: Certinia - 19-Nov-24
+2025-04-21 00:55:13,424 - INFO - Found funding amount: 0
+2025-04-21 00:55:13,459 - INFO - Extracted: Kong - 19-Nov-24
+2025-04-21 00:55:13,459 - INFO - Found funding amount: 175000000
+2025-04-21 00:55:13,494 - INFO - Extracted: Kintsugi AI - 19-Nov-24
+2025-04-21 00:55:13,494 - INFO - Found funding amount: 4000000
+2025-04-21 00:55:13,530 - INFO - Extracted: StoreCash - 19-Nov-24
+2025-04-21 00:55:13,530 - INFO - Found funding amount: 3700000
+2025-04-21 00:55:13,568 - INFO - Extracted: Spectro Cloud - 19-Nov-24
+2025-04-21 00:55:13,568 - INFO - Found funding amount: 75000000
+2025-04-21 00:55:13,604 - INFO - Extracted: BrightAI - 19-Nov-24
+2025-04-21 00:55:13,604 - INFO - Found funding amount: 15000000
+2025-04-21 00:55:13,640 - INFO - Extracted: Open Source Wellness - 19-Nov-24
+2025-04-21 00:55:13,640 - INFO - Found funding amount: 0
+2025-04-21 00:55:13,675 - INFO - Extracted: Neo4j - 19-Nov-24
+2025-04-21 00:55:13,675 - INFO - Found funding amount: 50000000
+2025-04-21 00:55:13,710 - INFO - Extracted: Rain AI - 19-Nov-24
+2025-04-21 00:55:13,710 - INFO - Found funding amount: 150000000
+2025-04-21 00:55:13,746 - INFO - Extracted: JustPaid - 19-Nov-24
+2025-04-21 00:55:13,746 - INFO - Found funding amount: 3500000
+2025-04-21 00:55:13,787 - INFO - Extracted: Cresta - 19-Nov-24
+2025-04-21 00:55:13,787 - INFO - Found funding amount: 125000000
+2025-04-21 00:55:13,824 - INFO - Extracted: Enfabrica - 19-Nov-24
+2025-04-21 00:55:13,824 - INFO - Found funding amount: 115000000
+2025-04-21 00:55:13,860 - INFO - Extracted: ANAFLASH - 19-Nov-24
+2025-04-21 00:55:13,860 - INFO - Found funding amount: 0
+2025-04-21 00:55:14,037 - INFO - Extracted: Open Philanthropy - 18-Nov-24
+2025-04-21 00:55:14,037 - INFO - Found funding amount: 0
+2025-04-21 00:55:14,079 - INFO - Extracted: California University of Science and Medicine - 18-Nov-24
+2025-04-21 00:55:14,079 - INFO - Found funding amount: 0
+2025-04-21 00:55:14,119 - INFO - Extracted: Zenflow - 18-Nov-24
+2025-04-21 00:55:14,119 - INFO - Found funding amount: 24000000
+2025-04-21 00:55:14,153 - INFO - Extracted: Radiant - 14-Nov-24
+2025-04-21 00:55:14,153 - INFO - Found funding amount: 100000000
+2025-04-21 00:55:14,190 - INFO - Extracted: Athina AI - 14-Nov-24
+2025-04-21 00:55:14,190 - INFO - Found funding amount: 250000000
+2025-04-21 00:55:14,225 - INFO - Extracted: Team-GPT - 14-Nov-24
+2025-04-21 00:55:14,225 - INFO - Found funding amount: 4500000
+2025-04-21 00:55:14,259 - INFO - Extracted: Falkonry - 14-Nov-24
+2025-04-21 00:55:14,259 - INFO - Found funding amount: 3387133
+2025-04-21 00:55:14,259 - INFO - Successfully extracted 20 new companies from page 7
+2025-04-21 00:55:14,259 - INFO - Attempting to navigate from page 7
+2025-04-21 00:55:19,286 - INFO - JavaScript verification confirmed page changed
+2025-04-21 00:55:20,060 - INFO - Extracting data from page 8
+2025-04-21 00:55:21,174 - INFO - Trying standard table extraction
+2025-04-21 00:55:21,206 - INFO - Found funding amount column at index 6
+2025-04-21 00:55:21,210 - INFO - Found headquarters column at index 7
+2025-04-21 00:55:21,219 - INFO - Found 22 potential data rows
+2025-04-21 00:55:21,269 - INFO - Extracted: Leland - 13-Nov-24
+2025-04-21 00:55:21,269 - INFO - Found funding amount: 12000000
+2025-04-21 00:55:21,318 - INFO - Extracted: TRex Bio - 13-Nov-24
+2025-04-21 00:55:21,318 - INFO - Found funding amount: 84000000
+2025-04-21 00:55:21,357 - INFO - Extracted: Medeloop - 13-Nov-24
+2025-04-21 00:55:21,357 - INFO - Found funding amount: 15500000
+2025-04-21 00:55:21,399 - INFO - Extracted: OneSkin - 13-Nov-24
+2025-04-21 00:55:21,399 - INFO - Found funding amount: 6999929
+2025-04-21 00:55:21,434 - INFO - Extracted: The WiTT Group - 13-Nov-24
+2025-04-21 00:55:21,434 - INFO - Found funding amount: 0
+2025-04-21 00:55:21,472 - INFO - Extracted: Riot - 13-Nov-24
+2025-04-21 00:55:21,472 - INFO - Found funding amount: 27597597
+2025-04-21 00:55:21,507 - INFO - Extracted: Writer - 12-Nov-24
+2025-04-21 00:55:21,507 - INFO - Found funding amount: 200000000
+2025-04-21 00:55:21,552 - INFO - Extracted: Trace Neuroscience - 12-Nov-24
+2025-04-21 00:55:21,552 - INFO - Found funding amount: 101000000
+2025-04-21 00:55:21,614 - INFO - Extracted: Fastino - 12-Nov-24
+2025-04-21 00:55:21,614 - INFO - Found funding amount: 7000000
+2025-04-21 00:55:21,661 - INFO - Extracted: Shiru - 12-Nov-24
+2025-04-21 00:55:21,661 - INFO - Found funding amount: 16000000
+2025-04-21 00:55:21,702 - INFO - Extracted: Outbuild - 12-Nov-24
+2025-04-21 00:55:21,702 - INFO - Found funding amount: 11000000
+2025-04-21 00:55:21,738 - INFO - Extracted: Anthrogen - 12-Nov-24
+2025-04-21 00:55:21,738 - INFO - Found funding amount: 4000000
+2025-04-21 00:55:21,774 - INFO - Extracted: Connecty AI - 11-Nov-24
+2025-04-21 00:55:21,774 - INFO - Found funding amount: 1800000
+2025-04-21 00:55:21,810 - INFO - Extracted: AirGarage - 8-Nov-24
+2025-04-21 00:55:21,810 - INFO - Found funding amount: 11428497
+2025-04-21 00:55:21,859 - INFO - Extracted: Fractional - 7-Nov-24
+2025-04-21 00:55:21,859 - INFO - Found funding amount: 15000000
+2025-04-21 00:55:21,903 - INFO - Extracted: Orbital Sidekick - 7-Nov-24
+2025-04-21 00:55:21,903 - INFO - Found funding amount: 8626740
+2025-04-21 00:55:21,963 - INFO - Extracted: Corgea - 6-Nov-24
+2025-04-21 00:55:21,963 - INFO - Found funding amount: 2600000
+2025-04-21 00:55:22,000 - INFO - Extracted: OptraScan - 6-Nov-24
+2025-04-21 00:55:22,000 - INFO - Found funding amount: 30000000
+2025-04-21 00:55:22,034 - INFO - Extracted: Workhelix - 5-Nov-24
+2025-04-21 00:55:22,035 - INFO - Found funding amount: 15324979
+2025-04-21 00:55:22,076 - INFO - Extracted: PrognomiQ - 5-Nov-24
+2025-04-21 00:55:22,076 - INFO - Found funding amount: 34000000
+2025-04-21 00:55:22,076 - INFO - Successfully extracted 20 new companies from page 8
+2025-04-21 00:55:22,076 - INFO - Attempting to navigate from page 8
+2025-04-21 00:55:27,845 - INFO - JavaScript verification confirmed page changed
+2025-04-21 00:55:28,963 - INFO - Extracting data from page 9
+2025-04-21 00:55:29,774 - INFO - Trying standard table extraction
+2025-04-21 00:55:29,803 - INFO - Found funding amount column at index 6
+2025-04-21 00:55:29,806 - INFO - Found headquarters column at index 7
+2025-04-21 00:55:29,813 - INFO - Found 22 potential data rows
+2025-04-21 00:55:29,855 - INFO - Extracted: Carvis.AI - 4-Nov-24
+2025-04-21 00:55:29,855 - INFO - Found funding amount: 1200000
+2025-04-21 00:55:29,888 - INFO - Extracted: Inquis Medical - 4-Nov-24
+2025-04-21 00:55:29,888 - INFO - Found funding amount: 40000000
+2025-04-21 00:55:29,923 - INFO - Extracted: Augment Code - 4-Nov-24
+2025-04-21 00:55:29,923 - INFO - Found funding amount: 227000000
+2025-04-21 00:55:29,960 - INFO - Extracted: Primergy Solar - 4-Nov-24
+2025-04-21 00:55:29,960 - INFO - Found funding amount: 225000000
+2025-04-21 00:55:29,998 - INFO - Extracted: Advex AI - 4-Nov-24
+2025-04-21 00:55:29,998 - INFO - Found funding amount: 3500000
+2025-04-21 00:55:30,031 - INFO - Extracted: The Nursing Beat - 4-Nov-24
+2025-04-21 00:55:30,031 - INFO - Found funding amount: 0
+2025-04-21 00:55:30,077 - INFO - Extracted: Cornerstone AI - 31-Oct-24
+2025-04-21 00:55:30,077 - INFO - Found funding amount: 5000000
+2025-04-21 00:55:30,115 - INFO - Extracted: Spot AI - 31-Oct-24
+2025-04-21 00:55:30,115 - INFO - Found funding amount: 31000000
+2025-04-21 00:55:30,150 - INFO - Extracted: Buddy.ai - 31-Oct-24
+2025-04-21 00:55:30,150 - INFO - Found funding amount: 10200000
+2025-04-21 00:55:30,186 - INFO - Extracted: Evommune - 31-Oct-24
+2025-04-21 00:55:30,188 - INFO - Found funding amount: 115000000
+2025-04-21 00:55:30,225 - INFO - Extracted: Bugcrowd - 31-Oct-24
+2025-04-21 00:55:30,225 - INFO - Found funding amount: 50000000
+2025-04-21 00:55:30,258 - INFO - Extracted: Decart - 31-Oct-24
+2025-04-21 00:55:30,258 - INFO - Found funding amount: 21000000
+2025-04-21 00:55:30,302 - INFO - Extracted: Birch Creek Development - 31-Oct-24
+2025-04-21 00:55:30,302 - INFO - Found funding amount: 150000000
+2025-04-21 00:55:30,340 - INFO - Extracted: Shadowbox - 31-Oct-24
+2025-04-21 00:55:30,340 - INFO - Found funding amount: 2000000
+2025-04-21 00:55:30,378 - INFO - Extracted: Delos Insurance - 31-Oct-24
+2025-04-21 00:55:30,379 - INFO - Found funding amount: 9000000
+2025-04-21 00:55:30,421 - INFO - Extracted: Bifrost AI - 30-Oct-24
+2025-04-21 00:55:30,421 - INFO - Found funding amount: 8000000
+2025-04-21 00:55:30,454 - INFO - Extracted: Third Wave Automation - 30-Oct-24
+2025-04-21 00:55:30,454 - INFO - Found funding amount: 27000000
+2025-04-21 00:55:30,491 - INFO - Extracted: Sapien - 29-Oct-24
+2025-04-21 00:55:30,491 - INFO - Found funding amount: 8700000
+2025-04-21 00:55:30,525 - INFO - Extracted: HomeBoost - 29-Oct-24
+2025-04-21 00:55:30,525 - INFO - Found funding amount: 4000000
+2025-04-21 00:55:30,559 - INFO - Extracted: LifeSaver Mobile - 29-Oct-24
+2025-04-21 00:55:30,559 - INFO - Found funding amount: 0
+2025-04-21 00:55:30,559 - INFO - Successfully extracted 20 new companies from page 9
+2025-04-21 00:55:30,559 - INFO - Attempting to navigate from page 9
+2025-04-21 00:55:36,070 - INFO - JavaScript verification confirmed page changed
+2025-04-21 00:55:36,855 - INFO - Extracting data from page 10
+2025-04-21 00:55:38,054 - INFO - Trying standard table extraction
+2025-04-21 00:55:38,141 - INFO - Found funding amount column at index 6
+2025-04-21 00:55:38,155 - INFO - Found headquarters column at index 7
+2025-04-21 00:55:38,171 - INFO - Found 22 potential data rows
+2025-04-21 00:55:38,262 - INFO - Extracted: CredibleMind - 29-Oct-24
+2025-04-21 00:55:38,262 - INFO - Found funding amount: 7500000
+2025-04-21 00:55:38,303 - INFO - Extracted: Opus Guard - 29-Oct-24
+2025-04-21 00:55:38,303 - INFO - Found funding amount: 0
+2025-04-21 00:55:38,342 - INFO - Extracted: GMI Cloud - 29-Oct-24
+2025-04-21 00:55:38,342 - INFO - Found funding amount: 67000000
+2025-04-21 00:55:38,384 - INFO - Extracted: Browserbase - 29-Oct-24
+2025-04-21 00:55:38,384 - INFO - Found funding amount: 21000000
+2025-04-21 00:55:38,433 - INFO - Extracted: Armis Security - 28-Oct-24
+2025-04-21 00:55:38,433 - INFO - Found funding amount: 200000000
+2025-04-21 00:55:38,471 - INFO - Extracted: Kivu Bioscience - 28-Oct-24
+2025-04-21 00:55:38,471 - INFO - Found funding amount: 92000000
+2025-04-21 00:55:38,547 - INFO - Extracted: Sierra - 28-Oct-24
+2025-04-21 00:55:38,547 - INFO - Found funding amount: 175000000
+2025-04-21 00:55:38,587 - INFO - Extracted: Fondo - 28-Oct-24
+2025-04-21 00:55:38,588 - INFO - Found funding amount: 7000000
+2025-04-21 00:55:38,648 - INFO - Extracted: Abstract Security - 28-Oct-24
+2025-04-21 00:55:38,649 - INFO - Found funding amount: 15000000
+2025-04-21 00:55:38,686 - INFO - Extracted: Revyl - 28-Oct-24
+2025-04-21 00:55:38,686 - INFO - Found funding amount: 1100000
+2025-04-21 00:55:38,718 - INFO - Extracted: Pharos - 25-Oct-24
+2025-04-21 00:55:38,718 - INFO - Found funding amount: 5000000
+2025-04-21 00:55:38,751 - INFO - Extracted: Connect The Dots - 24-Oct-24
+2025-04-21 00:55:38,751 - INFO - Found funding amount: 0
+2025-04-21 00:55:38,782 - INFO - Extracted: Sociaaal - 24-Oct-24
+2025-04-21 00:55:38,782 - INFO - Found funding amount: 4000000
+2025-04-21 00:55:38,811 - INFO - Extracted: AnyLog - 24-Oct-24
+2025-04-21 00:55:38,811 - INFO - Found funding amount: 3789997
+2025-04-21 00:55:38,842 - INFO - Extracted: Concentric AI - 24-Oct-24
+2025-04-21 00:55:38,842 - INFO - Found funding amount: 45000000
+2025-04-21 00:55:38,877 - INFO - Extracted: PayToMe.co - 24-Oct-24
+2025-04-21 00:55:38,877 - INFO - Found funding amount: 0
+2025-04-21 00:55:38,909 - INFO - Extracted: Finix - 24-Oct-24
+2025-04-21 00:55:38,909 - INFO - Found funding amount: 75000000
+2025-04-21 00:55:38,944 - INFO - Extracted: Simbe Robotics - 24-Oct-24
+2025-04-21 00:55:38,944 - INFO - Found funding amount: 50000000
+2025-04-21 00:55:38,976 - INFO - Extracted: Oloid - 24-Oct-24
+2025-04-21 00:55:38,976 - INFO - Found funding amount: 6000000
+2025-04-21 00:55:39,008 - INFO - Extracted: Nimble Robotics - 23-Oct-24
+2025-04-21 00:55:39,008 - INFO - Found funding amount: 106000000
+2025-04-21 00:55:39,008 - INFO - Successfully extracted 20 new companies from page 10
+2025-04-21 00:55:39,008 - INFO - Attempting to navigate from page 10
+2025-04-21 00:55:44,283 - INFO - JavaScript verification confirmed page changed
+2025-04-21 00:55:44,651 - INFO - Extracting data from page 11
+2025-04-21 00:55:45,306 - INFO - Trying standard table extraction
+2025-04-21 00:55:45,361 - INFO - Found funding amount column at index 6
+2025-04-21 00:55:45,366 - INFO - Found headquarters column at index 7
+2025-04-21 00:55:45,375 - INFO - Found 22 potential data rows
+2025-04-21 00:55:45,419 - INFO - Extracted: Archy - 23-Oct-24
+2025-04-21 00:55:45,419 - INFO - Found funding amount: 15000000
+2025-04-21 00:55:45,447 - INFO - Extracted: Infinitus Systems - 23-Oct-24
+2025-04-21 00:55:45,447 - INFO - Found funding amount: 51500000
+2025-04-21 00:55:45,476 - INFO - Extracted: Courie - 23-Oct-24
+2025-04-21 00:55:45,476 - INFO - Found funding amount: 3825000
+2025-04-21 00:55:45,504 - INFO - Extracted: Anthro Energy - 23-Oct-24
+2025-04-21 00:55:45,505 - INFO - Found funding amount: 24900000
+2025-04-21 00:55:45,539 - INFO - Extracted: LAWFTY - 23-Oct-24
+2025-04-21 00:55:45,539 - INFO - Found funding amount: 40000000
+2025-04-21 00:55:45,568 - INFO - Extracted: BodySpec - 22-Oct-24
+2025-04-21 00:55:45,568 - INFO - Found funding amount: 3999998
+2025-04-21 00:55:45,596 - INFO - Extracted: Nooks - 22-Oct-24
+2025-04-21 00:55:45,596 - INFO - Found funding amount: 43000000
+2025-04-21 00:55:45,625 - INFO - Extracted: CrewAI - 22-Oct-24
+2025-04-21 00:55:45,625 - INFO - Found funding amount: 12000000
+2025-04-21 00:55:45,656 - INFO - Extracted: Qpoint - 22-Oct-24
+2025-04-21 00:55:45,656 - INFO - Found funding amount: 4000000
+2025-04-21 00:55:45,687 - INFO - Extracted: Globality - 22-Oct-24
+2025-04-21 00:55:45,687 - INFO - Found funding amount: 47000000
+2025-04-21 00:55:45,715 - INFO - Extracted: Socket - 22-Oct-24
+2025-04-21 00:55:45,715 - INFO - Found funding amount: 40000000
+2025-04-21 00:55:45,744 - INFO - Extracted: Mainspring Energy - 22-Oct-24
+2025-04-21 00:55:45,744 - INFO - Found funding amount: 87000000
+2025-04-21 00:55:45,772 - INFO - Extracted: interface.ai - 22-Oct-24
+2025-04-21 00:55:45,772 - INFO - Found funding amount: 20000000
+2025-04-21 00:55:45,800 - INFO - Extracted: Trellis Bioscience - 22-Oct-24
+2025-04-21 00:55:45,800 - INFO - Found funding amount: 0
+2025-04-21 00:55:45,828 - INFO - Extracted: Revelation Partners - 22-Oct-24
+2025-04-21 00:55:45,828 - INFO - Found funding amount: 0
+2025-04-21 00:55:45,856 - INFO - Extracted: Genmo - 22-Oct-24
+2025-04-21 00:55:45,856 - INFO - Found funding amount: 28400000
+2025-04-21 00:55:45,884 - INFO - Extracted: ItsWare - 22-Oct-24
+2025-04-21 00:55:45,884 - INFO - Found funding amount: 856464
+2025-04-21 00:55:45,918 - INFO - Extracted: Avenue Biosciences - 22-Oct-24
+2025-04-21 00:55:45,918 - INFO - Found funding amount: 2500000
+2025-04-21 00:55:45,947 - INFO - Extracted: Zip - 21-Oct-24
+2025-04-21 00:55:45,947 - INFO - Found funding amount: 190000000
+2025-04-21 00:55:45,975 - INFO - Extracted: HealthEx - 21-Oct-24
+2025-04-21 00:55:45,975 - INFO - Found funding amount: 14000000
+2025-04-21 00:55:45,975 - INFO - Successfully extracted 20 new companies from page 11
+2025-04-21 00:55:45,975 - INFO - Attempting to navigate from page 11
+2025-04-21 00:55:51,358 - INFO - JavaScript verification confirmed page changed
+2025-04-21 00:55:51,937 - INFO - Extracting data from page 12
+2025-04-21 00:55:52,988 - INFO - Trying standard table extraction
+2025-04-21 00:55:53,046 - INFO - Found funding amount column at index 6
+2025-04-21 00:55:53,051 - INFO - Found headquarters column at index 7
+2025-04-21 00:55:53,060 - INFO - Found 22 potential data rows
+2025-04-21 00:55:53,104 - INFO - Extracted: Uprise - 21-Oct-24
+2025-04-21 00:55:53,104 - INFO - Found funding amount: 3300000
+2025-04-21 00:55:53,137 - INFO - Extracted: Voxela - 21-Oct-24
+2025-04-21 00:55:53,137 - INFO - Found funding amount: 0
+2025-04-21 00:55:53,170 - INFO - Extracted: Kick - 17-Oct-24
+2025-04-21 00:55:53,170 - INFO - Found funding amount: 9000000
+2025-04-21 00:55:53,198 - INFO - Extracted: AN2 Therapeutics - 17-Oct-24
+2025-04-21 00:55:53,198 - INFO - Found funding amount: 0
+2025-04-21 00:55:53,227 - INFO - Extracted: Terray Therapeutics - 17-Oct-24
+2025-04-21 00:55:53,227 - INFO - Found funding amount: 120000000
+2025-04-21 00:55:53,256 - INFO - Extracted: Abel Police - 17-Oct-24
+2025-04-21 00:55:53,256 - INFO - Found funding amount: 5000000
+2025-04-21 00:55:53,284 - INFO - Extracted: Edgee - 17-Oct-24
+2025-04-21 00:55:53,284 - INFO - Found funding amount: 2900000
+2025-04-21 00:55:53,318 - INFO - Extracted: GetSetUp - 16-Oct-24
+2025-04-21 00:55:53,318 - INFO - Found funding amount: 50000
+2025-04-21 00:55:53,347 - INFO - Extracted: Samay - 16-Oct-24
+2025-04-21 00:55:53,347 - INFO - Found funding amount: 350000
+2025-04-21 00:55:53,375 - INFO - Extracted: Kiavi - 16-Oct-24
+2025-04-21 00:55:53,375 - INFO - Found funding amount: 400000000
+2025-04-21 00:55:53,403 - INFO - Extracted: Tako - 16-Oct-24
+2025-04-21 00:55:53,403 - INFO - Found funding amount: 5750000
+2025-04-21 00:55:53,431 - INFO - Extracted: Lightmatter - 16-Oct-24
+2025-04-21 00:55:53,431 - INFO - Found funding amount: 400000000
+2025-04-21 00:55:53,459 - INFO - Extracted: Agtonomy - 16-Oct-24
+2025-04-21 00:55:53,459 - INFO - Found funding amount: 10000000
+2025-04-21 00:55:53,487 - INFO - Extracted: PyrAmes, Inc. - 15-Oct-24
+2025-04-21 00:55:53,487 - INFO - Found funding amount: 50000
+2025-04-21 00:55:53,516 - INFO - Extracted: Alchemy - 15-Oct-24
+2025-04-21 00:55:53,516 - INFO - Found funding amount: 31000000
+2025-04-21 00:55:53,544 - INFO - Extracted: MDisrupt - 15-Oct-24
+2025-04-21 00:55:53,544 - INFO - Found funding amount: 1000000
+2025-04-21 00:55:53,572 - INFO - Extracted: Galileo - 15-Oct-24
+2025-04-21 00:55:53,572 - INFO - Found funding amount: 45000000
+2025-04-21 00:55:53,601 - INFO - Extracted: Azra Games - 15-Oct-24
+2025-04-21 00:55:53,601 - INFO - Found funding amount: 42700000
+2025-04-21 00:55:53,628 - INFO - Extracted: Chargie - 15-Oct-24
+2025-04-21 00:55:53,628 - INFO - Found funding amount: 9300000
+2025-04-21 00:55:53,657 - INFO - Extracted: Decagon - 15-Oct-24
+2025-04-21 00:55:53,657 - INFO - Found funding amount: 65000000
+2025-04-21 00:55:53,657 - INFO - Successfully extracted 20 new companies from page 12
+2025-04-21 00:55:53,657 - INFO - Attempting to navigate from page 12
+2025-04-21 00:55:59,009 - INFO - JavaScript verification confirmed page changed
+2025-04-21 00:55:59,813 - INFO - Extracting data from page 13
+2025-04-21 00:56:00,766 - INFO - Trying standard table extraction
+2025-04-21 00:56:00,823 - INFO - Found funding amount column at index 6
+2025-04-21 00:56:00,829 - INFO - Found headquarters column at index 7
+2025-04-21 00:56:00,838 - INFO - Found 22 potential data rows
+2025-04-21 00:56:00,883 - INFO - Extracted: Concourse - 15-Oct-24
+2025-04-21 00:56:00,883 - INFO - Found funding amount: 4700000
+2025-04-21 00:56:00,912 - INFO - Extracted: Stockguard - 15-Oct-24
+2025-04-21 00:56:00,912 - INFO - Found funding amount: 5999999
+2025-04-21 00:56:00,941 - INFO - Extracted: Neuron7.ai - 15-Oct-24
+2025-04-21 00:56:00,941 - INFO - Found funding amount: 44000000
+2025-04-21 00:56:00,969 - INFO - Extracted: Parakeet Health - 15-Oct-24
+2025-04-21 00:56:00,969 - INFO - Found funding amount: 3000000
+2025-04-21 00:56:01,008 - INFO - Extracted: Dryvebox - 14-Oct-24
+2025-04-21 00:56:01,008 - INFO - Found funding amount: 0
+2025-04-21 00:56:01,036 - INFO - Extracted: Blockcast - 14-Oct-24
+2025-04-21 00:56:01,036 - INFO - Found funding amount: 2850000
+2025-04-21 00:56:01,066 - INFO - Extracted: Cavecrack - 13-Oct-24
+2025-04-21 00:56:01,066 - INFO - Found funding amount: 0
+2025-04-21 00:56:01,096 - INFO - Extracted: Cerebelly - 10-Oct-24
+2025-04-21 00:56:01,096 - INFO - Found funding amount: 3000000
+2025-04-21 00:56:01,124 - INFO - Extracted: Suki - 10-Oct-24
+2025-04-21 00:56:01,124 - INFO - Found funding amount: 70000000
+2025-04-21 00:56:01,152 - INFO - Extracted: CytoVale - 10-Oct-24
+2025-04-21 00:56:01,152 - INFO - Found funding amount: 100000000
+2025-04-21 00:56:01,179 - INFO - Extracted: Zeal - 10-Oct-24
+2025-04-21 00:56:01,179 - INFO - Found funding amount: 15000000
+2025-04-21 00:56:01,207 - INFO - Extracted: Vidoc Security Lab - 10-Oct-24
+2025-04-21 00:56:01,207 - INFO - Found funding amount: 0
+2025-04-21 00:56:01,236 - INFO - Extracted: Relyance AI - 10-Oct-24
+2025-04-21 00:56:01,236 - INFO - Found funding amount: 32000000
+2025-04-21 00:56:01,264 - INFO - Extracted: Numeric - 10-Oct-24
+2025-04-21 00:56:01,264 - INFO - Found funding amount: 28000000
+2025-04-21 00:56:01,293 - INFO - Extracted: COVU - 10-Oct-24
+2025-04-21 00:56:01,293 - INFO - Found funding amount: 12500000
+2025-04-21 00:56:01,321 - INFO - Extracted: ApertureData - 10-Oct-24
+2025-04-21 00:56:01,321 - INFO - Found funding amount: 5250000
+2025-04-21 00:56:01,350 - INFO - Extracted: MiLaboratories - 10-Oct-24
+2025-04-21 00:56:01,350 - INFO - Found funding amount: 10000000
+2025-04-21 00:56:01,381 - INFO - Extracted: Glooko - 10-Oct-24
+2025-04-21 00:56:01,381 - INFO - Found funding amount: 100000000
+2025-04-21 00:56:01,410 - INFO - Extracted: IncumbentFI - 10-Oct-24
+2025-04-21 00:56:01,410 - INFO - Found funding amount: 5639687
+2025-04-21 00:56:01,438 - INFO - Extracted: Prophecy.io - 10-Oct-24
+2025-04-21 00:56:01,438 - INFO - Found funding amount: 38799983
+2025-04-21 00:56:01,438 - INFO - Successfully extracted 20 new companies from page 13
+2025-04-21 00:56:01,439 - INFO - Attempting to navigate from page 13
+2025-04-21 00:56:07,352 - INFO - JavaScript verification confirmed page changed
+2025-04-21 00:56:08,204 - INFO - Extracting data from page 14
+2025-04-21 00:56:08,827 - INFO - Trying standard table extraction
+2025-04-21 00:56:08,984 - INFO - Found funding amount column at index 6
+2025-04-21 00:56:09,008 - INFO - Found headquarters column at index 7
+2025-04-21 00:56:09,043 - INFO - Found 22 potential data rows
+2025-04-21 00:56:09,172 - INFO - Extracted: Sidepit - 10-Oct-24
+2025-04-21 00:56:09,172 - INFO - Found funding amount: 0
+2025-04-21 00:56:09,229 - INFO - Extracted: Astrix Health - 10-Oct-24
+2025-04-21 00:56:09,229 - INFO - Found funding amount: 500000
+2025-04-21 00:56:09,272 - INFO - Extracted: CEQAbase - 9-Oct-24
+2025-04-21 00:56:09,272 - INFO - Found funding amount: 200000
+2025-04-21 00:56:09,300 - INFO - Extracted: SimX - 9-Oct-24
+2025-04-21 00:56:09,301 - INFO - Found funding amount: 1250000
+2025-04-21 00:56:09,337 - INFO - Extracted: Bigeye - 9-Oct-24
+2025-04-21 00:56:09,337 - INFO - Found funding amount: 5000000
+2025-04-21 00:56:09,367 - INFO - Extracted: Drawer AI - 9-Oct-24
+2025-04-21 00:56:09,367 - INFO - Found funding amount: 5000000
+2025-04-21 00:56:09,397 - INFO - Extracted: Vultron - 9-Oct-24
+2025-04-21 00:56:09,397 - INFO - Found funding amount: 4850000
+2025-04-21 00:56:09,426 - INFO - Extracted: AppShip - 9-Oct-24
+2025-04-21 00:56:09,426 - INFO - Found funding amount: 200000
+2025-04-21 00:56:09,461 - INFO - Extracted: EvenUp - 8-Oct-24
+2025-04-21 00:56:09,462 - INFO - Found funding amount: 135000000
+2025-04-21 00:56:09,496 - INFO - Extracted: Tele911 - 8-Oct-24
+2025-04-21 00:56:09,496 - INFO - Found funding amount: 6756624
+2025-04-21 00:56:09,525 - INFO - Extracted: Kiva AI - 8-Oct-24
+2025-04-21 00:56:09,525 - INFO - Found funding amount: 7000000
+2025-04-21 00:56:09,556 - INFO - Extracted: Selonterra - 8-Oct-24
+2025-04-21 00:56:09,556 - INFO - Found funding amount: 2500000
+2025-04-21 00:56:09,590 - INFO - Extracted: Unify - 8-Oct-24
+2025-04-21 00:56:09,591 - INFO - Found funding amount: 12000000
+2025-04-21 00:56:09,619 - INFO - Extracted: Third Dimension AI - 8-Oct-24
+2025-04-21 00:56:09,619 - INFO - Found funding amount: 7000000
+2025-04-21 00:56:09,648 - INFO - Extracted: Distributional - 8-Oct-24
+2025-04-21 00:56:09,648 - INFO - Found funding amount: 19000000
+2025-04-21 00:56:09,682 - INFO - Extracted: Truthset - 8-Oct-24
+2025-04-21 00:56:09,682 - INFO - Found funding amount: 5000000
+2025-04-21 00:56:09,717 - INFO - Extracted: Stream - 8-Oct-24
+2025-04-21 00:56:09,717 - INFO - Found funding amount: 5300000
+2025-04-21 00:56:09,750 - INFO - Extracted: InterVene - 7-Oct-24
+2025-04-21 00:56:09,751 - INFO - Found funding amount: 13000000
+2025-04-21 00:56:09,783 - INFO - Extracted: Treya Partners - 7-Oct-24
+2025-04-21 00:56:09,783 - INFO - Found funding amount: 0
+2025-04-21 00:56:09,821 - INFO - Extracted: VESSL AI - 7-Oct-24
+2025-04-21 00:56:09,821 - INFO - Found funding amount: 12200000
+2025-04-21 00:56:09,821 - INFO - Successfully extracted 20 new companies from page 14
+2025-04-21 00:56:09,822 - INFO - Attempting to navigate from page 14
+2025-04-21 00:56:16,166 - INFO - JavaScript verification confirmed page changed
+2025-04-21 00:56:16,551 - INFO - Extracting data from page 15
+2025-04-21 00:56:17,442 - INFO - Trying standard table extraction
+2025-04-21 00:56:17,505 - INFO - Found funding amount column at index 6
+2025-04-21 00:56:17,512 - INFO - Found headquarters column at index 7
+2025-04-21 00:56:17,523 - INFO - Found 22 potential data rows
+2025-04-21 00:56:17,569 - INFO - Extracted: IOMETE - 7-Oct-24
+2025-04-21 00:56:17,569 - INFO - Found funding amount: 0
+2025-04-21 00:56:17,598 - INFO - Extracted: Kavia AI - 3-Oct-24
+2025-04-21 00:56:17,598 - INFO - Found funding amount: 1000000
+2025-04-21 00:56:17,625 - INFO - Extracted: OpenAI - 3-Oct-24
+2025-04-21 00:56:17,626 - INFO - Found funding amount: 4000000000
+2025-04-21 00:56:17,653 - INFO - Extracted: Paren - 3-Oct-24
+2025-04-21 00:56:17,654 - INFO - Found funding amount: 3000000
+2025-04-21 00:56:17,682 - INFO - Extracted: Integrated Biosciences - 3-Oct-24
+2025-04-21 00:56:17,682 - INFO - Found funding amount: 17200000
+2025-04-21 00:56:17,710 - INFO - Extracted: Booksy - 3-Oct-24
+2025-04-21 00:56:17,710 - INFO - Found funding amount: 0
+2025-04-21 00:56:17,738 - INFO - Extracted: Voyage AI - 3-Oct-24
+2025-04-21 00:56:17,738 - INFO - Found funding amount: 20000000
+2025-04-21 00:56:17,766 - INFO - Extracted: Valdera - 3-Oct-24
+2025-04-21 00:56:17,766 - INFO - Found funding amount: 15000000
+2025-04-21 00:56:17,795 - INFO - Extracted: Visolis - 3-Oct-24
+2025-04-21 00:56:17,795 - INFO - Found funding amount: 2250000
+2025-04-21 00:56:17,823 - INFO - Extracted: GuRu - 2-Oct-24
+2025-04-21 00:56:17,823 - INFO - Found funding amount: 0
+2025-04-21 00:56:17,851 - INFO - Extracted: Permanent - 2-Oct-24
+2025-04-21 00:56:17,851 - INFO - Found funding amount: 3700000
+2025-04-21 00:56:17,880 - INFO - Extracted: Poolside - 2-Oct-24
+2025-04-21 00:56:17,880 - INFO - Found funding amount: 500000000
+2025-04-21 00:56:17,908 - INFO - Extracted: Pallet - 2-Oct-24
+2025-04-21 00:56:17,908 - INFO - Found funding amount: 18000000
+2025-04-21 00:56:17,936 - INFO - Extracted: Billables AI - 2-Oct-24
+2025-04-21 00:56:17,936 - INFO - Found funding amount: 3900000
+2025-04-21 00:56:17,964 - INFO - Extracted: Reducto - 2-Oct-24
+2025-04-21 00:56:17,964 - INFO - Found funding amount: 8400000
+2025-04-21 00:56:17,991 - INFO - Extracted: Arda Therapeutics - 1-Oct-24
+2025-04-21 00:56:17,991 - INFO - Found funding amount: 43303366
+2025-04-21 00:56:18,019 - INFO - Extracted: Aspect Build - 1-Oct-24
+2025-04-21 00:56:18,019 - INFO - Found funding amount: 3000000
+2025-04-21 00:56:18,047 - INFO - Extracted: Synedgen - 1-Oct-24
+2025-04-21 00:56:18,047 - INFO - Found funding amount: 1750000
+2025-04-21 00:56:18,075 - INFO - Extracted: DataPelago - 1-Oct-24
+2025-04-21 00:56:18,076 - INFO - Found funding amount: 47000000
+2025-04-21 00:56:18,103 - INFO - Extracted: Neeve - 30-Sep-24
+2025-04-21 00:56:18,104 - INFO - Found funding amount: 15000000
+2025-04-21 00:56:18,104 - INFO - Successfully extracted 20 new companies from page 15
+2025-04-21 00:56:18,104 - INFO - Attempting to navigate from page 15
+2025-04-21 00:56:23,528 - INFO - JavaScript verification confirmed page changed
+2025-04-21 00:56:24,022 - INFO - Extracting data from page 16
+2025-04-21 00:56:24,834 - INFO - Trying standard table extraction
+2025-04-21 00:56:24,889 - INFO - Found funding amount column at index 6
+2025-04-21 00:56:24,894 - INFO - Found headquarters column at index 7
+2025-04-21 00:56:24,903 - INFO - Found 22 potential data rows
+2025-04-21 00:56:24,947 - INFO - Extracted: Artisan AI - 30-Sep-24
+2025-04-21 00:56:24,947 - INFO - Found funding amount: 11500000
+2025-04-21 00:56:24,975 - INFO - Extracted: Gladly - 26-Sep-24
+2025-04-21 00:56:24,975 - INFO - Found funding amount: 40000000
+2025-04-21 00:56:25,003 - INFO - Extracted: PlayWorks - 26-Sep-24
+2025-04-21 00:56:25,003 - INFO - Found funding amount: 25000
+2025-04-21 00:56:25,030 - INFO - Extracted: Bemi - 26-Sep-24
+2025-04-21 00:56:25,030 - INFO - Found funding amount: 309000
+2025-04-21 00:56:25,058 - INFO - Extracted: Superb AI - 26-Sep-24
+2025-04-21 00:56:25,058 - INFO - Found funding amount: 10200000
+2025-04-21 00:56:25,085 - INFO - Extracted: SKY Leasing - 26-Sep-24
+2025-04-21 00:56:25,085 - INFO - Found funding amount: 569540000
+2025-04-21 00:56:25,112 - INFO - Extracted: AssetHub - 25-Sep-24
+2025-04-21 00:56:25,112 - INFO - Found funding amount: 100000000
+2025-04-21 00:56:25,139 - INFO - Extracted: Feno - 25-Sep-24
+2025-04-21 00:56:25,140 - INFO - Found funding amount: 6000000
+2025-04-21 00:56:25,167 - INFO - Extracted: Supabase - 25-Sep-24
+2025-04-21 00:56:25,167 - INFO - Found funding amount: 80000000
+2025-04-21 00:56:25,195 - INFO - Extracted: Whatfix - 25-Sep-24
+2025-04-21 00:56:25,195 - INFO - Found funding amount: 125000000
+2025-04-21 00:56:25,224 - INFO - Extracted: SnippetSentry - 25-Sep-24
+2025-04-21 00:56:25,224 - INFO - Found funding amount: 500000
+2025-04-21 00:56:25,252 - INFO - Extracted: FluidLogic - 24-Sep-24
+2025-04-21 00:56:25,252 - INFO - Found funding amount: 15000000
+2025-04-21 00:56:25,280 - INFO - Extracted: Distyl AI - 24-Sep-24
+2025-04-21 00:56:25,280 - INFO - Found funding amount: 20000000
+2025-04-21 00:56:25,308 - INFO - Extracted: Icon Savings Plan - 24-Sep-24
+2025-04-21 00:56:25,308 - INFO - Found funding amount: 9200000
+2025-04-21 00:56:25,336 - INFO - Extracted: UJET - 24-Sep-24
+2025-04-21 00:56:25,336 - INFO - Found funding amount: 76000000
+2025-04-21 00:56:25,363 - INFO - Extracted: Anadro - 24-Sep-24
+2025-04-21 00:56:25,364 - INFO - Found funding amount: 2516495
+2025-04-21 00:56:25,391 - INFO - Extracted: Atlys - 24-Sep-24
+2025-04-21 00:56:25,392 - INFO - Found funding amount: 20000000
+2025-04-21 00:56:25,419 - INFO - Extracted: Datapad - 24-Sep-24
+2025-04-21 00:56:25,419 - INFO - Found funding amount: 0
+2025-04-21 00:56:25,447 - INFO - Extracted: Altimate AI - 23-Sep-24
+2025-04-21 00:56:25,447 - INFO - Found funding amount: 0
+2025-04-21 00:56:25,475 - INFO - Extracted: Harmonic - 23-Sep-24
+2025-04-21 00:56:25,475 - INFO - Found funding amount: 75000000
+2025-04-21 00:56:25,475 - INFO - Successfully extracted 20 new companies from page 16
+2025-04-21 00:56:25,475 - INFO - Attempting to navigate from page 16
+2025-04-21 00:56:31,295 - INFO - JavaScript verification confirmed page changed
+2025-04-21 00:56:31,977 - INFO - Extracting data from page 17
+2025-04-21 00:56:32,401 - INFO - Trying standard table extraction
+2025-04-21 00:56:32,435 - INFO - Found funding amount column at index 6
+2025-04-21 00:56:32,438 - INFO - Found headquarters column at index 7
+2025-04-21 00:56:32,445 - INFO - Found 22 potential data rows
+2025-04-21 00:56:32,486 - INFO - Extracted: Genome Medical - 23-Sep-24
+2025-04-21 00:56:32,486 - INFO - Found funding amount: 75344304
+2025-04-21 00:56:32,513 - INFO - Extracted: Hippocratic AI - 19-Sep-24
+2025-04-21 00:56:32,513 - INFO - Found funding amount: 53000000
+2025-04-21 00:56:32,545 - INFO - Extracted: Akia - 19-Sep-24
+2025-04-21 00:56:32,545 - INFO - Found funding amount: 4999998
+2025-04-21 00:56:32,579 - INFO - Extracted: Ferrum Health - 19-Sep-24
+2025-04-21 00:56:32,579 - INFO - Found funding amount: 16000000
+2025-04-21 00:56:32,607 - INFO - Extracted: Twelve - 19-Sep-24
+2025-04-21 00:56:32,607 - INFO - Found funding amount: 400000000
+2025-04-21 00:56:32,635 - INFO - Extracted: Aclima - 19-Sep-24
+2025-04-21 00:56:32,636 - INFO - Found funding amount: 13000000
+2025-04-21 00:56:32,663 - INFO - Extracted: AtoB - 19-Sep-24
+2025-04-21 00:56:32,663 - INFO - Found funding amount: 130000000
+2025-04-21 00:56:32,691 - INFO - Extracted: Picus Security - 19-Sep-24
+2025-04-21 00:56:32,691 - INFO - Found funding amount: 45000000
+2025-04-21 00:56:32,719 - INFO - Extracted: Oro Labs - 18-Sep-24
+2025-04-21 00:56:32,719 - INFO - Found funding amount: 34000000
+2025-04-21 00:56:32,747 - INFO - Extracted: Fal - 18-Sep-24
+2025-04-21 00:56:32,747 - INFO - Found funding amount: 14000000
+2025-04-21 00:56:32,775 - INFO - Extracted: Mercor - 18-Sep-24
+2025-04-21 00:56:32,775 - INFO - Found funding amount: 30000000
+2025-04-21 00:56:32,803 - INFO - Extracted: Harvest Thermal - 18-Sep-24
+2025-04-21 00:56:32,803 - INFO - Found funding amount: 2000000
+2025-04-21 00:56:32,831 - INFO - Extracted: CodePath - 18-Sep-24
+2025-04-21 00:56:32,831 - INFO - Found funding amount: 50000000
+2025-04-21 00:56:32,860 - INFO - Extracted: Hgen - 17-Sep-24
+2025-04-21 00:56:32,860 - INFO - Found funding amount: 5000000
+2025-04-21 00:56:32,890 - INFO - Extracted: Orb - 17-Sep-24
+2025-04-21 00:56:32,890 - INFO - Found funding amount: 25000000
+2025-04-21 00:56:32,919 - INFO - Extracted: Mindtrip - 17-Sep-24
+2025-04-21 00:56:32,919 - INFO - Found funding amount: 12000000
+2025-04-21 00:56:32,947 - INFO - Extracted: Futuro Health - 17-Sep-24
+2025-04-21 00:56:32,947 - INFO - Found funding amount: 10200000
+2025-04-21 00:56:32,975 - INFO - Extracted: Prof Jim - 17-Sep-24
+2025-04-21 00:56:32,975 - INFO - Found funding amount: 1500000
+2025-04-21 00:56:33,003 - INFO - Extracted: TeamBridge - 16-Sep-24
+2025-04-21 00:56:33,003 - INFO - Found funding amount: 28000000
+2025-04-21 00:56:33,033 - INFO - Extracted: World Labs - 13-Sep-24
+2025-04-21 00:56:33,033 - INFO - Found funding amount: 230000000
+2025-04-21 00:56:33,034 - INFO - Successfully extracted 20 new companies from page 17
+2025-04-21 00:56:33,034 - INFO - Attempting to navigate from page 17
+2025-04-21 00:56:38,649 - INFO - JavaScript verification confirmed page changed
+2025-04-21 00:56:39,493 - INFO - Extracting data from page 18
+2025-04-21 00:56:40,332 - INFO - Trying standard table extraction
+2025-04-21 00:56:40,389 - INFO - Found funding amount column at index 6
+2025-04-21 00:56:40,394 - INFO - Found headquarters column at index 7
+2025-04-21 00:56:40,403 - INFO - Found 22 potential data rows
+2025-04-21 00:56:40,447 - INFO - Extracted: Operant - 12-Sep-24
+2025-04-21 00:56:40,447 - INFO - Found funding amount: 10000000
+2025-04-21 00:56:40,476 - INFO - Extracted: Bounti.ai - 12-Sep-24
+2025-04-21 00:56:40,476 - INFO - Found funding amount: 16000000
+2025-04-21 00:56:40,504 - INFO - Extracted: Connectly.ai - 11-Sep-24
+2025-04-21 00:56:40,504 - INFO - Found funding amount: 20000000
+2025-04-21 00:56:40,532 - INFO - Extracted: Nostra AI - 11-Sep-24
+2025-04-21 00:56:40,532 - INFO - Found funding amount: 8900000
+2025-04-21 00:56:40,571 - INFO - Extracted: Candid Health - 11-Sep-24
+2025-04-21 00:56:40,571 - INFO - Found funding amount: 29000000
+2025-04-21 00:56:40,599 - INFO - Extracted: Polly - 10-Sep-24
+2025-04-21 00:56:40,599 - INFO - Found funding amount: 25000000
+2025-04-21 00:56:40,627 - INFO - Extracted: Glean - 10-Sep-24
+2025-04-21 00:56:40,628 - INFO - Found funding amount: 260000000
+2025-04-21 00:56:40,656 - INFO - Extracted: Reshape Automation - 10-Sep-24
+2025-04-21 00:56:40,656 - INFO - Found funding amount: 5000000
+2025-04-21 00:56:40,684 - INFO - Extracted: Infinium - 10-Sep-24
+2025-04-21 00:56:40,684 - INFO - Found funding amount: 0
+2025-04-21 00:56:40,713 - INFO - Extracted: Blended Technologies - 10-Sep-24
+2025-04-21 00:56:40,713 - INFO - Found funding amount: 2500000
+2025-04-21 00:56:40,744 - INFO - Extracted: AttoTude - 10-Sep-24
+2025-04-21 00:56:40,744 - INFO - Found funding amount: 29000000
+2025-04-21 00:56:40,778 - INFO - Extracted: Neurona Therapeutics - 10-Sep-24
+2025-04-21 00:56:40,778 - INFO - Found funding amount: 3800000
+2025-04-21 00:56:40,807 - INFO - Extracted: P0 Security - 10-Sep-24
+2025-04-21 00:56:40,807 - INFO - Found funding amount: 15000000
+2025-04-21 00:56:40,835 - INFO - Extracted: PIN AI - 9-Sep-24
+2025-04-21 00:56:40,835 - INFO - Found funding amount: 10000000
+2025-04-21 00:56:40,863 - INFO - Extracted: Race - 9-Sep-24
+2025-04-21 00:56:40,863 - INFO - Found funding amount: 375000000
+2025-04-21 00:56:40,891 - INFO - Extracted: OrsoBio - 6-Sep-24
+2025-04-21 00:56:40,891 - INFO - Found funding amount: 67000000
+2025-04-21 00:56:40,926 - INFO - Extracted: DubClub - 5-Sep-24
+2025-04-21 00:56:40,926 - INFO - Found funding amount: 7500000
+2025-04-21 00:56:40,954 - INFO - Extracted: Thatch - 5-Sep-24
+2025-04-21 00:56:40,954 - INFO - Found funding amount: 38000000
+2025-04-21 00:56:40,983 - INFO - Extracted: Drip Capital - 5-Sep-24
+2025-04-21 00:56:40,983 - INFO - Found funding amount: 90000000
+2025-04-21 00:56:41,011 - INFO - Extracted: Acuvity - 5-Sep-24
+2025-04-21 00:56:41,011 - INFO - Found funding amount: 9000000
+2025-04-21 00:56:41,011 - INFO - Successfully extracted 20 new companies from page 18
+2025-04-21 00:56:41,011 - INFO - Attempting to navigate from page 18
+2025-04-21 00:56:47,015 - INFO - JavaScript verification confirmed page changed
+2025-04-21 00:56:47,572 - INFO - Extracting data from page 19
+2025-04-21 00:56:48,754 - INFO - Trying standard table extraction
+2025-04-21 00:56:48,813 - INFO - Found funding amount column at index 6
+2025-04-21 00:56:48,818 - INFO - Found headquarters column at index 7
+2025-04-21 00:56:48,827 - INFO - Found 22 potential data rows
+2025-04-21 00:56:48,873 - INFO - Extracted: Portex - 5-Sep-24
+2025-04-21 00:56:48,873 - INFO - Found funding amount: 6250000
+2025-04-21 00:56:48,904 - INFO - Extracted: Agree.com - 5-Sep-24
+2025-04-21 00:56:48,904 - INFO - Found funding amount: 3000000
+2025-04-21 00:56:48,932 - INFO - Extracted: Fiddler AI - 5-Sep-24
+2025-04-21 00:56:48,932 - INFO - Found funding amount: 18949994
+2025-04-21 00:56:48,960 - INFO - Extracted: Cortex - 4-Sep-24
+2025-04-21 00:56:48,960 - INFO - Found funding amount: 60000000
+2025-04-21 00:56:48,988 - INFO - Extracted: ArsenalBio - 4-Sep-24
+2025-04-21 00:56:48,988 - INFO - Found funding amount: 325000000
+2025-04-21 00:56:49,020 - INFO - Extracted: Ceres Imaging - 4-Sep-24
+2025-04-21 00:56:49,020 - INFO - Found funding amount: 0
+2025-04-21 00:56:49,051 - INFO - Extracted: Venova Medical - 4-Sep-24
+2025-04-21 00:56:49,051 - INFO - Found funding amount: 30000000
+2025-04-21 00:56:49,079 - INFO - Extracted: Climax Foods - 4-Sep-24
+2025-04-21 00:56:49,079 - INFO - Found funding amount: 0
+2025-04-21 00:56:49,108 - INFO - Extracted: Flex - 4-Sep-24
+2025-04-21 00:56:49,108 - INFO - Found funding amount: 3200000
+2025-04-21 00:56:49,135 - INFO - Extracted: Circle Pharma - 3-Sep-24
+2025-04-21 00:56:49,135 - INFO - Found funding amount: 90000000
+2025-04-21 00:56:49,163 - INFO - Extracted: Segmed - 3-Sep-24
+2025-04-21 00:56:49,163 - INFO - Found funding amount: 10400000
+2025-04-21 00:56:49,191 - INFO - Extracted: Linea Energy - 3-Sep-24
+2025-04-21 00:56:49,191 - INFO - Found funding amount: 145000000
+2025-04-21 00:56:49,219 - INFO - Extracted: Gainful - 3-Sep-24
+2025-04-21 00:56:49,219 - INFO - Found funding amount: 0
+2025-04-21 00:56:49,246 - INFO - Extracted: Mintlify - 3-Sep-24
+2025-04-21 00:56:49,246 - INFO - Found funding amount: 18500000
+2025-04-21 00:56:49,274 - INFO - Extracted: Magic Lifescience - 3-Sep-24
+2025-04-21 00:56:49,274 - INFO - Found funding amount: 163398
+2025-04-21 00:56:49,304 - INFO - Extracted: Approveit - 2-Sep-24
+2025-04-21 00:56:49,304 - INFO - Found funding amount: 1000000
+2025-04-21 00:56:49,338 - INFO - Extracted: Weeknd - 1-Sep-24
+2025-04-21 00:56:49,338 - INFO - Found funding amount: 0
+2025-04-21 00:56:49,366 - INFO - Extracted: Crafty Apes - 30-Aug-24
+2025-04-21 00:56:49,366 - INFO - Found funding amount: 0
+2025-04-21 00:56:49,394 - INFO - Extracted: Codeium - 29-Aug-24
+2025-04-21 00:56:49,394 - INFO - Found funding amount: 150000000
+2025-04-21 00:56:49,422 - INFO - Extracted: MIRIS - 29-Aug-24
+2025-04-21 00:56:49,422 - INFO - Found funding amount: 26000000
+2025-04-21 00:56:49,423 - INFO - Successfully extracted 20 new companies from page 19
+2025-04-21 00:56:49,423 - INFO - Attempting to navigate from page 19
+2025-04-21 00:56:55,504 - INFO - JavaScript verification confirmed page changed
+2025-04-21 00:56:55,860 - INFO - Extracting data from page 20
+2025-04-21 00:56:56,240 - INFO - Trying standard table extraction
+2025-04-21 00:56:56,303 - INFO - Found funding amount column at index 6
+2025-04-21 00:56:56,308 - INFO - Found headquarters column at index 7
+2025-04-21 00:56:56,318 - INFO - Found 22 potential data rows
+2025-04-21 00:56:56,364 - INFO - Extracted: nOps - 28-Aug-24
+2025-04-21 00:56:56,364 - INFO - Found funding amount: 30000000
+2025-04-21 00:56:56,395 - INFO - Extracted: Uplift Labs - 28-Aug-24
+2025-04-21 00:56:56,395 - INFO - Found funding amount: 2100000
+2025-04-21 00:56:56,423 - INFO - Extracted: Opus Clip - 28-Aug-24
+2025-04-21 00:56:56,423 - INFO - Found funding amount: 30000000
+2025-04-21 00:56:56,451 - INFO - Extracted: Bland AI - 28-Aug-24
+2025-04-21 00:56:56,451 - INFO - Found funding amount: 16000000
+2025-04-21 00:56:56,479 - INFO - Extracted: Noetik - 28-Aug-24
+2025-04-21 00:56:56,479 - INFO - Found funding amount: 40000000
+2025-04-21 00:56:56,508 - INFO - Extracted: Inventive AI - 28-Aug-24
+2025-04-21 00:56:56,508 - INFO - Found funding amount: 4000000
+2025-04-21 00:56:56,536 - INFO - Extracted: Linker Finance - 27-Aug-24
+2025-04-21 00:56:56,536 - INFO - Found funding amount: 3700000
+2025-04-21 00:56:56,567 - INFO - Extracted: ProhostAI - 27-Aug-24
+2025-04-21 00:56:56,567 - INFO - Found funding amount: 1465000
+2025-04-21 00:56:56,599 - INFO - Extracted: Cribl - 27-Aug-24
+2025-04-21 00:56:56,600 - INFO - Found funding amount: 200000000
+2025-04-21 00:56:56,633 - INFO - Extracted: Gameplay Galaxy - 27-Aug-24
+2025-04-21 00:56:56,633 - INFO - Found funding amount: 11170000
+2025-04-21 00:56:56,691 - INFO - Extracted: Spire Global - 27-Aug-24
+2025-04-21 00:56:56,691 - INFO - Found funding amount: 3500000
+2025-04-21 00:56:56,721 - INFO - Extracted: Fleet - 27-Aug-24
+2025-04-21 00:56:56,721 - INFO - Found funding amount: 2500000
+2025-04-21 00:56:56,750 - INFO - Extracted: just words - 27-Aug-24
+2025-04-21 00:56:56,750 - INFO - Found funding amount: 1700000
+2025-04-21 00:56:56,780 - INFO - Extracted: Planera - 27-Aug-24
+2025-04-21 00:56:56,780 - INFO - Found funding amount: 13500000
+2025-04-21 00:56:56,810 - INFO - Extracted: Clearway Energy Group - 26-Aug-24
+2025-04-21 00:56:56,810 - INFO - Found funding amount: 550000000
+2025-04-21 00:56:56,844 - INFO - Extracted: Tavoro - 26-Aug-24
+2025-04-21 00:56:56,844 - INFO - Found funding amount: 2500000
+2025-04-21 00:56:56,876 - INFO - Extracted: Accession Risk Management Group - 22-Aug-24
+2025-04-21 00:56:56,876 - INFO - Found funding amount: 1000000000
+2025-04-21 00:56:56,907 - INFO - Extracted: Openwater - 22-Aug-24
+2025-04-21 00:56:56,907 - INFO - Found funding amount: 54000000
+2025-04-21 00:56:56,936 - INFO - Extracted: Scale AI - 21-Aug-24
+2025-04-21 00:56:56,937 - INFO - Found funding amount: 1000000000
+2025-04-21 00:56:56,965 - INFO - Extracted: Kodiak Robotics - 21-Aug-24
+2025-04-21 00:56:56,965 - INFO - Found funding amount: 0
+2025-04-21 00:56:56,965 - INFO - Successfully extracted 20 new companies from page 20
+2025-04-21 00:56:56,965 - INFO - Attempting to navigate from page 20
+2025-04-21 00:57:02,520 - INFO - JavaScript verification confirmed page changed
+2025-04-21 00:57:03,545 - INFO - Extracting data from page 21
+2025-04-21 00:57:04,204 - INFO - Trying standard table extraction
+2025-04-21 00:57:04,260 - INFO - Found funding amount column at index 6
+2025-04-21 00:57:04,265 - INFO - Found headquarters column at index 7
+2025-04-21 00:57:04,274 - INFO - Found 22 potential data rows
+2025-04-21 00:57:04,319 - INFO - Extracted: Qualified Digital - 21-Aug-24
+2025-04-21 00:57:04,319 - INFO - Found funding amount: 0
+2025-04-21 00:57:04,349 - INFO - Extracted: Skyfire Systems - 21-Aug-24
+2025-04-21 00:57:04,349 - INFO - Found funding amount: 8500000
+2025-04-21 00:57:04,377 - INFO - Extracted: XII Medical - 21-Aug-24
+2025-04-21 00:57:04,377 - INFO - Found funding amount: 45000000
+2025-04-21 00:57:04,406 - INFO - Extracted: Piramidal - 21-Aug-24
+2025-04-21 00:57:04,406 - INFO - Found funding amount: 6000000
+2025-04-21 00:57:04,434 - INFO - Extracted: Lettuce Financial - 21-Aug-24
+2025-04-21 00:57:04,434 - INFO - Found funding amount: 15000000
+2025-04-21 00:57:04,482 - INFO - Extracted: Enteligent - 20-Aug-24
+2025-04-21 00:57:04,482 - INFO - Found funding amount: 6000000
+2025-04-21 00:57:04,513 - INFO - Extracted: Starpath Robotics - 20-Aug-24
+2025-04-21 00:57:04,513 - INFO - Found funding amount: 12000000
+2025-04-21 00:57:04,540 - INFO - Extracted: Kubiya.ai - 20-Aug-24
+2025-04-21 00:57:04,541 - INFO - Found funding amount: 6000000
+2025-04-21 00:57:04,569 - INFO - Extracted: Marathon Fusion - 20-Aug-24
+2025-04-21 00:57:04,569 - INFO - Found funding amount: 5900000
+2025-04-21 00:57:04,597 - INFO - Extracted: Pangeam Inc. - 20-Aug-24
+2025-04-21 00:57:04,597 - INFO - Found funding amount: 2750000
+2025-04-21 00:57:04,625 - INFO - Extracted: Eppo - 20-Aug-24
+2025-04-21 00:57:04,625 - INFO - Found funding amount: 28000000
+2025-04-21 00:57:04,653 - INFO - Extracted: Fortera - 20-Aug-24
+2025-04-21 00:57:04,653 - INFO - Found funding amount: 85000000
+2025-04-21 00:57:04,681 - INFO - Extracted: Exin Health - 19-Aug-24
+2025-04-21 00:57:04,681 - INFO - Found funding amount: 0
+2025-04-21 00:57:04,709 - INFO - Extracted: Fabric Cryptography - 19-Aug-24
+2025-04-21 00:57:04,709 - INFO - Found funding amount: 33000000
+2025-04-21 00:57:04,738 - INFO - Extracted: Ensemble AI - 15-Aug-24
+2025-04-21 00:57:04,738 - INFO - Found funding amount: 3300000
+2025-04-21 00:57:04,765 - INFO - Extracted: Era Finance - 15-Aug-24
+2025-04-21 00:57:04,765 - INFO - Found funding amount: 9362409
+2025-04-21 00:57:04,800 - INFO - Extracted: Kiteworks - 14-Aug-24
+2025-04-21 00:57:04,800 - INFO - Found funding amount: 456000000
+2025-04-21 00:57:04,831 - INFO - Extracted: nunu.ai - 14-Aug-24
+2025-04-21 00:57:04,831 - INFO - Found funding amount: 2000000
+2025-04-21 00:57:04,859 - INFO - Extracted: Moximed - 13-Aug-24
+2025-04-21 00:57:04,859 - INFO - Found funding amount: 61000000
+2025-04-21 00:57:04,887 - INFO - Extracted: Guidewheel - 13-Aug-24
+2025-04-21 00:57:04,887 - INFO - Found funding amount: 31000000
+2025-04-21 00:57:04,887 - INFO - Successfully extracted 20 new companies from page 21
+2025-04-21 00:57:04,887 - INFO - Attempting to navigate from page 21
+2025-04-21 00:57:11,006 - INFO - JavaScript verification confirmed page changed
+2025-04-21 00:57:11,428 - INFO - Extracting data from page 22
+2025-04-21 00:57:11,973 - INFO - Trying standard table extraction
+2025-04-21 00:57:12,027 - INFO - Found funding amount column at index 6
+2025-04-21 00:57:12,031 - INFO - Found headquarters column at index 7
+2025-04-21 00:57:12,041 - INFO - Found 22 potential data rows
+2025-04-21 00:57:12,088 - INFO - Extracted: Cision Vision - 13-Aug-24
+2025-04-21 00:57:12,088 - INFO - Found funding amount: 22300000
+2025-04-21 00:57:12,117 - INFO - Extracted: PayZen - 13-Aug-24
+2025-04-21 00:57:12,117 - INFO - Found funding amount: 200000000
+2025-04-21 00:57:12,145 - INFO - Extracted: Voltera - 13-Aug-24
+2025-04-21 00:57:12,146 - INFO - Found funding amount: 100000000
+2025-04-21 00:57:12,174 - INFO - Extracted: HeatMap, Inc - 13-Aug-24
+2025-04-21 00:57:12,174 - INFO - Found funding amount: 4000000
+2025-04-21 00:57:12,202 - INFO - Extracted: Cosine - 12-Aug-24
+2025-04-21 00:57:12,202 - INFO - Found funding amount: 2500000
+2025-04-21 00:57:12,229 - INFO - Extracted: DevRev - 9-Aug-24
+2025-04-21 00:57:12,229 - INFO - Found funding amount: 100825173
+2025-04-21 00:57:12,256 - INFO - Extracted: Double - 9-Aug-24
+2025-04-21 00:57:12,256 - INFO - Found funding amount: 500000
+2025-04-21 00:57:12,284 - INFO - Extracted: Brisk Teaching - 9-Aug-24
+2025-04-21 00:57:12,284 - INFO - Found funding amount: 6899995
+2025-04-21 00:57:12,312 - INFO - Extracted: Feeling Great - 8-Aug-24
+2025-04-21 00:57:12,312 - INFO - Found funding amount: 8000000
+2025-04-21 00:57:12,340 - INFO - Extracted: Reforged Labs - 8-Aug-24
+2025-04-21 00:57:12,340 - INFO - Found funding amount: 3900000
+2025-04-21 00:57:12,368 - INFO - Extracted: Opal - 8-Aug-24
+2025-04-21 00:57:12,368 - INFO - Found funding amount: 60000000
+2025-04-21 00:57:12,405 - INFO - Extracted: Switchback Systems - 8-Aug-24
+2025-04-21 00:57:12,406 - INFO - Found funding amount: 10088281
+2025-04-21 00:57:12,441 - INFO - Extracted: Bardeen - 8-Aug-24
+2025-04-21 00:57:12,442 - INFO - Found funding amount: 3000000
+2025-04-21 00:57:12,472 - INFO - Extracted: Bryte - 8-Aug-24
+2025-04-21 00:57:12,472 - INFO - Found funding amount: 1000000
+2025-04-21 00:57:12,501 - INFO - Extracted: Ionetix - 7-Aug-24
+2025-04-21 00:57:12,501 - INFO - Found funding amount: 0
+2025-04-21 00:57:12,529 - INFO - Extracted: Anjuna - 7-Aug-24
+2025-04-21 00:57:12,529 - INFO - Found funding amount: 25000000
+2025-04-21 00:57:12,557 - INFO - Extracted: Flow - 7-Aug-24
+2025-04-21 00:57:12,557 - INFO - Found funding amount: 6000000
+2025-04-21 00:57:12,585 - INFO - Extracted: Napkin AI - 7-Aug-24
+2025-04-21 00:57:12,585 - INFO - Found funding amount: 10000000
+2025-04-21 00:57:12,613 - INFO - Extracted: Datch - 7-Aug-24
+2025-04-21 00:57:12,613 - INFO - Found funding amount: 15000000
+2025-04-21 00:57:12,641 - INFO - Extracted: Greptime - 7-Aug-24
+2025-04-21 00:57:12,641 - INFO - Found funding amount: 0
+2025-04-21 00:57:12,641 - INFO - Successfully extracted 20 new companies from page 22
+2025-04-21 00:57:12,641 - INFO - Attempting to navigate from page 22
+2025-04-21 00:57:18,050 - INFO - JavaScript verification confirmed page changed
+2025-04-21 00:57:19,199 - INFO - Extracting data from page 23
+2025-04-21 00:57:19,628 - INFO - Trying standard table extraction
+2025-04-21 00:57:19,685 - INFO - Found funding amount column at index 6
+2025-04-21 00:57:19,690 - INFO - Found headquarters column at index 7
+2025-04-21 00:57:19,699 - INFO - Found 22 potential data rows
+2025-04-21 00:57:19,743 - INFO - Extracted: Sundial - 6-Aug-24
+2025-04-21 00:57:19,743 - INFO - Found funding amount: 23348218
+2025-04-21 00:57:19,780 - INFO - Extracted: Mechanical Orchard - 6-Aug-24
+2025-04-21 00:57:19,780 - INFO - Found funding amount: 50000000
+2025-04-21 00:57:19,808 - INFO - Extracted: MentalHappy - 6-Aug-24
+2025-04-21 00:57:19,808 - INFO - Found funding amount: 500000
+2025-04-21 00:57:19,836 - INFO - Extracted: Abnormal Security - 6-Aug-24
+2025-04-21 00:57:19,836 - INFO - Found funding amount: 250000000
+2025-04-21 00:57:19,865 - INFO - Extracted: Climatize - 6-Aug-24
+2025-04-21 00:57:19,865 - INFO - Found funding amount: 1750000
+2025-04-21 00:57:19,893 - INFO - Extracted: Shinobi Therapeutics - 6-Aug-24
+2025-04-21 00:57:19,893 - INFO - Found funding amount: 68000000
+2025-04-21 00:57:19,931 - INFO - Extracted: Curio Research - 6-Aug-24
+2025-04-21 00:57:19,931 - INFO - Found funding amount: 5700000
+2025-04-21 00:57:19,959 - INFO - Extracted: Muon Space - 5-Aug-24
+2025-04-21 00:57:19,959 - INFO - Found funding amount: 56703744
+2025-04-21 00:57:19,987 - INFO - Extracted: Groq - 5-Aug-24
+2025-04-21 00:57:19,987 - INFO - Found funding amount: 640000000
+2025-04-21 00:57:20,015 - INFO - Extracted: AutoComplete - 5-Aug-24
+2025-04-21 00:57:20,015 - INFO - Found funding amount: 0
+2025-04-21 00:57:20,044 - INFO - Extracted: Solarcycle - 1-Aug-24
+2025-04-21 00:57:20,044 - INFO - Found funding amount: 31629998
+2025-04-21 00:57:20,072 - INFO - Extracted: Hedra - 1-Aug-24
+2025-04-21 00:57:20,072 - INFO - Found funding amount: 10000000
+2025-04-21 00:57:20,100 - INFO - Extracted: Skillfully - 1-Aug-24
+2025-04-21 00:57:20,100 - INFO - Found funding amount: 2500000
+2025-04-21 00:57:20,128 - INFO - Extracted: Global Predictions - 1-Aug-24
+2025-04-21 00:57:20,128 - INFO - Found funding amount: 2000000
+2025-04-21 00:57:20,157 - INFO - Extracted: Tezi - 31-Jul-24
+2025-04-21 00:57:20,157 - INFO - Found funding amount: 9000000
+2025-04-21 00:57:20,185 - INFO - Extracted: Thumbtack - 31-Jul-24
+2025-04-21 00:57:20,185 - INFO - Found funding amount: 75000000
+2025-04-21 00:57:20,213 - INFO - Extracted: Swords to Plowshares - 31-Jul-24
+2025-04-21 00:57:20,213 - INFO - Found funding amount: 0
+2025-04-21 00:57:20,241 - INFO - Extracted: Ema - 31-Jul-24
+2025-04-21 00:57:20,241 - INFO - Found funding amount: 36000000
+2025-04-21 00:57:20,270 - INFO - Extracted: Endari - 31-Jul-24
+2025-04-21 00:57:20,270 - INFO - Found funding amount: 4000000
+2025-04-21 00:57:20,298 - INFO - Extracted: Streamkap - 31-Jul-24
+2025-04-21 00:57:20,298 - INFO - Found funding amount: 3300000
+2025-04-21 00:57:20,298 - INFO - Successfully extracted 20 new companies from page 23
+2025-04-21 00:57:20,298 - INFO - Attempting to navigate from page 23
+2025-04-21 00:57:26,552 - INFO - JavaScript verification confirmed page changed
+2025-04-21 00:57:27,308 - INFO - Extracting data from page 24
+2025-04-21 00:57:27,853 - INFO - Trying standard table extraction
+2025-04-21 00:57:27,908 - INFO - Found funding amount column at index 6
+2025-04-21 00:57:27,913 - INFO - Found headquarters column at index 7
+2025-04-21 00:57:27,922 - INFO - Found 22 potential data rows
+2025-04-21 00:57:27,976 - INFO - Extracted: Rhombus Systems - 30-Jul-24
+2025-04-21 00:57:27,976 - INFO - Found funding amount: 45000000
+2025-04-21 00:57:28,004 - INFO - Extracted: Credo AI - 30-Jul-24
+2025-04-21 00:57:28,004 - INFO - Found funding amount: 21000000
+2025-04-21 00:57:28,032 - INFO - Extracted: Montara Therapeutics - 30-Jul-24
+2025-04-21 00:57:28,032 - INFO - Found funding amount: 8000000
+2025-04-21 00:57:28,061 - INFO - Extracted: Haus - 30-Jul-24
+2025-04-21 00:57:28,061 - INFO - Found funding amount: 20000000
+2025-04-21 00:57:28,089 - INFO - Extracted: Sybill AI - 30-Jul-24
+2025-04-21 00:57:28,089 - INFO - Found funding amount: 11000000
+2025-04-21 00:57:28,117 - INFO - Extracted: Aviato - 30-Jul-24
+2025-04-21 00:57:28,117 - INFO - Found funding amount: 0
+2025-04-21 00:57:28,147 - INFO - Extracted: LTZ Therapeutics - 30-Jul-24
+2025-04-21 00:57:28,148 - INFO - Found funding amount: 20000000
+2025-04-21 00:57:28,178 - INFO - Extracted: unspun - 29-Jul-24
+2025-04-21 00:57:28,178 - INFO - Found funding amount: 32000000
+2025-04-21 00:57:28,206 - INFO - Extracted: OnSight - 29-Jul-24
+2025-04-21 00:57:28,206 - INFO - Found funding amount: 0
+2025-04-21 00:57:28,234 - INFO - Extracted: Rillet - 29-Jul-24
+2025-04-21 00:57:28,234 - INFO - Found funding amount: 13500000
+2025-04-21 00:57:28,262 - INFO - Extracted: ReviR Therapeutics - 26-Jul-24
+2025-04-21 00:57:28,262 - INFO - Found funding amount: 30000000
+2025-04-21 00:57:28,291 - INFO - Extracted: Cowbell - 26-Jul-24
+2025-04-21 00:57:28,291 - INFO - Found funding amount: 60000000
+2025-04-21 00:57:28,319 - INFO - Extracted: Imperative Care - 25-Jul-24
+2025-04-21 00:57:28,319 - INFO - Found funding amount: 150000000
+2025-04-21 00:57:28,348 - INFO - Extracted: IntelePeer - 25-Jul-24
+2025-04-21 00:57:28,348 - INFO - Found funding amount: 140000000
+2025-04-21 00:57:28,376 - INFO - Extracted: EtherWhere - 25-Jul-24
+2025-04-21 00:57:28,376 - INFO - Found funding amount: 16300000
+2025-04-21 00:57:28,404 - INFO - Extracted: InnerPlant - 25-Jul-24
+2025-04-21 00:57:28,404 - INFO - Found funding amount: 30000000
+2025-04-21 00:57:28,434 - INFO - Extracted: Vanta - 24-Jul-24
+2025-04-21 00:57:28,434 - INFO - Found funding amount: 150000000
+2025-04-21 00:57:28,461 - INFO - Extracted: Recurrent Energy - 24-Jul-24
+2025-04-21 00:57:28,462 - INFO - Found funding amount: 50000000
+2025-04-21 00:57:28,490 - INFO - Extracted: Dazz - 24-Jul-24
+2025-04-21 00:57:28,490 - INFO - Found funding amount: 50000000
+2025-04-21 00:57:28,518 - INFO - Extracted: Sound Health - 24-Jul-24
+2025-04-21 00:57:28,518 - INFO - Found funding amount: 7000000
+2025-04-21 00:57:28,518 - INFO - Successfully extracted 20 new companies from page 24
+2025-04-21 00:57:28,518 - INFO - Attempting to navigate from page 24
+2025-04-21 00:57:34,847 - INFO - JavaScript verification confirmed page changed
+2025-04-21 00:57:35,311 - INFO - Extracting data from page 25
+2025-04-21 00:57:36,147 - INFO - Trying standard table extraction
+2025-04-21 00:57:36,205 - INFO - Found funding amount column at index 6
+2025-04-21 00:57:36,210 - INFO - Found headquarters column at index 7
+2025-04-21 00:57:36,220 - INFO - Found 22 potential data rows
+2025-04-21 00:57:36,264 - INFO - Extracted: Hume Supernatural - 24-Jul-24
+2025-04-21 00:57:36,264 - INFO - Found funding amount: 200000
+2025-04-21 00:57:36,292 - INFO - Extracted: Blumen Systems - 24-Jul-24
+2025-04-21 00:57:36,292 - INFO - Found funding amount: 6385989
+2025-04-21 00:57:36,325 - INFO - Extracted: Lakera AI - 24-Jul-24
+2025-04-21 00:57:36,325 - INFO - Found funding amount: 20000000
+2025-04-21 00:57:36,354 - INFO - Extracted: Astranis - 24-Jul-24
+2025-04-21 00:57:36,354 - INFO - Found funding amount: 200000000
+2025-04-21 00:57:36,383 - INFO - Extracted: Joy - 24-Jul-24
+2025-04-21 00:57:36,383 - INFO - Found funding amount: 10000000
+2025-04-21 00:57:36,412 - INFO - Extracted: Caldera - 24-Jul-24
+2025-04-21 00:57:36,412 - INFO - Found funding amount: 15000000
+2025-04-21 00:57:36,440 - INFO - Extracted: IncellDx - 23-Jul-24
+2025-04-21 00:57:36,440 - INFO - Found funding amount: 500000
+2025-04-21 00:57:36,469 - INFO - Extracted: Powder - 23-Jul-24
+2025-04-21 00:57:36,469 - INFO - Found funding amount: 5000000
+2025-04-21 00:57:36,497 - INFO - Extracted: Harvey - 23-Jul-24
+2025-04-21 00:57:36,497 - INFO - Found funding amount: 100000000
+2025-04-21 00:57:36,525 - INFO - Extracted: Placer.ai - 23-Jul-24
+2025-04-21 00:57:36,525 - INFO - Found funding amount: 54500187
+2025-04-21 00:57:36,554 - INFO - Extracted: Momentum - 23-Jul-24
+2025-04-21 00:57:36,554 - INFO - Found funding amount: 13000000
+2025-04-21 00:57:36,582 - INFO - Extracted: SirenOpt - 23-Jul-24
+2025-04-21 00:57:36,582 - INFO - Found funding amount: 6600000
+2025-04-21 00:57:36,610 - INFO - Extracted: Uplimit - 23-Jul-24
+2025-04-21 00:57:36,610 - INFO - Found funding amount: 11000000
+2025-04-21 00:57:36,638 - INFO - Extracted: Mytra - 23-Jul-24
+2025-04-21 00:57:36,638 - INFO - Found funding amount: 50000000
+2025-04-21 00:57:36,667 - INFO - Extracted: Level AI - 23-Jul-24
+2025-04-21 00:57:36,667 - INFO - Found funding amount: 39400000
+2025-04-21 00:57:36,695 - INFO - Extracted: Alixia - 23-Jul-24
+2025-04-21 00:57:36,695 - INFO - Found funding amount: 1825445
+2025-04-21 00:57:36,724 - INFO - Extracted: Elly Analytics, Inc. - 22-Jul-24
+2025-04-21 00:57:36,724 - INFO - Found funding amount: 1000000
+2025-04-21 00:57:36,752 - INFO - Extracted: Noded Ai - 22-Jul-24
+2025-04-21 00:57:36,752 - INFO - Found funding amount: 4000000
+2025-04-21 00:57:36,780 - INFO - Extracted: EdgeRunner AI - 18-Jul-24
+2025-04-21 00:57:36,780 - INFO - Found funding amount: 5500000
+2025-04-21 00:57:36,812 - INFO - Extracted: Arrcus - 18-Jul-24
+2025-04-21 00:57:36,812 - INFO - Found funding amount: 30000000
+2025-04-21 00:57:36,812 - INFO - Successfully extracted 20 new companies from page 25
+2025-04-21 00:57:36,812 - INFO - Attempting to navigate from page 25
+2025-04-21 00:57:42,793 - INFO - JavaScript verification confirmed page changed
+2025-04-21 00:57:43,893 - INFO - Extracting data from page 26
+2025-04-21 00:57:44,477 - INFO - Trying standard table extraction
+2025-04-21 00:57:44,530 - INFO - Found funding amount column at index 6
+2025-04-21 00:57:44,535 - INFO - Found headquarters column at index 7
+2025-04-21 00:57:44,544 - INFO - Found 22 potential data rows
+2025-04-21 00:57:44,590 - INFO - Extracted: Juno - 18-Jul-24
+2025-04-21 00:57:44,590 - INFO - Found funding amount: 8500000
+2025-04-21 00:57:44,620 - INFO - Extracted: d.light - 17-Jul-24
+2025-04-21 00:57:44,620 - INFO - Found funding amount: 176000000
+2025-04-21 00:57:44,648 - INFO - Extracted: Human Interest - 17-Jul-24
+2025-04-21 00:57:44,648 - INFO - Found funding amount: 242000000
+2025-04-21 00:57:44,677 - INFO - Extracted: Caltech - 17-Jul-24
+2025-04-21 00:57:44,677 - INFO - Found funding amount: 10000000
+2025-04-21 00:57:44,706 - INFO - Extracted: NGM Biopharmaceuticals - 17-Jul-24
+2025-04-21 00:57:44,706 - INFO - Found funding amount: 122000000
+2025-04-21 00:57:44,735 - INFO - Extracted: aiXplain - 17-Jul-24
+2025-04-21 00:57:44,735 - INFO - Found funding amount: 6500000
+2025-04-21 00:57:44,763 - INFO - Extracted: Ohlone College - 17-Jul-24
+2025-04-21 00:57:44,764 - INFO - Found funding amount: 50000
+2025-04-21 00:57:44,791 - INFO - Extracted: Slope - 17-Jul-24
+2025-04-21 00:57:44,792 - INFO - Found funding amount: 50000000
+2025-04-21 00:57:44,821 - INFO - Extracted: Matera - 17-Jul-24
+2025-04-21 00:57:44,821 - INFO - Found funding amount: 100000000
+2025-04-21 00:57:44,855 - INFO - Extracted: Solideon - 17-Jul-24
+2025-04-21 00:57:44,855 - INFO - Found funding amount: 5000000
+2025-04-21 00:57:44,886 - INFO - Extracted: Vectara - 16-Jul-24
+2025-04-21 00:57:44,886 - INFO - Found funding amount: 25000000
+2025-04-21 00:57:44,915 - INFO - Extracted: Tekion - 16-Jul-24
+2025-04-21 00:57:44,916 - INFO - Found funding amount: 200000000
+2025-04-21 00:57:44,944 - INFO - Extracted: The San Francisco Compute Company - 16-Jul-24
+2025-04-21 00:57:44,944 - INFO - Found funding amount: 12000000
+2025-04-21 00:57:44,972 - INFO - Extracted: DreamBig Semiconductor - 16-Jul-24
+2025-04-21 00:57:44,972 - INFO - Found funding amount: 75000000
+2025-04-21 00:57:45,000 - INFO - Extracted: Echo Chunk AI - 16-Jul-24
+2025-04-21 00:57:45,000 - INFO - Found funding amount: 1400000
+2025-04-21 00:57:45,028 - INFO - Extracted: Botrista Technology - 16-Jul-24
+2025-04-21 00:57:45,028 - INFO - Found funding amount: 65000000
+2025-04-21 00:57:45,056 - INFO - Extracted: Dusk - 16-Jul-24
+2025-04-21 00:57:45,056 - INFO - Found funding amount: 8000000
+2025-04-21 00:57:45,084 - INFO - Extracted: Sphere Technology Holdings - 15-Jul-24
+2025-04-21 00:57:45,084 - INFO - Found funding amount: 9511799
+2025-04-21 00:57:45,112 - INFO - Extracted: Halo Industries - 15-Jul-24
+2025-04-21 00:57:45,112 - INFO - Found funding amount: 80000000
+2025-04-21 00:57:45,143 - INFO - Extracted: NeuSpera Medical - 15-Jul-24
+2025-04-21 00:57:45,143 - INFO - Found funding amount: 23000000
+2025-04-21 00:57:45,143 - INFO - Successfully extracted 20 new companies from page 26
+2025-04-21 00:57:45,143 - INFO - Attempting to navigate from page 26
+2025-04-21 00:57:51,710 - INFO - JavaScript verification confirmed page changed
+2025-04-21 00:57:52,476 - INFO - Extracting data from page 27
+2025-04-21 00:57:52,844 - INFO - Trying standard table extraction
+2025-04-21 00:57:52,901 - INFO - Found funding amount column at index 6
+2025-04-21 00:57:52,906 - INFO - Found headquarters column at index 7
+2025-04-21 00:57:52,915 - INFO - Found 22 potential data rows
+2025-04-21 00:57:52,959 - INFO - Extracted: Metabase Q - 15-Jul-24
+2025-04-21 00:57:52,959 - INFO - Found funding amount: 5099986
+2025-04-21 00:57:52,988 - INFO - Extracted: Vivoo - 15-Jul-24
+2025-04-21 00:57:52,988 - INFO - Found funding amount: 0
+2025-04-21 00:57:53,016 - INFO - Extracted: SmarterLicense - 15-Jul-24
+2025-04-21 00:57:53,016 - INFO - Found funding amount: 1100000
+2025-04-21 00:57:53,045 - INFO - Extracted: Digestiva - 15-Jul-24
+2025-04-21 00:57:53,045 - INFO - Found funding amount: 18400000
+2025-04-21 00:57:53,093 - INFO - Extracted: Odyssey - 12-Jul-24
+2025-04-21 00:57:53,093 - INFO - Found funding amount: 9000000
+2025-04-21 00:57:53,121 - INFO - Extracted: Armada - 11-Jul-24
+2025-04-21 00:57:53,121 - INFO - Found funding amount: 40000000
+2025-04-21 00:57:53,149 - INFO - Extracted: Mantle - 10-Jul-24
+2025-04-21 00:57:53,149 - INFO - Found funding amount: 20000000
+2025-04-21 00:57:53,178 - INFO - Extracted: Lekko - 10-Jul-24
+2025-04-21 00:57:53,178 - INFO - Found funding amount: 4500000
+2025-04-21 00:57:53,206 - INFO - Extracted: Hayden AI - 10-Jul-24
+2025-04-21 00:57:53,206 - INFO - Found funding amount: 90000000
+2025-04-21 00:57:53,235 - INFO - Extracted: Adona Medical - 10-Jul-24
+2025-04-21 00:57:53,235 - INFO - Found funding amount: 13369997
+2025-04-21 00:57:53,263 - INFO - Extracted: Safe Passages - 9-Jul-24
+2025-04-21 00:57:53,263 - INFO - Found funding amount: 270000
+2025-04-21 00:57:53,291 - INFO - Extracted: Valo.ai - 9-Jul-24
+2025-04-21 00:57:53,291 - INFO - Found funding amount: 0
+2025-04-21 00:57:53,319 - INFO - Extracted: Volley - 9-Jul-24
+2025-04-21 00:57:53,319 - INFO - Found funding amount: 55000000
+2025-04-21 00:57:53,347 - INFO - Extracted: Accend - 9-Jul-24
+2025-04-21 00:57:53,347 - INFO - Found funding amount: 3200000
+2025-04-21 00:57:53,375 - INFO - Extracted: NovoNutrients - 9-Jul-24
+2025-04-21 00:57:53,375 - INFO - Found funding amount: 18000000
+2025-04-21 00:57:53,403 - INFO - Extracted: Default - 8-Jul-24
+2025-04-21 00:57:53,403 - INFO - Found funding amount: 4000000
+2025-04-21 00:57:53,440 - INFO - Extracted: Cartken - 3-Jul-24
+2025-04-21 00:57:53,440 - INFO - Found funding amount: 10000000
+2025-04-21 00:57:53,471 - INFO - Extracted: Granza Bio - 3-Jul-24
+2025-04-21 00:57:53,471 - INFO - Found funding amount: 7140000
+2025-04-21 00:57:53,501 - INFO - Extracted: Frontier Energy - 2-Jul-24
+2025-04-21 00:57:53,501 - INFO - Found funding amount: 0
+2025-04-21 00:57:53,528 - INFO - Extracted: BRB APP INC - 1-Jul-24
+2025-04-21 00:57:53,528 - INFO - Found funding amount: 0
+2025-04-21 00:57:53,528 - INFO - Successfully extracted 20 new companies from page 27
+2025-04-21 00:57:53,528 - INFO - Attempting to navigate from page 27
+2025-04-21 00:57:59,126 - INFO - JavaScript verification confirmed page changed
+2025-04-21 00:58:00,052 - INFO - Extracting data from page 28
+2025-04-21 00:58:00,613 - INFO - Trying standard table extraction
+2025-04-21 00:58:00,670 - INFO - Found funding amount column at index 6
+2025-04-21 00:58:00,675 - INFO - Found headquarters column at index 7
+2025-04-21 00:58:00,684 - INFO - Found 22 potential data rows
+2025-04-21 00:58:00,728 - INFO - Extracted: UptimeAI - 1-Jul-24
+2025-04-21 00:58:00,728 - INFO - Found funding amount: 13999999
+2025-04-21 00:58:00,758 - INFO - Extracted: AnswerGrid - 1-Jul-24
+2025-04-21 00:58:00,758 - INFO - Found funding amount: 500000
+2025-04-21 00:58:00,786 - INFO - Extracted: Senti Biosciences - 1-Jul-24
+2025-04-21 00:58:00,787 - INFO - Found funding amount: 8000000
+2025-04-21 00:58:00,815 - INFO - Extracted: Pivot Robots - 1-Jul-24
+2025-04-21 00:58:00,815 - INFO - Found funding amount: 500000
+2025-04-21 00:58:00,843 - INFO - Extracted: Odaseva - 27-Jun-24
+2025-04-21 00:58:00,843 - INFO - Found funding amount: 54000000
+2025-04-21 00:58:00,879 - INFO - Extracted: Aether Fuels - 27-Jun-24
+2025-04-21 00:58:00,879 - INFO - Found funding amount: 34000000
+2025-04-21 00:58:00,908 - INFO - Extracted: GetReal Labs - 27-Jun-24
+2025-04-21 00:58:00,908 - INFO - Found funding amount: 0
+2025-04-21 00:58:00,937 - INFO - Extracted: Fetchflow - 27-Jun-24
+2025-04-21 00:58:00,937 - INFO - Found funding amount: 500000
+2025-04-21 00:58:00,966 - INFO - Extracted: KarmaCheck - 27-Jun-24
+2025-04-21 00:58:00,966 - INFO - Found funding amount: 45000000
+2025-04-21 00:58:00,995 - INFO - Extracted: Clearstory.build - 27-Jun-24
+2025-04-21 00:58:00,995 - INFO - Found funding amount: 16000000
+2025-04-21 00:58:01,024 - INFO - Extracted: Foodsmart - 26-Jun-24
+2025-04-21 00:58:01,024 - INFO - Found funding amount: 200000000
+2025-04-21 00:58:01,053 - INFO - Extracted: Ario - 26-Jun-24
+2025-04-21 00:58:01,053 - INFO - Found funding amount: 16000000
+2025-04-21 00:58:01,081 - INFO - Extracted: Rondo Energy - 26-Jun-24
+2025-04-21 00:58:01,081 - INFO - Found funding amount: 75000000
+2025-04-21 00:58:01,109 - INFO - Extracted: Onehouse - 26-Jun-24
+2025-04-21 00:58:01,109 - INFO - Found funding amount: 35000000
+2025-04-21 00:58:01,137 - INFO - Extracted: Frontier Medicines - 25-Jun-24
+2025-04-21 00:58:01,137 - INFO - Found funding amount: 20000000
+2025-04-21 00:58:01,165 - INFO - Extracted: Conduit - 25-Jun-24
+2025-04-21 00:58:01,165 - INFO - Found funding amount: 37000000
+2025-04-21 00:58:01,194 - INFO - Extracted: Cloudian - 25-Jun-24
+2025-04-21 00:58:01,194 - INFO - Found funding amount: 23000000
+2025-04-21 00:58:01,222 - INFO - Extracted: Asteri AI - 25-Jun-24
+2025-04-21 00:58:01,222 - INFO - Found funding amount: 0
+2025-04-21 00:58:01,250 - INFO - Extracted: Antora Energy - 25-Jun-24
+2025-04-21 00:58:01,250 - INFO - Found funding amount: 14500000
+2025-04-21 00:58:01,278 - INFO - Extracted: VidAU - 25-Jun-24
+2025-04-21 00:58:01,278 - INFO - Found funding amount: 0
+2025-04-21 00:58:01,278 - INFO - Successfully extracted 20 new companies from page 28
+2025-04-21 00:58:01,278 - INFO - Attempting to navigate from page 28
+2025-04-21 00:58:07,335 - INFO - JavaScript verification confirmed page changed
+2025-04-21 00:58:08,395 - INFO - Extracting data from page 29
+2025-04-21 00:58:09,527 - INFO - Trying standard table extraction
+2025-04-21 00:58:09,583 - INFO - Found funding amount column at index 6
+2025-04-21 00:58:09,588 - INFO - Found headquarters column at index 7
+2025-04-21 00:58:09,598 - INFO - Found 22 potential data rows
+2025-04-21 00:58:09,642 - INFO - Extracted: Etched.ai - 25-Jun-24
+2025-04-21 00:58:09,642 - INFO - Found funding amount: 120000000
+2025-04-21 00:58:09,671 - INFO - Extracted: Sift - 25-Jun-24
+2025-04-21 00:58:09,671 - INFO - Found funding amount: 17500000
+2025-04-21 00:58:09,699 - INFO - Extracted: TwoStep Therapeutics - 25-Jun-24
+2025-04-21 00:58:09,699 - INFO - Found funding amount: 6500000
+2025-04-21 00:58:09,738 - INFO - Extracted: Opus1.io - 25-Jun-24
+2025-04-21 00:58:09,738 - INFO - Found funding amount: 0
+2025-04-21 00:58:09,769 - INFO - Extracted: Klarity - 24-Jun-24
+2025-04-21 00:58:09,769 - INFO - Found funding amount: 70000000
+2025-04-21 00:58:09,797 - INFO - Extracted: Tusk - 21-Jun-24
+2025-04-21 00:58:09,797 - INFO - Found funding amount: 500000
+2025-04-21 00:58:09,827 - INFO - Extracted: MEandMine - 20-Jun-24
+2025-04-21 00:58:09,827 - INFO - Found funding amount: 4500000
+2025-04-21 00:58:09,855 - INFO - Extracted: Molten Industries - 20-Jun-24
+2025-04-21 00:58:09,855 - INFO - Found funding amount: 25000000
+2025-04-21 00:58:09,883 - INFO - Extracted: Aikido Technologies - 20-Jun-24
+2025-04-21 00:58:09,883 - INFO - Found funding amount: 4000000
+2025-04-21 00:58:09,911 - INFO - Extracted: Submix - 19-Jun-24
+2025-04-21 00:58:09,911 - INFO - Found funding amount: 1000000
+2025-04-21 00:58:09,938 - INFO - Extracted: Speechlab, Inc. - 19-Jun-24
+2025-04-21 00:58:09,938 - INFO - Found funding amount: 2900000
+2025-04-21 00:58:09,966 - INFO - Extracted: Specialized Packaging Group - 18-Jun-24
+2025-04-21 00:58:09,966 - INFO - Found funding amount: 0
+2025-04-21 00:58:09,995 - INFO - Extracted: Planted Solar - 18-Jun-24
+2025-04-21 00:58:09,995 - INFO - Found funding amount: 20000000
+2025-04-21 00:58:10,023 - INFO - Extracted: Promaxo - 18-Jun-24
+2025-04-21 00:58:10,023 - INFO - Found funding amount: 0
+2025-04-21 00:58:10,051 - INFO - Extracted: Sewer AI - 18-Jun-24
+2025-04-21 00:58:10,051 - INFO - Found funding amount: 15000000
+2025-04-21 00:58:10,096 - INFO - Extracted: Scoop Analytics - 18-Jun-24
+2025-04-21 00:58:10,096 - INFO - Found funding amount: 3500000
+2025-04-21 00:58:10,127 - INFO - Extracted: Loop Golf - 18-Jun-24
+2025-04-21 00:58:10,127 - INFO - Found funding amount: 1000000
+2025-04-21 00:58:10,156 - INFO - Extracted: Marea Therapeutics - 18-Jun-24
+2025-04-21 00:58:10,156 - INFO - Found funding amount: 190000000
+2025-04-21 00:58:10,184 - INFO - Extracted: Factory - 18-Jun-24
+2025-04-21 00:58:10,184 - INFO - Found funding amount: 15000000
+2025-04-21 00:58:10,212 - INFO - Extracted: Maxim - 18-Jun-24
+2025-04-21 00:58:10,212 - INFO - Found funding amount: 250000000
+2025-04-21 00:58:10,212 - INFO - Successfully extracted 20 new companies from page 29
+2025-04-21 00:58:10,212 - INFO - Attempting to navigate from page 29
+2025-04-21 00:58:15,429 - INFO - JavaScript verification confirmed page changed
+2025-04-21 00:58:16,430 - INFO - Extracting data from page 30
+2025-04-21 00:58:17,362 - INFO - Trying standard table extraction
+2025-04-21 00:58:17,420 - INFO - Found funding amount column at index 6
+2025-04-21 00:58:17,425 - INFO - Found headquarters column at index 7
+2025-04-21 00:58:17,435 - INFO - Found 22 potential data rows
+2025-04-21 00:58:17,479 - INFO - Extracted: Autify - 17-Jun-24
+2025-04-21 00:58:17,479 - INFO - Found funding amount: 13000000
+2025-04-21 00:58:17,511 - INFO - Extracted: Constructor - 17-Jun-24
+2025-04-21 00:58:17,511 - INFO - Found funding amount: 25000000
+2025-04-21 00:58:17,540 - INFO - Extracted: You.com - 17-Jun-24
+2025-04-21 00:58:17,540 - INFO - Found funding amount: 50000000
+2025-04-21 00:58:17,580 - INFO - Extracted: Take Homes - 17-Jun-24
+2025-04-21 00:58:17,580 - INFO - Found funding amount: 150000
+2025-04-21 00:58:17,610 - INFO - Extracted: Aepnus Technology - 14-Jun-24
+2025-04-21 00:58:17,610 - INFO - Found funding amount: 8000000
+2025-04-21 00:58:17,638 - INFO - Extracted: Better Health - 13-Jun-24
+2025-04-21 00:58:17,638 - INFO - Found funding amount: 14000000
+2025-04-21 00:58:17,667 - INFO - Extracted: Viridian Space - 13-Jun-24
+2025-04-21 00:58:17,667 - INFO - Found funding amount: 0
+2025-04-21 00:58:17,695 - INFO - Extracted: Remmie - 12-Jun-24
+2025-04-21 00:58:17,695 - INFO - Found funding amount: 3000000
+2025-04-21 00:58:17,724 - INFO - Extracted: Canary Technologies - 12-Jun-24
+2025-04-21 00:58:17,724 - INFO - Found funding amount: 50000000
+2025-04-21 00:58:17,752 - INFO - Extracted: Grayce - 12-Jun-24
+2025-04-21 00:58:17,753 - INFO - Found funding amount: 10400000
+2025-04-21 00:58:17,793 - INFO - Extracted: InScope - 12-Jun-24
+2025-04-21 00:58:17,793 - INFO - Found funding amount: 4300000
+2025-04-21 00:58:17,825 - INFO - Extracted: Learn to Win - 12-Jun-24
+2025-04-21 00:58:17,825 - INFO - Found funding amount: 30000000
+2025-04-21 00:58:17,854 - INFO - Extracted: Tesseract Medical Research - 11-Jun-24
+2025-04-21 00:58:17,854 - INFO - Found funding amount: 20000000
+2025-04-21 00:58:17,882 - INFO - Extracted: Cyberhaven - 11-Jun-24
+2025-04-21 00:58:17,882 - INFO - Found funding amount: 88000000
+2025-04-21 00:58:17,910 - INFO - Extracted: Found - 11-Jun-24
+2025-04-21 00:58:17,910 - INFO - Found funding amount: 45999997
+2025-04-21 00:58:17,942 - INFO - Extracted: Youth Speaks - 11-Jun-24
+2025-04-21 00:58:17,942 - INFO - Found funding amount: 40000
+2025-04-21 00:58:17,974 - INFO - Extracted: Perlumi - 11-Jun-24
+2025-04-21 00:58:17,974 - INFO - Found funding amount: 4515899
+2025-04-21 00:58:18,006 - INFO - Extracted: Nexus Laboratories - 10-Jun-24
+2025-04-21 00:58:18,006 - INFO - Found funding amount: 25000000
+2025-04-21 00:58:18,040 - INFO - Extracted: Pair Team - 10-Jun-24
+2025-04-21 00:58:18,040 - INFO - Found funding amount: 500000
+2025-04-21 00:58:18,073 - INFO - Extracted: Gatik - 10-Jun-24
+2025-04-21 00:58:18,073 - INFO - Found funding amount: 0
+2025-04-21 00:58:18,073 - INFO - Successfully extracted 20 new companies from page 30
+2025-04-21 00:58:18,073 - INFO - Attempting to navigate from page 30
+2025-04-21 00:58:24,477 - INFO - JavaScript verification confirmed page changed
+2025-04-21 00:58:25,146 - INFO - Extracting data from page 31
+2025-04-21 00:58:26,011 - INFO - Trying standard table extraction
+2025-04-21 00:58:26,073 - INFO - Found funding amount column at index 6
+2025-04-21 00:58:26,078 - INFO - Found headquarters column at index 7
+2025-04-21 00:58:26,087 - INFO - Found 22 potential data rows
+2025-04-21 00:58:26,131 - INFO - Extracted: InSync - 8-Jun-24
+2025-04-21 00:58:26,131 - INFO - Found funding amount: 0
+2025-04-21 00:58:26,159 - INFO - Extracted: Prolific Machines - 7-Jun-24
+2025-04-21 00:58:26,159 - INFO - Found funding amount: 55000000
+2025-04-21 00:58:26,188 - INFO - Extracted: Portal AI - 7-Jun-24
+2025-04-21 00:58:26,188 - INFO - Found funding amount: 4500000
+2025-04-21 00:58:26,217 - INFO - Extracted: Rising Team - 6-Jun-24
+2025-04-21 00:58:26,217 - INFO - Found funding amount: 8000000
+2025-04-21 00:58:26,246 - INFO - Extracted: Greptile - 6-Jun-24
+2025-04-21 00:58:26,246 - INFO - Found funding amount: 4099999
+2025-04-21 00:58:26,287 - INFO - Extracted: bem - 6-Jun-24
+2025-04-21 00:58:26,287 - INFO - Found funding amount: 3700000
+2025-04-21 00:58:26,316 - INFO - Extracted: Boys & Girls Clubs of Fresno County - 6-Jun-24
+2025-04-21 00:58:26,316 - INFO - Found funding amount: 55000
+2025-04-21 00:58:26,345 - INFO - Extracted: Cube Dev - 6-Jun-24
+2025-04-21 00:58:26,345 - INFO - Found funding amount: 25000000
+2025-04-21 00:58:26,373 - INFO - Extracted: Tobiko Data - 5-Jun-24
+2025-04-21 00:58:26,373 - INFO - Found funding amount: 17300000
+2025-04-21 00:58:26,401 - INFO - Extracted: Zingly - 5-Jun-24
+2025-04-21 00:58:26,402 - INFO - Found funding amount: 10000000
+2025-04-21 00:58:26,429 - INFO - Extracted: 100% Chiropractic - 5-Jun-24
+2025-04-21 00:58:26,430 - INFO - Found funding amount: 0
+2025-04-21 00:58:26,458 - INFO - Extracted: Pika - 5-Jun-24
+2025-04-21 00:58:26,458 - INFO - Found funding amount: 80000000
+2025-04-21 00:58:26,486 - INFO - Extracted: Xcimer Energy - 4-Jun-24
+2025-04-21 00:58:26,486 - INFO - Found funding amount: 100000000
+2025-04-21 00:58:26,516 - INFO - Extracted: Raydiant Oximetry - 4-Jun-24
+2025-04-21 00:58:26,517 - INFO - Found funding amount: 7500000
+2025-04-21 00:58:26,545 - INFO - Extracted: Vantage Discovery - 4-Jun-24
+2025-04-21 00:58:26,545 - INFO - Found funding amount: 16000000
+2025-04-21 00:58:26,573 - INFO - Extracted: Siren Biotechnology - 4-Jun-24
+2025-04-21 00:58:26,573 - INFO - Found funding amount: 19611194
+2025-04-21 00:58:26,603 - INFO - Extracted: SOFIE - 4-Jun-24
+2025-04-21 00:58:26,603 - INFO - Found funding amount: 0
+2025-04-21 00:58:26,632 - INFO - Extracted: AirMDR - 4-Jun-24
+2025-04-21 00:58:26,632 - INFO - Found funding amount: 5000000
+2025-04-21 00:58:26,659 - INFO - Extracted: Zum - 4-Jun-24
+2025-04-21 00:58:26,659 - INFO - Found funding amount: 32000000
+2025-04-21 00:58:26,687 - INFO - Extracted: Spike Technologies - 4-Jun-24
+2025-04-21 00:58:26,687 - INFO - Found funding amount: 3200000
+2025-04-21 00:58:26,687 - INFO - Successfully extracted 20 new companies from page 31
+2025-04-21 00:58:26,687 - INFO - Attempting to navigate from page 31
+2025-04-21 00:58:33,162 - INFO - JavaScript verification confirmed page changed
+2025-04-21 00:58:34,044 - INFO - Extracting data from page 32
+2025-04-21 00:58:34,903 - INFO - Trying standard table extraction
+2025-04-21 00:58:34,959 - INFO - Found funding amount column at index 6
+2025-04-21 00:58:34,964 - INFO - Found headquarters column at index 7
+2025-04-21 00:58:34,973 - INFO - Found 22 potential data rows
+2025-04-21 00:58:35,025 - INFO - Extracted: Pr√≥speros - 4-Jun-24
+2025-04-21 00:58:35,025 - INFO - Found funding amount: 3000000
+2025-04-21 00:58:35,054 - INFO - Extracted: Field Materials, Inc. - 4-Jun-24
+2025-04-21 00:58:35,054 - INFO - Found funding amount: 3500000
+2025-04-21 00:58:35,085 - INFO - Extracted: Viaduct - 4-Jun-24
+2025-04-21 00:58:35,085 - INFO - Found funding amount: 10000000
+2025-04-21 00:58:35,115 - INFO - Extracted: Tandem PV - 3-Jun-24
+2025-04-21 00:58:35,115 - INFO - Found funding amount: 4700000
+2025-04-21 00:58:35,143 - INFO - Extracted: Vimmerse - 3-Jun-24
+2025-04-21 00:58:35,143 - INFO - Found funding amount: 0
+2025-04-21 00:58:35,171 - INFO - Extracted: Ashby - 3-Jun-24
+2025-04-21 00:58:35,171 - INFO - Found funding amount: 30000000
+2025-04-21 00:58:35,198 - INFO - Extracted: Balance - 3-Jun-24
+2025-04-21 00:58:35,198 - INFO - Found funding amount: 2500000
+2025-04-21 00:58:35,228 - INFO - Extracted: Revi - 1-Jun-24
+2025-04-21 00:58:35,228 - INFO - Found funding amount: 10000000
+2025-04-21 00:58:35,256 - INFO - Extracted: Sprout HR - 1-Jun-24
+2025-04-21 00:58:35,256 - INFO - Found funding amount: 0
+2025-04-21 00:58:35,284 - INFO - Extracted: Point - 30-May-24
+2025-04-21 00:58:35,284 - INFO - Found funding amount: 141000000
+2025-04-21 00:58:35,312 - INFO - Extracted: Portside - 30-May-24
+2025-04-21 00:58:35,312 - INFO - Found funding amount: 0
+2025-04-21 00:58:35,351 - INFO - Extracted: Forward - 30-May-24
+2025-04-21 00:58:35,351 - INFO - Found funding amount: 16000000
+2025-04-21 00:58:35,379 - INFO - Extracted: Plural Energy - 30-May-24
+2025-04-21 00:58:35,379 - INFO - Found funding amount: 2330000
+2025-04-21 00:58:35,407 - INFO - Extracted: ZERO - 30-May-24
+2025-04-21 00:58:35,407 - INFO - Found funding amount: 26112523
+2025-04-21 00:58:35,435 - INFO - Extracted: Functional Finance - 30-May-24
+2025-04-21 00:58:35,435 - INFO - Found funding amount: 16999992
+2025-04-21 00:58:35,463 - INFO - Extracted: Valar Labs - 30-May-24
+2025-04-21 00:58:35,463 - INFO - Found funding amount: 22000000
+2025-04-21 00:58:35,490 - INFO - Extracted: BabylonChain - 30-May-24
+2025-04-21 00:58:35,491 - INFO - Found funding amount: 70000000
+2025-04-21 00:58:35,519 - INFO - Extracted: Plenful - 30-May-24
+2025-04-21 00:58:35,519 - INFO - Found funding amount: 17000000
+2025-04-21 00:58:35,547 - INFO - Extracted: TraceAir - 29-May-24
+2025-04-21 00:58:35,547 - INFO - Found funding amount: 25000000
+2025-04-21 00:58:35,575 - INFO - Extracted: Frore Systems - 29-May-24
+2025-04-21 00:58:35,575 - INFO - Found funding amount: 80000000
+2025-04-21 00:58:35,575 - INFO - Successfully extracted 20 new companies from page 32
+2025-04-21 00:58:35,575 - INFO - Attempting to navigate from page 32
+2025-04-21 00:58:41,539 - INFO - JavaScript verification confirmed page changed
+2025-04-21 00:58:41,974 - INFO - Extracting data from page 33
+2025-04-21 00:58:42,653 - INFO - Trying standard table extraction
+2025-04-21 00:58:42,709 - INFO - Found funding amount column at index 6
+2025-04-21 00:58:42,715 - INFO - Found headquarters column at index 7
+2025-04-21 00:58:42,724 - INFO - Found 22 potential data rows
+2025-04-21 00:58:42,769 - INFO - Extracted: Figma - 29-May-24
+2025-04-21 00:58:42,769 - INFO - Found funding amount: 415749740
+2025-04-21 00:58:42,797 - INFO - Extracted: Kinisi - 29-May-24
+2025-04-21 00:58:42,797 - INFO - Found funding amount: 437000
+2025-04-21 00:58:42,826 - INFO - Extracted: App Orchid - 28-May-24
+2025-04-21 00:58:42,826 - INFO - Found funding amount: 1500000
+2025-04-21 00:58:42,854 - INFO - Extracted: OpsMx - 28-May-24
+2025-04-21 00:58:42,854 - INFO - Found funding amount: 0
+2025-04-21 00:58:42,883 - INFO - Extracted: LiveReach Media - 28-May-24
+2025-04-21 00:58:42,883 - INFO - Found funding amount: 6908849
+2025-04-21 00:58:42,911 - INFO - Extracted: Transcend - 28-May-24
+2025-04-21 00:58:42,911 - INFO - Found funding amount: 40000000
+2025-04-21 00:58:42,940 - INFO - Extracted: Aperture Finance - 28-May-24
+2025-04-21 00:58:42,940 - INFO - Found funding amount: 6700000
+2025-04-21 00:58:42,968 - INFO - Extracted: Felix - 28-May-24
+2025-04-21 00:58:42,968 - INFO - Found funding amount: 15500000
+2025-04-21 00:58:43,019 - INFO - Extracted: Sempera Organics - 24-May-24
+2025-04-21 00:58:43,019 - INFO - Found funding amount: 2612490
+2025-04-21 00:58:43,048 - INFO - Extracted: Heyday - 24-May-24
+2025-04-21 00:58:43,048 - INFO - Found funding amount: 0
+2025-04-21 00:58:43,076 - INFO - Extracted: Killington Technologies - 24-May-24
+2025-04-21 00:58:43,076 - INFO - Found funding amount: 400000
+2025-04-21 00:58:43,104 - INFO - Extracted: Lumos - 23-May-24
+2025-04-21 00:58:43,104 - INFO - Found funding amount: 35000000
+2025-04-21 00:58:43,132 - INFO - Extracted: Userfront - 23-May-24
+2025-04-21 00:58:43,132 - INFO - Found funding amount: 5300000
+2025-04-21 00:58:43,160 - INFO - Extracted: Supermove - 23-May-24
+2025-04-21 00:58:43,160 - INFO - Found funding amount: 0
+2025-04-21 00:58:43,188 - INFO - Extracted: Aduro Advisors - 23-May-24
+2025-04-21 00:58:43,188 - INFO - Found funding amount: 0
+2025-04-21 00:58:43,216 - INFO - Extracted: forml - 23-May-24
+2025-04-21 00:58:43,216 - INFO - Found funding amount: 546477
+2025-04-21 00:58:43,244 - INFO - Extracted: BeeHero - 23-May-24
+2025-04-21 00:58:43,244 - INFO - Found funding amount: 500000
+2025-04-21 00:58:43,272 - INFO - Extracted: Founder AI - 22-May-24
+2025-04-21 00:58:43,273 - INFO - Found funding amount: 3000000
+2025-04-21 00:58:43,300 - INFO - Extracted: HoundDog.ai - 22-May-24
+2025-04-21 00:58:43,300 - INFO - Found funding amount: 3100000
+2025-04-21 00:58:43,327 - INFO - Extracted: Amino - 22-May-24
+2025-04-21 00:58:43,327 - INFO - Found funding amount: 10000000
+2025-04-21 00:58:43,327 - INFO - Successfully extracted 20 new companies from page 33
+2025-04-21 00:58:43,327 - INFO - Attempting to navigate from page 33
+2025-04-21 00:58:49,377 - INFO - JavaScript verification confirmed page changed
+2025-04-21 00:58:49,887 - INFO - Extracting data from page 34
+2025-04-21 00:58:50,468 - INFO - Trying standard table extraction
+2025-04-21 00:58:50,522 - INFO - Found funding amount column at index 6
+2025-04-21 00:58:50,527 - INFO - Found headquarters column at index 7
+2025-04-21 00:58:50,536 - INFO - Found 22 potential data rows
+2025-04-21 00:58:50,585 - INFO - Extracted: California Walnuts - 22-May-24
+2025-04-21 00:58:50,585 - INFO - Found funding amount: 7000000
+2025-04-21 00:58:50,614 - INFO - Extracted: Verse - 22-May-24
+2025-04-21 00:58:50,614 - INFO - Found funding amount: 20500000
+2025-04-21 00:58:50,643 - INFO - Extracted: KETOS - 21-May-24
+2025-04-21 00:58:50,643 - INFO - Found funding amount: 10000000
+2025-04-21 00:58:50,695 - INFO - Extracted: XGS Energy - 21-May-24
+2025-04-21 00:58:50,695 - INFO - Found funding amount: 20000000
+2025-04-21 00:58:50,723 - INFO - Extracted: Materna Medical - 21-May-24
+2025-04-21 00:58:50,723 - INFO - Found funding amount: 20000000
+2025-04-21 00:58:50,751 - INFO - Extracted: Coactive AI - 21-May-24
+2025-04-21 00:58:50,751 - INFO - Found funding amount: 30000000
+2025-04-21 00:58:50,779 - INFO - Extracted: AltruBio - 21-May-24
+2025-04-21 00:58:50,779 - INFO - Found funding amount: 225000000
+2025-04-21 00:58:50,808 - INFO - Extracted: Infinx - 21-May-24
+2025-04-21 00:58:50,808 - INFO - Found funding amount: 0
+2025-04-21 00:58:50,837 - INFO - Extracted: UberCloud - 21-May-24
+2025-04-21 00:58:50,838 - INFO - Found funding amount: 20000000
+2025-04-21 00:58:50,866 - INFO - Extracted: daydream Labs - 20-May-24
+2025-04-21 00:58:50,866 - INFO - Found funding amount: 6217281
+2025-04-21 00:58:50,905 - INFO - Extracted: UTOBO - 20-May-24
+2025-04-21 00:58:50,905 - INFO - Found funding amount: 0
+2025-04-21 00:58:50,934 - INFO - Extracted: Bedrock Materials - 16-May-24
+2025-04-21 00:58:50,934 - INFO - Found funding amount: 9000000
+2025-04-21 00:58:50,962 - INFO - Extracted: Tree Line Capital Partners - 16-May-24
+2025-04-21 00:58:50,962 - INFO - Found funding amount: 0
+2025-04-21 00:58:50,991 - INFO - Extracted: Sigma Computing - 16-May-24
+2025-04-21 00:58:50,991 - INFO - Found funding amount: 200000000
+2025-04-21 00:58:51,019 - INFO - Extracted: Alkira - 15-May-24
+2025-04-21 00:58:51,019 - INFO - Found funding amount: 100000000
+2025-04-21 00:58:51,060 - INFO - Extracted: MULTI¬∑ON - 15-May-24
+2025-04-21 00:58:51,060 - INFO - Found funding amount: 0
+2025-04-21 00:58:51,087 - INFO - Extracted: Recall.ai - 15-May-24
+2025-04-21 00:58:51,087 - INFO - Found funding amount: 10000000
+2025-04-21 00:58:51,115 - INFO - Extracted: WEKA - 15-May-24
+2025-04-21 00:58:51,116 - INFO - Found funding amount: 140000000
+2025-04-21 00:58:51,144 - INFO - Extracted: AtlasPro AI - 15-May-24
+2025-04-21 00:58:51,144 - INFO - Found funding amount: 0
+2025-04-21 00:58:51,172 - INFO - Extracted: LanceDB - 15-May-24
+2025-04-21 00:58:51,172 - INFO - Found funding amount: 8000000
+2025-04-21 00:58:51,172 - INFO - Successfully extracted 20 new companies from page 34
+2025-04-21 00:58:51,172 - INFO - Attempting to navigate from page 34
+2025-04-21 00:58:56,723 - INFO - JavaScript verification confirmed page changed
+2025-04-21 00:58:57,283 - INFO - Extracting data from page 35
+2025-04-21 00:58:58,403 - INFO - Trying standard table extraction
+2025-04-21 00:58:58,459 - INFO - Found funding amount column at index 6
+2025-04-21 00:58:58,464 - INFO - Found headquarters column at index 7
+2025-04-21 00:58:58,474 - INFO - Found 22 potential data rows
+2025-04-21 00:58:58,519 - INFO - Extracted: Layer Financial Technologies - 15-May-24
+2025-04-21 00:58:58,519 - INFO - Found funding amount: 2700000
+2025-04-21 00:58:58,547 - INFO - Extracted: Apriora - 15-May-24
+2025-04-21 00:58:58,547 - INFO - Found funding amount: 2800000
+2025-04-21 00:58:58,577 - INFO - Extracted: Dosu - 14-May-24
+2025-04-21 00:58:58,578 - INFO - Found funding amount: 8524997
+2025-04-21 00:58:58,610 - INFO - Extracted: Harness - 14-May-24
+2025-04-21 00:58:58,610 - INFO - Found funding amount: 150000000
+2025-04-21 00:58:58,641 - INFO - Extracted: Gorgias - 14-May-24
+2025-04-21 00:58:58,641 - INFO - Found funding amount: 29000000
+2025-04-21 00:58:58,670 - INFO - Extracted: Glydways - 14-May-24
+2025-04-21 00:58:58,670 - INFO - Found funding amount: 20000000
+2025-04-21 00:58:58,700 - INFO - Extracted: Anthropos - 14-May-24
+2025-04-21 00:58:58,700 - INFO - Found funding amount: 2700000
+2025-04-21 00:58:58,728 - INFO - Extracted: The Fresno Area Hispanic Foundation - 14-May-24
+2025-04-21 00:58:58,728 - INFO - Found funding amount: 1000000
+2025-04-21 00:58:58,757 - INFO - Extracted: Orange Charger - 14-May-24
+2025-04-21 00:58:58,757 - INFO - Found funding amount: 6500000
+2025-04-21 00:58:58,785 - INFO - Extracted: Curve Biosciences - 13-May-24
+2025-04-21 00:58:58,785 - INFO - Found funding amount: 17691996
+2025-04-21 00:58:58,813 - INFO - Extracted: Mitra Chem - 13-May-24
+2025-04-21 00:58:58,813 - INFO - Found funding amount: 40000000
+2025-04-21 00:58:58,841 - INFO - Extracted: ChainML - 13-May-24
+2025-04-21 00:58:58,841 - INFO - Found funding amount: 6200000
+2025-04-21 00:58:58,869 - INFO - Extracted: The Bot Company - 13-May-24
+2025-04-21 00:58:58,869 - INFO - Found funding amount: 150000000
+2025-04-21 00:58:58,897 - INFO - Extracted: Triomics - 9-May-24
+2025-04-21 00:58:58,897 - INFO - Found funding amount: 15000000
+2025-04-21 00:58:58,925 - INFO - Extracted: Plenty - 9-May-24
+2025-04-21 00:58:58,925 - INFO - Found funding amount: 5000000
+2025-04-21 00:58:58,953 - INFO - Extracted: Q'Apel Medical - 9-May-24
+2025-04-21 00:58:58,953 - INFO - Found funding amount: 17130411
+2025-04-21 00:58:58,981 - INFO - Extracted: Bluejay Therapeutics - 9-May-24
+2025-04-21 00:58:58,981 - INFO - Found funding amount: 182000000
+2025-04-21 00:58:59,009 - INFO - Extracted: Altera - 8-May-24
+2025-04-21 00:58:59,009 - INFO - Found funding amount: 9000000
+2025-04-21 00:58:59,037 - INFO - Extracted: DatologyAI - 8-May-24
+2025-04-21 00:58:59,037 - INFO - Found funding amount: 46000000
+2025-04-21 00:58:59,065 - INFO - Extracted: 4L Data Intelligence - 8-May-24
+2025-04-21 00:58:59,065 - INFO - Found funding amount: 1000000
+2025-04-21 00:58:59,066 - INFO - Successfully extracted 20 new companies from page 35
+2025-04-21 00:58:59,066 - INFO - Attempting to navigate from page 35
+2025-04-21 00:59:05,410 - INFO - JavaScript verification confirmed page changed
+2025-04-21 00:59:05,839 - INFO - Extracting data from page 36
+2025-04-21 00:59:06,499 - INFO - Trying standard table extraction
+2025-04-21 00:59:06,555 - INFO - Found funding amount column at index 6
+2025-04-21 00:59:06,560 - INFO - Found headquarters column at index 7
+2025-04-21 00:59:06,570 - INFO - Found 22 potential data rows
+2025-04-21 00:59:06,614 - INFO - Extracted: ChangeEngine - 8-May-24
+2025-04-21 00:59:06,614 - INFO - Found funding amount: 10000000
+2025-04-21 00:59:06,643 - INFO - Extracted: Voyage Foods - 8-May-24
+2025-04-21 00:59:06,643 - INFO - Found funding amount: 52000000
+2025-04-21 00:59:06,671 - INFO - Extracted: Rad AI - 7-May-24
+2025-04-21 00:59:06,672 - INFO - Found funding amount: 50000000
+2025-04-21 00:59:06,699 - INFO - Extracted: Trust for Public Land - 7-May-24
+2025-04-21 00:59:06,700 - INFO - Found funding amount: 200000
+2025-04-21 00:59:06,728 - INFO - Extracted: Saved By Nature - 7-May-24
+2025-04-21 00:59:06,728 - INFO - Found funding amount: 40000
+2025-04-21 00:59:06,756 - INFO - Extracted: Composabl - 7-May-24
+2025-04-21 00:59:06,756 - INFO - Found funding amount: 4250000
+2025-04-21 00:59:06,785 - INFO - Extracted: Plan By - 7-May-24
+2025-04-21 00:59:06,785 - INFO - Found funding amount: 0
+2025-04-21 00:59:06,813 - INFO - Extracted: iFrameAI Health - 7-May-24
+2025-04-21 00:59:06,813 - INFO - Found funding amount: 0
+2025-04-21 00:59:06,841 - INFO - Extracted: Justice Outside - 7-May-24
+2025-04-21 00:59:06,841 - INFO - Found funding amount: 100000
+2025-04-21 00:59:06,879 - INFO - Extracted: Anetac - 6-May-24
+2025-04-21 00:59:06,879 - INFO - Found funding amount: 16000000
+2025-04-21 00:59:06,908 - INFO - Extracted: Sagetap - 6-May-24
+2025-04-21 00:59:06,908 - INFO - Found funding amount: 6800000
+2025-04-21 00:59:06,936 - INFO - Extracted: Karius - 2-May-24
+2025-04-21 00:59:06,936 - INFO - Found funding amount: 100000000
+2025-04-21 00:59:06,975 - INFO - Extracted: Altruist - 2-May-24
+2025-04-21 00:59:06,975 - INFO - Found funding amount: 169000000
+2025-04-21 00:59:07,008 - INFO - Extracted: Paragraph - 2-May-24
+2025-04-21 00:59:07,008 - INFO - Found funding amount: 5000000
+2025-04-21 00:59:07,038 - INFO - Extracted: Transcarent - 2-May-24
+2025-04-21 00:59:07,038 - INFO - Found funding amount: 126000000
+2025-04-21 00:59:07,066 - INFO - Extracted: Mimic - 2-May-24
+2025-04-21 00:59:07,066 - INFO - Found funding amount: 27000000
+2025-04-21 00:59:07,094 - INFO - Extracted: Boys & Girls Club of Silicon Valley - 2-May-24
+2025-04-21 00:59:07,094 - INFO - Found funding amount: 100000
+2025-04-21 00:59:07,122 - INFO - Extracted: CellChorus - 2-May-24
+2025-04-21 00:59:07,122 - INFO - Found funding amount: 2500000
+2025-04-21 00:59:07,149 - INFO - Extracted: Ex-human - 2-May-24
+2025-04-21 00:59:07,150 - INFO - Found funding amount: 0
+2025-04-21 00:59:07,178 - INFO - Extracted: Securitize - 1-May-24
+2025-04-21 00:59:07,178 - INFO - Found funding amount: 47000000
+2025-04-21 00:59:07,178 - INFO - Successfully extracted 20 new companies from page 36
+2025-04-21 00:59:07,178 - INFO - Attempting to navigate from page 36
+2025-04-21 00:59:12,839 - INFO - JavaScript verification confirmed page changed
+2025-04-21 00:59:13,281 - INFO - Extracting data from page 37
+2025-04-21 00:59:13,775 - INFO - Trying standard table extraction
+2025-04-21 00:59:13,833 - INFO - Found funding amount column at index 6
+2025-04-21 00:59:13,838 - INFO - Found headquarters column at index 7
+2025-04-21 00:59:13,847 - INFO - Found 22 potential data rows
+2025-04-21 00:59:13,891 - INFO - Extracted: Peregrine Technologies - 1-May-24
+2025-04-21 00:59:13,891 - INFO - Found funding amount: 30000000
+2025-04-21 00:59:13,920 - INFO - Extracted: Traceable - 1-May-24
+2025-04-21 00:59:13,920 - INFO - Found funding amount: 30000000
+2025-04-21 00:59:13,949 - INFO - Extracted: Dodgeball - 1-May-24
+2025-04-21 00:59:13,949 - INFO - Found funding amount: 0
+2025-04-21 00:59:13,977 - INFO - Extracted: Corelight - 30-Apr-24
+2025-04-21 00:59:13,977 - INFO - Found funding amount: 150000000
+2025-04-21 00:59:14,004 - INFO - Extracted: Ansa - 30-Apr-24
+2025-04-21 00:59:14,004 - INFO - Found funding amount: 14000000
+2025-04-21 00:59:14,033 - INFO - Extracted: Pakal Technologies - 30-Apr-24
+2025-04-21 00:59:14,033 - INFO - Found funding amount: 1666667
+2025-04-21 00:59:14,061 - INFO - Extracted: Inhabitr - 30-Apr-24
+2025-04-21 00:59:14,061 - INFO - Found funding amount: 27000000
+2025-04-21 00:59:14,090 - INFO - Extracted: SafeBase - 30-Apr-24
+2025-04-21 00:59:14,090 - INFO - Found funding amount: 33000000
+2025-04-21 00:59:14,118 - INFO - Extracted: PsiQuantum - 30-Apr-24
+2025-04-21 00:59:14,118 - INFO - Found funding amount: 0
+2025-04-21 00:59:14,145 - INFO - Extracted: Surf Bio - 30-Apr-24
+2025-04-21 00:59:14,145 - INFO - Found funding amount: 1600000
+2025-04-21 00:59:14,174 - INFO - Extracted: Seam AI - 30-Apr-24
+2025-04-21 00:59:14,174 - INFO - Found funding amount: 5000000
+2025-04-21 00:59:14,207 - INFO - Extracted: Blend - 29-Apr-24
+2025-04-21 00:59:14,207 - INFO - Found funding amount: 150000000
+2025-04-21 00:59:14,236 - INFO - Extracted: Taiki - 29-Apr-24
+2025-04-21 00:59:14,236 - INFO - Found funding amount: 0
+2025-04-21 00:59:14,264 - INFO - Extracted: Elisity - 29-Apr-24
+2025-04-21 00:59:14,264 - INFO - Found funding amount: 37000000
+2025-04-21 00:59:14,292 - INFO - Extracted: Thintronics - 29-Apr-24
+2025-04-21 00:59:14,292 - INFO - Found funding amount: 23000000
+2025-04-21 00:59:14,331 - INFO - Extracted: RevenueCat - 25-Apr-24
+2025-04-21 00:59:14,331 - INFO - Found funding amount: 12000000
+2025-04-21 00:59:14,359 - INFO - Extracted: Movement Labs - 25-Apr-24
+2025-04-21 00:59:14,359 - INFO - Found funding amount: 38000000
+2025-04-21 00:59:14,387 - INFO - Extracted: Centro Community Partners - 25-Apr-24
+2025-04-21 00:59:14,387 - INFO - Found funding amount: 325000
+2025-04-21 00:59:14,415 - INFO - Extracted: Log10 - 24-Apr-24
+2025-04-21 00:59:14,416 - INFO - Found funding amount: 7200000
+2025-04-21 00:59:14,443 - INFO - Extracted: Midi Health - 24-Apr-24
+2025-04-21 00:59:14,443 - INFO - Found funding amount: 60000000
+2025-04-21 00:59:14,444 - INFO - Successfully extracted 20 new companies from page 37
+2025-04-21 00:59:14,444 - INFO - Attempting to navigate from page 37
+2025-04-21 00:59:21,143 - INFO - JavaScript verification confirmed page changed
+2025-04-21 00:59:22,261 - INFO - Extracting data from page 38
+2025-04-21 00:59:23,244 - INFO - Trying standard table extraction
+2025-04-21 00:59:23,299 - INFO - Found funding amount column at index 6
+2025-04-21 00:59:23,304 - INFO - Found headquarters column at index 7
+2025-04-21 00:59:23,313 - INFO - Found 22 potential data rows
+2025-04-21 00:59:23,376 - INFO - Extracted: Faura - 24-Apr-24
+2025-04-21 00:59:23,376 - INFO - Found funding amount: 500000
+2025-04-21 00:59:23,404 - INFO - Extracted: Augment - 24-Apr-24
+2025-04-21 00:59:23,404 - INFO - Found funding amount: 227000000
+2025-04-21 00:59:23,432 - INFO - Extracted: Anon - 24-Apr-24
+2025-04-21 00:59:23,432 - INFO - Found funding amount: 4500000
+2025-04-21 00:59:23,460 - INFO - Extracted: Cognition - 24-Apr-24
+2025-04-21 00:59:23,461 - INFO - Found funding amount: 175000000
+2025-04-21 00:59:23,488 - INFO - Extracted: Amplifier Security - 24-Apr-24
+2025-04-21 00:59:23,489 - INFO - Found funding amount: 3300000
+2025-04-21 00:59:23,516 - INFO - Extracted: Clueso - 24-Apr-24
+2025-04-21 00:59:23,516 - INFO - Found funding amount: 1400000
+2025-04-21 00:59:23,544 - INFO - Extracted: Xaira Therapeutics - 23-Apr-24
+2025-04-21 00:59:23,544 - INFO - Found funding amount: 1000000000
+2025-04-21 00:59:23,573 - INFO - Extracted: Framework - 23-Apr-24
+2025-04-21 00:59:23,573 - INFO - Found funding amount: 17000000
+2025-04-21 00:59:23,603 - INFO - Extracted: Campus - 23-Apr-24
+2025-04-21 00:59:23,603 - INFO - Found funding amount: 23000000
+2025-04-21 00:59:23,632 - INFO - Extracted: Prophet Security - 23-Apr-24
+2025-04-21 00:59:23,632 - INFO - Found funding amount: 11000000
+2025-04-21 00:59:23,661 - INFO - Extracted: Clarity Pediatrics - 22-Apr-24
+2025-04-21 00:59:23,661 - INFO - Found funding amount: 10000000
+2025-04-21 00:59:23,689 - INFO - Extracted: Pomelo - 22-Apr-24
+2025-04-21 00:59:23,689 - INFO - Found funding amount: 75000000
+2025-04-21 00:59:23,717 - INFO - Extracted: Superinsight - 22-Apr-24
+2025-04-21 00:59:23,717 - INFO - Found funding amount: 200000
+2025-04-21 00:59:23,745 - INFO - Extracted: Observe - 22-Apr-24
+2025-04-21 00:59:23,745 - INFO - Found funding amount: 124999987
+2025-04-21 00:59:23,773 - INFO - Extracted: Rubedo Life Sciences - 22-Apr-24
+2025-04-21 00:59:23,773 - INFO - Found funding amount: 40000000
+2025-04-21 00:59:23,801 - INFO - Extracted: BuildCasa - 19-Apr-24
+2025-04-21 00:59:23,801 - INFO - Found funding amount: 6592979
+2025-04-21 00:59:23,829 - INFO - Extracted: XFactor - 18-Apr-24
+2025-04-21 00:59:23,829 - INFO - Found funding amount: 16000000
+2025-04-21 00:59:23,857 - INFO - Extracted: Clazar - 18-Apr-24
+2025-04-21 00:59:23,857 - INFO - Found funding amount: 10000000
+2025-04-21 00:59:23,889 - INFO - Extracted: Verne - 18-Apr-24
+2025-04-21 00:59:23,889 - INFO - Found funding amount: 450000
+2025-04-21 00:59:23,919 - INFO - Extracted: Anvilogic - 17-Apr-24
+2025-04-21 00:59:23,919 - INFO - Found funding amount: 45000000
+2025-04-21 00:59:23,919 - INFO - Successfully extracted 20 new companies from page 38
+2025-04-21 00:59:23,919 - INFO - Attempting to navigate from page 38
+2025-04-21 00:59:30,013 - INFO - JavaScript verification confirmed page changed
+2025-04-21 00:59:30,692 - INFO - Extracting data from page 39
+2025-04-21 00:59:31,378 - INFO - Trying standard table extraction
+2025-04-21 00:59:31,458 - INFO - Found funding amount column at index 6
+2025-04-21 00:59:31,463 - INFO - Found headquarters column at index 7
+2025-04-21 00:59:31,474 - INFO - Found 22 potential data rows
+2025-04-21 00:59:31,521 - INFO - Extracted: Vorlon - 17-Apr-24
+2025-04-21 00:59:31,521 - INFO - Found funding amount: 15700000
+2025-04-21 00:59:31,549 - INFO - Extracted: Quilt - 16-Apr-24
+2025-04-21 00:59:31,549 - INFO - Found funding amount: 33000000
+2025-04-21 00:59:31,579 - INFO - Extracted: Powerbroker AI - 16-Apr-24
+2025-04-21 00:59:31,579 - INFO - Found funding amount: 1500000
+2025-04-21 00:59:31,607 - INFO - Extracted: Asher Bio - 16-Apr-24
+2025-04-21 00:59:31,607 - INFO - Found funding amount: 55000000
+2025-04-21 00:59:31,636 - INFO - Extracted: Rivos - 16-Apr-24
+2025-04-21 00:59:31,636 - INFO - Found funding amount: 250000000
+2025-04-21 00:59:31,664 - INFO - Extracted: Two Chairs - 16-Apr-24
+2025-04-21 00:59:31,664 - INFO - Found funding amount: 72000000
+2025-04-21 00:59:31,702 - INFO - Extracted: Ripcord - 16-Apr-24
+2025-04-21 00:59:31,702 - INFO - Found funding amount: 32000000
+2025-04-21 00:59:31,732 - INFO - Extracted: Loft Labs - 16-Apr-24
+2025-04-21 00:59:31,732 - INFO - Found funding amount: 24000000
+2025-04-21 00:59:31,762 - INFO - Extracted: Common Sense Privacy - 15-Apr-24
+2025-04-21 00:59:31,762 - INFO - Found funding amount: 0
+2025-04-21 00:59:31,790 - INFO - Extracted: Paraform - 15-Apr-24
+2025-04-21 00:59:31,790 - INFO - Found funding amount: 3600000
+2025-04-21 00:59:31,819 - INFO - Extracted: Clientell - 15-Apr-24
+2025-04-21 00:59:31,819 - INFO - Found funding amount: 2500000
+2025-04-21 00:59:31,847 - INFO - Extracted: Integral Health - 15-Apr-24
+2025-04-21 00:59:31,847 - INFO - Found funding amount: 0
+2025-04-21 00:59:31,875 - INFO - Extracted: Writ - 11-Apr-24
+2025-04-21 00:59:31,875 - INFO - Found funding amount: 3800000
+2025-04-21 00:59:31,904 - INFO - Extracted: Simbian - 11-Apr-24
+2025-04-21 00:59:31,904 - INFO - Found funding amount: 10000000
+2025-04-21 00:59:31,931 - INFO - Extracted: Anrok - 11-Apr-24
+2025-04-21 00:59:31,932 - INFO - Found funding amount: 30000000
+2025-04-21 00:59:31,960 - INFO - Extracted: Symbolica AI - 9-Apr-24
+2025-04-21 00:59:31,960 - INFO - Found funding amount: 33000000
+2025-04-21 00:59:31,988 - INFO - Extracted: JARS AI - 8-Apr-24
+2025-04-21 00:59:31,988 - INFO - Found funding amount: 3000000
+2025-04-21 00:59:32,018 - INFO - Extracted: Windfall Bio - 8-Apr-24
+2025-04-21 00:59:32,018 - INFO - Found funding amount: 28000000
+2025-04-21 00:59:32,047 - INFO - Extracted: MODE - 8-Apr-24
+2025-04-21 00:59:32,047 - INFO - Found funding amount: 8750000
+2025-04-21 00:59:32,075 - INFO - Extracted: Varda - 5-Apr-24
+2025-04-21 00:59:32,075 - INFO - Found funding amount: 90000000
+2025-04-21 00:59:32,075 - INFO - Successfully extracted 20 new companies from page 39
+2025-04-21 00:59:32,075 - INFO - Attempting to navigate from page 39
+2025-04-21 00:59:38,224 - INFO - JavaScript verification confirmed page changed
+2025-04-21 00:59:38,747 - INFO - Extracting data from page 40
+2025-04-21 00:59:39,927 - INFO - Trying standard table extraction
+2025-04-21 00:59:39,996 - INFO - Found funding amount column at index 6
+2025-04-21 00:59:40,001 - INFO - Found headquarters column at index 7
+2025-04-21 00:59:40,010 - INFO - Found 22 potential data rows
+2025-04-21 00:59:40,054 - INFO - Extracted: Enable Biosciences - 4-Apr-24
+2025-04-21 00:59:40,055 - INFO - Found funding amount: 0
+2025-04-21 00:59:40,083 - INFO - Extracted: SiMa.ai - 4-Apr-24
+2025-04-21 00:59:40,084 - INFO - Found funding amount: 70000000
+2025-04-21 00:59:40,112 - INFO - Extracted: Lambda - 4-Apr-24
+2025-04-21 00:59:40,113 - INFO - Found funding amount: 500000000
+2025-04-21 00:59:40,141 - INFO - Extracted: YonedaLabs - 4-Apr-24
+2025-04-21 00:59:40,141 - INFO - Found funding amount: 500000
+2025-04-21 00:59:40,169 - INFO - Extracted: Coalesce Automation - 4-Apr-24
+2025-04-21 00:59:40,169 - INFO - Found funding amount: 50000000
+2025-04-21 00:59:40,205 - INFO - Extracted: Scritch - 3-Apr-24
+2025-04-21 00:59:40,205 - INFO - Found funding amount: 500000
+2025-04-21 00:59:40,245 - INFO - Extracted: nCompass Technologies - 3-Apr-24
+2025-04-21 00:59:40,245 - INFO - Found funding amount: 500000
+2025-04-21 00:59:40,273 - INFO - Extracted: Trieve - 3-Apr-24
+2025-04-21 00:59:40,273 - INFO - Found funding amount: 500000
+2025-04-21 00:59:40,309 - INFO - Extracted: DryMerge - 3-Apr-24
+2025-04-21 00:59:40,309 - INFO - Found funding amount: 500000
+2025-04-21 00:59:40,337 - INFO - Extracted: Permiso Security - 3-Apr-24
+2025-04-21 00:59:40,337 - INFO - Found funding amount: 18500000
+2025-04-21 00:59:40,365 - INFO - Extracted: Mango Health - 3-Apr-24
+2025-04-21 00:59:40,365 - INFO - Found funding amount: 500000
+2025-04-21 00:59:40,393 - INFO - Extracted: ion design - 3-Apr-24
+2025-04-21 00:59:40,393 - INFO - Found funding amount: 500000
+2025-04-21 00:59:40,421 - INFO - Extracted: Numo - 3-Apr-24
+2025-04-21 00:59:40,421 - INFO - Found funding amount: 500000
+2025-04-21 00:59:40,449 - INFO - Extracted: Celest - 3-Apr-24
+2025-04-21 00:59:40,449 - INFO - Found funding amount: 500000
+2025-04-21 00:59:40,477 - INFO - Extracted: Higgsfield - 3-Apr-24
+2025-04-21 00:59:40,477 - INFO - Found funding amount: 8000000
+2025-04-21 00:59:40,505 - INFO - Extracted: OpenFoundry - 3-Apr-24
+2025-04-21 00:59:40,505 - INFO - Found funding amount: 500000
+2025-04-21 00:59:40,534 - INFO - Extracted: Arch0 - 3-Apr-24
+2025-04-21 00:59:40,534 - INFO - Found funding amount: 1250000
+2025-04-21 00:59:40,566 - INFO - Extracted: Trellis - 3-Apr-24
+2025-04-21 00:59:40,566 - INFO - Found funding amount: 500000
+2025-04-21 00:59:40,602 - INFO - Extracted: PointOne Technologies - 3-Apr-24
+2025-04-21 00:59:40,602 - INFO - Found funding amount: 500000
+2025-04-21 00:59:40,631 - INFO - Extracted: Attunement - 3-Apr-24
+2025-04-21 00:59:40,631 - INFO - Found funding amount: 500000
+2025-04-21 00:59:40,631 - INFO - Successfully extracted 20 new companies from page 40
+2025-04-21 00:59:40,631 - INFO - Attempting to navigate from page 40
+2025-04-21 00:59:46,518 - INFO - JavaScript verification confirmed page changed
+2025-04-21 00:59:47,010 - INFO - Extracting data from page 41
+2025-04-21 00:59:47,562 - INFO - Trying standard table extraction
+2025-04-21 00:59:47,618 - INFO - Found funding amount column at index 6
+2025-04-21 00:59:47,623 - INFO - Found headquarters column at index 7
+2025-04-21 00:59:47,634 - INFO - Found 22 potential data rows
+2025-04-21 00:59:47,685 - INFO - Extracted: ego - 3-Apr-24
+2025-04-21 00:59:47,686 - INFO - Found funding amount: 500000
+2025-04-21 00:59:47,713 - INFO - Extracted: Retell AI - 3-Apr-24
+2025-04-21 00:59:47,713 - INFO - Found funding amount: 4125000
+2025-04-21 00:59:47,741 - INFO - Extracted: Paradigm - 3-Apr-24
+2025-04-21 00:59:47,741 - INFO - Found funding amount: 500000
+2025-04-21 00:59:47,769 - INFO - Extracted: SiftHub - 3-Apr-24
+2025-04-21 00:59:47,769 - INFO - Found funding amount: 5500000
+2025-04-21 00:59:47,797 - INFO - Extracted: Atopile - 3-Apr-24
+2025-04-21 00:59:47,797 - INFO - Found funding amount: 500000
+2025-04-21 00:59:47,825 - INFO - Extracted: Hemingway - 3-Apr-24
+2025-04-21 00:59:47,826 - INFO - Found funding amount: 500000
+2025-04-21 00:59:47,854 - INFO - Extracted: MAIHEM - 3-Apr-24
+2025-04-21 00:59:47,854 - INFO - Found funding amount: 500000
+2025-04-21 00:59:47,882 - INFO - Extracted: Airfront - 3-Apr-24
+2025-04-21 00:59:47,882 - INFO - Found funding amount: 500000
+2025-04-21 00:59:47,910 - INFO - Extracted: Maia - 3-Apr-24
+2025-04-21 00:59:47,910 - INFO - Found funding amount: 500000
+2025-04-21 00:59:47,938 - INFO - Extracted: Nuanced - 3-Apr-24
+2025-04-21 00:59:47,938 - INFO - Found funding amount: 500000
+2025-04-21 00:59:47,966 - INFO - Extracted: Lantern - 3-Apr-24
+2025-04-21 00:59:47,966 - INFO - Found funding amount: 500000
+2025-04-21 00:59:48,000 - INFO - Extracted: Patchwork - 3-Apr-24
+2025-04-21 00:59:48,000 - INFO - Found funding amount: 500000
+2025-04-21 00:59:48,029 - INFO - Extracted: Roe AI - 3-Apr-24
+2025-04-21 00:59:48,029 - INFO - Found funding amount: 500000
+2025-04-21 00:59:48,062 - INFO - Extracted: Creo - 3-Apr-24
+2025-04-21 00:59:48,062 - INFO - Found funding amount: 500000
+2025-04-21 00:59:48,092 - INFO - Extracted: Precip - 3-Apr-24
+2025-04-21 00:59:48,092 - INFO - Found funding amount: 500000
+2025-04-21 00:59:48,121 - INFO - Extracted: CloudCruise - 3-Apr-24
+2025-04-21 00:59:48,121 - INFO - Found funding amount: 500000
+2025-04-21 00:59:48,149 - INFO - Extracted: Intercept - 3-Apr-24
+2025-04-21 00:59:48,149 - INFO - Found funding amount: 500000
+2025-04-21 00:59:48,178 - INFO - Extracted: Duckie - 3-Apr-24
+2025-04-21 00:59:48,178 - INFO - Found funding amount: 500000
+2025-04-21 00:59:48,207 - INFO - Extracted: Swift - 3-Apr-24
+2025-04-21 00:59:48,207 - INFO - Found funding amount: 500000
+2025-04-21 00:59:48,235 - INFO - Extracted: Resonance - 3-Apr-24
+2025-04-21 00:59:48,235 - INFO - Found funding amount: 500000
+2025-04-21 00:59:48,235 - INFO - Successfully extracted 20 new companies from page 41
+2025-04-21 00:59:48,235 - INFO - Attempting to navigate from page 41
+2025-04-21 00:59:54,554 - INFO - JavaScript verification confirmed page changed
+2025-04-21 00:59:55,609 - INFO - Extracting data from page 42
+2025-04-21 00:59:56,385 - INFO - Trying standard table extraction
+2025-04-21 00:59:56,441 - INFO - Found funding amount column at index 6
+2025-04-21 00:59:56,446 - INFO - Found headquarters column at index 7
+2025-04-21 00:59:56,455 - INFO - Found 22 potential data rows
+2025-04-21 00:59:56,499 - INFO - Extracted: Yondu - 3-Apr-24
+2025-04-21 00:59:56,499 - INFO - Found funding amount: 500000
+2025-04-21 00:59:56,527 - INFO - Extracted: Ecliptor - 3-Apr-24
+2025-04-21 00:59:56,527 - INFO - Found funding amount: 500000
+2025-04-21 00:59:56,555 - INFO - Extracted: Assembly - 3-Apr-24
+2025-04-21 00:59:56,555 - INFO - Found funding amount: 500000
+2025-04-21 00:59:56,583 - INFO - Extracted: Parasale - 3-Apr-24
+2025-04-21 00:59:56,583 - INFO - Found funding amount: 500000
+2025-04-21 00:59:56,616 - INFO - Extracted: PartnerHQ - 3-Apr-24
+2025-04-21 00:59:56,616 - INFO - Found funding amount: 500000
+2025-04-21 00:59:56,645 - INFO - Extracted: Kabilah - 3-Apr-24
+2025-04-21 00:59:56,645 - INFO - Found funding amount: 500000
+2025-04-21 00:59:56,674 - INFO - Extracted: Relari - 3-Apr-24
+2025-04-21 00:59:56,674 - INFO - Found funding amount: 500000
+2025-04-21 00:59:56,702 - INFO - Extracted: Momentic - 3-Apr-24
+2025-04-21 00:59:56,702 - INFO - Found funding amount: 500000
+2025-04-21 00:59:56,730 - INFO - Extracted: Glimmer - 3-Apr-24
+2025-04-21 00:59:56,730 - INFO - Found funding amount: 500000
+2025-04-21 00:59:56,758 - INFO - Extracted: Homebase - 3-Apr-24
+2025-04-21 00:59:56,758 - INFO - Found funding amount: 60000000
+2025-04-21 00:59:56,787 - INFO - Extracted: Centralize - 3-Apr-24
+2025-04-21 00:59:56,787 - INFO - Found funding amount: 500000
+2025-04-21 00:59:56,815 - INFO - Extracted: Aidy - 3-Apr-24
+2025-04-21 00:59:56,815 - INFO - Found funding amount: 500000
+2025-04-21 00:59:56,843 - INFO - Extracted: Buster - 3-Apr-24
+2025-04-21 00:59:56,843 - INFO - Found funding amount: 500000
+2025-04-21 00:59:56,871 - INFO - Extracted: Meticulate - 3-Apr-24
+2025-04-21 00:59:56,871 - INFO - Found funding amount: 500000
+2025-04-21 00:59:56,899 - INFO - Extracted: RadMate AI - 3-Apr-24
+2025-04-21 00:59:56,899 - INFO - Found funding amount: 500000
+2025-04-21 00:59:56,927 - INFO - Extracted: Quantic - 3-Apr-24
+2025-04-21 00:59:56,927 - INFO - Found funding amount: 500000
+2025-04-21 00:59:56,955 - INFO - Extracted: Okapi - 3-Apr-24
+2025-04-21 00:59:56,955 - INFO - Found funding amount: 500000
+2025-04-21 00:59:56,983 - INFO - Extracted: Aether Energy - 3-Apr-24
+2025-04-21 00:59:56,983 - INFO - Found funding amount: 500000
+2025-04-21 00:59:57,011 - INFO - Extracted: Decipher AI - 3-Apr-24
+2025-04-21 00:59:57,011 - INFO - Found funding amount: 500000
+2025-04-21 00:59:57,041 - INFO - Extracted: Modal.io - 2-Apr-24
+2025-04-21 00:59:57,041 - INFO - Found funding amount: 25000000
+2025-04-21 00:59:57,041 - INFO - Successfully extracted 20 new companies from page 42
+2025-04-21 00:59:57,041 - INFO - Attempting to navigate from page 42
+2025-04-21 01:00:02,702 - INFO - JavaScript verification confirmed page changed
+2025-04-21 01:00:03,108 - INFO - Extracting data from page 43
+2025-04-21 01:00:03,769 - INFO - Trying standard table extraction
+2025-04-21 01:00:03,803 - INFO - Found funding amount column at index 6
+2025-04-21 01:00:03,807 - INFO - Found headquarters column at index 7
+2025-04-21 01:00:03,815 - INFO - Found 22 potential data rows
+2025-04-21 01:00:03,859 - INFO - Extracted: BurnBot - 2-Apr-24
+2025-04-21 01:00:03,859 - INFO - Found funding amount: 20000000
+2025-04-21 01:00:03,894 - INFO - Extracted: HelicitySpace - 2-Apr-24
+2025-04-21 01:00:03,894 - INFO - Found funding amount: 5000000
+2025-04-21 01:00:03,926 - INFO - Extracted: SESO - 2-Apr-24
+2025-04-21 01:00:03,926 - INFO - Found funding amount: 26000000
+2025-04-21 01:00:03,957 - INFO - Extracted: Lumana - 2-Apr-24
+2025-04-21 01:00:03,957 - INFO - Found funding amount: 24000000
+2025-04-21 01:00:03,987 - INFO - Extracted: Delivery Collective - 2-Apr-24
+2025-04-21 01:00:03,987 - INFO - Found funding amount: 3800000
+2025-04-21 01:00:04,018 - INFO - Extracted: Meedan - 2-Apr-24
+2025-04-21 01:00:04,018 - INFO - Found funding amount: 2000000
+2025-04-21 01:00:04,048 - INFO - Extracted: NobleAI - 2-Apr-24
+2025-04-21 01:00:04,048 - INFO - Found funding amount: 10000000
+2025-04-21 01:00:04,097 - INFO - Extracted: Allermi - 1-Apr-24
+2025-04-21 01:00:04,098 - INFO - Found funding amount: 3500000
+2025-04-21 01:00:04,131 - INFO - Extracted: BioConsortia - 1-Apr-24
+2025-04-21 01:00:04,131 - INFO - Found funding amount: 15000000
+2025-04-21 01:00:04,162 - INFO - Extracted: Skyflow - 28-Mar-24
+2025-04-21 01:00:04,162 - INFO - Found funding amount: 30000000
+2025-04-21 01:00:04,193 - INFO - Extracted: Vizcom - 28-Mar-24
+2025-04-21 01:00:04,193 - INFO - Found funding amount: 20000000
+2025-04-21 01:00:04,224 - INFO - Extracted: Float Health - 28-Mar-24
+2025-04-21 01:00:04,224 - INFO - Found funding amount: 10000000
+2025-04-21 01:00:04,251 - INFO - Extracted: Spintly - 28-Mar-24
+2025-04-21 01:00:04,251 - INFO - Found funding amount: 500000
+2025-04-21 01:00:04,282 - INFO - Extracted: Aeovian Pharmaceuticals - 28-Mar-24
+2025-04-21 01:00:04,282 - INFO - Found funding amount: 50000000
+2025-04-21 01:00:04,311 - INFO - Extracted: ValidMind - 27-Mar-24
+2025-04-21 01:00:04,311 - INFO - Found funding amount: 8100000
+2025-04-21 01:00:04,340 - INFO - Extracted: Ensis - 27-Mar-24
+2025-04-21 01:00:04,340 - INFO - Found funding amount: 4000000
+2025-04-21 01:00:04,369 - INFO - Extracted: YourChoice Therapeutics - 27-Mar-24
+2025-04-21 01:00:04,369 - INFO - Found funding amount: 500000
+2025-04-21 01:00:04,398 - INFO - Extracted: TurbineOne - 27-Mar-24
+2025-04-21 01:00:04,398 - INFO - Found funding amount: 15000000
+2025-04-21 01:00:04,427 - INFO - Extracted: JobPixel - 27-Mar-24
+2025-04-21 01:00:04,427 - INFO - Found funding amount: 4700000
+2025-04-21 01:00:04,459 - INFO - Extracted: OneNotary - 26-Mar-24
+2025-04-21 01:00:04,460 - INFO - Found funding amount: 5000000
+2025-04-21 01:00:04,460 - INFO - Successfully extracted 20 new companies from page 43
+2025-04-21 01:00:04,460 - INFO - Attempting to navigate from page 43
+2025-04-21 01:00:10,149 - INFO - JavaScript verification confirmed page changed
+2025-04-21 01:00:10,998 - INFO - Extracting data from page 44
+2025-04-21 01:00:12,117 - INFO - Trying standard table extraction
+2025-04-21 01:00:12,173 - INFO - Found funding amount column at index 6
+2025-04-21 01:00:12,178 - INFO - Found headquarters column at index 7
+2025-04-21 01:00:12,187 - INFO - Found 22 potential data rows
+2025-04-21 01:00:12,232 - INFO - Extracted: Fieldguide - 26-Mar-24
+2025-04-21 01:00:12,232 - INFO - Found funding amount: 30000000
+2025-04-21 01:00:12,261 - INFO - Extracted: Brightside Health - 26-Mar-24
+2025-04-21 01:00:12,261 - INFO - Found funding amount: 33000000
+2025-04-21 01:00:12,289 - INFO - Extracted: Picogrid - 26-Mar-24
+2025-04-21 01:00:12,289 - INFO - Found funding amount: 12319995
+2025-04-21 01:00:12,318 - INFO - Extracted: OpenPipe - 26-Mar-24
+2025-04-21 01:00:12,318 - INFO - Found funding amount: 6700000
+2025-04-21 01:00:12,357 - INFO - Extracted: ionobell - 26-Mar-24
+2025-04-21 01:00:12,357 - INFO - Found funding amount: 3900000
+2025-04-21 01:00:12,386 - INFO - Extracted: Activeloop - 26-Mar-24
+2025-04-21 01:00:12,386 - INFO - Found funding amount: 11000000
+2025-04-21 01:00:12,414 - INFO - Extracted: Bedrock Security - 26-Mar-24
+2025-04-21 01:00:12,414 - INFO - Found funding amount: 10000000
+2025-04-21 01:00:12,443 - INFO - Extracted: Charlee.ai - 25-Mar-24
+2025-04-21 01:00:12,443 - INFO - Found funding amount: 0
+2025-04-21 01:00:12,471 - INFO - Extracted: Propel - 25-Mar-24
+2025-04-21 01:00:12,471 - INFO - Found funding amount: 1050000
+2025-04-21 01:00:12,499 - INFO - Extracted: Circular.co - 25-Mar-24
+2025-04-21 01:00:12,499 - INFO - Found funding amount: 5300000
+2025-04-21 01:00:12,528 - INFO - Extracted: Profluent Bio - 21-Mar-24
+2025-04-21 01:00:12,528 - INFO - Found funding amount: 35000000
+2025-04-21 01:00:12,560 - INFO - Extracted: Espresso Systems - 21-Mar-24
+2025-04-21 01:00:12,560 - INFO - Found funding amount: 28000000
+2025-04-21 01:00:12,589 - INFO - Extracted: Ediphi - 21-Mar-24
+2025-04-21 01:00:12,589 - INFO - Found funding amount: 12000000
+2025-04-21 01:00:12,617 - INFO - Extracted: Foundry - 21-Mar-24
+2025-04-21 01:00:12,617 - INFO - Found funding amount: 80000000
+2025-04-21 01:00:12,645 - INFO - Extracted: Tarsal - 21-Mar-24
+2025-04-21 01:00:12,645 - INFO - Found funding amount: 6000000
+2025-04-21 01:00:12,673 - INFO - Extracted: Buzz Solutions - 20-Mar-24
+2025-04-21 01:00:12,673 - INFO - Found funding amount: 5000000
+2025-04-21 01:00:12,712 - INFO - Extracted: Airmyne - 20-Mar-24
+2025-04-21 01:00:12,712 - INFO - Found funding amount: 6900000
+2025-04-21 01:00:12,740 - INFO - Extracted: Mermaid Chart - 20-Mar-24
+2025-04-21 01:00:12,740 - INFO - Found funding amount: 7575000
+2025-04-21 01:00:12,768 - INFO - Extracted: Euno - 19-Mar-24
+2025-04-21 01:00:12,769 - INFO - Found funding amount: 6250000
+2025-04-21 01:00:12,797 - INFO - Extracted: RapidFire AI - 19-Mar-24
+2025-04-21 01:00:12,797 - INFO - Found funding amount: 4034999
+2025-04-21 01:00:12,797 - INFO - Successfully extracted 20 new companies from page 44
+2025-04-21 01:00:12,797 - INFO - Attempting to navigate from page 44
+2025-04-21 01:00:18,859 - INFO - JavaScript verification confirmed page changed
+2025-04-21 01:00:19,282 - INFO - Extracting data from page 45
+2025-04-21 01:00:20,283 - INFO - Trying standard table extraction
+2025-04-21 01:00:20,339 - INFO - Found funding amount column at index 6
+2025-04-21 01:00:20,344 - INFO - Found headquarters column at index 7
+2025-04-21 01:00:20,353 - INFO - Found 22 potential data rows
+2025-04-21 01:00:20,397 - INFO - Extracted: EKA Solutions - 19-Mar-24
+2025-04-21 01:00:20,397 - INFO - Found funding amount: 150000
+2025-04-21 01:00:20,427 - INFO - Extracted: Lumino - 19-Mar-24
+2025-04-21 01:00:20,427 - INFO - Found funding amount: 2800000
+2025-04-21 01:00:20,455 - INFO - Extracted: Chambr - 18-Mar-24
+2025-04-21 01:00:20,455 - INFO - Found funding amount: 20000
+2025-04-21 01:00:20,482 - INFO - Extracted: Carbonated - 15-Mar-24
+2025-04-21 01:00:20,482 - INFO - Found funding amount: 11000000
+2025-04-21 01:00:20,510 - INFO - Extracted: Unstructured Technologies - 14-Mar-24
+2025-04-21 01:00:20,510 - INFO - Found funding amount: 40000000
+2025-04-21 01:00:20,548 - INFO - Extracted: Omni - 14-Mar-24
+2025-04-21 01:00:20,548 - INFO - Found funding amount: 20000000
+2025-04-21 01:00:20,578 - INFO - Extracted: inDrive - 14-Mar-24
+2025-04-21 01:00:20,578 - INFO - Found funding amount: 150000000
+2025-04-21 01:00:20,606 - INFO - Extracted: Lily AI - 14-Mar-24
+2025-04-21 01:00:20,606 - INFO - Found funding amount: 20000000
+2025-04-21 01:00:20,634 - INFO - Extracted: Horizon Treatment Services - 14-Mar-24
+2025-04-21 01:00:20,634 - INFO - Found funding amount: 1000000
+2025-04-21 01:00:20,663 - INFO - Extracted: Vertosa - 14-Mar-24
+2025-04-21 01:00:20,663 - INFO - Found funding amount: 0
+2025-04-21 01:00:20,691 - INFO - Extracted: Clique - 14-Mar-24
+2025-04-21 01:00:20,691 - INFO - Found funding amount: 8000000
+2025-04-21 01:00:20,719 - INFO - Extracted: Sierra Gold Nurseries - 14-Mar-24
+2025-04-21 01:00:20,719 - INFO - Found funding amount: 0
+2025-04-21 01:00:20,748 - INFO - Extracted: Orbillion Bio - 14-Mar-24
+2025-04-21 01:00:20,748 - INFO - Found funding amount: 0
+2025-04-21 01:00:20,776 - INFO - Extracted: Redcoat AI - 14-Mar-24
+2025-04-21 01:00:20,776 - INFO - Found funding amount: 4240000
+2025-04-21 01:00:20,804 - INFO - Extracted: Assort Health - 14-Mar-24
+2025-04-21 01:00:20,804 - INFO - Found funding amount: 3500000
+2025-04-21 01:00:20,832 - INFO - Extracted: Deep Origin - 13-Mar-24
+2025-04-21 01:00:20,832 - INFO - Found funding amount: 25500000
+2025-04-21 01:00:20,861 - INFO - Extracted: LiveKit - 13-Mar-24
+2025-04-21 01:00:20,861 - INFO - Found funding amount: 19742076
+2025-04-21 01:00:20,889 - INFO - Extracted: Voxeleron - 13-Mar-24
+2025-04-21 01:00:20,889 - INFO - Found funding amount: 0
+2025-04-21 01:00:20,931 - INFO - Extracted: Nozomi Networks - 13-Mar-24
+2025-04-21 01:00:20,931 - INFO - Found funding amount: 100000000
+2025-04-21 01:00:20,959 - INFO - Extracted: Fermat Commerce - 13-Mar-24
+2025-04-21 01:00:20,959 - INFO - Found funding amount: 17000000
+2025-04-21 01:00:20,959 - INFO - Successfully extracted 20 new companies from page 45
+2025-04-21 01:00:20,959 - INFO - Attempting to navigate from page 45
+2025-04-21 01:00:26,253 - INFO - JavaScript verification confirmed page changed
+2025-04-21 01:00:26,774 - INFO - Extracting data from page 46
+2025-04-21 01:00:27,284 - INFO - Trying standard table extraction
+2025-04-21 01:00:27,341 - INFO - Found funding amount column at index 6
+2025-04-21 01:00:27,345 - INFO - Found headquarters column at index 7
+2025-04-21 01:00:27,355 - INFO - Found 22 potential data rows
+2025-04-21 01:00:27,399 - INFO - Extracted: Astronuts - 13-Mar-24
+2025-04-21 01:00:27,399 - INFO - Found funding amount: 0
+2025-04-21 01:00:27,427 - INFO - Extracted: eDNA Explorer - 13-Mar-24
+2025-04-21 01:00:27,427 - INFO - Found funding amount: 500000
+2025-04-21 01:00:27,456 - INFO - Extracted: Big Sur AI - 13-Mar-24
+2025-04-21 01:00:27,456 - INFO - Found funding amount: 6900000
+2025-04-21 01:00:27,484 - INFO - Extracted: HalseyPoint Asset Management - 13-Mar-24
+2025-04-21 01:00:27,484 - INFO - Found funding amount: 0
+2025-04-21 01:00:27,512 - INFO - Extracted: Luminary Cloud - 13-Mar-24
+2025-04-21 01:00:27,512 - INFO - Found funding amount: 115000000
+2025-04-21 01:00:27,540 - INFO - Extracted: Furno - 13-Mar-24
+2025-04-21 01:00:27,541 - INFO - Found funding amount: 6500000
+2025-04-21 01:00:27,570 - INFO - Extracted: Smartschool - 13-Mar-24
+2025-04-21 01:00:27,570 - INFO - Found funding amount: 1500000
+2025-04-21 01:00:27,599 - INFO - Extracted: NanoNets - 12-Mar-24
+2025-04-21 01:00:27,599 - INFO - Found funding amount: 29000000
+2025-04-21 01:00:27,627 - INFO - Extracted: Amara Organic Foods - 12-Mar-24
+2025-04-21 01:00:27,627 - INFO - Found funding amount: 20000000
+2025-04-21 01:00:27,655 - INFO - Extracted: Vouch - 11-Mar-24
+2025-04-21 01:00:27,655 - INFO - Found funding amount: 25000000
+2025-04-21 01:00:27,683 - INFO - Extracted: Forest Neurotech - 11-Mar-24
+2025-04-21 01:00:27,683 - INFO - Found funding amount: 14000000
+2025-04-21 01:00:27,711 - INFO - Extracted: Applied Intuition - 11-Mar-24
+2025-04-21 01:00:27,711 - INFO - Found funding amount: 250000000
+2025-04-21 01:00:27,740 - INFO - Extracted: Bear Robotics - 11-Mar-24
+2025-04-21 01:00:27,740 - INFO - Found funding amount: 60000000
+2025-04-21 01:00:27,768 - INFO - Extracted: Key - 11-Mar-24
+2025-04-21 01:00:27,768 - INFO - Found funding amount: 4300000
+2025-04-21 01:00:27,796 - INFO - Extracted: Eigen Therapeutics - 11-Mar-24
+2025-04-21 01:00:27,796 - INFO - Found funding amount: 0
+2025-04-21 01:00:27,837 - INFO - Extracted: RealSeq Biosciences - 11-Mar-24
+2025-04-21 01:00:27,837 - INFO - Found funding amount: 1500000
+2025-04-21 01:00:27,865 - INFO - Extracted: Eclipse - 11-Mar-24
+2025-04-21 01:00:27,865 - INFO - Found funding amount: 50000000
+2025-04-21 01:00:27,893 - INFO - Extracted: Foundation Health - 11-Mar-24
+2025-04-21 01:00:27,893 - INFO - Found funding amount: 6000000
+2025-04-21 01:00:27,922 - INFO - Extracted: Huski.ai - 8-Mar-24
+2025-04-21 01:00:27,922 - INFO - Found funding amount: 4250010
+2025-04-21 01:00:27,950 - INFO - Extracted: Ondas Networks - 8-Mar-24
+2025-04-21 01:00:27,950 - INFO - Found funding amount: 4500000
+2025-04-21 01:00:27,950 - INFO - Successfully extracted 20 new companies from page 46
+2025-04-21 01:00:27,950 - INFO - Attempting to navigate from page 46
+2025-04-21 01:00:33,142 - INFO - JavaScript verification confirmed page changed
+2025-04-21 01:00:33,848 - INFO - Extracting data from page 47
+2025-04-21 01:00:34,274 - INFO - Trying standard table extraction
+2025-04-21 01:00:34,328 - INFO - Found funding amount column at index 6
+2025-04-21 01:00:34,333 - INFO - Found headquarters column at index 7
+2025-04-21 01:00:34,342 - INFO - Found 22 potential data rows
+2025-04-21 01:00:34,386 - INFO - Extracted: NeuroAge Therapeutics - 7-Mar-24
+2025-04-21 01:00:34,386 - INFO - Found funding amount: 250000
+2025-04-21 01:00:34,415 - INFO - Extracted: Neural Propulsion Systems - 7-Mar-24
+2025-04-21 01:00:34,416 - INFO - Found funding amount: 17500000
+2025-04-21 01:00:34,444 - INFO - Extracted: Best Day Brewing - 7-Mar-24
+2025-04-21 01:00:34,444 - INFO - Found funding amount: 10000000
+2025-04-21 01:00:34,472 - INFO - Extracted: Reach Security - 7-Mar-24
+2025-04-21 01:00:34,472 - INFO - Found funding amount: 20000000
+2025-04-21 01:00:34,500 - INFO - Extracted: Brevian - 7-Mar-24
+2025-04-21 01:00:34,500 - INFO - Found funding amount: 9000000
+2025-04-21 01:00:34,529 - INFO - Extracted: Alumis - 6-Mar-24
+2025-04-21 01:00:34,529 - INFO - Found funding amount: 259000000
+2025-04-21 01:00:34,557 - INFO - Extracted: Abstract - 6-Mar-24
+2025-04-21 01:00:34,557 - INFO - Found funding amount: 4256483
+2025-04-21 01:00:34,588 - INFO - Extracted: Altro (fka Perch) - 6-Mar-24
+2025-04-21 01:00:34,589 - INFO - Found funding amount: 4000000
+2025-04-21 01:00:34,620 - INFO - Extracted: Remofirst - 6-Mar-24
+2025-04-21 01:00:34,620 - INFO - Found funding amount: 25000000
+2025-04-21 01:00:34,659 - INFO - Extracted: Proof of Impact - 6-Mar-24
+2025-04-21 01:00:34,659 - INFO - Found funding amount: 569985
+2025-04-21 01:00:34,689 - INFO - Extracted: Firewall - 6-Mar-24
+2025-04-21 01:00:34,689 - INFO - Found funding amount: 3700000
+2025-04-21 01:00:34,717 - INFO - Extracted: Glacier - 6-Mar-24
+2025-04-21 01:00:34,717 - INFO - Found funding amount: 7700000
+2025-04-21 01:00:34,745 - INFO - Extracted: Jabali - 6-Mar-24
+2025-04-21 01:00:34,745 - INFO - Found funding amount: 5000000
+2025-04-21 01:00:34,773 - INFO - Extracted: Dtex Systems - 5-Mar-24
+2025-04-21 01:00:34,773 - INFO - Found funding amount: 50000000
+2025-04-21 01:00:34,800 - INFO - Extracted: Ubicloud - 5-Mar-24
+2025-04-21 01:00:34,801 - INFO - Found funding amount: 16000000
+2025-04-21 01:00:34,827 - INFO - Extracted: Openprise - 5-Mar-24
+2025-04-21 01:00:34,827 - INFO - Found funding amount: 25000000
+2025-04-21 01:00:34,852 - INFO - Extracted: appCD - 5-Mar-24
+2025-04-21 01:00:34,852 - INFO - Found funding amount: 6000000
+2025-04-21 01:00:34,879 - INFO - Extracted: RIOS - 5-Mar-24
+2025-04-21 01:00:34,879 - INFO - Found funding amount: 13000000
+2025-04-21 01:00:34,908 - INFO - Extracted: Baseten - 4-Mar-24
+2025-04-21 01:00:34,908 - INFO - Found funding amount: 40000000
+2025-04-21 01:00:34,936 - INFO - Extracted: GALY - 4-Mar-24
+2025-04-21 01:00:34,936 - INFO - Found funding amount: 20149994
+2025-04-21 01:00:34,936 - INFO - Successfully extracted 20 new companies from page 47
+2025-04-21 01:00:34,936 - INFO - Attempting to navigate from page 47
+2025-04-21 01:00:40,768 - INFO - JavaScript verification confirmed page changed
+2025-04-21 01:00:41,221 - INFO - Extracting data from page 48
+2025-04-21 01:00:41,932 - INFO - Trying standard table extraction
+2025-04-21 01:00:41,992 - INFO - Found funding amount column at index 6
+2025-04-21 01:00:41,998 - INFO - Found headquarters column at index 7
+2025-04-21 01:00:42,012 - INFO - Found 22 potential data rows
+2025-04-21 01:00:42,058 - INFO - Extracted: Headlands Research - 4-Mar-24
+2025-04-21 01:00:42,058 - INFO - Found funding amount: 249997
+2025-04-21 01:00:42,087 - INFO - Extracted: treet - 4-Mar-24
+2025-04-21 01:00:42,087 - INFO - Found funding amount: 10000000
+2025-04-21 01:00:42,116 - INFO - Extracted: Entrada - 4-Mar-24
+2025-04-21 01:00:42,116 - INFO - Found funding amount: 0
+2025-04-21 01:00:42,144 - INFO - Extracted: Momentous - 29-Feb-24
+2025-04-21 01:00:42,144 - INFO - Found funding amount: 0
+2025-04-21 01:00:42,174 - INFO - Extracted: FirstHive - 29-Feb-24
+2025-04-21 01:00:42,174 - INFO - Found funding amount: 5089250
+2025-04-21 01:00:42,219 - INFO - Extracted: Elemeno Health - 29-Feb-24
+2025-04-21 01:00:42,219 - INFO - Found funding amount: 3350344
+2025-04-21 01:00:42,248 - INFO - Extracted: PawCo Foods - 29-Feb-24
+2025-04-21 01:00:42,248 - INFO - Found funding amount: 2000000
+2025-04-21 01:00:42,276 - INFO - Extracted: BioCorRx - 28-Feb-24
+2025-04-21 01:00:42,276 - INFO - Found funding amount: 11000000
+2025-04-21 01:00:42,308 - INFO - Extracted: Range Energy - 28-Feb-24
+2025-04-21 01:00:42,308 - INFO - Found funding amount: 23500000
+2025-04-21 01:00:42,337 - INFO - Extracted: BloomTech - 28-Feb-24
+2025-04-21 01:00:42,337 - INFO - Found funding amount: 14602342
+2025-04-21 01:00:42,365 - INFO - Extracted: Backpack - 28-Feb-24
+2025-04-21 01:00:42,365 - INFO - Found funding amount: 17000000
+2025-04-21 01:00:42,393 - INFO - Extracted: Mineprism Inc. - 28-Feb-24
+2025-04-21 01:00:42,393 - INFO - Found funding amount: 75000
+2025-04-21 01:00:42,421 - INFO - Extracted: Parspec - 27-Feb-24
+2025-04-21 01:00:42,421 - INFO - Found funding amount: 11500000
+2025-04-21 01:00:42,449 - INFO - Extracted: Catch+Release - 27-Feb-24
+2025-04-21 01:00:42,449 - INFO - Found funding amount: 8800000
+2025-04-21 01:00:42,477 - INFO - Extracted: MoneyHash - 27-Feb-24
+2025-04-21 01:00:42,477 - INFO - Found funding amount: 4500000
+2025-04-21 01:00:42,505 - INFO - Extracted: Reo.Dev - 27-Feb-24
+2025-04-21 01:00:42,505 - INFO - Found funding amount: 1200000
+2025-04-21 01:00:42,533 - INFO - Extracted: Campfire - 27-Feb-24
+2025-04-21 01:00:42,533 - INFO - Found funding amount: 3500000
+2025-04-21 01:00:42,561 - INFO - Extracted: Axiom Cloud - 27-Feb-24
+2025-04-21 01:00:42,561 - INFO - Found funding amount: 5000000
+2025-04-21 01:00:42,591 - INFO - Extracted: Inkitt - 27-Feb-24
+2025-04-21 01:00:42,591 - INFO - Found funding amount: 37000000
+2025-04-21 01:00:42,618 - INFO - Extracted: EPRI - 26-Feb-24
+2025-04-21 01:00:42,618 - INFO - Found funding amount: 3400000
+2025-04-21 01:00:42,618 - INFO - Successfully extracted 20 new companies from page 48
+2025-04-21 01:00:42,618 - INFO - Attempting to navigate from page 48
+2025-04-21 01:00:47,677 - INFO - JavaScript verification confirmed page changed
+2025-04-21 01:00:48,885 - INFO - Extracting data from page 49
+2025-04-21 01:00:49,566 - INFO - Trying standard table extraction
+2025-04-21 01:00:49,621 - INFO - Found funding amount column at index 6
+2025-04-21 01:00:49,626 - INFO - Found headquarters column at index 7
+2025-04-21 01:00:49,635 - INFO - Found 22 potential data rows
+2025-04-21 01:00:49,685 - INFO - Extracted: Alamar Biosciences - 26-Feb-24
+2025-04-21 01:00:49,685 - INFO - Found funding amount: 100000000
+2025-04-21 01:00:49,713 - INFO - Extracted: FlowGPT - 26-Feb-24
+2025-04-21 01:00:49,714 - INFO - Found funding amount: 10000000
+2025-04-21 01:00:49,758 - INFO - Extracted: mTAB - 26-Feb-24
+2025-04-21 01:00:49,759 - INFO - Found funding amount: 15000000
+2025-04-21 01:00:49,786 - INFO - Extracted: InsightRX - 23-Feb-24
+2025-04-21 01:00:49,786 - INFO - Found funding amount: 0
+2025-04-21 01:00:49,814 - INFO - Extracted: Elve - 22-Feb-24
+2025-04-21 01:00:49,814 - INFO - Found funding amount: 15000000
+2025-04-21 01:00:49,842 - INFO - Extracted: PermitFlow - 21-Feb-24
+2025-04-21 01:00:49,842 - INFO - Found funding amount: 31000000
+2025-04-21 01:00:49,870 - INFO - Extracted: Jamix - 21-Feb-24
+2025-04-21 01:00:49,870 - INFO - Found funding amount: 3000000
+2025-04-21 01:00:49,903 - INFO - Extracted: Hadrian - 21-Feb-24
+2025-04-21 01:00:49,903 - INFO - Found funding amount: 92000000
+2025-04-21 01:00:49,933 - INFO - Extracted: Empowerly - 21-Feb-24
+2025-04-21 01:00:49,933 - INFO - Found funding amount: 15000000
+2025-04-21 01:00:49,961 - INFO - Extracted: Orkes - 21-Feb-24
+2025-04-21 01:00:49,961 - INFO - Found funding amount: 20000000
+2025-04-21 01:00:49,989 - INFO - Extracted: Power Life Science - 21-Feb-24
+2025-04-21 01:00:49,989 - INFO - Found funding amount: 11900000
+2025-04-21 01:00:50,017 - INFO - Extracted: ElastiFlow - 21-Feb-24
+2025-04-21 01:00:50,017 - INFO - Found funding amount: 5000000
+2025-04-21 01:00:50,045 - INFO - Extracted: NodeShift - 21-Feb-24
+2025-04-21 01:00:50,045 - INFO - Found funding amount: 3200000
+2025-04-21 01:00:50,073 - INFO - Extracted: VectorShift - 21-Feb-24
+2025-04-21 01:00:50,073 - INFO - Found funding amount: 3000000
+2025-04-21 01:00:50,101 - INFO - Extracted: Blue Wire - 20-Feb-24
+2025-04-21 01:00:50,101 - INFO - Found funding amount: 0
+2025-04-21 01:00:50,129 - INFO - Extracted: Zonexus - 20-Feb-24
+2025-04-21 01:00:50,129 - INFO - Found funding amount: 1149998
+2025-04-21 01:00:50,157 - INFO - Extracted: Recogni - 20-Feb-24
+2025-04-21 01:00:50,157 - INFO - Found funding amount: 102000000
+2025-04-21 01:00:50,185 - INFO - Extracted: HighRI Optics - 20-Feb-24
+2025-04-21 01:00:50,185 - INFO - Found funding amount: 1099995
+2025-04-21 01:00:50,213 - INFO - Extracted: Arini - 19-Feb-24
+2025-04-21 01:00:50,213 - INFO - Found funding amount: 500000
+2025-04-21 01:00:50,241 - INFO - Extracted: Alembic - 15-Feb-24
+2025-04-21 01:00:50,241 - INFO - Found funding amount: 14000000
+2025-04-21 01:00:50,241 - INFO - Successfully extracted 20 new companies from page 49
+2025-04-21 01:00:50,241 - INFO - Attempting to navigate from page 49
+2025-04-21 01:00:56,084 - INFO - JavaScript verification confirmed page changed
+2025-04-21 01:00:56,764 - INFO - Extracting data from page 50
+2025-04-21 01:00:57,138 - INFO - Trying standard table extraction
+2025-04-21 01:00:57,195 - INFO - Found funding amount column at index 6
+2025-04-21 01:00:57,200 - INFO - Found headquarters column at index 7
+2025-04-21 01:00:57,209 - INFO - Found 22 potential data rows
+2025-04-21 01:00:57,253 - INFO - Extracted: Scribe - 15-Feb-24
+2025-04-21 01:00:57,253 - INFO - Found funding amount: 25000000
+2025-04-21 01:00:57,282 - INFO - Extracted: Freenome - 15-Feb-24
+2025-04-21 01:00:57,282 - INFO - Found funding amount: 254000000
+2025-04-21 01:00:57,310 - INFO - Extracted: Guardrails AI - 15-Feb-24
+2025-04-21 01:00:57,310 - INFO - Found funding amount: 7500000
+2025-04-21 01:00:57,339 - INFO - Extracted: Zocks - 15-Feb-24
+2025-04-21 01:00:57,339 - INFO - Found funding amount: 5500000
+2025-04-21 01:00:57,368 - INFO - Extracted: LangChain - 15-Feb-24
+2025-04-21 01:00:57,368 - INFO - Found funding amount: 25000000
+2025-04-21 01:00:57,396 - INFO - Extracted: testRigor - 15-Feb-24
+2025-04-21 01:00:57,396 - INFO - Found funding amount: 0
+2025-04-21 01:00:57,426 - INFO - Extracted: Kairos Aerospace - 15-Feb-24
+2025-04-21 01:00:57,427 - INFO - Found funding amount: 52000000
+2025-04-21 01:00:57,457 - INFO - Extracted: Sanitas AI - 15-Feb-24
+2025-04-21 01:00:57,457 - INFO - Found funding amount: 0
+2025-04-21 01:00:57,486 - INFO - Extracted: cPacket Networks - 14-Feb-24
+2025-04-21 01:00:57,486 - INFO - Found funding amount: 67000000
+2025-04-21 01:00:57,514 - INFO - Extracted: Artie - 14-Feb-24
+2025-04-21 01:00:57,514 - INFO - Found funding amount: 3300000
+2025-04-21 01:00:57,543 - INFO - Extracted: SkyOne Federal Credit Union - 14-Feb-24
+2025-04-21 01:00:57,543 - INFO - Found funding amount: 2750000
+2025-04-21 01:00:57,571 - INFO - Extracted: Hippo Harvest - 14-Feb-24
+2025-04-21 01:00:57,571 - INFO - Found funding amount: 21000000
+2025-04-21 01:00:57,599 - INFO - Extracted: Planette - 14-Feb-24
+2025-04-21 01:00:57,600 - INFO - Found funding amount: 2400000
+2025-04-21 01:00:57,628 - INFO - Extracted: Rasa - 14-Feb-24
+2025-04-21 01:00:57,628 - INFO - Found funding amount: 30000000
+2025-04-21 01:00:57,656 - INFO - Extracted: Meter - 13-Feb-24
+2025-04-21 01:00:57,656 - INFO - Found funding amount: 35000000
+2025-04-21 01:00:57,685 - INFO - Extracted: Skylo - 13-Feb-24
+2025-04-21 01:00:57,685 - INFO - Found funding amount: 37000000
+2025-04-21 01:00:57,713 - INFO - Extracted: Mindy - 13-Feb-24
+2025-04-21 01:00:57,714 - INFO - Found funding amount: 6000000
+2025-04-21 01:00:57,742 - INFO - Extracted: Savor - 13-Feb-24
+2025-04-21 01:00:57,742 - INFO - Found funding amount: 23000000
+2025-04-21 01:00:57,770 - INFO - Extracted: Camus Energy - 13-Feb-24
+2025-04-21 01:00:57,770 - INFO - Found funding amount: 10000000
+2025-04-21 01:00:57,801 - INFO - Extracted: Chalk - 13-Feb-24
+2025-04-21 01:00:57,801 - INFO - Found funding amount: 338298
+2025-04-21 01:00:57,801 - INFO - Successfully extracted 20 new companies from page 50
+2025-04-21 01:00:57,801 - INFO - Attempting to navigate from page 50
+2025-04-21 01:01:02,871 - INFO - JavaScript verification confirmed page changed
+2025-04-21 01:01:03,249 - INFO - Extracting data from page 51
+2025-04-21 01:01:04,391 - INFO - Trying standard table extraction
+2025-04-21 01:01:04,447 - INFO - Found funding amount column at index 6
+2025-04-21 01:01:04,452 - INFO - Found headquarters column at index 7
+2025-04-21 01:01:04,461 - INFO - Found 22 potential data rows
+2025-04-21 01:01:04,505 - INFO - Extracted: SocialCoach - 13-Feb-24
+2025-04-21 01:01:04,505 - INFO - Found funding amount: 1000000
+2025-04-21 01:01:04,533 - INFO - Extracted: Motif Analytics - 12-Feb-24
+2025-04-21 01:01:04,533 - INFO - Found funding amount: 5700000
+2025-04-21 01:01:04,561 - INFO - Extracted: Heliux - 12-Feb-24
+2025-04-21 01:01:04,561 - INFO - Found funding amount: 2265000
+2025-04-21 01:01:04,589 - INFO - Extracted: Lilac Solutions - 12-Feb-24
+2025-04-21 01:01:04,590 - INFO - Found funding amount: 145000000
+2025-04-21 01:01:04,617 - INFO - Extracted: Magic - 12-Feb-24
+2025-04-21 01:01:04,617 - INFO - Found funding amount: 117332923
+2025-04-21 01:01:04,645 - INFO - Extracted: LeoLabs - 12-Feb-24
+2025-04-21 01:01:04,645 - INFO - Found funding amount: 29000000
+2025-04-21 01:01:04,673 - INFO - Extracted: Modern Treasury - 10-Feb-24
+2025-04-21 01:01:04,673 - INFO - Found funding amount: 1000000000
+2025-04-21 01:01:04,701 - INFO - Extracted: THINKIN - 9-Feb-24
+2025-04-21 01:01:04,701 - INFO - Found funding amount: 0
+2025-04-21 01:01:04,730 - INFO - Extracted: Unlearn.AI - 8-Feb-24
+2025-04-21 01:01:04,730 - INFO - Found funding amount: 50000000
+2025-04-21 01:01:04,760 - INFO - Extracted: Handle - 8-Feb-24
+2025-04-21 01:01:04,760 - INFO - Found funding amount: 0
+2025-04-21 01:01:04,787 - INFO - Extracted: Partners Capital - 8-Feb-24
+2025-04-21 01:01:04,787 - INFO - Found funding amount: 0
+2025-04-21 01:01:04,815 - INFO - Extracted: Vocode - 8-Feb-24
+2025-04-21 01:01:04,815 - INFO - Found funding amount: 3250000
+2025-04-21 01:01:04,843 - INFO - Extracted: brd BOT - 8-Feb-24
+2025-04-21 01:01:04,843 - INFO - Found funding amount: 100000
+2025-04-21 01:01:04,871 - INFO - Extracted: FuzzLand - 8-Feb-24
+2025-04-21 01:01:04,871 - INFO - Found funding amount: 3000000
+2025-04-21 01:01:04,901 - INFO - Extracted: Overflow - 7-Feb-24
+2025-04-21 01:01:04,901 - INFO - Found funding amount: 20000000
+2025-04-21 01:01:04,932 - INFO - Extracted: Polycam - 7-Feb-24
+2025-04-21 01:01:04,932 - INFO - Found funding amount: 18000000
+2025-04-21 01:01:04,959 - INFO - Extracted: Simplify - 7-Feb-24
+2025-04-21 01:01:04,959 - INFO - Found funding amount: 3000000
+2025-04-21 01:01:04,987 - INFO - Extracted: OutSail Shipping - 7-Feb-24
+2025-04-21 01:01:04,987 - INFO - Found funding amount: 500000
+2025-04-21 01:01:05,015 - INFO - Extracted: Upstock - 7-Feb-24
+2025-04-21 01:01:05,015 - INFO - Found funding amount: 13000000
+2025-04-21 01:01:05,046 - INFO - Extracted: Shepherd - 7-Feb-24
+2025-04-21 01:01:05,046 - INFO - Found funding amount: 13500000
+2025-04-21 01:01:05,046 - INFO - Successfully extracted 20 new companies from page 51
+2025-04-21 01:01:05,046 - INFO - Attempting to navigate from page 51
+2025-04-21 01:01:10,818 - INFO - JavaScript verification confirmed page changed
+2025-04-21 01:01:11,304 - INFO - Extracting data from page 52
+2025-04-21 01:01:11,868 - INFO - Trying standard table extraction
+2025-04-21 01:01:11,924 - INFO - Found funding amount column at index 6
+2025-04-21 01:01:11,929 - INFO - Found headquarters column at index 7
+2025-04-21 01:01:11,938 - INFO - Found 22 potential data rows
+2025-04-21 01:01:11,982 - INFO - Extracted: ZEDEDA - 7-Feb-24
+2025-04-21 01:01:11,982 - INFO - Found funding amount: 72000000
+2025-04-21 01:01:12,011 - INFO - Extracted: Aizon - 7-Feb-24
+2025-04-21 01:01:12,011 - INFO - Found funding amount: 20000000
+2025-04-21 01:01:12,039 - INFO - Extracted: Attralus - 6-Feb-24
+2025-04-21 01:01:12,039 - INFO - Found funding amount: 56000000
+2025-04-21 01:01:12,067 - INFO - Extracted: Jam - 6-Feb-24
+2025-04-21 01:01:12,068 - INFO - Found funding amount: 8900000
+2025-04-21 01:01:12,119 - INFO - Extracted: Ambience Healthcare - 6-Feb-24
+2025-04-21 01:01:12,119 - INFO - Found funding amount: 70000000
+2025-04-21 01:01:12,147 - INFO - Extracted: Starship Technologies - 5-Feb-24
+2025-04-21 01:01:12,148 - INFO - Found funding amount: 90000000
+2025-04-21 01:01:12,176 - INFO - Extracted: Rigetti Computing - 5-Feb-24
+2025-04-21 01:01:12,176 - INFO - Found funding amount: 0
+2025-04-21 01:01:12,205 - INFO - Extracted: LightBeam.ai - 1-Feb-24
+2025-04-21 01:01:12,205 - INFO - Found funding amount: 17800000
+2025-04-21 01:01:12,233 - INFO - Extracted: Artera - 1-Feb-24
+2025-04-21 01:01:12,234 - INFO - Found funding amount: 20000000
+2025-04-21 01:01:12,262 - INFO - Extracted: Watershed - 1-Feb-24
+2025-04-21 01:01:12,262 - INFO - Found funding amount: 100000000
+2025-04-21 01:01:12,290 - INFO - Extracted: CARPL.ai - 1-Feb-24
+2025-04-21 01:01:12,290 - INFO - Found funding amount: 6000000
+2025-04-21 01:01:12,318 - INFO - Extracted: Coris - 1-Feb-24
+2025-04-21 01:01:12,318 - INFO - Found funding amount: 3700000
+2025-04-21 01:01:12,346 - INFO - Extracted: Mountaintop Studios - 31-Jan-24
+2025-04-21 01:01:12,346 - INFO - Found funding amount: 30000000
+2025-04-21 01:01:12,374 - INFO - Extracted: Metronome - 31-Jan-24
+2025-04-21 01:01:12,374 - INFO - Found funding amount: 43000000
+2025-04-21 01:01:12,403 - INFO - Extracted: Reken - 31-Jan-24
+2025-04-21 01:01:12,403 - INFO - Found funding amount: 10000000
+2025-04-21 01:01:12,430 - INFO - Extracted: Aiden Automotive Technologies - 31-Jan-24
+2025-04-21 01:01:12,430 - INFO - Found funding amount: 0
+2025-04-21 01:01:12,470 - INFO - Extracted: Inngest - 30-Jan-24
+2025-04-21 01:01:12,470 - INFO - Found funding amount: 6100000
+2025-04-21 01:01:12,498 - INFO - Extracted: Nile - 30-Jan-24
+2025-04-21 01:01:12,498 - INFO - Found funding amount: 11600000
+2025-04-21 01:01:12,525 - INFO - Extracted: Aster - 30-Jan-24
+2025-04-21 01:01:12,526 - INFO - Found funding amount: 2400000
+2025-04-21 01:01:12,552 - INFO - Extracted: HyperBeeAI - 30-Jan-24
+2025-04-21 01:01:12,552 - INFO - Found funding amount: 0
+2025-04-21 01:01:12,553 - INFO - Successfully extracted 20 new companies from page 52
+2025-04-21 01:01:12,553 - INFO - Attempting to navigate from page 52
+2025-04-21 01:01:18,381 - INFO - JavaScript verification confirmed page changed
+2025-04-21 01:01:19,069 - INFO - Extracting data from page 53
+2025-04-21 01:01:20,065 - INFO - Trying standard table extraction
+2025-04-21 01:01:20,102 - INFO - Found funding amount column at index 6
+2025-04-21 01:01:20,106 - INFO - Found headquarters column at index 7
+2025-04-21 01:01:20,115 - INFO - Found 22 potential data rows
+2025-04-21 01:01:20,177 - INFO - Extracted: Plex - 30-Jan-24
+2025-04-21 01:01:20,177 - INFO - Found funding amount: 40000000
+2025-04-21 01:01:20,218 - INFO - Extracted: Alchemist Accelerator - 30-Jan-24
+2025-04-21 01:01:20,218 - INFO - Found funding amount: 2000000
+2025-04-21 01:01:20,251 - INFO - Extracted: resistanceBio - 29-Jan-24
+2025-04-21 01:01:20,251 - INFO - Found funding amount: 12776288
+2025-04-21 01:01:20,287 - INFO - Extracted: Mesh - 29-Jan-24
+2025-04-21 01:01:20,287 - INFO - Found funding amount: 6500000
+2025-04-21 01:01:20,323 - INFO - Extracted: Chef Robotics - 26-Jan-24
+2025-04-21 01:01:20,323 - INFO - Found funding amount: 10500000
+2025-04-21 01:01:20,385 - INFO - Extracted: Perfumeo - 26-Jan-24
+2025-04-21 01:01:20,385 - INFO - Found funding amount: 1000000
+2025-04-21 01:01:20,421 - INFO - Extracted: Bastille Networks Internet Security - 25-Jan-24
+2025-04-21 01:01:20,421 - INFO - Found funding amount: 44000000
+2025-04-21 01:01:20,454 - INFO - Extracted: ViralMoment - 25-Jan-24
+2025-04-21 01:01:20,454 - INFO - Found funding amount: 2500000
+2025-04-21 01:01:20,499 - INFO - Extracted: Integral Development Corp - 25-Jan-24
+2025-04-21 01:01:20,499 - INFO - Found funding amount: 30000000
+2025-04-21 01:01:20,532 - INFO - Extracted: Audioshake - 25-Jan-24
+2025-04-21 01:01:20,532 - INFO - Found funding amount: 1400000
+2025-04-21 01:01:20,565 - INFO - Extracted: Aniai - 24-Jan-24
+2025-04-21 01:01:20,565 - INFO - Found funding amount: 12000000
+2025-04-21 01:01:20,613 - INFO - Extracted: unSkript, Inc - 24-Jan-24
+2025-04-21 01:01:20,613 - INFO - Found funding amount: 3750000
+2025-04-21 01:01:20,647 - INFO - Extracted: Masa - 23-Jan-24
+2025-04-21 01:01:20,647 - INFO - Found funding amount: 5400000
+2025-04-21 01:01:20,679 - INFO - Extracted: AiDash - 23-Jan-24
+2025-04-21 01:01:20,680 - INFO - Found funding amount: 50000000
+2025-04-21 01:01:20,711 - INFO - Extracted: SER Capital Partners - 23-Jan-24
+2025-04-21 01:01:20,711 - INFO - Found funding amount: 0
+2025-04-21 01:01:20,757 - INFO - Extracted: Snorkel AI - 23-Jan-24
+2025-04-21 01:01:20,757 - INFO - Found funding amount: 0
+2025-04-21 01:01:20,786 - INFO - Extracted: Synthesis AI - 23-Jan-24
+2025-04-21 01:01:20,786 - INFO - Found funding amount: 168889
+2025-04-21 01:01:20,818 - INFO - Extracted: RagaAI Inc. - 23-Jan-24
+2025-04-21 01:01:20,818 - INFO - Found funding amount: 4700000
+2025-04-21 01:01:20,857 - INFO - Extracted: SmithRx - 23-Jan-24
+2025-04-21 01:01:20,857 - INFO - Found funding amount: 60000000
+2025-04-21 01:01:20,898 - INFO - Extracted: GenEdit - 23-Jan-24
+2025-04-21 01:01:20,898 - INFO - Found funding amount: 24000000
+2025-04-21 01:01:20,898 - INFO - Successfully extracted 20 new companies from page 53
+2025-04-21 01:01:20,898 - INFO - Attempting to navigate from page 53
+2025-04-21 01:01:26,677 - INFO - JavaScript verification confirmed page changed
+2025-04-21 01:01:27,574 - INFO - Extracting data from page 54
+2025-04-21 01:01:28,643 - INFO - Trying standard table extraction
+2025-04-21 01:01:28,923 - INFO - Found funding amount column at index 6
+2025-04-21 01:01:28,939 - INFO - Found headquarters column at index 7
+2025-04-21 01:01:28,961 - INFO - Found 22 potential data rows
+2025-04-21 01:01:29,748 - INFO - Extracted: Neatleaf - 23-Jan-24
+2025-04-21 01:01:29,872 - INFO - Found funding amount: 4000000
+2025-04-21 01:01:30,211 - INFO - Extracted: Clerk - 23-Jan-24
+2025-04-21 01:01:30,211 - INFO - Found funding amount: 30000000
+2025-04-21 01:01:30,265 - INFO - Extracted: Ohana Real Estate Investors - 22-Jan-24
+2025-04-21 01:01:30,265 - INFO - Found funding amount: 59000000
+2025-04-21 01:01:30,321 - INFO - Extracted: Salas O'Brien - 22-Jan-24
+2025-04-21 01:01:30,321 - INFO - Found funding amount: 0
+2025-04-21 01:01:30,384 - INFO - Extracted: Captura - 22-Jan-24
+2025-04-21 01:01:30,384 - INFO - Found funding amount: 21500000
+2025-04-21 01:01:30,523 - INFO - Extracted: Better Stack - 22-Jan-24
+2025-04-21 01:01:30,523 - INFO - Found funding amount: 10000000
+2025-04-21 01:01:30,594 - INFO - Extracted: Bluedot - 22-Jan-24
+2025-04-21 01:01:30,594 - INFO - Found funding amount: 5000000
+2025-04-21 01:01:30,643 - INFO - Extracted: BuildClub - 22-Jan-24
+2025-04-21 01:01:30,643 - INFO - Found funding amount: 1200000
+2025-04-21 01:01:30,686 - INFO - Extracted: Metafoodx - 18-Jan-24
+2025-04-21 01:01:30,686 - INFO - Found funding amount: 3000000
+2025-04-21 01:01:30,724 - INFO - Extracted: Safary - 18-Jan-24
+2025-04-21 01:01:30,725 - INFO - Found funding amount: 2400000
+2025-04-21 01:01:30,767 - INFO - Extracted: zbyte - 18-Jan-24
+2025-04-21 01:01:30,767 - INFO - Found funding amount: 4000000
+2025-04-21 01:01:30,835 - INFO - Extracted: Forta - 17-Jan-24
+2025-04-21 01:01:30,836 - INFO - Found funding amount: 55000000
+2025-04-21 01:01:30,870 - INFO - Extracted: Incognia - 17-Jan-24
+2025-04-21 01:01:30,870 - INFO - Found funding amount: 30999967
+2025-04-21 01:01:30,899 - INFO - Extracted: Blueshift - 16-Jan-24
+2025-04-21 01:01:30,899 - INFO - Found funding amount: 40000000
+2025-04-21 01:01:30,945 - INFO - Extracted: Lutheran Social Services of Southern California - 16-Jan-24
+2025-04-21 01:01:30,946 - INFO - Found funding amount: 0
+2025-04-21 01:01:30,979 - INFO - Extracted: Blue Planet - 16-Jan-24
+2025-04-21 01:01:30,980 - INFO - Found funding amount: 0
+2025-04-21 01:01:31,011 - INFO - Extracted: Topia - 16-Jan-24
+2025-04-21 01:01:31,011 - INFO - Found funding amount: 24440609
+2025-04-21 01:01:31,057 - INFO - Extracted: Noctrix Health - 16-Jan-24
+2025-04-21 01:01:31,057 - INFO - Found funding amount: 40000000
+2025-04-21 01:01:31,089 - INFO - Extracted: Fonda Technologies - 16-Jan-24
+2025-04-21 01:01:31,089 - INFO - Found funding amount: 749998
+2025-04-21 01:01:31,125 - INFO - Extracted: Chezuba - 12-Jan-24
+2025-04-21 01:01:31,125 - INFO - Found funding amount: 1400000
+2025-04-21 01:01:31,125 - INFO - Successfully extracted 20 new companies from page 54
+2025-04-21 01:01:31,125 - INFO - Attempting to navigate from page 54
+2025-04-21 01:01:37,622 - INFO - JavaScript verification confirmed page changed
+2025-04-21 01:01:38,122 - INFO - Extracting data from page 55
+2025-04-21 01:01:39,208 - INFO - Trying standard table extraction
+2025-04-21 01:01:39,251 - INFO - Found funding amount column at index 6
+2025-04-21 01:01:39,255 - INFO - Found headquarters column at index 7
+2025-04-21 01:01:39,264 - INFO - Found 22 potential data rows
+2025-04-21 01:01:39,308 - INFO - Extracted: Rune Labs - 11-Jan-24
+2025-04-21 01:01:39,308 - INFO - Found funding amount: 12000000
+2025-04-21 01:01:39,345 - INFO - Extracted: Viavi Solutions - 11-Jan-24
+2025-04-21 01:01:39,345 - INFO - Found funding amount: 21700000
+2025-04-21 01:01:39,377 - INFO - Extracted: Pier - 11-Jan-24
+2025-04-21 01:01:39,377 - INFO - Found funding amount: 2400000
+2025-04-21 01:01:39,412 - INFO - Extracted: FlutterFlow - 11-Jan-24
+2025-04-21 01:01:39,412 - INFO - Found funding amount: 25500000
+2025-04-21 01:01:39,445 - INFO - Extracted: Velou - 11-Jan-24
+2025-04-21 01:01:39,445 - INFO - Found funding amount: 4000000
+2025-04-21 01:01:39,517 - INFO - Extracted: Echo Labs - 10-Jan-24
+2025-04-21 01:01:39,518 - INFO - Found funding amount: 7700000
+2025-04-21 01:01:39,618 - INFO - Extracted: Quora - 10-Jan-24
+2025-04-21 01:01:39,618 - INFO - Found funding amount: 75000000
+2025-04-21 01:01:39,655 - INFO - Extracted: Rainbow - 10-Jan-24
+2025-04-21 01:01:39,655 - INFO - Found funding amount: 12000000
+2025-04-21 01:01:39,693 - INFO - Extracted: Shimmer - 10-Jan-24
+2025-04-21 01:01:39,693 - INFO - Found funding amount: 2200000
+2025-04-21 01:01:39,739 - INFO - Extracted: Leap AI - 9-Jan-24
+2025-04-21 01:01:39,739 - INFO - Found funding amount: 1400000
+2025-04-21 01:01:39,790 - INFO - Extracted: Raising the Future - 9-Jan-24
+2025-04-21 01:01:39,790 - INFO - Found funding amount: 10000000
+2025-04-21 01:01:39,836 - INFO - Extracted: Feel Therapeutics - 9-Jan-24
+2025-04-21 01:01:39,836 - INFO - Found funding amount: 0
+2025-04-21 01:01:39,882 - INFO - Extracted: Luma AI - 9-Jan-24
+2025-04-21 01:01:39,882 - INFO - Found funding amount: 43000000
+2025-04-21 01:01:39,916 - INFO - Extracted: anecdotes - 9-Jan-24
+2025-04-21 01:01:39,916 - INFO - Found funding amount: 25000000
+2025-04-21 01:01:39,951 - INFO - Extracted: MedaSystems - 9-Jan-24
+2025-04-21 01:01:39,951 - INFO - Found funding amount: 0
+2025-04-21 01:01:39,984 - INFO - Extracted: Revagenix - 5-Jan-24
+2025-04-21 01:01:39,984 - INFO - Found funding amount: 0
+2025-04-21 01:01:40,016 - INFO - Extracted: UpDoc - 5-Jan-24
+2025-04-21 01:01:40,016 - INFO - Found funding amount: 0
+2025-04-21 01:01:40,056 - INFO - Extracted: Department of Behavioral Health - 4-Jan-24
+2025-04-21 01:01:40,056 - INFO - Found funding amount: 21800000
+2025-04-21 01:01:40,093 - INFO - Extracted: Moonwalk Biosciences - 4-Jan-24
+2025-04-21 01:01:40,093 - INFO - Found funding amount: 57000000
+2025-04-21 01:01:40,131 - INFO - Extracted: Human Immunology Biosciences - 4-Jan-24
+2025-04-21 01:01:40,131 - INFO - Found funding amount: 95000000
+2025-04-21 01:01:40,131 - INFO - Successfully extracted 20 new companies from page 55
+2025-04-21 01:01:40,131 - INFO - Attempting to navigate from page 55
+2025-04-21 01:01:46,728 - INFO - JavaScript verification confirmed page changed
+2025-04-21 01:01:47,220 - INFO - Extracting data from page 56
+2025-04-21 01:01:48,301 - INFO - Trying standard table extraction
+2025-04-21 01:01:48,332 - INFO - Found funding amount column at index 6
+2025-04-21 01:01:48,336 - INFO - Found headquarters column at index 7
+2025-04-21 01:01:48,342 - INFO - Found 5 potential data rows
+2025-04-21 01:01:48,385 - INFO - Extracted: Perplexity AI - 4-Jan-24
+2025-04-21 01:01:48,385 - INFO - Found funding amount: 70000000
+2025-04-21 01:01:48,435 - INFO - Extracted: GSI Technology - 3-Jan-24
+2025-04-21 01:01:48,439 - INFO - Found funding amount: 1100000
+2025-04-21 01:01:48,510 - INFO - Extracted: Paceline - 1-Jan-24
+2025-04-21 01:01:48,510 - INFO - Found funding amount: 0
+2025-04-21 01:01:48,510 - INFO - Successfully extracted 3 new companies from page 56
+2025-04-21 01:01:48,510 - INFO - Attempting to navigate from page 56
+2025-04-21 01:01:55,364 - INFO - JavaScript verification confirmed page changed
+2025-04-21 01:01:56,533 - INFO - Extracting data from page 57
+2025-04-21 01:01:57,455 - INFO - Trying standard table extraction
+2025-04-21 01:01:57,501 - INFO - Found funding amount column at index 6
+2025-04-21 01:01:57,505 - INFO - Found headquarters column at index 7
+2025-04-21 01:01:57,513 - INFO - Found 5 potential data rows
+2025-04-21 01:01:57,620 - INFO - Retry attempt 1 for data extraction
+2025-04-21 01:01:59,347 - INFO - Trying standard table extraction
+2025-04-21 01:01:59,382 - INFO - Found funding amount column at index 6
+2025-04-21 01:01:59,386 - INFO - Found headquarters column at index 7
+2025-04-21 01:01:59,393 - INFO - Found 5 potential data rows
+2025-04-21 01:01:59,520 - INFO - Retry attempt 2 for data extraction
+2025-04-21 01:02:00,717 - INFO - Refreshing page for final extraction attempt
+2025-04-21 01:02:03,872 - INFO - Found overlay using selector: //div[contains(@class, 'conv-wrap')]
+2025-04-21 01:02:03,879 - INFO - No close button found, removing overlay with JavaScript
+2025-04-21 01:02:04,850 - INFO - Found overlay using selector: //div[contains(@class, 'overlay')]
+2025-04-21 01:02:04,856 - INFO - No close button found, removing overlay with JavaScript
+2025-04-21 01:02:05,973 - INFO - Trying standard table extraction
+2025-04-21 01:02:06,030 - INFO - Found funding amount column at index 6
+2025-04-21 01:02:06,035 - INFO - Found headquarters column at index 7
+2025-04-21 01:02:06,046 - INFO - Found 22 potential data rows
+2025-04-21 01:02:06,695 - WARNING - No new companies found on page 57. Empty page count: 1
+2025-04-21 01:02:06,695 - INFO - Attempting to navigate from page 57
+2025-04-21 01:02:12,287 - INFO - JavaScript verification confirmed page changed
+2025-04-21 01:02:13,406 - INFO - Extracting data from page 58
+2025-04-21 01:02:14,190 - INFO - Trying standard table extraction
+2025-04-21 01:02:14,227 - INFO - Found funding amount column at index 6
+2025-04-21 01:02:14,231 - INFO - Found headquarters column at index 7
+2025-04-21 01:02:14,255 - INFO - Found 22 potential data rows
+2025-04-21 01:02:15,017 - INFO - Retry attempt 1 for data extraction
+2025-04-21 01:02:16,147 - INFO - Trying standard table extraction
+2025-04-21 01:02:16,177 - INFO - Found funding amount column at index 6
+2025-04-21 01:02:16,181 - INFO - Found headquarters column at index 7
+2025-04-21 01:02:16,187 - INFO - Found 22 potential data rows
+2025-04-21 01:02:16,863 - INFO - Retry attempt 2 for data extraction
+2025-04-21 01:02:17,974 - INFO - Refreshing page for final extraction attempt
+2025-04-21 01:02:20,394 - INFO - Found overlay using selector: //div[contains(@class, 'conv-wrap')]
+2025-04-21 01:02:20,400 - INFO - No close button found, removing overlay with JavaScript
+2025-04-21 01:02:20,933 - INFO - Found overlay using selector: //div[contains(@class, 'overlay')]
+2025-04-21 01:02:20,943 - INFO - No close button found, removing overlay with JavaScript
+2025-04-21 01:02:21,968 - INFO - Trying standard table extraction
+2025-04-21 01:02:22,015 - INFO - Found funding amount column at index 6
+2025-04-21 01:02:22,020 - INFO - Found headquarters column at index 7
+2025-04-21 01:02:22,028 - INFO - Found 22 potential data rows
+2025-04-21 01:02:22,800 - WARNING - No new companies found on page 58. Empty page count: 2
+2025-04-21 01:02:22,801 - INFO - Stopping after 2 consecutive empty pages
+2025-04-21 01:02:22,815 - INFO - Successfully saved CSV data to /Users/hk/Downloads/DSFinalYearProject/JSONFolder/fundraisestartup50.csv
+2025-04-21 01:02:22,832 - INFO - Successfully saved JSON data to /Users/hk/Downloads/DSFinalYearProject/JSONFolder/fundraisestartup50.json
+2025-04-21 01:02:22,851 - INFO - Successfully saved historical data copies in /Users/hk/Downloads/DSFinalYearProject/data_archive/2025-04-21
+2025-04-21 01:02:22,856 - INFO - Extraction completed in 511.17 seconds
+2025-04-21 01:02:22,857 - INFO - Extracted 1103 companies from 58 pages
+2025-04-21 01:02:22,857 - INFO - Found 1103 unique companies
+2025-04-21 01:02:22,857 - INFO - Most recent funding dates: ['1-Apr-24', '1-Aug-24', '1-Feb-24', '1-Jan-24', '1-Jul-24']
+2025-04-21 01:02:23,010 - INFO - WebDriver closed
+2025-04-21 01:02:23,012 - INFO - Next extraction scheduled for: 2025-04-22 01:02:23

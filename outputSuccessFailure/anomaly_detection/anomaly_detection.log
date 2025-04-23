@@ -1,0 +1,175 @@
+2025-04-22 22:40:56,932 - FundingAnomalyDetection - INFO - Starting anomaly detection analysis
+2025-04-22 22:40:56,932 - FundingAnomalyDetection - INFO - Loading data from JSON files in /Users/hk/Downloads/DSFinalYearProject/JSONFolder
+2025-04-22 22:40:56,932 - FundingAnomalyDetection - INFO - Processing /Users/hk/Downloads/DSFinalYearProject/JSONFolder/growthlist_industry_analysis.json
+2025-04-22 22:40:56,934 - FundingAnomalyDetection - WARNING - Skipping /Users/hk/Downloads/DSFinalYearProject/JSONFolder/growthlist_industry_analysis.json - not a list of records or doesn't have a companies array
+2025-04-22 22:40:56,934 - FundingAnomalyDetection - INFO - Processing /Users/hk/Downloads/DSFinalYearProject/JSONFolder/fundraise_insider_stats.json
+2025-04-22 22:40:56,935 - FundingAnomalyDetection - WARNING - Skipping /Users/hk/Downloads/DSFinalYearProject/JSONFolder/fundraise_insider_stats.json - not a list of records or doesn't have a companies array
+2025-04-22 22:40:56,935 - FundingAnomalyDetection - INFO - Processing /Users/hk/Downloads/DSFinalYearProject/JSONFolder/growthlistscrapper.json
+2025-04-22 22:40:56,936 - FundingAnomalyDetection - INFO - Added 100 records from growthlistscrapper.json
+2025-04-22 22:40:56,936 - FundingAnomalyDetection - INFO - Processing /Users/hk/Downloads/DSFinalYearProject/JSONFolder/topstartupio50.json
+2025-04-22 22:40:56,938 - FundingAnomalyDetection - INFO - Added 546 records from topstartupio50.json
+2025-04-22 22:40:56,938 - FundingAnomalyDetection - INFO - Processing /Users/hk/Downloads/DSFinalYearProject/JSONFolder/fundraisestartup50.json
+2025-04-22 22:40:56,940 - FundingAnomalyDetection - INFO - Found nested companies array with 1103 records in fundraisestartup50.json
+2025-04-22 22:40:56,940 - FundingAnomalyDetection - INFO - Added 1103 records from fundraisestartup50.json
+2025-04-22 22:40:56,947 - FundingAnomalyDetection - INFO - Loaded 1749 records from JSON files
+2025-04-22 22:40:56,948 - FundingAnomalyDetection - INFO - Creating features for anomaly detection
+2025-04-22 22:40:56,949 - FundingAnomalyDetection - INFO - Created funding_per_employee feature
+2025-04-22 22:40:56,964 - FundingAnomalyDetection - INFO - Created 4 features for anomaly detection
+2025-04-22 22:40:56,964 - FundingAnomalyDetection - INFO - Detecting anomalies in funding data
+2025-04-22 22:40:56,964 - FundingAnomalyDetection - INFO - Fitting Isolation Forest with contamination=0.01
+2025-04-22 22:40:57,065 - FundingAnomalyDetection - INFO - Isolation Forest model trained successfully
+2025-04-22 22:40:57,086 - FundingAnomalyDetection - INFO - Detected 19 anomalies (1.09%)
+2025-04-22 22:40:57,087 - FundingAnomalyDetection - INFO - Creating anomaly visualizations
+2025-04-22 22:40:58,249 - FundingAnomalyDetection - INFO - Creating model calibration and performance visualizations
+2025-04-22 22:40:58,249 - FundingAnomalyDetection - INFO - Creating features for anomaly detection
+2025-04-22 22:40:58,252 - FundingAnomalyDetection - INFO - Created funding_per_employee feature
+2025-04-22 22:40:58,270 - FundingAnomalyDetection - INFO - Created 4 features for anomaly detection
+2025-04-22 22:40:58,273 - FundingAnomalyDetection - INFO - Fitting Isolation Forest with contamination=None
+2025-04-22 22:40:58,378 - FundingAnomalyDetection - INFO - Isolation Forest model trained successfully
+2025-04-22 22:40:58,986 - FundingAnomalyDetection - INFO - Model performance: Accuracy=0.994, Precision=1.000, Recall=0.500, F1=0.667, RMSE=0.422
+2025-04-22 22:40:58,987 - FundingAnomalyDetection - INFO - Anomaly visualizations created successfully
+2025-04-22 22:40:58,987 - FundingAnomalyDetection - INFO - Generating anomaly detection report
+2025-04-22 22:40:58,992 - FundingAnomalyDetection - INFO - Anomaly report saved to /Users/hk/Downloads/DSFinalYearProject/outputSuccessFailure/anomaly_detection/anomaly_report.csv
+2025-04-22 22:40:58,994 - FundingAnomalyDetection - INFO - Integration data saved to /Users/hk/Downloads/DSFinalYearProject/outputSuccessFailure/anomaly_detection/anomaly_results.json
+2025-04-22 22:40:58,998 - FundingAnomalyDetection - INFO - Model saved to /Users/hk/Downloads/DSFinalYearProject/outputSuccessFailure/anomaly_detection/anomaly_model_20250422_224058.pkl
+2025-04-22 22:40:58,998 - FundingAnomalyDetection - INFO - Anomaly detection analysis completed
+2025-04-22 22:50:52,537 - FundingAnomalyDetection - INFO - Starting anomaly detection analysis
+2025-04-22 22:50:52,538 - FundingAnomalyDetection - INFO - Loading data from JSON files in /Users/hk/Downloads/DSFinalYearProject/JSONFolder
+2025-04-22 22:50:52,538 - FundingAnomalyDetection - INFO - Processing /Users/hk/Downloads/DSFinalYearProject/JSONFolder/growthlist_industry_analysis.json
+2025-04-22 22:50:52,539 - FundingAnomalyDetection - WARNING - Skipping /Users/hk/Downloads/DSFinalYearProject/JSONFolder/growthlist_industry_analysis.json - not a list of records or doesn't have a companies array
+2025-04-22 22:50:52,539 - FundingAnomalyDetection - INFO - Processing /Users/hk/Downloads/DSFinalYearProject/JSONFolder/fundraise_insider_stats.json
+2025-04-22 22:50:52,540 - FundingAnomalyDetection - WARNING - Skipping /Users/hk/Downloads/DSFinalYearProject/JSONFolder/fundraise_insider_stats.json - not a list of records or doesn't have a companies array
+2025-04-22 22:50:52,540 - FundingAnomalyDetection - INFO - Processing /Users/hk/Downloads/DSFinalYearProject/JSONFolder/growthlistscrapper.json
+2025-04-22 22:50:52,540 - FundingAnomalyDetection - INFO - Added 100 records from growthlistscrapper.json
+2025-04-22 22:50:52,540 - FundingAnomalyDetection - INFO - Processing /Users/hk/Downloads/DSFinalYearProject/JSONFolder/topstartupio50.json
+2025-04-22 22:50:52,542 - FundingAnomalyDetection - INFO - Added 546 records from topstartupio50.json
+2025-04-22 22:50:52,542 - FundingAnomalyDetection - INFO - Processing /Users/hk/Downloads/DSFinalYearProject/JSONFolder/fundraisestartup50.json
+2025-04-22 22:50:52,545 - FundingAnomalyDetection - INFO - Found nested companies array with 1103 records in fundraisestartup50.json
+2025-04-22 22:50:52,545 - FundingAnomalyDetection - INFO - Added 1103 records from fundraisestartup50.json
+2025-04-22 22:50:52,552 - FundingAnomalyDetection - INFO - Loaded 1749 records from JSON files
+2025-04-22 22:50:52,553 - FundingAnomalyDetection - INFO - Creating features for anomaly detection
+2025-04-22 22:50:52,554 - FundingAnomalyDetection - INFO - Created funding_per_employee feature
+2025-04-22 22:50:52,573 - FundingAnomalyDetection - INFO - Created 4 features for anomaly detection
+2025-04-22 22:50:52,573 - FundingAnomalyDetection - INFO - Detecting anomalies in funding data
+2025-04-22 22:50:52,574 - FundingAnomalyDetection - INFO - Fitting Isolation Forest with contamination=0.01
+2025-04-22 22:50:52,670 - FundingAnomalyDetection - INFO - Isolation Forest model trained successfully
+2025-04-22 22:50:52,690 - FundingAnomalyDetection - INFO - Detected 19 anomalies (1.09%)
+2025-04-22 22:50:52,690 - FundingAnomalyDetection - INFO - Creating anomaly visualizations
+2025-04-22 22:50:53,857 - FundingAnomalyDetection - INFO - Creating model calibration and performance visualizations
+2025-04-22 22:50:53,857 - FundingAnomalyDetection - INFO - Creating features for anomaly detection
+2025-04-22 22:50:53,859 - FundingAnomalyDetection - INFO - Created funding_per_employee feature
+2025-04-22 22:50:53,882 - FundingAnomalyDetection - INFO - Created 4 features for anomaly detection
+2025-04-22 22:50:53,886 - FundingAnomalyDetection - INFO - Fitting Isolation Forest with contamination=None
+2025-04-22 22:50:54,000 - FundingAnomalyDetection - INFO - Isolation Forest model trained successfully
+2025-04-22 22:50:54,604 - FundingAnomalyDetection - INFO - Model performance: Accuracy=0.994, Precision=1.000, Recall=0.500, F1=0.667, RMSE=0.422
+2025-04-22 22:50:54,604 - FundingAnomalyDetection - INFO - Anomaly visualizations created successfully
+2025-04-22 22:50:54,604 - FundingAnomalyDetection - INFO - Generating anomaly detection report
+2025-04-22 22:50:54,609 - FundingAnomalyDetection - INFO - Anomaly report saved to /Users/hk/Downloads/DSFinalYearProject/outputSuccessFailure/anomaly_detection/anomaly_report.csv
+2025-04-22 22:50:54,610 - FundingAnomalyDetection - INFO - Integration data saved to /Users/hk/Downloads/DSFinalYearProject/outputSuccessFailure/anomaly_detection/anomaly_results.json
+2025-04-22 22:50:54,613 - FundingAnomalyDetection - INFO - Model saved to /Users/hk/Downloads/DSFinalYearProject/outputSuccessFailure/anomaly_detection/anomaly_model_20250422_225054.pkl
+2025-04-22 22:50:54,613 - FundingAnomalyDetection - INFO - Anomaly detection analysis completed
+2025-04-22 22:51:40,557 - FundingAnomalyDetection - INFO - Starting anomaly detection analysis
+2025-04-22 22:51:40,558 - FundingAnomalyDetection - INFO - Loading data from JSON files in /Users/hk/Downloads/DSFinalYearProject/JSONFolder
+2025-04-22 22:51:40,559 - FundingAnomalyDetection - INFO - Processing /Users/hk/Downloads/DSFinalYearProject/JSONFolder/growthlist_industry_analysis.json
+2025-04-22 22:51:40,559 - FundingAnomalyDetection - WARNING - Skipping /Users/hk/Downloads/DSFinalYearProject/JSONFolder/growthlist_industry_analysis.json - not a list of records or doesn't have a companies array
+2025-04-22 22:51:40,559 - FundingAnomalyDetection - INFO - Processing /Users/hk/Downloads/DSFinalYearProject/JSONFolder/fundraise_insider_stats.json
+2025-04-22 22:51:40,560 - FundingAnomalyDetection - WARNING - Skipping /Users/hk/Downloads/DSFinalYearProject/JSONFolder/fundraise_insider_stats.json - not a list of records or doesn't have a companies array
+2025-04-22 22:51:40,560 - FundingAnomalyDetection - INFO - Processing /Users/hk/Downloads/DSFinalYearProject/JSONFolder/growthlistscrapper.json
+2025-04-22 22:51:40,560 - FundingAnomalyDetection - INFO - Added 100 records from growthlistscrapper.json
+2025-04-22 22:51:40,561 - FundingAnomalyDetection - INFO - Processing /Users/hk/Downloads/DSFinalYearProject/JSONFolder/topstartupio50.json
+2025-04-22 22:51:40,563 - FundingAnomalyDetection - INFO - Added 546 records from topstartupio50.json
+2025-04-22 22:51:40,563 - FundingAnomalyDetection - INFO - Processing /Users/hk/Downloads/DSFinalYearProject/JSONFolder/fundraisestartup50.json
+2025-04-22 22:51:40,566 - FundingAnomalyDetection - INFO - Found nested companies array with 1103 records in fundraisestartup50.json
+2025-04-22 22:51:40,566 - FundingAnomalyDetection - INFO - Added 1103 records from fundraisestartup50.json
+2025-04-22 22:51:40,578 - FundingAnomalyDetection - INFO - Loaded 1749 records from JSON files
+2025-04-22 22:51:40,578 - FundingAnomalyDetection - INFO - Creating features for anomaly detection
+2025-04-22 22:51:40,580 - FundingAnomalyDetection - INFO - Created funding_per_employee feature
+2025-04-22 22:51:40,597 - FundingAnomalyDetection - INFO - Created 4 features for anomaly detection
+2025-04-22 22:51:40,598 - FundingAnomalyDetection - INFO - Detecting anomalies in funding data
+2025-04-22 22:51:40,598 - FundingAnomalyDetection - INFO - Fitting Isolation Forest with contamination=0.01
+2025-04-22 22:51:40,698 - FundingAnomalyDetection - INFO - Isolation Forest model trained successfully
+2025-04-22 22:51:40,718 - FundingAnomalyDetection - INFO - Detected 19 anomalies (1.09%)
+2025-04-22 22:51:40,719 - FundingAnomalyDetection - INFO - Creating anomaly visualizations
+2025-04-22 22:51:41,859 - FundingAnomalyDetection - INFO - Creating model calibration and performance visualizations
+2025-04-22 22:51:41,859 - FundingAnomalyDetection - INFO - Creating features for anomaly detection
+2025-04-22 22:51:41,862 - FundingAnomalyDetection - INFO - Created funding_per_employee feature
+2025-04-22 22:51:41,881 - FundingAnomalyDetection - INFO - Created 4 features for anomaly detection
+2025-04-22 22:51:41,884 - FundingAnomalyDetection - INFO - Fitting Isolation Forest with contamination=None
+2025-04-22 22:51:41,998 - FundingAnomalyDetection - INFO - Isolation Forest model trained successfully
+2025-04-22 22:51:42,618 - FundingAnomalyDetection - INFO - Model performance: Accuracy=0.994, Precision=1.000, Recall=0.500, F1=0.667, RMSE=0.422
+2025-04-22 22:51:42,618 - FundingAnomalyDetection - INFO - Anomaly visualizations created successfully
+2025-04-22 22:51:42,618 - FundingAnomalyDetection - INFO - Generating anomaly detection report
+2025-04-22 22:51:42,624 - FundingAnomalyDetection - INFO - Anomaly report saved to /Users/hk/Downloads/DSFinalYearProject/outputSuccessFailure/anomaly_detection/anomaly_report.csv
+2025-04-22 22:51:42,626 - FundingAnomalyDetection - INFO - Integration data saved to /Users/hk/Downloads/DSFinalYearProject/outputSuccessFailure/anomaly_detection/anomaly_results.json
+2025-04-22 22:51:42,628 - FundingAnomalyDetection - INFO - Model saved to /Users/hk/Downloads/DSFinalYearProject/outputSuccessFailure/anomaly_detection/anomaly_model_20250422_225142.pkl
+2025-04-22 22:51:42,628 - FundingAnomalyDetection - INFO - Anomaly detection analysis completed
+2025-04-22 22:55:33,698 - FundingAnomalyDetection - INFO - Starting anomaly detection analysis
+2025-04-22 22:55:33,698 - FundingAnomalyDetection - INFO - Loading data from JSON files in /Users/hk/Downloads/DSFinalYearProject/JSONFolder
+2025-04-22 22:55:33,724 - FundingAnomalyDetection - INFO - Processing /Users/hk/Downloads/DSFinalYearProject/JSONFolder/growthlist_industry_analysis.json
+2025-04-22 22:55:33,731 - FundingAnomalyDetection - WARNING - Skipping /Users/hk/Downloads/DSFinalYearProject/JSONFolder/growthlist_industry_analysis.json - not a list of records or doesn't have a companies array
+2025-04-22 22:55:33,731 - FundingAnomalyDetection - INFO - Processing /Users/hk/Downloads/DSFinalYearProject/JSONFolder/fundraise_insider_stats.json
+2025-04-22 22:55:33,736 - FundingAnomalyDetection - WARNING - Skipping /Users/hk/Downloads/DSFinalYearProject/JSONFolder/fundraise_insider_stats.json - not a list of records or doesn't have a companies array
+2025-04-22 22:55:33,736 - FundingAnomalyDetection - INFO - Processing /Users/hk/Downloads/DSFinalYearProject/JSONFolder/growthlistscrapper.json
+2025-04-22 22:55:33,738 - FundingAnomalyDetection - INFO - Added 100 records from growthlistscrapper.json
+2025-04-22 22:55:33,738 - FundingAnomalyDetection - INFO - Processing /Users/hk/Downloads/DSFinalYearProject/JSONFolder/topstartupio50.json
+2025-04-22 22:55:33,741 - FundingAnomalyDetection - INFO - Added 546 records from topstartupio50.json
+2025-04-22 22:55:33,741 - FundingAnomalyDetection - INFO - Processing /Users/hk/Downloads/DSFinalYearProject/JSONFolder/fundraisestartup50.json
+2025-04-22 22:55:33,743 - FundingAnomalyDetection - INFO - Found nested companies array with 1103 records in fundraisestartup50.json
+2025-04-22 22:55:33,744 - FundingAnomalyDetection - INFO - Added 1103 records from fundraisestartup50.json
+2025-04-22 22:55:33,750 - FundingAnomalyDetection - INFO - Loaded 1749 records from JSON files
+2025-04-22 22:55:33,751 - FundingAnomalyDetection - INFO - Creating features for anomaly detection
+2025-04-22 22:55:33,753 - FundingAnomalyDetection - INFO - Created funding_per_employee feature
+2025-04-22 22:55:33,771 - FundingAnomalyDetection - INFO - Created 4 features for anomaly detection
+2025-04-22 22:55:33,771 - FundingAnomalyDetection - INFO - Detecting anomalies in funding data
+2025-04-22 22:55:33,771 - FundingAnomalyDetection - INFO - Fitting Isolation Forest with contamination=0.01
+2025-04-22 22:55:33,879 - FundingAnomalyDetection - INFO - Isolation Forest model trained successfully
+2025-04-22 22:55:33,902 - FundingAnomalyDetection - INFO - Detected 19 anomalies (1.09%)
+2025-04-22 22:55:33,902 - FundingAnomalyDetection - INFO - Creating anomaly visualizations
+2025-04-22 22:55:35,208 - FundingAnomalyDetection - INFO - Creating model calibration and performance visualizations
+2025-04-22 22:55:35,209 - FundingAnomalyDetection - INFO - Creating features for anomaly detection
+2025-04-22 22:55:35,213 - FundingAnomalyDetection - INFO - Created funding_per_employee feature
+2025-04-22 22:55:35,231 - FundingAnomalyDetection - INFO - Created 4 features for anomaly detection
+2025-04-22 22:55:35,233 - FundingAnomalyDetection - INFO - Fitting Isolation Forest with contamination=None
+2025-04-22 22:55:35,333 - FundingAnomalyDetection - INFO - Isolation Forest model trained successfully
+2025-04-22 22:55:35,926 - FundingAnomalyDetection - INFO - Model performance: Accuracy=0.994, Precision=1.000, Recall=0.500, F1=0.667, RMSE=0.422
+2025-04-22 22:55:35,926 - FundingAnomalyDetection - INFO - Anomaly visualizations created successfully
+2025-04-22 22:55:35,926 - FundingAnomalyDetection - INFO - Generating anomaly detection report
+2025-04-22 22:55:35,932 - FundingAnomalyDetection - INFO - Anomaly report saved to /Users/hk/Downloads/DSFinalYearProject/outputSuccessFailure/anomaly_detection/anomaly_report.csv
+2025-04-22 22:55:35,934 - FundingAnomalyDetection - INFO - Integration data saved to /Users/hk/Downloads/DSFinalYearProject/outputSuccessFailure/anomaly_detection/anomaly_results.json
+2025-04-22 22:55:35,938 - FundingAnomalyDetection - INFO - Model saved to /Users/hk/Downloads/DSFinalYearProject/outputSuccessFailure/anomaly_detection/anomaly_model_20250422_225535.pkl
+2025-04-22 22:55:35,938 - FundingAnomalyDetection - INFO - Anomaly detection analysis completed
+2025-04-22 23:00:33,098 - FundingAnomalyDetection - INFO - Starting anomaly detection analysis
+2025-04-22 23:00:33,098 - FundingAnomalyDetection - INFO - Loading data from JSON files in /Users/hk/Downloads/DSFinalYearProject/JSONFolder
+2025-04-22 23:00:33,098 - FundingAnomalyDetection - INFO - Processing /Users/hk/Downloads/DSFinalYearProject/JSONFolder/growthlist_industry_analysis.json
+2025-04-22 23:00:33,099 - FundingAnomalyDetection - WARNING - Skipping /Users/hk/Downloads/DSFinalYearProject/JSONFolder/growthlist_industry_analysis.json - not a list of records or doesn't have a companies array
+2025-04-22 23:00:33,099 - FundingAnomalyDetection - INFO - Processing /Users/hk/Downloads/DSFinalYearProject/JSONFolder/fundraise_insider_stats.json
+2025-04-22 23:00:33,100 - FundingAnomalyDetection - WARNING - Skipping /Users/hk/Downloads/DSFinalYearProject/JSONFolder/fundraise_insider_stats.json - not a list of records or doesn't have a companies array
+2025-04-22 23:00:33,100 - FundingAnomalyDetection - INFO - Processing /Users/hk/Downloads/DSFinalYearProject/JSONFolder/growthlistscrapper.json
+2025-04-22 23:00:33,101 - FundingAnomalyDetection - INFO - Added 100 records from growthlistscrapper.json
+2025-04-22 23:00:33,101 - FundingAnomalyDetection - INFO - Processing /Users/hk/Downloads/DSFinalYearProject/JSONFolder/topstartupio50.json
+2025-04-22 23:00:33,103 - FundingAnomalyDetection - INFO - Added 546 records from topstartupio50.json
+2025-04-22 23:00:33,103 - FundingAnomalyDetection - INFO - Processing /Users/hk/Downloads/DSFinalYearProject/JSONFolder/fundraisestartup50.json
+2025-04-22 23:00:33,106 - FundingAnomalyDetection - INFO - Found nested companies array with 1103 records in fundraisestartup50.json
+2025-04-22 23:00:33,106 - FundingAnomalyDetection - INFO - Added 1103 records from fundraisestartup50.json
+2025-04-22 23:00:33,118 - FundingAnomalyDetection - INFO - Loaded 1749 records from JSON files
+2025-04-22 23:00:33,118 - FundingAnomalyDetection - INFO - Creating features for anomaly detection
+2025-04-22 23:00:33,120 - FundingAnomalyDetection - INFO - Created funding_per_employee feature
+2025-04-22 23:00:33,139 - FundingAnomalyDetection - INFO - Created 4 features for anomaly detection
+2025-04-22 23:00:33,139 - FundingAnomalyDetection - INFO - Detecting anomalies in funding data
+2025-04-22 23:00:33,139 - FundingAnomalyDetection - INFO - Fitting Isolation Forest with contamination=0.01
+2025-04-22 23:00:33,248 - FundingAnomalyDetection - INFO - Isolation Forest model trained successfully
+2025-04-22 23:00:33,272 - FundingAnomalyDetection - INFO - Detected 19 anomalies (1.09%)
+2025-04-22 23:00:33,272 - FundingAnomalyDetection - INFO - Creating anomaly visualizations
+2025-04-22 23:00:34,428 - FundingAnomalyDetection - INFO - Creating model calibration and performance visualizations
+2025-04-22 23:00:34,428 - FundingAnomalyDetection - INFO - Creating features for anomaly detection
+2025-04-22 23:00:34,431 - FundingAnomalyDetection - INFO - Created funding_per_employee feature
+2025-04-22 23:00:34,454 - FundingAnomalyDetection - INFO - Created 4 features for anomaly detection
+2025-04-22 23:00:34,457 - FundingAnomalyDetection - INFO - Fitting Isolation Forest with contamination=None
+2025-04-22 23:00:34,560 - FundingAnomalyDetection - INFO - Isolation Forest model trained successfully
+2025-04-22 23:00:35,153 - FundingAnomalyDetection - INFO - Model performance: Accuracy=0.994, Precision=1.000, Recall=0.500, F1=0.667, RMSE=0.422
+2025-04-22 23:00:35,153 - FundingAnomalyDetection - INFO - Anomaly visualizations created successfully
+2025-04-22 23:00:35,153 - FundingAnomalyDetection - INFO - Generating anomaly detection report
+2025-04-22 23:00:35,161 - FundingAnomalyDetection - INFO - Anomaly report saved to /Users/hk/Downloads/DSFinalYearProject/outputSuccessFailure/anomaly_detection/anomaly_report.csv
+2025-04-22 23:00:35,162 - FundingAnomalyDetection - INFO - Integration data saved to /Users/hk/Downloads/DSFinalYearProject/outputSuccessFailure/anomaly_detection/anomaly_results.json
+2025-04-22 23:00:35,165 - FundingAnomalyDetection - INFO - Model saved to /Users/hk/Downloads/DSFinalYearProject/outputSuccessFailure/anomaly_detection/anomaly_model_20250422_230035.pkl
+2025-04-22 23:00:35,166 - FundingAnomalyDetection - INFO - Anomaly detection analysis completed

@@ -1,0 +1,35 @@
+2025-04-22 22:04:56,872 - FundingAnomalyDetection - INFO - Creating features for anomaly detection
+2025-04-22 22:04:56,873 - FundingAnomalyDetection - INFO - Created funding_per_employee feature
+2025-04-22 22:04:56,908 - FundingAnomalyDetection - INFO - Created 3 features for anomaly detection
+2025-04-22 22:04:56,909 - FundingAnomalyDetection - INFO - Detecting anomalies in funding data
+2025-04-22 22:04:56,909 - FundingAnomalyDetection - INFO - Fitting Isolation Forest with contamination=0.01
+2025-04-22 22:04:57,136 - FundingAnomalyDetection - INFO - Isolation Forest model trained successfully
+2025-04-22 22:04:57,167 - FundingAnomalyDetection - INFO - Detected 14 anomalies (1.16%)
+2025-04-22 22:05:41,561 - FundingAnomalyDetection - INFO - Creating features for anomaly detection
+2025-04-22 22:05:41,563 - FundingAnomalyDetection - INFO - Created funding_per_employee feature
+2025-04-22 22:05:41,590 - FundingAnomalyDetection - INFO - Created 3 features for anomaly detection
+2025-04-22 22:05:41,590 - FundingAnomalyDetection - INFO - Detecting anomalies in funding data
+2025-04-22 22:05:41,590 - FundingAnomalyDetection - INFO - Fitting Isolation Forest with contamination=0.01
+2025-04-22 22:05:41,708 - FundingAnomalyDetection - INFO - Isolation Forest model trained successfully
+2025-04-22 22:05:41,731 - FundingAnomalyDetection - INFO - Detected 14 anomalies (1.16%)
+2025-04-22 22:06:07,126 - FundingAnomalyDetection - INFO - Creating features for anomaly detection
+2025-04-22 22:06:07,127 - FundingAnomalyDetection - INFO - Created funding_per_employee feature
+2025-04-22 22:06:07,151 - FundingAnomalyDetection - INFO - Created 3 features for anomaly detection
+2025-04-22 22:06:07,151 - FundingAnomalyDetection - INFO - Detecting anomalies in funding data
+2025-04-22 22:06:07,151 - FundingAnomalyDetection - INFO - Fitting Isolation Forest with contamination=0.01
+2025-04-22 22:06:07,288 - FundingAnomalyDetection - INFO - Isolation Forest model trained successfully
+2025-04-22 22:06:07,393 - FundingAnomalyDetection - INFO - Detected 14 anomalies (1.16%)
+2025-04-22 22:12:13,563 - FundingAnomalyDetection - INFO - Creating features for anomaly detection
+2025-04-22 22:12:13,564 - FundingAnomalyDetection - INFO - Created funding_per_employee feature
+2025-04-22 22:12:13,593 - FundingAnomalyDetection - INFO - Created 3 features for anomaly detection
+2025-04-22 22:12:13,593 - FundingAnomalyDetection - INFO - Detecting anomalies in funding data
+2025-04-22 22:12:13,594 - FundingAnomalyDetection - INFO - Fitting Isolation Forest with contamination=0.01
+2025-04-22 22:12:13,714 - FundingAnomalyDetection - INFO - Isolation Forest model trained successfully
+2025-04-22 22:12:13,737 - FundingAnomalyDetection - INFO - Detected 14 anomalies (1.16%)
+2025-04-22 22:12:54,240 - FundingAnomalyDetection - INFO - Creating features for anomaly detection
+2025-04-22 22:12:54,242 - FundingAnomalyDetection - INFO - Created funding_per_employee feature
+2025-04-22 22:12:54,269 - FundingAnomalyDetection - INFO - Created 3 features for anomaly detection
+2025-04-22 22:12:54,269 - FundingAnomalyDetection - INFO - Detecting anomalies in funding data
+2025-04-22 22:12:54,269 - FundingAnomalyDetection - INFO - Fitting Isolation Forest with contamination=0.01
+2025-04-22 22:12:54,401 - FundingAnomalyDetection - INFO - Isolation Forest model trained successfully
+2025-04-22 22:12:54,424 - FundingAnomalyDetection - INFO - Detected 14 anomalies (1.16%)

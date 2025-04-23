@@ -1,0 +1,19 @@
+{
+    "timestamp": "20250422_225719",
+    "data_records": 1748,
+    "features": [],
+    "model_results": {
+        "Random Forest": {
+            "accuracy": 0.6870229007633588,
+            "model_path": "Not saved"
+        },
+        "XGBoost": {
+            "accuracy": 0.6773074253990284,
+            "model_path": "Not saved"
+        },
+        "Ensemble": {
+            "accuracy": 0.6870229007633588,
+            "model_path": "Not saved"
+        }
+    }
+}

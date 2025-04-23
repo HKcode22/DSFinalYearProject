@@ -1,0 +1,3 @@
+2025-04-22 16:52:06,607 - funding_amount_forecast - INFO - Funding Amount Forecast initialized
+2025-04-22 16:52:06,607 - funding_amount_forecast - INFO - Creating funding by industry visualization
+2025-04-22 16:52:07,502 - funding_amount_forecast - INFO - Saved funding by industry visualizations to ../test_industry_sanitization/funding_by_industry_average.png and ../test_industry_sanitization/funding_by_industry_distribution.png

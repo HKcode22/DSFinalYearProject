@@ -1,0 +1,28 @@
+2025-04-22 16:59:49,195 - industry_trend_analysis - INFO - Industry Trend Analysis initialized
+2025-04-22 16:59:49,196 - industry_trend_analysis - WARNING - Could not load industry mappings: 'IndustryTrendAnalysis' object has no attribute '_load_industry_mappings'
+2025-04-22 16:59:49,196 - industry_trend_analysis - INFO - Starting industry trend analysis pipeline
+2025-04-22 16:59:49,196 - industry_trend_analysis - INFO - Loading data from JSON files
+2025-04-22 16:59:49,200 - industry_trend_analysis - INFO - Loaded 1103 records from fundraiser data
+2025-04-22 16:59:49,200 - industry_trend_analysis - INFO - Loaded 100 records from growthlist data
+2025-04-22 16:59:49,202 - industry_trend_analysis - INFO - Loaded 546 records from topstartup data
+2025-04-22 16:59:49,207 - industry_trend_analysis - INFO - Created DataFrame with 1749 records and 27 columns
+2025-04-22 16:59:49,207 - industry_trend_analysis - INFO - Standardizing DataFrame
+2025-04-22 16:59:49,208 - industry_trend_analysis - WARNING - Still have duplicate columns after renaming: ['company_name', 'industry', 'funding_stage', 'funding_date', 'employees']
+2025-04-22 16:59:49,225 - industry_trend_analysis - INFO - Standardizing DataFrame
+2025-04-22 16:59:49,228 - industry_trend_analysis - INFO - Normalizing industry categories
+2025-04-22 16:59:49,231 - industry_trend_analysis - INFO - Normalized to 115 industry categories
+2025-04-22 16:59:49,231 - industry_trend_analysis - INFO - Creating trend features for analysis
+2025-04-22 16:59:49,519 - industry_trend_analysis - INFO - Created time series features with 15 time periods
+2025-04-22 16:59:49,520 - industry_trend_analysis - INFO - Applying STL decomposition for trend analysis
+2025-04-22 16:59:49,775 - industry_trend_analysis - INFO - Completed trend analysis for 106 industries
+2025-04-22 16:59:49,775 - industry_trend_analysis - INFO - Identifying emerging industries
+2025-04-22 16:59:49,778 - industry_trend_analysis - INFO - Identified 19 emerging industries
+2025-04-22 16:59:49,778 - industry_trend_analysis - INFO - Identifying saturated industries
+2025-04-22 16:59:49,781 - industry_trend_analysis - INFO - Identified 0 potentially saturated industries
+2025-04-22 17:00:09,910 - industry_trend_analysis - INFO - Industry trend visualizations saved to outputs/industry_trends
+2025-04-22 17:00:10,002 - industry_trend_analysis - INFO - Created emerging industries visualization with 19 industries
+2025-04-22 17:00:10,002 - industry_trend_analysis - INFO - Emerging industries visualization saved to outputs/industry_trends
+2025-04-22 17:00:10,002 - industry_trend_analysis - WARNING - No saturated industries to visualize
+2025-04-22 17:00:10,002 - industry_trend_analysis - INFO - Saturated industries visualization saved to outputs/industry_trends
+2025-04-22 17:00:10,004 - industry_trend_analysis - INFO - Generated industry trend report: outputs/industry_trends/industry_trend_report.html
+2025-04-22 17:00:10,004 - industry_trend_analysis - INFO - Industry trend report generated: outputs/industry_trends/industry_trend_report.html
