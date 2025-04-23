@@ -1,311 +1,62 @@
-2025-04-22 22:40:48,620 - funding_amount_forecast - INFO - Funding Amount Forecast initialized
-2025-04-22 22:40:48,624 - funding_amount_forecast - INFO - Starting funding amount forecast analysis
-2025-04-22 22:40:48,624 - funding_amount_forecast - INFO - Loading data from JSON files
-2025-04-22 22:40:48,628 - funding_amount_forecast - INFO - Loaded 1103 records from fundraiser data
-2025-04-22 22:40:48,629 - funding_amount_forecast - INFO - Loaded 100 records from growthlist data
-2025-04-22 22:40:48,630 - funding_amount_forecast - INFO - Loaded 546 records from topstartup data
-2025-04-22 22:40:48,636 - funding_amount_forecast - INFO - Created DataFrame with 1749 records and 27 columns
-2025-04-22 22:40:48,636 - funding_amount_forecast - INFO - Standardizing DataFrame
-2025-04-22 22:40:48,658 - funding_amount_forecast - INFO - DataFrame standardization complete with 1749 records
-2025-04-22 22:40:48,659 - funding_amount_forecast - INFO - Creating features for funding amount forecasting
-2025-04-22 22:40:48,661 - funding_amount_forecast - INFO - Kept 1727 records with valid funding amounts
-2025-04-22 22:40:48,661 - funding_amount_forecast - INFO - Converting funding_date to datetime
-2025-04-22 22:40:49,603 - funding_amount_forecast - INFO - Estimating next round amounts for 623 companies without actual next round data
-2025-04-22 22:40:49,767 - funding_amount_forecast - INFO - Feature engineering complete. Created 47 features.
-2025-04-22 22:40:49,767 - funding_amount_forecast - INFO - Preparing data for model training
-2025-04-22 22:40:49,769 - funding_amount_forecast - WARNING - Column funding_usd contains all NaN values and will be excluded from features
-2025-04-22 22:40:49,770 - funding_amount_forecast - WARNING - Column avg_time_between_rounds contains all NaN values and will be excluded from features
-2025-04-22 22:40:49,771 - funding_amount_forecast - INFO - Filling missing values with median
-2025-04-22 22:40:49,773 - funding_amount_forecast - INFO - Using 1104 records with actual next round data for validation
-2025-04-22 22:40:49,776 - funding_amount_forecast - INFO - Training set: 1395 records (772 actual, 623 estimated)
-2025-04-22 22:40:49,776 - funding_amount_forecast - INFO - Test set: 332 records (all actual data)
-2025-04-22 22:40:49,782 - funding_amount_forecast - INFO - Training models...
-2025-04-22 22:40:49,782 - funding_amount_forecast - INFO - Training quantile regression forest with quantiles: [0.1, 0.5, 0.9]
-2025-04-22 22:40:49,782 - funding_amount_forecast - INFO - Training model for quantile 0.1
-2025-04-22 22:40:50,271 - funding_amount_forecast - INFO - Trained model for quantile 0.1
-2025-04-22 22:40:50,272 - funding_amount_forecast - INFO - Training model for quantile 0.5
-2025-04-22 22:40:50,856 - funding_amount_forecast - INFO - Trained model for quantile 0.5
-2025-04-22 22:40:50,856 - funding_amount_forecast - INFO - Training model for quantile 0.9
-2025-04-22 22:40:51,676 - funding_amount_forecast - INFO - Trained model for quantile 0.9
-2025-04-22 22:40:51,677 - funding_amount_forecast - INFO - Training ensemble model
-2025-04-22 22:40:52,473 - funding_amount_forecast - INFO - Evaluating models...
-2025-04-22 22:40:52,473 - funding_amount_forecast - INFO - Evaluating model performance
-2025-04-22 22:40:52,477 - funding_amount_forecast - INFO - Quantile Regression Forest Metrics: RMSE=$112434769.83, MAE=$38451936.58, R2=-0.0145, Log-R2=-0.2082, Within 20%=0.09, Same order of magnitude=0.76
-2025-04-22 22:40:52,479 - funding_amount_forecast - INFO - 80% Prediction Interval Coverage: 0.6566
-2025-04-22 22:40:52,479 - funding_amount_forecast - INFO - Evaluating model performance
-2025-04-22 22:40:52,508 - funding_amount_forecast - INFO - random_forest Metrics: RMSE=$269961258.91, MAE=$62002952.96, R2=-4.8488, Log-R2=-0.2723, Within 20%=0.0973, Same order=0.7450
-2025-04-22 22:40:52,511 - funding_amount_forecast - INFO - gradient_boosting Metrics: RMSE=$593012827.78, MAE=$101455279.88, R2=-27.2223, Log-R2=-0.3344, Within 20%=0.0872, Same order=0.7450
-2025-04-22 22:40:52,538 - funding_amount_forecast - INFO - extra_trees Metrics: RMSE=$147487225.40, MAE=$62901918.51, R2=-0.7457, Log-R2=-0.3556, Within 20%=0.0671, Same order=0.6846
-2025-04-22 22:40:52,539 - funding_amount_forecast - INFO - Ensemble Metrics: RMSE=$261705990.68, MAE=$73776070.38, R2=-4.4966, Log-R2=-0.3411, Within 20%=0.0906, Same order=0.7215
-2025-04-22 22:40:52,601 - funding_amount_forecast - INFO - Creating visualizations...
-2025-04-22 22:40:52,601 - funding_amount_forecast - INFO - Creating funding by stage visualization
-2025-04-22 22:40:53,247 - funding_amount_forecast - INFO - Saved funding by stage visualization to /Users/hk/Downloads/DSFinalYearProject/outputSuccessFailure/amount_forecast/funding_by_stage.png
-2025-04-22 22:40:53,247 - funding_amount_forecast - INFO - Creating funding by industry visualization
-2025-04-22 22:40:54,237 - funding_amount_forecast - INFO - Saved funding by industry visualizations to /Users/hk/Downloads/DSFinalYearProject/outputSuccessFailure/amount_forecast/funding_by_industry_average.png and /Users/hk/Downloads/DSFinalYearProject/outputSuccessFailure/amount_forecast/funding_by_industry_distribution.png
-2025-04-22 22:40:54,238 - funding_amount_forecast - INFO - Creating prediction accuracy visualization
-2025-04-22 22:40:54,643 - funding_amount_forecast - INFO - Saved prediction accuracy visualization to /Users/hk/Downloads/DSFinalYearProject/outputSuccessFailure/amount_forecast/prediction_accuracy.png
-2025-04-22 22:40:54,643 - funding_amount_forecast - INFO - Creating feature importance visualization
-2025-04-22 22:40:54,973 - funding_amount_forecast - INFO - Saved feature importance visualization to /Users/hk/Downloads/DSFinalYearProject/outputSuccessFailure/amount_forecast/feature_importance.png
-2025-04-22 22:40:54,973 - funding_amount_forecast - INFO - Creating model calibration visualization
-2025-04-22 22:40:55,225 - funding_amount_forecast - INFO - Saved model calibration visualization to /Users/hk/Downloads/DSFinalYearProject/outputSuccessFailure/amount_forecast/model_calibration.png
-2025-04-22 22:40:55,225 - funding_amount_forecast - INFO - Creating error distribution visualization
-2025-04-22 22:40:56,508 - funding_amount_forecast - INFO - Saved error distribution visualization to /Users/hk/Downloads/DSFinalYearProject/outputSuccessFailure/amount_forecast/error_distribution.png
-2025-04-22 22:40:56,508 - funding_amount_forecast - INFO - Creating prediction intervals visualization
-2025-04-22 22:40:56,789 - funding_amount_forecast - INFO - Saved prediction intervals visualization to /Users/hk/Downloads/DSFinalYearProject/outputSuccessFailure/amount_forecast/prediction_intervals.png
-2025-04-22 22:40:56,790 - funding_amount_forecast - INFO - Generating report...
-2025-04-22 22:40:56,790 - funding_amount_forecast - INFO - Generating funding amount forecast report
-2025-04-22 22:40:56,834 - funding_amount_forecast - INFO - Funding amount forecast report saved to /Users/hk/Downloads/DSFinalYearProject/outputSuccessFailure/amount_forecast/funding_amount_forecast_report.md
-2025-04-22 22:40:56,834 - funding_amount_forecast - INFO - markdown2 package not available, skipping HTML conversion
-2025-04-22 22:40:56,834 - funding_amount_forecast - INFO - Saving model...
-2025-04-22 22:40:56,835 - funding_amount_forecast - INFO - Saving model to /Users/hk/Downloads/DSFinalYearProject/outputSuccessFailure/amount_forecast/funding_amount_forecast_model.pkl
-2025-04-22 22:40:56,931 - funding_amount_forecast - INFO - Model saved successfully to /Users/hk/Downloads/DSFinalYearProject/outputSuccessFailure/amount_forecast/funding_amount_forecast_model.pkl
-2025-04-22 22:40:56,931 - funding_amount_forecast - INFO - Funding amount forecast analysis completed successfully
-2025-04-22 22:50:44,677 - funding_amount_forecast - INFO - Funding Amount Forecast initialized
-2025-04-22 22:50:44,680 - funding_amount_forecast - INFO - Starting funding amount forecast analysis
-2025-04-22 22:50:44,680 - funding_amount_forecast - INFO - Loading data from JSON files
-2025-04-22 22:50:44,683 - funding_amount_forecast - INFO - Loaded 1103 records from fundraiser data
-2025-04-22 22:50:44,683 - funding_amount_forecast - INFO - Loaded 100 records from growthlist data
-2025-04-22 22:50:44,685 - funding_amount_forecast - INFO - Loaded 546 records from topstartup data
-2025-04-22 22:50:44,691 - funding_amount_forecast - INFO - Created DataFrame with 1749 records and 27 columns
-2025-04-22 22:50:44,691 - funding_amount_forecast - INFO - Standardizing DataFrame
-2025-04-22 22:50:44,712 - funding_amount_forecast - INFO - DataFrame standardization complete with 1749 records
-2025-04-22 22:50:44,712 - funding_amount_forecast - INFO - Creating features for funding amount forecasting
-2025-04-22 22:50:44,714 - funding_amount_forecast - INFO - Kept 1727 records with valid funding amounts
-2025-04-22 22:50:44,714 - funding_amount_forecast - INFO - Converting funding_date to datetime
-2025-04-22 22:50:45,685 - funding_amount_forecast - INFO - Estimating next round amounts for 623 companies without actual next round data
-2025-04-22 22:50:45,859 - funding_amount_forecast - INFO - Feature engineering complete. Created 47 features.
-2025-04-22 22:50:45,860 - funding_amount_forecast - INFO - Preparing data for model training
-2025-04-22 22:50:45,861 - funding_amount_forecast - WARNING - Column funding_usd contains all NaN values and will be excluded from features
-2025-04-22 22:50:45,862 - funding_amount_forecast - WARNING - Column avg_time_between_rounds contains all NaN values and will be excluded from features
-2025-04-22 22:50:45,864 - funding_amount_forecast - INFO - Filling missing values with median
-2025-04-22 22:50:45,866 - funding_amount_forecast - INFO - Using 1104 records with actual next round data for validation
-2025-04-22 22:50:45,869 - funding_amount_forecast - INFO - Training set: 1395 records (772 actual, 623 estimated)
-2025-04-22 22:50:45,869 - funding_amount_forecast - INFO - Test set: 332 records (all actual data)
-2025-04-22 22:50:45,875 - funding_amount_forecast - INFO - Training models...
-2025-04-22 22:50:45,875 - funding_amount_forecast - INFO - Training quantile regression forest with quantiles: [0.1, 0.5, 0.9]
-2025-04-22 22:50:45,875 - funding_amount_forecast - INFO - Training model for quantile 0.1
-2025-04-22 22:50:46,297 - funding_amount_forecast - INFO - Trained model for quantile 0.1
-2025-04-22 22:50:46,297 - funding_amount_forecast - INFO - Training model for quantile 0.5
-2025-04-22 22:50:46,760 - funding_amount_forecast - INFO - Trained model for quantile 0.5
-2025-04-22 22:50:46,760 - funding_amount_forecast - INFO - Training model for quantile 0.9
-2025-04-22 22:50:47,188 - funding_amount_forecast - INFO - Trained model for quantile 0.9
-2025-04-22 22:50:47,188 - funding_amount_forecast - INFO - Training ensemble model
-2025-04-22 22:50:47,852 - funding_amount_forecast - INFO - Evaluating models...
-2025-04-22 22:50:47,853 - funding_amount_forecast - INFO - Evaluating model performance
-2025-04-22 22:50:47,856 - funding_amount_forecast - INFO - Quantile Regression Forest Metrics: RMSE=$112236566.25, MAE=$38388474.38, R2=-0.0110, Log-R2=-0.1627, Within 20%=0.09, Same order of magnitude=0.77
-2025-04-22 22:50:47,858 - funding_amount_forecast - INFO - 80% Prediction Interval Coverage: 0.6596
-2025-04-22 22:50:47,858 - funding_amount_forecast - INFO - Evaluating model performance
-2025-04-22 22:50:47,886 - funding_amount_forecast - INFO - random_forest Metrics: RMSE=$276766264.54, MAE=$63432008.94, R2=-5.1474, Log-R2=-0.2727, Within 20%=0.0973, Same order=0.7416
-2025-04-22 22:50:47,889 - funding_amount_forecast - INFO - gradient_boosting Metrics: RMSE=$620931615.05, MAE=$104233951.56, R2=-29.9422, Log-R2=-0.3694, Within 20%=0.0805, Same order=0.7483
-2025-04-22 22:50:47,916 - funding_amount_forecast - INFO - extra_trees Metrics: RMSE=$138385061.62, MAE=$62253538.73, R2=-0.5369, Log-R2=-0.3560, Within 20%=0.0671, Same order=0.6812
-2025-04-22 22:50:47,918 - funding_amount_forecast - INFO - Ensemble Metrics: RMSE=$265533555.29, MAE=$74271528.38, R2=-4.6585, Log-R2=-0.3415, Within 20%=0.0940, Same order=0.7148
-2025-04-22 22:50:47,976 - funding_amount_forecast - INFO - Creating visualizations...
-2025-04-22 22:50:47,977 - funding_amount_forecast - INFO - Creating funding by stage visualization
-2025-04-22 22:50:48,749 - funding_amount_forecast - INFO - Saved funding by stage visualization to /Users/hk/Downloads/DSFinalYearProject/outputSuccessFailure/amount_forecast/funding_by_stage.png
-2025-04-22 22:50:48,750 - funding_amount_forecast - INFO - Creating funding by industry visualization
-2025-04-22 22:50:49,751 - funding_amount_forecast - INFO - Saved funding by industry visualizations to /Users/hk/Downloads/DSFinalYearProject/outputSuccessFailure/amount_forecast/funding_by_industry_average.png and /Users/hk/Downloads/DSFinalYearProject/outputSuccessFailure/amount_forecast/funding_by_industry_distribution.png
-2025-04-22 22:50:49,751 - funding_amount_forecast - INFO - Creating prediction accuracy visualization
-2025-04-22 22:50:50,133 - funding_amount_forecast - INFO - Saved prediction accuracy visualization to /Users/hk/Downloads/DSFinalYearProject/outputSuccessFailure/amount_forecast/prediction_accuracy.png
-2025-04-22 22:50:50,134 - funding_amount_forecast - INFO - Creating feature importance visualization
-2025-04-22 22:50:50,449 - funding_amount_forecast - INFO - Saved feature importance visualization to /Users/hk/Downloads/DSFinalYearProject/outputSuccessFailure/amount_forecast/feature_importance.png
-2025-04-22 22:50:50,450 - funding_amount_forecast - INFO - Creating model calibration visualization
-2025-04-22 22:50:50,708 - funding_amount_forecast - INFO - Saved model calibration visualization to /Users/hk/Downloads/DSFinalYearProject/outputSuccessFailure/amount_forecast/model_calibration.png
-2025-04-22 22:50:50,708 - funding_amount_forecast - INFO - Creating error distribution visualization
-2025-04-22 22:50:52,052 - funding_amount_forecast - INFO - Saved error distribution visualization to /Users/hk/Downloads/DSFinalYearProject/outputSuccessFailure/amount_forecast/error_distribution.png
-2025-04-22 22:50:52,052 - funding_amount_forecast - INFO - Creating prediction intervals visualization
-2025-04-22 22:50:52,343 - funding_amount_forecast - INFO - Saved prediction intervals visualization to /Users/hk/Downloads/DSFinalYearProject/outputSuccessFailure/amount_forecast/prediction_intervals.png
-2025-04-22 22:50:52,343 - funding_amount_forecast - INFO - Generating report...
-2025-04-22 22:50:52,343 - funding_amount_forecast - INFO - Generating funding amount forecast report
-2025-04-22 22:50:52,386 - funding_amount_forecast - INFO - Funding amount forecast report saved to /Users/hk/Downloads/DSFinalYearProject/outputSuccessFailure/amount_forecast/funding_amount_forecast_report.md
-2025-04-22 22:50:52,386 - funding_amount_forecast - INFO - markdown2 package not available, skipping HTML conversion
-2025-04-22 22:50:52,386 - funding_amount_forecast - INFO - Saving model...
-2025-04-22 22:50:52,386 - funding_amount_forecast - INFO - Saving model to /Users/hk/Downloads/DSFinalYearProject/outputSuccessFailure/amount_forecast/funding_amount_forecast_model.pkl
-2025-04-22 22:50:52,535 - funding_amount_forecast - INFO - Model saved successfully to /Users/hk/Downloads/DSFinalYearProject/outputSuccessFailure/amount_forecast/funding_amount_forecast_model.pkl
-2025-04-22 22:50:52,535 - funding_amount_forecast - INFO - Funding amount forecast analysis completed successfully
-2025-04-22 22:51:32,855 - funding_amount_forecast - INFO - Funding Amount Forecast initialized
-2025-04-22 22:51:32,858 - funding_amount_forecast - INFO - Starting funding amount forecast analysis
-2025-04-22 22:51:32,858 - funding_amount_forecast - INFO - Loading data from JSON files
-2025-04-22 22:51:32,861 - funding_amount_forecast - INFO - Loaded 1103 records from fundraiser data
-2025-04-22 22:51:32,862 - funding_amount_forecast - INFO - Loaded 100 records from growthlist data
-2025-04-22 22:51:32,864 - funding_amount_forecast - INFO - Loaded 546 records from topstartup data
-2025-04-22 22:51:32,870 - funding_amount_forecast - INFO - Created DataFrame with 1749 records and 27 columns
-2025-04-22 22:51:32,870 - funding_amount_forecast - INFO - Standardizing DataFrame
-2025-04-22 22:51:32,891 - funding_amount_forecast - INFO - DataFrame standardization complete with 1749 records
-2025-04-22 22:51:32,892 - funding_amount_forecast - INFO - Creating features for funding amount forecasting
-2025-04-22 22:51:32,894 - funding_amount_forecast - INFO - Kept 1727 records with valid funding amounts
-2025-04-22 22:51:32,895 - funding_amount_forecast - INFO - Converting funding_date to datetime
-2025-04-22 22:51:33,820 - funding_amount_forecast - INFO - Estimating next round amounts for 623 companies without actual next round data
-2025-04-22 22:51:33,982 - funding_amount_forecast - INFO - Feature engineering complete. Created 47 features.
-2025-04-22 22:51:33,983 - funding_amount_forecast - INFO - Preparing data for model training
-2025-04-22 22:51:33,985 - funding_amount_forecast - WARNING - Column funding_usd contains all NaN values and will be excluded from features
-2025-04-22 22:51:33,986 - funding_amount_forecast - WARNING - Column avg_time_between_rounds contains all NaN values and will be excluded from features
-2025-04-22 22:51:33,987 - funding_amount_forecast - INFO - Filling missing values with median
-2025-04-22 22:51:33,989 - funding_amount_forecast - INFO - Using 1104 records with actual next round data for validation
-2025-04-22 22:51:33,992 - funding_amount_forecast - INFO - Training set: 1395 records (772 actual, 623 estimated)
-2025-04-22 22:51:33,992 - funding_amount_forecast - INFO - Test set: 332 records (all actual data)
-2025-04-22 22:51:33,998 - funding_amount_forecast - INFO - Training models...
-2025-04-22 22:51:33,998 - funding_amount_forecast - INFO - Training quantile regression forest with quantiles: [0.1, 0.5, 0.9]
-2025-04-22 22:51:33,998 - funding_amount_forecast - INFO - Training model for quantile 0.1
-2025-04-22 22:51:34,458 - funding_amount_forecast - INFO - Trained model for quantile 0.1
-2025-04-22 22:51:34,459 - funding_amount_forecast - INFO - Training model for quantile 0.5
-2025-04-22 22:51:34,912 - funding_amount_forecast - INFO - Trained model for quantile 0.5
-2025-04-22 22:51:34,913 - funding_amount_forecast - INFO - Training model for quantile 0.9
-2025-04-22 22:51:35,352 - funding_amount_forecast - INFO - Trained model for quantile 0.9
-2025-04-22 22:51:35,352 - funding_amount_forecast - INFO - Training ensemble model
-2025-04-22 22:51:36,049 - funding_amount_forecast - INFO - Evaluating models...
-2025-04-22 22:51:36,049 - funding_amount_forecast - INFO - Evaluating model performance
-2025-04-22 22:51:36,054 - funding_amount_forecast - INFO - Quantile Regression Forest Metrics: RMSE=$112185561.95, MAE=$38395039.13, R2=-0.0100, Log-R2=-0.1611, Within 20%=0.08, Same order of magnitude=0.77
-2025-04-22 22:51:36,056 - funding_amount_forecast - INFO - 80% Prediction Interval Coverage: 0.6627
-2025-04-22 22:51:36,056 - funding_amount_forecast - INFO - Evaluating model performance
-2025-04-22 22:51:36,083 - funding_amount_forecast - INFO - random_forest Metrics: RMSE=$269918631.42, MAE=$62023416.56, R2=-4.8470, Log-R2=-0.2718, Within 20%=0.1040, Same order=0.7450
-2025-04-22 22:51:36,085 - funding_amount_forecast - INFO - gradient_boosting Metrics: RMSE=$598909701.63, MAE=$101769811.84, R2=-27.7864, Log-R2=-0.3671, Within 20%=0.0772, Same order=0.7383
-2025-04-22 22:51:36,115 - funding_amount_forecast - INFO - extra_trees Metrics: RMSE=$138492795.90, MAE=$62145389.02, R2=-0.5393, Log-R2=-0.3555, Within 20%=0.0671, Same order=0.6846
-2025-04-22 22:51:36,117 - funding_amount_forecast - INFO - Ensemble Metrics: RMSE=$262088868.97, MAE=$73619843.64, R2=-4.5127, Log-R2=-0.3401, Within 20%=0.0906, Same order=0.7181
-2025-04-22 22:51:36,175 - funding_amount_forecast - INFO - Creating visualizations...
-2025-04-22 22:51:36,176 - funding_amount_forecast - INFO - Creating funding by stage visualization
-2025-04-22 22:51:36,782 - funding_amount_forecast - INFO - Saved funding by stage visualization to /Users/hk/Downloads/DSFinalYearProject/outputSuccessFailure/amount_forecast/funding_by_stage.png
-2025-04-22 22:51:36,782 - funding_amount_forecast - INFO - Creating funding by industry visualization
-2025-04-22 22:51:37,929 - funding_amount_forecast - INFO - Saved funding by industry visualizations to /Users/hk/Downloads/DSFinalYearProject/outputSuccessFailure/amount_forecast/funding_by_industry_average.png and /Users/hk/Downloads/DSFinalYearProject/outputSuccessFailure/amount_forecast/funding_by_industry_distribution.png
-2025-04-22 22:51:37,930 - funding_amount_forecast - INFO - Creating prediction accuracy visualization
-2025-04-22 22:51:38,310 - funding_amount_forecast - INFO - Saved prediction accuracy visualization to /Users/hk/Downloads/DSFinalYearProject/outputSuccessFailure/amount_forecast/prediction_accuracy.png
-2025-04-22 22:51:38,310 - funding_amount_forecast - INFO - Creating feature importance visualization
-2025-04-22 22:51:38,641 - funding_amount_forecast - INFO - Saved feature importance visualization to /Users/hk/Downloads/DSFinalYearProject/outputSuccessFailure/amount_forecast/feature_importance.png
-2025-04-22 22:51:38,642 - funding_amount_forecast - INFO - Creating model calibration visualization
-2025-04-22 22:51:38,902 - funding_amount_forecast - INFO - Saved model calibration visualization to /Users/hk/Downloads/DSFinalYearProject/outputSuccessFailure/amount_forecast/model_calibration.png
-2025-04-22 22:51:38,903 - funding_amount_forecast - INFO - Creating error distribution visualization
-2025-04-22 22:51:40,139 - funding_amount_forecast - INFO - Saved error distribution visualization to /Users/hk/Downloads/DSFinalYearProject/outputSuccessFailure/amount_forecast/error_distribution.png
-2025-04-22 22:51:40,140 - funding_amount_forecast - INFO - Creating prediction intervals visualization
-2025-04-22 22:51:40,432 - funding_amount_forecast - INFO - Saved prediction intervals visualization to /Users/hk/Downloads/DSFinalYearProject/outputSuccessFailure/amount_forecast/prediction_intervals.png
-2025-04-22 22:51:40,432 - funding_amount_forecast - INFO - Generating report...
-2025-04-22 22:51:40,432 - funding_amount_forecast - INFO - Generating funding amount forecast report
-2025-04-22 22:51:40,476 - funding_amount_forecast - INFO - Funding amount forecast report saved to /Users/hk/Downloads/DSFinalYearProject/outputSuccessFailure/amount_forecast/funding_amount_forecast_report.md
-2025-04-22 22:51:40,476 - funding_amount_forecast - INFO - markdown2 package not available, skipping HTML conversion
-2025-04-22 22:51:40,476 - funding_amount_forecast - INFO - Saving model...
-2025-04-22 22:51:40,476 - funding_amount_forecast - INFO - Saving model to /Users/hk/Downloads/DSFinalYearProject/outputSuccessFailure/amount_forecast/funding_amount_forecast_model.pkl
-2025-04-22 22:51:40,555 - funding_amount_forecast - INFO - Model saved successfully to /Users/hk/Downloads/DSFinalYearProject/outputSuccessFailure/amount_forecast/funding_amount_forecast_model.pkl
-2025-04-22 22:51:40,555 - funding_amount_forecast - INFO - Funding amount forecast analysis completed successfully
-2025-04-22 22:52:08,822 - funding_amount_forecast - INFO - Funding Amount Forecast initialized
-2025-04-22 22:55:24,902 - funding_amount_forecast - INFO - Starting funding amount forecast analysis
-2025-04-22 22:55:24,902 - funding_amount_forecast - INFO - Loading data from JSON files
-2025-04-22 22:55:24,905 - funding_amount_forecast - INFO - Loaded 1103 records from fundraiser data
-2025-04-22 22:55:24,906 - funding_amount_forecast - INFO - Loaded 100 records from growthlist data
-2025-04-22 22:55:24,908 - funding_amount_forecast - INFO - Loaded 546 records from topstartup data
-2025-04-22 22:55:24,914 - funding_amount_forecast - INFO - Created DataFrame with 1749 records and 27 columns
-2025-04-22 22:55:24,915 - funding_amount_forecast - INFO - Standardizing DataFrame
-2025-04-22 22:55:24,933 - funding_amount_forecast - INFO - DataFrame standardization complete with 1749 records
-2025-04-22 22:55:24,933 - funding_amount_forecast - INFO - Creating features for funding amount forecasting
-2025-04-22 22:55:24,936 - funding_amount_forecast - INFO - Kept 1727 records with valid funding amounts
-2025-04-22 22:55:24,936 - funding_amount_forecast - INFO - Converting funding_date to datetime
-2025-04-22 22:55:25,783 - funding_amount_forecast - INFO - Estimating next round amounts for 623 companies without actual next round data
-2025-04-22 22:55:25,950 - funding_amount_forecast - INFO - Feature engineering complete. Created 47 features.
-2025-04-22 22:55:25,952 - funding_amount_forecast - INFO - Preparing data for model training
-2025-04-22 22:55:25,954 - funding_amount_forecast - WARNING - Column funding_usd contains all NaN values and will be excluded from features
-2025-04-22 22:55:25,956 - funding_amount_forecast - WARNING - Column avg_time_between_rounds contains all NaN values and will be excluded from features
-2025-04-22 22:55:25,957 - funding_amount_forecast - INFO - Filling missing values with median
-2025-04-22 22:55:25,960 - funding_amount_forecast - INFO - Using 1104 records with actual next round data for validation
-2025-04-22 22:55:25,963 - funding_amount_forecast - INFO - Training set: 1395 records (772 actual, 623 estimated)
-2025-04-22 22:55:25,963 - funding_amount_forecast - INFO - Test set: 332 records (all actual data)
-2025-04-22 22:55:25,969 - funding_amount_forecast - INFO - Training models...
-2025-04-22 22:55:25,969 - funding_amount_forecast - INFO - Training quantile regression forest with quantiles: [0.1, 0.5, 0.9]
-2025-04-22 22:55:25,969 - funding_amount_forecast - INFO - Training model for quantile 0.1
-2025-04-22 22:55:26,445 - funding_amount_forecast - INFO - Trained model for quantile 0.1
-2025-04-22 22:55:26,445 - funding_amount_forecast - INFO - Training model for quantile 0.5
-2025-04-22 22:55:26,908 - funding_amount_forecast - INFO - Trained model for quantile 0.5
-2025-04-22 22:55:26,909 - funding_amount_forecast - INFO - Training model for quantile 0.9
-2025-04-22 22:55:27,334 - funding_amount_forecast - INFO - Trained model for quantile 0.9
-2025-04-22 22:55:27,334 - funding_amount_forecast - INFO - Training ensemble model
-2025-04-22 22:55:28,066 - funding_amount_forecast - INFO - Evaluating models...
-2025-04-22 22:55:28,066 - funding_amount_forecast - INFO - Evaluating model performance
-2025-04-22 22:55:28,070 - funding_amount_forecast - INFO - Quantile Regression Forest Metrics: RMSE=$112238430.25, MAE=$38330485.27, R2=-0.0110, Log-R2=-0.1629, Within 20%=0.08, Same order of magnitude=0.77
-2025-04-22 22:55:28,073 - funding_amount_forecast - INFO - 80% Prediction Interval Coverage: 0.6566
-2025-04-22 22:55:28,073 - funding_amount_forecast - INFO - Evaluating model performance
-2025-04-22 22:55:28,101 - funding_amount_forecast - INFO - random_forest Metrics: RMSE=$269666051.79, MAE=$61266651.66, R2=-4.8360, Log-R2=-0.2716, Within 20%=0.1007, Same order=0.7416
-2025-04-22 22:55:28,104 - funding_amount_forecast - INFO - gradient_boosting Metrics: RMSE=$639592979.94, MAE=$105350608.01, R2=-31.8301, Log-R2=-0.3972, Within 20%=0.0872, Same order=0.7383
-2025-04-22 22:55:28,131 - funding_amount_forecast - INFO - extra_trees Metrics: RMSE=$143096248.97, MAE=$62595702.65, R2=-0.6433, Log-R2=-0.3558, Within 20%=0.0705, Same order=0.6812
-2025-04-22 22:55:28,132 - funding_amount_forecast - INFO - Ensemble Metrics: RMSE=$276372476.68, MAE=$75183569.50, R2=-5.1299, Log-R2=-0.3412, Within 20%=0.0973, Same order=0.7148
-2025-04-22 22:55:28,588 - funding_amount_forecast - INFO - Creating visualizations...
-2025-04-22 22:55:28,588 - funding_amount_forecast - INFO - Creating funding by stage visualization
-2025-04-22 22:55:29,543 - funding_amount_forecast - INFO - Saved funding by stage visualization to /Users/hk/Downloads/DSFinalYearProject/outputSuccessFailure/amount_forecast/funding_by_stage.png
-2025-04-22 22:55:29,543 - funding_amount_forecast - INFO - Creating funding by industry visualization
-2025-04-22 22:55:30,759 - funding_amount_forecast - INFO - Saved funding by industry visualizations to /Users/hk/Downloads/DSFinalYearProject/outputSuccessFailure/amount_forecast/funding_by_industry_average.png and /Users/hk/Downloads/DSFinalYearProject/outputSuccessFailure/amount_forecast/funding_by_industry_distribution.png
-2025-04-22 22:55:30,760 - funding_amount_forecast - INFO - Creating prediction accuracy visualization
-2025-04-22 22:55:31,077 - funding_amount_forecast - INFO - Saved prediction accuracy visualization to /Users/hk/Downloads/DSFinalYearProject/outputSuccessFailure/amount_forecast/prediction_accuracy.png
-2025-04-22 22:55:31,077 - funding_amount_forecast - INFO - Creating feature importance visualization
-2025-04-22 22:55:31,393 - funding_amount_forecast - INFO - Saved feature importance visualization to /Users/hk/Downloads/DSFinalYearProject/outputSuccessFailure/amount_forecast/feature_importance.png
-2025-04-22 22:55:31,393 - funding_amount_forecast - INFO - Creating model calibration visualization
-2025-04-22 22:55:31,774 - funding_amount_forecast - INFO - Saved model calibration visualization to /Users/hk/Downloads/DSFinalYearProject/outputSuccessFailure/amount_forecast/model_calibration.png
-2025-04-22 22:55:31,775 - funding_amount_forecast - INFO - Creating error distribution visualization
-2025-04-22 22:55:33,230 - funding_amount_forecast - INFO - Saved error distribution visualization to /Users/hk/Downloads/DSFinalYearProject/outputSuccessFailure/amount_forecast/error_distribution.png
-2025-04-22 22:55:33,230 - funding_amount_forecast - INFO - Creating prediction intervals visualization
-2025-04-22 22:55:33,534 - funding_amount_forecast - INFO - Saved prediction intervals visualization to /Users/hk/Downloads/DSFinalYearProject/outputSuccessFailure/amount_forecast/prediction_intervals.png
-2025-04-22 22:55:33,534 - funding_amount_forecast - INFO - Generating report...
-2025-04-22 22:55:33,534 - funding_amount_forecast - INFO - Generating funding amount forecast report
-2025-04-22 22:55:33,574 - funding_amount_forecast - INFO - Funding amount forecast report saved to /Users/hk/Downloads/DSFinalYearProject/outputSuccessFailure/amount_forecast/funding_amount_forecast_report.md
-2025-04-22 22:55:33,575 - funding_amount_forecast - INFO - markdown2 package not available, skipping HTML conversion
-2025-04-22 22:55:33,575 - funding_amount_forecast - INFO - Saving model...
-2025-04-22 22:55:33,575 - funding_amount_forecast - INFO - Saving model to /Users/hk/Downloads/DSFinalYearProject/outputSuccessFailure/amount_forecast/funding_amount_forecast_model.pkl
-2025-04-22 22:55:33,667 - funding_amount_forecast - INFO - Model saved successfully to /Users/hk/Downloads/DSFinalYearProject/outputSuccessFailure/amount_forecast/funding_amount_forecast_model.pkl
-2025-04-22 22:55:33,697 - funding_amount_forecast - INFO - Funding amount forecast analysis completed successfully
-2025-04-22 22:57:19,802 - funding_amount_forecast - INFO - Funding Amount Forecast initialized
-2025-04-22 23:00:24,132 - funding_amount_forecast - INFO - Starting funding amount forecast analysis
-2025-04-22 23:00:24,132 - funding_amount_forecast - INFO - Loading data from JSON files
-2025-04-22 23:00:24,136 - funding_amount_forecast - INFO - Loaded 1103 records from fundraiser data
-2025-04-22 23:00:24,136 - funding_amount_forecast - INFO - Loaded 100 records from growthlist data
-2025-04-22 23:00:24,138 - funding_amount_forecast - INFO - Loaded 546 records from topstartup data
-2025-04-22 23:00:24,145 - funding_amount_forecast - INFO - Created DataFrame with 1749 records and 27 columns
-2025-04-22 23:00:24,145 - funding_amount_forecast - INFO - Standardizing DataFrame
-2025-04-22 23:00:24,166 - funding_amount_forecast - INFO - DataFrame standardization complete with 1749 records
-2025-04-22 23:00:24,167 - funding_amount_forecast - INFO - Creating features for funding amount forecasting
-2025-04-22 23:00:24,171 - funding_amount_forecast - INFO - Kept 1727 records with valid funding amounts
-2025-04-22 23:00:24,172 - funding_amount_forecast - INFO - Converting funding_date to datetime
-2025-04-22 23:00:25,566 - funding_amount_forecast - INFO - Estimating next round amounts for 623 companies without actual next round data
-2025-04-22 23:00:25,780 - funding_amount_forecast - INFO - Feature engineering complete. Created 47 features.
-2025-04-22 23:00:25,781 - funding_amount_forecast - INFO - Preparing data for model training
-2025-04-22 23:00:25,783 - funding_amount_forecast - WARNING - Column funding_usd contains all NaN values and will be excluded from features
-2025-04-22 23:00:25,784 - funding_amount_forecast - WARNING - Column avg_time_between_rounds contains all NaN values and will be excluded from features
-2025-04-22 23:00:25,786 - funding_amount_forecast - INFO - Filling missing values with median
-2025-04-22 23:00:25,790 - funding_amount_forecast - INFO - Using 1104 records with actual next round data for validation
-2025-04-22 23:00:25,793 - funding_amount_forecast - INFO - Training set: 1395 records (772 actual, 623 estimated)
-2025-04-22 23:00:25,793 - funding_amount_forecast - INFO - Test set: 332 records (all actual data)
-2025-04-22 23:00:25,799 - funding_amount_forecast - INFO - Training models...
-2025-04-22 23:00:25,799 - funding_amount_forecast - INFO - Training quantile regression forest with quantiles: [0.1, 0.5, 0.9]
-2025-04-22 23:00:25,799 - funding_amount_forecast - INFO - Training model for quantile 0.1
-2025-04-22 23:00:26,278 - funding_amount_forecast - INFO - Trained model for quantile 0.1
-2025-04-22 23:00:26,278 - funding_amount_forecast - INFO - Training model for quantile 0.5
-2025-04-22 23:00:26,780 - funding_amount_forecast - INFO - Trained model for quantile 0.5
-2025-04-22 23:00:26,780 - funding_amount_forecast - INFO - Training model for quantile 0.9
-2025-04-22 23:00:27,272 - funding_amount_forecast - INFO - Trained model for quantile 0.9
-2025-04-22 23:00:27,272 - funding_amount_forecast - INFO - Training ensemble model
-2025-04-22 23:00:28,515 - funding_amount_forecast - INFO - Evaluating models...
-2025-04-22 23:00:28,515 - funding_amount_forecast - INFO - Evaluating model performance
-2025-04-22 23:00:28,519 - funding_amount_forecast - INFO - Quantile Regression Forest Metrics: RMSE=$112360185.60, MAE=$38555485.21, R2=-0.0132, Log-R2=-0.2004, Within 20%=0.09, Same order of magnitude=0.75
-2025-04-22 23:00:28,522 - funding_amount_forecast - INFO - 80% Prediction Interval Coverage: 0.6627
-2025-04-22 23:00:28,522 - funding_amount_forecast - INFO - Evaluating model performance
-2025-04-22 23:00:28,549 - funding_amount_forecast - INFO - random_forest Metrics: RMSE=$275804332.24, MAE=$61702166.33, R2=-5.1047, Log-R2=-0.2720, Within 20%=0.1040, Same order=0.7450
-2025-04-22 23:00:28,552 - funding_amount_forecast - INFO - gradient_boosting Metrics: RMSE=$670999172.73, MAE=$107746554.53, R2=-35.1334, Log-R2=-0.3406, Within 20%=0.1007, Same order=0.7584
-2025-04-22 23:00:28,582 - funding_amount_forecast - INFO - extra_trees Metrics: RMSE=$141038336.60, MAE=$62593575.92, R2=-0.5964, Log-R2=-0.3564, Within 20%=0.0705, Same order=0.6812
-2025-04-22 23:00:28,583 - funding_amount_forecast - INFO - Ensemble Metrics: RMSE=$283882085.32, MAE=$76189392.90, R2=-5.4676, Log-R2=-0.3416, Within 20%=0.0839, Same order=0.7181
-2025-04-22 23:00:28,644 - funding_amount_forecast - INFO - Creating visualizations...
-2025-04-22 23:00:28,644 - funding_amount_forecast - INFO - Creating funding by stage visualization
-2025-04-22 23:00:29,200 - funding_amount_forecast - INFO - Saved funding by stage visualization to /Users/hk/Downloads/DSFinalYearProject/outputSuccessFailure/amount_forecast/funding_by_stage.png
-2025-04-22 23:00:29,200 - funding_amount_forecast - INFO - Creating funding by industry visualization
-2025-04-22 23:00:30,314 - funding_amount_forecast - INFO - Saved funding by industry visualizations to /Users/hk/Downloads/DSFinalYearProject/outputSuccessFailure/amount_forecast/funding_by_industry_average.png and /Users/hk/Downloads/DSFinalYearProject/outputSuccessFailure/amount_forecast/funding_by_industry_distribution.png
-2025-04-22 23:00:30,315 - funding_amount_forecast - INFO - Creating prediction accuracy visualization
-2025-04-22 23:00:30,670 - funding_amount_forecast - INFO - Saved prediction accuracy visualization to /Users/hk/Downloads/DSFinalYearProject/outputSuccessFailure/amount_forecast/prediction_accuracy.png
-2025-04-22 23:00:30,670 - funding_amount_forecast - INFO - Creating feature importance visualization
-2025-04-22 23:00:30,983 - funding_amount_forecast - INFO - Saved feature importance visualization to /Users/hk/Downloads/DSFinalYearProject/outputSuccessFailure/amount_forecast/feature_importance.png
-2025-04-22 23:00:30,983 - funding_amount_forecast - INFO - Creating model calibration visualization
-2025-04-22 23:00:31,241 - funding_amount_forecast - INFO - Saved model calibration visualization to /Users/hk/Downloads/DSFinalYearProject/outputSuccessFailure/amount_forecast/model_calibration.png
-2025-04-22 23:00:31,241 - funding_amount_forecast - INFO - Creating error distribution visualization
-2025-04-22 23:00:32,666 - funding_amount_forecast - INFO - Saved error distribution visualization to /Users/hk/Downloads/DSFinalYearProject/outputSuccessFailure/amount_forecast/error_distribution.png
-2025-04-22 23:00:32,667 - funding_amount_forecast - INFO - Creating prediction intervals visualization
-2025-04-22 23:00:32,982 - funding_amount_forecast - INFO - Saved prediction intervals visualization to /Users/hk/Downloads/DSFinalYearProject/outputSuccessFailure/amount_forecast/prediction_intervals.png
-2025-04-22 23:00:32,982 - funding_amount_forecast - INFO - Generating report...
-2025-04-22 23:00:32,982 - funding_amount_forecast - INFO - Generating funding amount forecast report
-2025-04-22 23:00:33,022 - funding_amount_forecast - INFO - Funding amount forecast report saved to /Users/hk/Downloads/DSFinalYearProject/outputSuccessFailure/amount_forecast/funding_amount_forecast_report.md
-2025-04-22 23:00:33,022 - funding_amount_forecast - INFO - markdown2 package not available, skipping HTML conversion
-2025-04-22 23:00:33,022 - funding_amount_forecast - INFO - Saving model...
-2025-04-22 23:00:33,022 - funding_amount_forecast - INFO - Saving model to /Users/hk/Downloads/DSFinalYearProject/outputSuccessFailure/amount_forecast/funding_amount_forecast_model.pkl
-2025-04-22 23:00:33,096 - funding_amount_forecast - INFO - Model saved successfully to /Users/hk/Downloads/DSFinalYearProject/outputSuccessFailure/amount_forecast/funding_amount_forecast_model.pkl
-2025-04-22 23:00:33,097 - funding_amount_forecast - INFO - Funding amount forecast analysis completed successfully
-2025-04-22 23:28:45,704 - funding_amount_forecast - INFO - Funding Amount Forecast initialized
+2025-04-23 04:31:33,610 - funding_amount_forecast - INFO - Funding Amount Forecast initialized
+2025-04-23 04:34:30,617 - funding_amount_forecast - INFO - Starting funding amount forecast analysis
+2025-04-23 04:34:30,617 - funding_amount_forecast - INFO - Loading data from JSON files
+2025-04-23 04:34:30,621 - funding_amount_forecast - INFO - Loaded 1103 records from fundraiser data
+2025-04-23 04:34:30,621 - funding_amount_forecast - INFO - Loaded 100 records from growthlist data
+2025-04-23 04:34:30,623 - funding_amount_forecast - INFO - Loaded 546 records from topstartup data
+2025-04-23 04:34:30,629 - funding_amount_forecast - INFO - Created DataFrame with 1749 records and 27 columns
+2025-04-23 04:34:30,629 - funding_amount_forecast - INFO - Standardizing DataFrame
+2025-04-23 04:34:30,647 - funding_amount_forecast - INFO - DataFrame standardization complete with 1749 records
+2025-04-23 04:34:30,648 - funding_amount_forecast - INFO - Creating features for funding amount forecasting
+2025-04-23 04:34:30,649 - funding_amount_forecast - INFO - Kept 1727 records with valid funding amounts
+2025-04-23 04:34:30,650 - funding_amount_forecast - INFO - Converting funding_date to datetime
+2025-04-23 04:34:31,672 - funding_amount_forecast - INFO - Estimating next round amounts for 623 companies without actual next round data
+2025-04-23 04:34:31,868 - funding_amount_forecast - INFO - Feature engineering complete. Created 47 features.
+2025-04-23 04:34:31,870 - funding_amount_forecast - INFO - Preparing data for model training
+2025-04-23 04:34:31,872 - funding_amount_forecast - WARNING - Column funding_usd contains all NaN values and will be excluded from features
+2025-04-23 04:34:31,874 - funding_amount_forecast - WARNING - Column avg_time_between_rounds contains all NaN values and will be excluded from features
+2025-04-23 04:34:31,877 - funding_amount_forecast - INFO - Filling missing values with median
+2025-04-23 04:34:31,879 - funding_amount_forecast - INFO - Using 1104 records with actual next round data for validation
+2025-04-23 04:34:31,882 - funding_amount_forecast - INFO - Training set: 1395 records (772 actual, 623 estimated)
+2025-04-23 04:34:31,883 - funding_amount_forecast - INFO - Test set: 332 records (all actual data)
+2025-04-23 04:34:31,889 - funding_amount_forecast - INFO - Training models...
+2025-04-23 04:34:31,889 - funding_amount_forecast - INFO - Training quantile regression forest with quantiles: [0.1, 0.5, 0.9]
+2025-04-23 04:34:31,890 - funding_amount_forecast - INFO - Training model for quantile 0.1
+2025-04-23 04:34:32,366 - funding_amount_forecast - INFO - Trained model for quantile 0.1
+2025-04-23 04:34:32,366 - funding_amount_forecast - INFO - Training model for quantile 0.5
+2025-04-23 04:34:32,830 - funding_amount_forecast - INFO - Trained model for quantile 0.5
+2025-04-23 04:34:32,831 - funding_amount_forecast - INFO - Training model for quantile 0.9
+2025-04-23 04:34:33,269 - funding_amount_forecast - INFO - Trained model for quantile 0.9
+2025-04-23 04:34:33,269 - funding_amount_forecast - INFO - Training ensemble model
+2025-04-23 04:34:34,079 - funding_amount_forecast - INFO - Evaluating models...
+2025-04-23 04:34:34,080 - funding_amount_forecast - INFO - Evaluating model performance
+2025-04-23 04:34:34,082 - funding_amount_forecast - INFO - Quantile Regression Forest Metrics: RMSE=$112309816.35, MAE=$38337661.03, R2=-0.0123, Log-R2=-0.2134, Within 20%=0.09, Same order of magnitude=0.77
+2025-04-23 04:34:34,084 - funding_amount_forecast - INFO - 80% Prediction Interval Coverage: 0.6657
+2025-04-23 04:34:34,084 - funding_amount_forecast - INFO - Evaluating model performance
+2025-04-23 04:34:34,111 - funding_amount_forecast - INFO - random_forest Metrics: RMSE=$270000642.95, MAE=$62022507.23, R2=-4.8505, Log-R2=-0.2721, Within 20%=0.1007, Same order=0.7416
+2025-04-23 04:34:34,114 - funding_amount_forecast - INFO - gradient_boosting Metrics: RMSE=$676202658.08, MAE=$108859593.83, R2=-35.6959, Log-R2=-0.3711, Within 20%=0.0839, Same order=0.7315
+2025-04-23 04:34:34,144 - funding_amount_forecast - INFO - extra_trees Metrics: RMSE=$137329984.29, MAE=$62171171.27, R2=-0.5135, Log-R2=-0.3560, Within 20%=0.0671, Same order=0.6812
+2025-04-23 04:34:34,145 - funding_amount_forecast - INFO - Ensemble Metrics: RMSE=$282823632.58, MAE=$76006641.80, R2=-5.4194, Log-R2=-0.3440, Within 20%=0.0805, Same order=0.7148
+2025-04-23 04:34:34,203 - funding_amount_forecast - INFO - Creating visualizations...
+2025-04-23 04:34:34,203 - funding_amount_forecast - INFO - Creating funding by stage visualization
+2025-04-23 04:34:34,741 - funding_amount_forecast - INFO - Saved funding by stage visualization to /Users/hk/Downloads/DSFinalYearProject/outputSuccessFailure/amount_forecast/funding_by_stage.png
+2025-04-23 04:34:34,741 - funding_amount_forecast - INFO - Creating funding by industry visualization
+2025-04-23 04:34:36,121 - funding_amount_forecast - INFO - Saved funding by industry visualizations to /Users/hk/Downloads/DSFinalYearProject/outputSuccessFailure/amount_forecast/funding_by_industry_average.png and /Users/hk/Downloads/DSFinalYearProject/outputSuccessFailure/amount_forecast/funding_by_industry_distribution.png
+2025-04-23 04:34:36,121 - funding_amount_forecast - INFO - Creating prediction accuracy visualization
+2025-04-23 04:34:36,460 - funding_amount_forecast - INFO - Saved prediction accuracy visualization to /Users/hk/Downloads/DSFinalYearProject/outputSuccessFailure/amount_forecast/prediction_accuracy.png
+2025-04-23 04:34:36,461 - funding_amount_forecast - INFO - Creating feature importance visualization
+2025-04-23 04:34:36,810 - funding_amount_forecast - INFO - Saved feature importance visualization to /Users/hk/Downloads/DSFinalYearProject/outputSuccessFailure/amount_forecast/feature_importance.png
+2025-04-23 04:34:36,810 - funding_amount_forecast - INFO - Creating model calibration visualization
+2025-04-23 04:34:37,075 - funding_amount_forecast - INFO - Saved model calibration visualization to /Users/hk/Downloads/DSFinalYearProject/outputSuccessFailure/amount_forecast/model_calibration.png
+2025-04-23 04:34:37,075 - funding_amount_forecast - INFO - Creating error distribution visualization
+2025-04-23 04:34:38,562 - funding_amount_forecast - INFO - Saved error distribution visualization to /Users/hk/Downloads/DSFinalYearProject/outputSuccessFailure/amount_forecast/error_distribution.png
+2025-04-23 04:34:38,562 - funding_amount_forecast - INFO - Creating prediction intervals visualization
+2025-04-23 04:34:38,839 - funding_amount_forecast - INFO - Saved prediction intervals visualization to /Users/hk/Downloads/DSFinalYearProject/outputSuccessFailure/amount_forecast/prediction_intervals.png
+2025-04-23 04:34:38,839 - funding_amount_forecast - INFO - Generating report...
+2025-04-23 04:34:38,839 - funding_amount_forecast - INFO - Generating funding amount forecast report
+2025-04-23 04:34:38,879 - funding_amount_forecast - INFO - Funding amount forecast report saved to /Users/hk/Downloads/DSFinalYearProject/outputSuccessFailure/amount_forecast/funding_amount_forecast_report.md
+2025-04-23 04:34:38,879 - funding_amount_forecast - INFO - markdown2 package not available, skipping HTML conversion
+2025-04-23 04:34:38,879 - funding_amount_forecast - INFO - Saving model...
+2025-04-23 04:34:38,880 - funding_amount_forecast - INFO - Saving model to /Users/hk/Downloads/DSFinalYearProject/outputSuccessFailure/amount_forecast/funding_amount_forecast_model.pkl
+2025-04-23 04:34:38,956 - funding_amount_forecast - INFO - Model saved successfully to /Users/hk/Downloads/DSFinalYearProject/outputSuccessFailure/amount_forecast/funding_amount_forecast_model.pkl
+2025-04-23 04:34:38,956 - funding_amount_forecast - INFO - Funding amount forecast analysis completed successfully

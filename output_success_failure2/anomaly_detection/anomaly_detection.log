@@ -1,0 +1,35 @@
+2025-04-23 02:22:47,744 - FundingAnomalyDetection - INFO - Starting anomaly detection analysis
+2025-04-23 02:22:47,744 - FundingAnomalyDetection - INFO - Loading data from JSON files in ../JSONFolder
+2025-04-23 02:22:47,745 - FundingAnomalyDetection - INFO - Processing ../JSONFolder/growthlist_industry_analysis.json
+2025-04-23 02:22:47,748 - FundingAnomalyDetection - WARNING - Skipping ../JSONFolder/growthlist_industry_analysis.json - not a list of records or doesn't have a companies array
+2025-04-23 02:22:47,748 - FundingAnomalyDetection - INFO - Processing ../JSONFolder/fundraise_insider_stats.json
+2025-04-23 02:22:47,749 - FundingAnomalyDetection - WARNING - Skipping ../JSONFolder/fundraise_insider_stats.json - not a list of records or doesn't have a companies array
+2025-04-23 02:22:47,749 - FundingAnomalyDetection - INFO - Processing ../JSONFolder/growthlistscrapper.json
+2025-04-23 02:22:47,750 - FundingAnomalyDetection - INFO - Added 100 records from growthlistscrapper.json
+2025-04-23 02:22:47,750 - FundingAnomalyDetection - INFO - Processing ../JSONFolder/topstartupio50.json
+2025-04-23 02:22:47,752 - FundingAnomalyDetection - INFO - Added 546 records from topstartupio50.json
+2025-04-23 02:22:47,752 - FundingAnomalyDetection - INFO - Processing ../JSONFolder/fundraisestartup50.json
+2025-04-23 02:22:47,757 - FundingAnomalyDetection - INFO - Found nested companies array with 1103 records in fundraisestartup50.json
+2025-04-23 02:22:47,757 - FundingAnomalyDetection - INFO - Added 1103 records from fundraisestartup50.json
+2025-04-23 02:22:47,767 - FundingAnomalyDetection - INFO - Loaded 1749 records from JSON files
+2025-04-23 02:22:47,768 - FundingAnomalyDetection - INFO - Creating features for anomaly detection
+2025-04-23 02:22:47,770 - FundingAnomalyDetection - INFO - Created funding_per_employee feature
+2025-04-23 02:22:47,994 - FundingAnomalyDetection - INFO - Created 4 features for anomaly detection
+2025-04-23 02:22:48,049 - FundingAnomalyDetection - INFO - Detecting anomalies in funding data
+2025-04-23 02:22:48,061 - FundingAnomalyDetection - INFO - Fitting Isolation Forest with contamination=0.01
+2025-04-23 02:22:48,289 - FundingAnomalyDetection - INFO - Isolation Forest model trained successfully
+2025-04-23 02:22:48,312 - FundingAnomalyDetection - INFO - Detected 19 anomalies (1.09%)
+2025-04-23 02:22:48,313 - FundingAnomalyDetection - INFO - Creating anomaly visualizations
+2025-04-23 02:22:50,086 - FundingAnomalyDetection - INFO - Creating model calibration and performance visualizations
+2025-04-23 02:22:50,087 - FundingAnomalyDetection - INFO - Creating features for anomaly detection
+2025-04-23 02:22:50,089 - FundingAnomalyDetection - INFO - Created funding_per_employee feature
+2025-04-23 02:22:50,114 - FundingAnomalyDetection - INFO - Created 4 features for anomaly detection
+2025-04-23 02:22:50,115 - FundingAnomalyDetection - INFO - Fitting Isolation Forest with contamination=None
+2025-04-23 02:22:50,233 - FundingAnomalyDetection - INFO - Isolation Forest model trained successfully
+2025-04-23 02:22:50,867 - FundingAnomalyDetection - INFO - Model performance: Accuracy=0.994, Precision=1.000, Recall=0.500, F1=0.667, RMSE=0.422
+2025-04-23 02:22:50,867 - FundingAnomalyDetection - INFO - Anomaly visualizations created successfully
+2025-04-23 02:22:50,867 - FundingAnomalyDetection - INFO - Generating anomaly detection report
+2025-04-23 02:22:50,873 - FundingAnomalyDetection - INFO - Anomaly report saved to ../output_success_failure/anomaly_detection/anomaly_report.csv
+2025-04-23 02:22:50,875 - FundingAnomalyDetection - INFO - Integration data saved to ../output_success_failure/anomaly_detection/anomaly_results.json
+2025-04-23 02:22:50,878 - FundingAnomalyDetection - INFO - Model saved to ../output_success_failure/anomaly_detection/anomaly_model_20250423_022250.pkl
+2025-04-23 02:22:50,878 - FundingAnomalyDetection - INFO - Anomaly detection analysis completed

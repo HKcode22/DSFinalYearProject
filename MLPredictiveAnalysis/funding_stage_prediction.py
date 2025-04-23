@@ -24,6 +24,7 @@ import sqlite3
 import traceback
 import glob
 import shutil
+import re
 
 # Configure logging
 logging.basicConfig(level=logging.INFO, 
@@ -231,7 +232,7 @@ class DataLoader:
             return pd.DataFrame()
     
     def load_topstartup_data(self):
-        """Handle both list and dict formatted JSON"""
+        """Handle the complex format of topstartup data and extract funding information correctly"""
         try:
             with open(self.topstartup_path, 'r') as file:
                 data = json.load(file)
@@ -245,13 +246,49 @@ class DataLoader:
                 logger.error("Unexpected JSON format in topstartup data")
                 return pd.DataFrame()
             
+            # Parse funding information from the funding string
+            if 'funding' in df.columns:
+                # Extract funding information from the complex funding string
+                def extract_funding_info(funding_str):
+                    if not funding_str or pd.isna(funding_str):
+                        return None, None, None
+                    
+                    # Common patterns: "Sequoia $100M Series D in 2025"
+                    # or "Andreessen Horowitz $10B Series J in 2024 $62.0B valuation"
+                    
+                    amount = None
+                    stage = None
+                    date = None
+                    
+                    # Extract amount
+                    amount_match = re.search(r'\$(\d+(?:\.\d+)?[KMB]?)', funding_str)
+                    if amount_match:
+                        amount = amount_match.group(0)  # Keep the $ symbol
+                    
+                    # Extract stage
+                    stage_match = re.search(r'(Seed|Series [A-Z]|Pre-Seed|Angel)', funding_str)
+                    if stage_match:
+                        stage = stage_match.group(0)
+                    
+                    # Extract date - usually has "in YYYY" format
+                    date_match = re.search(r'in (\d{4})', funding_str)
+                    if date_match:
+                        date = date_match.group(1)
+                    
+                    return amount, stage, date
+                
+                # Extract funding details
+                funding_details = df['funding'].apply(extract_funding_info)
+                
+                # Create separate columns for extracted values
+                df['funding_amount'] = funding_details.apply(lambda x: x[0] if x else None)
+                df['funding_stage'] = funding_details.apply(lambda x: x[1] if x else None)
+                df['funding_date'] = funding_details.apply(lambda x: x[2] if x else None)
+            
             # Standardize column names
             column_mapping = {
                 'name': 'company_name',
-                'funding_round': 'funding_stage',
                 'funding_type': 'funding_stage',  # Alternative naming
-                'amount': 'funding_amount',
-                'date': 'funding_date',
                 'category': 'industry'
             }
             
@@ -267,16 +304,23 @@ class DataLoader:
         
         except Exception as e:
             logger.error(f"Error loading topstartup data: {str(e)}")
+            logger.error(traceback.format_exc())
             return pd.DataFrame()
     
     def _parse_funding_amount(self, amount_str):
-        """Convert funding amount strings (e.g., "$27.6M") to numeric values"""
+        """Improved function to convert funding amount strings to numeric values"""
         if not amount_str or pd.isna(amount_str) or amount_str == "":
             return np.nan
         
         try:
             # Remove currency symbol and commas
-            amount_str = amount_str.replace('$', '').replace(',', '').strip()
+            amount_str = str(amount_str).replace('$', '').replace(',', '').strip()
+            
+            # Handle extremely large numbers (like 50000000000)
+            # If number is extremely large, it might be an error
+            if amount_str.isdigit() and len(amount_str) > 11:  # More than 100B
+                logger.warning(f"Suspiciously large funding amount: ${amount_str}")
+                # Take it at face value but log the warning
             
             # Convert based on unit (M=million, B=billion, K=thousand)
             if 'B' in amount_str:
@@ -287,7 +331,8 @@ class DataLoader:
                 return float(amount_str.replace('K', '')) * 1e3
             else:
                 return float(amount_str)
-        except Exception:
+        except Exception as e:
+            logger.warning(f"Error parsing funding amount '{amount_str}': {str(e)}")
             return np.nan
     
     def save_historical_data(self, df, table_name):
@@ -314,12 +359,15 @@ class DataLoader:
             return pd.DataFrame()
     
     def merge_datasets(self):
-        """Merge datasets using list-based construction"""
+        """Improved merge function with better error handling and validation"""
         try:
             # Load raw data
             fundraiser_df = self.load_fundraiser_data()
             growthlist_df = self.load_growthlist_data()
             topstartup_df = self.load_topstartup_data()
+            
+            # Log loaded data sizes
+            logger.info(f"Loaded datasets - Fundraiser: {len(fundraiser_df)} rows, Growthlist: {len(growthlist_df)} rows, Topstartup: {len(topstartup_df)} rows")
             
             # Initialize list to store all records
             all_records = []
@@ -328,52 +376,120 @@ class DataLoader:
             if not fundraiser_df.empty:
                 for _, row in fundraiser_df.iterrows():
                     if pd.notna(row.get('Company')):  # Only add records with valid company names
+                        # Convert numeric values properly
+                        try:
+                            funding_amount = pd.to_numeric(row.get('Funding_Amount_USD'), errors='coerce')
+                            employees = pd.to_numeric(row.get('Total_Employees'), errors='coerce')
+                        except:
+                            funding_amount = np.nan
+                            employees = np.nan
+                            
                         all_records.append({
                             'company_name': row.get('Company'),
                             'funding_stage': row.get('Funding_Type'),
-                            'funding_amount': row.get('Funding_Amount_USD'),
+                            'funding_amount': funding_amount,
                             'funding_date': row.get('Funding_Date'),
                             'industry': row.get('Industry'),
-                            'employees': row.get('Total_Employees')
+                            'employees': employees,
+                            'source': 'fundraiser'
                         })
+                logger.info(f"Processed {len(fundraiser_df)} records from fundraiser data")
             
             # Process growthlist data
             if not growthlist_df.empty:
                 for _, row in growthlist_df.iterrows():
                     if pd.notna(row.get('name')):  # Only add records with valid company names
+                        # Parse the amount if not already parsed
+                        funding_amount = row.get('funding_amount_numeric')
+                        if pd.isna(funding_amount) and pd.notna(row.get('funding_amount')):
+                            funding_amount = self._parse_funding_amount(row.get('funding_amount'))
+                            
                         all_records.append({
                             'company_name': row.get('name'),
                             'funding_stage': row.get('funding_type'),
-                            'funding_amount': row.get('funding_amount_numeric'),
+                            'funding_amount': funding_amount,
                             'funding_date': row.get('last_funding_date'),
                             'industry': row.get('industry'),
-                            'employees': None
+                            'employees': None,
+                            'source': 'growthlist'
                         })
+                logger.info(f"Processed {len(growthlist_df)} records from growthlist data")
             
             # Process topstartup data
             if not topstartup_df.empty:
                 for _, row in topstartup_df.iterrows():
                     company_name = row.get('company_name') or row.get('name')
+                    
                     if pd.notna(company_name):  # Only add records with valid company names
+                        # Clean up data
+                        funding_stage = row.get('funding_stage') or row.get('funding_round')
+                        
+                        # Parse the amount if string
+                        funding_amount = row.get('funding_amount')
+                        if isinstance(funding_amount, str):
+                            funding_amount = self._parse_funding_amount(funding_amount)
+                        
+                        # Get employee count range
+                        employee_count = None
+                        if pd.notna(row.get('employees')):
+                            # Handle ranges like "11-50 employees"
+                            emp_str = str(row.get('employees'))
+                            match = re.search(r'(\d+)-(\d+)', emp_str)
+                            if match:
+                                # Take the average of the range
+                                employee_count = (int(match.group(1)) + int(match.group(2))) / 2
+                        
                         all_records.append({
                             'company_name': company_name,
-                            'funding_stage': row.get('funding_stage') or row.get('funding_round'),
-                            'funding_amount': row.get('funding_amount') or row.get('amount'),
-                            'funding_date': row.get('funding_date') or row.get('date'),
+                            'funding_stage': funding_stage,
+                            'funding_amount': funding_amount,
+                            'funding_date': row.get('funding_date'),
                             'industry': row.get('industry') or row.get('category'),
-                            'employees': None
+                            'employees': employee_count,
+                            'source': 'topstartup'
                         })
+                logger.info(f"Processed {len(topstartup_df)} records from topstartup data")
             
             if all_records:
                 # Create DataFrame from records
                 merged_data = pd.DataFrame(all_records)
                 
+                # Log column counts to debug missing data
+                logger.info(f"Merged data columns: {merged_data.columns.tolist()}")
+                logger.info(f"Non-null counts: {merged_data.count().to_dict()}")
+                
                 # Drop duplicates after creation
+                pre_dedup_count = len(merged_data)
                 merged_data = merged_data.drop_duplicates(
                     subset=['company_name', 'funding_date']
                 ).reset_index(drop=True)
+                logger.info(f"Removed {pre_dedup_count - len(merged_data)} duplicate records")
                 
-                # Fill missing values
+                # Standardize funding stage names
+                stage_mapping = {
+                    'series a': 'Series A',
+                    'series b': 'Series B',
+                    'series c': 'Series C',
+                    'series d': 'Series D',
+                    'series e': 'Series E',
+                    'series f': 'Series F',
+                    'series g': 'Series G',
+                    'series h': 'Series H',
+                    'pre-seed': 'Pre-Seed',
+                    'seed': 'Seed',
+                    'angel': 'Angel',
+                    'grant': 'Grant',
+                    'debt': 'Debt Financing',
+                    'ipo': 'IPO',
+                    'private equity': 'Private Equity'
+                }
+                
+                if 'funding_stage' in merged_data.columns:
+                    merged_data['funding_stage'] = merged_data['funding_stage'].str.lower().map(
+                        lambda x: stage_mapping.get(x, x) if pd.notna(x) else 'Unknown'
+                    )
+                
+                # Fill missing values with meaningful defaults
                 merged_data = merged_data.fillna({
                     'industry': 'Unknown',
                     'employees': 0,
@@ -396,18 +512,43 @@ class FeatureEngineering:
     def __init__(self):
         """Initialize with dynamic funding stage mapping"""
         self.funding_stage_map = {}  # Will be populated dynamically
+        # Standard funding stage progression for reference
+        self.standard_stages = [
+            'Pre-Seed', 'Seed', 'Angel', 
+            'Series A', 'Series B', 'Series C', 
+            'Series D', 'Series E', 'Series F', 
+            'Series G', 'Series H'
+        ]
 
     def extract_features(self, df):
-        """Dynamically create funding stage mapping"""
+        """Extract and create features for funding stage prediction with improved validation"""
+        logger.info(f"Starting feature extraction for {len(df)} records")
         data = df.copy()
         
         # Get unique stages from data
         valid_stages = data['funding_stage'].dropna().unique()
-        self.funding_stage_map = {stage: idx for idx, stage in enumerate(sorted(valid_stages))}
+        logger.info(f"Found {len(valid_stages)} unique funding stages: {valid_stages}")
+        
+        # Create stage mapping that respects the natural progression
+        known_stages = {}
+        for i, stage in enumerate(self.standard_stages):
+            known_stages[stage] = i
+        
+        # Assign known stages first
+        self.funding_stage_map = known_stages.copy()
+        
+        # Assign unknown stages sequential values
+        next_value = max(known_stages.values()) + 1 if known_stages else 0
+        for stage in valid_stages:
+            if stage not in self.funding_stage_map:
+                self.funding_stage_map[stage] = next_value
+                next_value += 1
         
         # Add Unknown category if needed
         if 'Unknown' not in self.funding_stage_map:
-            self.funding_stage_map['Unknown'] = len(self.funding_stage_map)
+            self.funding_stage_map['Unknown'] = next_value
+        
+        logger.info(f"Created funding stage mapping: {self.funding_stage_map}")
         
         # Convert funding stage to numeric
         data['funding_stage_numeric'] = data['funding_stage'].map(
@@ -416,15 +557,63 @@ class FeatureEngineering:
         
         # Handle dates and extract temporal features
         try:
+            # First try to parse dates with flexible format detection
             data['funding_date'] = pd.to_datetime(data['funding_date'], format='mixed', errors='coerce')
+            
+            # If a lot of dates failed to parse, try more specific formats
+            if data['funding_date'].isna().sum() > len(data) * 0.3:
+                logger.warning(f"Many dates failed to parse ({data['funding_date'].isna().sum()} NaN values)")
+                
+                # Try common date formats
+                for fmt in ['%d-%b-%y', '%b %Y', '%Y', '%m/%d/%Y', '%Y-%m-%d']:
+                    try:
+                        # Save current NaN count
+                        na_before = data['funding_date'].isna().sum()
+                        
+                        # Try to parse remaining NaN dates with this format
+                        mask = data['funding_date'].isna()
+                        data.loc[mask, 'funding_date'] = pd.to_datetime(
+                            df.loc[mask, 'funding_date'], 
+                            format=fmt, 
+                            errors='coerce'
+                        )
+                        
+                        # Log success
+                        na_after = data['funding_date'].isna().sum()
+                        if na_before > na_after:
+                            logger.info(f"Format '{fmt}' parsed {na_before - na_after} dates")
+                    except:
+                        pass
+            
+            # Extract temporal features
             data['funding_year'] = data['funding_date'].dt.year
             data['funding_month'] = data['funding_date'].dt.month
+            
+            # Fill NaN years/months with sensible defaults
+            current_year = datetime.now().year
+            current_month = datetime.now().month
+            
+            data['funding_year'] = data['funding_year'].fillna(current_year)
+            data['funding_month'] = data['funding_month'].fillna(current_month)
             
             # Calculate months since first funding (proxy for company age)
             company_first_funding = data.groupby('company_name')['funding_date'].min()
             data['company_first_funding'] = data['company_name'].map(company_first_funding)
-            data['months_since_first_funding'] = (data['funding_date'] - 
-                                                 data['company_first_funding']).dt.days / 30
+            
+            # Calculate months between dates, handling NaT values
+            def safe_month_diff(end_date, start_date):
+                if pd.isna(end_date) or pd.isna(start_date):
+                    return 0
+                try:
+                    return (end_date.year - start_date.year) * 12 + (end_date.month - start_date.month)
+                except:
+                    return 0
+                    
+            data['months_since_first_funding'] = data.apply(
+                lambda row: safe_month_diff(row['funding_date'], row['company_first_funding']), 
+                axis=1
+            )
+            
         except Exception as e:
             logger.warning(f"Error processing dates: {e}")
             # Set default values if date processing fails
@@ -433,12 +622,40 @@ class FeatureEngineering:
             data['months_since_first_funding'] = 0
         
         # Log transform funding amount (handle skewed distribution)
-        data['funding_amount_log'] = np.log1p(pd.to_numeric(data['funding_amount'], errors='coerce').fillna(0))
+        # First ensure it's numeric
+        data['funding_amount'] = pd.to_numeric(data['funding_amount'], errors='coerce')
+        
+        # Check for extremely large values that might be errors (>$100B)
+        if (data['funding_amount'] > 1e11).any():
+            large_values = data[data['funding_amount'] > 1e11]
+            logger.warning(f"Found {len(large_values)} extremely large funding amounts (>$100B)")
+            logger.warning(f"Sample: {large_values[['company_name', 'funding_amount', 'source']].head().to_dict()}")
+            
+            # Cap extremely large values
+            data['funding_amount'] = data['funding_amount'].clip(upper=1e11)
+            
+        # Apply log transform with offset to handle zeros
+        data['funding_amount_log'] = np.log1p(data['funding_amount'].fillna(0))
         
         # Employee efficiency (funding per employee)
         if 'employees' in data.columns:
             data['employees'] = pd.to_numeric(data['employees'], errors='coerce')
-            data['employee_efficiency'] = data['funding_amount'] / data['employees'].replace(0, np.nan)
+            
+            # Avoid division by zero
+            data['employee_efficiency'] = data.apply(
+                lambda row: row['funding_amount'] / row['employees'] if row['employees'] > 0 else np.nan,
+                axis=1
+            )
+            
+            # Fill missing values with median by funding stage
+            efficiency_medians = data.groupby('funding_stage')['employee_efficiency'].median()
+            
+            for stage in data['funding_stage'].unique():
+                stage_median = efficiency_medians.get(stage, data['employee_efficiency'].median())
+                mask = (data['funding_stage'] == stage) & (data['employee_efficiency'].isna())
+                data.loc[mask, 'employee_efficiency'] = stage_median
+            
+            # Fill any remaining NaNs with overall median
             data['employee_efficiency'] = data['employee_efficiency'].fillna(data['employee_efficiency'].median())
         else:
             data['employees'] = np.nan
@@ -447,83 +664,181 @@ class FeatureEngineering:
         # Standardize industry categories
         data['industry_category'] = data['industry'].fillna('Unknown')
         
-        # Map to standardized categories
+        # Map to standardized categories with more comprehensive mapping
         industry_mapping = {
             'artificial intelligence': 'AI & ML',
+            'machine learning': 'AI & ML',
             'information technology': 'IT & Software',
+            'software': 'IT & Software',
             'health': 'Healthcare',
+            'healthcare': 'Healthcare',
             'biotech': 'Biotech',
+            'biotechnology': 'Biotech',
             'financial': 'FinTech',
+            'finance': 'FinTech',
+            'fintech': 'FinTech',
             'education': 'EdTech',
+            'edtech': 'EdTech',
             'retail': 'Retail',
+            'ecommerce': 'Retail',
             'energy': 'Energy',
-            'food': 'Food & Agriculture'
+            'renewable': 'Energy',
+            'food': 'Food & Agriculture',
+            'agriculture': 'Food & Agriculture',
+            'transportation': 'Transport & Logistics',
+            'logistics': 'Transport & Logistics',
+            'real estate': 'Real Estate',
+            'proptech': 'Real Estate'
         }
         
-        # Apply mapping for standardization
-        for key, value in industry_mapping.items():
-            mask = data['industry_category'].str.contains(key, case=False, na=False)
-            data.loc[mask, 'industry_category'] = value
+        # Apply mapping for standardization with better matching
+        def map_industry(industry_str):
+            if not industry_str or pd.isna(industry_str):
+                return 'Unknown'
+                
+            industry_str = industry_str.lower()
+            
+            for key, value in industry_mapping.items():
+                if key in industry_str:
+                    return value
+            
+            return industry_str.title()  # Return capitalized version if no match
         
-        # Create dummy variables for industries
-        industry_dummies = pd.get_dummies(data['industry_category'], prefix='industry')
-        data = pd.concat([data, industry_dummies], axis=1)
+        data['industry_category'] = data['industry_category'].apply(map_industry)
         
         # Location features (if available)
-        if 'location' in data.columns:
-            data['location_category'] = data['location'].fillna('Unknown')
+        if 'location' in data.columns or 'headquarters' in data.columns:
+            # Use either location or headquarters column
+            location_col = 'location' if 'location' in data.columns else 'headquarters'
+            
+            data['location_category'] = data[location_col].fillna('Unknown')
             
             # Extract country or state
-            data['location_category'] = data['location_category'].apply(
-                lambda x: x.split(',')[-1].strip() if isinstance(x, str) and ',' in x else x
+            def extract_location(loc_str):
+                if not isinstance(loc_str, str) or pd.isna(loc_str):
+                    return 'Unknown'
+                
+                # Split by comma and get the last part (usually country/state)
+                parts = [p.strip() for p in loc_str.split(',')]
+                
+                if len(parts) > 1:
+                    return parts[-1]  # Return the last part
+                return loc_str
+            
+            data['location_category'] = data['location_category'].apply(extract_location)
+            
+            # Consolidate common locations
+            location_mapping = {
+                'United States': 'USA',
+                'US': 'USA',
+                'U.S.': 'USA',
+                'U.S.A.': 'USA',
+                'UK': 'United Kingdom',
+                'U.K.': 'United Kingdom'
+            }
+            
+            data['location_category'] = data['location_category'].map(
+                lambda x: location_mapping.get(x, x)
             )
             
-            # # Create location dummies
-            # location_dummies = pd.get_dummies(data['location_category'], prefix='location')
-            # data = pd.concat([data, location_dummies], axis=1)
-        
         # Funding frequency features
         company_funding_counts = data.groupby('company_name').size()
         data['previous_rounds'] = data['company_name'].map(company_funding_counts) - 1
         data['previous_rounds'] = data['previous_rounds'].clip(lower=0)
         
-        # Fill missing values
-        numeric_cols = ['funding_amount', 'funding_amount_log', 'employees', 'employee_efficiency']
+        # New feature: Funding velocity (average months between rounds)
+        company_funding_dates = data.groupby('company_name')['funding_date'].apply(list)
+        
+        def calc_funding_velocity(dates):
+            if not isinstance(dates, list) or len(dates) < 2:
+                return np.nan
+                
+            # Sort dates and remove NaT
+            valid_dates = [d for d in dates if not pd.isna(d)]
+            if len(valid_dates) < 2:
+                return np.nan
+                
+            valid_dates.sort()
+            
+            # Calculate average months between rounds
+            intervals = []
+            for i in range(1, len(valid_dates)):
+                interval = (valid_dates[i].year - valid_dates[i-1].year) * 12 + \
+                          (valid_dates[i].month - valid_dates[i-1].month)
+                intervals.append(interval)
+            
+            return np.mean(intervals) if intervals else np.nan
+        
+        data['funding_velocity'] = data['company_name'].map(
+            company_funding_dates.apply(calc_funding_velocity)
+        )
+        
+        # Fill missing values for all numeric columns
+        numeric_cols = [
+            'funding_amount', 'funding_amount_log', 'employees', 'employee_efficiency',
+            'previous_rounds', 'funding_velocity'
+        ]
+        
         for col in numeric_cols:
             if col in data.columns:
+                # Fill with median by funding stage if available
+                if 'funding_stage' in data.columns:
+                    data[col] = data.groupby('funding_stage')[col].transform(
+                        lambda x: x.fillna(x.median())
+                    )
+                
+                # Fill any remaining NaNs with overall median
                 data[col] = data[col].fillna(data[col].median())
         
         logger.info(f"Feature engineering complete: {data.shape[1]} features created")
         return data
     
     def prepare_model_data(self, data):
-        """Prepare feature matrix with proper type handling"""
-        # Select relevant features
+        """Prepare feature matrix with proper type handling and no dummy data"""
+        # Select relevant features that exist in the original data
         feature_cols = [
             'funding_amount_log', 'employees', 'employee_efficiency',
             'funding_year', 'funding_month', 'previous_rounds',
-            'months_since_first_funding'
+            'months_since_first_funding', 'funding_velocity'
         ]
-
+        
+        # Only use features that actually exist in the data
+        features_to_use = [col for col in feature_cols if col in data.columns]
+        
+        # Log features used
+        logger.info(f"Preparing model data with features: {features_to_use}")
+        
         # Clean feature data - ensure numeric types
-        X = data[feature_cols].copy()
+        X = data[features_to_use].copy()
         
         # Convert all features to numeric
         for col in X.columns:
             X[col] = pd.to_numeric(X[col], errors='coerce')
         
-        # Fill missing values only for numeric columns
+        # Fill missing values for numeric columns - using median from actual data
         numeric_cols = X.select_dtypes(include=np.number).columns
-        X[numeric_cols] = X[numeric_cols].fillna(X[numeric_cols].median())
+        
+        for col in numeric_cols:
+            if X[col].isna().any():
+                median_value = X[col].median()
+                X[col] = X[col].fillna(median_value)
+                logger.info(f"Filled NaN values in {col} with median: {median_value}")
         
         # Target variable processing
         y = pd.to_numeric(data['funding_stage_numeric'], errors='coerce')
         valid_mask = y.notna()
         
+        # Check we have enough data
+        if valid_mask.sum() < 10:
+            logger.warning(f"Very few valid target values: {valid_mask.sum()} out of {len(y)}")
+        
         X = X[valid_mask]
         y = y[valid_mask].astype(int)
         
+        # Log data shapes and class distribution
         logger.info(f"Prepared model data: X shape={X.shape}, y shape={y.shape}")
+        logger.info(f"Class distribution: {y.value_counts().to_dict()}")
+        
         return X, y
 
 
@@ -1432,11 +1747,7 @@ class EnhancedPipeline(FundingStagePredictionPipeline):
             y, final_map = remap_classes(y)
             logger.info(f"Final class mapping after merging rare classes: {final_map}")
             
-            # Now apply SMOTE if viable
-            if len(np.unique(y)) > 1:
-                smote = SMOTE(random_state=42)
-                X, y = smote.fit_resample(X, y)
-                logger.info(f"Applied SMOTE. New shape: {X.shape}")
+            # No SMOTE or synthetic data generation
             
             # Feature selection with proper classes
             n_classes = len(np.unique(y))
@@ -1448,13 +1759,19 @@ class EnhancedPipeline(FundingStagePredictionPipeline):
                 ),
                 threshold="median"
             )
-            X = selector.fit_transform(X, y)
-            logger.info(f"Selected features shape: {X.shape}")
+            X_selected = selector.fit_transform(X, y)
+            logger.info(f"Selected features shape: {X_selected.shape}")
+            
+            # Keep track of selected features if X has column names
+            if hasattr(X, 'columns'):
+                selected_indices = selector.get_support()
+                selected_features = [feature for feature, selected in zip(X.columns, selected_indices) if selected]
+                logger.info(f"Selected features: {selected_features}")
             
             # Step 4: Enhanced model training
             logger.info("Step 4: Tuning and training models...")
-            best_rf = self.model_trainer.tune_random_forest(X, y)
-            best_xgb = self.model_trainer.tune_xgboost(X, y)
+            best_rf = self.model_trainer.tune_random_forest(X_selected, y)
+            best_xgb = self.model_trainer.tune_xgboost(X_selected, y)
             
             # Create ensemble
             ensemble = VotingClassifier(
@@ -1463,22 +1780,23 @@ class EnhancedPipeline(FundingStagePredictionPipeline):
             )
             
             # Train models
-            rf_model, rf_results = self._train_final_model(best_rf, X, y, 'Random Forest')
-            xgb_model, xgb_results = self._train_final_model(best_xgb, X, y, 'XGBoost')
-            ensemble_model, ensemble_results = self._train_final_model(ensemble, X, y, 'Ensemble')
+            rf_model, rf_results = self._train_final_model(best_rf, X_selected, y, 'Random Forest')
+            xgb_model, xgb_results = self._train_final_model(best_xgb, X_selected, y, 'XGBoost')
+            ensemble_model, ensemble_results = self._train_final_model(ensemble, X_selected, y, 'Ensemble')
             
             # Step 5: Advanced visualizations
             logger.info("Step 5: Creating advanced visualizations...")
             self._create_advanced_visualizations(rf_model, xgb_model, rf_results, xgb_results, y)
-            # --- NEW VISUALIZATIONS ---
-            key_features = [
+            
+            # No dummy/fabricated data visualizations
+            key_features = [col for col in [
                 'funding_amount_log', 'employees',
                 'employee_efficiency', 'previous_rounds',
                 'months_since_first_funding', 'funding_year', 'funding_month'
-            ]
-            self.visualizer.plot_pairwise_features(processed_data, key_features)
-            self.visualizer.plot_full_correlation_heatmap(processed_data)
-            self.visualizer.plot_violin_funding_by_stage(processed_data)
+            ] if col in processed_data.columns]
+            
+            self.visualizer.plot_temporal_trends(processed_data)
+            self.visualizer.plot_funding_vs_employees(processed_data)
             
             # Save results with all models
             model_results = {
@@ -1593,7 +1911,7 @@ def main():
     from datetime import datetime, timedelta
     
     parser = argparse.ArgumentParser(description='Funding Stage Prediction System')
-    parser.add_argument('--data-dir', type=str, default='./', help='Base directory with data')
+    parser.add_argument('--data-dir', type=str, default='./JSONFolder', help='Base directory with JSON data files')
     parser.add_argument('--output-dir', type=str, default='./outputFundingStagePrediction', help='Output directory')
     parser.add_argument('--schedule', action='store_true', help='Run on a schedule')
     parser.add_argument('--interval', type=int, default=24, help='Hours between runs')
@@ -1606,8 +1924,15 @@ def main():
     
     args = parser.parse_args()
     
-    # Initialize pipeline
-    pipeline = EnhancedPipeline(args.data_dir, args.output_dir, archive=True)  # Always enable archive
+    # Make sure we're using the JSONFolder explicitly
+    if args.data_dir == './':
+        args.data_dir = './JSONFolder'
+    
+    logger.info(f"Starting with data directory: {args.data_dir}")
+    logger.info(f"Output directory: {args.output_dir}")
+    
+    # Initialize pipeline with JSONFolder explicitly
+    pipeline = EnhancedPipeline(args.data_dir, args.output_dir, archive=args.archive)
     
     if args.reset_db:
         pipeline.data_loader.reset_database()
@@ -1615,11 +1940,17 @@ def main():
     # Define the job function
     def scheduled_job():
         logger.info(f"Running scheduled job at {datetime.now()}")
-        pipeline.run()
+        success = pipeline.run()
+        if not success:
+            logger.error("Scheduled job failed")
     
     # Run the job immediately regardless of scheduling options
     logger.info(f"Running funding prediction job at {datetime.now()}")
-    pipeline.run()
+    success = pipeline.run()
+    
+    if not success:
+        logger.error("Initial run failed - check logs for details")
+        return
     
     # Only run once and exit if specifically requested with --once flag
     # Otherwise, default behavior is to schedule future runs

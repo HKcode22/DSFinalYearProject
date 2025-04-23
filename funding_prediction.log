@@ -4338,3 +4338,1338 @@ ValueError: The truth value of a DataFrame is ambiguous. Use a.empty, a.bool(), 
 2025-04-22 23:28:45,884 - funding_stage_prediction - INFO - Applied SMOTE. New shape: (7202, 7)
 2025-04-22 23:28:52,860 - funding_stage_prediction - INFO - Selected features shape: (7202, 4)
 2025-04-22 23:28:52,861 - funding_stage_prediction - INFO - Step 4: Tuning and training models...
+2025-04-23 00:09:39,638 - __main__ - INFO - Historical database initialized
+2025-04-23 00:09:39,644 - __main__ - INFO - Archived data files to ./data_archive/20250423_000939
+2025-04-23 00:09:39,644 - __main__ - INFO - Created visualization directory: ./outputFundingStagePrediction/visualizations
+2025-04-23 00:09:39,658 - __main__ - INFO - Created visualization directory: ./outputFundingStagePrediction/visualizations
+2025-04-23 00:09:39,660 - __main__ - INFO - Initialized model directory structure at ./outputFundingStagePrediction/models
+2025-04-23 00:09:39,663 - __main__ - INFO - Running funding prediction job at 2025-04-23 00:09:39.663516
+2025-04-23 00:09:39,663 - __main__ - INFO - Starting funding stage prediction pipeline
+2025-04-23 00:09:39,673 - __main__ - INFO - Loaded 1103 records from fundraiser data
+2025-04-23 00:09:39,675 - __main__ - INFO - Loaded 100 records from growthlist data
+2025-04-23 00:09:39,680 - __main__ - INFO - Loaded 546 records from topstartup data
+2025-04-23 00:09:39,779 - __main__ - INFO - Successfully merged 1748 records
+2025-04-23 00:09:39,809 - __main__ - INFO - Feature engineering complete: 122 features created
+2025-04-23 00:09:39,813 - __main__ - INFO - Prepared model data: X shape=(1748, 7), y shape=(1748,)
+2025-04-23 00:09:39,814 - __main__ - INFO - Initial class mapping: {np.int64(0): 0, np.int64(1): 1, np.int64(2): 2, np.int64(3): 3, np.int64(4): 4, np.int64(5): 5, np.int64(6): 6, np.int64(7): 7, np.int64(8): 8, np.int64(9): 9, np.int64(10): 10, np.int64(11): 11, np.int64(12): 12, np.int64(13): 13, np.int64(14): 14, np.int64(15): 15, np.int64(16): 16, np.int64(17): 17}
+2025-04-23 00:09:39,816 - __main__ - INFO - Merged rare classes into majority class 16
+2025-04-23 00:09:39,816 - __main__ - INFO - Final class mapping after merging rare classes: {np.int64(1): 0, np.int64(2): 1, np.int64(4): 2, np.int64(5): 3, np.int64(6): 4, np.int64(7): 5, np.int64(8): 6, np.int64(9): 7, np.int64(10): 8, np.int64(11): 9, np.int64(15): 10, np.int64(16): 11, np.int64(17): 12}
+2025-04-23 00:09:40,065 - __main__ - INFO - Applied SMOTE. New shape: (7202, 7)
+2025-04-23 00:10:06,998 - __main__ - INFO - Selected features shape: (7202, 4)
+2025-04-23 00:10:06,999 - __main__ - INFO - Step 4: Tuning and training models...
+2025-04-23 00:11:45,559 - success_failure_prediction - INFO - Success/Failure Prediction system initialized
+2025-04-23 00:11:45,559 - success_failure_prediction - INFO - Starting success/failure prediction analysis
+2025-04-23 00:11:45,559 - success_failure_prediction - INFO - Step 1: Initializing component models
+2025-04-23 00:11:45,559 - success_failure_prediction - INFO - Initializing component prediction systems
+2025-04-23 00:11:45,561 - funding_stage_prediction - INFO - Historical database initialized
+2025-04-23 00:11:45,561 - funding_stage_prediction - INFO - Created visualization directory: ./outputFundingStagePrediction/visualizations
+2025-04-23 00:11:45,563 - funding_stage_prediction - INFO - Created visualization directory: ./outputFundingStagePrediction/visualizations
+2025-04-23 00:11:45,564 - funding_stage_prediction - INFO - Initialized model directory structure at ./outputFundingStagePrediction/models
+2025-04-23 00:11:45,565 - funding_amount_forecast - INFO - Funding Amount Forecast initialized
+2025-04-23 00:11:45,565 - success_failure_prediction - INFO - All component systems initialized successfully
+2025-04-23 00:11:45,565 - success_failure_prediction - INFO - Step 2: Running component analyses
+2025-04-23 00:11:45,565 - success_failure_prediction - INFO - Running component analyses
+2025-04-23 00:11:45,565 - success_failure_prediction - INFO - Running funding stage prediction
+2025-04-23 00:11:45,565 - funding_stage_prediction - INFO - Starting funding stage prediction pipeline
+2025-04-23 00:11:45,575 - funding_stage_prediction - INFO - Loaded 1103 records from fundraiser data
+2025-04-23 00:11:46,032 - funding_stage_prediction - INFO - Loaded 100 records from growthlist data
+2025-04-23 00:11:46,038 - funding_stage_prediction - INFO - Loaded 546 records from topstartup data
+2025-04-23 00:11:46,307 - funding_stage_prediction - INFO - Successfully merged 1748 records
+2025-04-23 00:11:46,699 - funding_stage_prediction - INFO - Feature engineering complete: 122 features created
+2025-04-23 00:11:46,719 - funding_stage_prediction - INFO - Prepared model data: X shape=(1748, 7), y shape=(1748,)
+2025-04-23 00:11:46,720 - funding_stage_prediction - INFO - Initial class mapping: {np.int64(0): 0, np.int64(1): 1, np.int64(2): 2, np.int64(3): 3, np.int64(4): 4, np.int64(5): 5, np.int64(6): 6, np.int64(7): 7, np.int64(8): 8, np.int64(9): 9, np.int64(10): 10, np.int64(11): 11, np.int64(12): 12, np.int64(13): 13, np.int64(14): 14, np.int64(15): 15, np.int64(16): 16, np.int64(17): 17}
+2025-04-23 00:11:46,723 - funding_stage_prediction - INFO - Merged rare classes into majority class 16
+2025-04-23 00:11:46,724 - funding_stage_prediction - INFO - Final class mapping after merging rare classes: {np.int64(1): 0, np.int64(2): 1, np.int64(4): 2, np.int64(5): 3, np.int64(6): 4, np.int64(7): 5, np.int64(8): 6, np.int64(9): 7, np.int64(10): 8, np.int64(11): 9, np.int64(15): 10, np.int64(16): 11, np.int64(17): 12}
+2025-04-23 00:11:47,277 - funding_stage_prediction - INFO - Applied SMOTE. New shape: (7202, 7)
+2025-04-23 00:12:07,524 - funding_stage_prediction - INFO - Selected features shape: (7202, 4)
+2025-04-23 00:12:07,526 - funding_stage_prediction - INFO - Step 4: Tuning and training models...
+2025-04-23 00:15:27,160 - __main__ - INFO - Best RF params: {'class_weight': 'balanced', 'max_depth': None, 'min_samples_split': 2, 'n_estimators': 300}
+2025-04-23 00:15:27,170 - __main__ - INFO - Best RF accuracy: 0.6933
+2025-04-23 00:17:40,082 - __main__ - INFO - Best XGB params: {'colsample_bytree': np.float64(0.9054170129539512), 'gamma': np.float64(0.3540196020378691), 'learning_rate': np.float64(0.2144195996465459), 'max_depth': 8, 'num_class': 13, 'subsample': np.float64(0.7884437430741049)}
+2025-04-23 00:17:40,085 - __main__ - INFO - Best XGB accuracy: 0.6887
+2025-04-23 00:18:15,524 - funding_stage_prediction - INFO - Best RF params: {'class_weight': 'balanced', 'max_depth': None, 'min_samples_split': 2, 'n_estimators': 300}
+2025-04-23 00:18:15,530 - funding_stage_prediction - INFO - Best RF accuracy: 0.6933
+2025-04-23 00:19:12,341 - __main__ - INFO - Step 5: Creating advanced visualizations...
+2025-04-23 00:20:07,042 - __main__ - INFO - Pipeline completed successfully!
+2025-04-23 00:20:07,042 - __main__ - INFO - Scheduled to run daily at 00:00
+2025-04-23 00:20:07,042 - __main__ - INFO - Next scheduled run: 2025-04-24 00:00:07.042866
+2025-04-23 00:20:07,042 - __main__ - INFO - Scheduler active - process will remain running
+2025-04-23 00:20:14,830 - funding_stage_prediction - INFO - Best XGB params: {'colsample_bytree': np.float64(0.9653188791148907), 'gamma': np.float64(0.17935123375512202), 'learning_rate': np.float64(0.14460493604558278), 'max_depth': 7, 'num_class': 13, 'subsample': np.float64(0.7176600684030945)}
+2025-04-23 00:20:14,834 - funding_stage_prediction - INFO - Best XGB accuracy: 0.6873
+2025-04-23 00:20:52,246 - funding_stage_prediction - INFO - Step 5: Creating advanced visualizations...
+2025-04-23 00:21:14,198 - funding_stage_prediction - INFO - Pipeline completed successfully!
+2025-04-23 00:21:14,198 - success_failure_prediction - INFO - Running funding continuation analysis
+2025-04-23 00:21:14,199 - funding_continuation - INFO - Starting funding continuation analysis pipeline
+2025-04-23 00:21:14,199 - funding_continuation - ERROR - No data available for analysis
+2025-04-23 00:21:14,199 - success_failure_prediction - INFO - Running funding amount forecast
+2025-04-23 00:21:14,199 - funding_amount_forecast - INFO - Starting funding amount forecast analysis
+2025-04-23 00:21:14,199 - funding_amount_forecast - INFO - Loading data from JSON files
+2025-04-23 00:21:14,202 - funding_amount_forecast - INFO - Loaded 1103 records from fundraiser data
+2025-04-23 00:21:14,203 - funding_amount_forecast - INFO - Loaded 100 records from growthlist data
+2025-04-23 00:21:14,205 - funding_amount_forecast - INFO - Loaded 546 records from topstartup data
+2025-04-23 00:21:14,210 - funding_amount_forecast - INFO - Created DataFrame with 1749 records and 27 columns
+2025-04-23 00:21:14,210 - funding_amount_forecast - INFO - Standardizing DataFrame
+2025-04-23 00:21:14,232 - funding_amount_forecast - INFO - DataFrame standardization complete with 1749 records
+2025-04-23 00:21:14,233 - funding_amount_forecast - INFO - Creating features for funding amount forecasting
+2025-04-23 00:21:14,235 - funding_amount_forecast - INFO - Kept 1727 records with valid funding amounts
+2025-04-23 00:21:14,235 - funding_amount_forecast - INFO - Converting funding_date to datetime
+2025-04-23 00:21:15,618 - funding_amount_forecast - INFO - Estimating next round amounts for 623 companies without actual next round data
+2025-04-23 00:21:15,799 - funding_amount_forecast - INFO - Feature engineering complete. Created 47 features.
+2025-04-23 00:21:15,800 - funding_amount_forecast - INFO - Preparing data for model training
+2025-04-23 00:21:15,802 - funding_amount_forecast - WARNING - Column funding_usd contains all NaN values and will be excluded from features
+2025-04-23 00:21:15,803 - funding_amount_forecast - WARNING - Column avg_time_between_rounds contains all NaN values and will be excluded from features
+2025-04-23 00:21:15,804 - funding_amount_forecast - INFO - Filling missing values with median
+2025-04-23 00:21:15,806 - funding_amount_forecast - INFO - Using 1104 records with actual next round data for validation
+2025-04-23 00:21:15,809 - funding_amount_forecast - INFO - Training set: 1395 records (772 actual, 623 estimated)
+2025-04-23 00:21:15,809 - funding_amount_forecast - INFO - Test set: 332 records (all actual data)
+2025-04-23 00:21:15,815 - funding_amount_forecast - INFO - Training models...
+2025-04-23 00:21:15,815 - funding_amount_forecast - INFO - Training quantile regression forest with quantiles: [0.1, 0.5, 0.9]
+2025-04-23 00:21:15,815 - funding_amount_forecast - INFO - Training model for quantile 0.1
+2025-04-23 00:21:16,633 - funding_amount_forecast - INFO - Trained model for quantile 0.1
+2025-04-23 00:21:16,634 - funding_amount_forecast - INFO - Training model for quantile 0.5
+2025-04-23 00:21:17,113 - funding_amount_forecast - INFO - Trained model for quantile 0.5
+2025-04-23 00:21:17,113 - funding_amount_forecast - INFO - Training model for quantile 0.9
+2025-04-23 00:21:17,541 - funding_amount_forecast - INFO - Trained model for quantile 0.9
+2025-04-23 00:21:17,541 - funding_amount_forecast - INFO - Training ensemble model
+2025-04-23 00:21:18,214 - funding_amount_forecast - INFO - Evaluating models...
+2025-04-23 00:21:18,215 - funding_amount_forecast - INFO - Evaluating model performance
+2025-04-23 00:21:18,219 - funding_amount_forecast - INFO - Quantile Regression Forest Metrics: RMSE=$112116572.71, MAE=$38140810.74, R2=-0.0088, Log-R2=-0.1543, Within 20%=0.08, Same order of magnitude=0.77
+2025-04-23 00:21:18,222 - funding_amount_forecast - INFO - 80% Prediction Interval Coverage: 0.6627
+2025-04-23 00:21:18,222 - funding_amount_forecast - INFO - Evaluating model performance
+2025-04-23 00:21:18,251 - funding_amount_forecast - INFO - random_forest Metrics: RMSE=$269843173.27, MAE=$61942837.65, R2=-4.8437, Log-R2=-0.2712, Within 20%=0.1007, Same order=0.7416
+2025-04-23 00:21:18,253 - funding_amount_forecast - INFO - gradient_boosting Metrics: RMSE=$621433186.04, MAE=$100225428.25, R2=-29.9923, Log-R2=-0.4155, Within 20%=0.0772, Same order=0.7315
+2025-04-23 00:21:18,282 - funding_amount_forecast - INFO - extra_trees Metrics: RMSE=$139488891.91, MAE=$62472261.56, R2=-0.5615, Log-R2=-0.3562, Within 20%=0.0671, Same order=0.6812
+2025-04-23 00:21:18,283 - funding_amount_forecast - INFO - Ensemble Metrics: RMSE=$259861521.78, MAE=$73034892.63, R2=-4.4194, Log-R2=-0.3657, Within 20%=0.0872, Same order=0.7081
+2025-04-23 00:21:18,346 - funding_amount_forecast - INFO - Creating visualizations...
+2025-04-23 00:21:18,346 - funding_amount_forecast - INFO - Creating funding by stage visualization
+2025-04-23 00:21:18,904 - funding_amount_forecast - INFO - Saved funding by stage visualization to /Users/hk/Downloads/DSFinalYearProject/outputSuccessFailure/amount_forecast/funding_by_stage.png
+2025-04-23 00:21:18,905 - funding_amount_forecast - INFO - Creating funding by industry visualization
+2025-04-23 00:21:19,986 - funding_amount_forecast - INFO - Saved funding by industry visualizations to /Users/hk/Downloads/DSFinalYearProject/outputSuccessFailure/amount_forecast/funding_by_industry_average.png and /Users/hk/Downloads/DSFinalYearProject/outputSuccessFailure/amount_forecast/funding_by_industry_distribution.png
+2025-04-23 00:21:19,987 - funding_amount_forecast - INFO - Creating prediction accuracy visualization
+2025-04-23 00:21:20,304 - funding_amount_forecast - INFO - Saved prediction accuracy visualization to /Users/hk/Downloads/DSFinalYearProject/outputSuccessFailure/amount_forecast/prediction_accuracy.png
+2025-04-23 00:21:20,305 - funding_amount_forecast - INFO - Creating feature importance visualization
+2025-04-23 00:21:20,596 - funding_amount_forecast - INFO - Saved feature importance visualization to /Users/hk/Downloads/DSFinalYearProject/outputSuccessFailure/amount_forecast/feature_importance.png
+2025-04-23 00:21:20,596 - funding_amount_forecast - INFO - Creating model calibration visualization
+2025-04-23 00:21:20,857 - funding_amount_forecast - INFO - Saved model calibration visualization to /Users/hk/Downloads/DSFinalYearProject/outputSuccessFailure/amount_forecast/model_calibration.png
+2025-04-23 00:21:20,857 - funding_amount_forecast - INFO - Creating error distribution visualization
+2025-04-23 00:21:22,223 - funding_amount_forecast - INFO - Saved error distribution visualization to /Users/hk/Downloads/DSFinalYearProject/outputSuccessFailure/amount_forecast/error_distribution.png
+2025-04-23 00:21:22,223 - funding_amount_forecast - INFO - Creating prediction intervals visualization
+2025-04-23 00:21:22,675 - funding_amount_forecast - INFO - Saved prediction intervals visualization to /Users/hk/Downloads/DSFinalYearProject/outputSuccessFailure/amount_forecast/prediction_intervals.png
+2025-04-23 00:21:22,676 - funding_amount_forecast - INFO - Generating report...
+2025-04-23 00:21:22,677 - funding_amount_forecast - INFO - Generating funding amount forecast report
+2025-04-23 00:21:22,737 - funding_amount_forecast - INFO - Funding amount forecast report saved to /Users/hk/Downloads/DSFinalYearProject/outputSuccessFailure/amount_forecast/funding_amount_forecast_report.md
+2025-04-23 00:21:22,737 - funding_amount_forecast - INFO - markdown2 package not available, skipping HTML conversion
+2025-04-23 00:21:22,738 - funding_amount_forecast - INFO - Saving model...
+2025-04-23 00:21:22,738 - funding_amount_forecast - INFO - Saving model to /Users/hk/Downloads/DSFinalYearProject/outputSuccessFailure/amount_forecast/funding_amount_forecast_model.pkl
+2025-04-23 00:21:22,854 - funding_amount_forecast - INFO - Model saved successfully to /Users/hk/Downloads/DSFinalYearProject/outputSuccessFailure/amount_forecast/funding_amount_forecast_model.pkl
+2025-04-23 00:21:22,855 - funding_amount_forecast - INFO - Funding amount forecast analysis completed successfully
+2025-04-23 00:21:22,857 - success_failure_prediction - INFO - Running funding anomaly detection
+2025-04-23 00:21:22,858 - FundingAnomalyDetection - INFO - Starting anomaly detection analysis
+2025-04-23 00:21:22,858 - FundingAnomalyDetection - INFO - Loading data from JSON files in /Users/hk/Downloads/DSFinalYearProject/JSONFolder
+2025-04-23 00:21:22,859 - FundingAnomalyDetection - INFO - Processing /Users/hk/Downloads/DSFinalYearProject/JSONFolder/growthlist_industry_analysis.json
+2025-04-23 00:21:22,860 - FundingAnomalyDetection - WARNING - Skipping /Users/hk/Downloads/DSFinalYearProject/JSONFolder/growthlist_industry_analysis.json - not a list of records or doesn't have a companies array
+2025-04-23 00:21:22,860 - FundingAnomalyDetection - INFO - Processing /Users/hk/Downloads/DSFinalYearProject/JSONFolder/fundraise_insider_stats.json
+2025-04-23 00:21:22,861 - FundingAnomalyDetection - WARNING - Skipping /Users/hk/Downloads/DSFinalYearProject/JSONFolder/fundraise_insider_stats.json - not a list of records or doesn't have a companies array
+2025-04-23 00:21:22,861 - FundingAnomalyDetection - INFO - Processing /Users/hk/Downloads/DSFinalYearProject/JSONFolder/growthlistscrapper.json
+2025-04-23 00:21:22,862 - FundingAnomalyDetection - INFO - Added 100 records from growthlistscrapper.json
+2025-04-23 00:21:22,862 - FundingAnomalyDetection - INFO - Processing /Users/hk/Downloads/DSFinalYearProject/JSONFolder/topstartupio50.json
+2025-04-23 00:21:22,865 - FundingAnomalyDetection - INFO - Added 546 records from topstartupio50.json
+2025-04-23 00:21:22,865 - FundingAnomalyDetection - INFO - Processing /Users/hk/Downloads/DSFinalYearProject/JSONFolder/fundraisestartup50.json
+2025-04-23 00:21:22,870 - FundingAnomalyDetection - INFO - Found nested companies array with 1103 records in fundraisestartup50.json
+2025-04-23 00:21:22,871 - FundingAnomalyDetection - INFO - Added 1103 records from fundraisestartup50.json
+2025-04-23 00:21:22,886 - FundingAnomalyDetection - INFO - Loaded 1749 records from JSON files
+2025-04-23 00:21:22,887 - FundingAnomalyDetection - INFO - Creating features for anomaly detection
+2025-04-23 00:21:22,890 - FundingAnomalyDetection - INFO - Created funding_per_employee feature
+2025-04-23 00:21:22,913 - FundingAnomalyDetection - INFO - Created 4 features for anomaly detection
+2025-04-23 00:21:22,914 - FundingAnomalyDetection - INFO - Detecting anomalies in funding data
+2025-04-23 00:21:22,915 - FundingAnomalyDetection - INFO - Fitting Isolation Forest with contamination=0.01
+2025-04-23 00:21:23,064 - FundingAnomalyDetection - INFO - Isolation Forest model trained successfully
+2025-04-23 00:21:23,088 - FundingAnomalyDetection - INFO - Detected 19 anomalies (1.09%)
+2025-04-23 00:21:23,089 - FundingAnomalyDetection - INFO - Creating anomaly visualizations
+2025-04-23 00:21:24,196 - FundingAnomalyDetection - INFO - Creating model calibration and performance visualizations
+2025-04-23 00:21:24,197 - FundingAnomalyDetection - INFO - Creating features for anomaly detection
+2025-04-23 00:21:24,199 - FundingAnomalyDetection - INFO - Created funding_per_employee feature
+2025-04-23 00:21:24,221 - FundingAnomalyDetection - INFO - Created 4 features for anomaly detection
+2025-04-23 00:21:24,225 - FundingAnomalyDetection - INFO - Fitting Isolation Forest with contamination=None
+2025-04-23 00:21:24,328 - FundingAnomalyDetection - INFO - Isolation Forest model trained successfully
+2025-04-23 00:21:24,999 - FundingAnomalyDetection - INFO - Model performance: Accuracy=0.994, Precision=1.000, Recall=0.500, F1=0.667, RMSE=0.422
+2025-04-23 00:21:25,000 - FundingAnomalyDetection - INFO - Anomaly visualizations created successfully
+2025-04-23 00:21:25,000 - FundingAnomalyDetection - INFO - Generating anomaly detection report
+2025-04-23 00:21:25,006 - FundingAnomalyDetection - INFO - Anomaly report saved to /Users/hk/Downloads/DSFinalYearProject/outputSuccessFailure/anomaly_detection/anomaly_report.csv
+2025-04-23 00:21:25,008 - FundingAnomalyDetection - INFO - Integration data saved to /Users/hk/Downloads/DSFinalYearProject/outputSuccessFailure/anomaly_detection/anomaly_results.json
+2025-04-23 00:21:25,010 - FundingAnomalyDetection - INFO - Model saved to /Users/hk/Downloads/DSFinalYearProject/outputSuccessFailure/anomaly_detection/anomaly_model_20250423_002125.pkl
+2025-04-23 00:21:25,010 - FundingAnomalyDetection - INFO - Anomaly detection analysis completed
+2025-04-23 00:21:25,010 - success_failure_prediction - INFO - Running industry trend analysis
+2025-04-23 00:21:25,010 - IndustryTrendAnalysis - INFO - Generating industry trend report...
+2025-04-23 00:21:25,011 - IndustryTrendAnalysis - INFO - Report saved to /Users/hk/Downloads/DSFinalYearProject/outputSuccessFailure/industry_trends/industry_trend_report.json
+2025-04-23 00:21:25,011 - success_failure_prediction - INFO - All component analyses completed successfully
+2025-04-23 00:21:25,011 - success_failure_prediction - INFO - Step 3: Integrating data
+2025-04-23 00:21:25,011 - success_failure_prediction - INFO - Integrating data from all components
+2025-04-23 00:21:25,011 - success_failure_prediction - INFO - Loading data directly from JSON files
+2025-04-23 00:21:25,011 - success_failure_prediction - INFO - Checking file existence: /Users/hk/Downloads/DSFinalYearProject/JSONFolder/fundraisestartup50.json, exists: True
+2025-04-23 00:21:25,011 - success_failure_prediction - INFO - Checking file existence: /Users/hk/Downloads/DSFinalYearProject/JSONFolder/growthlistscrapper.json, exists: True
+2025-04-23 00:21:25,011 - success_failure_prediction - INFO - Checking file existence: /Users/hk/Downloads/DSFinalYearProject/JSONFolder/topstartupio50.json, exists: True
+2025-04-23 00:21:25,015 - success_failure_prediction - INFO - Loaded 1103 records from fundraisestartup50.json
+2025-04-23 00:21:25,017 - success_failure_prediction - INFO - Loaded 100 records from growthlistscrapper.json
+2025-04-23 00:21:25,019 - success_failure_prediction - INFO - Loaded 546 records from topstartupio50.json
+2025-04-23 00:21:25,064 - success_failure_prediction - INFO - Combined 1749 records from all JSON files
+2025-04-23 00:21:25,077 - success_failure_prediction - INFO - Successfully integrated data: 1748 records with 30 features
+2025-04-23 00:21:25,078 - success_failure_prediction - INFO - Step 4: Calculating success scores
+2025-04-23 00:21:25,078 - success_failure_prediction - INFO - Calculating success scores
+2025-04-23 00:21:25,088 - success_failure_prediction - WARNING - No survival information available, estimating from stage and funding
+2025-04-23 00:21:25,112 - success_failure_prediction - WARNING - No anomaly detection information available, using optimistic score
+2025-04-23 00:21:25,113 - success_failure_prediction - INFO - Success scores calculated successfully
+2025-04-23 00:21:25,113 - success_failure_prediction - INFO - Step 5: Classifying startups
+2025-04-23 00:21:25,113 - success_failure_prediction - INFO - Classifying companies by success potential
+2025-04-23 00:21:25,120 - success_failure_prediction - INFO - Optimistic thresholds - Low: 36.7, Medium: 45.2, High: 56.1
+2025-04-23 00:21:25,123 - success_failure_prediction - INFO - Classification results: {'Moderate Success Potential': np.int64(487), 'High Success Potential': np.int64(431), 'Moderate Failure Risk': np.int64(387), 'High Failure Risk': np.int64(352)}
+2025-04-23 00:21:25,135 - success_failure_prediction - INFO - Risk level distribution: {'Medium Risk': '718 (41.1%)', 'Low Risk': '477 (27.3%)', 'High Risk': '382 (21.9%)', 'Minimal Risk': '171 (9.8%)'}
+2025-04-23 00:21:25,135 - success_failure_prediction - INFO - Step 6: Generating visualizations
+2025-04-23 00:21:25,135 - success_failure_prediction - INFO - Generating visualizations
+2025-04-23 00:21:26,316 - success_failure_prediction - INFO - Generated visualizations successfully in /Users/hk/Downloads/DSFinalYearProject/outputSuccessFailure/visualizations
+2025-04-23 00:21:26,317 - success_failure_prediction - INFO - Step 7: Generating report
+2025-04-23 00:21:26,317 - success_failure_prediction - INFO - Generating success/failure prediction report
+2025-04-23 00:21:26,330 - success_failure_prediction - INFO - Generated report successfully: /Users/hk/Downloads/DSFinalYearProject/outputSuccessFailure/success_failure_report.txt
+2025-04-23 00:21:26,379 - success_failure_prediction - INFO - Saved predictions to: /Users/hk/Downloads/DSFinalYearProject/outputSuccessFailure/success_failure_predictions.csv
+2025-04-23 00:21:26,380 - success_failure_prediction - INFO - Analysis complete. Overall success rate: 52.5%
+2025-04-23 00:21:26,380 - success_failure_prediction - INFO - Total companies analyzed: 1748
+2025-04-23 00:21:26,380 - success_failure_prediction - INFO - Predicted successful: 918 (52.5%)
+2025-04-23 00:21:26,380 - success_failure_prediction - INFO - Predicted unsuccessful: 830 (47.5%)
+2025-04-23 00:21:26,380 - success_failure_prediction - INFO - Classification breakdown:
+2025-04-23 00:21:26,380 - success_failure_prediction - INFO - - High Success Potential: 431 (24.7%)
+2025-04-23 00:21:26,381 - success_failure_prediction - INFO - - Moderate Success Potential: 487 (27.9%)
+2025-04-23 00:21:26,381 - success_failure_prediction - INFO - - Moderate Failure Risk: 387 (22.1%)
+2025-04-23 00:21:26,381 - success_failure_prediction - INFO - - High Failure Risk: 352 (20.1%)
+2025-04-23 00:21:26,383 - success_failure_prediction - INFO - Top performing industries:
+2025-04-23 00:21:26,383 - success_failure_prediction - INFO - - medical practice: 100.0% success rate (based on 2 companies)
+2025-04-23 00:21:26,383 - success_failure_prediction - INFO - - : 88.8% success rate (based on 547 companies)
+2025-04-23 00:21:26,383 - success_failure_prediction - INFO - - computer hardware: 70.0% success rate (based on 10 companies)
+2025-04-23 00:21:26,383 - success_failure_prediction - INFO - Lowest performing industries:
+2025-04-23 00:21:26,383 - success_failure_prediction - INFO - - Aerospace: 0.0% success rate (based on 1 companies)
+2025-04-23 00:21:26,384 - success_failure_prediction - INFO - - Agriculture, Food and Beverage, Artificial Intelligence, E-commerce: 0.0% success rate (based on 1 companies)
+2025-04-23 00:21:26,384 - success_failure_prediction - INFO - - Architecture, Media: 0.0% success rate (based on 1 companies)
+2025-04-23 00:21:26,386 - success_failure_prediction - INFO - Success rate by funding stage:
+2025-04-23 00:21:26,386 - success_failure_prediction - INFO - - Series D: 100.0% success rate (based on 84 companies)
+2025-04-23 00:21:26,386 - success_failure_prediction - INFO - - Series E: 100.0% success rate (based on 39 companies)
+2025-04-23 00:21:26,386 - success_failure_prediction - INFO - - Series F: 100.0% success rate (based on 23 companies)
+2025-04-23 00:21:26,386 - success_failure_prediction - INFO - - Series H: 100.0% success rate (based on 7 companies)
+2025-04-23 00:21:26,386 - success_failure_prediction - INFO - - Series C: 96.6% success rate (based on 179 companies)
+2025-04-23 00:21:26,386 - success_failure_prediction - INFO - - Series B: 93.7% success rate (based on 223 companies)
+2025-04-23 00:21:26,386 - success_failure_prediction - INFO - - Private Equity: 89.3% success rate (based on 28 companies)
+2025-04-23 00:21:26,386 - success_failure_prediction - INFO - - Series G: 85.7% success rate (based on 7 companies)
+2025-04-23 00:21:26,386 - success_failure_prediction - INFO - - Debt Financing: 76.7% success rate (based on 43 companies)
+2025-04-23 00:21:26,387 - success_failure_prediction - INFO - - Series A: 62.0% success rate (based on 313 companies)
+2025-04-23 00:21:26,387 - success_failure_prediction - INFO - - Venture - Series Unknown: 43.0% success rate (based on 172 companies)
+2025-04-23 00:21:26,387 - success_failure_prediction - INFO - - Undisclosed: 4.0% success rate (based on 25 companies)
+2025-04-23 00:21:26,387 - success_failure_prediction - INFO - - Seed: 0.6% success rate (based on 349 companies)
+2025-04-23 00:21:26,387 - success_failure_prediction - INFO - - Pre-Seed: 0.0% success rate (based on 122 companies)
+2025-04-23 00:21:26,387 - success_failure_prediction - INFO - - Grant: 0.0% success rate (based on 67 companies)
+2025-04-23 00:33:28,849 - __main__ - INFO - Historical database initialized
+2025-04-23 00:33:28,852 - __main__ - INFO - Archived data files to ./data_archive/20250423_003328
+2025-04-23 00:33:28,852 - __main__ - INFO - Created visualization directory: ./outputFundingStagePrediction/visualizations
+2025-04-23 00:33:28,854 - __main__ - INFO - Created visualization directory: ./outputFundingStagePrediction/visualizations
+2025-04-23 00:33:28,855 - __main__ - INFO - Initialized model directory structure at ./outputFundingStagePrediction/models
+2025-04-23 00:33:28,855 - __main__ - INFO - Running funding prediction job at 2025-04-23 00:33:28.855248
+2025-04-23 00:33:28,855 - __main__ - INFO - Starting funding stage prediction pipeline
+2025-04-23 00:33:28,865 - __main__ - INFO - Loaded 1103 records from fundraiser data
+2025-04-23 00:33:28,867 - __main__ - INFO - Loaded 100 records from growthlist data
+2025-04-23 00:33:28,871 - __main__ - INFO - Loaded 546 records from topstartup data
+2025-04-23 00:33:28,946 - __main__ - INFO - Successfully merged 1748 records
+2025-04-23 00:33:28,984 - __main__ - INFO - Feature engineering complete: 15 features created
+2025-04-23 00:33:28,990 - __main__ - INFO - Prepared model data: X shape=(1748, 7), y shape=(1748,)
+2025-04-23 00:33:28,992 - __main__ - INFO - Initial class mapping: {np.int64(0): 0, np.int64(1): 1, np.int64(2): 2, np.int64(3): 3, np.int64(4): 4, np.int64(5): 5, np.int64(6): 6, np.int64(7): 7, np.int64(8): 8, np.int64(9): 9, np.int64(10): 10, np.int64(11): 11, np.int64(12): 12, np.int64(13): 13, np.int64(14): 14, np.int64(15): 15, np.int64(16): 16, np.int64(17): 17}
+2025-04-23 00:33:28,993 - __main__ - INFO - Merged rare classes into majority class 16
+2025-04-23 00:33:28,994 - __main__ - INFO - Final class mapping after merging rare classes: {np.int64(1): 0, np.int64(2): 1, np.int64(4): 2, np.int64(5): 3, np.int64(6): 4, np.int64(7): 5, np.int64(8): 6, np.int64(9): 7, np.int64(10): 8, np.int64(11): 9, np.int64(15): 10, np.int64(16): 11, np.int64(17): 12}
+2025-04-23 00:33:29,089 - __main__ - INFO - Applied SMOTE. New shape: (7202, 7)
+2025-04-23 00:33:38,425 - __main__ - INFO - Selected features shape: (7202, 4)
+2025-04-23 00:33:38,425 - __main__ - INFO - Step 4: Tuning and training models...
+2025-04-23 00:35:17,157 - __main__ - INFO - Best RF params: {'class_weight': 'balanced', 'max_depth': None, 'min_samples_split': 2, 'n_estimators': 300}
+2025-04-23 00:35:17,159 - __main__ - INFO - Best RF accuracy: 0.6933
+2025-04-23 00:36:08,640 - __main__ - INFO - Best XGB params: {'colsample_bytree': np.float64(0.9581737660759841), 'gamma': np.float64(0.17798310033569725), 'learning_rate': np.float64(0.18548640169824104), 'max_depth': 9, 'num_class': 13, 'subsample': np.float64(0.6170677287269222)}
+2025-04-23 00:36:08,641 - __main__ - INFO - Best XGB accuracy: 0.6887
+2025-04-23 00:36:52,330 - __main__ - INFO - Step 5: Creating advanced visualizations...
+2025-04-23 00:41:58,840 - __main__ - INFO - Starting with data directory: ./JSONFolder
+2025-04-23 00:41:58,842 - __main__ - INFO - Output directory: ./outputFundingStagePrediction
+2025-04-23 00:41:58,843 - __main__ - INFO - Historical database initialized
+2025-04-23 00:41:58,843 - __main__ - INFO - Created visualization directory: ./outputFundingStagePrediction/visualizations
+2025-04-23 00:41:58,846 - __main__ - INFO - Created visualization directory: ./outputFundingStagePrediction/visualizations
+2025-04-23 00:41:58,849 - __main__ - INFO - Initialized model directory structure at ./outputFundingStagePrediction/models
+2025-04-23 00:41:58,849 - __main__ - INFO - Running funding prediction job at 2025-04-23 00:41:58.849672
+2025-04-23 00:41:58,849 - __main__ - INFO - Starting funding stage prediction pipeline
+2025-04-23 00:41:58,863 - __main__ - INFO - Loaded 1103 records from fundraiser data
+2025-04-23 00:41:58,867 - __main__ - INFO - Loaded 100 records from growthlist data
+2025-04-23 00:41:58,880 - __main__ - INFO - Loaded 546 records from topstartup data
+2025-04-23 00:41:58,881 - __main__ - INFO - Loaded datasets - Fundraiser: 1103 rows, Growthlist: 100 rows, Topstartup: 546 rows
+2025-04-23 00:41:58,932 - __main__ - INFO - Processed 1103 records from fundraiser data
+2025-04-23 00:41:58,938 - __main__ - INFO - Processed 100 records from growthlist data
+2025-04-23 00:41:58,966 - __main__ - INFO - Processed 546 records from topstartup data
+2025-04-23 00:41:58,969 - __main__ - INFO - Merged data columns: ['company_name', 'funding_stage', 'funding_amount', 'funding_date', 'industry', 'employees', 'source']
+2025-04-23 00:41:58,971 - __main__ - INFO - Non-null counts: {'company_name': 1749, 'funding_stage': 1690, 'funding_amount': 1727, 'funding_date': 1714, 'industry': 1203, 'employees': 1641, 'source': 1749}
+2025-04-23 00:41:58,972 - __main__ - INFO - Removed 1 duplicate records
+2025-04-23 00:41:58,975 - __main__ - INFO - Successfully merged 1748 records
+2025-04-23 00:41:58,976 - __main__ - INFO - Starting feature extraction for 1748 records
+2025-04-23 00:41:58,977 - __main__ - INFO - Found 20 unique funding stages: ['Series A' 'Seed' 'venture - series unknown' 'debt financing'
+ 'undisclosed' 'Grant' 'Private Equity' 'Pre-Seed' 'Series C' 'Series B'
+ 'Series D' 'Series H' 'Angel' 'Series E' 'Series F' 'Series G'
+ 'initial coin offering' 'series j' 'Unknown' 'series i']
+2025-04-23 00:41:58,977 - __main__ - INFO - Created funding stage mapping: {'Pre-Seed': 0, 'Seed': 1, 'Angel': 2, 'Series A': 3, 'Series B': 4, 'Series C': 5, 'Series D': 6, 'Series E': 7, 'Series F': 8, 'Series G': 9, 'Series H': 10, 'venture - series unknown': 11, 'debt financing': 12, 'undisclosed': 13, 'Grant': 14, 'Private Equity': 15, 'initial coin offering': 16, 'series j': 17, 'Unknown': 18, 'series i': 19}
+2025-04-23 00:41:59,147 - __main__ - INFO - Feature engineering complete: 17 features created
+2025-04-23 00:41:59,147 - __main__ - INFO - Preparing model data with features: ['funding_amount_log', 'employees', 'employee_efficiency', 'funding_year', 'funding_month', 'previous_rounds', 'months_since_first_funding', 'funding_velocity']
+2025-04-23 00:41:59,150 - __main__ - INFO - Prepared model data: X shape=(1748, 8), y shape=(1748,)
+2025-04-23 00:41:59,151 - __main__ - INFO - Class distribution: {1: 347, 3: 313, 4: 223, 5: 179, 11: 172, 0: 124, 6: 84, 14: 67, 18: 59, 12: 43, 7: 39, 15: 28, 13: 25, 8: 23, 10: 7, 9: 7, 2: 4, 19: 2, 16: 1, 17: 1}
+2025-04-23 00:41:59,151 - __main__ - INFO - Initial class mapping: {np.int64(0): 0, np.int64(1): 1, np.int64(2): 2, np.int64(3): 3, np.int64(4): 4, np.int64(5): 5, np.int64(6): 6, np.int64(7): 7, np.int64(8): 8, np.int64(9): 9, np.int64(10): 10, np.int64(11): 11, np.int64(12): 12, np.int64(13): 13, np.int64(14): 14, np.int64(15): 15, np.int64(16): 16, np.int64(17): 17, np.int64(18): 18, np.int64(19): 19}
+2025-04-23 00:41:59,152 - __main__ - INFO - Merged rare classes into majority class 1
+2025-04-23 00:41:59,153 - __main__ - INFO - Final class mapping after merging rare classes: {np.int64(0): 0, np.int64(1): 1, np.int64(3): 2, np.int64(4): 3, np.int64(5): 4, np.int64(6): 5, np.int64(7): 6, np.int64(8): 7, np.int64(9): 8, np.int64(10): 9, np.int64(11): 10, np.int64(12): 11, np.int64(13): 12, np.int64(14): 13, np.int64(15): 14, np.int64(18): 15}
+2025-04-23 00:42:16,334 - __main__ - INFO - Selected features shape: (1748, 4)
+2025-04-23 00:42:16,337 - __main__ - INFO - Selected features: ['funding_amount_log', 'employees', 'previous_rounds', 'funding_velocity']
+2025-04-23 00:42:16,337 - __main__ - INFO - Step 4: Tuning and training models...
+2025-04-23 00:44:32,625 - __main__ - INFO - Best RF params: {'class_weight': 'balanced', 'max_depth': 10, 'min_samples_split': 5, 'n_estimators': 200}
+2025-04-23 00:44:32,643 - __main__ - INFO - Best RF accuracy: 0.8198
+2025-04-23 00:45:25,205 - __main__ - INFO - Best XGB params: {'colsample_bytree': np.float64(0.7342094668362549), 'gamma': np.float64(0.4757178175668916), 'learning_rate': np.float64(0.012467687647985228), 'max_depth': 5, 'num_class': 16, 'subsample': np.float64(0.6396708444984515)}
+2025-04-23 00:45:25,208 - __main__ - INFO - Best XGB accuracy: 0.8324
+2025-04-23 00:46:02,587 - __main__ - INFO - Step 5: Creating advanced visualizations...
+2025-04-23 00:46:05,897 - __main__ - INFO - Pipeline completed successfully!
+2025-04-23 00:46:05,897 - __main__ - INFO - Scheduled to run daily at 00:00
+2025-04-23 00:46:05,897 - __main__ - INFO - Next scheduled run: 2025-04-24 00:00:05.897399
+2025-04-23 00:46:05,897 - __main__ - INFO - Scheduler active - process will remain running
+2025-04-23 02:09:55,092 - success_failure_prediction - INFO - Success/Failure Prediction system initialized
+2025-04-23 02:09:55,092 - success_failure_prediction - INFO - Starting success/failure prediction analysis
+2025-04-23 02:09:55,092 - success_failure_prediction - INFO - Step 1: Initializing component models
+2025-04-23 02:09:55,093 - success_failure_prediction - INFO - Initializing component prediction systems
+2025-04-23 02:09:55,096 - funding_stage_prediction - INFO - Historical database initialized
+2025-04-23 02:09:55,096 - funding_stage_prediction - INFO - Created visualization directory: ./outputFundingStagePrediction/visualizations
+2025-04-23 02:09:55,098 - funding_stage_prediction - INFO - Created visualization directory: ./outputFundingStagePrediction/visualizations
+2025-04-23 02:09:55,099 - funding_stage_prediction - INFO - Initialized model directory structure at ./outputFundingStagePrediction/models
+2025-04-23 02:09:55,101 - funding_amount_forecast - INFO - Funding Amount Forecast initialized
+2025-04-23 02:09:55,101 - success_failure_prediction - INFO - All component systems initialized successfully
+2025-04-23 02:09:55,101 - success_failure_prediction - INFO - Step 2: Running component analyses
+2025-04-23 02:09:55,101 - success_failure_prediction - INFO - Running component analyses
+2025-04-23 02:09:55,101 - success_failure_prediction - INFO - Running funding stage prediction
+2025-04-23 02:09:55,101 - funding_stage_prediction - INFO - Starting funding stage prediction pipeline
+2025-04-23 02:09:55,112 - funding_stage_prediction - INFO - Loaded 1103 records from fundraiser data
+2025-04-23 02:09:55,114 - funding_stage_prediction - INFO - Loaded 100 records from growthlist data
+2025-04-23 02:09:55,123 - funding_stage_prediction - INFO - Loaded 546 records from topstartup data
+2025-04-23 02:09:55,123 - funding_stage_prediction - INFO - Loaded datasets - Fundraiser: 1103 rows, Growthlist: 100 rows, Topstartup: 546 rows
+2025-04-23 02:09:55,165 - funding_stage_prediction - INFO - Processed 1103 records from fundraiser data
+2025-04-23 02:09:55,168 - funding_stage_prediction - INFO - Processed 100 records from growthlist data
+2025-04-23 02:09:55,187 - funding_stage_prediction - INFO - Processed 546 records from topstartup data
+2025-04-23 02:09:55,189 - funding_stage_prediction - INFO - Merged data columns: ['company_name', 'funding_stage', 'funding_amount', 'funding_date', 'industry', 'employees', 'source']
+2025-04-23 02:09:55,190 - funding_stage_prediction - INFO - Non-null counts: {'company_name': 1749, 'funding_stage': 1690, 'funding_amount': 1727, 'funding_date': 1714, 'industry': 1203, 'employees': 1641, 'source': 1749}
+2025-04-23 02:09:55,194 - funding_stage_prediction - INFO - Removed 1 duplicate records
+2025-04-23 02:09:55,196 - funding_stage_prediction - INFO - Successfully merged 1748 records
+2025-04-23 02:09:55,197 - funding_stage_prediction - INFO - Starting feature extraction for 1748 records
+2025-04-23 02:09:55,198 - funding_stage_prediction - INFO - Found 20 unique funding stages: ['Series A' 'Seed' 'venture - series unknown' 'debt financing'
+ 'undisclosed' 'Grant' 'Private Equity' 'Pre-Seed' 'Series C' 'Series B'
+ 'Series D' 'Series H' 'Angel' 'Series E' 'Series F' 'Series G'
+ 'initial coin offering' 'series j' 'Unknown' 'series i']
+2025-04-23 02:09:55,198 - funding_stage_prediction - INFO - Created funding stage mapping: {'Pre-Seed': 0, 'Seed': 1, 'Angel': 2, 'Series A': 3, 'Series B': 4, 'Series C': 5, 'Series D': 6, 'Series E': 7, 'Series F': 8, 'Series G': 9, 'Series H': 10, 'venture - series unknown': 11, 'debt financing': 12, 'undisclosed': 13, 'Grant': 14, 'Private Equity': 15, 'initial coin offering': 16, 'series j': 17, 'Unknown': 18, 'series i': 19}
+2025-04-23 02:09:55,307 - funding_stage_prediction - INFO - Feature engineering complete: 17 features created
+2025-04-23 02:09:55,307 - funding_stage_prediction - INFO - Preparing model data with features: ['funding_amount_log', 'employees', 'employee_efficiency', 'funding_year', 'funding_month', 'previous_rounds', 'months_since_first_funding', 'funding_velocity']
+2025-04-23 02:09:55,310 - funding_stage_prediction - INFO - Prepared model data: X shape=(1748, 8), y shape=(1748,)
+2025-04-23 02:09:55,311 - funding_stage_prediction - INFO - Class distribution: {1: 347, 3: 313, 4: 223, 5: 179, 11: 172, 0: 124, 6: 84, 14: 67, 18: 59, 12: 43, 7: 39, 15: 28, 13: 25, 8: 23, 10: 7, 9: 7, 2: 4, 19: 2, 16: 1, 17: 1}
+2025-04-23 02:09:55,311 - funding_stage_prediction - INFO - Initial class mapping: {np.int64(0): 0, np.int64(1): 1, np.int64(2): 2, np.int64(3): 3, np.int64(4): 4, np.int64(5): 5, np.int64(6): 6, np.int64(7): 7, np.int64(8): 8, np.int64(9): 9, np.int64(10): 10, np.int64(11): 11, np.int64(12): 12, np.int64(13): 13, np.int64(14): 14, np.int64(15): 15, np.int64(16): 16, np.int64(17): 17, np.int64(18): 18, np.int64(19): 19}
+2025-04-23 02:09:55,312 - funding_stage_prediction - INFO - Merged rare classes into majority class 1
+2025-04-23 02:09:55,313 - funding_stage_prediction - INFO - Final class mapping after merging rare classes: {np.int64(0): 0, np.int64(1): 1, np.int64(3): 2, np.int64(4): 3, np.int64(5): 4, np.int64(6): 5, np.int64(7): 6, np.int64(8): 7, np.int64(9): 8, np.int64(10): 9, np.int64(11): 10, np.int64(12): 11, np.int64(13): 12, np.int64(14): 13, np.int64(15): 14, np.int64(18): 15}
+2025-04-23 02:10:03,053 - success_failure_prediction - INFO - Success/Failure Prediction system initialized
+2025-04-23 02:10:03,054 - success_failure_prediction - INFO - Starting success/failure prediction analysis
+2025-04-23 02:10:03,054 - success_failure_prediction - INFO - Step 1: Initializing component models
+2025-04-23 02:10:03,054 - success_failure_prediction - INFO - Initializing component prediction systems
+2025-04-23 02:10:03,056 - funding_stage_prediction - INFO - Historical database initialized
+2025-04-23 02:10:03,056 - funding_stage_prediction - INFO - Created visualization directory: ./outputFundingStagePrediction/visualizations
+2025-04-23 02:10:03,058 - funding_stage_prediction - INFO - Created visualization directory: ./outputFundingStagePrediction/visualizations
+2025-04-23 02:10:03,060 - funding_stage_prediction - INFO - Initialized model directory structure at ./outputFundingStagePrediction/models
+2025-04-23 02:10:03,061 - funding_amount_forecast - INFO - Funding Amount Forecast initialized
+2025-04-23 02:10:03,062 - success_failure_prediction - INFO - All component systems initialized successfully
+2025-04-23 02:10:03,062 - success_failure_prediction - INFO - Step 2: Running component analyses
+2025-04-23 02:10:03,062 - success_failure_prediction - INFO - Running component analyses
+2025-04-23 02:10:03,062 - success_failure_prediction - INFO - Running funding stage prediction
+2025-04-23 02:10:03,062 - funding_stage_prediction - INFO - Starting funding stage prediction pipeline
+2025-04-23 02:10:03,070 - funding_stage_prediction - INFO - Loaded 1103 records from fundraiser data
+2025-04-23 02:10:03,072 - funding_stage_prediction - INFO - Loaded 100 records from growthlist data
+2025-04-23 02:10:03,077 - funding_stage_prediction - INFO - Loaded 546 records from topstartup data
+2025-04-23 02:10:03,077 - funding_stage_prediction - INFO - Loaded datasets - Fundraiser: 1103 rows, Growthlist: 100 rows, Topstartup: 546 rows
+2025-04-23 02:10:03,120 - funding_stage_prediction - INFO - Processed 1103 records from fundraiser data
+2025-04-23 02:10:03,123 - funding_stage_prediction - INFO - Processed 100 records from growthlist data
+2025-04-23 02:10:03,141 - funding_stage_prediction - INFO - Processed 546 records from topstartup data
+2025-04-23 02:10:03,142 - funding_stage_prediction - INFO - Merged data columns: ['company_name', 'funding_stage', 'funding_amount', 'funding_date', 'industry', 'employees', 'source']
+2025-04-23 02:10:03,143 - funding_stage_prediction - INFO - Non-null counts: {'company_name': 1749, 'funding_stage': 1690, 'funding_amount': 1727, 'funding_date': 1714, 'industry': 1203, 'employees': 1641, 'source': 1749}
+2025-04-23 02:10:03,144 - funding_stage_prediction - INFO - Removed 1 duplicate records
+2025-04-23 02:10:03,147 - funding_stage_prediction - INFO - Successfully merged 1748 records
+2025-04-23 02:10:03,148 - funding_stage_prediction - INFO - Starting feature extraction for 1748 records
+2025-04-23 02:10:03,148 - funding_stage_prediction - INFO - Found 20 unique funding stages: ['Series A' 'Seed' 'venture - series unknown' 'debt financing'
+ 'undisclosed' 'Grant' 'Private Equity' 'Pre-Seed' 'Series C' 'Series B'
+ 'Series D' 'Series H' 'Angel' 'Series E' 'Series F' 'Series G'
+ 'initial coin offering' 'series j' 'Unknown' 'series i']
+2025-04-23 02:10:03,148 - funding_stage_prediction - INFO - Created funding stage mapping: {'Pre-Seed': 0, 'Seed': 1, 'Angel': 2, 'Series A': 3, 'Series B': 4, 'Series C': 5, 'Series D': 6, 'Series E': 7, 'Series F': 8, 'Series G': 9, 'Series H': 10, 'venture - series unknown': 11, 'debt financing': 12, 'undisclosed': 13, 'Grant': 14, 'Private Equity': 15, 'initial coin offering': 16, 'series j': 17, 'Unknown': 18, 'series i': 19}
+2025-04-23 02:10:03,244 - funding_stage_prediction - INFO - Feature engineering complete: 17 features created
+2025-04-23 02:10:03,245 - funding_stage_prediction - INFO - Preparing model data with features: ['funding_amount_log', 'employees', 'employee_efficiency', 'funding_year', 'funding_month', 'previous_rounds', 'months_since_first_funding', 'funding_velocity']
+2025-04-23 02:10:03,247 - funding_stage_prediction - INFO - Prepared model data: X shape=(1748, 8), y shape=(1748,)
+2025-04-23 02:10:03,247 - funding_stage_prediction - INFO - Class distribution: {1: 347, 3: 313, 4: 223, 5: 179, 11: 172, 0: 124, 6: 84, 14: 67, 18: 59, 12: 43, 7: 39, 15: 28, 13: 25, 8: 23, 10: 7, 9: 7, 2: 4, 19: 2, 16: 1, 17: 1}
+2025-04-23 02:10:03,247 - funding_stage_prediction - INFO - Initial class mapping: {np.int64(0): 0, np.int64(1): 1, np.int64(2): 2, np.int64(3): 3, np.int64(4): 4, np.int64(5): 5, np.int64(6): 6, np.int64(7): 7, np.int64(8): 8, np.int64(9): 9, np.int64(10): 10, np.int64(11): 11, np.int64(12): 12, np.int64(13): 13, np.int64(14): 14, np.int64(15): 15, np.int64(16): 16, np.int64(17): 17, np.int64(18): 18, np.int64(19): 19}
+2025-04-23 02:10:03,248 - funding_stage_prediction - INFO - Merged rare classes into majority class 1
+2025-04-23 02:10:03,248 - funding_stage_prediction - INFO - Final class mapping after merging rare classes: {np.int64(0): 0, np.int64(1): 1, np.int64(3): 2, np.int64(4): 3, np.int64(5): 4, np.int64(6): 5, np.int64(7): 6, np.int64(8): 7, np.int64(9): 8, np.int64(10): 9, np.int64(11): 10, np.int64(12): 11, np.int64(13): 12, np.int64(14): 13, np.int64(15): 14, np.int64(18): 15}
+2025-04-23 02:10:08,635 - funding_stage_prediction - INFO - Selected features shape: (1748, 4)
+2025-04-23 02:10:08,636 - funding_stage_prediction - INFO - Selected features: ['funding_amount_log', 'employees', 'previous_rounds', 'funding_velocity']
+2025-04-23 02:10:08,636 - funding_stage_prediction - INFO - Step 4: Tuning and training models...
+2025-04-23 02:10:56,442 - funding_stage_prediction - INFO - Best RF params: {'class_weight': 'balanced', 'max_depth': 10, 'min_samples_split': 5, 'n_estimators': 200}
+2025-04-23 02:10:56,443 - funding_stage_prediction - INFO - Best RF accuracy: 0.8198
+2025-04-23 02:11:19,066 - funding_stage_prediction - INFO - Best XGB params: {'colsample_bytree': np.float64(0.6043376395709089), 'gamma': np.float64(0.41610408526309844), 'learning_rate': np.float64(0.018128121777370443), 'max_depth': 5, 'num_class': 16, 'subsample': np.float64(0.832315303334431)}
+2025-04-23 02:11:19,075 - funding_stage_prediction - INFO - Best XGB accuracy: 0.8226
+2025-04-23 02:11:43,626 - funding_stage_prediction - INFO - Step 5: Creating advanced visualizations...
+2025-04-23 02:11:47,166 - funding_stage_prediction - INFO - Pipeline completed successfully!
+2025-04-23 02:11:47,166 - success_failure_prediction - INFO - Running funding continuation analysis
+2025-04-23 02:11:47,167 - funding_continuation - INFO - Starting funding continuation analysis pipeline
+2025-04-23 02:11:47,167 - funding_continuation - ERROR - No data available for analysis
+2025-04-23 02:11:47,167 - success_failure_prediction - INFO - Running funding amount forecast
+2025-04-23 02:11:47,167 - funding_amount_forecast - INFO - Starting funding amount forecast analysis
+2025-04-23 02:11:47,168 - funding_amount_forecast - INFO - Loading data from JSON files
+2025-04-23 02:11:47,172 - funding_amount_forecast - INFO - Loaded 1103 records from fundraiser data
+2025-04-23 02:11:47,172 - funding_amount_forecast - INFO - Loaded 100 records from growthlist data
+2025-04-23 02:11:47,174 - funding_amount_forecast - INFO - Loaded 546 records from topstartup data
+2025-04-23 02:11:47,181 - funding_amount_forecast - INFO - Created DataFrame with 1749 records and 27 columns
+2025-04-23 02:11:47,181 - funding_amount_forecast - INFO - Standardizing DataFrame
+2025-04-23 02:11:47,199 - funding_amount_forecast - INFO - DataFrame standardization complete with 1749 records
+2025-04-23 02:11:47,200 - funding_amount_forecast - INFO - Creating features for funding amount forecasting
+2025-04-23 02:11:47,201 - funding_amount_forecast - INFO - Kept 1727 records with valid funding amounts
+2025-04-23 02:11:47,202 - funding_amount_forecast - INFO - Converting funding_date to datetime
+2025-04-23 02:11:48,246 - funding_amount_forecast - INFO - Estimating next round amounts for 623 companies without actual next round data
+2025-04-23 02:11:48,410 - funding_amount_forecast - INFO - Feature engineering complete. Created 47 features.
+2025-04-23 02:11:48,411 - funding_amount_forecast - INFO - Preparing data for model training
+2025-04-23 02:11:48,412 - funding_amount_forecast - WARNING - Column funding_usd contains all NaN values and will be excluded from features
+2025-04-23 02:11:48,413 - funding_amount_forecast - WARNING - Column avg_time_between_rounds contains all NaN values and will be excluded from features
+2025-04-23 02:11:48,415 - funding_amount_forecast - INFO - Filling missing values with median
+2025-04-23 02:11:48,417 - funding_amount_forecast - INFO - Using 1104 records with actual next round data for validation
+2025-04-23 02:11:48,419 - funding_amount_forecast - INFO - Training set: 1395 records (772 actual, 623 estimated)
+2025-04-23 02:11:48,419 - funding_amount_forecast - INFO - Test set: 332 records (all actual data)
+2025-04-23 02:11:48,425 - funding_amount_forecast - INFO - Training models...
+2025-04-23 02:11:48,425 - funding_amount_forecast - INFO - Training quantile regression forest with quantiles: [0.1, 0.5, 0.9]
+2025-04-23 02:11:48,425 - funding_amount_forecast - INFO - Training model for quantile 0.1
+2025-04-23 02:11:48,884 - funding_amount_forecast - INFO - Trained model for quantile 0.1
+2025-04-23 02:11:48,884 - funding_amount_forecast - INFO - Training model for quantile 0.5
+2025-04-23 02:11:49,347 - funding_amount_forecast - INFO - Trained model for quantile 0.5
+2025-04-23 02:11:49,347 - funding_amount_forecast - INFO - Training model for quantile 0.9
+2025-04-23 02:11:49,780 - funding_amount_forecast - INFO - Trained model for quantile 0.9
+2025-04-23 02:11:49,781 - funding_amount_forecast - INFO - Training ensemble model
+2025-04-23 02:11:50,472 - funding_amount_forecast - INFO - Evaluating models...
+2025-04-23 02:11:50,472 - funding_amount_forecast - INFO - Evaluating model performance
+2025-04-23 02:11:50,475 - funding_amount_forecast - INFO - Quantile Regression Forest Metrics: RMSE=$112421566.75, MAE=$38227452.74, R2=-0.0143, Log-R2=-0.1700, Within 20%=0.10, Same order of magnitude=0.77
+2025-04-23 02:11:50,478 - funding_amount_forecast - INFO - 80% Prediction Interval Coverage: 0.6627
+2025-04-23 02:11:50,478 - funding_amount_forecast - INFO - Evaluating model performance
+2025-04-23 02:11:50,506 - funding_amount_forecast - INFO - random_forest Metrics: RMSE=$269949418.37, MAE=$61949402.68, R2=-4.8483, Log-R2=-0.2716, Within 20%=0.1040, Same order=0.7416
+2025-04-23 02:11:50,509 - funding_amount_forecast - INFO - gradient_boosting Metrics: RMSE=$507970947.64, MAE=$92921513.13, R2=-19.7082, Log-R2=-0.4181, Within 20%=0.0772, Same order=0.7282
+2025-04-23 02:11:50,537 - funding_amount_forecast - INFO - extra_trees Metrics: RMSE=$139730123.91, MAE=$62306692.66, R2=-0.5669, Log-R2=-0.3558, Within 20%=0.0671, Same order=0.6812
+2025-04-23 02:11:50,539 - funding_amount_forecast - INFO - Ensemble Metrics: RMSE=$239261067.29, MAE=$70570135.63, R2=-3.5942, Log-R2=-0.3656, Within 20%=0.0839, Same order=0.7181
+2025-04-23 02:11:50,596 - funding_amount_forecast - INFO - Creating visualizations...
+2025-04-23 02:11:50,596 - funding_amount_forecast - INFO - Creating funding by stage visualization
+2025-04-23 02:11:51,215 - funding_amount_forecast - INFO - Saved funding by stage visualization to /Users/hk/Downloads/DSFinalYearProject/outputSuccessFailure/amount_forecast/funding_by_stage.png
+2025-04-23 02:11:51,215 - funding_amount_forecast - INFO - Creating funding by industry visualization
+2025-04-23 02:11:52,564 - funding_amount_forecast - INFO - Saved funding by industry visualizations to /Users/hk/Downloads/DSFinalYearProject/outputSuccessFailure/amount_forecast/funding_by_industry_average.png and /Users/hk/Downloads/DSFinalYearProject/outputSuccessFailure/amount_forecast/funding_by_industry_distribution.png
+2025-04-23 02:11:52,564 - funding_amount_forecast - INFO - Creating prediction accuracy visualization
+2025-04-23 02:11:52,952 - funding_amount_forecast - INFO - Saved prediction accuracy visualization to /Users/hk/Downloads/DSFinalYearProject/outputSuccessFailure/amount_forecast/prediction_accuracy.png
+2025-04-23 02:11:52,953 - funding_amount_forecast - INFO - Creating feature importance visualization
+2025-04-23 02:11:53,298 - funding_amount_forecast - INFO - Saved feature importance visualization to /Users/hk/Downloads/DSFinalYearProject/outputSuccessFailure/amount_forecast/feature_importance.png
+2025-04-23 02:11:53,299 - funding_amount_forecast - INFO - Creating model calibration visualization
+2025-04-23 02:11:53,584 - funding_amount_forecast - INFO - Saved model calibration visualization to /Users/hk/Downloads/DSFinalYearProject/outputSuccessFailure/amount_forecast/model_calibration.png
+2025-04-23 02:11:53,585 - funding_amount_forecast - INFO - Creating error distribution visualization
+2025-04-23 02:11:55,360 - funding_amount_forecast - INFO - Saved error distribution visualization to /Users/hk/Downloads/DSFinalYearProject/outputSuccessFailure/amount_forecast/error_distribution.png
+2025-04-23 02:11:55,360 - funding_amount_forecast - INFO - Creating prediction intervals visualization
+2025-04-23 02:11:55,683 - funding_amount_forecast - INFO - Saved prediction intervals visualization to /Users/hk/Downloads/DSFinalYearProject/outputSuccessFailure/amount_forecast/prediction_intervals.png
+2025-04-23 02:11:55,684 - funding_amount_forecast - INFO - Generating report...
+2025-04-23 02:11:55,684 - funding_amount_forecast - INFO - Generating funding amount forecast report
+2025-04-23 02:11:55,723 - funding_amount_forecast - INFO - Funding amount forecast report saved to /Users/hk/Downloads/DSFinalYearProject/outputSuccessFailure/amount_forecast/funding_amount_forecast_report.md
+2025-04-23 02:11:55,723 - funding_amount_forecast - INFO - markdown2 package not available, skipping HTML conversion
+2025-04-23 02:11:55,723 - funding_amount_forecast - INFO - Saving model...
+2025-04-23 02:11:55,723 - funding_amount_forecast - INFO - Saving model to /Users/hk/Downloads/DSFinalYearProject/outputSuccessFailure/amount_forecast/funding_amount_forecast_model.pkl
+2025-04-23 02:11:55,797 - funding_amount_forecast - INFO - Model saved successfully to /Users/hk/Downloads/DSFinalYearProject/outputSuccessFailure/amount_forecast/funding_amount_forecast_model.pkl
+2025-04-23 02:11:55,798 - funding_amount_forecast - INFO - Funding amount forecast analysis completed successfully
+2025-04-23 02:11:55,799 - success_failure_prediction - INFO - Running funding anomaly detection
+2025-04-23 02:11:55,799 - FundingAnomalyDetection - INFO - Starting anomaly detection analysis
+2025-04-23 02:11:55,799 - FundingAnomalyDetection - INFO - Loading data from JSON files in /Users/hk/Downloads/DSFinalYearProject/JSONFolder
+2025-04-23 02:11:55,799 - FundingAnomalyDetection - INFO - Processing /Users/hk/Downloads/DSFinalYearProject/JSONFolder/growthlist_industry_analysis.json
+2025-04-23 02:11:55,803 - FundingAnomalyDetection - WARNING - Skipping /Users/hk/Downloads/DSFinalYearProject/JSONFolder/growthlist_industry_analysis.json - not a list of records or doesn't have a companies array
+2025-04-23 02:11:55,804 - FundingAnomalyDetection - INFO - Processing /Users/hk/Downloads/DSFinalYearProject/JSONFolder/fundraise_insider_stats.json
+2025-04-23 02:11:55,805 - FundingAnomalyDetection - WARNING - Skipping /Users/hk/Downloads/DSFinalYearProject/JSONFolder/fundraise_insider_stats.json - not a list of records or doesn't have a companies array
+2025-04-23 02:11:55,805 - FundingAnomalyDetection - INFO - Processing /Users/hk/Downloads/DSFinalYearProject/JSONFolder/growthlistscrapper.json
+2025-04-23 02:11:55,806 - FundingAnomalyDetection - INFO - Added 100 records from growthlistscrapper.json
+2025-04-23 02:11:55,806 - FundingAnomalyDetection - INFO - Processing /Users/hk/Downloads/DSFinalYearProject/JSONFolder/topstartupio50.json
+2025-04-23 02:11:55,807 - FundingAnomalyDetection - INFO - Added 546 records from topstartupio50.json
+2025-04-23 02:11:55,807 - FundingAnomalyDetection - INFO - Processing /Users/hk/Downloads/DSFinalYearProject/JSONFolder/fundraisestartup50.json
+2025-04-23 02:11:55,811 - FundingAnomalyDetection - INFO - Found nested companies array with 1103 records in fundraisestartup50.json
+2025-04-23 02:11:55,812 - FundingAnomalyDetection - INFO - Added 1103 records from fundraisestartup50.json
+2025-04-23 02:11:55,820 - FundingAnomalyDetection - INFO - Loaded 1749 records from JSON files
+2025-04-23 02:11:55,820 - FundingAnomalyDetection - INFO - Creating features for anomaly detection
+2025-04-23 02:11:55,822 - FundingAnomalyDetection - INFO - Created funding_per_employee feature
+2025-04-23 02:11:55,840 - FundingAnomalyDetection - INFO - Created 4 features for anomaly detection
+2025-04-23 02:11:55,840 - FundingAnomalyDetection - INFO - Detecting anomalies in funding data
+2025-04-23 02:11:55,840 - FundingAnomalyDetection - INFO - Fitting Isolation Forest with contamination=0.01
+2025-04-23 02:11:55,953 - FundingAnomalyDetection - INFO - Isolation Forest model trained successfully
+2025-04-23 02:11:55,983 - FundingAnomalyDetection - INFO - Detected 19 anomalies (1.09%)
+2025-04-23 02:11:55,984 - FundingAnomalyDetection - INFO - Creating anomaly visualizations
+2025-04-23 02:11:57,561 - FundingAnomalyDetection - INFO - Creating model calibration and performance visualizations
+2025-04-23 02:11:57,562 - FundingAnomalyDetection - INFO - Creating features for anomaly detection
+2025-04-23 02:11:57,564 - FundingAnomalyDetection - INFO - Created funding_per_employee feature
+2025-04-23 02:11:57,581 - FundingAnomalyDetection - INFO - Created 4 features for anomaly detection
+2025-04-23 02:11:57,583 - FundingAnomalyDetection - INFO - Fitting Isolation Forest with contamination=None
+2025-04-23 02:11:57,700 - FundingAnomalyDetection - INFO - Isolation Forest model trained successfully
+2025-04-23 02:11:58,339 - FundingAnomalyDetection - INFO - Model performance: Accuracy=0.994, Precision=1.000, Recall=0.500, F1=0.667, RMSE=0.422
+2025-04-23 02:11:58,339 - FundingAnomalyDetection - INFO - Anomaly visualizations created successfully
+2025-04-23 02:11:58,339 - FundingAnomalyDetection - INFO - Generating anomaly detection report
+2025-04-23 02:11:58,346 - FundingAnomalyDetection - INFO - Anomaly report saved to /Users/hk/Downloads/DSFinalYearProject/outputSuccessFailure/anomaly_detection/anomaly_report.csv
+2025-04-23 02:11:58,347 - FundingAnomalyDetection - INFO - Integration data saved to /Users/hk/Downloads/DSFinalYearProject/outputSuccessFailure/anomaly_detection/anomaly_results.json
+2025-04-23 02:11:58,351 - FundingAnomalyDetection - INFO - Model saved to /Users/hk/Downloads/DSFinalYearProject/outputSuccessFailure/anomaly_detection/anomaly_model_20250423_021158.pkl
+2025-04-23 02:11:58,351 - FundingAnomalyDetection - INFO - Anomaly detection analysis completed
+2025-04-23 02:11:58,351 - success_failure_prediction - INFO - Running industry trend analysis
+2025-04-23 02:11:58,351 - IndustryTrendAnalysis - INFO - Generating industry trend report...
+2025-04-23 02:11:58,352 - IndustryTrendAnalysis - INFO - Report saved to /Users/hk/Downloads/DSFinalYearProject/outputSuccessFailure/industry_trends/industry_trend_report.json
+2025-04-23 02:11:58,352 - success_failure_prediction - INFO - All component analyses completed successfully
+2025-04-23 02:11:58,352 - success_failure_prediction - INFO - Step 3: Integrating data
+2025-04-23 02:11:58,352 - success_failure_prediction - INFO - Integrating data from all components
+2025-04-23 02:11:58,352 - success_failure_prediction - INFO - Loading data directly from JSON files
+2025-04-23 02:11:58,352 - success_failure_prediction - INFO - Checking file existence: /Users/hk/Downloads/DSFinalYearProject/JSONFolder/fundraisestartup50.json, exists: True
+2025-04-23 02:11:58,352 - success_failure_prediction - INFO - Checking file existence: /Users/hk/Downloads/DSFinalYearProject/JSONFolder/growthlistscrapper.json, exists: True
+2025-04-23 02:11:58,352 - success_failure_prediction - INFO - Checking file existence: /Users/hk/Downloads/DSFinalYearProject/JSONFolder/topstartupio50.json, exists: True
+2025-04-23 02:11:58,356 - success_failure_prediction - INFO - Loaded 1103 records from fundraisestartup50.json
+2025-04-23 02:11:58,358 - success_failure_prediction - INFO - Loaded 100 records from growthlistscrapper.json
+2025-04-23 02:11:58,360 - success_failure_prediction - INFO - Loaded 546 records from topstartupio50.json
+2025-04-23 02:11:58,410 - success_failure_prediction - INFO - Combined 1749 records from all JSON files
+2025-04-23 02:11:58,422 - success_failure_prediction - INFO - Successfully integrated data: 1748 records with 30 features
+2025-04-23 02:11:58,423 - success_failure_prediction - INFO - Step 4: Calculating success scores
+2025-04-23 02:11:58,423 - success_failure_prediction - INFO - Calculating success scores
+2025-04-23 02:11:58,433 - success_failure_prediction - WARNING - No survival information available, estimating from stage and funding
+2025-04-23 02:11:58,458 - success_failure_prediction - WARNING - No anomaly detection information available, using optimistic score
+2025-04-23 02:11:58,459 - success_failure_prediction - INFO - Success scores calculated successfully
+2025-04-23 02:11:58,459 - success_failure_prediction - INFO - Step 5: Classifying startups
+2025-04-23 02:11:58,459 - success_failure_prediction - INFO - Classifying companies by success potential
+2025-04-23 02:11:58,467 - success_failure_prediction - INFO - Optimistic thresholds - Low: 36.7, Medium: 45.2, High: 56.1
+2025-04-23 02:11:58,470 - success_failure_prediction - INFO - Classification results: {'Moderate Success Potential': np.int64(487), 'High Success Potential': np.int64(431), 'Moderate Failure Risk': np.int64(387), 'High Failure Risk': np.int64(352)}
+2025-04-23 02:11:58,482 - success_failure_prediction - INFO - Risk level distribution: {'Medium Risk': '718 (41.1%)', 'Low Risk': '477 (27.3%)', 'High Risk': '382 (21.9%)', 'Minimal Risk': '171 (9.8%)'}
+2025-04-23 02:11:58,482 - success_failure_prediction - INFO - Step 6: Generating visualizations
+2025-04-23 02:11:58,482 - success_failure_prediction - INFO - Generating visualizations
+2025-04-23 02:11:59,469 - success_failure_prediction - INFO - Generated visualizations successfully in /Users/hk/Downloads/DSFinalYearProject/outputSuccessFailure/visualizations
+2025-04-23 02:11:59,470 - success_failure_prediction - INFO - Step 7: Creating advanced model performance visualizations
+2025-04-23 02:11:59,470 - success_failure_prediction - INFO - Generating model performance visualizations
+2025-04-23 02:11:59,605 - success_failure_prediction - INFO - Model: Random Forest
+2025-04-23 02:11:59,605 - success_failure_prediction - INFO -   accuracy: 0.9848
+2025-04-23 02:11:59,605 - success_failure_prediction - INFO -   precision: 0.9926
+2025-04-23 02:11:59,605 - success_failure_prediction - INFO -   recall: 0.9783
+2025-04-23 02:11:59,605 - success_failure_prediction - INFO -   f1: 0.9854
+2025-04-23 02:11:59,606 - success_failure_prediction - ERROR - Error generating model performance visualizations: Input X contains NaN.
+GradientBoostingClassifier does not accept missing values encoded as NaN natively. For supervised learning, you might want to consider sklearn.ensemble.HistGradientBoostingClassifier and Regressor which accept missing values encoded as NaNs natively. Alternatively, it is possible to preprocess the data, for instance by using an imputer transformer in a pipeline or drop samples with missing values. See https://scikit-learn.org/stable/modules/impute.html You can find a list of all estimators that handle NaN values at the following page: https://scikit-learn.org/stable/modules/impute.html#estimators-that-handle-nan-values
+2025-04-23 02:11:59,610 - success_failure_prediction - ERROR - Traceback (most recent call last):
+  File "/Users/hk/Downloads/DSFinalYearProject/MLPredictiveAnalysis/success_failure_prediction.py", line 1360, in visualize_model_performance
+    model.fit(X_train, y_train)
+  File "/Users/hk/Downloads/DSFinalYearProject/.venv/lib/python3.12/site-packages/sklearn/base.py", line 1389, in wrapper
+    return fit_method(estimator, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/hk/Downloads/DSFinalYearProject/.venv/lib/python3.12/site-packages/sklearn/ensemble/_gb.py", line 658, in fit
+    X, y = validate_data(
+           ^^^^^^^^^^^^^^
+  File "/Users/hk/Downloads/DSFinalYearProject/.venv/lib/python3.12/site-packages/sklearn/utils/validation.py", line 2961, in validate_data
+    X, y = check_X_y(X, y, **check_params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/hk/Downloads/DSFinalYearProject/.venv/lib/python3.12/site-packages/sklearn/utils/validation.py", line 1370, in check_X_y
+    X = check_array(
+        ^^^^^^^^^^^^
+  File "/Users/hk/Downloads/DSFinalYearProject/.venv/lib/python3.12/site-packages/sklearn/utils/validation.py", line 1107, in check_array
+    _assert_all_finite(
+  File "/Users/hk/Downloads/DSFinalYearProject/.venv/lib/python3.12/site-packages/sklearn/utils/validation.py", line 120, in _assert_all_finite
+    _assert_all_finite_element_wise(
+  File "/Users/hk/Downloads/DSFinalYearProject/.venv/lib/python3.12/site-packages/sklearn/utils/validation.py", line 169, in _assert_all_finite_element_wise
+    raise ValueError(msg_err)
+ValueError: Input X contains NaN.
+GradientBoostingClassifier does not accept missing values encoded as NaN natively. For supervised learning, you might want to consider sklearn.ensemble.HistGradientBoostingClassifier and Regressor which accept missing values encoded as NaNs natively. Alternatively, it is possible to preprocess the data, for instance by using an imputer transformer in a pipeline or drop samples with missing values. See https://scikit-learn.org/stable/modules/impute.html You can find a list of all estimators that handle NaN values at the following page: https://scikit-learn.org/stable/modules/impute.html#estimators-that-handle-nan-values
+
+2025-04-23 02:11:59,611 - success_failure_prediction - INFO - Step 8: Enhancing predictions with ensemble models
+2025-04-23 02:11:59,611 - success_failure_prediction - INFO - Enhancing predictions with ensemble models
+2025-04-23 02:11:59,731 - success_failure_prediction - ERROR - Error enhancing predictions with ensemble: Input X contains NaN.
+GradientBoostingClassifier does not accept missing values encoded as NaN natively. For supervised learning, you might want to consider sklearn.ensemble.HistGradientBoostingClassifier and Regressor which accept missing values encoded as NaNs natively. Alternatively, it is possible to preprocess the data, for instance by using an imputer transformer in a pipeline or drop samples with missing values. See https://scikit-learn.org/stable/modules/impute.html You can find a list of all estimators that handle NaN values at the following page: https://scikit-learn.org/stable/modules/impute.html#estimators-that-handle-nan-values
+2025-04-23 02:11:59,735 - success_failure_prediction - ERROR - Traceback (most recent call last):
+  File "/Users/hk/Downloads/DSFinalYearProject/MLPredictiveAnalysis/success_failure_prediction.py", line 1643, in enhance_predictions_with_ensemble
+    ensemble.fit(X_train, y_train)
+  File "/Users/hk/Downloads/DSFinalYearProject/.venv/lib/python3.12/site-packages/sklearn/base.py", line 1389, in wrapper
+    return fit_method(estimator, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/hk/Downloads/DSFinalYearProject/.venv/lib/python3.12/site-packages/sklearn/utils/validation.py", line 63, in inner_f
+    return f(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^
+  File "/Users/hk/Downloads/DSFinalYearProject/.venv/lib/python3.12/site-packages/sklearn/ensemble/_voting.py", line 419, in fit
+    return super().fit(X, transformed_y, **fit_params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/hk/Downloads/DSFinalYearProject/.venv/lib/python3.12/site-packages/sklearn/ensemble/_voting.py", line 100, in fit
+    self.estimators_ = Parallel(n_jobs=self.n_jobs)(
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/hk/Downloads/DSFinalYearProject/.venv/lib/python3.12/site-packages/sklearn/utils/parallel.py", line 77, in __call__
+    return super().__call__(iterable_with_config)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/hk/Downloads/DSFinalYearProject/.venv/lib/python3.12/site-packages/joblib/parallel.py", line 1918, in __call__
+    return output if self.return_generator else list(output)
+                                                ^^^^^^^^^^^^
+  File "/Users/hk/Downloads/DSFinalYearProject/.venv/lib/python3.12/site-packages/joblib/parallel.py", line 1847, in _get_sequential_output
+    res = func(*args, **kwargs)
+          ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/hk/Downloads/DSFinalYearProject/.venv/lib/python3.12/site-packages/sklearn/utils/parallel.py", line 139, in __call__
+    return self.function(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/hk/Downloads/DSFinalYearProject/.venv/lib/python3.12/site-packages/sklearn/ensemble/_base.py", line 39, in _fit_single_estimator
+    estimator.fit(X, y, **fit_params)
+  File "/Users/hk/Downloads/DSFinalYearProject/.venv/lib/python3.12/site-packages/sklearn/base.py", line 1389, in wrapper
+    return fit_method(estimator, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/hk/Downloads/DSFinalYearProject/.venv/lib/python3.12/site-packages/sklearn/ensemble/_gb.py", line 658, in fit
+    X, y = validate_data(
+           ^^^^^^^^^^^^^^
+  File "/Users/hk/Downloads/DSFinalYearProject/.venv/lib/python3.12/site-packages/sklearn/utils/validation.py", line 2961, in validate_data
+    X, y = check_X_y(X, y, **check_params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/hk/Downloads/DSFinalYearProject/.venv/lib/python3.12/site-packages/sklearn/utils/validation.py", line 1370, in check_X_y
+    X = check_array(
+        ^^^^^^^^^^^^
+  File "/Users/hk/Downloads/DSFinalYearProject/.venv/lib/python3.12/site-packages/sklearn/utils/validation.py", line 1107, in check_array
+    _assert_all_finite(
+  File "/Users/hk/Downloads/DSFinalYearProject/.venv/lib/python3.12/site-packages/sklearn/utils/validation.py", line 120, in _assert_all_finite
+    _assert_all_finite_element_wise(
+  File "/Users/hk/Downloads/DSFinalYearProject/.venv/lib/python3.12/site-packages/sklearn/utils/validation.py", line 169, in _assert_all_finite_element_wise
+    raise ValueError(msg_err)
+ValueError: Input X contains NaN.
+GradientBoostingClassifier does not accept missing values encoded as NaN natively. For supervised learning, you might want to consider sklearn.ensemble.HistGradientBoostingClassifier and Regressor which accept missing values encoded as NaNs natively. Alternatively, it is possible to preprocess the data, for instance by using an imputer transformer in a pipeline or drop samples with missing values. See https://scikit-learn.org/stable/modules/impute.html You can find a list of all estimators that handle NaN values at the following page: https://scikit-learn.org/stable/modules/impute.html#estimators-that-handle-nan-values
+
+2025-04-23 02:11:59,735 - success_failure_prediction - INFO - Step 9: Generating report
+2025-04-23 02:11:59,736 - success_failure_prediction - INFO - Generating success/failure prediction report
+2025-04-23 02:11:59,744 - success_failure_prediction - INFO - Generated report successfully: /Users/hk/Downloads/DSFinalYearProject/outputSuccessFailure/success_failure_report.txt
+2025-04-23 02:11:59,783 - success_failure_prediction - INFO - Saved predictions to: /Users/hk/Downloads/DSFinalYearProject/outputSuccessFailure/success_failure_predictions.csv
+2025-04-23 02:11:59,785 - success_failure_prediction - INFO - Analysis complete. Overall success rate: 52.5%
+2025-04-23 02:11:59,785 - success_failure_prediction - INFO - Total companies analyzed: 1748
+2025-04-23 02:11:59,785 - success_failure_prediction - INFO - Predicted successful: 918 (52.5%)
+2025-04-23 02:11:59,785 - success_failure_prediction - INFO - Predicted unsuccessful: 830 (47.5%)
+2025-04-23 02:11:59,785 - success_failure_prediction - INFO - Classification breakdown:
+2025-04-23 02:11:59,785 - success_failure_prediction - INFO - - High Success Potential: 431 (24.7%)
+2025-04-23 02:11:59,785 - success_failure_prediction - INFO - - Moderate Success Potential: 487 (27.9%)
+2025-04-23 02:11:59,785 - success_failure_prediction - INFO - - Moderate Failure Risk: 387 (22.1%)
+2025-04-23 02:11:59,785 - success_failure_prediction - INFO - - High Failure Risk: 352 (20.1%)
+2025-04-23 02:11:59,787 - success_failure_prediction - INFO - Top performing industries:
+2025-04-23 02:11:59,787 - success_failure_prediction - INFO - - medical practice: 100.0% success rate (based on 2 companies)
+2025-04-23 02:11:59,787 - success_failure_prediction - INFO - - : 88.8% success rate (based on 547 companies)
+2025-04-23 02:11:59,787 - success_failure_prediction - INFO - - computer hardware: 70.0% success rate (based on 10 companies)
+2025-04-23 02:11:59,787 - success_failure_prediction - INFO - Lowest performing industries:
+2025-04-23 02:11:59,787 - success_failure_prediction - INFO - - Aerospace: 0.0% success rate (based on 1 companies)
+2025-04-23 02:11:59,787 - success_failure_prediction - INFO - - Agriculture, Food and Beverage, Artificial Intelligence, E-commerce: 0.0% success rate (based on 1 companies)
+2025-04-23 02:11:59,787 - success_failure_prediction - INFO - - Architecture, Media: 0.0% success rate (based on 1 companies)
+2025-04-23 02:11:59,788 - success_failure_prediction - INFO - Success rate by funding stage:
+2025-04-23 02:11:59,788 - success_failure_prediction - INFO - - Series D: 100.0% success rate (based on 84 companies)
+2025-04-23 02:11:59,788 - success_failure_prediction - INFO - - Series E: 100.0% success rate (based on 39 companies)
+2025-04-23 02:11:59,788 - success_failure_prediction - INFO - - Series F: 100.0% success rate (based on 23 companies)
+2025-04-23 02:11:59,788 - success_failure_prediction - INFO - - Series H: 100.0% success rate (based on 7 companies)
+2025-04-23 02:11:59,788 - success_failure_prediction - INFO - - Series C: 96.6% success rate (based on 179 companies)
+2025-04-23 02:11:59,788 - success_failure_prediction - INFO - - Series B: 93.7% success rate (based on 223 companies)
+2025-04-23 02:11:59,789 - success_failure_prediction - INFO - - Private Equity: 89.3% success rate (based on 28 companies)
+2025-04-23 02:11:59,789 - success_failure_prediction - INFO - - Series G: 85.7% success rate (based on 7 companies)
+2025-04-23 02:11:59,789 - success_failure_prediction - INFO - - Debt Financing: 76.7% success rate (based on 43 companies)
+2025-04-23 02:11:59,789 - success_failure_prediction - INFO - - Series A: 62.0% success rate (based on 313 companies)
+2025-04-23 02:11:59,789 - success_failure_prediction - INFO - - Venture - Series Unknown: 43.0% success rate (based on 172 companies)
+2025-04-23 02:11:59,789 - success_failure_prediction - INFO - - Undisclosed: 4.0% success rate (based on 25 companies)
+2025-04-23 02:11:59,789 - success_failure_prediction - INFO - - Seed: 0.6% success rate (based on 349 companies)
+2025-04-23 02:11:59,789 - success_failure_prediction - INFO - - Pre-Seed: 0.0% success rate (based on 122 companies)
+2025-04-23 02:11:59,789 - success_failure_prediction - INFO - - Grant: 0.0% success rate (based on 67 companies)
+2025-04-23 04:05:55,216 - success_failure_prediction - INFO - Success/Failure Prediction system initialized
+2025-04-23 04:05:55,216 - success_failure_prediction - INFO - Starting success/failure prediction analysis
+2025-04-23 04:05:55,216 - success_failure_prediction - INFO - Step 1: Initializing component models
+2025-04-23 04:05:55,217 - success_failure_prediction - INFO - Initializing component prediction systems
+2025-04-23 04:05:55,220 - funding_stage_prediction - INFO - Historical database initialized
+2025-04-23 04:05:55,220 - funding_stage_prediction - INFO - Created visualization directory: ./outputFundingStagePrediction/visualizations
+2025-04-23 04:05:55,222 - funding_stage_prediction - INFO - Created visualization directory: ./outputFundingStagePrediction/visualizations
+2025-04-23 04:05:55,223 - funding_stage_prediction - INFO - Initialized model directory structure at ./outputFundingStagePrediction/models
+2025-04-23 04:05:55,225 - funding_amount_forecast - INFO - Funding Amount Forecast initialized
+2025-04-23 04:05:55,225 - success_failure_prediction - INFO - All component systems initialized successfully
+2025-04-23 04:05:55,225 - success_failure_prediction - INFO - Step 2: Running component analyses
+2025-04-23 04:05:55,225 - success_failure_prediction - INFO - Running component analyses
+2025-04-23 04:05:55,225 - success_failure_prediction - INFO - Running funding stage prediction
+2025-04-23 04:05:55,225 - funding_stage_prediction - INFO - Starting funding stage prediction pipeline
+2025-04-23 04:05:55,235 - funding_stage_prediction - INFO - Loaded 1103 records from fundraiser data
+2025-04-23 04:05:55,237 - funding_stage_prediction - INFO - Loaded 100 records from growthlist data
+2025-04-23 04:05:55,245 - funding_stage_prediction - INFO - Loaded 546 records from topstartup data
+2025-04-23 04:05:55,245 - funding_stage_prediction - INFO - Loaded datasets - Fundraiser: 1103 rows, Growthlist: 100 rows, Topstartup: 546 rows
+2025-04-23 04:05:55,282 - funding_stage_prediction - INFO - Processed 1103 records from fundraiser data
+2025-04-23 04:05:55,285 - funding_stage_prediction - INFO - Processed 100 records from growthlist data
+2025-04-23 04:05:55,306 - funding_stage_prediction - INFO - Processed 546 records from topstartup data
+2025-04-23 04:05:55,308 - funding_stage_prediction - INFO - Merged data columns: ['company_name', 'funding_stage', 'funding_amount', 'funding_date', 'industry', 'employees', 'source']
+2025-04-23 04:05:55,309 - funding_stage_prediction - INFO - Non-null counts: {'company_name': 1749, 'funding_stage': 1690, 'funding_amount': 1727, 'funding_date': 1714, 'industry': 1203, 'employees': 1641, 'source': 1749}
+2025-04-23 04:05:55,312 - funding_stage_prediction - INFO - Removed 1 duplicate records
+2025-04-23 04:05:55,315 - funding_stage_prediction - INFO - Successfully merged 1748 records
+2025-04-23 04:05:55,316 - funding_stage_prediction - INFO - Starting feature extraction for 1748 records
+2025-04-23 04:05:55,317 - funding_stage_prediction - INFO - Found 20 unique funding stages: ['Series A' 'Seed' 'venture - series unknown' 'debt financing'
+ 'undisclosed' 'Grant' 'Private Equity' 'Pre-Seed' 'Series C' 'Series B'
+ 'Series D' 'Series H' 'Angel' 'Series E' 'Series F' 'Series G'
+ 'initial coin offering' 'series j' 'Unknown' 'series i']
+2025-04-23 04:05:55,317 - funding_stage_prediction - INFO - Created funding stage mapping: {'Pre-Seed': 0, 'Seed': 1, 'Angel': 2, 'Series A': 3, 'Series B': 4, 'Series C': 5, 'Series D': 6, 'Series E': 7, 'Series F': 8, 'Series G': 9, 'Series H': 10, 'venture - series unknown': 11, 'debt financing': 12, 'undisclosed': 13, 'Grant': 14, 'Private Equity': 15, 'initial coin offering': 16, 'series j': 17, 'Unknown': 18, 'series i': 19}
+2025-04-23 04:05:55,426 - funding_stage_prediction - INFO - Feature engineering complete: 17 features created
+2025-04-23 04:05:55,427 - funding_stage_prediction - INFO - Preparing model data with features: ['funding_amount_log', 'employees', 'employee_efficiency', 'funding_year', 'funding_month', 'previous_rounds', 'months_since_first_funding', 'funding_velocity']
+2025-04-23 04:05:55,429 - funding_stage_prediction - INFO - Prepared model data: X shape=(1748, 8), y shape=(1748,)
+2025-04-23 04:05:55,430 - funding_stage_prediction - INFO - Class distribution: {1: 347, 3: 313, 4: 223, 5: 179, 11: 172, 0: 124, 6: 84, 14: 67, 18: 59, 12: 43, 7: 39, 15: 28, 13: 25, 8: 23, 10: 7, 9: 7, 2: 4, 19: 2, 16: 1, 17: 1}
+2025-04-23 04:05:55,431 - funding_stage_prediction - INFO - Initial class mapping: {np.int64(0): 0, np.int64(1): 1, np.int64(2): 2, np.int64(3): 3, np.int64(4): 4, np.int64(5): 5, np.int64(6): 6, np.int64(7): 7, np.int64(8): 8, np.int64(9): 9, np.int64(10): 10, np.int64(11): 11, np.int64(12): 12, np.int64(13): 13, np.int64(14): 14, np.int64(15): 15, np.int64(16): 16, np.int64(17): 17, np.int64(18): 18, np.int64(19): 19}
+2025-04-23 04:05:55,432 - funding_stage_prediction - INFO - Merged rare classes into majority class 1
+2025-04-23 04:05:55,432 - funding_stage_prediction - INFO - Final class mapping after merging rare classes: {np.int64(0): 0, np.int64(1): 1, np.int64(3): 2, np.int64(4): 3, np.int64(5): 4, np.int64(6): 5, np.int64(7): 6, np.int64(8): 7, np.int64(9): 8, np.int64(10): 9, np.int64(11): 10, np.int64(12): 11, np.int64(13): 12, np.int64(14): 13, np.int64(15): 14, np.int64(18): 15}
+2025-04-23 04:06:00,684 - funding_stage_prediction - INFO - Selected features shape: (1748, 4)
+2025-04-23 04:06:00,687 - funding_stage_prediction - INFO - Selected features: ['funding_amount_log', 'employees', 'previous_rounds', 'funding_velocity']
+2025-04-23 04:06:00,688 - funding_stage_prediction - INFO - Step 4: Tuning and training models...
+2025-04-23 04:06:32,527 - funding_stage_prediction - INFO - Best RF params: {'class_weight': 'balanced', 'max_depth': 10, 'min_samples_split': 5, 'n_estimators': 200}
+2025-04-23 04:06:32,528 - funding_stage_prediction - INFO - Best RF accuracy: 0.8198
+2025-04-23 04:06:52,338 - funding_stage_prediction - INFO - Best XGB params: {'colsample_bytree': np.float64(0.7401557956821079), 'gamma': np.float64(0.4651464600818304), 'learning_rate': np.float64(0.02739152552237384), 'max_depth': 5, 'num_class': 16, 'subsample': np.float64(0.6786782925272177)}
+2025-04-23 04:06:52,339 - funding_stage_prediction - INFO - Best XGB accuracy: 0.8278
+2025-04-23 04:07:13,111 - funding_stage_prediction - INFO - Step 5: Creating advanced visualizations...
+2025-04-23 04:07:16,150 - funding_stage_prediction - INFO - Pipeline completed successfully!
+2025-04-23 04:07:16,150 - success_failure_prediction - INFO - Running funding continuation analysis
+2025-04-23 04:07:16,151 - funding_continuation - INFO - Starting funding continuation analysis pipeline
+2025-04-23 04:07:16,151 - funding_continuation - ERROR - No data available for analysis
+2025-04-23 04:07:16,151 - success_failure_prediction - INFO - Running funding amount forecast
+2025-04-23 04:07:16,151 - funding_amount_forecast - INFO - Starting funding amount forecast analysis
+2025-04-23 04:07:16,151 - funding_amount_forecast - INFO - Loading data from JSON files
+2025-04-23 04:07:16,157 - funding_amount_forecast - INFO - Loaded 1103 records from fundraiser data
+2025-04-23 04:07:16,158 - funding_amount_forecast - INFO - Loaded 100 records from growthlist data
+2025-04-23 04:07:16,160 - funding_amount_forecast - INFO - Loaded 546 records from topstartup data
+2025-04-23 04:07:16,168 - funding_amount_forecast - INFO - Created DataFrame with 1749 records and 27 columns
+2025-04-23 04:07:16,169 - funding_amount_forecast - INFO - Standardizing DataFrame
+2025-04-23 04:07:16,184 - funding_amount_forecast - INFO - DataFrame standardization complete with 1749 records
+2025-04-23 04:07:16,185 - funding_amount_forecast - INFO - Creating features for funding amount forecasting
+2025-04-23 04:07:16,187 - funding_amount_forecast - INFO - Kept 1727 records with valid funding amounts
+2025-04-23 04:07:16,187 - funding_amount_forecast - INFO - Converting funding_date to datetime
+2025-04-23 04:07:17,220 - funding_amount_forecast - INFO - Estimating next round amounts for 623 companies without actual next round data
+2025-04-23 04:07:17,378 - funding_amount_forecast - INFO - Feature engineering complete. Created 47 features.
+2025-04-23 04:07:17,379 - funding_amount_forecast - INFO - Preparing data for model training
+2025-04-23 04:07:17,381 - funding_amount_forecast - WARNING - Column funding_usd contains all NaN values and will be excluded from features
+2025-04-23 04:07:17,382 - funding_amount_forecast - WARNING - Column avg_time_between_rounds contains all NaN values and will be excluded from features
+2025-04-23 04:07:17,383 - funding_amount_forecast - INFO - Filling missing values with median
+2025-04-23 04:07:17,385 - funding_amount_forecast - INFO - Using 1104 records with actual next round data for validation
+2025-04-23 04:07:17,388 - funding_amount_forecast - INFO - Training set: 1395 records (772 actual, 623 estimated)
+2025-04-23 04:07:17,388 - funding_amount_forecast - INFO - Test set: 332 records (all actual data)
+2025-04-23 04:07:17,393 - funding_amount_forecast - INFO - Training models...
+2025-04-23 04:07:17,393 - funding_amount_forecast - INFO - Training quantile regression forest with quantiles: [0.1, 0.5, 0.9]
+2025-04-23 04:07:17,393 - funding_amount_forecast - INFO - Training model for quantile 0.1
+2025-04-23 04:07:17,840 - funding_amount_forecast - INFO - Trained model for quantile 0.1
+2025-04-23 04:07:17,840 - funding_amount_forecast - INFO - Training model for quantile 0.5
+2025-04-23 04:07:18,294 - funding_amount_forecast - INFO - Trained model for quantile 0.5
+2025-04-23 04:07:18,294 - funding_amount_forecast - INFO - Training model for quantile 0.9
+2025-04-23 04:07:18,714 - funding_amount_forecast - INFO - Trained model for quantile 0.9
+2025-04-23 04:07:18,714 - funding_amount_forecast - INFO - Training ensemble model
+2025-04-23 04:07:19,539 - funding_amount_forecast - INFO - Evaluating models...
+2025-04-23 04:07:19,539 - funding_amount_forecast - INFO - Evaluating model performance
+2025-04-23 04:07:19,542 - funding_amount_forecast - INFO - Quantile Regression Forest Metrics: RMSE=$112231363.63, MAE=$38297833.17, R2=-0.0109, Log-R2=-0.2680, Within 20%=0.09, Same order of magnitude=0.77
+2025-04-23 04:07:19,545 - funding_amount_forecast - INFO - 80% Prediction Interval Coverage: 0.6627
+2025-04-23 04:07:19,545 - funding_amount_forecast - INFO - Evaluating model performance
+2025-04-23 04:07:19,574 - funding_amount_forecast - INFO - random_forest Metrics: RMSE=$261948661.60, MAE=$61490229.58, R2=-4.5068, Log-R2=-0.2722, Within 20%=0.1074, Same order=0.7450
+2025-04-23 04:07:19,577 - funding_amount_forecast - INFO - gradient_boosting Metrics: RMSE=$629911463.44, MAE=$105006235.30, R2=-30.8437, Log-R2=-0.3400, Within 20%=0.0805, Same order=0.7450
+2025-04-23 04:07:19,606 - funding_amount_forecast - INFO - extra_trees Metrics: RMSE=$137523632.45, MAE=$62073102.25, R2=-0.5178, Log-R2=-0.3556, Within 20%=0.0671, Same order=0.6812
+2025-04-23 04:07:19,607 - funding_amount_forecast - INFO - Ensemble Metrics: RMSE=$267772341.14, MAE=$74535079.55, R2=-4.7543, Log-R2=-0.3408, Within 20%=0.0940, Same order=0.7181
+2025-04-23 04:07:19,668 - funding_amount_forecast - INFO - Creating visualizations...
+2025-04-23 04:07:19,668 - funding_amount_forecast - INFO - Creating funding by stage visualization
+2025-04-23 04:07:20,243 - funding_amount_forecast - INFO - Saved funding by stage visualization to /Users/hk/Downloads/DSFinalYearProject/outputSuccessFailure/amount_forecast/funding_by_stage.png
+2025-04-23 04:07:20,244 - funding_amount_forecast - INFO - Creating funding by industry visualization
+2025-04-23 04:07:21,509 - funding_amount_forecast - INFO - Saved funding by industry visualizations to /Users/hk/Downloads/DSFinalYearProject/outputSuccessFailure/amount_forecast/funding_by_industry_average.png and /Users/hk/Downloads/DSFinalYearProject/outputSuccessFailure/amount_forecast/funding_by_industry_distribution.png
+2025-04-23 04:07:21,510 - funding_amount_forecast - INFO - Creating prediction accuracy visualization
+2025-04-23 04:07:21,816 - funding_amount_forecast - INFO - Saved prediction accuracy visualization to /Users/hk/Downloads/DSFinalYearProject/outputSuccessFailure/amount_forecast/prediction_accuracy.png
+2025-04-23 04:07:21,816 - funding_amount_forecast - INFO - Creating feature importance visualization
+2025-04-23 04:07:22,136 - funding_amount_forecast - INFO - Saved feature importance visualization to /Users/hk/Downloads/DSFinalYearProject/outputSuccessFailure/amount_forecast/feature_importance.png
+2025-04-23 04:07:22,137 - funding_amount_forecast - INFO - Creating model calibration visualization
+2025-04-23 04:07:22,380 - funding_amount_forecast - INFO - Saved model calibration visualization to /Users/hk/Downloads/DSFinalYearProject/outputSuccessFailure/amount_forecast/model_calibration.png
+2025-04-23 04:07:22,380 - funding_amount_forecast - INFO - Creating error distribution visualization
+2025-04-23 04:07:23,792 - funding_amount_forecast - INFO - Saved error distribution visualization to /Users/hk/Downloads/DSFinalYearProject/outputSuccessFailure/amount_forecast/error_distribution.png
+2025-04-23 04:07:23,792 - funding_amount_forecast - INFO - Creating prediction intervals visualization
+2025-04-23 04:07:24,114 - funding_amount_forecast - INFO - Saved prediction intervals visualization to /Users/hk/Downloads/DSFinalYearProject/outputSuccessFailure/amount_forecast/prediction_intervals.png
+2025-04-23 04:07:24,115 - funding_amount_forecast - INFO - Generating report...
+2025-04-23 04:07:24,115 - funding_amount_forecast - INFO - Generating funding amount forecast report
+2025-04-23 04:07:24,166 - funding_amount_forecast - INFO - Funding amount forecast report saved to /Users/hk/Downloads/DSFinalYearProject/outputSuccessFailure/amount_forecast/funding_amount_forecast_report.md
+2025-04-23 04:07:24,166 - funding_amount_forecast - INFO - markdown2 package not available, skipping HTML conversion
+2025-04-23 04:07:24,167 - funding_amount_forecast - INFO - Saving model...
+2025-04-23 04:07:24,167 - funding_amount_forecast - INFO - Saving model to /Users/hk/Downloads/DSFinalYearProject/outputSuccessFailure/amount_forecast/funding_amount_forecast_model.pkl
+2025-04-23 04:07:24,244 - funding_amount_forecast - INFO - Model saved successfully to /Users/hk/Downloads/DSFinalYearProject/outputSuccessFailure/amount_forecast/funding_amount_forecast_model.pkl
+2025-04-23 04:07:24,245 - funding_amount_forecast - INFO - Funding amount forecast analysis completed successfully
+2025-04-23 04:07:24,246 - success_failure_prediction - INFO - Running funding anomaly detection
+2025-04-23 04:07:24,247 - FundingAnomalyDetection - INFO - Starting anomaly detection analysis
+2025-04-23 04:07:24,248 - FundingAnomalyDetection - INFO - Loading data from JSON files in /Users/hk/Downloads/DSFinalYearProject/JSONFolder
+2025-04-23 04:07:24,248 - FundingAnomalyDetection - INFO - Processing /Users/hk/Downloads/DSFinalYearProject/JSONFolder/growthlist_industry_analysis.json
+2025-04-23 04:07:24,249 - FundingAnomalyDetection - WARNING - Skipping /Users/hk/Downloads/DSFinalYearProject/JSONFolder/growthlist_industry_analysis.json - not a list of records or doesn't have a companies array
+2025-04-23 04:07:24,249 - FundingAnomalyDetection - INFO - Processing /Users/hk/Downloads/DSFinalYearProject/JSONFolder/fundraise_insider_stats.json
+2025-04-23 04:07:24,250 - FundingAnomalyDetection - WARNING - Skipping /Users/hk/Downloads/DSFinalYearProject/JSONFolder/fundraise_insider_stats.json - not a list of records or doesn't have a companies array
+2025-04-23 04:07:24,250 - FundingAnomalyDetection - INFO - Processing /Users/hk/Downloads/DSFinalYearProject/JSONFolder/growthlistscrapper.json
+2025-04-23 04:07:24,250 - FundingAnomalyDetection - INFO - Added 100 records from growthlistscrapper.json
+2025-04-23 04:07:24,250 - FundingAnomalyDetection - INFO - Processing /Users/hk/Downloads/DSFinalYearProject/JSONFolder/topstartupio50.json
+2025-04-23 04:07:24,252 - FundingAnomalyDetection - INFO - Added 546 records from topstartupio50.json
+2025-04-23 04:07:24,252 - FundingAnomalyDetection - INFO - Processing /Users/hk/Downloads/DSFinalYearProject/JSONFolder/fundraisestartup50.json
+2025-04-23 04:07:24,255 - FundingAnomalyDetection - INFO - Found nested companies array with 1103 records in fundraisestartup50.json
+2025-04-23 04:07:24,255 - FundingAnomalyDetection - INFO - Added 1103 records from fundraisestartup50.json
+2025-04-23 04:07:24,265 - FundingAnomalyDetection - INFO - Loaded 1749 records from JSON files
+2025-04-23 04:07:24,265 - FundingAnomalyDetection - INFO - Creating features for anomaly detection
+2025-04-23 04:07:24,267 - FundingAnomalyDetection - INFO - Created funding_per_employee feature
+2025-04-23 04:07:24,284 - FundingAnomalyDetection - INFO - Created 4 features for anomaly detection
+2025-04-23 04:07:24,284 - FundingAnomalyDetection - INFO - Detecting anomalies in funding data
+2025-04-23 04:07:24,285 - FundingAnomalyDetection - INFO - Fitting Isolation Forest with contamination=0.01
+2025-04-23 04:07:24,407 - FundingAnomalyDetection - INFO - Isolation Forest model trained successfully
+2025-04-23 04:07:24,427 - FundingAnomalyDetection - INFO - Detected 19 anomalies (1.09%)
+2025-04-23 04:07:24,428 - FundingAnomalyDetection - INFO - Creating anomaly visualizations
+2025-04-23 04:07:25,561 - FundingAnomalyDetection - INFO - Creating model calibration and performance visualizations
+2025-04-23 04:07:25,562 - FundingAnomalyDetection - INFO - Creating features for anomaly detection
+2025-04-23 04:07:25,564 - FundingAnomalyDetection - INFO - Created funding_per_employee feature
+2025-04-23 04:07:25,581 - FundingAnomalyDetection - INFO - Created 4 features for anomaly detection
+2025-04-23 04:07:25,582 - FundingAnomalyDetection - INFO - Fitting Isolation Forest with contamination=None
+2025-04-23 04:07:25,682 - FundingAnomalyDetection - INFO - Isolation Forest model trained successfully
+2025-04-23 04:07:26,275 - FundingAnomalyDetection - INFO - Model performance: Accuracy=0.994, Precision=1.000, Recall=0.500, F1=0.667, RMSE=0.422
+2025-04-23 04:07:26,275 - FundingAnomalyDetection - INFO - Anomaly visualizations created successfully
+2025-04-23 04:07:26,276 - FundingAnomalyDetection - INFO - Generating anomaly detection report
+2025-04-23 04:07:26,282 - FundingAnomalyDetection - INFO - Anomaly report saved to /Users/hk/Downloads/DSFinalYearProject/outputSuccessFailure/anomaly_detection/anomaly_report.csv
+2025-04-23 04:07:26,283 - FundingAnomalyDetection - INFO - Integration data saved to /Users/hk/Downloads/DSFinalYearProject/outputSuccessFailure/anomaly_detection/anomaly_results.json
+2025-04-23 04:07:26,287 - FundingAnomalyDetection - INFO - Model saved to /Users/hk/Downloads/DSFinalYearProject/outputSuccessFailure/anomaly_detection/anomaly_model_20250423_040726.pkl
+2025-04-23 04:07:26,287 - FundingAnomalyDetection - INFO - Anomaly detection analysis completed
+2025-04-23 04:07:26,287 - success_failure_prediction - INFO - Running industry trend analysis
+2025-04-23 04:07:26,287 - IndustryTrendAnalysis - INFO - Generating industry trend report...
+2025-04-23 04:07:26,288 - IndustryTrendAnalysis - INFO - Report saved to /Users/hk/Downloads/DSFinalYearProject/outputSuccessFailure/industry_trends/industry_trend_report.json
+2025-04-23 04:07:26,288 - success_failure_prediction - INFO - All component analyses completed successfully
+2025-04-23 04:07:26,289 - success_failure_prediction - INFO - Step 3: Integrating data
+2025-04-23 04:07:26,289 - success_failure_prediction - INFO - Integrating data from all components
+2025-04-23 04:07:26,289 - success_failure_prediction - INFO - Loading data directly from JSON files
+2025-04-23 04:07:26,290 - success_failure_prediction - INFO - Checking file existence: /Users/hk/Downloads/DSFinalYearProject/JSONFolder/fundraisestartup50.json, exists: True
+2025-04-23 04:07:26,290 - success_failure_prediction - INFO - Checking file existence: /Users/hk/Downloads/DSFinalYearProject/JSONFolder/growthlistscrapper.json, exists: True
+2025-04-23 04:07:26,290 - success_failure_prediction - INFO - Checking file existence: /Users/hk/Downloads/DSFinalYearProject/JSONFolder/topstartupio50.json, exists: True
+2025-04-23 04:07:26,293 - success_failure_prediction - INFO - Loaded 1103 records from fundraisestartup50.json
+2025-04-23 04:07:26,295 - success_failure_prediction - INFO - Loaded 100 records from growthlistscrapper.json
+2025-04-23 04:07:26,298 - success_failure_prediction - INFO - Loaded 546 records from topstartupio50.json
+2025-04-23 04:07:26,340 - success_failure_prediction - INFO - Combined 1749 records from all JSON files
+2025-04-23 04:07:26,351 - success_failure_prediction - INFO - Successfully integrated data: 1748 records with 30 features
+2025-04-23 04:07:26,351 - success_failure_prediction - INFO - Step 4: Calculating success scores
+2025-04-23 04:07:26,351 - success_failure_prediction - INFO - Calculating success scores
+2025-04-23 04:07:26,361 - success_failure_prediction - WARNING - No survival information available, estimating from stage and funding
+2025-04-23 04:07:26,379 - success_failure_prediction - WARNING - No anomaly detection information available, using optimistic score
+2025-04-23 04:07:26,380 - success_failure_prediction - INFO - Success scores calculated successfully
+2025-04-23 04:07:26,380 - success_failure_prediction - INFO - Step 5: Classifying startups
+2025-04-23 04:07:26,380 - success_failure_prediction - INFO - Classifying companies by success potential
+2025-04-23 04:07:26,386 - success_failure_prediction - INFO - Optimistic thresholds - Low: 36.7, Medium: 45.2, High: 56.1
+2025-04-23 04:07:26,389 - success_failure_prediction - INFO - Classification results: {'Moderate Success Potential': np.int64(487), 'High Success Potential': np.int64(431), 'Moderate Failure Risk': np.int64(387), 'High Failure Risk': np.int64(352)}
+2025-04-23 04:07:26,398 - success_failure_prediction - INFO - Risk level distribution: {'Medium Risk': '718 (41.1%)', 'Low Risk': '477 (27.3%)', 'High Risk': '382 (21.9%)', 'Minimal Risk': '171 (9.8%)'}
+2025-04-23 04:07:26,398 - success_failure_prediction - INFO - Step 6: Generating visualizations
+2025-04-23 04:07:26,398 - success_failure_prediction - INFO - Generating visualizations
+2025-04-23 04:07:27,360 - success_failure_prediction - INFO - Generated visualizations successfully in /Users/hk/Downloads/DSFinalYearProject/outputSuccessFailure/visualizations
+2025-04-23 04:07:27,361 - success_failure_prediction - INFO - Step 7: Creating advanced model performance visualizations
+2025-04-23 04:07:27,361 - success_failure_prediction - INFO - Generating model performance visualizations
+2025-04-23 04:07:27,489 - success_failure_prediction - INFO - Model: Random Forest
+2025-04-23 04:07:27,490 - success_failure_prediction - INFO -   accuracy: 0.9848
+2025-04-23 04:07:27,490 - success_failure_prediction - INFO -   precision: 0.9926
+2025-04-23 04:07:27,490 - success_failure_prediction - INFO -   recall: 0.9783
+2025-04-23 04:07:27,490 - success_failure_prediction - INFO -   f1: 0.9854
+2025-04-23 04:07:27,491 - success_failure_prediction - ERROR - Error generating model performance visualizations: Input X contains NaN.
+GradientBoostingClassifier does not accept missing values encoded as NaN natively. For supervised learning, you might want to consider sklearn.ensemble.HistGradientBoostingClassifier and Regressor which accept missing values encoded as NaNs natively. Alternatively, it is possible to preprocess the data, for instance by using an imputer transformer in a pipeline or drop samples with missing values. See https://scikit-learn.org/stable/modules/impute.html You can find a list of all estimators that handle NaN values at the following page: https://scikit-learn.org/stable/modules/impute.html#estimators-that-handle-nan-values
+2025-04-23 04:07:27,495 - success_failure_prediction - ERROR - Traceback (most recent call last):
+  File "/Users/hk/Downloads/DSFinalYearProject/MLPredictiveAnalysis/success_failure_prediction.py", line 1360, in visualize_model_performance
+    model.fit(X_train, y_train)
+  File "/Users/hk/Downloads/DSFinalYearProject/.venv/lib/python3.12/site-packages/sklearn/base.py", line 1389, in wrapper
+    return fit_method(estimator, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/hk/Downloads/DSFinalYearProject/.venv/lib/python3.12/site-packages/sklearn/ensemble/_gb.py", line 658, in fit
+    X, y = validate_data(
+           ^^^^^^^^^^^^^^
+  File "/Users/hk/Downloads/DSFinalYearProject/.venv/lib/python3.12/site-packages/sklearn/utils/validation.py", line 2961, in validate_data
+    X, y = check_X_y(X, y, **check_params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/hk/Downloads/DSFinalYearProject/.venv/lib/python3.12/site-packages/sklearn/utils/validation.py", line 1370, in check_X_y
+    X = check_array(
+        ^^^^^^^^^^^^
+  File "/Users/hk/Downloads/DSFinalYearProject/.venv/lib/python3.12/site-packages/sklearn/utils/validation.py", line 1107, in check_array
+    _assert_all_finite(
+  File "/Users/hk/Downloads/DSFinalYearProject/.venv/lib/python3.12/site-packages/sklearn/utils/validation.py", line 120, in _assert_all_finite
+    _assert_all_finite_element_wise(
+  File "/Users/hk/Downloads/DSFinalYearProject/.venv/lib/python3.12/site-packages/sklearn/utils/validation.py", line 169, in _assert_all_finite_element_wise
+    raise ValueError(msg_err)
+ValueError: Input X contains NaN.
+GradientBoostingClassifier does not accept missing values encoded as NaN natively. For supervised learning, you might want to consider sklearn.ensemble.HistGradientBoostingClassifier and Regressor which accept missing values encoded as NaNs natively. Alternatively, it is possible to preprocess the data, for instance by using an imputer transformer in a pipeline or drop samples with missing values. See https://scikit-learn.org/stable/modules/impute.html You can find a list of all estimators that handle NaN values at the following page: https://scikit-learn.org/stable/modules/impute.html#estimators-that-handle-nan-values
+
+2025-04-23 04:07:27,496 - success_failure_prediction - INFO - Step 8: Enhancing predictions with ensemble models
+2025-04-23 04:07:27,496 - success_failure_prediction - INFO - Enhancing predictions with ensemble models
+2025-04-23 04:07:27,650 - success_failure_prediction - ERROR - Error enhancing predictions with ensemble: Input X contains NaN.
+GradientBoostingClassifier does not accept missing values encoded as NaN natively. For supervised learning, you might want to consider sklearn.ensemble.HistGradientBoostingClassifier and Regressor which accept missing values encoded as NaNs natively. Alternatively, it is possible to preprocess the data, for instance by using an imputer transformer in a pipeline or drop samples with missing values. See https://scikit-learn.org/stable/modules/impute.html You can find a list of all estimators that handle NaN values at the following page: https://scikit-learn.org/stable/modules/impute.html#estimators-that-handle-nan-values
+2025-04-23 04:07:27,653 - success_failure_prediction - ERROR - Traceback (most recent call last):
+  File "/Users/hk/Downloads/DSFinalYearProject/MLPredictiveAnalysis/success_failure_prediction.py", line 1643, in enhance_predictions_with_ensemble
+    ensemble.fit(X_train, y_train)
+  File "/Users/hk/Downloads/DSFinalYearProject/.venv/lib/python3.12/site-packages/sklearn/base.py", line 1389, in wrapper
+    return fit_method(estimator, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/hk/Downloads/DSFinalYearProject/.venv/lib/python3.12/site-packages/sklearn/utils/validation.py", line 63, in inner_f
+    return f(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^
+  File "/Users/hk/Downloads/DSFinalYearProject/.venv/lib/python3.12/site-packages/sklearn/ensemble/_voting.py", line 419, in fit
+    return super().fit(X, transformed_y, **fit_params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/hk/Downloads/DSFinalYearProject/.venv/lib/python3.12/site-packages/sklearn/ensemble/_voting.py", line 100, in fit
+    self.estimators_ = Parallel(n_jobs=self.n_jobs)(
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/hk/Downloads/DSFinalYearProject/.venv/lib/python3.12/site-packages/sklearn/utils/parallel.py", line 77, in __call__
+    return super().__call__(iterable_with_config)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/hk/Downloads/DSFinalYearProject/.venv/lib/python3.12/site-packages/joblib/parallel.py", line 1918, in __call__
+    return output if self.return_generator else list(output)
+                                                ^^^^^^^^^^^^
+  File "/Users/hk/Downloads/DSFinalYearProject/.venv/lib/python3.12/site-packages/joblib/parallel.py", line 1847, in _get_sequential_output
+    res = func(*args, **kwargs)
+          ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/hk/Downloads/DSFinalYearProject/.venv/lib/python3.12/site-packages/sklearn/utils/parallel.py", line 139, in __call__
+    return self.function(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/hk/Downloads/DSFinalYearProject/.venv/lib/python3.12/site-packages/sklearn/ensemble/_base.py", line 39, in _fit_single_estimator
+    estimator.fit(X, y, **fit_params)
+  File "/Users/hk/Downloads/DSFinalYearProject/.venv/lib/python3.12/site-packages/sklearn/base.py", line 1389, in wrapper
+    return fit_method(estimator, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/hk/Downloads/DSFinalYearProject/.venv/lib/python3.12/site-packages/sklearn/ensemble/_gb.py", line 658, in fit
+    X, y = validate_data(
+           ^^^^^^^^^^^^^^
+  File "/Users/hk/Downloads/DSFinalYearProject/.venv/lib/python3.12/site-packages/sklearn/utils/validation.py", line 2961, in validate_data
+    X, y = check_X_y(X, y, **check_params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/hk/Downloads/DSFinalYearProject/.venv/lib/python3.12/site-packages/sklearn/utils/validation.py", line 1370, in check_X_y
+    X = check_array(
+        ^^^^^^^^^^^^
+  File "/Users/hk/Downloads/DSFinalYearProject/.venv/lib/python3.12/site-packages/sklearn/utils/validation.py", line 1107, in check_array
+    _assert_all_finite(
+  File "/Users/hk/Downloads/DSFinalYearProject/.venv/lib/python3.12/site-packages/sklearn/utils/validation.py", line 120, in _assert_all_finite
+    _assert_all_finite_element_wise(
+  File "/Users/hk/Downloads/DSFinalYearProject/.venv/lib/python3.12/site-packages/sklearn/utils/validation.py", line 169, in _assert_all_finite_element_wise
+    raise ValueError(msg_err)
+ValueError: Input X contains NaN.
+GradientBoostingClassifier does not accept missing values encoded as NaN natively. For supervised learning, you might want to consider sklearn.ensemble.HistGradientBoostingClassifier and Regressor which accept missing values encoded as NaNs natively. Alternatively, it is possible to preprocess the data, for instance by using an imputer transformer in a pipeline or drop samples with missing values. See https://scikit-learn.org/stable/modules/impute.html You can find a list of all estimators that handle NaN values at the following page: https://scikit-learn.org/stable/modules/impute.html#estimators-that-handle-nan-values
+
+2025-04-23 04:07:27,654 - success_failure_prediction - INFO - Step 9: Generating report
+2025-04-23 04:07:27,654 - success_failure_prediction - INFO - Generating success/failure prediction report
+2025-04-23 04:07:27,663 - success_failure_prediction - INFO - Generated report successfully: /Users/hk/Downloads/DSFinalYearProject/outputSuccessFailure/success_failure_report.txt
+2025-04-23 04:07:27,704 - success_failure_prediction - INFO - Saved predictions to: /Users/hk/Downloads/DSFinalYearProject/outputSuccessFailure/success_failure_predictions.csv
+2025-04-23 04:07:27,705 - success_failure_prediction - INFO - Analysis complete. Overall success rate: 52.5%
+2025-04-23 04:07:27,705 - success_failure_prediction - INFO - Total companies analyzed: 1748
+2025-04-23 04:07:27,705 - success_failure_prediction - INFO - Predicted successful: 918 (52.5%)
+2025-04-23 04:07:27,705 - success_failure_prediction - INFO - Predicted unsuccessful: 830 (47.5%)
+2025-04-23 04:07:27,705 - success_failure_prediction - INFO - Classification breakdown:
+2025-04-23 04:07:27,706 - success_failure_prediction - INFO - - High Success Potential: 431 (24.7%)
+2025-04-23 04:07:27,706 - success_failure_prediction - INFO - - Moderate Success Potential: 487 (27.9%)
+2025-04-23 04:07:27,706 - success_failure_prediction - INFO - - Moderate Failure Risk: 387 (22.1%)
+2025-04-23 04:07:27,706 - success_failure_prediction - INFO - - High Failure Risk: 352 (20.1%)
+2025-04-23 04:07:27,708 - success_failure_prediction - INFO - Top performing industries:
+2025-04-23 04:07:27,708 - success_failure_prediction - INFO - - medical practice: 100.0% success rate (based on 2 companies)
+2025-04-23 04:07:27,708 - success_failure_prediction - INFO - - : 88.8% success rate (based on 547 companies)
+2025-04-23 04:07:27,708 - success_failure_prediction - INFO - - computer hardware: 70.0% success rate (based on 10 companies)
+2025-04-23 04:07:27,709 - success_failure_prediction - INFO - Lowest performing industries:
+2025-04-23 04:07:27,709 - success_failure_prediction - INFO - - Aerospace: 0.0% success rate (based on 1 companies)
+2025-04-23 04:07:27,709 - success_failure_prediction - INFO - - Agriculture, Food and Beverage, Artificial Intelligence, E-commerce: 0.0% success rate (based on 1 companies)
+2025-04-23 04:07:27,709 - success_failure_prediction - INFO - - Architecture, Media: 0.0% success rate (based on 1 companies)
+2025-04-23 04:07:27,710 - success_failure_prediction - INFO - Success rate by funding stage:
+2025-04-23 04:07:27,710 - success_failure_prediction - INFO - - Series D: 100.0% success rate (based on 84 companies)
+2025-04-23 04:07:27,710 - success_failure_prediction - INFO - - Series E: 100.0% success rate (based on 39 companies)
+2025-04-23 04:07:27,710 - success_failure_prediction - INFO - - Series F: 100.0% success rate (based on 23 companies)
+2025-04-23 04:07:27,710 - success_failure_prediction - INFO - - Series H: 100.0% success rate (based on 7 companies)
+2025-04-23 04:07:27,711 - success_failure_prediction - INFO - - Series C: 96.6% success rate (based on 179 companies)
+2025-04-23 04:07:27,711 - success_failure_prediction - INFO - - Series B: 93.7% success rate (based on 223 companies)
+2025-04-23 04:07:27,711 - success_failure_prediction - INFO - - Private Equity: 89.3% success rate (based on 28 companies)
+2025-04-23 04:07:27,711 - success_failure_prediction - INFO - - Series G: 85.7% success rate (based on 7 companies)
+2025-04-23 04:07:27,711 - success_failure_prediction - INFO - - Debt Financing: 76.7% success rate (based on 43 companies)
+2025-04-23 04:07:27,711 - success_failure_prediction - INFO - - Series A: 62.0% success rate (based on 313 companies)
+2025-04-23 04:07:27,711 - success_failure_prediction - INFO - - Venture - Series Unknown: 43.0% success rate (based on 172 companies)
+2025-04-23 04:07:27,711 - success_failure_prediction - INFO - - Undisclosed: 4.0% success rate (based on 25 companies)
+2025-04-23 04:07:27,711 - success_failure_prediction - INFO - - Seed: 0.6% success rate (based on 349 companies)
+2025-04-23 04:07:27,711 - success_failure_prediction - INFO - - Pre-Seed: 0.0% success rate (based on 122 companies)
+2025-04-23 04:07:27,712 - success_failure_prediction - INFO - - Grant: 0.0% success rate (based on 67 companies)
+2025-04-23 04:28:12,582 - success_failure_prediction - INFO - Success/Failure Prediction system initialized
+2025-04-23 04:28:12,582 - success_failure_prediction - INFO - Starting success/failure prediction analysis
+2025-04-23 04:28:12,583 - success_failure_prediction - INFO - Step 1: Initializing component models
+2025-04-23 04:28:12,583 - success_failure_prediction - INFO - Initializing component prediction systems
+2025-04-23 04:28:12,584 - funding_stage_prediction - INFO - Historical database initialized
+2025-04-23 04:28:12,584 - funding_stage_prediction - INFO - Created visualization directory: ./outputFundingStagePrediction/visualizations
+2025-04-23 04:28:12,585 - funding_stage_prediction - INFO - Created visualization directory: ./outputFundingStagePrediction/visualizations
+2025-04-23 04:28:12,586 - funding_stage_prediction - INFO - Initialized model directory structure at ./outputFundingStagePrediction/models
+2025-04-23 04:28:12,587 - funding_amount_forecast - INFO - Funding Amount Forecast initialized
+2025-04-23 04:28:12,587 - success_failure_prediction - INFO - All component systems initialized successfully
+2025-04-23 04:28:12,587 - success_failure_prediction - INFO - Step 2: Running component analyses
+2025-04-23 04:28:12,587 - success_failure_prediction - INFO - Running component analyses
+2025-04-23 04:28:12,587 - success_failure_prediction - INFO - Running funding stage prediction
+2025-04-23 04:28:12,587 - funding_stage_prediction - INFO - Starting funding stage prediction pipeline
+2025-04-23 04:28:12,592 - funding_stage_prediction - INFO - Loaded 1103 records from fundraiser data
+2025-04-23 04:28:12,594 - funding_stage_prediction - INFO - Loaded 100 records from growthlist data
+2025-04-23 04:28:12,599 - funding_stage_prediction - INFO - Loaded 546 records from topstartup data
+2025-04-23 04:28:12,599 - funding_stage_prediction - INFO - Loaded datasets - Fundraiser: 1103 rows, Growthlist: 100 rows, Topstartup: 546 rows
+2025-04-23 04:28:12,635 - funding_stage_prediction - INFO - Processed 1103 records from fundraiser data
+2025-04-23 04:28:12,639 - funding_stage_prediction - INFO - Processed 100 records from growthlist data
+2025-04-23 04:28:12,661 - funding_stage_prediction - INFO - Processed 546 records from topstartup data
+2025-04-23 04:28:12,662 - funding_stage_prediction - INFO - Merged data columns: ['company_name', 'funding_stage', 'funding_amount', 'funding_date', 'industry', 'employees', 'source']
+2025-04-23 04:28:12,663 - funding_stage_prediction - INFO - Non-null counts: {'company_name': 1749, 'funding_stage': 1690, 'funding_amount': 1727, 'funding_date': 1714, 'industry': 1203, 'employees': 1641, 'source': 1749}
+2025-04-23 04:28:12,664 - funding_stage_prediction - INFO - Removed 1 duplicate records
+2025-04-23 04:28:12,666 - funding_stage_prediction - INFO - Successfully merged 1748 records
+2025-04-23 04:28:12,666 - funding_stage_prediction - INFO - Starting feature extraction for 1748 records
+2025-04-23 04:28:12,667 - funding_stage_prediction - INFO - Found 20 unique funding stages: ['Series A' 'Seed' 'venture - series unknown' 'debt financing'
+ 'undisclosed' 'Grant' 'Private Equity' 'Pre-Seed' 'Series C' 'Series B'
+ 'Series D' 'Series H' 'Angel' 'Series E' 'Series F' 'Series G'
+ 'initial coin offering' 'series j' 'Unknown' 'series i']
+2025-04-23 04:28:12,667 - funding_stage_prediction - INFO - Created funding stage mapping: {'Pre-Seed': 0, 'Seed': 1, 'Angel': 2, 'Series A': 3, 'Series B': 4, 'Series C': 5, 'Series D': 6, 'Series E': 7, 'Series F': 8, 'Series G': 9, 'Series H': 10, 'venture - series unknown': 11, 'debt financing': 12, 'undisclosed': 13, 'Grant': 14, 'Private Equity': 15, 'initial coin offering': 16, 'series j': 17, 'Unknown': 18, 'series i': 19}
+2025-04-23 04:28:12,755 - funding_stage_prediction - INFO - Feature engineering complete: 17 features created
+2025-04-23 04:28:12,755 - funding_stage_prediction - INFO - Preparing model data with features: ['funding_amount_log', 'employees', 'employee_efficiency', 'funding_year', 'funding_month', 'previous_rounds', 'months_since_first_funding', 'funding_velocity']
+2025-04-23 04:28:12,757 - funding_stage_prediction - INFO - Prepared model data: X shape=(1748, 8), y shape=(1748,)
+2025-04-23 04:28:12,757 - funding_stage_prediction - INFO - Class distribution: {1: 347, 3: 313, 4: 223, 5: 179, 11: 172, 0: 124, 6: 84, 14: 67, 18: 59, 12: 43, 7: 39, 15: 28, 13: 25, 8: 23, 10: 7, 9: 7, 2: 4, 19: 2, 16: 1, 17: 1}
+2025-04-23 04:28:12,758 - funding_stage_prediction - INFO - Initial class mapping: {np.int64(0): 0, np.int64(1): 1, np.int64(2): 2, np.int64(3): 3, np.int64(4): 4, np.int64(5): 5, np.int64(6): 6, np.int64(7): 7, np.int64(8): 8, np.int64(9): 9, np.int64(10): 10, np.int64(11): 11, np.int64(12): 12, np.int64(13): 13, np.int64(14): 14, np.int64(15): 15, np.int64(16): 16, np.int64(17): 17, np.int64(18): 18, np.int64(19): 19}
+2025-04-23 04:28:12,758 - funding_stage_prediction - INFO - Merged rare classes into majority class 1
+2025-04-23 04:28:12,759 - funding_stage_prediction - INFO - Final class mapping after merging rare classes: {np.int64(0): 0, np.int64(1): 1, np.int64(3): 2, np.int64(4): 3, np.int64(5): 4, np.int64(6): 5, np.int64(7): 6, np.int64(8): 7, np.int64(9): 8, np.int64(10): 9, np.int64(11): 10, np.int64(12): 11, np.int64(13): 12, np.int64(14): 13, np.int64(15): 14, np.int64(18): 15}
+2025-04-23 04:28:18,813 - funding_stage_prediction - INFO - Selected features shape: (1748, 4)
+2025-04-23 04:28:18,815 - funding_stage_prediction - INFO - Selected features: ['funding_amount_log', 'employees', 'previous_rounds', 'funding_velocity']
+2025-04-23 04:28:18,816 - funding_stage_prediction - INFO - Step 4: Tuning and training models...
+2025-04-23 04:28:51,816 - funding_stage_prediction - INFO - Best RF params: {'class_weight': 'balanced', 'max_depth': 10, 'min_samples_split': 5, 'n_estimators': 200}
+2025-04-23 04:28:51,818 - funding_stage_prediction - INFO - Best RF accuracy: 0.8198
+2025-04-23 04:29:23,444 - funding_stage_prediction - INFO - Best XGB params: {'colsample_bytree': np.float64(0.8162648111227682), 'gamma': np.float64(0.3359168396056578), 'learning_rate': np.float64(0.029676915031455676), 'max_depth': 4, 'num_class': 16, 'subsample': np.float64(0.885251088942496)}
+2025-04-23 04:29:23,445 - funding_stage_prediction - INFO - Best XGB accuracy: 0.8244
+2025-04-23 04:30:08,053 - funding_stage_prediction - INFO - Step 5: Creating advanced visualizations...
+2025-04-23 04:30:39,718 - funding_stage_prediction - INFO - Pipeline completed successfully!
+2025-04-23 04:30:39,718 - success_failure_prediction - INFO - Running funding continuation analysis
+2025-04-23 04:30:39,719 - funding_continuation - INFO - Starting funding continuation analysis pipeline
+2025-04-23 04:30:39,719 - funding_continuation - ERROR - No data available for analysis
+2025-04-23 04:30:39,719 - success_failure_prediction - INFO - Running funding amount forecast
+2025-04-23 04:30:39,719 - funding_amount_forecast - INFO - Starting funding amount forecast analysis
+2025-04-23 04:30:39,719 - funding_amount_forecast - INFO - Loading data from JSON files
+2025-04-23 04:30:39,724 - funding_amount_forecast - INFO - Loaded 1103 records from fundraiser data
+2025-04-23 04:30:39,726 - funding_amount_forecast - INFO - Loaded 100 records from growthlist data
+2025-04-23 04:30:39,728 - funding_amount_forecast - INFO - Loaded 546 records from topstartup data
+2025-04-23 04:30:40,011 - funding_amount_forecast - INFO - Created DataFrame with 1749 records and 27 columns
+2025-04-23 04:30:40,012 - funding_amount_forecast - INFO - Standardizing DataFrame
+2025-04-23 04:30:40,118 - funding_amount_forecast - INFO - DataFrame standardization complete with 1749 records
+2025-04-23 04:30:40,119 - funding_amount_forecast - INFO - Creating features for funding amount forecasting
+2025-04-23 04:30:40,123 - funding_amount_forecast - INFO - Kept 1727 records with valid funding amounts
+2025-04-23 04:30:40,124 - funding_amount_forecast - INFO - Converting funding_date to datetime
+2025-04-23 04:30:52,332 - funding_amount_forecast - INFO - Estimating next round amounts for 623 companies without actual next round data
+2025-04-23 04:30:54,244 - funding_amount_forecast - INFO - Feature engineering complete. Created 47 features.
+2025-04-23 04:30:54,245 - funding_amount_forecast - INFO - Preparing data for model training
+2025-04-23 04:30:54,247 - funding_amount_forecast - WARNING - Column funding_usd contains all NaN values and will be excluded from features
+2025-04-23 04:30:54,247 - funding_amount_forecast - WARNING - Column avg_time_between_rounds contains all NaN values and will be excluded from features
+2025-04-23 04:30:54,249 - funding_amount_forecast - INFO - Filling missing values with median
+2025-04-23 04:30:54,251 - funding_amount_forecast - INFO - Using 1104 records with actual next round data for validation
+2025-04-23 04:30:54,255 - funding_amount_forecast - INFO - Training set: 1395 records (772 actual, 623 estimated)
+2025-04-23 04:30:54,255 - funding_amount_forecast - INFO - Test set: 332 records (all actual data)
+2025-04-23 04:30:54,262 - funding_amount_forecast - INFO - Training models...
+2025-04-23 04:30:54,262 - funding_amount_forecast - INFO - Training quantile regression forest with quantiles: [0.1, 0.5, 0.9]
+2025-04-23 04:30:54,262 - funding_amount_forecast - INFO - Training model for quantile 0.1
+2025-04-23 04:30:59,412 - funding_amount_forecast - INFO - Trained model for quantile 0.1
+2025-04-23 04:30:59,413 - funding_amount_forecast - INFO - Training model for quantile 0.5
+2025-04-23 04:31:01,526 - funding_amount_forecast - INFO - Trained model for quantile 0.5
+2025-04-23 04:31:01,528 - funding_amount_forecast - INFO - Training model for quantile 0.9
+2025-04-23 04:31:02,182 - funding_amount_forecast - INFO - Trained model for quantile 0.9
+2025-04-23 04:31:02,182 - funding_amount_forecast - INFO - Training ensemble model
+2025-04-23 04:31:05,761 - funding_amount_forecast - INFO - Evaluating models...
+2025-04-23 04:31:05,764 - funding_amount_forecast - INFO - Evaluating model performance
+2025-04-23 04:31:05,769 - funding_amount_forecast - INFO - Quantile Regression Forest Metrics: RMSE=$112456167.79, MAE=$38473999.09, R2=-0.0149, Log-R2=-0.1930, Within 20%=0.08, Same order of magnitude=0.76
+2025-04-23 04:31:05,775 - funding_amount_forecast - INFO - 80% Prediction Interval Coverage: 0.6596
+2025-04-23 04:31:05,776 - funding_amount_forecast - INFO - Evaluating model performance
+2025-04-23 04:31:05,839 - funding_amount_forecast - INFO - random_forest Metrics: RMSE=$269793142.89, MAE=$61202220.89, R2=-4.8415, Log-R2=-0.2709, Within 20%=0.1107, Same order=0.7450
+2025-04-23 04:31:05,844 - funding_amount_forecast - INFO - gradient_boosting Metrics: RMSE=$565992166.66, MAE=$99531321.92, R2=-24.7090, Log-R2=-0.4027, Within 20%=0.0872, Same order=0.7282
+2025-04-23 04:31:05,886 - funding_amount_forecast - INFO - extra_trees Metrics: RMSE=$136959394.55, MAE=$61918617.64, R2=-0.5054, Log-R2=-0.3556, Within 20%=0.0671, Same order=0.6812
+2025-04-23 04:31:05,889 - funding_amount_forecast - INFO - Ensemble Metrics: RMSE=$258670603.42, MAE=$72930658.02, R2=-4.3698, Log-R2=-0.3418, Within 20%=0.0973, Same order=0.7114
+2025-04-23 04:31:06,132 - funding_amount_forecast - INFO - Creating visualizations...
+2025-04-23 04:31:06,132 - funding_amount_forecast - INFO - Creating funding by stage visualization
+2025-04-23 04:31:10,541 - funding_amount_forecast - INFO - Saved funding by stage visualization to /Users/hk/Downloads/DSFinalYearProject/outputSuccessFailure/amount_forecast/funding_by_stage.png
+2025-04-23 04:31:10,587 - funding_amount_forecast - INFO - Creating funding by industry visualization
+2025-04-23 04:31:33,603 - success_failure_prediction - INFO - Success/Failure Prediction system initialized
+2025-04-23 04:31:33,603 - success_failure_prediction - INFO - Starting success/failure prediction analysis
+2025-04-23 04:31:33,603 - success_failure_prediction - INFO - Step 1: Initializing component models
+2025-04-23 04:31:33,604 - success_failure_prediction - INFO - Initializing component prediction systems
+2025-04-23 04:31:33,605 - funding_stage_prediction - INFO - Historical database initialized
+2025-04-23 04:31:33,605 - funding_stage_prediction - INFO - Created visualization directory: ./outputFundingStagePrediction/visualizations
+2025-04-23 04:31:33,607 - funding_stage_prediction - INFO - Created visualization directory: ./outputFundingStagePrediction/visualizations
+2025-04-23 04:31:33,608 - funding_stage_prediction - INFO - Initialized model directory structure at ./outputFundingStagePrediction/models
+2025-04-23 04:31:33,610 - funding_amount_forecast - INFO - Funding Amount Forecast initialized
+2025-04-23 04:31:33,610 - success_failure_prediction - INFO - All component systems initialized successfully
+2025-04-23 04:31:33,610 - success_failure_prediction - INFO - Step 2: Running component analyses
+2025-04-23 04:31:33,611 - success_failure_prediction - INFO - Running component analyses
+2025-04-23 04:31:33,611 - success_failure_prediction - INFO - Running funding stage prediction
+2025-04-23 04:31:33,611 - funding_stage_prediction - INFO - Starting funding stage prediction pipeline
+2025-04-23 04:31:33,618 - funding_stage_prediction - INFO - Loaded 1103 records from fundraiser data
+2025-04-23 04:31:33,621 - funding_stage_prediction - INFO - Loaded 100 records from growthlist data
+2025-04-23 04:31:33,630 - funding_stage_prediction - INFO - Loaded 546 records from topstartup data
+2025-04-23 04:31:33,630 - funding_stage_prediction - INFO - Loaded datasets - Fundraiser: 1103 rows, Growthlist: 100 rows, Topstartup: 546 rows
+2025-04-23 04:31:33,676 - funding_stage_prediction - INFO - Processed 1103 records from fundraiser data
+2025-04-23 04:31:33,680 - funding_stage_prediction - INFO - Processed 100 records from growthlist data
+2025-04-23 04:31:33,720 - funding_stage_prediction - INFO - Processed 546 records from topstartup data
+2025-04-23 04:31:33,730 - funding_stage_prediction - INFO - Merged data columns: ['company_name', 'funding_stage', 'funding_amount', 'funding_date', 'industry', 'employees', 'source']
+2025-04-23 04:31:33,731 - funding_stage_prediction - INFO - Non-null counts: {'company_name': 1749, 'funding_stage': 1690, 'funding_amount': 1727, 'funding_date': 1714, 'industry': 1203, 'employees': 1641, 'source': 1749}
+2025-04-23 04:31:33,734 - funding_stage_prediction - INFO - Removed 1 duplicate records
+2025-04-23 04:31:33,737 - funding_stage_prediction - INFO - Successfully merged 1748 records
+2025-04-23 04:31:33,738 - funding_stage_prediction - INFO - Starting feature extraction for 1748 records
+2025-04-23 04:31:33,739 - funding_stage_prediction - INFO - Found 20 unique funding stages: ['Series A' 'Seed' 'venture - series unknown' 'debt financing'
+ 'undisclosed' 'Grant' 'Private Equity' 'Pre-Seed' 'Series C' 'Series B'
+ 'Series D' 'Series H' 'Angel' 'Series E' 'Series F' 'Series G'
+ 'initial coin offering' 'series j' 'Unknown' 'series i']
+2025-04-23 04:31:33,740 - funding_stage_prediction - INFO - Created funding stage mapping: {'Pre-Seed': 0, 'Seed': 1, 'Angel': 2, 'Series A': 3, 'Series B': 4, 'Series C': 5, 'Series D': 6, 'Series E': 7, 'Series F': 8, 'Series G': 9, 'Series H': 10, 'venture - series unknown': 11, 'debt financing': 12, 'undisclosed': 13, 'Grant': 14, 'Private Equity': 15, 'initial coin offering': 16, 'series j': 17, 'Unknown': 18, 'series i': 19}
+2025-04-23 04:31:33,849 - funding_stage_prediction - INFO - Feature engineering complete: 17 features created
+2025-04-23 04:31:33,849 - funding_stage_prediction - INFO - Preparing model data with features: ['funding_amount_log', 'employees', 'employee_efficiency', 'funding_year', 'funding_month', 'previous_rounds', 'months_since_first_funding', 'funding_velocity']
+2025-04-23 04:31:33,852 - funding_stage_prediction - INFO - Prepared model data: X shape=(1748, 8), y shape=(1748,)
+2025-04-23 04:31:33,853 - funding_stage_prediction - INFO - Class distribution: {1: 347, 3: 313, 4: 223, 5: 179, 11: 172, 0: 124, 6: 84, 14: 67, 18: 59, 12: 43, 7: 39, 15: 28, 13: 25, 8: 23, 10: 7, 9: 7, 2: 4, 19: 2, 16: 1, 17: 1}
+2025-04-23 04:31:33,853 - funding_stage_prediction - INFO - Initial class mapping: {np.int64(0): 0, np.int64(1): 1, np.int64(2): 2, np.int64(3): 3, np.int64(4): 4, np.int64(5): 5, np.int64(6): 6, np.int64(7): 7, np.int64(8): 8, np.int64(9): 9, np.int64(10): 10, np.int64(11): 11, np.int64(12): 12, np.int64(13): 13, np.int64(14): 14, np.int64(15): 15, np.int64(16): 16, np.int64(17): 17, np.int64(18): 18, np.int64(19): 19}
+2025-04-23 04:31:33,855 - funding_stage_prediction - INFO - Merged rare classes into majority class 1
+2025-04-23 04:31:33,855 - funding_stage_prediction - INFO - Final class mapping after merging rare classes: {np.int64(0): 0, np.int64(1): 1, np.int64(3): 2, np.int64(4): 3, np.int64(5): 4, np.int64(6): 5, np.int64(7): 6, np.int64(8): 7, np.int64(9): 8, np.int64(10): 9, np.int64(11): 10, np.int64(12): 11, np.int64(13): 12, np.int64(14): 13, np.int64(15): 14, np.int64(18): 15}
+2025-04-23 04:31:45,868 - funding_stage_prediction - INFO - Selected features shape: (1748, 4)
+2025-04-23 04:31:45,870 - funding_stage_prediction - INFO - Selected features: ['funding_amount_log', 'employees', 'previous_rounds', 'funding_velocity']
+2025-04-23 04:31:45,870 - funding_stage_prediction - INFO - Step 4: Tuning and training models...
+2025-04-23 04:33:07,568 - funding_stage_prediction - INFO - Best RF params: {'class_weight': 'balanced', 'max_depth': 10, 'min_samples_split': 5, 'n_estimators': 200}
+2025-04-23 04:33:07,569 - funding_stage_prediction - INFO - Best RF accuracy: 0.8198
+2025-04-23 04:33:56,172 - funding_stage_prediction - INFO - Best XGB params: {'colsample_bytree': np.float64(0.6928532566006814), 'gamma': np.float64(0.007668232788929252), 'learning_rate': np.float64(0.02179528519741175), 'max_depth': 8, 'num_class': 16, 'subsample': np.float64(0.6123823520506605)}
+2025-04-23 04:33:56,173 - funding_stage_prediction - INFO - Best XGB accuracy: 0.8272
+2025-04-23 04:34:27,006 - funding_stage_prediction - INFO - Step 5: Creating advanced visualizations...
+2025-04-23 04:34:30,616 - funding_stage_prediction - INFO - Pipeline completed successfully!
+2025-04-23 04:34:30,616 - success_failure_prediction - INFO - Running funding continuation analysis
+2025-04-23 04:34:30,617 - funding_continuation - INFO - Starting funding continuation analysis pipeline
+2025-04-23 04:34:30,617 - funding_continuation - ERROR - No data available for analysis
+2025-04-23 04:34:30,617 - success_failure_prediction - INFO - Running funding amount forecast
+2025-04-23 04:34:30,617 - funding_amount_forecast - INFO - Starting funding amount forecast analysis
+2025-04-23 04:34:30,617 - funding_amount_forecast - INFO - Loading data from JSON files
+2025-04-23 04:34:30,621 - funding_amount_forecast - INFO - Loaded 1103 records from fundraiser data
+2025-04-23 04:34:30,621 - funding_amount_forecast - INFO - Loaded 100 records from growthlist data
+2025-04-23 04:34:30,623 - funding_amount_forecast - INFO - Loaded 546 records from topstartup data
+2025-04-23 04:34:30,629 - funding_amount_forecast - INFO - Created DataFrame with 1749 records and 27 columns
+2025-04-23 04:34:30,629 - funding_amount_forecast - INFO - Standardizing DataFrame
+2025-04-23 04:34:30,647 - funding_amount_forecast - INFO - DataFrame standardization complete with 1749 records
+2025-04-23 04:34:30,648 - funding_amount_forecast - INFO - Creating features for funding amount forecasting
+2025-04-23 04:34:30,649 - funding_amount_forecast - INFO - Kept 1727 records with valid funding amounts
+2025-04-23 04:34:30,650 - funding_amount_forecast - INFO - Converting funding_date to datetime
+2025-04-23 04:34:31,672 - funding_amount_forecast - INFO - Estimating next round amounts for 623 companies without actual next round data
+2025-04-23 04:34:31,868 - funding_amount_forecast - INFO - Feature engineering complete. Created 47 features.
+2025-04-23 04:34:31,870 - funding_amount_forecast - INFO - Preparing data for model training
+2025-04-23 04:34:31,872 - funding_amount_forecast - WARNING - Column funding_usd contains all NaN values and will be excluded from features
+2025-04-23 04:34:31,874 - funding_amount_forecast - WARNING - Column avg_time_between_rounds contains all NaN values and will be excluded from features
+2025-04-23 04:34:31,877 - funding_amount_forecast - INFO - Filling missing values with median
+2025-04-23 04:34:31,879 - funding_amount_forecast - INFO - Using 1104 records with actual next round data for validation
+2025-04-23 04:34:31,882 - funding_amount_forecast - INFO - Training set: 1395 records (772 actual, 623 estimated)
+2025-04-23 04:34:31,883 - funding_amount_forecast - INFO - Test set: 332 records (all actual data)
+2025-04-23 04:34:31,889 - funding_amount_forecast - INFO - Training models...
+2025-04-23 04:34:31,889 - funding_amount_forecast - INFO - Training quantile regression forest with quantiles: [0.1, 0.5, 0.9]
+2025-04-23 04:34:31,890 - funding_amount_forecast - INFO - Training model for quantile 0.1
+2025-04-23 04:34:32,366 - funding_amount_forecast - INFO - Trained model for quantile 0.1
+2025-04-23 04:34:32,366 - funding_amount_forecast - INFO - Training model for quantile 0.5
+2025-04-23 04:34:32,830 - funding_amount_forecast - INFO - Trained model for quantile 0.5
+2025-04-23 04:34:32,831 - funding_amount_forecast - INFO - Training model for quantile 0.9
+2025-04-23 04:34:33,269 - funding_amount_forecast - INFO - Trained model for quantile 0.9
+2025-04-23 04:34:33,269 - funding_amount_forecast - INFO - Training ensemble model
+2025-04-23 04:34:34,079 - funding_amount_forecast - INFO - Evaluating models...
+2025-04-23 04:34:34,080 - funding_amount_forecast - INFO - Evaluating model performance
+2025-04-23 04:34:34,082 - funding_amount_forecast - INFO - Quantile Regression Forest Metrics: RMSE=$112309816.35, MAE=$38337661.03, R2=-0.0123, Log-R2=-0.2134, Within 20%=0.09, Same order of magnitude=0.77
+2025-04-23 04:34:34,084 - funding_amount_forecast - INFO - 80% Prediction Interval Coverage: 0.6657
+2025-04-23 04:34:34,084 - funding_amount_forecast - INFO - Evaluating model performance
+2025-04-23 04:34:34,111 - funding_amount_forecast - INFO - random_forest Metrics: RMSE=$270000642.95, MAE=$62022507.23, R2=-4.8505, Log-R2=-0.2721, Within 20%=0.1007, Same order=0.7416
+2025-04-23 04:34:34,114 - funding_amount_forecast - INFO - gradient_boosting Metrics: RMSE=$676202658.08, MAE=$108859593.83, R2=-35.6959, Log-R2=-0.3711, Within 20%=0.0839, Same order=0.7315
+2025-04-23 04:34:34,144 - funding_amount_forecast - INFO - extra_trees Metrics: RMSE=$137329984.29, MAE=$62171171.27, R2=-0.5135, Log-R2=-0.3560, Within 20%=0.0671, Same order=0.6812
+2025-04-23 04:34:34,145 - funding_amount_forecast - INFO - Ensemble Metrics: RMSE=$282823632.58, MAE=$76006641.80, R2=-5.4194, Log-R2=-0.3440, Within 20%=0.0805, Same order=0.7148
+2025-04-23 04:34:34,203 - funding_amount_forecast - INFO - Creating visualizations...
+2025-04-23 04:34:34,203 - funding_amount_forecast - INFO - Creating funding by stage visualization
+2025-04-23 04:34:34,741 - funding_amount_forecast - INFO - Saved funding by stage visualization to /Users/hk/Downloads/DSFinalYearProject/outputSuccessFailure/amount_forecast/funding_by_stage.png
+2025-04-23 04:34:34,741 - funding_amount_forecast - INFO - Creating funding by industry visualization
+2025-04-23 04:34:36,121 - funding_amount_forecast - INFO - Saved funding by industry visualizations to /Users/hk/Downloads/DSFinalYearProject/outputSuccessFailure/amount_forecast/funding_by_industry_average.png and /Users/hk/Downloads/DSFinalYearProject/outputSuccessFailure/amount_forecast/funding_by_industry_distribution.png
+2025-04-23 04:34:36,121 - funding_amount_forecast - INFO - Creating prediction accuracy visualization
+2025-04-23 04:34:36,460 - funding_amount_forecast - INFO - Saved prediction accuracy visualization to /Users/hk/Downloads/DSFinalYearProject/outputSuccessFailure/amount_forecast/prediction_accuracy.png
+2025-04-23 04:34:36,461 - funding_amount_forecast - INFO - Creating feature importance visualization
+2025-04-23 04:34:36,810 - funding_amount_forecast - INFO - Saved feature importance visualization to /Users/hk/Downloads/DSFinalYearProject/outputSuccessFailure/amount_forecast/feature_importance.png
+2025-04-23 04:34:36,810 - funding_amount_forecast - INFO - Creating model calibration visualization
+2025-04-23 04:34:37,075 - funding_amount_forecast - INFO - Saved model calibration visualization to /Users/hk/Downloads/DSFinalYearProject/outputSuccessFailure/amount_forecast/model_calibration.png
+2025-04-23 04:34:37,075 - funding_amount_forecast - INFO - Creating error distribution visualization
+2025-04-23 04:34:38,562 - funding_amount_forecast - INFO - Saved error distribution visualization to /Users/hk/Downloads/DSFinalYearProject/outputSuccessFailure/amount_forecast/error_distribution.png
+2025-04-23 04:34:38,562 - funding_amount_forecast - INFO - Creating prediction intervals visualization
+2025-04-23 04:34:38,839 - funding_amount_forecast - INFO - Saved prediction intervals visualization to /Users/hk/Downloads/DSFinalYearProject/outputSuccessFailure/amount_forecast/prediction_intervals.png
+2025-04-23 04:34:38,839 - funding_amount_forecast - INFO - Generating report...
+2025-04-23 04:34:38,839 - funding_amount_forecast - INFO - Generating funding amount forecast report
+2025-04-23 04:34:38,879 - funding_amount_forecast - INFO - Funding amount forecast report saved to /Users/hk/Downloads/DSFinalYearProject/outputSuccessFailure/amount_forecast/funding_amount_forecast_report.md
+2025-04-23 04:34:38,879 - funding_amount_forecast - INFO - markdown2 package not available, skipping HTML conversion
+2025-04-23 04:34:38,879 - funding_amount_forecast - INFO - Saving model...
+2025-04-23 04:34:38,880 - funding_amount_forecast - INFO - Saving model to /Users/hk/Downloads/DSFinalYearProject/outputSuccessFailure/amount_forecast/funding_amount_forecast_model.pkl
+2025-04-23 04:34:38,956 - funding_amount_forecast - INFO - Model saved successfully to /Users/hk/Downloads/DSFinalYearProject/outputSuccessFailure/amount_forecast/funding_amount_forecast_model.pkl
+2025-04-23 04:34:38,956 - funding_amount_forecast - INFO - Funding amount forecast analysis completed successfully
+2025-04-23 04:34:38,957 - success_failure_prediction - INFO - Running funding anomaly detection
+2025-04-23 04:34:38,957 - FundingAnomalyDetection - INFO - Starting anomaly detection analysis
+2025-04-23 04:34:38,957 - FundingAnomalyDetection - INFO - Loading data from JSON files in /Users/hk/Downloads/DSFinalYearProject/JSONFolder
+2025-04-23 04:34:38,957 - FundingAnomalyDetection - INFO - Processing /Users/hk/Downloads/DSFinalYearProject/JSONFolder/growthlist_industry_analysis.json
+2025-04-23 04:34:38,959 - FundingAnomalyDetection - WARNING - Skipping /Users/hk/Downloads/DSFinalYearProject/JSONFolder/growthlist_industry_analysis.json - not a list of records or doesn't have a companies array
+2025-04-23 04:34:38,959 - FundingAnomalyDetection - INFO - Processing /Users/hk/Downloads/DSFinalYearProject/JSONFolder/fundraise_insider_stats.json
+2025-04-23 04:34:38,959 - FundingAnomalyDetection - WARNING - Skipping /Users/hk/Downloads/DSFinalYearProject/JSONFolder/fundraise_insider_stats.json - not a list of records or doesn't have a companies array
+2025-04-23 04:34:38,959 - FundingAnomalyDetection - INFO - Processing /Users/hk/Downloads/DSFinalYearProject/JSONFolder/growthlistscrapper.json
+2025-04-23 04:34:38,960 - FundingAnomalyDetection - INFO - Added 100 records from growthlistscrapper.json
+2025-04-23 04:34:38,960 - FundingAnomalyDetection - INFO - Processing /Users/hk/Downloads/DSFinalYearProject/JSONFolder/topstartupio50.json
+2025-04-23 04:34:38,962 - FundingAnomalyDetection - INFO - Added 546 records from topstartupio50.json
+2025-04-23 04:34:38,962 - FundingAnomalyDetection - INFO - Processing /Users/hk/Downloads/DSFinalYearProject/JSONFolder/fundraisestartup50.json
+2025-04-23 04:34:38,965 - FundingAnomalyDetection - INFO - Found nested companies array with 1103 records in fundraisestartup50.json
+2025-04-23 04:34:38,965 - FundingAnomalyDetection - INFO - Added 1103 records from fundraisestartup50.json
+2025-04-23 04:34:38,973 - FundingAnomalyDetection - INFO - Loaded 1749 records from JSON files
+2025-04-23 04:34:38,973 - FundingAnomalyDetection - INFO - Creating features for anomaly detection
+2025-04-23 04:34:38,975 - FundingAnomalyDetection - INFO - Created funding_per_employee feature
+2025-04-23 04:34:38,992 - FundingAnomalyDetection - INFO - Created 4 features for anomaly detection
+2025-04-23 04:34:38,992 - FundingAnomalyDetection - INFO - Detecting anomalies in funding data
+2025-04-23 04:34:38,992 - FundingAnomalyDetection - INFO - Fitting Isolation Forest with contamination=0.01
+2025-04-23 04:34:39,093 - FundingAnomalyDetection - INFO - Isolation Forest model trained successfully
+2025-04-23 04:34:39,113 - FundingAnomalyDetection - INFO - Detected 19 anomalies (1.09%)
+2025-04-23 04:34:39,113 - FundingAnomalyDetection - INFO - Creating anomaly visualizations
+2025-04-23 04:34:40,396 - FundingAnomalyDetection - INFO - Creating model calibration and performance visualizations
+2025-04-23 04:34:40,397 - FundingAnomalyDetection - INFO - Creating features for anomaly detection
+2025-04-23 04:34:40,399 - FundingAnomalyDetection - INFO - Created funding_per_employee feature
+2025-04-23 04:34:40,533 - FundingAnomalyDetection - INFO - Created 4 features for anomaly detection
+2025-04-23 04:34:40,535 - FundingAnomalyDetection - INFO - Fitting Isolation Forest with contamination=None
+2025-04-23 04:34:40,659 - FundingAnomalyDetection - INFO - Isolation Forest model trained successfully
+2025-04-23 04:34:41,278 - FundingAnomalyDetection - INFO - Model performance: Accuracy=0.994, Precision=1.000, Recall=0.500, F1=0.667, RMSE=0.422
+2025-04-23 04:34:41,278 - FundingAnomalyDetection - INFO - Anomaly visualizations created successfully
+2025-04-23 04:34:41,278 - FundingAnomalyDetection - INFO - Generating anomaly detection report
+2025-04-23 04:34:41,285 - FundingAnomalyDetection - INFO - Anomaly report saved to /Users/hk/Downloads/DSFinalYearProject/outputSuccessFailure/anomaly_detection/anomaly_report.csv
+2025-04-23 04:34:41,286 - FundingAnomalyDetection - INFO - Integration data saved to /Users/hk/Downloads/DSFinalYearProject/outputSuccessFailure/anomaly_detection/anomaly_results.json
+2025-04-23 04:34:41,289 - FundingAnomalyDetection - INFO - Model saved to /Users/hk/Downloads/DSFinalYearProject/outputSuccessFailure/anomaly_detection/anomaly_model_20250423_043441.pkl
+2025-04-23 04:34:41,289 - FundingAnomalyDetection - INFO - Anomaly detection analysis completed
+2025-04-23 04:34:41,290 - success_failure_prediction - INFO - Running industry trend analysis
+2025-04-23 04:34:41,290 - IndustryTrendAnalysis - INFO - Generating industry trend report...
+2025-04-23 04:34:41,290 - IndustryTrendAnalysis - INFO - Report saved to /Users/hk/Downloads/DSFinalYearProject/outputSuccessFailure/industry_trends/industry_trend_report.json
+2025-04-23 04:34:41,290 - success_failure_prediction - INFO - All component analyses completed successfully
+2025-04-23 04:34:41,291 - success_failure_prediction - INFO - Step 3: Integrating data
+2025-04-23 04:34:41,291 - success_failure_prediction - INFO - Integrating data from all components
+2025-04-23 04:34:41,291 - success_failure_prediction - INFO - Loading data directly from JSON files
+2025-04-23 04:34:41,291 - success_failure_prediction - INFO - Checking file existence: /Users/hk/Downloads/DSFinalYearProject/JSONFolder/fundraisestartup50.json, exists: True
+2025-04-23 04:34:41,291 - success_failure_prediction - INFO - Checking file existence: /Users/hk/Downloads/DSFinalYearProject/JSONFolder/growthlistscrapper.json, exists: True
+2025-04-23 04:34:41,291 - success_failure_prediction - INFO - Checking file existence: /Users/hk/Downloads/DSFinalYearProject/JSONFolder/topstartupio50.json, exists: True
+2025-04-23 04:34:41,294 - success_failure_prediction - INFO - Loaded 1103 records from fundraisestartup50.json
+2025-04-23 04:34:41,296 - success_failure_prediction - INFO - Loaded 100 records from growthlistscrapper.json
+2025-04-23 04:34:41,298 - success_failure_prediction - INFO - Loaded 546 records from topstartupio50.json
+2025-04-23 04:34:41,333 - success_failure_prediction - INFO - Combined 1749 records from all JSON files
+2025-04-23 04:34:41,344 - success_failure_prediction - INFO - Successfully integrated data: 1748 records with 30 features
+2025-04-23 04:34:41,345 - success_failure_prediction - INFO - Step 4: Calculating success scores
+2025-04-23 04:34:41,345 - success_failure_prediction - INFO - Calculating success scores
+2025-04-23 04:34:41,352 - success_failure_prediction - WARNING - No survival information available, estimating from stage and funding
+2025-04-23 04:34:41,378 - success_failure_prediction - WARNING - No anomaly detection information available, using optimistic score
+2025-04-23 04:34:41,379 - success_failure_prediction - INFO - Success scores calculated successfully
+2025-04-23 04:34:41,379 - success_failure_prediction - INFO - Step 5: Classifying startups
+2025-04-23 04:34:41,379 - success_failure_prediction - INFO - Classifying companies by success potential
+2025-04-23 04:34:41,386 - success_failure_prediction - INFO - Optimistic thresholds - Low: 36.7, Medium: 45.2, High: 56.1
+2025-04-23 04:34:41,388 - success_failure_prediction - INFO - Classification results: {'Moderate Success Potential': np.int64(487), 'High Success Potential': np.int64(431), 'Moderate Failure Risk': np.int64(387), 'High Failure Risk': np.int64(352)}
+2025-04-23 04:34:41,397 - success_failure_prediction - INFO - Risk level distribution: {'Medium Risk': '718 (41.1%)', 'Low Risk': '477 (27.3%)', 'High Risk': '382 (21.9%)', 'Minimal Risk': '171 (9.8%)'}
+2025-04-23 04:34:41,397 - success_failure_prediction - INFO - Step 6: Generating visualizations
+2025-04-23 04:34:41,397 - success_failure_prediction - INFO - Generating visualizations
+2025-04-23 04:34:42,457 - success_failure_prediction - INFO - Generated visualizations successfully in /Users/hk/Downloads/DSFinalYearProject/outputSuccessFailure/visualizations
+2025-04-23 04:34:42,458 - success_failure_prediction - INFO - Step 7: Creating advanced model performance visualizations
+2025-04-23 04:34:42,459 - success_failure_prediction - INFO - Generating model performance visualizations
+2025-04-23 04:34:42,589 - success_failure_prediction - INFO - Model: Random Forest
+2025-04-23 04:34:42,589 - success_failure_prediction - INFO -   accuracy: 0.9848
+2025-04-23 04:34:42,589 - success_failure_prediction - INFO -   precision: 0.9926
+2025-04-23 04:34:42,589 - success_failure_prediction - INFO -   recall: 0.9783
+2025-04-23 04:34:42,589 - success_failure_prediction - INFO -   f1: 0.9854
+2025-04-23 04:34:42,590 - success_failure_prediction - ERROR - Error generating model performance visualizations: Input X contains NaN.
+GradientBoostingClassifier does not accept missing values encoded as NaN natively. For supervised learning, you might want to consider sklearn.ensemble.HistGradientBoostingClassifier and Regressor which accept missing values encoded as NaNs natively. Alternatively, it is possible to preprocess the data, for instance by using an imputer transformer in a pipeline or drop samples with missing values. See https://scikit-learn.org/stable/modules/impute.html You can find a list of all estimators that handle NaN values at the following page: https://scikit-learn.org/stable/modules/impute.html#estimators-that-handle-nan-values
+2025-04-23 04:34:42,596 - success_failure_prediction - ERROR - Traceback (most recent call last):
+  File "/Users/hk/Downloads/DSFinalYearProject/MLPredictiveAnalysis/success_failure_prediction.py", line 1360, in visualize_model_performance
+    model.fit(X_train, y_train)
+  File "/Users/hk/Downloads/DSFinalYearProject/.venv/lib/python3.12/site-packages/sklearn/base.py", line 1389, in wrapper
+    return fit_method(estimator, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/hk/Downloads/DSFinalYearProject/.venv/lib/python3.12/site-packages/sklearn/ensemble/_gb.py", line 658, in fit
+    X, y = validate_data(
+           ^^^^^^^^^^^^^^
+  File "/Users/hk/Downloads/DSFinalYearProject/.venv/lib/python3.12/site-packages/sklearn/utils/validation.py", line 2961, in validate_data
+    X, y = check_X_y(X, y, **check_params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/hk/Downloads/DSFinalYearProject/.venv/lib/python3.12/site-packages/sklearn/utils/validation.py", line 1370, in check_X_y
+    X = check_array(
+        ^^^^^^^^^^^^
+  File "/Users/hk/Downloads/DSFinalYearProject/.venv/lib/python3.12/site-packages/sklearn/utils/validation.py", line 1107, in check_array
+    _assert_all_finite(
+  File "/Users/hk/Downloads/DSFinalYearProject/.venv/lib/python3.12/site-packages/sklearn/utils/validation.py", line 120, in _assert_all_finite
+    _assert_all_finite_element_wise(
+  File "/Users/hk/Downloads/DSFinalYearProject/.venv/lib/python3.12/site-packages/sklearn/utils/validation.py", line 169, in _assert_all_finite_element_wise
+    raise ValueError(msg_err)
+ValueError: Input X contains NaN.
+GradientBoostingClassifier does not accept missing values encoded as NaN natively. For supervised learning, you might want to consider sklearn.ensemble.HistGradientBoostingClassifier and Regressor which accept missing values encoded as NaNs natively. Alternatively, it is possible to preprocess the data, for instance by using an imputer transformer in a pipeline or drop samples with missing values. See https://scikit-learn.org/stable/modules/impute.html You can find a list of all estimators that handle NaN values at the following page: https://scikit-learn.org/stable/modules/impute.html#estimators-that-handle-nan-values
+
+2025-04-23 04:34:42,597 - success_failure_prediction - INFO - Generating standalone calibration plot
+2025-04-23 04:34:42,597 - success_failure_prediction - INFO - Generating standalone calibration plot
+2025-04-23 04:34:42,748 - success_failure_prediction - INFO - Successfully trained Random Forest model
+2025-04-23 04:34:44,365 - success_failure_prediction - INFO - Successfully trained Logistic Regression model
+2025-04-23 04:37:56,988 - success_failure_prediction - INFO - Successfully trained Hist Gradient Boosting model
+2025-04-23 04:37:57,070 - success_failure_prediction - INFO - Random Forest Brier score: 0.0154
+2025-04-23 04:37:57,083 - success_failure_prediction - INFO - Logistic Regression Brier score: 0.0232
+2025-04-23 04:37:57,093 - success_failure_prediction - INFO - Hist Gradient Boosting Brier score: 0.0175
+2025-04-23 04:37:57,112 - success_failure_prediction - INFO - Ensemble Brier score: 0.0139
+2025-04-23 04:37:57,933 - success_failure_prediction - INFO - Calibration plot saved to: /Users/hk/Downloads/DSFinalYearProject/outputSuccessFailure/visualizations/calibration_plot.png
+2025-04-23 04:37:57,936 - success_failure_prediction - INFO - Step 8: Enhancing predictions with ensemble models
+2025-04-23 04:37:57,936 - success_failure_prediction - INFO - Enhancing predictions with ensemble models
+2025-04-23 04:37:58,077 - success_failure_prediction - ERROR - Error enhancing predictions with ensemble: Input X contains NaN.
+GradientBoostingClassifier does not accept missing values encoded as NaN natively. For supervised learning, you might want to consider sklearn.ensemble.HistGradientBoostingClassifier and Regressor which accept missing values encoded as NaNs natively. Alternatively, it is possible to preprocess the data, for instance by using an imputer transformer in a pipeline or drop samples with missing values. See https://scikit-learn.org/stable/modules/impute.html You can find a list of all estimators that handle NaN values at the following page: https://scikit-learn.org/stable/modules/impute.html#estimators-that-handle-nan-values
+2025-04-23 04:37:58,081 - success_failure_prediction - ERROR - Traceback (most recent call last):
+  File "/Users/hk/Downloads/DSFinalYearProject/MLPredictiveAnalysis/success_failure_prediction.py", line 1805, in enhance_predictions_with_ensemble
+    ensemble.fit(X_train, y_train)
+  File "/Users/hk/Downloads/DSFinalYearProject/.venv/lib/python3.12/site-packages/sklearn/base.py", line 1389, in wrapper
+    return fit_method(estimator, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/hk/Downloads/DSFinalYearProject/.venv/lib/python3.12/site-packages/sklearn/utils/validation.py", line 63, in inner_f
+    return f(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^
+  File "/Users/hk/Downloads/DSFinalYearProject/.venv/lib/python3.12/site-packages/sklearn/ensemble/_voting.py", line 419, in fit
+    return super().fit(X, transformed_y, **fit_params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/hk/Downloads/DSFinalYearProject/.venv/lib/python3.12/site-packages/sklearn/ensemble/_voting.py", line 100, in fit
+    self.estimators_ = Parallel(n_jobs=self.n_jobs)(
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/hk/Downloads/DSFinalYearProject/.venv/lib/python3.12/site-packages/sklearn/utils/parallel.py", line 77, in __call__
+    return super().__call__(iterable_with_config)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/hk/Downloads/DSFinalYearProject/.venv/lib/python3.12/site-packages/joblib/parallel.py", line 1918, in __call__
+    return output if self.return_generator else list(output)
+                                                ^^^^^^^^^^^^
+  File "/Users/hk/Downloads/DSFinalYearProject/.venv/lib/python3.12/site-packages/joblib/parallel.py", line 1847, in _get_sequential_output
+    res = func(*args, **kwargs)
+          ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/hk/Downloads/DSFinalYearProject/.venv/lib/python3.12/site-packages/sklearn/utils/parallel.py", line 139, in __call__
+    return self.function(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/hk/Downloads/DSFinalYearProject/.venv/lib/python3.12/site-packages/sklearn/ensemble/_base.py", line 39, in _fit_single_estimator
+    estimator.fit(X, y, **fit_params)
+  File "/Users/hk/Downloads/DSFinalYearProject/.venv/lib/python3.12/site-packages/sklearn/base.py", line 1389, in wrapper
+    return fit_method(estimator, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/hk/Downloads/DSFinalYearProject/.venv/lib/python3.12/site-packages/sklearn/ensemble/_gb.py", line 658, in fit
+    X, y = validate_data(
+           ^^^^^^^^^^^^^^
+  File "/Users/hk/Downloads/DSFinalYearProject/.venv/lib/python3.12/site-packages/sklearn/utils/validation.py", line 2961, in validate_data
+    X, y = check_X_y(X, y, **check_params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/hk/Downloads/DSFinalYearProject/.venv/lib/python3.12/site-packages/sklearn/utils/validation.py", line 1370, in check_X_y
+    X = check_array(
+        ^^^^^^^^^^^^
+  File "/Users/hk/Downloads/DSFinalYearProject/.venv/lib/python3.12/site-packages/sklearn/utils/validation.py", line 1107, in check_array
+    _assert_all_finite(
+  File "/Users/hk/Downloads/DSFinalYearProject/.venv/lib/python3.12/site-packages/sklearn/utils/validation.py", line 120, in _assert_all_finite
+    _assert_all_finite_element_wise(
+  File "/Users/hk/Downloads/DSFinalYearProject/.venv/lib/python3.12/site-packages/sklearn/utils/validation.py", line 169, in _assert_all_finite_element_wise
+    raise ValueError(msg_err)
+ValueError: Input X contains NaN.
+GradientBoostingClassifier does not accept missing values encoded as NaN natively. For supervised learning, you might want to consider sklearn.ensemble.HistGradientBoostingClassifier and Regressor which accept missing values encoded as NaNs natively. Alternatively, it is possible to preprocess the data, for instance by using an imputer transformer in a pipeline or drop samples with missing values. See https://scikit-learn.org/stable/modules/impute.html You can find a list of all estimators that handle NaN values at the following page: https://scikit-learn.org/stable/modules/impute.html#estimators-that-handle-nan-values
+
+2025-04-23 04:37:58,082 - success_failure_prediction - INFO - Step 9: Generating report
+2025-04-23 04:37:58,082 - success_failure_prediction - INFO - Generating success/failure prediction report
+2025-04-23 04:37:58,096 - success_failure_prediction - INFO - Generated report successfully: /Users/hk/Downloads/DSFinalYearProject/outputSuccessFailure/success_failure_report.txt
+2025-04-23 04:37:58,143 - success_failure_prediction - INFO - Saved predictions to: /Users/hk/Downloads/DSFinalYearProject/outputSuccessFailure/success_failure_predictions.csv
+2025-04-23 04:37:58,145 - success_failure_prediction - INFO - Analysis complete. Overall success rate: 52.5%
+2025-04-23 04:37:58,145 - success_failure_prediction - INFO - Total companies analyzed: 1748
+2025-04-23 04:37:58,145 - success_failure_prediction - INFO - Predicted successful: 918 (52.5%)
+2025-04-23 04:37:58,145 - success_failure_prediction - INFO - Predicted unsuccessful: 830 (47.5%)
+2025-04-23 04:37:58,145 - success_failure_prediction - INFO - Classification breakdown:
+2025-04-23 04:37:58,145 - success_failure_prediction - INFO - - High Success Potential: 431 (24.7%)
+2025-04-23 04:37:58,146 - success_failure_prediction - INFO - - Moderate Success Potential: 487 (27.9%)
+2025-04-23 04:37:58,146 - success_failure_prediction - INFO - - Moderate Failure Risk: 387 (22.1%)
+2025-04-23 04:37:58,146 - success_failure_prediction - INFO - - High Failure Risk: 352 (20.1%)
+2025-04-23 04:37:58,148 - success_failure_prediction - INFO - Top performing industries:
+2025-04-23 04:37:58,149 - success_failure_prediction - INFO - - medical practice: 100.0% success rate (based on 2 companies)
+2025-04-23 04:37:58,149 - success_failure_prediction - INFO - - : 88.8% success rate (based on 547 companies)
+2025-04-23 04:37:58,149 - success_failure_prediction - INFO - - computer hardware: 70.0% success rate (based on 10 companies)
+2025-04-23 04:37:58,149 - success_failure_prediction - INFO - Lowest performing industries:
+2025-04-23 04:37:58,149 - success_failure_prediction - INFO - - Aerospace: 0.0% success rate (based on 1 companies)
+2025-04-23 04:37:58,149 - success_failure_prediction - INFO - - Agriculture, Food and Beverage, Artificial Intelligence, E-commerce: 0.0% success rate (based on 1 companies)
+2025-04-23 04:37:58,149 - success_failure_prediction - INFO - - Architecture, Media: 0.0% success rate (based on 1 companies)
+2025-04-23 04:37:58,152 - success_failure_prediction - INFO - Success rate by funding stage:
+2025-04-23 04:37:58,152 - success_failure_prediction - INFO - - Series D: 100.0% success rate (based on 84 companies)
+2025-04-23 04:37:58,152 - success_failure_prediction - INFO - - Series E: 100.0% success rate (based on 39 companies)
+2025-04-23 04:37:58,152 - success_failure_prediction - INFO - - Series F: 100.0% success rate (based on 23 companies)
+2025-04-23 04:37:58,152 - success_failure_prediction - INFO - - Series H: 100.0% success rate (based on 7 companies)
+2025-04-23 04:37:58,153 - success_failure_prediction - INFO - - Series C: 96.6% success rate (based on 179 companies)
+2025-04-23 04:37:58,153 - success_failure_prediction - INFO - - Series B: 93.7% success rate (based on 223 companies)
+2025-04-23 04:37:58,153 - success_failure_prediction - INFO - - Private Equity: 89.3% success rate (based on 28 companies)
+2025-04-23 04:37:58,153 - success_failure_prediction - INFO - - Series G: 85.7% success rate (based on 7 companies)
+2025-04-23 04:37:58,153 - success_failure_prediction - INFO - - Debt Financing: 76.7% success rate (based on 43 companies)
+2025-04-23 04:37:58,153 - success_failure_prediction - INFO - - Series A: 62.0% success rate (based on 313 companies)
+2025-04-23 04:37:58,153 - success_failure_prediction - INFO - - Venture - Series Unknown: 43.0% success rate (based on 172 companies)
+2025-04-23 04:37:58,154 - success_failure_prediction - INFO - - Undisclosed: 4.0% success rate (based on 25 companies)
+2025-04-23 04:37:58,154 - success_failure_prediction - INFO - - Seed: 0.6% success rate (based on 349 companies)
+2025-04-23 04:37:58,154 - success_failure_prediction - INFO - - Pre-Seed: 0.0% success rate (based on 122 companies)
+2025-04-23 04:37:58,154 - success_failure_prediction - INFO - - Grant: 0.0% success rate (based on 67 companies)

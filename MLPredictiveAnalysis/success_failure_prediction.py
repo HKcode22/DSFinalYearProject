@@ -1278,7 +1278,595 @@ class SuccessFailurePrediction:
             self.logger.error(f"Error generating report: {str(e)}")
             self.logger.error(traceback.format_exc())
             return False
-    
+
+    def visualize_model_performance(self, classified_data=None, output_dir=None):
+        """
+        Generate advanced model performance visualizations including ROC curves,
+        calibration plots, and accuracy metrics.
+        
+        Args:
+            classified_data (pandas.DataFrame): Data with classifications
+            output_dir (str): Directory to save visualizations
+            
+        Returns:
+            bool: Whether visualization was successful
+        """
+        self.logger.info("Generating model performance visualizations")
+        
+        try:
+            # Use classified data if none provided
+            if classified_data is None:
+                self.logger.warning("No classified data provided, running classification")
+                classified_data = self.classify_startups()
+            
+            # If the dataframe is empty, we can't create visualizations
+            if classified_data.empty:
+                self.logger.error("No data available for visualization")
+                return False
+            
+            # Set output directory
+            if output_dir is None:
+                output_dir = os.path.join(self.output_dir, 'performance_metrics')
+            
+            # Create output directory if it doesn't exist
+            os.makedirs(output_dir, exist_ok=True)
+            
+            # Split data for validation
+            from sklearn.model_selection import train_test_split
+            from sklearn.metrics import (accuracy_score, precision_score, recall_score, 
+                                         f1_score, confusion_matrix)
+            
+            # We need to create binary labels for evaluation
+            data = classified_data.copy()
+            
+            # Create feature matrix with available data
+            feature_columns = []
+            for col in ['stage_transition_score', 'survival_score', 'funding_adequacy_score', 
+                        'industry_momentum_score', 'anomaly_normalized_score', 'funding_recency_score',
+                        'maturity_score', 'funding_momentum', 'industry_success_likelihood', 'funding_tier']:
+                if col in data.columns:
+                    feature_columns.append(col)
+            
+            if len(feature_columns) < 3:
+                self.logger.error("Not enough features for model evaluation")
+                return False
+            
+            X = data[feature_columns].values
+            y = data['is_likely_success'].astype(int).values
+            
+            # Split data
+            X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.3, random_state=42, stratify=y)
+            
+            # Train multiple models
+            from sklearn.ensemble import RandomForestClassifier, GradientBoostingClassifier
+            from sklearn.linear_model import LogisticRegression
+            from xgboost import XGBClassifier
+            
+            # Create a dictionary to store models
+            models = {
+                'Random Forest': RandomForestClassifier(n_estimators=100, random_state=42),
+                'Gradient Boosting': GradientBoostingClassifier(random_state=42),
+                'Logistic Regression': LogisticRegression(random_state=42, max_iter=1000),
+                'XGBoost': XGBClassifier(random_state=42, use_label_encoder=False, eval_metric='logloss')
+            }
+            
+            # Train and evaluate each model
+            model_metrics = {}
+            model_predictions = {}
+            model_probabilities = {}
+            
+            for name, model in models.items():
+                # Train the model
+                model.fit(X_train, y_train)
+                
+                # Make predictions
+                y_pred = model.predict(X_test)
+                
+                # Get probabilities if the model supports predict_proba
+                if hasattr(model, 'predict_proba'):
+                    y_proba = model.predict_proba(X_test)[:, 1]
+                else:
+                    # Use decision function if available (like for SVM)
+                    if hasattr(model, 'decision_function'):
+                        y_proba = model.decision_function(X_test)
+                    else:
+                        y_proba = y_pred.astype(float)
+                
+                # Store predictions and probabilities
+                model_predictions[name] = y_pred
+                model_probabilities[name] = y_proba
+                
+                # Calculate metrics
+                metrics = {
+                    'accuracy': accuracy_score(y_test, y_pred),
+                    'precision': precision_score(y_test, y_pred, zero_division=0),
+                    'recall': recall_score(y_test, y_pred, zero_division=0),
+                    'f1': f1_score(y_test, y_pred, zero_division=0),
+                }
+                
+                model_metrics[name] = metrics
+                
+                # Log metrics
+                self.logger.info(f"Model: {name}")
+                for metric_name, value in metrics.items():
+                    self.logger.info(f"  {metric_name}: {value:.4f}")
+            
+            # 1. Create ROC curves
+            plt.figure(figsize=(12, 8))
+            
+            from sklearn.metrics import roc_curve, auc
+            
+            for name, y_proba in model_probabilities.items():
+                fpr, tpr, _ = roc_curve(y_test, y_proba)
+                roc_auc = auc(fpr, tpr)
+                plt.plot(fpr, tpr, lw=2, label=f'{name} (AUC = {roc_auc:.4f})')
+            
+            # Plot diagonal line
+            plt.plot([0, 1], [0, 1], 'k--', lw=2)
+            
+            plt.xlim([0.0, 1.0])
+            plt.ylim([0.0, 1.05])
+            plt.xlabel('False Positive Rate')
+            plt.ylabel('True Positive Rate')
+            plt.title('Receiver Operating Characteristic (ROC) Curves')
+            plt.legend(loc="lower right")
+            plt.grid(True, alpha=0.3)
+            plt.savefig(os.path.join(output_dir, 'roc_curves.png'), bbox_inches='tight')
+            plt.close()
+            
+            # 2. Create precision-recall curves
+            plt.figure(figsize=(12, 8))
+            
+            from sklearn.metrics import precision_recall_curve, average_precision_score
+            
+            for name, y_proba in model_probabilities.items():
+                precision, recall, _ = precision_recall_curve(y_test, y_proba)
+                avg_precision = average_precision_score(y_test, y_proba)
+                plt.plot(recall, precision, lw=2, label=f'{name} (AP = {avg_precision:.4f})')
+            
+            plt.xlim([0.0, 1.0])
+            plt.ylim([0.0, 1.05])
+            plt.xlabel('Recall')
+            plt.ylabel('Precision')
+            plt.title('Precision-Recall Curves')
+            plt.legend(loc="best")
+            plt.grid(True, alpha=0.3)
+            plt.savefig(os.path.join(output_dir, 'precision_recall_curves.png'), bbox_inches='tight')
+            plt.close()
+            
+            # 3. Create calibration plots
+            plt.figure(figsize=(12, 8))
+            
+            from sklearn.calibration import calibration_curve
+            
+            for name, y_proba in model_probabilities.items():
+                prob_true, prob_pred = calibration_curve(y_test, y_proba, n_bins=10)
+                plt.plot(prob_pred, prob_true, marker='o', lw=2, label=name)
+            
+            # Plot the perfectly calibrated line
+            plt.plot([0, 1], [0, 1], 'k--', lw=2, label='Perfectly calibrated')
+            
+            plt.xlim([0.0, 1.0])
+            plt.ylim([0.0, 1.0])
+            plt.xlabel('Mean predicted probability')
+            plt.ylabel('Fraction of positives')
+            plt.title('Calibration Curves')
+            plt.legend(loc="best")
+            plt.grid(True, alpha=0.3)
+            plt.savefig(os.path.join(output_dir, 'calibration_curves.png'), bbox_inches='tight')
+            plt.close()
+            
+            # 4. Create confusion matrices
+            from sklearn.metrics import ConfusionMatrixDisplay
+            
+            fig, axes = plt.subplots(2, 2, figsize=(16, 12))
+            axes = axes.flatten()
+            
+            for i, (name, model) in enumerate(models.items()):
+                if i < len(axes):
+                    y_pred = model_predictions[name]
+                    ConfusionMatrixDisplay.from_predictions(
+                        y_test, 
+                        y_pred,
+                        display_labels=['Failure', 'Success'],
+                        ax=axes[i],
+                        cmap='Blues',
+                        normalize='true'
+                    )
+                    axes[i].set_title(f'{name} Confusion Matrix')
+                    axes[i].grid(False)
+            
+            plt.tight_layout()
+            plt.savefig(os.path.join(output_dir, 'confusion_matrices.png'), bbox_inches='tight')
+            plt.close()
+            
+            # 5. Create model comparison bar chart
+            plt.figure(figsize=(14, 8))
+            
+            metrics_df = pd.DataFrame(model_metrics).T
+            metrics_df = metrics_df.reset_index().rename(columns={'index': 'model'})
+            metrics_df = pd.melt(metrics_df, id_vars=['model'], var_name='metric', value_name='value')
+            
+            sns.barplot(x='model', y='value', hue='metric', data=metrics_df)
+            plt.title('Model Performance Comparison')
+            plt.xlabel('Model')
+            plt.ylabel('Score')
+            plt.ylim(0, 1)
+            plt.xticks(rotation=45)
+            plt.legend(title='Metric')
+            plt.tight_layout()
+            plt.savefig(os.path.join(output_dir, 'model_comparison.png'), bbox_inches='tight')
+            plt.close()
+            
+            # Create an ensemble model using the best performing models
+            # Use test set predictions to create ensemble weights
+            weights = {name: metrics['f1'] for name, metrics in model_metrics.items()}
+            total_weight = sum(weights.values())
+            weights = {name: weight/total_weight for name, weight in weights.items()}
+            
+            self.logger.info("Ensemble model weights:")
+            for name, weight in weights.items():
+                self.logger.info(f"  {name}: {weight:.4f}")
+            
+            # Apply the ensemble to the entire dataset
+            ensemble_proba = np.zeros(len(data))
+            
+            for name, model in models.items():
+                if hasattr(model, 'predict_proba'):
+                    proba = model.predict_proba(data[feature_columns].values)[:, 1]
+                else:
+                    if hasattr(model, 'decision_function'):
+                        proba = model.decision_function(data[feature_columns].values)
+                    else:
+                        proba = model.predict(data[feature_columns].values).astype(float)
+                
+                ensemble_proba += proba * weights[name]
+            
+            # Add ensemble probabilities to the data
+            data['ensemble_probability'] = ensemble_proba
+            data['ensemble_prediction'] = (ensemble_proba >= 0.5).astype(int)
+            
+            # Calculate accuracy metrics for the ensemble
+            ensemble_accuracy = accuracy_score(data['is_likely_success'].astype(int), data['ensemble_prediction'])
+            self.logger.info(f"Ensemble model accuracy: {ensemble_accuracy:.4f}")
+            
+            # Save model metrics to file
+            metrics_df.to_csv(os.path.join(output_dir, 'model_metrics.csv'), index=False)
+            
+            # Save ensemble probabilities
+            ensemble_df = data[['company_name', 'success_score', 'ensemble_probability', 'ensemble_prediction', 'is_likely_success']]
+            ensemble_df.to_csv(os.path.join(output_dir, 'ensemble_predictions.csv'), index=False)
+            
+            # Create a final visualization showing ensemble vs original
+            plt.figure(figsize=(12, 8))
+            
+            # Calculate histogram
+            plt.hist([data['success_score']/100, ensemble_proba], bins=20, 
+                    label=['Original Score', 'Ensemble Probability'], alpha=0.6)
+            
+            plt.xlabel('Success Score / Probability')
+            plt.ylabel('Count')
+            plt.title('Original Success Score vs Ensemble Probability')
+            plt.legend()
+            plt.grid(True, alpha=0.3)
+            plt.savefig(os.path.join(output_dir, 'ensemble_comparison.png'), bbox_inches='tight')
+            plt.close()
+            
+            self.logger.info("Model performance visualizations created successfully")
+            return True
+            
+        except Exception as e:
+            self.logger.error(f"Error generating model performance visualizations: {str(e)}")
+            self.logger.error(traceback.format_exc())
+            return False
+
+    def generate_calibration_plot(self, classified_data=None, output_file=None):
+        """
+        Generate a standalone calibration plot showing how well the predicted probabilities
+        match the actual observed frequencies.
+        
+        Args:
+            classified_data (pandas.DataFrame): Data with classifications
+            output_file (str): File path to save the calibration plot
+            
+        Returns:
+            bool: Whether calibration plot generation was successful
+        """
+        self.logger.info("Generating standalone calibration plot")
+        
+        try:
+            # Use classified data if none provided
+            if classified_data is None:
+                self.logger.warning("No classified data provided, running classification")
+                classified_data = self.classify_startups()
+            
+            # If the dataframe is empty, we can't create a calibration plot
+            if classified_data.empty:
+                self.logger.error("No data available for calibration plot")
+                return False
+            
+            # Set output file
+            if output_file is None:
+                output_dir = os.path.join(self.output_dir, 'visualizations')
+                os.makedirs(output_dir, exist_ok=True)
+                output_file = os.path.join(output_dir, 'calibration_plot.png')
+            
+            # Create feature matrix with available data
+            feature_columns = []
+            for col in ['stage_transition_score', 'survival_score', 'funding_adequacy_score', 
+                        'industry_momentum_score', 'anomaly_normalized_score', 'funding_recency_score',
+                        'maturity_score', 'funding_momentum', 'industry_success_likelihood', 'funding_tier']:
+                if col in classified_data.columns:
+                    feature_columns.append(col)
+            
+            if len(feature_columns) < 3:
+                self.logger.error("Not enough features for calibration plot")
+                return False
+            
+            # Create binary labels
+            data = classified_data.copy()
+            
+            # Handle missing values by using imputer
+            from sklearn.impute import SimpleImputer
+            imputer = SimpleImputer(strategy='median')
+            
+            # Extract features and impute missing values
+            X_with_na = data[feature_columns].values
+            X = imputer.fit_transform(X_with_na)
+            y = data['is_likely_success'].astype(int).values
+            
+            # Split data
+            from sklearn.model_selection import train_test_split
+            X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.3, random_state=42, stratify=y)
+            
+            # Train multiple models that can handle missing values
+            from sklearn.ensemble import RandomForestClassifier
+            from sklearn.linear_model import LogisticRegression
+            from sklearn.ensemble import HistGradientBoostingClassifier
+            
+            # Create dictionary of models
+            models = {
+                'Random Forest': RandomForestClassifier(n_estimators=100, random_state=42),
+                'Logistic Regression': LogisticRegression(random_state=42, max_iter=1000),
+                'Hist Gradient Boosting': HistGradientBoostingClassifier(random_state=42)
+            }
+            
+            # Train models and get probabilities
+            model_probabilities = {}
+            
+            for name, model in models.items():
+                try:
+                    # Train the model
+                    model.fit(X_train, y_train)
+                    
+                    # Get probabilities
+                    if hasattr(model, 'predict_proba'):
+                        y_proba = model.predict_proba(X_test)[:, 1]
+                    else:
+                        # Use decision function if available (like for SVM)
+                        if hasattr(model, 'decision_function'):
+                            y_proba = model.decision_function(X_test)
+                        else:
+                            y_proba = model.predict(X_test).astype(float)
+                    
+                    model_probabilities[name] = y_proba
+                    self.logger.info(f"Successfully trained {name} model")
+                except Exception as e:
+                    self.logger.error(f"Error training {name} model: {str(e)}")
+            
+            # If no models were successfully trained, we can't create a calibration plot
+            if not model_probabilities:
+                self.logger.error("No models could be trained for calibration plot")
+                return False
+            
+            # Create ensemble probability (only from successful models)
+            ensemble_proba = np.zeros_like(y_test, dtype=float)
+            for _, y_proba in model_probabilities.items():
+                ensemble_proba += y_proba
+            ensemble_proba /= len(model_probabilities)
+            
+            model_probabilities['Ensemble'] = ensemble_proba
+            
+            # Create enhanced calibration plot
+            plt.figure(figsize=(12, 10))
+            
+            # Set up colormap for different models
+            colors = plt.cm.tab10(np.linspace(0, 1, len(model_probabilities)))
+            
+            # Generate calibration curves
+            for i, (name, y_proba) in enumerate(model_probabilities.items()):
+                # Calculate calibration curve
+                prob_true, prob_pred = calibration_curve(y_test, y_proba, n_bins=10)
+                
+                # Plot calibration curve
+                plt.plot(prob_pred, prob_true, marker='o', linewidth=2, 
+                         label=name, color=colors[i], markersize=8)
+                
+                # Calculate Brier score
+                from sklearn.metrics import brier_score_loss
+                brier = brier_score_loss(y_test, y_proba)
+                self.logger.info(f"{name} Brier score: {brier:.4f}")
+            
+            # Plot perfectly calibrated line
+            plt.plot([0, 1], [0, 1], 'k--', linewidth=2, label='Perfect calibration')
+            
+            # Format the plot
+            plt.xlim([0.0, 1.0])
+            plt.ylim([0.0, 1.0])
+            plt.grid(True, alpha=0.3)
+            plt.xlabel('Mean predicted probability', fontsize=14)
+            plt.ylabel('Fraction of positives (observed frequency)', fontsize=14)
+            plt.title('Calibration Curves for Success/Failure Prediction Models', fontsize=16, fontweight='bold')
+            plt.legend(loc='best', fontsize=12)
+            
+            # Add detailed annotation
+            text_str = (
+                "Perfect calibration: Points on diagonal\n"
+                "Above diagonal: Model underestimates\n"
+                "Below diagonal: Model overestimates"
+            )
+            plt.annotate(text_str, xy=(0.05, 0.75), xycoords='axes fraction', 
+                         bbox=dict(boxstyle="round,pad=0.5", fc="white", alpha=0.8),
+                         fontsize=12)
+            
+            # Save the plot
+            plt.tight_layout()
+            plt.savefig(output_file, bbox_inches='tight', dpi=300)
+            plt.close()
+            
+            self.logger.info(f"Calibration plot saved to: {output_file}")
+            return True
+            
+        except Exception as e:
+            self.logger.error(f"Error generating calibration plot: {str(e)}")
+            self.logger.error(traceback.format_exc())
+            return False
+            
+    def enhance_predictions_with_ensemble(self, classified_data=None):
+        """
+        Enhance predictions using ensemble of multiple classification models.
+        
+        Args:
+            classified_data (pandas.DataFrame): Data with initial classifications
+            
+        Returns:
+            pandas.DataFrame: Enhanced data with ensemble predictions
+        """
+        self.logger.info("Enhancing predictions with ensemble models")
+        
+        try:
+            # Use classified data if none provided
+            if classified_data is None:
+                self.logger.warning("No classified data provided, running classification")
+                classified_data = self.classify_startups()
+            
+            # If the dataframe is empty, we can't create an ensemble
+            if classified_data.empty:
+                self.logger.error("No data available for ensemble prediction")
+                return classified_data
+            
+            # Enhance the current predictions with a robust ensemble
+            data = classified_data.copy()
+            
+            # Create feature matrix with available data
+            feature_columns = []
+            for col in ['stage_transition_score', 'survival_score', 'funding_adequacy_score', 
+                        'industry_momentum_score', 'anomaly_normalized_score', 'funding_recency_score',
+                        'maturity_score', 'funding_momentum', 'industry_success_likelihood', 'funding_tier']:
+                if col in data.columns:
+                    feature_columns.append(col)
+            
+            if len(feature_columns) < 3:
+                self.logger.error("Not enough features for ensemble model")
+                return classified_data
+            
+            X = data[feature_columns].values
+            y = data['is_likely_success'].astype(int).values
+            
+            # Split data for cross-validation
+            from sklearn.model_selection import StratifiedKFold
+            
+            # Initialize models
+            from sklearn.ensemble import RandomForestClassifier, GradientBoostingClassifier, VotingClassifier
+            from sklearn.linear_model import LogisticRegression
+            from xgboost import XGBClassifier
+            
+            # Create individual models
+            rf = RandomForestClassifier(n_estimators=100, random_state=42)
+            gb = GradientBoostingClassifier(random_state=42)
+            lr = LogisticRegression(random_state=42, max_iter=1000)
+            xgb = XGBClassifier(random_state=42, use_label_encoder=False, eval_metric='logloss')
+            
+            # Create voting ensemble
+            ensemble = VotingClassifier(
+                estimators=[
+                    ('rf', rf),
+                    ('gb', gb),
+                    ('lr', lr),
+                    ('xgb', xgb)
+                ],
+                voting='soft'  # Use probability estimates
+            )
+            
+            # Train the ensemble with cross-validation
+            cv = StratifiedKFold(n_splits=5, shuffle=True, random_state=42)
+            
+            from sklearn.metrics import accuracy_score, f1_score
+            
+            # Initialize arrays to store predictions
+            ensemble_proba = np.zeros_like(y, dtype=float)
+            
+            # Perform cross-validation
+            for train_idx, test_idx in cv.split(X, y):
+                X_train, X_test = X[train_idx], X[test_idx]
+                y_train, y_test = y[train_idx], y[test_idx]
+                
+                # Train the ensemble
+                ensemble.fit(X_train, y_train)
+                
+                # Make predictions on the test fold
+                ensemble_proba[test_idx] = ensemble.predict_proba(X_test)[:, 1]
+            
+            # Now train on the entire dataset for future predictions
+            ensemble.fit(X, y)
+            
+            # Add ensemble probabilities to the data
+            data['ensemble_probability'] = ensemble_proba
+            data['ensemble_prediction'] = (ensemble_proba >= 0.5).astype(int)
+            
+            # Calculate new risk categories based on ensemble probabilities
+            data['ensemble_risk_category'] = pd.cut(
+                data['ensemble_probability'],
+                bins=[0, 0.25, 0.5, 0.75, 1.0],
+                labels=['High Risk', 'Moderate Risk', 'Moderate Potential', 'High Potential']
+            )
+            
+            # Calculate ensemble performance metrics
+            ensemble_accuracy = accuracy_score(y, data['ensemble_prediction'])
+            ensemble_f1 = f1_score(y, data['ensemble_prediction'])
+            
+            self.logger.info(f"Ensemble model performance - Accuracy: {ensemble_accuracy:.4f}, F1: {ensemble_f1:.4f}")
+            
+            # Save the ensemble model for future use
+            import pickle
+            model_dir = os.path.join(self.output_dir, 'models')
+            os.makedirs(model_dir, exist_ok=True)
+            
+            with open(os.path.join(model_dir, 'ensemble_model.pkl'), 'wb') as f:
+                pickle.dump(ensemble, f)
+                
+            with open(os.path.join(model_dir, 'feature_columns.pkl'), 'wb') as f:
+                pickle.dump(feature_columns, f)
+            
+            self.logger.info("Ensemble model saved successfully")
+            
+            # Create comparison visualization
+            plt.figure(figsize=(10, 6))
+            
+            # Plot original vs ensemble predictions
+            sns.scatterplot(
+                x='success_score', 
+                y=data['ensemble_probability'] * 100, 
+                hue='is_likely_success',
+                data=data
+            )
+            
+            plt.plot([0, 100], [0, 100], 'k--', alpha=0.5)  # Diagonal reference line
+            plt.xlabel('Original Success Score')
+            plt.ylabel('Ensemble Probability (%)')
+            plt.title('Original Score vs Ensemble Probability')
+            plt.grid(True, alpha=0.3)
+            plt.savefig(os.path.join(self.output_dir, 'original_vs_ensemble.png'), bbox_inches='tight')
+            plt.close()
+            
+            # Return the enhanced data
+            return data
+            
+        except Exception as e:
+            self.logger.error(f"Error enhancing predictions with ensemble: {str(e)}")
+            self.logger.error(traceback.format_exc())
+            return classified_data
+
     def run_analysis(self):
         """
         Run the complete success/failure prediction analysis pipeline.
@@ -1313,25 +1901,37 @@ class SuccessFailurePrediction:
             self.logger.info("Step 6: Generating visualizations")
             self.visualize_results(classified_data)
             
-            # Step 7: Generate report
-            self.logger.info("Step 7: Generating report")
-            self.generate_report(classified_data)
+            # Step 7: Create advanced model performance visualizations
+            self.logger.info("Step 7: Creating advanced model performance visualizations")
+            self.visualize_model_performance(classified_data)
             
-            # Save the classified data
+            # NEW: Generate calibration plot
+            self.logger.info("Generating standalone calibration plot")
+            self.generate_calibration_plot(classified_data)
+            
+            # Step 8: Enhance predictions with ensemble models
+            self.logger.info("Step 8: Enhancing predictions with ensemble models")
+            enhanced_data = self.enhance_predictions_with_ensemble(classified_data)
+            
+            # Step 9: Generate report (now with enhanced data)
+            self.logger.info("Step 9: Generating report")
+            self.generate_report(enhanced_data)
+            
+            # Save the enhanced data
             output_csv = os.path.join(self.output_dir, 'success_failure_predictions.csv')
-            classified_data.to_csv(output_csv, index=False)
+            enhanced_data.to_csv(output_csv, index=False)
             self.logger.info(f"Saved predictions to: {output_csv}")
             
             # Calculate final metrics
-            success_count = classified_data['is_likely_success'].sum()
-            total_count = len(classified_data)
+            success_count = enhanced_data['is_likely_success'].sum()
+            total_count = len(enhanced_data)
             success_rate = success_count / total_count * 100 if total_count > 0 else 0
             
             # Calculate distribution by categories
-            high_success = classified_data['success_classification'].value_counts().get('High Success Potential', 0)
-            moderate_success = classified_data['success_classification'].value_counts().get('Moderate Success Potential', 0)
-            moderate_failure = classified_data['success_classification'].value_counts().get('Moderate Failure Risk', 0)
-            high_failure = classified_data['success_classification'].value_counts().get('High Failure Risk', 0)
+            high_success = enhanced_data['success_classification'].value_counts().get('High Success Potential', 0)
+            moderate_success = enhanced_data['success_classification'].value_counts().get('Moderate Success Potential', 0)
+            moderate_failure = enhanced_data['success_classification'].value_counts().get('Moderate Failure Risk', 0)
+            high_failure = enhanced_data['success_classification'].value_counts().get('High Failure Risk', 0)
             
             # Calculate percentages
             high_success_pct = high_success / total_count * 100 if total_count > 0 else 0
@@ -1353,9 +1953,9 @@ class SuccessFailurePrediction:
             self.logger.info(f"- High Failure Risk: {high_failure} ({high_failure_pct:.1f}%)")
             
             # Calculate industry-specific success rates
-            if 'industry' in classified_data.columns:
-                industry_success = classified_data.groupby('industry')['is_likely_success'].mean() * 100
-                industry_counts = classified_data['industry'].value_counts()
+            if 'industry' in enhanced_data.columns:
+                industry_success = enhanced_data.groupby('industry')['is_likely_success'].mean() * 100
+                industry_counts = enhanced_data['industry'].value_counts()
                 
                 # Get top and bottom industries
                 top_industries = industry_success.nlargest(3)
@@ -1373,9 +1973,9 @@ class SuccessFailurePrediction:
                     self.logger.info(f"- {industry}: {rate:.1f}% success rate (based on {count} companies)")
             
             # Additional insights on funding stages
-            if 'funding_stage' in classified_data.columns:
-                stage_success = classified_data.groupby('funding_stage')['is_likely_success'].mean() * 100
-                stage_counts = classified_data['funding_stage'].value_counts()
+            if 'funding_stage' in enhanced_data.columns:
+                stage_success = enhanced_data.groupby('funding_stage')['is_likely_success'].mean() * 100
+                stage_counts = enhanced_data['funding_stage'].value_counts()
                 
                 # Get top stages with meaningful sample size
                 valid_stages = stage_counts[stage_counts >= 5].index
@@ -1387,7 +1987,7 @@ class SuccessFailurePrediction:
                         count = stage_counts.get(stage, 0)
                         self.logger.info(f"- {stage}: {rate:.1f}% success rate (based on {count} companies)")
             
-            return classified_data
+            return enhanced_data
             
         except Exception as e:
             self.logger.error(f"Error running analysis: {str(e)}")

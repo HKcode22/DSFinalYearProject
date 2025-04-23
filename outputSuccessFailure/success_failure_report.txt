@@ -4,66 +4,66 @@
 
 EXECUTIVE SUMMARY
 ----------------
-Overall success prediction rate: 7.6%
+Overall success prediction rate: 52.5%
 
 Classification breakdown:
-- Moderate Failure Risk: 873 companies (49.9%)
-- High Failure Risk: 652 companies (37.3%)
-- Moderate Success Potential: 126 companies (7.2%)
-- High Success Potential: 6 companies (0.3%)
+- Moderate Success Potential: 487 companies (27.9%)
+- High Success Potential: 431 companies (24.7%)
+- Moderate Failure Risk: 387 companies (22.1%)
+- High Failure Risk: 352 companies (20.1%)
 
 Risk level distribution:
-- Low Risk: 937 companies (53.6%)
-- Medium Risk: 548 companies (31.4%)
-- Minimal Risk: 263 companies (15.0%)
-- High Risk: 0 companies (0.0%)
+- Medium Risk: 718 companies (41.1%)
+- Low Risk: 477 companies (27.3%)
+- High Risk: 382 companies (21.9%)
+- Minimal Risk: 171 companies (9.8%)
 
 
 INDUSTRY INSIGHTS
 ----------------
 Top performing industries:
-1. : 21.0% success rate (based on 547 companies)
-2. medical devices: 4.2% success rate (based on 24 companies)
-3. information technology & services: 3.8% success rate (based on 446 companies)
-4. education management: 0.0% success rate (based on 2 companies)
-5. retail: 0.0% success rate (based on 2 companies)
+1. medical practice: 100.0% success rate (based on 2 companies)
+2. : 88.8% success rate (based on 547 companies)
+3. computer hardware: 70.0% success rate (based on 10 companies)
+4. mechanical or industrial engineering: 66.7% success rate (based on 3 companies)
+5. wireless: 66.7% success rate (based on 3 companies)
 
 Bottom performing industries:
-1. Artificial Intelligence, Data: 0.0% success rate (based on 5 companies)
-2. pharmaceuticals: 0.0% success rate (based on 5 companies)
-3. legal services: 0.0% success rate (based on 4 companies)
-4. chemicals: 0.0% success rate (based on 4 companies)
+1. computer software: 0.0% success rate (based on 3 companies)
+2. food production: 0.0% success rate (based on 3 companies)
+3. computer games: 0.0% success rate (based on 7 companies)
+4. Artificial Intelligence, Data: 0.0% success rate (based on 5 companies)
 5. media production: 0.0% success rate (based on 2 companies)
 
 
 TOP POTENTIAL COMPANIES
 ----------------------
-1. Impossible Foods (Series G): 77.7 success score - High Success Potential
-2. Faire (Series G): 77.4 success score - High Success Potential
-3. Sysdig (Series G): 77.4 success score - High Success Potential
-4. SnapLogic (Series G): 77.3 success score - High Success Potential
-5. TripActions (Series G): 77.2 success score - High Success Potential
-6. Carta (Series G): 77.2 success score - High Success Potential
-7. Airtable (Series F): 72.6 success score - Moderate Success Potential
-8. Reddit (Series F): 72.6 success score - Moderate Success Potential
-9. Sila Nanotechnologies (Series F): 72.5 success score - Moderate Success Potential
-10. Glooko (Series F): 72.5 success score - Moderate Success Potential
+1. Impossible Foods (Series G): 76.4 success score - High Success Potential
+2. data.ai (Series E): 75.3 success score - High Success Potential
+3. Airtable (Series F): 74.7 success score - High Success Potential
+4. Reddit (Series F): 74.6 success score - High Success Potential
+5. Sila Nanotechnologies (Series F): 74.2 success score - High Success Potential
+6. Sysdig (Series G): 73.9 success score - High Success Potential
+7. Glooko (Series F): 73.8 success score - High Success Potential
+8. Farmers Business Network (Series F): 73.7 success score - High Success Potential
+9. SnapLogic (Series G): 73.4 success score - High Success Potential
+10. Faire (Series G): 73.2 success score - High Success Potential
 
 
 HIGHEST RISK COMPANIES
 ---------------------
-1. AnswerGrid (Pre-Seed): 20.5 success score - High Failure Risk
-2. Intercept (Pre-Seed): 21.1 success score - High Failure Risk
-3. Smartschool (Pre-Seed): 21.2 success score - High Failure Risk
-4. Taxflow (Pre-Seed): 21.2 success score - High Failure Risk
-5. PointOne Technologies (Pre-Seed): 21.6 success score - High Failure Risk
-6. Integral Health (Pre-Seed): 21.6 success score - High Failure Risk
-7. Quantic (Pre-Seed): 21.7 success score - High Failure Risk
-8. Attunement (Pre-Seed): 21.7 success score - High Failure Risk
-9. Viridian Space (Pre-Seed): 21.7 success score - High Failure Risk
-10. THEO AI (Pre-Seed): 21.8 success score - High Failure Risk
+1. Integral Health (Pre-Seed): 21.9 success score - High Failure Risk
+2. Viridian Space (Pre-Seed): 22.1 success score - High Failure Risk
+3. Sidepit (Pre-Seed): 23.3 success score - High Failure Risk
+4. THINKIN (Pre-Seed): 23.4 success score - High Failure Risk
+5. PointOne Technologies (Pre-Seed): 24.4 success score - High Failure Risk
+6. Opus Guard (Pre-Seed): 24.6 success score - High Failure Risk
+7. Quantic (Pre-Seed): 25.0 success score - High Failure Risk
+8. Intercept (Pre-Seed): 25.1 success score - High Failure Risk
+9. Mango Health (Pre-Seed): 25.1 success score - High Failure Risk
+10. Kabilah (Pre-Seed): 25.1 success score - High Failure Risk
 
 
 ==========================================================
-Report generated on: 2025-04-22 23:00:36
+Report generated on: 2025-04-23 04:37:58
 ==========================================================
