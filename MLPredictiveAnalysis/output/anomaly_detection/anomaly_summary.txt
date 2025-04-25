@@ -1,0 +1,31 @@
+Funding Anomaly Detection Summary
+=================================
+
+Total companies analyzed: 1749
+Anomalies detected: 19 (1.09%)
+
+Anomalies by Funding Type:
+  Seed: 7
+  Pre-Seed: 3
+  Series A: 3
+  Series C: 2
+  Venture - Series Unknown: 2
+  Series B: 1
+  Series E: 1
+
+Top 10 Industries with Anomalies:
+  Artificial Intelligence: 8
+  Cloud Computing: 4
+  Healthcare: 3
+  Information Technology: 2
+  FinTech: 2
+  Biotechnology: 2
+  Wellness: 2
+  Mental Health: 2
+  Augmented Reality: 2
+  Finance: 1
+
+Anomalies by Type:
+  Complex Pattern: 17
+  Industry Outlier: 1
+  Unusual for Funding Stage: 1

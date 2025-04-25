@@ -1,0 +1,474 @@
+2025-04-22 07:46:10,171 - FundingAmountForecast - INFO - Starting funding amount forecast analysis
+2025-04-22 07:46:10,172 - FundingAmountForecast - ERROR - No data available. Load data first.
+2025-04-22 07:46:10,172 - root - INFO - Funding amount forecast analysis completed successfully
+2025-04-22 07:46:44,315 - FundingAmountForecast - INFO - Loading data from JSON files in ./
+2025-04-22 07:46:44,318 - FundingAmountForecast - INFO - Added 1103 records from fundraiser data
+2025-04-22 07:46:44,319 - FundingAmountForecast - INFO - Added 100 records from growthlist data
+2025-04-22 07:46:44,321 - FundingAmountForecast - INFO - Added 546 records from topstartup data
+2025-04-22 07:46:44,327 - FundingAmountForecast - INFO - Created DataFrame with 1749 rows and 27 columns
+2025-04-22 07:46:44,327 - FundingAmountForecast - INFO - Available columns: ['Company', 'Total_Employees', 'Industry', 'Website', 'Funding_Date', 'Funding_Type', 'Funding_Amount_USD', 'Headquarters', 'Extraction_Time', 'Page', 'source', 'name', 'website', 'industry', 'country', 'funding_amount', 'funding_type', 'last_funding_date', 'funding_usd', 'description', 'headquarters', 'funding', 'has_reviews', 'category', 'employees', 'founding_year', 'other_details']
+2025-04-22 07:46:44,330 - FundingAmountForecast - INFO - Renamed columns: {'Company': 'company_name', 'Funding_Type': 'funding_stage', 'Funding_Amount_USD': 'funding_amount', 'Funding_Date': 'funding_date', 'Industry': 'industry', 'Total_Employees': 'employees', 'name': 'company_name', 'funding_type': 'funding_stage', 'funding_amount': 'funding_amount_str', 'last_funding_date': 'funding_date', 'website': 'website', 'country': 'country'}
+2025-04-22 07:46:44,331 - FundingAmountForecast - WARNING - Created missing column: funding_amount_numeric
+2025-04-22 07:46:44,334 - FundingAmountForecast - INFO - NaN values in funding_amount_numeric: 1668 / 1749
+2025-04-22 07:46:44,334 - FundingAmountForecast - WARNING - Duplicate columns found: ['company_name', 'industry', 'funding_stage', 'funding_date', 'employees']
+2025-04-22 07:46:44,334 - FundingAmountForecast - INFO - Renamed columns to handle duplicates
+2025-04-22 07:46:44,346 - FundingAmountForecast - INFO - Loaded and standardized 1749 records
+2025-04-22 07:46:44,346 - FundingAmountForecast - INFO - Starting funding amount forecast analysis
+2025-04-22 07:46:44,346 - FundingAmountForecast - INFO - Creating forecast features
+2025-04-22 07:46:44,346 - FundingAmountForecast - INFO - Creating features for funding amount forecast
+2025-04-22 07:46:44,435 - FundingAmountForecast - ERROR - Error in funding amount forecast analysis: cannot convert float NaN to integer
+2025-04-22 07:46:44,439 - FundingAmountForecast - INFO - Attempting to use baseline model as fallback after error
+2025-04-22 07:46:44,439 - FundingAmountForecast - ERROR - Error in baseline model fallback: 'FundingAmountForecast' object has no attribute '_use_baseline_model'
+2025-04-22 07:46:44,441 - root - INFO - Funding amount forecast analysis completed successfully
+2025-04-22 07:47:35,501 - FundingAmountForecast - INFO - Loading data from JSON files in ./
+2025-04-22 07:47:35,505 - FundingAmountForecast - INFO - Added 1103 records from fundraiser data
+2025-04-22 07:47:35,505 - FundingAmountForecast - INFO - Added 100 records from growthlist data
+2025-04-22 07:47:35,507 - FundingAmountForecast - INFO - Added 546 records from topstartup data
+2025-04-22 07:47:35,514 - FundingAmountForecast - INFO - Created DataFrame with 1749 rows and 27 columns
+2025-04-22 07:47:35,514 - FundingAmountForecast - INFO - Available columns: ['Company', 'Total_Employees', 'Industry', 'Website', 'Funding_Date', 'Funding_Type', 'Funding_Amount_USD', 'Headquarters', 'Extraction_Time', 'Page', 'source', 'name', 'website', 'industry', 'country', 'funding_amount', 'funding_type', 'last_funding_date', 'funding_usd', 'description', 'headquarters', 'funding', 'has_reviews', 'category', 'employees', 'founding_year', 'other_details']
+2025-04-22 07:47:35,517 - FundingAmountForecast - INFO - Renamed columns: {'Company': 'company_name', 'Funding_Type': 'funding_stage', 'Funding_Amount_USD': 'funding_amount', 'Funding_Date': 'funding_date', 'Industry': 'industry', 'Total_Employees': 'employees', 'name': 'company_name', 'funding_type': 'funding_stage', 'funding_amount': 'funding_amount_str', 'last_funding_date': 'funding_date', 'website': 'website', 'country': 'country'}
+2025-04-22 07:47:35,518 - FundingAmountForecast - WARNING - Created missing column: funding_amount_numeric
+2025-04-22 07:47:35,521 - FundingAmountForecast - INFO - NaN values in funding_amount_numeric: 1668 / 1749
+2025-04-22 07:47:35,522 - FundingAmountForecast - WARNING - Duplicate columns found: ['company_name', 'industry', 'funding_stage', 'funding_date', 'employees']
+2025-04-22 07:47:35,522 - FundingAmountForecast - INFO - Renamed columns to handle duplicates
+2025-04-22 07:47:35,532 - FundingAmountForecast - INFO - Loaded and standardized 1749 records
+2025-04-22 07:47:35,533 - FundingAmountForecast - INFO - Starting funding amount forecast analysis
+2025-04-22 07:47:35,533 - FundingAmountForecast - INFO - Creating forecast features
+2025-04-22 07:47:35,533 - FundingAmountForecast - INFO - Creating features for funding amount forecast
+2025-04-22 07:47:35,632 - FundingAmountForecast - ERROR - Error in funding amount forecast analysis: "value" parameter must be a scalar, dict or Series, but you passed a "ndarray"
+2025-04-22 07:47:35,636 - FundingAmountForecast - INFO - Attempting to use baseline model as fallback after error
+2025-04-22 07:47:35,636 - FundingAmountForecast - INFO - Using baseline model for predictions
+2025-04-22 07:47:35,638 - FundingAmountForecast - INFO - Generated 1749 baseline predictions
+2025-04-22 07:47:35,639 - root - INFO - Funding amount forecast analysis completed successfully
+2025-04-22 07:48:22,550 - FundingAmountForecast - INFO - Loading data from JSON files in ./
+2025-04-22 07:48:22,554 - FundingAmountForecast - INFO - Added 1103 records from fundraiser data
+2025-04-22 07:48:22,555 - FundingAmountForecast - INFO - Added 100 records from growthlist data
+2025-04-22 07:48:22,558 - FundingAmountForecast - INFO - Added 546 records from topstartup data
+2025-04-22 07:48:22,565 - FundingAmountForecast - INFO - Created DataFrame with 1749 rows and 27 columns
+2025-04-22 07:48:22,565 - FundingAmountForecast - INFO - Available columns: ['Company', 'Total_Employees', 'Industry', 'Website', 'Funding_Date', 'Funding_Type', 'Funding_Amount_USD', 'Headquarters', 'Extraction_Time', 'Page', 'source', 'name', 'website', 'industry', 'country', 'funding_amount', 'funding_type', 'last_funding_date', 'funding_usd', 'description', 'headquarters', 'funding', 'has_reviews', 'category', 'employees', 'founding_year', 'other_details']
+2025-04-22 07:48:22,568 - FundingAmountForecast - INFO - Renamed columns: {'Company': 'company_name', 'Funding_Type': 'funding_stage', 'Funding_Amount_USD': 'funding_amount', 'Funding_Date': 'funding_date', 'Industry': 'industry', 'Total_Employees': 'employees', 'name': 'company_name', 'funding_type': 'funding_stage', 'funding_amount': 'funding_amount_str', 'last_funding_date': 'funding_date', 'website': 'website', 'country': 'country'}
+2025-04-22 07:48:22,570 - FundingAmountForecast - WARNING - Created missing column: funding_amount_numeric
+2025-04-22 07:48:22,574 - FundingAmountForecast - INFO - NaN values in funding_amount_numeric: 1668 / 1749
+2025-04-22 07:48:22,574 - FundingAmountForecast - WARNING - Duplicate columns found: ['company_name', 'industry', 'funding_stage', 'funding_date', 'employees']
+2025-04-22 07:48:22,575 - FundingAmountForecast - INFO - Renamed columns to handle duplicates
+2025-04-22 07:48:22,587 - FundingAmountForecast - INFO - Loaded and standardized 1749 records
+2025-04-22 07:48:22,587 - FundingAmountForecast - INFO - Starting funding amount forecast analysis
+2025-04-22 07:48:22,587 - FundingAmountForecast - INFO - Creating forecast features
+2025-04-22 07:48:22,588 - FundingAmountForecast - INFO - Creating features for funding amount forecast
+2025-04-22 07:48:22,684 - FundingAmountForecast - INFO - Created forecast features: (1749, 72)
+2025-04-22 07:48:22,685 - FundingAmountForecast - INFO - Preparing model data
+2025-04-22 07:48:22,685 - FundingAmountForecast - INFO - Preparing model data
+2025-04-22 07:48:22,688 - FundingAmountForecast - INFO - Valid data points with funding amount: 1749
+2025-04-22 07:48:22,688 - FundingAmountForecast - INFO - Funding amount stats - min: 25000.0, max: 3500000000.0, mean: 8531249.73, unique: 56
+2025-04-22 07:48:22,689 - FundingAmountForecast - INFO - Companies with multiple funding rounds: 0
+2025-04-22 07:48:22,689 - FundingAmountForecast - INFO - Using non-sequential approach
+2025-04-22 07:48:22,689 - FundingAmountForecast - ERROR - Error preparing model data: 'FundingAmountForecast' object has no attribute '_prepare_nonsequential_data'
+2025-04-22 07:48:22,692 - FundingAmountForecast - WARNING - Insufficient or non-varied data for advanced models. Using baseline model.
+2025-04-22 07:48:22,692 - FundingAmountForecast - INFO - Using baseline model for predictions
+2025-04-22 07:48:22,692 - FundingAmountForecast - INFO - Using baseline model for predictions
+2025-04-22 07:48:22,696 - FundingAmountForecast - INFO - Generated 1749 baseline predictions
+2025-04-22 07:48:22,698 - root - INFO - Funding amount forecast analysis completed successfully
+2025-04-22 07:49:15,839 - FundingAmountForecast - INFO - Loading data from JSON files in ./
+2025-04-22 07:49:15,843 - FundingAmountForecast - INFO - Added 1103 records from fundraiser data
+2025-04-22 07:49:15,844 - FundingAmountForecast - INFO - Added 100 records from growthlist data
+2025-04-22 07:49:15,846 - FundingAmountForecast - INFO - Added 546 records from topstartup data
+2025-04-22 07:49:15,855 - FundingAmountForecast - INFO - Created DataFrame with 1749 rows and 27 columns
+2025-04-22 07:49:15,855 - FundingAmountForecast - INFO - Available columns: ['Company', 'Total_Employees', 'Industry', 'Website', 'Funding_Date', 'Funding_Type', 'Funding_Amount_USD', 'Headquarters', 'Extraction_Time', 'Page', 'source', 'name', 'website', 'industry', 'country', 'funding_amount', 'funding_type', 'last_funding_date', 'funding_usd', 'description', 'headquarters', 'funding', 'has_reviews', 'category', 'employees', 'founding_year', 'other_details']
+2025-04-22 07:49:15,860 - FundingAmountForecast - INFO - Renamed columns: {'Company': 'company_name', 'Funding_Type': 'funding_stage', 'Funding_Amount_USD': 'funding_amount', 'Funding_Date': 'funding_date', 'Industry': 'industry', 'Total_Employees': 'employees', 'name': 'company_name', 'funding_type': 'funding_stage', 'funding_amount': 'funding_amount_str', 'last_funding_date': 'funding_date', 'website': 'website', 'country': 'country'}
+2025-04-22 07:49:15,864 - FundingAmountForecast - WARNING - Created missing column: funding_amount_numeric
+2025-04-22 07:49:15,870 - FundingAmountForecast - INFO - NaN values in funding_amount_numeric: 1668 / 1749
+2025-04-22 07:49:15,871 - FundingAmountForecast - WARNING - Duplicate columns found: ['company_name', 'industry', 'funding_stage', 'funding_date', 'employees']
+2025-04-22 07:49:15,871 - FundingAmountForecast - INFO - Renamed columns to handle duplicates
+2025-04-22 07:49:15,891 - FundingAmountForecast - INFO - Loaded and standardized 1749 records
+2025-04-22 07:49:15,891 - FundingAmountForecast - INFO - Starting funding amount forecast analysis
+2025-04-22 07:49:15,891 - FundingAmountForecast - INFO - Creating forecast features
+2025-04-22 07:49:15,891 - FundingAmountForecast - INFO - Creating features for funding amount forecast
+2025-04-22 07:49:16,013 - FundingAmountForecast - INFO - Created forecast features: (1749, 72)
+2025-04-22 07:49:16,013 - FundingAmountForecast - INFO - Preparing model data
+2025-04-22 07:49:16,013 - FundingAmountForecast - INFO - Preparing model data
+2025-04-22 07:49:16,016 - FundingAmountForecast - INFO - Valid data points with funding amount: 1749
+2025-04-22 07:49:16,018 - FundingAmountForecast - INFO - Funding amount stats - min: 25000.0, max: 3500000000.0, mean: 8562754.25, unique: 56
+2025-04-22 07:49:16,020 - FundingAmountForecast - INFO - Companies with multiple funding rounds: 0
+2025-04-22 07:49:16,021 - FundingAmountForecast - INFO - Using non-sequential approach
+2025-04-22 07:49:16,021 - FundingAmountForecast - INFO - Preparing non-sequential data
+2025-04-22 07:49:16,023 - FundingAmountForecast - INFO - Prepared non-sequential model data: X shape (1749, 9), y shape (1749,)
+2025-04-22 07:49:16,023 - FundingAmountForecast - INFO - Successfully prepared model data with 1749 samples and 9 features
+2025-04-22 07:49:16,023 - FundingAmountForecast - INFO - Feature list: ['funding_stage_level', 'expected_jump_factor', 'industry_avg_funding', 'market_growth_rate', 'region_avg_funding', 'years_since_funding_adj', 'industry_growth_score', 'industry_competitiveness', 'region_econ_score']
+2025-04-22 07:49:16,024 - FundingAmountForecast - WARNING - Insufficient features (9) for advanced models. Using baseline model.
+2025-04-22 07:49:16,024 - FundingAmountForecast - INFO - Using baseline model for predictions
+2025-04-22 07:49:16,025 - FundingAmountForecast - INFO - Using baseline model for predictions
+2025-04-22 07:49:16,028 - FundingAmountForecast - INFO - Generated 1749 baseline predictions
+2025-04-22 07:49:16,028 - root - INFO - Funding amount forecast analysis completed successfully
+2025-04-22 08:02:13,617 - FundingAmountForecast - INFO - Loading data from JSON files in ./
+2025-04-22 08:02:13,623 - FundingAmountForecast - INFO - Added 1103 records from fundraiser data
+2025-04-22 08:02:13,628 - FundingAmountForecast - INFO - Added 100 records from growthlist data
+2025-04-22 08:02:13,638 - FundingAmountForecast - INFO - Added 546 records from topstartup data
+2025-04-22 08:02:13,682 - FundingAmountForecast - INFO - Created DataFrame with 1749 rows and 27 columns
+2025-04-22 08:02:13,682 - FundingAmountForecast - INFO - Available columns: ['Company', 'Total_Employees', 'Industry', 'Website', 'Funding_Date', 'Funding_Type', 'Funding_Amount_USD', 'Headquarters', 'Extraction_Time', 'Page', 'source', 'name', 'website', 'industry', 'country', 'funding_amount', 'funding_type', 'last_funding_date', 'funding_usd', 'description', 'headquarters', 'funding', 'has_reviews', 'category', 'employees', 'founding_year', 'other_details']
+2025-04-22 08:02:13,690 - FundingAmountForecast - INFO - Renamed columns: {'Company': 'company_name', 'Funding_Type': 'funding_stage', 'Funding_Amount_USD': 'funding_amount', 'Funding_Date': 'funding_date', 'Industry': 'industry', 'Total_Employees': 'employees', 'name': 'company_name', 'funding_type': 'funding_stage', 'funding_amount': 'funding_amount_str', 'last_funding_date': 'funding_date', 'website': 'website', 'country': 'country'}
+2025-04-22 08:02:13,695 - FundingAmountForecast - WARNING - Created missing column: funding_amount_numeric
+2025-04-22 08:02:13,714 - FundingAmountForecast - INFO - NaN values in funding_amount_numeric: 1668 / 1749
+2025-04-22 08:02:13,715 - FundingAmountForecast - WARNING - Duplicate columns found: ['company_name', 'industry', 'funding_stage', 'funding_date', 'employees']
+2025-04-22 08:02:13,715 - FundingAmountForecast - INFO - Renamed columns to handle duplicates
+2025-04-22 08:02:13,748 - FundingAmountForecast - INFO - Loaded and standardized 1749 records
+2025-04-22 08:02:13,750 - FundingAmountForecast - INFO - Starting funding amount forecast analysis
+2025-04-22 08:02:13,750 - FundingAmountForecast - INFO - Creating features for funding amount forecast
+2025-04-22 08:02:13,903 - FundingAmountForecast - WARNING - Feature region_avg_funding has only one unique value: 69676147.64197531
+2025-04-22 08:02:13,904 - FundingAmountForecast - WARNING - Feature market_growth_rate has only one unique value: 0.1
+2025-04-22 08:02:13,905 - FundingAmountForecast - WARNING - Feature industry_growth_score has only one unique value: 5.0
+2025-04-22 08:02:13,906 - FundingAmountForecast - WARNING - Feature quarter_avg_funding has only one unique value: 69676147.64197531
+2025-04-22 08:02:13,908 - FundingAmountForecast - INFO - Created forecast features: (1749, 72)
+2025-04-22 08:02:13,909 - FundingAmountForecast - ERROR - Error in funding amount forecast analysis: 'FundingAmountForecast' object has no attribute '_prepare_model_data'
+2025-04-22 08:02:13,914 - root - INFO - Funding amount forecast analysis completed successfully
+2025-04-22 08:02:47,899 - FundingAmountForecast - INFO - Loading data from JSON files in ./
+2025-04-22 08:02:47,903 - FundingAmountForecast - INFO - Added 1103 records from fundraiser data
+2025-04-22 08:02:47,904 - FundingAmountForecast - INFO - Added 100 records from growthlist data
+2025-04-22 08:02:47,905 - FundingAmountForecast - INFO - Added 546 records from topstartup data
+2025-04-22 08:02:47,915 - FundingAmountForecast - INFO - Created DataFrame with 1749 rows and 27 columns
+2025-04-22 08:02:47,915 - FundingAmountForecast - INFO - Available columns: ['Company', 'Total_Employees', 'Industry', 'Website', 'Funding_Date', 'Funding_Type', 'Funding_Amount_USD', 'Headquarters', 'Extraction_Time', 'Page', 'source', 'name', 'website', 'industry', 'country', 'funding_amount', 'funding_type', 'last_funding_date', 'funding_usd', 'description', 'headquarters', 'funding', 'has_reviews', 'category', 'employees', 'founding_year', 'other_details']
+2025-04-22 08:02:47,918 - FundingAmountForecast - INFO - Renamed columns: {'Company': 'company_name', 'Funding_Type': 'funding_stage', 'Funding_Amount_USD': 'funding_amount', 'Funding_Date': 'funding_date', 'Industry': 'industry', 'Total_Employees': 'employees', 'name': 'company_name', 'funding_type': 'funding_stage', 'funding_amount': 'funding_amount_str', 'last_funding_date': 'funding_date', 'website': 'website', 'country': 'country'}
+2025-04-22 08:02:47,920 - FundingAmountForecast - WARNING - Created missing column: funding_amount_numeric
+2025-04-22 08:02:47,924 - FundingAmountForecast - INFO - NaN values in funding_amount_numeric: 1668 / 1749
+2025-04-22 08:02:47,924 - FundingAmountForecast - WARNING - Duplicate columns found: ['company_name', 'industry', 'funding_stage', 'funding_date', 'employees']
+2025-04-22 08:02:47,925 - FundingAmountForecast - INFO - Renamed columns to handle duplicates
+2025-04-22 08:02:47,936 - FundingAmountForecast - INFO - Loaded and standardized 1749 records
+2025-04-22 08:02:47,937 - FundingAmountForecast - INFO - Starting funding amount forecast analysis
+2025-04-22 08:02:47,937 - FundingAmountForecast - INFO - Creating features for funding amount forecast
+2025-04-22 08:02:48,054 - FundingAmountForecast - WARNING - Feature region_avg_funding has only one unique value: 69676147.64197531
+2025-04-22 08:02:48,055 - FundingAmountForecast - WARNING - Feature market_growth_rate has only one unique value: 0.1
+2025-04-22 08:02:48,055 - FundingAmountForecast - WARNING - Feature industry_growth_score has only one unique value: 5.0
+2025-04-22 08:02:48,057 - FundingAmountForecast - WARNING - Feature quarter_avg_funding has only one unique value: 69676147.64197531
+2025-04-22 08:02:48,060 - FundingAmountForecast - INFO - Created forecast features: (1749, 72)
+2025-04-22 08:02:48,062 - FundingAmountForecast - INFO - Preparing model data
+2025-04-22 08:02:48,065 - FundingAmountForecast - INFO - Valid data points with funding amount: 1749
+2025-04-22 08:02:48,066 - FundingAmountForecast - INFO - Funding amount stats - min: 25000.0, max: 3500000000.0, mean: 7995293.29, unique: 55
+2025-04-22 08:02:48,067 - FundingAmountForecast - INFO - Companies with multiple funding rounds: 0
+2025-04-22 08:02:48,067 - FundingAmountForecast - INFO - Using non-sequential approach
+2025-04-22 08:02:48,067 - FundingAmountForecast - INFO - Preparing non-sequential data
+2025-04-22 08:02:48,068 - FundingAmountForecast - WARNING - Features with low variance: ['market_growth_rate', 'region_avg_funding', 'industry_growth_score']
+2025-04-22 08:02:48,068 - FundingAmountForecast - INFO - Prepared non-sequential model data: X shape (1749, 9), y shape (1749,)
+2025-04-22 08:02:48,069 - FundingAmountForecast - INFO - Using advanced models with 1749 samples
+2025-04-22 08:02:48,069 - FundingAmountForecast - INFO - Training Quantile Regression Forest model
+2025-04-22 08:02:48,287 - FundingAmountForecast - INFO - Model trained with RMSE: 0.4099, R²: 0.1766
+2025-04-22 08:02:48,287 - FundingAmountForecast - INFO - Prediction interval coverage (80%): 95.14%
+2025-04-22 08:02:48,287 - FundingAmountForecast - INFO - Training Gradient Boosting with quantile loss
+2025-04-22 08:02:48,288 - FundingAmountForecast - WARNING - Features with low variation may cause issues: ['market_growth_rate', 'region_avg_funding', 'industry_growth_score']
+2025-04-22 08:02:48,292 - FundingAmountForecast - ERROR - Error training models: Input X contains NaN.
+GradientBoostingRegressor does not accept missing values encoded as NaN natively. For supervised learning, you might want to consider sklearn.ensemble.HistGradientBoostingClassifier and Regressor which accept missing values encoded as NaNs natively. Alternatively, it is possible to preprocess the data, for instance by using an imputer transformer in a pipeline or drop samples with missing values. See https://scikit-learn.org/stable/modules/impute.html You can find a list of all estimators that handle NaN values at the following page: https://scikit-learn.org/stable/modules/impute.html#estimators-that-handle-nan-values
+2025-04-22 08:02:48,293 - FundingAmountForecast - INFO - Using baseline model for predictions
+2025-04-22 08:02:48,293 - FundingAmountForecast - INFO - Using baseline model for predictions
+2025-04-22 08:02:48,298 - FundingAmountForecast - INFO - Generated 1749 baseline predictions
+2025-04-22 08:02:48,299 - FundingAmountForecast - INFO - No actual values available for all predictions
+2025-04-22 08:02:48,318 - FundingAmountForecast - INFO - Prediction summary by funding stage:
+                count       mean  std        min        25%        50%        75%        max
+funding_stage                                                                               
+Angel             4.0  5000000.0  0.0  5000000.0  5000000.0  5000000.0  5000000.0  5000000.0
+Pre-Seed        113.0  5000000.0  0.0  5000000.0  5000000.0  5000000.0  5000000.0  5000000.0
+Private Equity   26.0  5000000.0  0.0  5000000.0  5000000.0  5000000.0  5000000.0  5000000.0
+Seed            271.0  5000000.0  0.0  5000000.0  5000000.0  5000000.0  5000000.0  5000000.0
+Series A        185.0  5000000.0  0.0  5000000.0  5000000.0  5000000.0  5000000.0  5000000.0
+Series B        101.0  5000000.0  0.0  5000000.0  5000000.0  5000000.0  5000000.0  5000000.0
+Series C         72.0  5000000.0  0.0  5000000.0  5000000.0  5000000.0  5000000.0  5000000.0
+Series D         23.0  5000000.0  0.0  5000000.0  5000000.0  5000000.0  5000000.0  5000000.0
+Series E         12.0  5000000.0  0.0  5000000.0  5000000.0  5000000.0  5000000.0  5000000.0
+Series F          1.0  5000000.0  NaN  5000000.0  5000000.0  5000000.0  5000000.0  5000000.0
+Unknown         782.0  5000000.0  0.0  5000000.0  5000000.0  5000000.0  5000000.0  5000000.0
+Venture         159.0  5000000.0  0.0  5000000.0  5000000.0  5000000.0  5000000.0  5000000.0
+2025-04-22 08:02:48,318 - FundingAmountForecast - ERROR - Error in funding amount forecast analysis: 'FundingAmountForecast' object has no attribute '_create_output_path'
+2025-04-22 08:02:48,323 - root - INFO - Funding amount forecast analysis completed successfully
+2025-04-22 08:03:36,602 - FundingAmountForecast - INFO - Loading data from JSON files in ./
+2025-04-22 08:03:36,606 - FundingAmountForecast - INFO - Added 1103 records from fundraiser data
+2025-04-22 08:03:36,607 - FundingAmountForecast - INFO - Added 100 records from growthlist data
+2025-04-22 08:03:36,609 - FundingAmountForecast - INFO - Added 546 records from topstartup data
+2025-04-22 08:03:36,616 - FundingAmountForecast - INFO - Created DataFrame with 1749 rows and 27 columns
+2025-04-22 08:03:36,616 - FundingAmountForecast - INFO - Available columns: ['Company', 'Total_Employees', 'Industry', 'Website', 'Funding_Date', 'Funding_Type', 'Funding_Amount_USD', 'Headquarters', 'Extraction_Time', 'Page', 'source', 'name', 'website', 'industry', 'country', 'funding_amount', 'funding_type', 'last_funding_date', 'funding_usd', 'description', 'headquarters', 'funding', 'has_reviews', 'category', 'employees', 'founding_year', 'other_details']
+2025-04-22 08:03:36,619 - FundingAmountForecast - INFO - Renamed columns: {'Company': 'company_name', 'Funding_Type': 'funding_stage', 'Funding_Amount_USD': 'funding_amount', 'Funding_Date': 'funding_date', 'Industry': 'industry', 'Total_Employees': 'employees', 'name': 'company_name', 'funding_type': 'funding_stage', 'funding_amount': 'funding_amount_str', 'last_funding_date': 'funding_date', 'website': 'website', 'country': 'country'}
+2025-04-22 08:03:36,621 - FundingAmountForecast - WARNING - Created missing column: funding_amount_numeric
+2025-04-22 08:03:36,623 - FundingAmountForecast - INFO - NaN values in funding_amount_numeric: 1668 / 1749
+2025-04-22 08:03:36,623 - FundingAmountForecast - WARNING - Duplicate columns found: ['company_name', 'industry', 'funding_stage', 'funding_date', 'employees']
+2025-04-22 08:03:36,624 - FundingAmountForecast - INFO - Renamed columns to handle duplicates
+2025-04-22 08:03:36,637 - FundingAmountForecast - INFO - Loaded and standardized 1749 records
+2025-04-22 08:03:36,638 - FundingAmountForecast - INFO - Starting funding amount forecast analysis
+2025-04-22 08:03:36,638 - FundingAmountForecast - INFO - Creating features for funding amount forecast
+2025-04-22 08:03:36,728 - FundingAmountForecast - WARNING - Feature region_avg_funding has only one unique value: 69676147.64197531
+2025-04-22 08:03:36,729 - FundingAmountForecast - WARNING - Feature market_growth_rate has only one unique value: 0.1
+2025-04-22 08:03:36,729 - FundingAmountForecast - WARNING - Feature industry_growth_score has only one unique value: 5.0
+2025-04-22 08:03:36,730 - FundingAmountForecast - WARNING - Feature quarter_avg_funding has only one unique value: 69676147.64197531
+2025-04-22 08:03:36,731 - FundingAmountForecast - INFO - Created forecast features: (1749, 72)
+2025-04-22 08:03:36,731 - FundingAmountForecast - INFO - Preparing model data
+2025-04-22 08:03:36,733 - FundingAmountForecast - INFO - Valid data points with funding amount: 1749
+2025-04-22 08:03:36,734 - FundingAmountForecast - INFO - Funding amount stats - min: 25000.0, max: 3500000000.0, mean: 7995293.29, unique: 55
+2025-04-22 08:03:36,735 - FundingAmountForecast - INFO - Companies with multiple funding rounds: 0
+2025-04-22 08:03:36,735 - FundingAmountForecast - INFO - Using non-sequential approach
+2025-04-22 08:03:36,735 - FundingAmountForecast - INFO - Preparing non-sequential data
+2025-04-22 08:03:36,736 - FundingAmountForecast - WARNING - Features with low variance: ['market_growth_rate', 'region_avg_funding', 'industry_growth_score']
+2025-04-22 08:03:36,736 - FundingAmountForecast - INFO - Prepared non-sequential model data: X shape (1749, 9), y shape (1749,)
+2025-04-22 08:03:36,737 - FundingAmountForecast - INFO - Using advanced models with 1749 samples
+2025-04-22 08:03:36,737 - FundingAmountForecast - INFO - Training Quantile Regression Forest model
+2025-04-22 08:03:36,910 - FundingAmountForecast - INFO - Model trained with RMSE: 0.4099, R²: 0.1766
+2025-04-22 08:03:36,911 - FundingAmountForecast - INFO - Prediction interval coverage (80%): 95.14%
+2025-04-22 08:03:36,911 - FundingAmountForecast - INFO - Training Gradient Boosting with quantile loss
+2025-04-22 08:03:36,912 - FundingAmountForecast - WARNING - Features with low variation may cause issues: ['market_growth_rate', 'region_avg_funding', 'industry_growth_score']
+2025-04-22 08:03:36,915 - FundingAmountForecast - ERROR - Error training models: Input X contains NaN.
+GradientBoostingRegressor does not accept missing values encoded as NaN natively. For supervised learning, you might want to consider sklearn.ensemble.HistGradientBoostingClassifier and Regressor which accept missing values encoded as NaNs natively. Alternatively, it is possible to preprocess the data, for instance by using an imputer transformer in a pipeline or drop samples with missing values. See https://scikit-learn.org/stable/modules/impute.html You can find a list of all estimators that handle NaN values at the following page: https://scikit-learn.org/stable/modules/impute.html#estimators-that-handle-nan-values
+2025-04-22 08:03:36,916 - FundingAmountForecast - INFO - Using baseline model for predictions
+2025-04-22 08:03:36,916 - FundingAmountForecast - INFO - Using baseline model for predictions
+2025-04-22 08:03:36,920 - FundingAmountForecast - INFO - Generated 1749 baseline predictions
+2025-04-22 08:03:36,920 - FundingAmountForecast - INFO - No actual values available for all predictions
+2025-04-22 08:03:36,942 - FundingAmountForecast - INFO - Prediction summary by funding stage:
+                count       mean  std        min        25%        50%        75%        max
+funding_stage                                                                               
+Angel             4.0  5000000.0  0.0  5000000.0  5000000.0  5000000.0  5000000.0  5000000.0
+Pre-Seed        113.0  5000000.0  0.0  5000000.0  5000000.0  5000000.0  5000000.0  5000000.0
+Private Equity   26.0  5000000.0  0.0  5000000.0  5000000.0  5000000.0  5000000.0  5000000.0
+Seed            271.0  5000000.0  0.0  5000000.0  5000000.0  5000000.0  5000000.0  5000000.0
+Series A        185.0  5000000.0  0.0  5000000.0  5000000.0  5000000.0  5000000.0  5000000.0
+Series B        101.0  5000000.0  0.0  5000000.0  5000000.0  5000000.0  5000000.0  5000000.0
+Series C         72.0  5000000.0  0.0  5000000.0  5000000.0  5000000.0  5000000.0  5000000.0
+Series D         23.0  5000000.0  0.0  5000000.0  5000000.0  5000000.0  5000000.0  5000000.0
+Series E         12.0  5000000.0  0.0  5000000.0  5000000.0  5000000.0  5000000.0  5000000.0
+Series F          1.0  5000000.0  NaN  5000000.0  5000000.0  5000000.0  5000000.0  5000000.0
+Unknown         782.0  5000000.0  0.0  5000000.0  5000000.0  5000000.0  5000000.0  5000000.0
+Venture         159.0  5000000.0  0.0  5000000.0  5000000.0  5000000.0  5000000.0  5000000.0
+2025-04-22 08:03:36,948 - FundingAmountForecast - INFO - Saved predictions to ./output/funding_forecast/funding_amount_predictions.csv
+2025-04-22 08:03:36,950 - root - INFO - Funding amount forecast analysis completed successfully
+2025-04-22 08:04:43,321 - FundingAmountForecast - INFO - Loading data from JSON files in ./
+2025-04-22 08:04:43,324 - FundingAmountForecast - INFO - Added 1103 records from fundraiser data
+2025-04-22 08:04:43,324 - FundingAmountForecast - INFO - Added 100 records from growthlist data
+2025-04-22 08:04:43,326 - FundingAmountForecast - INFO - Added 546 records from topstartup data
+2025-04-22 08:04:43,335 - FundingAmountForecast - INFO - Created DataFrame with 1749 rows and 27 columns
+2025-04-22 08:04:43,335 - FundingAmountForecast - INFO - Available columns: ['Company', 'Total_Employees', 'Industry', 'Website', 'Funding_Date', 'Funding_Type', 'Funding_Amount_USD', 'Headquarters', 'Extraction_Time', 'Page', 'source', 'name', 'website', 'industry', 'country', 'funding_amount', 'funding_type', 'last_funding_date', 'funding_usd', 'description', 'headquarters', 'funding', 'has_reviews', 'category', 'employees', 'founding_year', 'other_details']
+2025-04-22 08:04:43,337 - FundingAmountForecast - INFO - Renamed columns: {'Company': 'company_name', 'Funding_Type': 'funding_stage', 'Funding_Amount_USD': 'funding_amount', 'Funding_Date': 'funding_date', 'Industry': 'industry', 'Total_Employees': 'employees', 'name': 'company_name', 'funding_type': 'funding_stage', 'funding_amount': 'funding_amount_str', 'last_funding_date': 'funding_date', 'website': 'website', 'country': 'country'}
+2025-04-22 08:04:43,339 - FundingAmountForecast - WARNING - Created missing column: funding_amount_numeric
+2025-04-22 08:04:43,343 - FundingAmountForecast - INFO - NaN values in funding_amount_numeric: 1668 / 1749
+2025-04-22 08:04:43,343 - FundingAmountForecast - WARNING - Duplicate columns found: ['company_name', 'industry', 'funding_stage', 'funding_date', 'employees']
+2025-04-22 08:04:43,343 - FundingAmountForecast - INFO - Renamed columns to handle duplicates
+2025-04-22 08:04:43,362 - FundingAmountForecast - INFO - Loaded and standardized 1749 records
+2025-04-22 08:04:43,363 - FundingAmountForecast - INFO - Starting funding amount forecast analysis
+2025-04-22 08:04:43,364 - FundingAmountForecast - INFO - Creating features for funding amount forecast
+2025-04-22 08:04:43,562 - FundingAmountForecast - WARNING - Feature region_avg_funding has only one unique value: 69676147.64197531
+2025-04-22 08:04:43,562 - FundingAmountForecast - WARNING - Feature market_growth_rate has only one unique value: 0.1
+2025-04-22 08:04:43,563 - FundingAmountForecast - WARNING - Feature industry_growth_score has only one unique value: 5.0
+2025-04-22 08:04:43,564 - FundingAmountForecast - WARNING - Feature quarter_avg_funding has only one unique value: 69676147.64197531
+2025-04-22 08:04:43,565 - FundingAmountForecast - INFO - Created forecast features: (1749, 72)
+2025-04-22 08:04:43,566 - FundingAmountForecast - INFO - Preparing model data
+2025-04-22 08:04:43,580 - FundingAmountForecast - INFO - Valid data points with funding amount: 1749
+2025-04-22 08:04:43,583 - FundingAmountForecast - INFO - Funding amount stats - min: 25000.0, max: 3500000000.0, mean: 7995293.29, unique: 55
+2025-04-22 08:04:43,585 - FundingAmountForecast - INFO - Companies with multiple funding rounds: 0
+2025-04-22 08:04:43,586 - FundingAmountForecast - INFO - Using non-sequential approach
+2025-04-22 08:04:43,586 - FundingAmountForecast - INFO - Preparing non-sequential data
+2025-04-22 08:04:43,587 - FundingAmountForecast - WARNING - Features with low variance: ['market_growth_rate', 'region_avg_funding', 'industry_growth_score']
+2025-04-22 08:04:43,587 - FundingAmountForecast - INFO - Prepared non-sequential model data: X shape (1749, 9), y shape (1749,)
+2025-04-22 08:04:43,587 - FundingAmountForecast - INFO - Using advanced models with 1749 samples
+2025-04-22 08:04:43,587 - FundingAmountForecast - INFO - Training Quantile Regression Forest model
+2025-04-22 08:04:43,790 - FundingAmountForecast - INFO - Model trained with RMSE: 0.4099, R²: 0.1766
+2025-04-22 08:04:43,790 - FundingAmountForecast - INFO - Prediction interval coverage (80%): 95.14%
+2025-04-22 08:04:43,791 - FundingAmountForecast - INFO - Training Gradient Boosting with quantile loss
+2025-04-22 08:04:43,791 - FundingAmountForecast - WARNING - Features with low variation may cause issues: ['market_growth_rate', 'region_avg_funding', 'industry_growth_score']
+2025-04-22 08:04:43,795 - FundingAmountForecast - ERROR - Error training models: Input X contains NaN.
+GradientBoostingRegressor does not accept missing values encoded as NaN natively. For supervised learning, you might want to consider sklearn.ensemble.HistGradientBoostingClassifier and Regressor which accept missing values encoded as NaNs natively. Alternatively, it is possible to preprocess the data, for instance by using an imputer transformer in a pipeline or drop samples with missing values. See https://scikit-learn.org/stable/modules/impute.html You can find a list of all estimators that handle NaN values at the following page: https://scikit-learn.org/stable/modules/impute.html#estimators-that-handle-nan-values
+2025-04-22 08:04:43,795 - FundingAmountForecast - INFO - Using baseline model for predictions
+2025-04-22 08:04:43,795 - FundingAmountForecast - INFO - Using baseline model for predictions
+2025-04-22 08:04:43,799 - FundingAmountForecast - INFO - Generated 1749 baseline predictions
+2025-04-22 08:04:43,800 - FundingAmountForecast - INFO - No actual values available for all predictions
+2025-04-22 08:04:43,819 - FundingAmountForecast - INFO - Prediction summary by funding stage:
+                count       mean  std  ...        50%        75%        max
+funding_stage                          ...                                 
+Angel             4.0  5000000.0  0.0  ...  5000000.0  5000000.0  5000000.0
+Pre-Seed        113.0  5000000.0  0.0  ...  5000000.0  5000000.0  5000000.0
+Private Equity   26.0  5000000.0  0.0  ...  5000000.0  5000000.0  5000000.0
+Seed            271.0  5000000.0  0.0  ...  5000000.0  5000000.0  5000000.0
+Series A        185.0  5000000.0  0.0  ...  5000000.0  5000000.0  5000000.0
+Series B        101.0  5000000.0  0.0  ...  5000000.0  5000000.0  5000000.0
+Series C         72.0  5000000.0  0.0  ...  5000000.0  5000000.0  5000000.0
+Series D         23.0  5000000.0  0.0  ...  5000000.0  5000000.0  5000000.0
+Series E         12.0  5000000.0  0.0  ...  5000000.0  5000000.0  5000000.0
+Series F          1.0  5000000.0  NaN  ...  5000000.0  5000000.0  5000000.0
+Unknown         782.0  5000000.0  0.0  ...  5000000.0  5000000.0  5000000.0
+Venture         159.0  5000000.0  0.0  ...  5000000.0  5000000.0  5000000.0
+
+[12 rows x 8 columns]
+2025-04-22 08:04:43,825 - FundingAmountForecast - INFO - Saved predictions to ./output/funding_forecast/funding_amount_predictions.csv
+2025-04-22 08:04:43,827 - root - INFO - Funding amount forecast analysis completed successfully
+2025-04-22 08:04:46,770 - FundingAmountForecast - INFO - Loading data from JSON files in ./
+2025-04-22 08:04:46,773 - FundingAmountForecast - INFO - Added 1103 records from fundraiser data
+2025-04-22 08:04:46,774 - FundingAmountForecast - INFO - Added 100 records from growthlist data
+2025-04-22 08:04:46,775 - FundingAmountForecast - INFO - Added 546 records from topstartup data
+2025-04-22 08:04:46,783 - FundingAmountForecast - INFO - Created DataFrame with 1749 rows and 27 columns
+2025-04-22 08:04:46,783 - FundingAmountForecast - INFO - Available columns: ['Company', 'Total_Employees', 'Industry', 'Website', 'Funding_Date', 'Funding_Type', 'Funding_Amount_USD', 'Headquarters', 'Extraction_Time', 'Page', 'source', 'name', 'website', 'industry', 'country', 'funding_amount', 'funding_type', 'last_funding_date', 'funding_usd', 'description', 'headquarters', 'funding', 'has_reviews', 'category', 'employees', 'founding_year', 'other_details']
+2025-04-22 08:04:46,784 - FundingAmountForecast - INFO - Renamed columns: {'Company': 'company_name', 'Funding_Type': 'funding_stage', 'Funding_Amount_USD': 'funding_amount', 'Funding_Date': 'funding_date', 'Industry': 'industry', 'Total_Employees': 'employees', 'name': 'company_name', 'funding_type': 'funding_stage', 'funding_amount': 'funding_amount_str', 'last_funding_date': 'funding_date', 'website': 'website', 'country': 'country'}
+2025-04-22 08:04:46,785 - FundingAmountForecast - WARNING - Created missing column: funding_amount_numeric
+2025-04-22 08:04:46,786 - FundingAmountForecast - INFO - NaN values in funding_amount_numeric: 1668 / 1749
+2025-04-22 08:04:46,787 - FundingAmountForecast - WARNING - Duplicate columns found: ['company_name', 'industry', 'funding_stage', 'funding_date', 'employees']
+2025-04-22 08:04:46,787 - FundingAmountForecast - INFO - Renamed columns to handle duplicates
+2025-04-22 08:04:46,798 - FundingAmountForecast - INFO - Loaded and standardized 1749 records
+2025-04-22 08:04:46,799 - FundingAmountForecast - INFO - Starting funding amount forecast analysis
+2025-04-22 08:04:46,799 - FundingAmountForecast - INFO - Creating features for funding amount forecast
+2025-04-22 08:04:46,915 - FundingAmountForecast - WARNING - Feature region_avg_funding has only one unique value: 69676147.64197531
+2025-04-22 08:04:46,917 - FundingAmountForecast - WARNING - Feature market_growth_rate has only one unique value: 0.1
+2025-04-22 08:04:46,917 - FundingAmountForecast - WARNING - Feature industry_growth_score has only one unique value: 5.0
+2025-04-22 08:04:46,919 - FundingAmountForecast - WARNING - Feature quarter_avg_funding has only one unique value: 69676147.64197531
+2025-04-22 08:04:46,920 - FundingAmountForecast - INFO - Created forecast features: (1749, 72)
+2025-04-22 08:04:46,921 - FundingAmountForecast - INFO - Preparing model data
+2025-04-22 08:04:46,925 - FundingAmountForecast - INFO - Valid data points with funding amount: 1749
+2025-04-22 08:04:46,927 - FundingAmountForecast - INFO - Funding amount stats - min: 25000.0, max: 3500000000.0, mean: 7995293.29, unique: 55
+2025-04-22 08:04:46,929 - FundingAmountForecast - INFO - Companies with multiple funding rounds: 0
+2025-04-22 08:04:46,930 - FundingAmountForecast - INFO - Using non-sequential approach
+2025-04-22 08:04:46,930 - FundingAmountForecast - INFO - Preparing non-sequential data
+2025-04-22 08:04:46,931 - FundingAmountForecast - WARNING - Features with low variance: ['market_growth_rate', 'region_avg_funding', 'industry_growth_score']
+2025-04-22 08:04:46,931 - FundingAmountForecast - INFO - Prepared non-sequential model data: X shape (1749, 9), y shape (1749,)
+2025-04-22 08:04:46,931 - FundingAmountForecast - INFO - Using advanced models with 1749 samples
+2025-04-22 08:04:46,931 - FundingAmountForecast - INFO - Training Quantile Regression Forest model
+2025-04-22 08:04:47,137 - FundingAmountForecast - INFO - Model trained with RMSE: 0.4099, R²: 0.1766
+2025-04-22 08:04:47,138 - FundingAmountForecast - INFO - Prediction interval coverage (80%): 95.14%
+2025-04-22 08:04:47,138 - FundingAmountForecast - INFO - Training Gradient Boosting with quantile loss
+2025-04-22 08:04:47,138 - FundingAmountForecast - WARNING - Features with low variation may cause issues: ['market_growth_rate', 'region_avg_funding', 'industry_growth_score']
+2025-04-22 08:04:47,144 - FundingAmountForecast - ERROR - Error training models: Input X contains NaN.
+GradientBoostingRegressor does not accept missing values encoded as NaN natively. For supervised learning, you might want to consider sklearn.ensemble.HistGradientBoostingClassifier and Regressor which accept missing values encoded as NaNs natively. Alternatively, it is possible to preprocess the data, for instance by using an imputer transformer in a pipeline or drop samples with missing values. See https://scikit-learn.org/stable/modules/impute.html You can find a list of all estimators that handle NaN values at the following page: https://scikit-learn.org/stable/modules/impute.html#estimators-that-handle-nan-values
+2025-04-22 08:04:47,144 - FundingAmountForecast - INFO - Using baseline model for predictions
+2025-04-22 08:04:47,145 - FundingAmountForecast - INFO - Using baseline model for predictions
+2025-04-22 08:04:47,152 - FundingAmountForecast - INFO - Generated 1749 baseline predictions
+2025-04-22 08:04:47,153 - FundingAmountForecast - INFO - No actual values available for all predictions
+2025-04-22 08:04:47,174 - FundingAmountForecast - INFO - Prediction summary by funding stage:
+                count       mean  std  ...        50%        75%        max
+funding_stage                          ...                                 
+Angel             4.0  5000000.0  0.0  ...  5000000.0  5000000.0  5000000.0
+Pre-Seed        113.0  5000000.0  0.0  ...  5000000.0  5000000.0  5000000.0
+Private Equity   26.0  5000000.0  0.0  ...  5000000.0  5000000.0  5000000.0
+Seed            271.0  5000000.0  0.0  ...  5000000.0  5000000.0  5000000.0
+Series A        185.0  5000000.0  0.0  ...  5000000.0  5000000.0  5000000.0
+Series B        101.0  5000000.0  0.0  ...  5000000.0  5000000.0  5000000.0
+Series C         72.0  5000000.0  0.0  ...  5000000.0  5000000.0  5000000.0
+Series D         23.0  5000000.0  0.0  ...  5000000.0  5000000.0  5000000.0
+Series E         12.0  5000000.0  0.0  ...  5000000.0  5000000.0  5000000.0
+Series F          1.0  5000000.0  NaN  ...  5000000.0  5000000.0  5000000.0
+Unknown         782.0  5000000.0  0.0  ...  5000000.0  5000000.0  5000000.0
+Venture         159.0  5000000.0  0.0  ...  5000000.0  5000000.0  5000000.0
+
+[12 rows x 8 columns]
+2025-04-22 08:04:47,180 - FundingAmountForecast - INFO - Saved predictions to ./output/funding_forecast/funding_amount_predictions.csv
+2025-04-22 08:04:47,182 - root - INFO - Funding amount forecast analysis completed successfully
+2025-04-22 08:07:16,348 - FundingAmountForecast - INFO - Loading data from JSON files in ./
+2025-04-22 08:07:16,353 - FundingAmountForecast - INFO - Added 1103 records from fundraiser data
+2025-04-22 08:07:16,353 - FundingAmountForecast - INFO - Added 100 records from growthlist data
+2025-04-22 08:07:16,356 - FundingAmountForecast - INFO - Added 546 records from topstartup data
+2025-04-22 08:07:16,362 - FundingAmountForecast - INFO - Created DataFrame with 1749 rows and 27 columns
+2025-04-22 08:07:16,362 - FundingAmountForecast - INFO - Available columns: ['Company', 'Total_Employees', 'Industry', 'Website', 'Funding_Date', 'Funding_Type', 'Funding_Amount_USD', 'Headquarters', 'Extraction_Time', 'Page', 'source', 'name', 'website', 'industry', 'country', 'funding_amount', 'funding_type', 'last_funding_date', 'funding_usd', 'description', 'headquarters', 'funding', 'has_reviews', 'category', 'employees', 'founding_year', 'other_details']
+2025-04-22 08:07:16,366 - FundingAmountForecast - INFO - Renamed columns: {'Company': 'company_name', 'Funding_Type': 'funding_stage', 'Funding_Amount_USD': 'funding_amount', 'Funding_Date': 'funding_date', 'Industry': 'industry', 'Total_Employees': 'employees', 'name': 'company_name', 'funding_type': 'funding_stage', 'funding_amount': 'funding_amount_str', 'last_funding_date': 'funding_date', 'website': 'website', 'country': 'country'}
+2025-04-22 08:07:16,367 - FundingAmountForecast - WARNING - Created missing column: funding_amount_numeric
+2025-04-22 08:07:16,370 - FundingAmountForecast - INFO - NaN values in funding_amount_numeric: 1668 / 1749
+2025-04-22 08:07:16,370 - FundingAmountForecast - WARNING - Duplicate columns found: ['company_name', 'industry', 'funding_stage', 'funding_date', 'employees']
+2025-04-22 08:07:16,370 - FundingAmountForecast - INFO - Renamed columns to handle duplicates
+2025-04-22 08:07:16,381 - FundingAmountForecast - INFO - Loaded and standardized 1749 records
+2025-04-22 08:07:16,381 - FundingAmountForecast - INFO - Starting funding amount forecast analysis
+2025-04-22 08:07:16,381 - FundingAmountForecast - INFO - Creating features for funding amount forecast
+2025-04-22 08:07:16,461 - FundingAmountForecast - WARNING - Feature region_avg_funding has only one unique value: 69676147.64197531
+2025-04-22 08:07:16,462 - FundingAmountForecast - WARNING - Feature market_growth_rate has only one unique value: 0.1
+2025-04-22 08:07:16,462 - FundingAmountForecast - WARNING - Feature industry_growth_score has only one unique value: 5.0
+2025-04-22 08:07:16,463 - FundingAmountForecast - WARNING - Feature quarter_avg_funding has only one unique value: 69676147.64197531
+2025-04-22 08:07:16,465 - FundingAmountForecast - INFO - Created forecast features: (1749, 72)
+2025-04-22 08:07:16,466 - FundingAmountForecast - INFO - Preparing model data
+2025-04-22 08:07:16,468 - FundingAmountForecast - INFO - Valid data points with funding amount: 1749
+2025-04-22 08:07:16,469 - FundingAmountForecast - INFO - Funding amount stats - min: 25000.0, max: 3500000000.0, mean: 7995293.29, unique: 55
+2025-04-22 08:07:16,471 - FundingAmountForecast - INFO - Companies with multiple funding rounds: 0
+2025-04-22 08:07:16,471 - FundingAmountForecast - INFO - Using non-sequential approach
+2025-04-22 08:07:16,471 - FundingAmountForecast - INFO - Preparing non-sequential data
+2025-04-22 08:07:16,472 - FundingAmountForecast - WARNING - Features with low variance: ['market_growth_rate', 'region_avg_funding', 'industry_growth_score']
+2025-04-22 08:07:16,473 - FundingAmountForecast - INFO - Prepared non-sequential model data: X shape (1749, 9), y shape (1749,)
+2025-04-22 08:07:16,473 - FundingAmountForecast - INFO - Using advanced models with 1749 samples
+2025-04-22 08:07:16,473 - FundingAmountForecast - INFO - Training Quantile Regression Forest model
+2025-04-22 08:07:16,621 - FundingAmountForecast - INFO - Model trained with RMSE: 0.4099, R²: 0.1766
+2025-04-22 08:07:16,622 - FundingAmountForecast - INFO - Prediction interval coverage (80%): 95.14%
+2025-04-22 08:07:16,622 - FundingAmountForecast - INFO - Training Gradient Boosting with quantile loss
+2025-04-22 08:07:16,622 - FundingAmountForecast - WARNING - Features with low variation may cause issues: ['market_growth_rate', 'region_avg_funding', 'industry_growth_score']
+2025-04-22 08:07:16,626 - FundingAmountForecast - ERROR - Error training models: Input X contains NaN.
+GradientBoostingRegressor does not accept missing values encoded as NaN natively. For supervised learning, you might want to consider sklearn.ensemble.HistGradientBoostingClassifier and Regressor which accept missing values encoded as NaNs natively. Alternatively, it is possible to preprocess the data, for instance by using an imputer transformer in a pipeline or drop samples with missing values. See https://scikit-learn.org/stable/modules/impute.html You can find a list of all estimators that handle NaN values at the following page: https://scikit-learn.org/stable/modules/impute.html#estimators-that-handle-nan-values
+2025-04-22 08:07:16,626 - FundingAmountForecast - INFO - Using baseline model for predictions
+2025-04-22 08:07:16,626 - FundingAmountForecast - INFO - Using baseline model for predictions
+2025-04-22 08:07:16,627 - FundingAmountForecast - INFO - Data shape: (1749, 72)
+2025-04-22 08:07:16,628 - FundingAmountForecast - INFO - Unique funding stages: 12
+2025-04-22 08:07:16,628 - FundingAmountForecast - INFO - Funding amount stats: min=25000.0, max=3500000000.0, mean=7995293.287021155, median=5000000.0
+2025-04-22 08:07:16,629 - FundingAmountForecast - INFO - Stage medians: {'Angel': 5000000.0, 'Pre-Seed': 5000000.0, 'Private Equity': 5000000.0, 'Seed': 5000000.0, 'Series A': 5000000.0, 'Series B': 5000000.0, 'Series C': 5000000.0, 'Series D': 5000000.0, 'Series E': 5000000.0, 'Series F': 5000000.0, 'Unknown': 5000000.0, 'Venture': 5000000.0}
+2025-04-22 08:07:16,629 - FundingAmountForecast - INFO - Default value calculated: 5000000.0
+2025-04-22 08:07:16,630 - FundingAmountForecast - INFO - Prediction statistics: min=5000000.0, max=5000000.0, unique values=1
+2025-04-22 08:07:16,631 - FundingAmountForecast - INFO - Generated 1749 baseline predictions
+2025-04-22 08:07:16,631 - FundingAmountForecast - INFO - No actual values available for all predictions
+2025-04-22 08:07:16,648 - FundingAmountForecast - INFO - Prediction summary by funding stage:
+                count       mean  std        min        25%        50%        75%        max
+funding_stage                                                                               
+Angel             4.0  5000000.0  0.0  5000000.0  5000000.0  5000000.0  5000000.0  5000000.0
+Pre-Seed        113.0  5000000.0  0.0  5000000.0  5000000.0  5000000.0  5000000.0  5000000.0
+Private Equity   26.0  5000000.0  0.0  5000000.0  5000000.0  5000000.0  5000000.0  5000000.0
+Seed            271.0  5000000.0  0.0  5000000.0  5000000.0  5000000.0  5000000.0  5000000.0
+Series A        185.0  5000000.0  0.0  5000000.0  5000000.0  5000000.0  5000000.0  5000000.0
+Series B        101.0  5000000.0  0.0  5000000.0  5000000.0  5000000.0  5000000.0  5000000.0
+Series C         72.0  5000000.0  0.0  5000000.0  5000000.0  5000000.0  5000000.0  5000000.0
+Series D         23.0  5000000.0  0.0  5000000.0  5000000.0  5000000.0  5000000.0  5000000.0
+Series E         12.0  5000000.0  0.0  5000000.0  5000000.0  5000000.0  5000000.0  5000000.0
+Series F          1.0  5000000.0  NaN  5000000.0  5000000.0  5000000.0  5000000.0  5000000.0
+Unknown         782.0  5000000.0  0.0  5000000.0  5000000.0  5000000.0  5000000.0  5000000.0
+Venture         159.0  5000000.0  0.0  5000000.0  5000000.0  5000000.0  5000000.0  5000000.0
+2025-04-22 08:07:16,654 - FundingAmountForecast - INFO - Saved predictions to ./output/funding_forecast/funding_amount_predictions.csv
+2025-04-22 08:07:16,656 - root - INFO - Funding amount forecast analysis completed successfully
+2025-04-22 08:08:17,387 - FundingAmountForecast - INFO - Loading data from JSON files in ./
+2025-04-22 08:08:17,391 - FundingAmountForecast - INFO - Added 1103 records from fundraiser data
+2025-04-22 08:08:17,391 - FundingAmountForecast - INFO - Added 100 records from growthlist data
+2025-04-22 08:08:17,393 - FundingAmountForecast - INFO - Added 546 records from topstartup data
+2025-04-22 08:08:17,400 - FundingAmountForecast - INFO - Created DataFrame with 1749 rows and 27 columns
+2025-04-22 08:08:17,400 - FundingAmountForecast - INFO - Available columns: ['Company', 'Total_Employees', 'Industry', 'Website', 'Funding_Date', 'Funding_Type', 'Funding_Amount_USD', 'Headquarters', 'Extraction_Time', 'Page', 'source', 'name', 'website', 'industry', 'country', 'funding_amount', 'funding_type', 'last_funding_date', 'funding_usd', 'description', 'headquarters', 'funding', 'has_reviews', 'category', 'employees', 'founding_year', 'other_details']
+2025-04-22 08:08:17,404 - FundingAmountForecast - INFO - Renamed columns: {'Company': 'company_name', 'Funding_Type': 'funding_stage', 'Funding_Amount_USD': 'funding_amount', 'Funding_Date': 'funding_date', 'Industry': 'industry', 'Total_Employees': 'employees', 'name': 'company_name', 'funding_type': 'funding_stage', 'funding_amount': 'funding_amount_str', 'last_funding_date': 'funding_date', 'website': 'website', 'country': 'country'}
+2025-04-22 08:08:17,407 - FundingAmountForecast - WARNING - Created missing column: funding_amount_numeric
+2025-04-22 08:08:17,411 - FundingAmountForecast - INFO - NaN values in funding_amount_numeric: 1668 / 1749
+2025-04-22 08:08:17,411 - FundingAmountForecast - WARNING - Duplicate columns found: ['company_name', 'industry', 'funding_stage', 'funding_date', 'employees']
+2025-04-22 08:08:17,411 - FundingAmountForecast - INFO - Renamed columns to handle duplicates
+2025-04-22 08:08:17,427 - FundingAmountForecast - INFO - Loaded and standardized 1749 records
+2025-04-22 08:08:17,427 - FundingAmountForecast - INFO - Starting funding amount forecast analysis
+2025-04-22 08:08:17,427 - FundingAmountForecast - INFO - Creating features for funding amount forecast
+2025-04-22 08:08:17,504 - FundingAmountForecast - WARNING - Feature region_avg_funding has only one unique value: 69676147.64197531
+2025-04-22 08:08:17,505 - FundingAmountForecast - WARNING - Feature market_growth_rate has only one unique value: 0.1
+2025-04-22 08:08:17,505 - FundingAmountForecast - WARNING - Feature industry_growth_score has only one unique value: 5.0
+2025-04-22 08:08:17,506 - FundingAmountForecast - WARNING - Feature quarter_avg_funding has only one unique value: 69676147.64197531
+2025-04-22 08:08:17,507 - FundingAmountForecast - INFO - Created forecast features: (1749, 72)
+2025-04-22 08:08:17,508 - FundingAmountForecast - INFO - Preparing model data
+2025-04-22 08:08:17,510 - FundingAmountForecast - INFO - Valid data points with funding amount: 1749
+2025-04-22 08:08:17,511 - FundingAmountForecast - INFO - Funding amount stats - min: 25000.0, max: 3500000000.0, mean: 7995293.29, unique: 55
+2025-04-22 08:08:17,512 - FundingAmountForecast - INFO - Companies with multiple funding rounds: 0
+2025-04-22 08:08:17,512 - FundingAmountForecast - INFO - Using non-sequential approach
+2025-04-22 08:08:17,512 - FundingAmountForecast - INFO - Preparing non-sequential data
+2025-04-22 08:08:17,513 - FundingAmountForecast - WARNING - Features with low variance: ['market_growth_rate', 'region_avg_funding', 'industry_growth_score']
+2025-04-22 08:08:17,513 - FundingAmountForecast - INFO - Prepared non-sequential model data: X shape (1749, 9), y shape (1749,)
+2025-04-22 08:08:17,513 - FundingAmountForecast - INFO - Using advanced models with 1749 samples
+2025-04-22 08:08:17,513 - FundingAmountForecast - INFO - Training Quantile Regression Forest model
+2025-04-22 08:08:17,654 - FundingAmountForecast - INFO - Model trained with RMSE: 0.4099, R²: 0.1766
+2025-04-22 08:08:17,655 - FundingAmountForecast - INFO - Prediction interval coverage (80%): 95.14%
+2025-04-22 08:08:17,655 - FundingAmountForecast - INFO - Training Gradient Boosting with quantile loss
+2025-04-22 08:08:17,656 - FundingAmountForecast - WARNING - Features with low variation may cause issues: ['market_growth_rate', 'region_avg_funding', 'industry_growth_score']
+2025-04-22 08:08:17,660 - FundingAmountForecast - ERROR - Error training models: Input X contains NaN.
+GradientBoostingRegressor does not accept missing values encoded as NaN natively. For supervised learning, you might want to consider sklearn.ensemble.HistGradientBoostingClassifier and Regressor which accept missing values encoded as NaNs natively. Alternatively, it is possible to preprocess the data, for instance by using an imputer transformer in a pipeline or drop samples with missing values. See https://scikit-learn.org/stable/modules/impute.html You can find a list of all estimators that handle NaN values at the following page: https://scikit-learn.org/stable/modules/impute.html#estimators-that-handle-nan-values
+2025-04-22 08:08:17,660 - FundingAmountForecast - INFO - Using baseline model for predictions
+2025-04-22 08:08:17,660 - FundingAmountForecast - INFO - Using baseline model for predictions
+2025-04-22 08:08:17,663 - FundingAmountForecast - INFO - Data shape: (1749, 72)
+2025-04-22 08:08:17,663 - FundingAmountForecast - INFO - Unique funding stages: 12
+2025-04-22 08:08:17,664 - FundingAmountForecast - INFO - Funding amount stats: min=25000.0, max=3500000000.0, mean=7995293.287021155, median=5000000.0
+2025-04-22 08:08:17,664 - FundingAmountForecast - INFO - Using typical stage amounts instead of medians: {'Pre-Seed': 500000, 'Seed': 2000000, 'Angel': 1000000, 'Series A': 10000000, 'Series B': 25000000, 'Series C': 50000000, 'Series D': 100000000, 'Series E': 200000000, 'Series F': 300000000, 'ICO': 20000000, 'Private Equity': 75000000, 'Venture': 15000000, 'Unknown': 5000000}
+2025-04-22 08:08:17,664 - FundingAmountForecast - INFO - Default value for unknown stages: 5000000
+2025-04-22 08:08:17,667 - FundingAmountForecast - INFO - Prediction statistics: min=500000, max=300000000, unique values=12
+2025-04-22 08:08:17,668 - FundingAmountForecast - INFO - Generated 1749 baseline predictions
+2025-04-22 08:08:17,668 - FundingAmountForecast - INFO - No actual values available for all predictions
+2025-04-22 08:08:17,687 - FundingAmountForecast - INFO - Prediction summary by funding stage:
+                count         mean  std          min          25%          50%          75%          max
+funding_stage                                                                                           
+Angel             4.0    1000000.0  0.0    1000000.0    1000000.0    1000000.0    1000000.0    1000000.0
+Pre-Seed        113.0     500000.0  0.0     500000.0     500000.0     500000.0     500000.0     500000.0
+Private Equity   26.0   75000000.0  0.0   75000000.0   75000000.0   75000000.0   75000000.0   75000000.0
+Seed            271.0    2000000.0  0.0    2000000.0    2000000.0    2000000.0    2000000.0    2000000.0
+Series A        185.0   10000000.0  0.0   10000000.0   10000000.0   10000000.0   10000000.0   10000000.0
+Series B        101.0   25000000.0  0.0   25000000.0   25000000.0   25000000.0   25000000.0   25000000.0
+Series C         72.0   50000000.0  0.0   50000000.0   50000000.0   50000000.0   50000000.0   50000000.0
+Series D         23.0  100000000.0  0.0  100000000.0  100000000.0  100000000.0  100000000.0  100000000.0
+Series E         12.0  200000000.0  0.0  200000000.0  200000000.0  200000000.0  200000000.0  200000000.0
+Series F          1.0  300000000.0  NaN  300000000.0  300000000.0  300000000.0  300000000.0  300000000.0
+Unknown         782.0    5000000.0  0.0    5000000.0    5000000.0    5000000.0    5000000.0    5000000.0
+Venture         159.0   15000000.0  0.0   15000000.0   15000000.0   15000000.0   15000000.0   15000000.0
+2025-04-22 08:08:17,691 - FundingAmountForecast - INFO - Saved predictions to ./output/funding_forecast/funding_amount_predictions.csv
+2025-04-22 08:08:17,692 - root - INFO - Funding amount forecast analysis completed successfully

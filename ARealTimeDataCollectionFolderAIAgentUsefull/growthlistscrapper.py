@@ -12,7 +12,17 @@ from selenium.common.exceptions import TimeoutException
 from selenium import webdriver
 from pathlib import Path
 import schedule
+import os
+from datetime import datetime
+import shutil
 
+# Define path to JSONFolder
+PROJECT_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+JSON_FOLDER = os.path.join(PROJECT_ROOT, "JSONFolder")
+if not os.path.exists(JSON_FOLDER):
+    os.makedirs(JSON_FOLDER, exist_ok=True)
+
+# Keep original data dir for logs
 DATA_DIR = Path("growthlist_data")
 DATA_DIR.mkdir(exist_ok=True)
 
@@ -191,7 +201,7 @@ class GrowthListScraper:
         
         # Save results if startups were extracted
         if self.startups:
-            self._save_results()
+            self.save_results()
             self.normalize_funding()
             self.analyze_industries()
 
@@ -235,32 +245,48 @@ class GrowthListScraper:
             "average_funding": self._calculate_average_funding()
         }
         
-        with open(DATA_DIR / "industry_analysis.json", 'w') as f:
+        # Save analysis to JSONFolder
+        with open(os.path.join(JSON_FOLDER, "growthlist_industry_analysis.json"), 'w') as f:
             json.dump(report, f, indent=4)
+        logger.info("Saved industry analysis to JSONFolder")
 
     def _calculate_average_funding(self):
         valid = [s.funding_usd for s in self.startups if s.funding_usd]
         return sum(valid)/len(valid) if valid else 0
 
-    def _save_results(self):
-        """Save the extracted startup data to CSV and JSON files"""
+    def save_results(self):
+        """Save results and historical copies"""
         if not self.startups:
-            logger.warning("No startups to save")
             return
-        
-        # Save to CSV
-        csv_path = DATA_DIR / "growthlist_startups.csv"
+
+        # Save CSV (overwrite) in JSONFolder
+        csv_path = os.path.join(JSON_FOLDER, "growthlistscrapper.csv")
         with open(csv_path, 'w', newline='', encoding='utf-8') as f:
             writer = csv.writer(f)
             writer.writerow(["Name","Website","Industry","Country","Funding Amount","Funding Type","Last Funding Date"])
             for s in self.startups:
                 writer.writerow([s.name, s.website, s.industry, s.country, 
                                s.funding_amount, s.funding_type, s.last_funding_date])
-        
-        # Save to JSON
-        json_path = DATA_DIR / "growthlist_startups.json"
+        logger.info(f"Saved CSV data to {csv_path}")
+
+        # Save JSON (overwrite) in JSONFolder
+        json_path = os.path.join(JSON_FOLDER, "growthlistscrapper.json")
         with open(json_path, 'w', encoding='utf-8') as f:
             json.dump([s.__dict__ for s in self.startups], f, indent=4)
+        logger.info(f"Saved JSON data to {json_path}")
+
+        # Create data_archive directory for historical copies
+        current_date = datetime.now().strftime("%Y-%m-%d")
+        historical_dir = os.path.join(PROJECT_ROOT, "data_archive", current_date)
+        os.makedirs(historical_dir, exist_ok=True)
+
+        # Save historical copies
+        historical_csv = os.path.join(historical_dir, "growthlistscrapper.csv")
+        historical_json = os.path.join(historical_dir, "growthlistscrapper.json")
+        
+        shutil.copy2(csv_path, historical_csv)
+        shutil.copy2(json_path, historical_json)
+        logger.info(f"Saved historical copies to {historical_dir}")
 
     def cleanup(self):
         """Close the WebDriver and perform cleanup"""

@@ -1,252 +1,123 @@
-2025-04-14 15:17:54,607 - INFO - Starting GrowthList scraper script
-2025-04-14 15:17:55,796 - INFO - Navigating to https://growthlist.co/san-francisco-startups/
-2025-04-14 15:17:56,614 - INFO - Waiting for page to load...
-2025-04-14 15:17:56,623 - INFO - Page loaded successfully
-2025-04-14 15:17:56,623 - INFO - Checking for popup...
-2025-04-14 15:17:56,765 - INFO - Strategy 1: Looking for × close button
-2025-04-14 15:17:56,814 - INFO - Strategy 2: Sending ESC key
-2025-04-14 15:17:57,825 - INFO - Strategy 3: Using JavaScript to remove popup
-2025-04-14 15:17:59,010 - INFO - Scrolling to trigger content loading...
-2025-04-14 15:18:05,054 - INFO - Looking for startup table with multiple selectors...
-2025-04-14 15:18:05,057 - INFO - Trying selector: table
-2025-04-14 15:18:05,107 - INFO - Found table with selector: table
-2025-04-14 15:18:05,108 - INFO - Extracting data from table...
-2025-04-14 15:18:05,133 - INFO - Found 100 table rows
-2025-04-14 15:18:05,312 - INFO - Extracted startup #1: CompScience
-2025-04-14 15:18:05,362 - INFO - Extracted startup #2: DeepNight
-2025-04-14 15:18:05,404 - INFO - Extracted startup #3: Quanta
-2025-04-14 15:18:05,478 - INFO - Extracted startup #4: Doifoo
-2025-04-14 15:18:05,545 - INFO - Extracted startup #5: Loyal
-2025-04-14 15:18:05,592 - INFO - Extracted startup #6: SimCare AI
-2025-04-14 15:18:05,631 - INFO - Extracted startup #7: Rad Security
-2025-04-14 15:18:05,677 - INFO - Extracted startup #8: Metronome
-2025-04-14 15:18:05,718 - INFO - Extracted startup #9: Vana
-2025-04-14 15:18:05,765 - INFO - Extracted startup #10: Bitwise
-2025-04-14 15:18:05,821 - INFO - Extracted startup #11: Charta Health
-2025-04-14 15:18:05,883 - INFO - Extracted startup #12: FirstWork
-2025-04-14 15:18:05,963 - INFO - Extracted startup #13: Regie.ai
-2025-04-14 15:18:06,021 - INFO - Extracted startup #14: Journify
-2025-04-14 15:18:06,064 - INFO - Extracted startup #15: Ceramic
-2025-04-14 15:18:06,102 - INFO - Extracted startup #16: Anthropic
-2025-04-14 15:18:06,145 - INFO - Extracted startup #17: GuidenAI
-2025-04-14 15:18:06,189 - INFO - Extracted startup #18: Intangible
-2025-04-14 15:18:06,284 - INFO - Extracted startup #19: Freed
-2025-04-14 15:18:06,404 - INFO - Extracted startup #20: UptimeAI
-2025-04-14 15:18:06,461 - INFO - Extracted startup #21: LlamaIndex
-2025-04-14 15:18:06,503 - INFO - Extracted startup #22: Momentic
-2025-04-14 15:18:06,536 - INFO - Extracted startup #23: Peregrine Technologies
-2025-04-14 15:18:06,567 - INFO - Extracted startup #24: Beacon.li
-2025-04-14 15:18:06,598 - INFO - Extracted startup #25: Coalition
-2025-04-14 15:18:06,628 - INFO - Extracted startup #26: Zocks
-2025-04-14 15:18:06,658 - INFO - Extracted startup #27: Ria Health
-2025-04-14 15:18:06,687 - INFO - Extracted startup #28: MaxIQ
-2025-04-14 15:18:06,718 - INFO - Extracted startup #29: Spiritus
-2025-04-14 15:18:06,751 - INFO - Extracted startup #30: Outmarket AI
-2025-04-14 15:18:06,780 - INFO - Extracted startup #31: Podqi
-2025-04-14 15:18:06,810 - INFO - Extracted startup #32: Invector
-2025-04-14 15:18:06,839 - INFO - Extracted startup #33: Causal Labs
-2025-04-14 15:18:06,868 - INFO - Extracted startup #34: Sayso
-2025-04-14 15:18:06,904 - INFO - Extracted startup #35: nunu.ai
-2025-04-14 15:18:06,933 - INFO - Extracted startup #36: Cartesia
-2025-04-14 15:18:06,962 - INFO - Extracted startup #37: Rakurai
-2025-04-14 15:18:06,992 - INFO - Extracted startup #38: Equilibrium Energy
-2025-04-14 15:18:07,021 - INFO - Extracted startup #39: Wonder Family
-2025-04-14 15:18:07,051 - INFO - Extracted startup #40: Synctera
-2025-04-14 15:18:07,081 - INFO - Extracted startup #41: Nirvana Insurance
-2025-04-14 15:18:07,167 - INFO - Extracted startup #42: Onyx
-2025-04-14 15:18:07,202 - INFO - Extracted startup #43: Ditto
-2025-04-14 15:18:07,231 - INFO - Extracted startup #44: Wavv
-2025-04-14 15:18:07,260 - INFO - Extracted startup #45: Mesh
-2025-04-14 15:18:07,291 - INFO - Extracted startup #46: GrubMarket
-2025-04-14 15:18:07,320 - INFO - Extracted startup #47: Meahana
-2025-04-14 15:18:07,349 - INFO - Extracted startup #48: Featherless.ai
-2025-04-14 15:18:07,383 - INFO - Extracted startup #49: Cognition
-2025-04-14 15:18:07,413 - INFO - Extracted startup #50: Tera AI
-2025-04-14 15:18:07,457 - INFO - Extracted startup #51: NeuronX
-2025-04-14 15:18:07,552 - INFO - Extracted startup #52: Expedition Therapeutics
-2025-04-14 15:18:07,585 - INFO - Extracted startup #53: Stable Sea
-2025-04-14 15:18:07,616 - INFO - Extracted startup #54: Plume Network
-2025-04-14 15:18:07,649 - INFO - Extracted startup #55: Halliday
-2025-04-14 15:18:07,684 - INFO - Extracted startup #56: SunTrain
-2025-04-14 15:18:07,715 - INFO - Extracted startup #57: Ellipsis Health
-2025-04-14 15:18:07,747 - INFO - Extracted startup #58: Stackless Data
-2025-04-14 15:18:07,786 - INFO - Extracted startup #59: Augment
-2025-04-14 15:18:07,823 - INFO - Extracted startup #60: Cloudike
-2025-04-14 15:18:07,858 - INFO - Extracted startup #61: T-robotics
-2025-04-14 15:18:07,890 - INFO - Extracted startup #62: Town
-2025-04-14 15:18:07,922 - INFO - Extracted startup #63: Kosli
-2025-04-14 15:18:07,953 - INFO - Extracted startup #64: UptimeAI
-2025-04-14 15:18:07,986 - INFO - Extracted startup #65: Arcade
-2025-04-14 15:18:08,018 - INFO - Extracted startup #66: BuildClub
-2025-04-14 15:18:08,049 - INFO - Extracted startup #67: Playback
-2025-04-14 15:18:08,079 - INFO - Extracted startup #68: Taxo
-2025-04-14 15:18:08,109 - INFO - Extracted startup #69: Mercury
-2025-04-14 15:18:08,140 - INFO - Extracted startup #70: Abound
-2025-04-14 15:18:08,170 - INFO - Extracted startup #71: Crstl
-2025-04-14 15:18:08,200 - INFO - Extracted startup #72: Mercor
-2025-04-14 15:18:08,230 - INFO - Extracted startup #73: Created by Humans
-2025-04-14 15:18:08,261 - INFO - Extracted startup #74: Manas AI
-2025-04-14 15:18:08,293 - INFO - Extracted startup #75: BluWhale
-2025-04-14 15:18:08,325 - INFO - Extracted startup #76: Savant Labs
-2025-04-14 15:18:08,356 - INFO - Extracted startup #77: Athenic AI
-2025-04-14 15:18:08,386 - INFO - Extracted startup #78: Delve
-2025-04-14 15:18:08,417 - INFO - Extracted startup #79: Motif
-2025-04-14 15:18:08,447 - INFO - Extracted startup #80: Atomicwork
-2025-04-14 15:18:08,477 - INFO - Extracted startup #81: Kroskod
-2025-04-14 15:18:08,508 - INFO - Extracted startup #82: Roofr
-2025-04-14 15:18:08,538 - INFO - Extracted startup #83: Pakal Technologies
-2025-04-14 15:18:08,573 - INFO - Extracted startup #84: Smart Wires
-2025-04-14 15:18:08,607 - INFO - Extracted startup #85: WeaveGrid
-2025-04-14 15:18:08,638 - INFO - Extracted startup #86: Wisetack
-2025-04-14 15:18:08,670 - INFO - Extracted startup #87: Taxflow
-2025-04-14 15:18:08,702 - INFO - Extracted startup #88: Bicycle Health
-2025-04-14 15:18:08,734 - INFO - Extracted startup #89: Delfina
-2025-04-14 15:18:08,767 - INFO - Extracted startup #90: Safely You
-2025-04-14 15:18:08,795 - INFO - Extracted startup #91: Waterlily
-2025-04-14 15:18:08,826 - INFO - Extracted startup #92: Tandem Space
-2025-04-14 15:18:08,857 - INFO - Extracted startup #93: Riot
-2025-04-14 15:18:08,888 - INFO - Extracted startup #94: Response
-2025-04-14 15:18:08,921 - INFO - Extracted startup #95: TrueFoundry
-2025-04-14 15:18:08,951 - INFO - Extracted startup #96: Ivo
-2025-04-14 15:18:08,980 - INFO - Extracted startup #97: Warmly
-2025-04-14 15:18:09,011 - INFO - Extracted startup #98: Plume Network
-2025-04-14 15:18:09,042 - INFO - Extracted startup #99: Monograph
-2025-04-14 15:18:09,072 - INFO - Extracted startup #100: Trace.Space
-2025-04-14 15:18:09,072 - INFO - Successfully extracted 100 startups
-2025-04-14 15:18:09,074 - INFO - Extraction completed successfully. Extracted 100 startups.
-2025-04-14 15:18:09,157 - INFO - WebDriver closed successfully
-2025-04-14 15:18:09,157 - INFO - Scheduling the scraper to run every 24 hours.
-2025-04-15 15:28:11,138 - INFO - Starting GrowthList scraper script
-2025-04-15 15:28:12,998 - INFO - Navigating to https://growthlist.co/san-francisco-startups/
-2025-04-15 15:36:26,126 - INFO - Waiting for page to load...
-2025-04-15 15:36:26,145 - INFO - Page loaded successfully
-2025-04-15 15:36:26,146 - INFO - Checking for popup...
-2025-04-15 15:36:26,320 - INFO - Strategy 1: Looking for × close button
-2025-04-15 15:36:26,344 - INFO - Strategy 2: Sending ESC key
-2025-04-15 15:53:56,648 - INFO - Strategy 3: Using JavaScript to remove popup
-2025-04-15 15:53:57,852 - INFO - Scrolling to trigger content loading...
-2025-04-15 16:09:30,472 - INFO - Looking for startup table with multiple selectors...
-2025-04-15 16:09:30,473 - INFO - Trying selector: table
-2025-04-15 16:09:30,486 - INFO - Found table with selector: table
-2025-04-15 16:09:30,486 - INFO - Extracting data from table...
-2025-04-15 16:09:30,493 - INFO - Found 0 table rows
-2025-04-15 16:09:30,493 - INFO - Successfully extracted 0 startups
-2025-04-15 16:09:30,494 - WARNING - No startups were extracted. Check logs for errors.
-2025-04-15 16:09:30,577 - INFO - WebDriver closed successfully
-2025-04-16 16:09:31,434 - INFO - Starting GrowthList scraper script
-2025-04-16 16:09:34,793 - INFO - Navigating to https://growthlist.co/san-francisco-startups/
-2025-04-16 16:09:36,061 - INFO - Waiting for page to load...
-2025-04-16 16:09:36,072 - INFO - Page loaded successfully
-2025-04-16 16:09:36,072 - INFO - Checking for popup...
-2025-04-16 16:09:36,398 - INFO - Strategy 1: Looking for × close button
-2025-04-16 16:09:36,445 - INFO - Strategy 2: Sending ESC key
-2025-04-16 16:09:37,459 - INFO - Strategy 3: Using JavaScript to remove popup
-2025-04-16 16:09:38,862 - INFO - Scrolling to trigger content loading...
-2025-04-16 16:09:44,937 - INFO - Looking for startup table with multiple selectors...
-2025-04-16 16:09:44,938 - INFO - Trying selector: table
-2025-04-16 16:09:44,958 - INFO - Found table with selector: table
-2025-04-16 16:09:44,959 - INFO - Extracting data from table...
-2025-04-16 16:09:44,976 - INFO - Found 100 table rows
-2025-04-16 16:09:45,028 - INFO - Extracted startup #1: CompScience
-2025-04-16 16:09:45,058 - INFO - Extracted startup #2: DeepNight
-2025-04-16 16:09:45,087 - INFO - Extracted startup #3: Quanta
-2025-04-16 16:09:45,117 - INFO - Extracted startup #4: Doifoo
-2025-04-16 16:09:45,146 - INFO - Extracted startup #5: Loyal
-2025-04-16 16:09:45,176 - INFO - Extracted startup #6: SimCare AI
-2025-04-16 16:09:45,205 - INFO - Extracted startup #7: Rad Security
-2025-04-16 16:09:45,235 - INFO - Extracted startup #8: Metronome
-2025-04-16 16:09:45,264 - INFO - Extracted startup #9: Vana
-2025-04-16 16:09:45,295 - INFO - Extracted startup #10: Bitwise
-2025-04-16 16:09:45,324 - INFO - Extracted startup #11: Charta Health
-2025-04-16 16:09:45,371 - INFO - Extracted startup #12: FirstWork
-2025-04-16 16:09:45,400 - INFO - Extracted startup #13: Regie.ai
-2025-04-16 16:09:45,427 - INFO - Extracted startup #14: Journify
-2025-04-16 16:09:45,456 - INFO - Extracted startup #15: Ceramic
-2025-04-16 16:09:45,486 - INFO - Extracted startup #16: Anthropic
-2025-04-16 16:09:45,515 - INFO - Extracted startup #17: GuidenAI
-2025-04-16 16:09:45,545 - INFO - Extracted startup #18: Intangible
-2025-04-16 16:09:45,575 - INFO - Extracted startup #19: Freed
-2025-04-16 16:09:45,606 - INFO - Extracted startup #20: UptimeAI
-2025-04-16 16:09:45,636 - INFO - Extracted startup #21: LlamaIndex
-2025-04-16 16:09:45,666 - INFO - Extracted startup #22: Momentic
-2025-04-16 16:09:45,698 - INFO - Extracted startup #23: Peregrine Technologies
-2025-04-16 16:09:45,727 - INFO - Extracted startup #24: Beacon.li
-2025-04-16 16:09:45,756 - INFO - Extracted startup #25: Coalition
-2025-04-16 16:09:45,791 - INFO - Extracted startup #26: Zocks
-2025-04-16 16:09:45,823 - INFO - Extracted startup #27: Ria Health
-2025-04-16 16:09:45,855 - INFO - Extracted startup #28: MaxIQ
-2025-04-16 16:09:45,887 - INFO - Extracted startup #29: Spiritus
-2025-04-16 16:09:45,916 - INFO - Extracted startup #30: Outmarket AI
-2025-04-16 16:09:45,947 - INFO - Extracted startup #31: Podqi
-2025-04-16 16:09:45,977 - INFO - Extracted startup #32: Invector
-2025-04-16 16:09:46,007 - INFO - Extracted startup #33: Causal Labs
-2025-04-16 16:09:46,038 - INFO - Extracted startup #34: Sayso
-2025-04-16 16:09:46,069 - INFO - Extracted startup #35: nunu.ai
-2025-04-16 16:09:46,099 - INFO - Extracted startup #36: Cartesia
-2025-04-16 16:09:46,133 - INFO - Extracted startup #37: Rakurai
-2025-04-16 16:09:46,168 - INFO - Extracted startup #38: Equilibrium Energy
-2025-04-16 16:09:46,198 - INFO - Extracted startup #39: Wonder Family
-2025-04-16 16:09:46,227 - INFO - Extracted startup #40: Synctera
-2025-04-16 16:09:46,255 - INFO - Extracted startup #41: Nirvana Insurance
-2025-04-16 16:09:46,283 - INFO - Extracted startup #42: Onyx
-2025-04-16 16:09:46,312 - INFO - Extracted startup #43: Ditto
-2025-04-16 16:09:46,340 - INFO - Extracted startup #44: Wavv
-2025-04-16 16:09:46,371 - INFO - Extracted startup #45: Mesh
-2025-04-16 16:09:46,399 - INFO - Extracted startup #46: GrubMarket
-2025-04-16 16:09:46,431 - INFO - Extracted startup #47: Meahana
-2025-04-16 16:09:46,464 - INFO - Extracted startup #48: Featherless.ai
-2025-04-16 16:09:46,496 - INFO - Extracted startup #49: Cognition
-2025-04-16 16:09:46,526 - INFO - Extracted startup #50: Tera AI
-2025-04-16 16:09:46,554 - INFO - Extracted startup #51: NeuronX
-2025-04-16 16:09:46,583 - INFO - Extracted startup #52: Expedition Therapeutics
-2025-04-16 16:09:46,613 - INFO - Extracted startup #53: Stable Sea
-2025-04-16 16:09:46,642 - INFO - Extracted startup #54: Plume Network
-2025-04-16 16:09:46,672 - INFO - Extracted startup #55: Halliday
-2025-04-16 16:09:46,702 - INFO - Extracted startup #56: SunTrain
-2025-04-16 16:09:46,734 - INFO - Extracted startup #57: Ellipsis Health
-2025-04-16 16:09:46,767 - INFO - Extracted startup #58: Stackless Data
-2025-04-16 16:09:46,799 - INFO - Extracted startup #59: Augment
-2025-04-16 16:09:46,829 - INFO - Extracted startup #60: Cloudike
-2025-04-16 16:09:46,859 - INFO - Extracted startup #61: T-robotics
-2025-04-16 16:09:46,889 - INFO - Extracted startup #62: Town
-2025-04-16 16:09:46,920 - INFO - Extracted startup #63: Kosli
-2025-04-16 16:09:46,950 - INFO - Extracted startup #64: UptimeAI
-2025-04-16 16:09:46,981 - INFO - Extracted startup #65: Arcade
-2025-04-16 16:09:47,010 - INFO - Extracted startup #66: BuildClub
-2025-04-16 16:09:47,042 - INFO - Extracted startup #67: Playback
-2025-04-16 16:09:47,073 - INFO - Extracted startup #68: Taxo
-2025-04-16 16:09:47,109 - INFO - Extracted startup #69: Mercury
-2025-04-16 16:09:47,140 - INFO - Extracted startup #70: Abound
-2025-04-16 16:09:47,170 - INFO - Extracted startup #71: Crstl
-2025-04-16 16:09:47,200 - INFO - Extracted startup #72: Mercor
-2025-04-16 16:09:47,230 - INFO - Extracted startup #73: Created by Humans
-2025-04-16 16:09:47,353 - INFO - Extracted startup #74: Manas AI
-2025-04-16 16:09:47,419 - INFO - Extracted startup #75: BluWhale
-2025-04-16 16:09:47,451 - INFO - Extracted startup #76: Savant Labs
-2025-04-16 16:09:47,492 - INFO - Extracted startup #77: Athenic AI
-2025-04-16 16:09:47,526 - INFO - Extracted startup #78: Delve
-2025-04-16 16:09:47,555 - INFO - Extracted startup #79: Motif
-2025-04-16 16:09:47,583 - INFO - Extracted startup #80: Atomicwork
-2025-04-16 16:09:47,616 - INFO - Extracted startup #81: Kroskod
-2025-04-16 16:09:47,645 - INFO - Extracted startup #82: Roofr
-2025-04-16 16:09:47,674 - INFO - Extracted startup #83: Pakal Technologies
-2025-04-16 16:09:47,711 - INFO - Extracted startup #84: Smart Wires
-2025-04-16 16:09:47,744 - INFO - Extracted startup #85: WeaveGrid
-2025-04-16 16:09:47,780 - INFO - Extracted startup #86: Wisetack
-2025-04-16 16:09:47,810 - INFO - Extracted startup #87: Taxflow
-2025-04-16 16:09:47,838 - INFO - Extracted startup #88: Bicycle Health
-2025-04-16 16:09:47,870 - INFO - Extracted startup #89: Delfina
-2025-04-16 16:09:47,900 - INFO - Extracted startup #90: Safely You
-2025-04-16 16:09:47,929 - INFO - Extracted startup #91: Waterlily
-2025-04-16 16:09:47,961 - INFO - Extracted startup #92: Tandem Space
-2025-04-16 16:09:47,992 - INFO - Extracted startup #93: Riot
-2025-04-16 16:09:48,029 - INFO - Extracted startup #94: Response
-2025-04-16 16:09:48,063 - INFO - Extracted startup #95: TrueFoundry
-2025-04-16 16:09:48,098 - INFO - Extracted startup #96: Ivo
-2025-04-16 16:09:48,132 - INFO - Extracted startup #97: Warmly
-2025-04-16 16:09:48,161 - INFO - Extracted startup #98: Plume Network
-2025-04-16 16:09:48,191 - INFO - Extracted startup #99: Monograph
-2025-04-16 16:09:48,224 - INFO - Extracted startup #100: Trace.Space
-2025-04-16 16:09:48,224 - INFO - Successfully extracted 100 startups
-2025-04-16 16:09:48,231 - INFO - Extraction completed successfully. Extracted 100 startups.
-2025-04-16 16:09:48,309 - INFO - WebDriver closed successfully
+2025-04-21 00:54:03,786 - INFO - Starting GrowthList scraper script
+2025-04-21 00:54:05,893 - INFO - Navigating to https://growthlist.co/san-francisco-startups/
+2025-04-21 00:54:06,830 - INFO - Waiting for page to load...
+2025-04-21 00:54:06,840 - INFO - Page loaded successfully
+2025-04-21 00:54:06,840 - INFO - Checking for popup...
+2025-04-21 00:54:07,047 - INFO - Strategy 1: Looking for × close button
+2025-04-21 00:54:07,081 - INFO - Strategy 2: Sending ESC key
+2025-04-21 00:54:08,092 - INFO - Strategy 3: Using JavaScript to remove popup
+2025-04-21 00:54:09,461 - INFO - Scrolling to trigger content loading...
+2025-04-21 00:54:15,926 - INFO - Looking for startup table with multiple selectors...
+2025-04-21 00:54:15,932 - INFO - Trying selector: table
+2025-04-21 00:54:15,983 - INFO - Found table with selector: table
+2025-04-21 00:54:15,984 - INFO - Extracting data from table...
+2025-04-21 00:54:16,003 - INFO - Found 100 table rows
+2025-04-21 00:54:16,078 - INFO - Extracted startup #1: CompScience
+2025-04-21 00:54:16,120 - INFO - Extracted startup #2: DeepNight
+2025-04-21 00:54:16,170 - INFO - Extracted startup #3: Quanta
+2025-04-21 00:54:16,215 - INFO - Extracted startup #4: Doifoo
+2025-04-21 00:54:16,275 - INFO - Extracted startup #5: Loyal
+2025-04-21 00:54:16,331 - INFO - Extracted startup #6: SimCare AI
+2025-04-21 00:54:16,413 - INFO - Extracted startup #7: Rad Security
+2025-04-21 00:54:16,486 - INFO - Extracted startup #8: Metronome
+2025-04-21 00:54:16,540 - INFO - Extracted startup #9: Vana
+2025-04-21 00:54:16,588 - INFO - Extracted startup #10: Bitwise
+2025-04-21 00:54:16,646 - INFO - Extracted startup #11: Charta Health
+2025-04-21 00:54:16,715 - INFO - Extracted startup #12: FirstWork
+2025-04-21 00:54:16,757 - INFO - Extracted startup #13: Regie.ai
+2025-04-21 00:54:16,801 - INFO - Extracted startup #14: Journify
+2025-04-21 00:54:16,870 - INFO - Extracted startup #15: Ceramic
+2025-04-21 00:54:16,929 - INFO - Extracted startup #16: Anthropic
+2025-04-21 00:54:16,981 - INFO - Extracted startup #17: GuidenAI
+2025-04-21 00:54:17,064 - INFO - Extracted startup #18: Intangible
+2025-04-21 00:54:17,118 - INFO - Extracted startup #19: Freed
+2025-04-21 00:54:17,172 - INFO - Extracted startup #20: UptimeAI
+2025-04-21 00:54:17,211 - INFO - Extracted startup #21: LlamaIndex
+2025-04-21 00:54:17,257 - INFO - Extracted startup #22: Momentic
+2025-04-21 00:54:17,291 - INFO - Extracted startup #23: Peregrine Technologies
+2025-04-21 00:54:17,327 - INFO - Extracted startup #24: Beacon.li
+2025-04-21 00:54:17,370 - INFO - Extracted startup #25: Coalition
+2025-04-21 00:54:17,407 - INFO - Extracted startup #26: Zocks
+2025-04-21 00:54:17,445 - INFO - Extracted startup #27: Ria Health
+2025-04-21 00:54:17,486 - INFO - Extracted startup #28: MaxIQ
+2025-04-21 00:54:17,519 - INFO - Extracted startup #29: Spiritus
+2025-04-21 00:54:17,553 - INFO - Extracted startup #30: Outmarket AI
+2025-04-21 00:54:17,586 - INFO - Extracted startup #31: Podqi
+2025-04-21 00:54:17,619 - INFO - Extracted startup #32: Invector
+2025-04-21 00:54:17,657 - INFO - Extracted startup #33: Causal Labs
+2025-04-21 00:54:17,692 - INFO - Extracted startup #34: Sayso
+2025-04-21 00:54:17,734 - INFO - Extracted startup #35: nunu.ai
+2025-04-21 00:54:17,780 - INFO - Extracted startup #36: Cartesia
+2025-04-21 00:54:17,821 - INFO - Extracted startup #37: Rakurai
+2025-04-21 00:54:17,858 - INFO - Extracted startup #38: Equilibrium Energy
+2025-04-21 00:54:17,899 - INFO - Extracted startup #39: Wonder Family
+2025-04-21 00:54:17,981 - INFO - Extracted startup #40: Synctera
+2025-04-21 00:54:18,076 - INFO - Extracted startup #41: Nirvana Insurance
+2025-04-21 00:54:18,142 - INFO - Extracted startup #42: Onyx
+2025-04-21 00:54:18,185 - INFO - Extracted startup #43: Ditto
+2025-04-21 00:54:18,251 - INFO - Extracted startup #44: Wavv
+2025-04-21 00:54:18,328 - INFO - Extracted startup #45: Mesh
+2025-04-21 00:54:18,373 - INFO - Extracted startup #46: GrubMarket
+2025-04-21 00:54:18,411 - INFO - Extracted startup #47: Meahana
+2025-04-21 00:54:18,456 - INFO - Extracted startup #48: Featherless.ai
+2025-04-21 00:54:18,500 - INFO - Extracted startup #49: Cognition
+2025-04-21 00:54:18,536 - INFO - Extracted startup #50: Tera AI
+2025-04-21 00:54:18,576 - INFO - Extracted startup #51: NeuronX
+2025-04-21 00:54:18,619 - INFO - Extracted startup #52: Expedition Therapeutics
+2025-04-21 00:54:18,659 - INFO - Extracted startup #53: Stable Sea
+2025-04-21 00:54:18,694 - INFO - Extracted startup #54: Plume Network
+2025-04-21 00:54:18,732 - INFO - Extracted startup #55: Halliday
+2025-04-21 00:54:18,769 - INFO - Extracted startup #56: SunTrain
+2025-04-21 00:54:18,805 - INFO - Extracted startup #57: Ellipsis Health
+2025-04-21 00:54:18,852 - INFO - Extracted startup #58: Stackless Data
+2025-04-21 00:54:18,898 - INFO - Extracted startup #59: Augment
+2025-04-21 00:54:18,941 - INFO - Extracted startup #60: Cloudike
+2025-04-21 00:54:18,987 - INFO - Extracted startup #61: T-robotics
+2025-04-21 00:54:19,030 - INFO - Extracted startup #62: Town
+2025-04-21 00:54:19,069 - INFO - Extracted startup #63: Kosli
+2025-04-21 00:54:19,113 - INFO - Extracted startup #64: UptimeAI
+2025-04-21 00:54:19,182 - INFO - Extracted startup #65: Arcade
+2025-04-21 00:54:19,283 - INFO - Extracted startup #66: BuildClub
+2025-04-21 00:54:19,354 - INFO - Extracted startup #67: Playback
+2025-04-21 00:54:19,410 - INFO - Extracted startup #68: Taxo
+2025-04-21 00:54:19,454 - INFO - Extracted startup #69: Mercury
+2025-04-21 00:54:19,498 - INFO - Extracted startup #70: Abound
+2025-04-21 00:54:19,547 - INFO - Extracted startup #71: Crstl
+2025-04-21 00:54:19,598 - INFO - Extracted startup #72: Mercor
+2025-04-21 00:54:19,646 - INFO - Extracted startup #73: Created by Humans
+2025-04-21 00:54:19,729 - INFO - Extracted startup #74: Manas AI
+2025-04-21 00:54:19,772 - INFO - Extracted startup #75: BluWhale
+2025-04-21 00:54:19,813 - INFO - Extracted startup #76: Savant Labs
+2025-04-21 00:54:19,868 - INFO - Extracted startup #77: Athenic AI
+2025-04-21 00:54:19,911 - INFO - Extracted startup #78: Delve
+2025-04-21 00:54:19,964 - INFO - Extracted startup #79: Motif
+2025-04-21 00:54:20,065 - INFO - Extracted startup #80: Atomicwork
+2025-04-21 00:54:20,197 - INFO - Extracted startup #81: Kroskod
+2025-04-21 00:54:20,243 - INFO - Extracted startup #82: Roofr
+2025-04-21 00:54:20,299 - INFO - Extracted startup #83: Pakal Technologies
+2025-04-21 00:54:20,361 - INFO - Extracted startup #84: Smart Wires
+2025-04-21 00:54:20,417 - INFO - Extracted startup #85: WeaveGrid
+2025-04-21 00:54:20,465 - INFO - Extracted startup #86: Wisetack
+2025-04-21 00:54:20,522 - INFO - Extracted startup #87: Taxflow
+2025-04-21 00:54:20,571 - INFO - Extracted startup #88: Bicycle Health
+2025-04-21 00:54:20,618 - INFO - Extracted startup #89: Delfina
+2025-04-21 00:54:20,664 - INFO - Extracted startup #90: Safely You
+2025-04-21 00:54:20,734 - INFO - Extracted startup #91: Waterlily
+2025-04-21 00:54:20,775 - INFO - Extracted startup #92: Tandem Space
+2025-04-21 00:54:20,816 - INFO - Extracted startup #93: Riot
+2025-04-21 00:54:20,869 - INFO - Extracted startup #94: Response
+2025-04-21 00:54:20,914 - INFO - Extracted startup #95: TrueFoundry
+2025-04-21 00:54:20,958 - INFO - Extracted startup #96: Ivo
+2025-04-21 00:54:21,011 - INFO - Extracted startup #97: Warmly
+2025-04-21 00:54:21,077 - INFO - Extracted startup #98: Plume Network
+2025-04-21 00:54:21,115 - INFO - Extracted startup #99: Monograph
+2025-04-21 00:54:21,152 - INFO - Extracted startup #100: Trace.Space
+2025-04-21 00:54:21,152 - INFO - Successfully extracted 100 startups
+2025-04-21 00:54:21,154 - INFO - Saved CSV data to /Users/hk/Downloads/DSFinalYearProject/JSONFolder/growthlistscrapper.csv
+2025-04-21 00:54:21,156 - INFO - Saved JSON data to /Users/hk/Downloads/DSFinalYearProject/JSONFolder/growthlistscrapper.json
+2025-04-21 00:54:21,162 - INFO - Saved historical copies to /Users/hk/Downloads/DSFinalYearProject/data_archive/2025-04-21
+2025-04-21 00:54:21,164 - INFO - Saved industry analysis to JSONFolder
+2025-04-21 00:54:21,166 - INFO - Saved industry analysis to JSONFolder
+2025-04-21 00:54:21,166 - INFO - Extraction completed successfully. Extracted 100 startups.
+2025-04-21 00:54:21,342 - INFO - WebDriver closed successfully
+2025-04-21 00:54:21,343 - INFO - Scheduling the scraper to run every 24 hours.

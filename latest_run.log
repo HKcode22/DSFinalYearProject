@@ -1,0 +1,45 @@
+2025-04-18 21:07:40,506 - __main__ - INFO - Starting funding continuation prediction pipeline
+2025-04-18 21:07:40,537 - __main__ - WARNING - Column employees missing from Growthlist data, filling with NaN
+/Users/hk/Downloads/DSFinalYearProject/MLPredictiveAnalysis/funding_continuation_prediction.py:166: UserWarning: Could not infer format, so each element will be parsed individually, falling back to `dateutil`. To ensure parsing is consistent and as-expected, please specify a format.
+  df['funding_date'] = pd.to_datetime(df['funding_date'], errors='coerce')
+2025-04-18 21:07:40,542 - __main__ - INFO - Loaded 100 records from Growthlist
+2025-04-18 21:07:40,549 - __main__ - INFO - Loaded 545 records from TopStartup
+/Users/hk/Downloads/DSFinalYearProject/MLPredictiveAnalysis/funding_continuation_prediction.py:95: UserWarning: Could not infer format, so each element will be parsed individually, falling back to `dateutil`. To ensure parsing is consistent and as-expected, please specify a format.
+  df['funding_date'] = pd.to_datetime(df['funding_date'], errors='coerce')
+2025-04-18 21:07:40,572 - __main__ - INFO - Data cleaning completed - Total rows: 1747
+2025-04-18 21:07:40,572 - __main__ - INFO - Missing dates: 1, Missing amounts: 562
+Traceback (most recent call last):
+  File "/Users/hk/Downloads/DSFinalYearProject/MLPredictiveAnalysis/funding_continuation_prediction.py", line 1190, in <module>
+    pipeline.run()
+  File "/Users/hk/Downloads/DSFinalYearProject/MLPredictiveAnalysis/funding_continuation_prediction.py", line 1163, in run
+    raw_df = self.loader.load_and_preprocess()
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/hk/Downloads/DSFinalYearProject/MLPredictiveAnalysis/funding_continuation_prediction.py", line 115, in load_and_preprocess
+    final_df = self._calculate_survival_metrics(processed)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/hk/Downloads/DSFinalYearProject/MLPredictiveAnalysis/funding_continuation_prediction.py", line 343, in _calculate_survival_metrics
+    df.loc[df['event'] == 0, 'duration'] = (max_date - df['funding_date']).dt.days
+    ~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/hk/Downloads/DSFinalYearProject/.venv/lib/python3.12/site-packages/pandas/core/indexing.py", line 911, in __setitem__
+    iloc._setitem_with_indexer(indexer, value, self.name)
+  File "/Users/hk/Downloads/DSFinalYearProject/.venv/lib/python3.12/site-packages/pandas/core/indexing.py", line 1937, in _setitem_with_indexer
+    indexer, value = self._maybe_mask_setitem_value(indexer, value)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/hk/Downloads/DSFinalYearProject/.venv/lib/python3.12/site-packages/pandas/core/indexing.py", line 805, in _maybe_mask_setitem_value
+    value = self.obj.iloc._align_series(indexer, value)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/hk/Downloads/DSFinalYearProject/.venv/lib/python3.12/site-packages/pandas/core/indexing.py", line 2427, in _align_series
+    return ser.reindex(new_ix)._values
+           ^^^^^^^^^^^^^^^^^^^
+  File "/Users/hk/Downloads/DSFinalYearProject/.venv/lib/python3.12/site-packages/pandas/core/series.py", line 5153, in reindex
+    return super().reindex(
+           ^^^^^^^^^^^^^^^^
+  File "/Users/hk/Downloads/DSFinalYearProject/.venv/lib/python3.12/site-packages/pandas/core/generic.py", line 5610, in reindex
+    return self._reindex_axes(
+           ^^^^^^^^^^^^^^^^^^^
+  File "/Users/hk/Downloads/DSFinalYearProject/.venv/lib/python3.12/site-packages/pandas/core/generic.py", line 5633, in _reindex_axes
+    new_index, indexer = ax.reindex(
+                         ^^^^^^^^^^^
+  File "/Users/hk/Downloads/DSFinalYearProject/.venv/lib/python3.12/site-packages/pandas/core/indexes/base.py", line 4429, in reindex
+    raise ValueError("cannot reindex on an axis with duplicate labels")
+ValueError: cannot reindex on an axis with duplicate labels

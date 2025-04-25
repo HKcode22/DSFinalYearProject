@@ -5,6 +5,7 @@ import csv
 import json
 import random
 import schedule
+import shutil
 from datetime import datetime, timedelta
 from selenium import webdriver
 from selenium.webdriver.common.by import By
@@ -51,20 +52,32 @@ class FundraiseInsiderScraper:
         self.current_page = 1
         self.headless = headless
         
-        # Create data directory at project root level
+        # Create data directory at project root level (JSONFolder)
         self.project_root = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-        self.data_root = os.path.join(self.project_root, "fundraise_data")
+        self.data_root = os.path.join(self.project_root, "JSONFolder")
         if not os.path.exists(self.data_root):
             os.makedirs(self.data_root)
             logger.info(f"Created main data directory at {self.data_root}")
         
-        self.stats_file = os.path.join(self.data_root, "scraper_stats.json")
+        self.stats_file = os.path.join(self.data_root, "fundraise_insider_stats.json")
         self.stats = self.load_stats()
         self.driver = None
         self.max_retries = 3
         self.page_data_counts = {}
         self.empty_page_consecutive_count = 0
         self.max_empty_pages_allowed = 2
+        self.ordered_fields = [
+            "Company",
+            "Total_Employees",
+            "Industry",
+            "Website",
+            "Funding_Date",
+            "Funding_Type",
+            "Funding_Amount_USD",
+            "Headquarters",
+            "Extraction_Time",
+            "Page"
+        ]
 
     def load_stats(self):
         """Load statistics from previous runs if available."""
@@ -574,48 +587,21 @@ class FundraiseInsiderScraper:
             logger.warning("No data to save")
             return None
 
-        # Create timestamp for folder name
-        timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
-        directory_name = f"fundraise_data_{timestamp}"
-        
-        # Create run-specific directory
-        run_dir = os.path.join(self.data_root, directory_name)
-        if not os.path.exists(run_dir):
-            os.makedirs(run_dir)
-            logger.info(f"Created extraction directory at {run_dir}")
-        
-        # Define ordered fields for CSV
-        ordered_fields = [
-            "Company",
-            "Total_Employees",
-            "Industry",
-            "Website",
-            "Funding_Date",
-            "Funding_Type",
-            "Funding_Amount_USD",
-            "Headquarters",
-            "Extraction_Time",
-            "Page"
-        ]
-        
-        # Save as CSV with ordered fields
-        csv_filename = os.path.join(run_dir, f"startups_{timestamp}.csv")
+        # Save as CSV (overwrite)
+        csv_filename = os.path.join(self.data_root, "fundraisestartup50.csv") 
         try:
             with open(csv_filename, 'w', newline='', encoding='utf-8') as f:
-                writer = csv.DictWriter(f, fieldnames=ordered_fields)
+                writer = csv.DictWriter(f, fieldnames=self.ordered_fields)
                 writer.writeheader()
-                
-                # Write records with ordered fields
                 for record in self.data:
-                    row = {field: record.get(field, "N/A") for field in ordered_fields}
+                    row = {field: record.get(field, "N/A") for field in self.ordered_fields}
                     writer.writerow(row)
-                    
-            logger.info(f"Successfully saved {len(self.data)} records to {csv_filename}")
+            logger.info(f"Successfully saved CSV data to {csv_filename}")
         except Exception as e:
             logger.error(f"Error saving CSV data: {e}")
-        
-        # Save as JSON with all data
-        json_filename = os.path.join(run_dir, f"startups_{timestamp}.json")
+
+        # Save as JSON (overwrite)
+        json_filename = os.path.join(self.data_root, "fundraisestartup50.json")
         try:
             with open(json_filename, 'w', encoding='utf-8') as f:
                 json.dump({
@@ -627,27 +613,23 @@ class FundraiseInsiderScraper:
             logger.info(f"Successfully saved JSON data to {json_filename}")
         except Exception as e:
             logger.error(f"Error saving JSON data: {e}")
+
+        # Create historical data directory for data archiving
+        current_date = datetime.now().strftime("%Y-%m-%d")
+        historical_dir = os.path.join(self.project_root, "data_archive", current_date)
+        os.makedirs(historical_dir, exist_ok=True)
+
+        # Save historical copies
+        historical_csv = os.path.join(historical_dir, "fundraisestartup50.csv")
+        historical_json = os.path.join(historical_dir, "fundraisestartup50.json")
         
-        # Save extraction stats
-        stats_path = os.path.join(run_dir, "extraction_stats.json")
         try:
-            with open(stats_path, 'w') as f:
-                json.dump({
-                    "last_run": datetime.now().strftime("%Y-%m-%d %H:%M:%S"),
-                    "total_companies": len(self.data),
-                    "pages_processed": self.current_page,
-                    "unique_companies": len(set(company['Company'] for company in self.data)),
-                    "funding_dates_range": {
-                        "earliest": min(company['Funding_Date'] for company in self.data if company.get('Funding_Date')),
-                        "latest": max(company['Funding_Date'] for company in self.data if company.get('Funding_Date'))
-                    }
-                }, f, indent=4)
-            logger.info(f"Saved extraction stats to {stats_path}")
+            shutil.copy2(csv_filename, historical_csv)
+            shutil.copy2(json_filename, historical_json)
+            logger.info(f"Successfully saved historical data copies in {historical_dir}")
         except Exception as e:
-            logger.error(f"Error saving stats: {e}")
-        
-        return run_dir
-    
+            logger.error(f"Error saving historical copies: {e}")
+
     def run_extraction(self):
         """Run the complete extraction process with improved error handling."""
         logger.info("Starting extraction process")

@@ -1,0 +1,37 @@
+2025-04-18 20:03:43,322 - __main__ - INFO - Starting funding continuation prediction pipeline
+2025-04-18 20:03:43,332 - __main__ - WARNING - Column employees missing from Growthlist data, filling with NaN
+/Users/hk/Downloads/DSFinalYearProject/MLPredictiveAnalysis/funding_continuation_prediction.py:137: UserWarning: Could not infer format, so each element will be parsed individually, falling back to `dateutil`. To ensure parsing is consistent and as-expected, please specify a format.
+  df['funding_date'] = pd.to_datetime(df['funding_date'], errors='coerce')
+2025-04-18 20:03:43,336 - __main__ - INFO - Loaded 100 records from Growthlist
+2025-04-18 20:03:43,344 - __main__ - INFO - Loaded 545 records from TopStartup
+/Users/hk/Downloads/DSFinalYearProject/MLPredictiveAnalysis/funding_continuation_prediction.py:223: UserWarning: Could not infer format, so each element will be parsed individually, falling back to `dateutil`. To ensure parsing is consistent and as-expected, please specify a format.
+  df['funding_date'] = pd.to_datetime(df['funding_date'], errors='coerce')
+2025-04-18 20:03:43,362 - __main__ - INFO - Data cleaning completed - Total rows: 1747
+2025-04-18 20:03:43,363 - __main__ - INFO - Missing dates: 1, Missing amounts: 562
+2025-04-18 20:03:43,369 - __main__ - INFO - Engineering features...
+2025-04-18 20:03:43,747 - __main__ - INFO - Feature engineering complete. Shape: (1746, 11)
+2025-04-18 20:03:43,747 - __main__ - INFO - Training models...
+2025-04-18 20:03:43,750 - __main__ - INFO - Temporal split at 2024-10-10
+2025-04-18 20:03:43,750 - __main__ - INFO - Train size: 1400, Test size: 346
+/Users/hk/Downloads/DSFinalYearProject/.venv/lib/python3.12/site-packages/lifelines/utils/__init__.py:1100: ConvergenceWarning: Column(s) ['funding_velocity'] have very low variance. This may harm convergence. 1) Are you using formula's? Did you mean to add '-1' to the end. 2) Try dropping this redundant column before fitting if convergence fails.
+
+  warnings.warn(dedent(warning_text), ConvergenceWarning)
+/Users/hk/Downloads/DSFinalYearProject/.venv/lib/python3.12/site-packages/lifelines/utils/__init__.py:797: RuntimeWarning: invalid value encountered in divide
+  return (X - mean) / std
+/Users/hk/Downloads/DSFinalYearProject/.venv/lib/python3.12/site-packages/lifelines/fitters/coxph_fitter.py:1530: LinAlgWarning: Ill-conditioned matrix (rcond=0): result may not be accurate.
+  inv_h_dot_g_T = spsolve(-h, g, assume_a="pos", check_finite=False)
+2025-04-18 20:03:43,774 - __main__ - ERROR - Cox model training failed: delta contains nan value(s). Convergence halted. Please see the following tips in the lifelines documentation: https://lifelines.readthedocs.io/en/latest/Examples.html#problems-with-convergence-in-the-cox-proportional-hazard-model
+2025-04-18 20:03:44,317 - __main__ - ERROR - RSF training failed: 
+2025-04-18 20:03:44,322 - __main__ - INFO - Experiment results saved to ./outputFundingContinuation/experiments/experiment_20250418_200344.json
+Traceback (most recent call last):
+  File "/Users/hk/Downloads/DSFinalYearProject/MLPredictiveAnalysis/funding_continuation_prediction.py", line 972, in <module>
+    pipeline.run()
+  File "/Users/hk/Downloads/DSFinalYearProject/MLPredictiveAnalysis/funding_continuation_prediction.py", line 949, in run
+    results = self.trainer.train(processed_df)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/hk/Downloads/DSFinalYearProject/MLPredictiveAnalysis/funding_continuation_prediction.py", line 577, in train
+    self._track_experiment({'cox': cox_metrics, 'rsf': rsf_metrics}, metadata)
+  File "/Users/hk/Downloads/DSFinalYearProject/MLPredictiveAnalysis/funding_continuation_prediction.py", line 765, in _track_experiment
+    self._update_model_registry(results, timestamp)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'ContinuationModelTrainer' object has no attribute '_update_model_registry'

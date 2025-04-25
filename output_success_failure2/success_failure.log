@@ -1,0 +1,161 @@
+2025-04-23 02:21:13,527 - success_failure_prediction - INFO - Success/Failure Prediction system initialized
+2025-04-23 02:21:13,528 - success_failure_prediction - INFO - Starting success/failure prediction analysis
+2025-04-23 02:21:13,528 - success_failure_prediction - INFO - Step 1: Initializing component models
+2025-04-23 02:21:13,528 - success_failure_prediction - INFO - Initializing component prediction systems
+2025-04-23 02:21:13,533 - success_failure_prediction - INFO - All component systems initialized successfully
+2025-04-23 02:21:13,533 - success_failure_prediction - INFO - Step 2: Running component analyses
+2025-04-23 02:21:13,534 - success_failure_prediction - INFO - Running component analyses
+2025-04-23 02:21:13,534 - success_failure_prediction - INFO - Running funding stage prediction
+2025-04-23 02:22:38,655 - success_failure_prediction - INFO - Running funding continuation analysis
+2025-04-23 02:22:38,656 - success_failure_prediction - INFO - Running funding amount forecast
+2025-04-23 02:22:47,741 - success_failure_prediction - INFO - Running funding anomaly detection
+2025-04-23 02:22:50,879 - success_failure_prediction - INFO - Running industry trend analysis
+2025-04-23 02:22:50,879 - success_failure_prediction - INFO - All component analyses completed successfully
+2025-04-23 02:22:50,879 - success_failure_prediction - INFO - Step 3: Integrating data
+2025-04-23 02:22:50,879 - success_failure_prediction - INFO - Integrating data from all components
+2025-04-23 02:22:50,879 - success_failure_prediction - INFO - Loading data directly from JSON files
+2025-04-23 02:22:50,880 - success_failure_prediction - INFO - Checking file existence: ../JSONFolder/fundraisestartup50.json, exists: True
+2025-04-23 02:22:50,880 - success_failure_prediction - INFO - Checking file existence: ../JSONFolder/growthlistscrapper.json, exists: True
+2025-04-23 02:22:50,880 - success_failure_prediction - INFO - Checking file existence: ../JSONFolder/topstartupio50.json, exists: True
+2025-04-23 02:22:50,884 - success_failure_prediction - INFO - Loaded 1103 records from fundraisestartup50.json
+2025-04-23 02:22:50,886 - success_failure_prediction - INFO - Loaded 100 records from growthlistscrapper.json
+2025-04-23 02:22:50,888 - success_failure_prediction - INFO - Loaded 546 records from topstartupio50.json
+2025-04-23 02:22:50,931 - success_failure_prediction - INFO - Combined 1749 records from all JSON files
+2025-04-23 02:22:50,940 - success_failure_prediction - INFO - Successfully integrated data: 1748 records with 30 features
+2025-04-23 02:22:50,941 - success_failure_prediction - INFO - Step 4: Calculating success scores
+2025-04-23 02:22:50,941 - success_failure_prediction - INFO - Calculating success scores
+2025-04-23 02:22:50,952 - success_failure_prediction - WARNING - No survival information available, estimating from stage and funding
+2025-04-23 02:22:50,976 - success_failure_prediction - WARNING - No anomaly detection information available, using optimistic score
+2025-04-23 02:22:50,978 - success_failure_prediction - INFO - Success scores calculated successfully
+2025-04-23 02:22:50,978 - success_failure_prediction - INFO - Step 5: Classifying startups
+2025-04-23 02:22:50,978 - success_failure_prediction - INFO - Classifying companies by success potential
+2025-04-23 02:22:50,985 - success_failure_prediction - INFO - Optimistic thresholds - Low: 36.7, Medium: 45.2, High: 56.1
+2025-04-23 02:22:50,987 - success_failure_prediction - INFO - Classification results: {'Moderate Success Potential': np.int64(487), 'High Success Potential': np.int64(431), 'Moderate Failure Risk': np.int64(387), 'High Failure Risk': np.int64(352)}
+2025-04-23 02:22:51,000 - success_failure_prediction - INFO - Risk level distribution: {'Medium Risk': '718 (41.1%)', 'Low Risk': '477 (27.3%)', 'High Risk': '382 (21.9%)', 'Minimal Risk': '171 (9.8%)'}
+2025-04-23 02:22:51,000 - success_failure_prediction - INFO - Step 6: Generating visualizations
+2025-04-23 02:22:51,000 - success_failure_prediction - INFO - Generating visualizations
+2025-04-23 02:22:51,928 - success_failure_prediction - INFO - Generated visualizations successfully in ../output_success_failure/visualizations
+2025-04-23 02:22:51,929 - success_failure_prediction - INFO - Step 7: Creating advanced model performance visualizations
+2025-04-23 02:22:51,929 - success_failure_prediction - INFO - Generating model performance visualizations
+2025-04-23 02:22:52,056 - success_failure_prediction - INFO - Model: Random Forest
+2025-04-23 02:22:52,057 - success_failure_prediction - INFO -   accuracy: 0.9848
+2025-04-23 02:22:52,057 - success_failure_prediction - INFO -   precision: 0.9926
+2025-04-23 02:22:52,057 - success_failure_prediction - INFO -   recall: 0.9783
+2025-04-23 02:22:52,057 - success_failure_prediction - INFO -   f1: 0.9854
+2025-04-23 02:22:52,057 - success_failure_prediction - ERROR - Error generating model performance visualizations: Input X contains NaN.
+GradientBoostingClassifier does not accept missing values encoded as NaN natively. For supervised learning, you might want to consider sklearn.ensemble.HistGradientBoostingClassifier and Regressor which accept missing values encoded as NaNs natively. Alternatively, it is possible to preprocess the data, for instance by using an imputer transformer in a pipeline or drop samples with missing values. See https://scikit-learn.org/stable/modules/impute.html You can find a list of all estimators that handle NaN values at the following page: https://scikit-learn.org/stable/modules/impute.html#estimators-that-handle-nan-values
+2025-04-23 02:22:52,062 - success_failure_prediction - ERROR - Traceback (most recent call last):
+  File "/Users/hk/Downloads/DSFinalYearProject/MLPredictiveAnalysis/success_failure_prediction.py", line 1360, in visualize_model_performance
+    model.fit(X_train, y_train)
+  File "/Users/hk/Downloads/DSFinalYearProject/.venv/lib/python3.12/site-packages/sklearn/base.py", line 1389, in wrapper
+    return fit_method(estimator, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/hk/Downloads/DSFinalYearProject/.venv/lib/python3.12/site-packages/sklearn/ensemble/_gb.py", line 658, in fit
+    X, y = validate_data(
+           ^^^^^^^^^^^^^^
+  File "/Users/hk/Downloads/DSFinalYearProject/.venv/lib/python3.12/site-packages/sklearn/utils/validation.py", line 2961, in validate_data
+    X, y = check_X_y(X, y, **check_params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/hk/Downloads/DSFinalYearProject/.venv/lib/python3.12/site-packages/sklearn/utils/validation.py", line 1370, in check_X_y
+    X = check_array(
+        ^^^^^^^^^^^^
+  File "/Users/hk/Downloads/DSFinalYearProject/.venv/lib/python3.12/site-packages/sklearn/utils/validation.py", line 1107, in check_array
+    _assert_all_finite(
+  File "/Users/hk/Downloads/DSFinalYearProject/.venv/lib/python3.12/site-packages/sklearn/utils/validation.py", line 120, in _assert_all_finite
+    _assert_all_finite_element_wise(
+  File "/Users/hk/Downloads/DSFinalYearProject/.venv/lib/python3.12/site-packages/sklearn/utils/validation.py", line 169, in _assert_all_finite_element_wise
+    raise ValueError(msg_err)
+ValueError: Input X contains NaN.
+GradientBoostingClassifier does not accept missing values encoded as NaN natively. For supervised learning, you might want to consider sklearn.ensemble.HistGradientBoostingClassifier and Regressor which accept missing values encoded as NaNs natively. Alternatively, it is possible to preprocess the data, for instance by using an imputer transformer in a pipeline or drop samples with missing values. See https://scikit-learn.org/stable/modules/impute.html You can find a list of all estimators that handle NaN values at the following page: https://scikit-learn.org/stable/modules/impute.html#estimators-that-handle-nan-values
+
+2025-04-23 02:22:52,063 - success_failure_prediction - INFO - Step 8: Enhancing predictions with ensemble models
+2025-04-23 02:22:52,064 - success_failure_prediction - INFO - Enhancing predictions with ensemble models
+2025-04-23 02:22:52,192 - success_failure_prediction - ERROR - Error enhancing predictions with ensemble: Input X contains NaN.
+GradientBoostingClassifier does not accept missing values encoded as NaN natively. For supervised learning, you might want to consider sklearn.ensemble.HistGradientBoostingClassifier and Regressor which accept missing values encoded as NaNs natively. Alternatively, it is possible to preprocess the data, for instance by using an imputer transformer in a pipeline or drop samples with missing values. See https://scikit-learn.org/stable/modules/impute.html You can find a list of all estimators that handle NaN values at the following page: https://scikit-learn.org/stable/modules/impute.html#estimators-that-handle-nan-values
+2025-04-23 02:22:52,196 - success_failure_prediction - ERROR - Traceback (most recent call last):
+  File "/Users/hk/Downloads/DSFinalYearProject/MLPredictiveAnalysis/success_failure_prediction.py", line 1643, in enhance_predictions_with_ensemble
+    ensemble.fit(X_train, y_train)
+  File "/Users/hk/Downloads/DSFinalYearProject/.venv/lib/python3.12/site-packages/sklearn/base.py", line 1389, in wrapper
+    return fit_method(estimator, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/hk/Downloads/DSFinalYearProject/.venv/lib/python3.12/site-packages/sklearn/utils/validation.py", line 63, in inner_f
+    return f(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^
+  File "/Users/hk/Downloads/DSFinalYearProject/.venv/lib/python3.12/site-packages/sklearn/ensemble/_voting.py", line 419, in fit
+    return super().fit(X, transformed_y, **fit_params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/hk/Downloads/DSFinalYearProject/.venv/lib/python3.12/site-packages/sklearn/ensemble/_voting.py", line 100, in fit
+    self.estimators_ = Parallel(n_jobs=self.n_jobs)(
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/hk/Downloads/DSFinalYearProject/.venv/lib/python3.12/site-packages/sklearn/utils/parallel.py", line 77, in __call__
+    return super().__call__(iterable_with_config)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/hk/Downloads/DSFinalYearProject/.venv/lib/python3.12/site-packages/joblib/parallel.py", line 1918, in __call__
+    return output if self.return_generator else list(output)
+                                                ^^^^^^^^^^^^
+  File "/Users/hk/Downloads/DSFinalYearProject/.venv/lib/python3.12/site-packages/joblib/parallel.py", line 1847, in _get_sequential_output
+    res = func(*args, **kwargs)
+          ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/hk/Downloads/DSFinalYearProject/.venv/lib/python3.12/site-packages/sklearn/utils/parallel.py", line 139, in __call__
+    return self.function(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/hk/Downloads/DSFinalYearProject/.venv/lib/python3.12/site-packages/sklearn/ensemble/_base.py", line 39, in _fit_single_estimator
+    estimator.fit(X, y, **fit_params)
+  File "/Users/hk/Downloads/DSFinalYearProject/.venv/lib/python3.12/site-packages/sklearn/base.py", line 1389, in wrapper
+    return fit_method(estimator, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/hk/Downloads/DSFinalYearProject/.venv/lib/python3.12/site-packages/sklearn/ensemble/_gb.py", line 658, in fit
+    X, y = validate_data(
+           ^^^^^^^^^^^^^^
+  File "/Users/hk/Downloads/DSFinalYearProject/.venv/lib/python3.12/site-packages/sklearn/utils/validation.py", line 2961, in validate_data
+    X, y = check_X_y(X, y, **check_params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/hk/Downloads/DSFinalYearProject/.venv/lib/python3.12/site-packages/sklearn/utils/validation.py", line 1370, in check_X_y
+    X = check_array(
+        ^^^^^^^^^^^^
+  File "/Users/hk/Downloads/DSFinalYearProject/.venv/lib/python3.12/site-packages/sklearn/utils/validation.py", line 1107, in check_array
+    _assert_all_finite(
+  File "/Users/hk/Downloads/DSFinalYearProject/.venv/lib/python3.12/site-packages/sklearn/utils/validation.py", line 120, in _assert_all_finite
+    _assert_all_finite_element_wise(
+  File "/Users/hk/Downloads/DSFinalYearProject/.venv/lib/python3.12/site-packages/sklearn/utils/validation.py", line 169, in _assert_all_finite_element_wise
+    raise ValueError(msg_err)
+ValueError: Input X contains NaN.
+GradientBoostingClassifier does not accept missing values encoded as NaN natively. For supervised learning, you might want to consider sklearn.ensemble.HistGradientBoostingClassifier and Regressor which accept missing values encoded as NaNs natively. Alternatively, it is possible to preprocess the data, for instance by using an imputer transformer in a pipeline or drop samples with missing values. See https://scikit-learn.org/stable/modules/impute.html You can find a list of all estimators that handle NaN values at the following page: https://scikit-learn.org/stable/modules/impute.html#estimators-that-handle-nan-values
+
+2025-04-23 02:22:52,197 - success_failure_prediction - INFO - Step 9: Generating report
+2025-04-23 02:22:52,197 - success_failure_prediction - INFO - Generating success/failure prediction report
+2025-04-23 02:22:52,208 - success_failure_prediction - INFO - Generated report successfully: ../output_success_failure/success_failure_report.txt
+2025-04-23 02:22:52,252 - success_failure_prediction - INFO - Saved predictions to: ../output_success_failure/success_failure_predictions.csv
+2025-04-23 02:22:52,253 - success_failure_prediction - INFO - Analysis complete. Overall success rate: 52.5%
+2025-04-23 02:22:52,253 - success_failure_prediction - INFO - Total companies analyzed: 1748
+2025-04-23 02:22:52,253 - success_failure_prediction - INFO - Predicted successful: 918 (52.5%)
+2025-04-23 02:22:52,253 - success_failure_prediction - INFO - Predicted unsuccessful: 830 (47.5%)
+2025-04-23 02:22:52,254 - success_failure_prediction - INFO - Classification breakdown:
+2025-04-23 02:22:52,254 - success_failure_prediction - INFO - - High Success Potential: 431 (24.7%)
+2025-04-23 02:22:52,254 - success_failure_prediction - INFO - - Moderate Success Potential: 487 (27.9%)
+2025-04-23 02:22:52,254 - success_failure_prediction - INFO - - Moderate Failure Risk: 387 (22.1%)
+2025-04-23 02:22:52,254 - success_failure_prediction - INFO - - High Failure Risk: 352 (20.1%)
+2025-04-23 02:22:52,255 - success_failure_prediction - INFO - Top performing industries:
+2025-04-23 02:22:52,255 - success_failure_prediction - INFO - - medical practice: 100.0% success rate (based on 2 companies)
+2025-04-23 02:22:52,255 - success_failure_prediction - INFO - - : 88.8% success rate (based on 547 companies)
+2025-04-23 02:22:52,255 - success_failure_prediction - INFO - - computer hardware: 70.0% success rate (based on 10 companies)
+2025-04-23 02:22:52,255 - success_failure_prediction - INFO - Lowest performing industries:
+2025-04-23 02:22:52,256 - success_failure_prediction - INFO - - Aerospace: 0.0% success rate (based on 1 companies)
+2025-04-23 02:22:52,256 - success_failure_prediction - INFO - - Agriculture, Food and Beverage, Artificial Intelligence, E-commerce: 0.0% success rate (based on 1 companies)
+2025-04-23 02:22:52,256 - success_failure_prediction - INFO - - Architecture, Media: 0.0% success rate (based on 1 companies)
+2025-04-23 02:22:52,257 - success_failure_prediction - INFO - Success rate by funding stage:
+2025-04-23 02:22:52,257 - success_failure_prediction - INFO - - Series D: 100.0% success rate (based on 84 companies)
+2025-04-23 02:22:52,257 - success_failure_prediction - INFO - - Series E: 100.0% success rate (based on 39 companies)
+2025-04-23 02:22:52,257 - success_failure_prediction - INFO - - Series F: 100.0% success rate (based on 23 companies)
+2025-04-23 02:22:52,257 - success_failure_prediction - INFO - - Series H: 100.0% success rate (based on 7 companies)
+2025-04-23 02:22:52,257 - success_failure_prediction - INFO - - Series C: 96.6% success rate (based on 179 companies)
+2025-04-23 02:22:52,257 - success_failure_prediction - INFO - - Series B: 93.7% success rate (based on 223 companies)
+2025-04-23 02:22:52,257 - success_failure_prediction - INFO - - Private Equity: 89.3% success rate (based on 28 companies)
+2025-04-23 02:22:52,260 - success_failure_prediction - INFO - - Series G: 85.7% success rate (based on 7 companies)
+2025-04-23 02:22:52,260 - success_failure_prediction - INFO - - Debt Financing: 76.7% success rate (based on 43 companies)
+2025-04-23 02:22:52,260 - success_failure_prediction - INFO - - Series A: 62.0% success rate (based on 313 companies)
+2025-04-23 02:22:52,260 - success_failure_prediction - INFO - - Venture - Series Unknown: 43.0% success rate (based on 172 companies)
+2025-04-23 02:22:52,260 - success_failure_prediction - INFO - - Undisclosed: 4.0% success rate (based on 25 companies)
+2025-04-23 02:22:52,261 - success_failure_prediction - INFO - - Seed: 0.6% success rate (based on 349 companies)
+2025-04-23 02:22:52,261 - success_failure_prediction - INFO - - Pre-Seed: 0.0% success rate (based on 122 companies)
+2025-04-23 02:22:52,261 - success_failure_prediction - INFO - - Grant: 0.0% success rate (based on 67 companies)

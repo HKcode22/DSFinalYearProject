@@ -1,0 +1,188 @@
+2025-04-23 00:09:40,560 - IndustryTrendAnalysis - INFO - Loaded 1103 records from fundraiser data
+2025-04-23 00:09:40,561 - IndustryTrendAnalysis - INFO - Loaded 100 records from growthlist data
+2025-04-23 00:09:40,694 - IndustryTrendAnalysis - INFO - Loaded 546 records from topstartup data
+2025-04-23 00:09:40,874 - IndustryTrendAnalysis - WARNING - Removed 1 rows with invalid dates
+2025-04-23 00:09:40,897 - IndustryTrendAnalysis - INFO - Cleaned data summary:
+2025-04-23 00:09:40,897 - IndustryTrendAnalysis - INFO - Total companies: 1668
+2025-04-23 00:09:40,897 - IndustryTrendAnalysis - INFO - Total funding rounds: 1747
+2025-04-23 00:09:40,900 - IndustryTrendAnalysis - INFO - Date range: 1999-01-01 to 2025-03-01
+2025-04-23 00:09:40,900 - IndustryTrendAnalysis - INFO - Total funding amount: $384,936,758,279.00
+2025-04-23 00:09:41,778 - IndustryTrendAnalysis - INFO - Final dataset contains 1747 valid records
+2025-04-23 00:09:41,780 - IndustryTrendAnalysis - INFO - Analyzing industry trends...
+2025-04-23 00:09:42,302 - IndustryTrendAnalysis - INFO - 
+Industry Analysis Summary:
+2025-04-23 00:09:42,302 - IndustryTrendAnalysis - INFO - Total Industries Analyzed: 31
+2025-04-23 00:09:42,302 - IndustryTrendAnalysis - INFO - Emerging Industries Found: 16
+2025-04-23 00:09:42,302 - IndustryTrendAnalysis - INFO - Saturated Industries Found: 4
+2025-04-23 00:09:42,302 - IndustryTrendAnalysis - INFO - Industries with Forecasts: 31
+2025-04-23 00:09:42,302 - IndustryTrendAnalysis - INFO - 
+Top 5 Emerging Industries:
+2025-04-23 00:09:42,302 - IndustryTrendAnalysis - INFO - Medical Devices:
+2025-04-23 00:09:42,302 - IndustryTrendAnalysis - INFO -   - Quarterly Funding Growth: 520.8%
+2025-04-23 00:09:42,302 - IndustryTrendAnalysis - INFO -   - Employee Growth: -36.2%
+2025-04-23 00:09:42,302 - IndustryTrendAnalysis - INFO -   - Deal Growth: 4.6%
+2025-04-23 00:09:42,303 - IndustryTrendAnalysis - INFO -   - Market Share: 0.74%
+2025-04-23 00:09:42,303 - IndustryTrendAnalysis - INFO -   - Active Companies: 22
+2025-04-23 00:09:42,305 - IndustryTrendAnalysis - INFO -   - Avg Quarterly Funding: $242504602.00
+2025-04-23 00:09:42,305 - IndustryTrendAnalysis - INFO -   - Avg Quarterly Deals: 7.333333333333333
+2025-04-23 00:09:42,305 - IndustryTrendAnalysis - INFO -   - Total Funding: $773513806.00
+2025-04-23 00:09:42,306 - IndustryTrendAnalysis - INFO - Financial Services:
+2025-04-23 00:09:42,306 - IndustryTrendAnalysis - INFO -   - Quarterly Funding Growth: 475.5%
+2025-04-23 00:09:42,306 - IndustryTrendAnalysis - INFO -   - Employee Growth: 42.9%
+2025-04-23 00:09:42,306 - IndustryTrendAnalysis - INFO -   - Deal Growth: 3.3%
+2025-04-23 00:09:42,306 - IndustryTrendAnalysis - INFO -   - Market Share: 3.19%
+2025-04-23 00:09:42,306 - IndustryTrendAnalysis - INFO -   - Active Companies: 41
+2025-04-23 00:09:42,306 - IndustryTrendAnalysis - INFO -   - Avg Quarterly Funding: $1041417361.67
+2025-04-23 00:09:42,306 - IndustryTrendAnalysis - INFO -   - Avg Quarterly Deals: 13.0
+2025-04-23 00:09:42,306 - IndustryTrendAnalysis - INFO -   - Total Funding: $3162002085.00
+2025-04-23 00:09:42,310 - IndustryTrendAnalysis - INFO - Environmental Services:
+2025-04-23 00:09:42,310 - IndustryTrendAnalysis - INFO -   - Quarterly Funding Growth: 222.1%
+2025-04-23 00:09:42,310 - IndustryTrendAnalysis - INFO -   - Employee Growth: -46.2%
+2025-04-23 00:09:42,310 - IndustryTrendAnalysis - INFO -   - Deal Growth: -7.3%
+2025-04-23 00:09:42,310 - IndustryTrendAnalysis - INFO -   - Market Share: 0.15%
+2025-04-23 00:09:42,310 - IndustryTrendAnalysis - INFO -   - Active Companies: 8
+2025-04-23 00:09:42,310 - IndustryTrendAnalysis - INFO -   - Avg Quarterly Funding: $45496666.67
+2025-04-23 00:09:42,310 - IndustryTrendAnalysis - INFO -   - Avg Quarterly Deals: 2.3333333333333335
+2025-04-23 00:09:42,310 - IndustryTrendAnalysis - INFO -   - Total Funding: $164890000.00
+2025-04-23 00:09:42,310 - IndustryTrendAnalysis - INFO - Information Services:
+2025-04-23 00:09:42,310 - IndustryTrendAnalysis - INFO -   - Quarterly Funding Growth: 70.3%
+2025-04-23 00:09:42,314 - IndustryTrendAnalysis - INFO -   - Employee Growth: -46.1%
+2025-04-23 00:09:42,314 - IndustryTrendAnalysis - INFO -   - Deal Growth: 59.3%
+2025-04-23 00:09:42,314 - IndustryTrendAnalysis - INFO -   - Market Share: 0.03%
+2025-04-23 00:09:42,314 - IndustryTrendAnalysis - INFO -   - Active Companies: 6
+2025-04-23 00:09:42,314 - IndustryTrendAnalysis - INFO -   - Avg Quarterly Funding: $8542246.67
+2025-04-23 00:09:42,314 - IndustryTrendAnalysis - INFO -   - Avg Quarterly Deals: 2.0
+2025-04-23 00:09:42,314 - IndustryTrendAnalysis - INFO -   - Total Funding: $38626740.00
+2025-04-23 00:09:42,314 - IndustryTrendAnalysis - INFO - E-Learning:
+2025-04-23 00:09:42,314 - IndustryTrendAnalysis - INFO -   - Quarterly Funding Growth: 60.4%
+2025-04-23 00:09:42,314 - IndustryTrendAnalysis - INFO -   - Employee Growth: 83.2%
+2025-04-23 00:09:42,314 - IndustryTrendAnalysis - INFO -   - Deal Growth: 52.7%
+2025-04-23 00:09:42,314 - IndustryTrendAnalysis - INFO -   - Market Share: 0.15%
+2025-04-23 00:09:42,314 - IndustryTrendAnalysis - INFO -   - Active Companies: 6
+2025-04-23 00:09:42,317 - IndustryTrendAnalysis - INFO -   - Avg Quarterly Funding: $48233333.33
+2025-04-23 00:09:42,317 - IndustryTrendAnalysis - INFO -   - Avg Quarterly Deals: 2.0
+2025-04-23 00:09:42,317 - IndustryTrendAnalysis - INFO -   - Total Funding: $174302342.00
+2025-04-23 00:09:42,317 - IndustryTrendAnalysis - INFO - 
+Top 5 Saturated Industries by Maturity:
+2025-04-23 00:09:42,317 - IndustryTrendAnalysis - INFO - Information Technology & Services:
+2025-04-23 00:09:42,317 - IndustryTrendAnalysis - INFO -   - Maturity: 1.48
+2025-04-23 00:09:42,318 - IndustryTrendAnalysis - INFO -   - Market Share: 66.60%
+2025-04-23 00:09:42,318 - IndustryTrendAnalysis - INFO -   - Concentration: 0.59
+2025-04-23 00:09:42,318 - IndustryTrendAnalysis - INFO -   - Funding Growth: 150.0%
+2025-04-23 00:09:42,318 - IndustryTrendAnalysis - INFO -   - Momentum: 100.0%
+2025-04-23 00:09:42,318 - IndustryTrendAnalysis - INFO -   - Companies: 377
+2025-04-23 00:09:42,318 - IndustryTrendAnalysis - INFO -   - Total Funding: $66470156564.00
+2025-04-23 00:09:42,318 - IndustryTrendAnalysis - INFO -   - Saturation Indicators: Major Market Player
+2025-04-23 00:09:42,318 - IndustryTrendAnalysis - INFO - Artificial Intelligence:
+2025-04-23 00:09:42,318 - IndustryTrendAnalysis - INFO -   - Maturity: 0.61
+2025-04-23 00:09:42,318 - IndustryTrendAnalysis - INFO -   - Market Share: 4.78%
+2025-04-23 00:09:42,318 - IndustryTrendAnalysis - INFO -   - Concentration: 0.56
+2025-04-23 00:09:42,318 - IndustryTrendAnalysis - INFO -   - Funding Growth: 0.0%
+2025-04-23 00:09:42,318 - IndustryTrendAnalysis - INFO -   - Momentum: -50.0%
+2025-04-23 00:09:42,318 - IndustryTrendAnalysis - INFO -   - Companies: 36
+2025-04-23 00:09:42,318 - IndustryTrendAnalysis - INFO -   - Total Funding: $4683125000.00
+2025-04-23 00:09:42,318 - IndustryTrendAnalysis - INFO -   - Saturation Indicators: Slowing Established Sector, Reached Saturation Point
+2025-04-23 00:09:42,318 - IndustryTrendAnalysis - INFO - Insurance:
+2025-04-23 00:09:42,319 - IndustryTrendAnalysis - INFO -   - Maturity: 0.59
+2025-04-23 00:09:42,319 - IndustryTrendAnalysis - INFO -   - Market Share: 1.19%
+2025-04-23 00:09:42,319 - IndustryTrendAnalysis - INFO -   - Concentration: 0.71
+2025-04-23 00:09:42,319 - IndustryTrendAnalysis - INFO -   - Funding Growth: -60.0%
+2025-04-23 00:09:42,319 - IndustryTrendAnalysis - INFO -   - Momentum: -50.0%
+2025-04-23 00:09:42,319 - IndustryTrendAnalysis - INFO -   - Companies: 10
+2025-04-23 00:09:42,319 - IndustryTrendAnalysis - INFO -   - Total Funding: $1191799999.00
+2025-04-23 00:09:42,320 - IndustryTrendAnalysis - INFO -   - Saturation Indicators: Slowing Established Sector
+2025-04-23 00:09:42,320 - IndustryTrendAnalysis - INFO - Semiconductors:
+2025-04-23 00:09:42,320 - IndustryTrendAnalysis - INFO -   - Maturity: 0.47
+2025-04-23 00:09:42,320 - IndustryTrendAnalysis - INFO -   - Market Share: 1.48%
+2025-04-23 00:09:42,320 - IndustryTrendAnalysis - INFO -   - Concentration: 0.20
+2025-04-23 00:09:42,320 - IndustryTrendAnalysis - INFO -   - Funding Growth: -43.2%
+2025-04-23 00:09:42,320 - IndustryTrendAnalysis - INFO -   - Momentum: -37.4%
+2025-04-23 00:09:42,320 - IndustryTrendAnalysis - INFO -   - Companies: 16
+2025-04-23 00:09:42,320 - IndustryTrendAnalysis - INFO -   - Total Funding: $1454825014.00
+2025-04-23 00:09:42,320 - IndustryTrendAnalysis - INFO -   - Saturation Indicators: Slowing Established Sector
+2025-04-23 00:09:42,321 - IndustryTrendAnalysis - INFO - Analyzing employee migration patterns...
+2025-04-23 00:09:42,865 - IndustryTrendAnalysis - INFO - 
+Employee migration analysis summary:
+2025-04-23 00:09:42,865 - IndustryTrendAnalysis - INFO - Total industries analyzed: 44
+2025-04-23 00:09:42,865 - IndustryTrendAnalysis - INFO - High growth industries (>10%): 25
+2025-04-23 00:09:42,865 - IndustryTrendAnalysis - INFO - Moderate growth industries (0-10%): 2
+2025-04-23 00:09:42,865 - IndustryTrendAnalysis - INFO - Stable industries (±5% growth): 2
+2025-04-23 00:09:42,865 - IndustryTrendAnalysis - INFO - Shrinking industries: 17
+2025-04-23 00:09:42,865 - IndustryTrendAnalysis - INFO - 
+Top 5 fastest growing industries:
+2025-04-23 00:09:42,865 - IndustryTrendAnalysis - INFO - Hospital & Health Care:
+  - Growth Rate: 150.0%
+  - Avg Employees: 63
+  - Companies: 6
+  - Employee Volatility: 1.22
+  - Size Inequality: 1.19
+  - Monthly Data Points: 11
+2025-04-23 00:09:42,865 - IndustryTrendAnalysis - INFO - Fund-Raising:
+  - Growth Rate: 150.0%
+  - Avg Employees: 240
+  - Companies: 1
+  - Employee Volatility: 0.00
+  - Size Inequality: 1.08
+  - Monthly Data Points: 3
+2025-04-23 00:09:42,866 - IndustryTrendAnalysis - INFO - Renewables & Environment:
+  - Growth Rate: 150.0%
+  - Avg Employees: 28
+  - Companies: 1
+  - Employee Volatility: 0.00
+  - Size Inequality: 0.99
+  - Monthly Data Points: 3
+2025-04-23 00:09:42,866 - IndustryTrendAnalysis - INFO - Computer Games:
+  - Growth Rate: 150.0%
+  - Avg Employees: 38
+  - Companies: 2
+  - Employee Volatility: 1.17
+  - Size Inequality: 1.02
+  - Monthly Data Points: 5
+2025-04-23 00:09:42,866 - IndustryTrendAnalysis - INFO - E-Learning:
+  - Growth Rate: 150.0%
+  - Avg Employees: 112
+  - Companies: 2
+  - Employee Volatility: 1.64
+  - Size Inequality: 0.93
+  - Monthly Data Points: 7
+2025-04-23 00:09:42,866 - IndustryTrendAnalysis - INFO - 
+Top 5 fastest shrinking industries:
+2025-04-23 00:09:42,866 - IndustryTrendAnalysis - INFO - Defense & Space:
+  - Growth Rate: -60.0%
+  - Avg Employees: 56
+  - Companies: 2
+  - Employee Volatility: 0.13
+  - Size Inequality: 0.77
+  - Monthly Data Points: 4
+2025-04-23 00:09:42,866 - IndustryTrendAnalysis - INFO - Semiconductors:
+  - Growth Rate: -60.0%
+  - Avg Employees: 93
+  - Companies: 5
+  - Employee Volatility: 1.94
+  - Size Inequality: 1.79
+  - Monthly Data Points: 10
+2025-04-23 00:09:42,866 - IndustryTrendAnalysis - INFO - Nonprofit Organization Management:
+  - Growth Rate: -60.0%
+  - Avg Employees: 186
+  - Companies: 3
+  - Employee Volatility: 0.69
+  - Size Inequality: 1.27
+  - Monthly Data Points: 7
+2025-04-23 00:09:42,866 - IndustryTrendAnalysis - INFO - Government Administration:
+  - Growth Rate: -60.0%
+  - Avg Employees: 232
+  - Companies: 1
+  - Employee Volatility: 0.00
+  - Size Inequality: 0.76
+  - Monthly Data Points: 3
+2025-04-23 00:09:42,866 - IndustryTrendAnalysis - INFO - Internet:
+  - Growth Rate: -60.0%
+  - Avg Employees: 286
+  - Companies: 2
+  - Employee Volatility: 0.03
+  - Size Inequality: 2.31
+  - Monthly Data Points: 5
+2025-04-23 00:09:42,867 - IndustryTrendAnalysis - INFO - Generating industry trend report...
+2025-04-23 00:09:42,871 - IndustryTrendAnalysis - INFO - Report saved to ./outputIndustryTrends/industry_trend_report.json
+2025-04-23 00:09:42,871 - IndustryTrendAnalysis - INFO - Creating trend visualizations...
+2025-04-23 00:09:45,062 - IndustryTrendAnalysis - INFO - Trend visualizations created successfully
