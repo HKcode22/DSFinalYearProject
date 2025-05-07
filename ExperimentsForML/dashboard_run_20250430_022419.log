@@ -1,0 +1,268 @@
+2025-04-30 02:24:20,471 - numexpr.utils - INFO - NumExpr defaulting to 8 threads.
+2025-04-30 02:24:21,153 - __main__ - INFO - Initializing dashboard implementation with base_dir=/Users/hk/Downloads/DSFinalYearProject/MLPredictiveAnalysis, output_dir=/Users/hk/Downloads/DSFinalYearProject/MLPredictiveAnalysis/dashboard_output_20250430_022421
+2025-04-30 02:24:21,156 - MLPredictiveAnalysis.funding_stage_prediction - INFO - Historical database initialized
+2025-04-30 02:24:21,156 - MLPredictiveAnalysis.funding_stage_prediction - INFO - Dashboard output directory set to: /Users/hk/Downloads/DSFinalYearProject/MLPredictiveAnalysis/dashboard_output_20250430_022421/standard_dashboards
+2025-04-30 02:24:21,156 - MLPredictiveAnalysis.funding_stage_prediction - INFO - Created directory: /Users/hk/Downloads/DSFinalYearProject/MLPredictiveAnalysis/dashboard_output_20250430_022421/standard_dashboards/classification_dashboards/model_comparison
+2025-04-30 02:24:21,156 - MLPredictiveAnalysis.funding_stage_prediction - INFO - Created directory: /Users/hk/Downloads/DSFinalYearProject/MLPredictiveAnalysis/dashboard_output_20250430_022421/standard_dashboards/classification_dashboards/calibration_curves
+2025-04-30 02:24:21,156 - MLPredictiveAnalysis.funding_stage_prediction - INFO - Created directory: /Users/hk/Downloads/DSFinalYearProject/MLPredictiveAnalysis/dashboard_output_20250430_022421/standard_dashboards/classification_dashboards/feature_importance
+2025-04-30 02:24:21,156 - MLPredictiveAnalysis.funding_stage_prediction - INFO - Created directory: /Users/hk/Downloads/DSFinalYearProject/MLPredictiveAnalysis/dashboard_output_20250430_022421/standard_dashboards/classification_dashboards/confusion_matrices
+2025-04-30 02:24:21,156 - MLPredictiveAnalysis.funding_stage_prediction - INFO - Created directory: /Users/hk/Downloads/DSFinalYearProject/MLPredictiveAnalysis/dashboard_output_20250430_022421/standard_dashboards/classification_dashboards/model_metrics
+2025-04-30 02:24:21,156 - MLPredictiveAnalysis.funding_stage_prediction - INFO - Created directory: /Users/hk/Downloads/DSFinalYearProject/MLPredictiveAnalysis/dashboard_output_20250430_022421/standard_dashboards/timeseries_dashboards/forecast_trends
+2025-04-30 02:24:21,156 - MLPredictiveAnalysis.funding_stage_prediction - INFO - Created directory: /Users/hk/Downloads/DSFinalYearProject/MLPredictiveAnalysis/dashboard_output_20250430_022421/standard_dashboards/timeseries_dashboards/industry_breakdown
+2025-04-30 02:24:21,156 - MLPredictiveAnalysis.funding_stage_prediction - INFO - Created directory: /Users/hk/Downloads/DSFinalYearProject/MLPredictiveAnalysis/dashboard_output_20250430_022421/standard_dashboards/timeseries_dashboards/stage_evolution
+2025-04-30 02:24:21,156 - MLPredictiveAnalysis.funding_stage_prediction - INFO - Created directory: /Users/hk/Downloads/DSFinalYearProject/MLPredictiveAnalysis/dashboard_output_20250430_022421/standard_dashboards/timeseries_dashboards/seasonality_analysis
+2025-04-30 02:24:21,156 - MLPredictiveAnalysis.funding_stage_prediction - INFO - Set matplotlib backend to Agg
+2025-04-30 02:24:21,156 - MLPredictiveAnalysis.funding_stage_prediction - INFO - Dashboard output directory set to: /Users/hk/Downloads/DSFinalYearProject/MLPredictiveAnalysis/dashboard_output_20250430_022421/advanced_dashboards
+2025-04-30 02:24:21,157 - MLPredictiveAnalysis.funding_stage_prediction - INFO - Created directory: /Users/hk/Downloads/DSFinalYearProject/MLPredictiveAnalysis/dashboard_output_20250430_022421/advanced_dashboards/classification_dashboards/model_comparison
+2025-04-30 02:24:21,157 - MLPredictiveAnalysis.funding_stage_prediction - INFO - Created directory: /Users/hk/Downloads/DSFinalYearProject/MLPredictiveAnalysis/dashboard_output_20250430_022421/advanced_dashboards/classification_dashboards/calibration_curves
+2025-04-30 02:24:21,157 - MLPredictiveAnalysis.funding_stage_prediction - INFO - Created directory: /Users/hk/Downloads/DSFinalYearProject/MLPredictiveAnalysis/dashboard_output_20250430_022421/advanced_dashboards/classification_dashboards/feature_importance
+2025-04-30 02:24:21,157 - MLPredictiveAnalysis.funding_stage_prediction - INFO - Created directory: /Users/hk/Downloads/DSFinalYearProject/MLPredictiveAnalysis/dashboard_output_20250430_022421/advanced_dashboards/classification_dashboards/confusion_matrices
+2025-04-30 02:24:21,157 - MLPredictiveAnalysis.funding_stage_prediction - INFO - Created directory: /Users/hk/Downloads/DSFinalYearProject/MLPredictiveAnalysis/dashboard_output_20250430_022421/advanced_dashboards/classification_dashboards/model_metrics
+2025-04-30 02:24:21,157 - MLPredictiveAnalysis.funding_stage_prediction - INFO - Created directory: /Users/hk/Downloads/DSFinalYearProject/MLPredictiveAnalysis/dashboard_output_20250430_022421/advanced_dashboards/timeseries_dashboards/forecast_trends
+2025-04-30 02:24:21,157 - MLPredictiveAnalysis.funding_stage_prediction - INFO - Created directory: /Users/hk/Downloads/DSFinalYearProject/MLPredictiveAnalysis/dashboard_output_20250430_022421/advanced_dashboards/timeseries_dashboards/industry_breakdown
+2025-04-30 02:24:21,157 - MLPredictiveAnalysis.funding_stage_prediction - INFO - Created directory: /Users/hk/Downloads/DSFinalYearProject/MLPredictiveAnalysis/dashboard_output_20250430_022421/advanced_dashboards/timeseries_dashboards/stage_evolution
+2025-04-30 02:24:21,157 - MLPredictiveAnalysis.funding_stage_prediction - INFO - Created directory: /Users/hk/Downloads/DSFinalYearProject/MLPredictiveAnalysis/dashboard_output_20250430_022421/advanced_dashboards/timeseries_dashboards/seasonality_analysis
+2025-04-30 02:24:21,157 - MLPredictiveAnalysis.funding_stage_prediction - INFO - Set matplotlib backend to Agg
+2025-04-30 02:24:21,157 - MLPredictiveAnalysis.funding_stage_prediction - INFO - Created directory: /Users/hk/Downloads/DSFinalYearProject/MLPredictiveAnalysis/dashboard_output_20250430_022421/advanced_dashboards/classification_interactive/model_performance
+2025-04-30 02:24:21,157 - MLPredictiveAnalysis.funding_stage_prediction - INFO - Created directory: /Users/hk/Downloads/DSFinalYearProject/MLPredictiveAnalysis/dashboard_output_20250430_022421/advanced_dashboards/classification_interactive/prediction_interface
+2025-04-30 02:24:21,157 - MLPredictiveAnalysis.funding_stage_prediction - INFO - Created directory: /Users/hk/Downloads/DSFinalYearProject/MLPredictiveAnalysis/dashboard_output_20250430_022421/advanced_dashboards/classification_interactive/data_exploration
+2025-04-30 02:24:21,157 - MLPredictiveAnalysis.funding_stage_prediction - INFO - Created directory: /Users/hk/Downloads/DSFinalYearProject/MLPredictiveAnalysis/dashboard_output_20250430_022421/advanced_dashboards/classification_interactive/feature_analysis
+2025-04-30 02:24:21,157 - MLPredictiveAnalysis.funding_stage_prediction - INFO - Created directory: /Users/hk/Downloads/DSFinalYearProject/MLPredictiveAnalysis/dashboard_output_20250430_022421/advanced_dashboards/timeseries_interactive/funding_trends
+2025-04-30 02:24:21,157 - MLPredictiveAnalysis.funding_stage_prediction - INFO - Created directory: /Users/hk/Downloads/DSFinalYearProject/MLPredictiveAnalysis/dashboard_output_20250430_022421/advanced_dashboards/timeseries_interactive/forecast_components
+2025-04-30 02:24:21,157 - MLPredictiveAnalysis.funding_stage_prediction - INFO - Created directory: /Users/hk/Downloads/DSFinalYearProject/MLPredictiveAnalysis/dashboard_output_20250430_022421/advanced_dashboards/timeseries_interactive/industry_forecasts
+2025-04-30 02:24:21,157 - MLPredictiveAnalysis.funding_stage_prediction - INFO - Created directory: /Users/hk/Downloads/DSFinalYearProject/MLPredictiveAnalysis/dashboard_output_20250430_022421/advanced_dashboards/timeseries_interactive/stage_transitions
+2025-04-30 02:24:21,263 - MLPredictiveAnalysis.funding_stage_prediction - INFO - Successfully imported interactive dashboard libraries
+2025-04-30 02:24:21,263 - MLPredictiveAnalysis.funding_stage_prediction - INFO - Created standardized output directory structure at /Users/hk/Downloads/DSFinalYearProject/FundingStageOutput
+2025-04-30 02:24:21,264 - MLPredictiveAnalysis.funding_stage_prediction - INFO - Historical database initialized
+2025-04-30 02:24:21,265 - MLPredictiveAnalysis.funding_stage_prediction - INFO - Archived 3 data files to /Users/hk/Downloads/DSFinalYearProject/MLPredictiveAnalysis/data_archive/20250430_022421
+2025-04-30 02:24:21,265 - MLPredictiveAnalysis.funding_stage_prediction - INFO -   - fundraiser.json
+2025-04-30 02:24:21,265 - MLPredictiveAnalysis.funding_stage_prediction - INFO -   - growthlist.json
+2025-04-30 02:24:21,265 - MLPredictiveAnalysis.funding_stage_prediction - INFO -   - topstartup.json
+2025-04-30 02:24:21,265 - MLPredictiveAnalysis.funding_stage_prediction - INFO - Created visualization directory: /Users/hk/Downloads/DSFinalYearProject/FundingStageOutput/visualizations
+2025-04-30 02:24:21,266 - MLPredictiveAnalysis.funding_stage_prediction - INFO - Created visualization directory: /Users/hk/Downloads/DSFinalYearProject/FundingStageOutput/visualizations
+2025-04-30 02:24:21,266 - MLPredictiveAnalysis.funding_stage_prediction - INFO - Audit log initialized at /Users/hk/Downloads/DSFinalYearProject/FundingStageOutput/models/prediction_audit.csv
+2025-04-30 02:24:21,266 - MLPredictiveAnalysis.funding_stage_prediction - INFO - Set up data archive directory at /Users/hk/Downloads/DSFinalYearProject/FundingStageOutput/data_archive/20250430_022421
+2025-04-30 02:24:21,266 - MLPredictiveAnalysis.funding_stage_prediction - INFO - Dashboard output directory set to: /Users/hk/Downloads/DSFinalYearProject/FundingStageOutput/dashboards
+2025-04-30 02:24:21,267 - MLPredictiveAnalysis.funding_stage_prediction - INFO - Created directory: /Users/hk/Downloads/DSFinalYearProject/FundingStageOutput/dashboards/classification_dashboards/model_comparison
+2025-04-30 02:24:21,267 - MLPredictiveAnalysis.funding_stage_prediction - INFO - Created directory: /Users/hk/Downloads/DSFinalYearProject/FundingStageOutput/dashboards/classification_dashboards/calibration_curves
+2025-04-30 02:24:21,267 - MLPredictiveAnalysis.funding_stage_prediction - INFO - Created directory: /Users/hk/Downloads/DSFinalYearProject/FundingStageOutput/dashboards/classification_dashboards/feature_importance
+2025-04-30 02:24:21,267 - MLPredictiveAnalysis.funding_stage_prediction - INFO - Created directory: /Users/hk/Downloads/DSFinalYearProject/FundingStageOutput/dashboards/classification_dashboards/confusion_matrices
+2025-04-30 02:24:21,267 - MLPredictiveAnalysis.funding_stage_prediction - INFO - Created directory: /Users/hk/Downloads/DSFinalYearProject/FundingStageOutput/dashboards/classification_dashboards/model_metrics
+2025-04-30 02:24:21,267 - MLPredictiveAnalysis.funding_stage_prediction - INFO - Created directory: /Users/hk/Downloads/DSFinalYearProject/FundingStageOutput/dashboards/timeseries_dashboards/forecast_trends
+2025-04-30 02:24:21,267 - MLPredictiveAnalysis.funding_stage_prediction - INFO - Created directory: /Users/hk/Downloads/DSFinalYearProject/FundingStageOutput/dashboards/timeseries_dashboards/industry_breakdown
+2025-04-30 02:24:21,267 - MLPredictiveAnalysis.funding_stage_prediction - INFO - Created directory: /Users/hk/Downloads/DSFinalYearProject/FundingStageOutput/dashboards/timeseries_dashboards/stage_evolution
+2025-04-30 02:24:21,267 - MLPredictiveAnalysis.funding_stage_prediction - INFO - Created directory: /Users/hk/Downloads/DSFinalYearProject/FundingStageOutput/dashboards/timeseries_dashboards/seasonality_analysis
+2025-04-30 02:24:21,267 - MLPredictiveAnalysis.funding_stage_prediction - INFO - Set matplotlib backend to Agg
+2025-04-30 02:24:21,267 - MLPredictiveAnalysis.funding_stage_prediction - INFO - Initialized model directory structure at /Users/hk/Downloads/DSFinalYearProject/FundingStageOutput/models
+2025-04-30 02:24:21,267 - MLPredictiveAnalysis.dashboard_implementation - INFO - Dashboard implementation initialized with output to: /Users/hk/Downloads/DSFinalYearProject/MLPredictiveAnalysis/dashboard_output_20250430_022421
+2025-04-30 02:24:21,267 - __main__ - INFO - Generating dashboards...
+2025-04-30 02:24:21,267 - MLPredictiveAnalysis.dashboard_implementation - INFO - Generating dashboards...
+2025-04-30 02:24:21,267 - MLPredictiveAnalysis.dashboard_implementation - INFO - Running classification pipeline...
+2025-04-30 02:24:21,267 - MLPredictiveAnalysis.dashboard_implementation - INFO - Loading and processing data...
+2025-04-30 02:24:21,268 - MLPredictiveAnalysis.funding_stage_prediction - ERROR - Error loading fundraiser data: 'list' object has no attribute 'get'
+2025-04-30 02:24:21,273 - MLPredictiveAnalysis.funding_stage_prediction - INFO - Found funding types in growthlist data: ['Series B' 'Seed' 'Pre-Seed' 'Series A' 'Series C'
+ 'Venture - Series Unknown' 'Series E' 'Private Equity' 'Series G'
+ 'Initial Coin Offering']
+2025-04-30 02:24:21,273 - MLPredictiveAnalysis.funding_stage_prediction - INFO - Loaded 100 records from growthlist data
+2025-04-30 02:24:21,274 - MLPredictiveAnalysis.funding_stage_prediction - INFO - Loaded 100 records from topstartup data
+2025-04-30 02:24:21,274 - MLPredictiveAnalysis.funding_stage_prediction - INFO - Loaded datasets - Fundraiser: 0 rows, Growthlist: 100 rows, Topstartup: 100 rows
+2025-04-30 02:24:21,275 - MLPredictiveAnalysis.funding_stage_prediction - INFO - Processed 100 records from growthlist data
+2025-04-30 02:24:21,278 - MLPredictiveAnalysis.funding_stage_prediction - INFO - Processed 100 records from topstartup data
+2025-04-30 02:24:21,279 - MLPredictiveAnalysis.funding_stage_prediction - ERROR - Error saving historical data: table merged_data has no column named company_name
+2025-04-30 02:24:21,279 - MLPredictiveAnalysis.funding_stage_prediction - INFO - Successfully merged 200 records
+2025-04-30 02:24:21,280 - MLPredictiveAnalysis.funding_stage_prediction - INFO - Starting feature extraction for 200 records
+2025-04-30 02:24:21,280 - MLPredictiveAnalysis.funding_stage_prediction - INFO - Found 10 unique funding stages: ['Series B' 'Seed' 'Pre-Seed' 'Series A' 'Series C'
+ 'Venture - Series Unknown' 'Series E' 'Private Equity' 'Series G'
+ 'Initial Coin Offering']
+2025-04-30 02:24:21,280 - MLPredictiveAnalysis.funding_stage_prediction - INFO - Created funding stage mapping: {'Pre-Seed': 0, 'Seed': 1, 'Angel': 2, 'Series A': 3, 'Series B': 4, 'Series C': 5, 'Series D': 6, 'Series E': 7, 'Series F': 8, 'Series G': 9, 'Series H': 10, 'Venture - Series Unknown': 11, 'Private Equity': 12, 'Initial Coin Offering': 13, 'Unknown': 14}
+2025-04-30 02:24:21,283 - MLPredictiveAnalysis.funding_stage_prediction - WARNING - Many dates failed to parse (100 NaN values)
+2025-04-30 02:24:21,309 - MLPredictiveAnalysis.funding_stage_prediction - INFO - Feature engineering complete: 19 features created
+2025-04-30 02:24:21,310 - MLPredictiveAnalysis.funding_stage_prediction - INFO - Preparing model data with features: ['funding_amount_log', 'employees', 'employee_efficiency', 'funding_year', 'funding_month', 'previous_rounds', 'months_since_first_funding', 'funding_velocity']
+2025-04-30 02:24:21,311 - MLPredictiveAnalysis.funding_stage_prediction - INFO - Filled NaN values in employees with median: nan
+2025-04-30 02:24:21,311 - MLPredictiveAnalysis.funding_stage_prediction - INFO - Filled NaN values in employee_efficiency with median: nan
+2025-04-30 02:24:21,313 - MLPredictiveAnalysis.funding_stage_prediction - INFO - Original class distribution:
+funding_stage_numeric
+1     70
+3     40
+11    28
+4     24
+0     18
+5     10
+12     4
+7      2
+9      2
+13     2
+Name: count, dtype: int64
+2025-04-30 02:24:21,313 - MLPredictiveAnalysis.funding_stage_prediction - INFO - Found 4 rare classes: Index([12, 7, 9, 13], dtype='int64', name='funding_stage_numeric')
+2025-04-30 02:24:21,313 - MLPredictiveAnalysis.funding_stage_prediction - INFO - Merged rare classes into related major classes
+2025-04-30 02:24:21,313 - MLPredictiveAnalysis.funding_stage_prediction - INFO - Updated class distribution after merging:
+funding_stage_numeric
+1     70
+3     40
+11    28
+4     24
+0     18
+5     10
+12     4
+7      2
+8      2
+13     2
+Name: count, dtype: int64
+2025-04-30 02:24:21,314 - MLPredictiveAnalysis.funding_stage_prediction - INFO - Remapped classes to be continuous. Class mapping: {np.int64(0): 0, np.int64(1): 1, np.int64(3): 2, np.int64(4): 3, np.int64(5): 4, np.int64(7): 5, np.int64(8): 6, np.int64(11): 7, np.int64(12): 8, np.int64(13): 9}
+2025-04-30 02:24:21,316 - MLPredictiveAnalysis.funding_stage_prediction - INFO - Prepared model data: X shape=(200, 8), y shape=(200,)
+2025-04-30 02:24:21,316 - MLPredictiveAnalysis.funding_stage_prediction - INFO - Final class distribution: {1: 70, 2: 40, 7: 28, 3: 24, 0: 18, 4: 10, 8: 4, 5: 2, 6: 2, 9: 2}
+2025-04-30 02:24:21,316 - MLPredictiveAnalysis.dashboard_implementation - INFO - Data loaded and processed: 200 records
+2025-04-30 02:24:21,316 - MLPredictiveAnalysis.funding_stage_prediction - INFO - Step 1: Loading and merging datasets...
+2025-04-30 02:24:21,316 - MLPredictiveAnalysis.funding_stage_prediction - ERROR - Error loading fundraiser data: 'list' object has no attribute 'get'
+2025-04-30 02:24:21,318 - MLPredictiveAnalysis.funding_stage_prediction - INFO - Found funding types in growthlist data: ['Series B' 'Seed' 'Pre-Seed' 'Series A' 'Series C'
+ 'Venture - Series Unknown' 'Series E' 'Private Equity' 'Series G'
+ 'Initial Coin Offering']
+2025-04-30 02:24:21,318 - MLPredictiveAnalysis.funding_stage_prediction - INFO - Loaded 100 records from growthlist data
+2025-04-30 02:24:21,319 - MLPredictiveAnalysis.funding_stage_prediction - INFO - Loaded 100 records from topstartup data
+2025-04-30 02:24:21,319 - MLPredictiveAnalysis.funding_stage_prediction - INFO - Loaded datasets - Fundraiser: 0 rows, Growthlist: 100 rows, Topstartup: 100 rows
+2025-04-30 02:24:21,321 - MLPredictiveAnalysis.funding_stage_prediction - INFO - Processed 100 records from growthlist data
+2025-04-30 02:24:21,326 - MLPredictiveAnalysis.funding_stage_prediction - INFO - Processed 100 records from topstartup data
+2025-04-30 02:24:21,328 - MLPredictiveAnalysis.funding_stage_prediction - ERROR - Error saving historical data: table merged_data has no column named company_name
+2025-04-30 02:24:21,328 - MLPredictiveAnalysis.funding_stage_prediction - INFO - Successfully merged 200 records
+2025-04-30 02:24:21,330 - MLPredictiveAnalysis.funding_stage_prediction - INFO - Saved merged data to /Users/hk/Downloads/DSFinalYearProject/FundingStageOutput/data_archive/merged_data_20250430.csv
+2025-04-30 02:24:21,330 - MLPredictiveAnalysis.funding_stage_prediction - INFO - Step 2: Extracting features...
+2025-04-30 02:24:21,330 - MLPredictiveAnalysis.funding_stage_prediction - INFO - Starting feature extraction for 200 records
+2025-04-30 02:24:21,330 - MLPredictiveAnalysis.funding_stage_prediction - INFO - Found 10 unique funding stages: ['Series B' 'Seed' 'Pre-Seed' 'Series A' 'Series C'
+ 'Venture - Series Unknown' 'Series E' 'Private Equity' 'Series G'
+ 'Initial Coin Offering']
+2025-04-30 02:24:21,330 - MLPredictiveAnalysis.funding_stage_prediction - INFO - Created funding stage mapping: {'Pre-Seed': 0, 'Seed': 1, 'Angel': 2, 'Series A': 3, 'Series B': 4, 'Series C': 5, 'Series D': 6, 'Series E': 7, 'Series F': 8, 'Series G': 9, 'Series H': 10, 'Venture - Series Unknown': 11, 'Private Equity': 12, 'Initial Coin Offering': 13, 'Unknown': 14}
+2025-04-30 02:24:21,331 - MLPredictiveAnalysis.funding_stage_prediction - WARNING - Many dates failed to parse (100 NaN values)
+2025-04-30 02:24:21,351 - MLPredictiveAnalysis.funding_stage_prediction - INFO - Feature engineering complete: 19 features created
+2025-04-30 02:24:21,351 - MLPredictiveAnalysis.funding_stage_prediction - INFO - Step 3: Preparing model data...
+2025-04-30 02:24:21,351 - MLPredictiveAnalysis.funding_stage_prediction - INFO - Preparing model data with features: ['funding_amount_log', 'employees', 'employee_efficiency', 'funding_year', 'funding_month', 'previous_rounds', 'months_since_first_funding', 'funding_velocity']
+2025-04-30 02:24:21,352 - MLPredictiveAnalysis.funding_stage_prediction - INFO - Filled NaN values in employees with median: nan
+2025-04-30 02:24:21,352 - MLPredictiveAnalysis.funding_stage_prediction - INFO - Filled NaN values in employee_efficiency with median: nan
+2025-04-30 02:24:21,353 - MLPredictiveAnalysis.funding_stage_prediction - INFO - Original class distribution:
+funding_stage_numeric
+1     70
+3     40
+11    28
+4     24
+0     18
+5     10
+12     4
+7      2
+9      2
+13     2
+Name: count, dtype: int64
+2025-04-30 02:24:21,353 - MLPredictiveAnalysis.funding_stage_prediction - INFO - Found 4 rare classes: Index([12, 7, 9, 13], dtype='int64', name='funding_stage_numeric')
+2025-04-30 02:24:21,353 - MLPredictiveAnalysis.funding_stage_prediction - INFO - Merged rare classes into related major classes
+2025-04-30 02:24:21,353 - MLPredictiveAnalysis.funding_stage_prediction - INFO - Updated class distribution after merging:
+funding_stage_numeric
+1     70
+3     40
+11    28
+4     24
+0     18
+5     10
+12     4
+7      2
+8      2
+13     2
+Name: count, dtype: int64
+2025-04-30 02:24:21,354 - MLPredictiveAnalysis.funding_stage_prediction - INFO - Remapped classes to be continuous. Class mapping: {np.int64(0): 0, np.int64(1): 1, np.int64(3): 2, np.int64(4): 3, np.int64(5): 4, np.int64(7): 5, np.int64(8): 6, np.int64(11): 7, np.int64(12): 8, np.int64(13): 9}
+2025-04-30 02:24:21,355 - MLPredictiveAnalysis.funding_stage_prediction - INFO - Prepared model data: X shape=(200, 8), y shape=(200,)
+2025-04-30 02:24:21,355 - MLPredictiveAnalysis.funding_stage_prediction - INFO - Final class distribution: {1: 70, 2: 40, 7: 28, 3: 24, 0: 18, 4: 10, 8: 4, 5: 2, 6: 2, 9: 2}
+2025-04-30 02:24:21,355 - MLPredictiveAnalysis.funding_stage_prediction - INFO - Class mapping: {np.int64(0): 0, np.int64(1): 1, np.int64(2): 2, np.int64(3): 3, np.int64(4): 4, np.int64(5): 5, np.int64(6): 6, np.int64(7): 7, np.int64(8): 8, np.int64(9): 9}
+2025-04-30 02:24:21,355 - MLPredictiveAnalysis.funding_stage_prediction - INFO - Merged rare classes into majority class 1
+2025-04-30 02:24:21,355 - MLPredictiveAnalysis.funding_stage_prediction - INFO - Final class mapping after merging rare classes: {np.int64(0): 0, np.int64(1): 1, np.int64(2): 2, np.int64(3): 3, np.int64(4): 4, np.int64(7): 5}
+2025-04-30 02:24:21,356 - MLPredictiveAnalysis.funding_stage_prediction - INFO - Performing feature selection...
+2025-04-30 02:24:21,422 - MLPredictiveAnalysis.funding_stage_prediction - INFO - Selected features: ['funding_amount_log', 'funding_month', 'previous_rounds', 'funding_velocity']
+2025-04-30 02:24:21,422 - MLPredictiveAnalysis.funding_stage_prediction - INFO - Step 4: Splitting data for training and evaluation...
+2025-04-30 02:24:21,423 - MLPredictiveAnalysis.funding_stage_prediction - INFO - Step 5: Training models with hyperparameter tuning...
+2025-04-30 02:24:21,423 - MLPredictiveAnalysis.funding_stage_prediction - ERROR - Error in enhanced pipeline: 'EnhancedModelTrainer' object has no attribute 'tune_random_forest'
+2025-04-30 02:24:21,424 - MLPredictiveAnalysis.funding_stage_prediction - ERROR - Traceback (most recent call last):
+  File "/Users/hk/Downloads/DSFinalYearProject/MLPredictiveAnalysis/funding_stage_prediction.py", line 3368, in run
+    best_rf = self.model_trainer.tune_random_forest(X_train, y_train)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'EnhancedModelTrainer' object has no attribute 'tune_random_forest'. Did you mean: 'train_random_forest'?
+
+2025-04-30 02:24:21,424 - MLPredictiveAnalysis.dashboard_implementation - INFO - Running time series pipeline...
+2025-04-30 02:24:21,424 - MLPredictiveAnalysis.funding_stage_prediction - INFO - Starting aggregate time series prediction with Prophet...
+2025-04-30 02:24:21,425 - MLPredictiveAnalysis.funding_stage_prediction - INFO - Created time series forecasts directory: /Users/hk/Downloads/DSFinalYearProject/FundingStageOutput/time_series_forecasts
+2025-04-30 02:24:21,425 - MLPredictiveAnalysis.funding_stage_prediction - INFO - Preparing time series data...
+2025-04-30 02:24:21,425 - MLPredictiveAnalysis.funding_stage_prediction - ERROR - Error loading fundraiser data: 'list' object has no attribute 'get'
+2025-04-30 02:24:21,426 - MLPredictiveAnalysis.funding_stage_prediction - INFO - Found funding types in growthlist data: ['Series B' 'Seed' 'Pre-Seed' 'Series A' 'Series C'
+ 'Venture - Series Unknown' 'Series E' 'Private Equity' 'Series G'
+ 'Initial Coin Offering']
+2025-04-30 02:24:21,426 - MLPredictiveAnalysis.funding_stage_prediction - INFO - Loaded 100 records from growthlist data
+2025-04-30 02:24:21,427 - MLPredictiveAnalysis.funding_stage_prediction - INFO - Loaded 100 records from topstartup data
+2025-04-30 02:24:21,427 - MLPredictiveAnalysis.funding_stage_prediction - INFO - Loaded datasets - Fundraiser: 0 rows, Growthlist: 100 rows, Topstartup: 100 rows
+2025-04-30 02:24:21,429 - MLPredictiveAnalysis.funding_stage_prediction - INFO - Processed 100 records from growthlist data
+2025-04-30 02:24:21,431 - MLPredictiveAnalysis.funding_stage_prediction - INFO - Processed 100 records from topstartup data
+2025-04-30 02:24:21,432 - MLPredictiveAnalysis.funding_stage_prediction - ERROR - Error saving historical data: table merged_data has no column named company_name
+2025-04-30 02:24:21,432 - MLPredictiveAnalysis.funding_stage_prediction - INFO - Successfully merged 200 records
+2025-04-30 02:24:21,435 - MLPredictiveAnalysis.funding_stage_prediction - INFO - Creating funding_stage_numeric column...
+2025-04-30 02:24:21,435 - MLPredictiveAnalysis.funding_stage_prediction - INFO - Prepared time series data with 100 valid records
+2025-04-30 02:24:21,440 - MLPredictiveAnalysis.funding_stage_prediction - INFO - Aggregated data into 2 monthly periods
+2025-04-30 02:24:21,459 - prophet - INFO - n_changepoints greater than number of observations. Using 0.
+2025-04-30 02:24:21,460 - cmdstanpy - DEBUG - input tempfile: /var/folders/nf/rxfx59l56_l7rvzr_k3n1r3c0000gn/T/tmp9p_1wrds/_v1i956i.json
+2025-04-30 02:24:21,460 - cmdstanpy - DEBUG - input tempfile: /var/folders/nf/rxfx59l56_l7rvzr_k3n1r3c0000gn/T/tmp9p_1wrds/qzm1o8vr.json
+2025-04-30 02:24:21,461 - cmdstanpy - DEBUG - idx 0
+2025-04-30 02:24:21,461 - cmdstanpy - DEBUG - running CmdStan, num_threads: None
+2025-04-30 02:24:21,461 - cmdstanpy - DEBUG - CmdStan args: ['/Users/hk/Downloads/DSFinalYearProject/.venv/lib/python3.12/site-packages/prophet/stan_model/prophet_model.bin', 'random', 'seed=99449', 'data', 'file=/var/folders/nf/rxfx59l56_l7rvzr_k3n1r3c0000gn/T/tmp9p_1wrds/_v1i956i.json', 'init=/var/folders/nf/rxfx59l56_l7rvzr_k3n1r3c0000gn/T/tmp9p_1wrds/qzm1o8vr.json', 'output', 'file=/var/folders/nf/rxfx59l56_l7rvzr_k3n1r3c0000gn/T/tmp9p_1wrds/prophet_modelptz9_7xd/prophet_model-20250430022421.csv', 'method=optimize', 'algorithm=newton', 'iter=10000']
+2025-04-30 02:24:21,461 - cmdstanpy - INFO - Chain [1] start processing
+2025-04-30 02:24:21,502 - cmdstanpy - INFO - Chain [1] done processing
+2025-04-30 02:24:21,520 - MLPredictiveAnalysis.funding_stage_prediction - INFO - Saved funding rounds forecast to /Users/hk/Downloads/DSFinalYearProject/FundingStageOutput/time_series_forecasts/funding_rounds_forecast.csv
+2025-04-30 02:24:21,843 - prophet - INFO - n_changepoints greater than number of observations. Using 0.
+2025-04-30 02:24:21,844 - cmdstanpy - DEBUG - input tempfile: /var/folders/nf/rxfx59l56_l7rvzr_k3n1r3c0000gn/T/tmp9p_1wrds/yotrj37m.json
+2025-04-30 02:24:21,844 - cmdstanpy - DEBUG - input tempfile: /var/folders/nf/rxfx59l56_l7rvzr_k3n1r3c0000gn/T/tmp9p_1wrds/yq8eaby4.json
+2025-04-30 02:24:21,845 - cmdstanpy - DEBUG - idx 0
+2025-04-30 02:24:21,845 - cmdstanpy - DEBUG - running CmdStan, num_threads: None
+2025-04-30 02:24:21,845 - cmdstanpy - DEBUG - CmdStan args: ['/Users/hk/Downloads/DSFinalYearProject/.venv/lib/python3.12/site-packages/prophet/stan_model/prophet_model.bin', 'random', 'seed=71062', 'data', 'file=/var/folders/nf/rxfx59l56_l7rvzr_k3n1r3c0000gn/T/tmp9p_1wrds/yotrj37m.json', 'init=/var/folders/nf/rxfx59l56_l7rvzr_k3n1r3c0000gn/T/tmp9p_1wrds/yq8eaby4.json', 'output', 'file=/var/folders/nf/rxfx59l56_l7rvzr_k3n1r3c0000gn/T/tmp9p_1wrds/prophet_modelapoiu9dz/prophet_model-20250430022421.csv', 'method=optimize', 'algorithm=newton', 'iter=10000']
+2025-04-30 02:24:21,845 - cmdstanpy - INFO - Chain [1] start processing
+2025-04-30 02:24:22,434 - cmdstanpy - INFO - Chain [1] done processing
+2025-04-30 02:24:22,455 - MLPredictiveAnalysis.funding_stage_prediction - INFO - Saved funding amounts forecast to /Users/hk/Downloads/DSFinalYearProject/FundingStageOutput/time_series_forecasts/funding_amounts_forecast.csv
+2025-04-30 02:24:22,924 - MLPredictiveAnalysis.funding_stage_prediction - INFO - Time series forecasts saved to /Users/hk/Downloads/DSFinalYearProject/FundingStageOutput/time_series_forecasts
+2025-04-30 02:24:22,925 - MLPredictiveAnalysis.funding_stage_prediction - INFO - Generating time series dashboards...
+2025-04-30 02:24:22,925 - MLPredictiveAnalysis.funding_stage_prediction - INFO - Generating forecast trend dashboard...
+2025-04-30 02:24:23,333 - MLPredictiveAnalysis.funding_stage_prediction - INFO - Forecast trend dashboard saved to: /Users/hk/Downloads/DSFinalYearProject/FundingStageOutput/dashboards/timeseries_dashboards/forecast_trends/forecast_trend_dashboard_20250430_022422.png
+2025-04-30 02:24:23,334 - MLPredictiveAnalysis.funding_stage_prediction - INFO - Generating industry breakdown dashboard...
+2025-04-30 02:24:23,334 - MLPredictiveAnalysis.funding_stage_prediction - WARNING - Not enough industry forecasts for breakdown dashboard
+2025-04-30 02:24:23,334 - MLPredictiveAnalysis.funding_stage_prediction - INFO - Generating funding stage evolution dashboard...
+2025-04-30 02:24:23,334 - MLPredictiveAnalysis.funding_stage_prediction - WARNING - Not enough stage forecasts for evolution dashboard
+2025-04-30 02:24:23,334 - MLPredictiveAnalysis.funding_stage_prediction - INFO - Generating seasonality analysis dashboard...
+2025-04-30 02:24:24,215 - MLPredictiveAnalysis.funding_stage_prediction - INFO - Seasonality dashboard saved to: /Users/hk/Downloads/DSFinalYearProject/FundingStageOutput/dashboards/timeseries_dashboards/seasonality_analysis/seasonality_dashboard_20250430_022423.png
+2025-04-30 02:24:24,215 - MLPredictiveAnalysis.funding_stage_prediction - INFO - Time series dashboards generated: ['forecast_trend', 'industry_breakdown', 'stage_evolution', 'seasonality']
+2025-04-30 02:24:24,216 - MLPredictiveAnalysis.dashboard_implementation - INFO - Generating standard dashboards...
+2025-04-30 02:24:24,216 - MLPredictiveAnalysis.funding_stage_prediction - INFO - Generating classification model dashboards...
+2025-04-30 02:24:24,216 - MLPredictiveAnalysis.funding_stage_prediction - INFO - Generating model comparison dashboard...
+2025-04-30 02:24:24,472 - MLPredictiveAnalysis.funding_stage_prediction - INFO - Model comparison dashboard saved to: /Users/hk/Downloads/DSFinalYearProject/MLPredictiveAnalysis/dashboard_output_20250430_022421/standard_dashboards/classification_dashboards/model_comparison/model_comparison_dashboard_20250430_022424.png
+2025-04-30 02:24:24,472 - MLPredictiveAnalysis.funding_stage_prediction - INFO - Generating calibration curves dashboards...
+2025-04-30 02:24:24,472 - MLPredictiveAnalysis.funding_stage_prediction - INFO - Created calibration curves directory: /Users/hk/Downloads/DSFinalYearProject/MLPredictiveAnalysis/dashboard_output_20250430_022421/standard_dashboards/classification_dashboards/calibration_curves
+2025-04-30 02:24:24,472 - MLPredictiveAnalysis.funding_stage_prediction - INFO - Available models for calibration: []
+2025-04-30 02:24:24,472 - MLPredictiveAnalysis.funding_stage_prediction - WARNING - Not enough models available for combined plot. Processed: []
+2025-04-30 02:24:24,472 - MLPredictiveAnalysis.funding_stage_prediction - INFO - Calibration dashboards created: 0
+2025-04-30 02:24:24,472 - MLPredictiveAnalysis.funding_stage_prediction - INFO - Output paths: {}
+2025-04-30 02:24:24,472 - MLPredictiveAnalysis.funding_stage_prediction - INFO - Generating feature importance dashboard...
+2025-04-30 02:24:24,473 - MLPredictiveAnalysis.funding_stage_prediction - WARNING - No models with feature importances found
+2025-04-30 02:24:24,473 - MLPredictiveAnalysis.funding_stage_prediction - INFO - Generating confusion matrix dashboards...
+2025-04-30 02:24:24,473 - MLPredictiveAnalysis.funding_stage_prediction - INFO - Generating model metrics dashboard...
+2025-04-30 02:24:24,473 - MLPredictiveAnalysis.funding_stage_prediction - WARNING - No model metrics found
+2025-04-30 02:24:24,473 - MLPredictiveAnalysis.funding_stage_prediction - INFO - Generating time series model dashboards...
+2025-04-30 02:24:24,473 - MLPredictiveAnalysis.funding_stage_prediction - INFO - Generating forecast trend dashboard...
+2025-04-30 02:24:24,892 - MLPredictiveAnalysis.funding_stage_prediction - INFO - Forecast trend dashboard saved to: /Users/hk/Downloads/DSFinalYearProject/MLPredictiveAnalysis/dashboard_output_20250430_022421/standard_dashboards/timeseries_dashboards/forecast_trends/forecast_trend_dashboard_20250430_022424.png
+2025-04-30 02:24:24,892 - MLPredictiveAnalysis.funding_stage_prediction - INFO - Generating industry breakdown dashboard...
+2025-04-30 02:24:24,892 - MLPredictiveAnalysis.funding_stage_prediction - WARNING - Not enough industry forecasts for breakdown dashboard
+2025-04-30 02:24:24,892 - MLPredictiveAnalysis.funding_stage_prediction - INFO - Generating funding stage evolution dashboard...
+2025-04-30 02:24:24,892 - MLPredictiveAnalysis.funding_stage_prediction - WARNING - Not enough stage forecasts for evolution dashboard
+2025-04-30 02:24:24,892 - MLPredictiveAnalysis.funding_stage_prediction - INFO - Generating seasonality analysis dashboard...
+2025-04-30 02:24:25,565 - MLPredictiveAnalysis.funding_stage_prediction - INFO - Seasonality dashboard saved to: /Users/hk/Downloads/DSFinalYearProject/MLPredictiveAnalysis/dashboard_output_20250430_022421/standard_dashboards/timeseries_dashboards/seasonality_analysis/seasonality_dashboard_20250430_022424.png
+2025-04-30 02:24:25,565 - MLPredictiveAnalysis.dashboard_implementation - INFO - Generating advanced dashboards...
+2025-04-30 02:24:25,565 - MLPredictiveAnalysis.funding_stage_prediction - INFO - Generating advanced classification dashboards...
+2025-04-30 02:24:25,565 - MLPredictiveAnalysis.funding_stage_prediction - WARNING - No classification results provided to generate dashboard
+2025-04-30 02:24:25,565 - MLPredictiveAnalysis.funding_stage_prediction - INFO - Generating advanced time series dashboards...
+2025-04-30 02:24:25,622 - MLPredictiveAnalysis.funding_stage_prediction - ERROR - Error generating time series interactive dashboards: 'AdvancedDashboardGenerator' object has no attribute '_generate_funding_trends_dashboard'
+2025-04-30 02:24:25,624 - MLPredictiveAnalysis.funding_stage_prediction - ERROR - Traceback (most recent call last):
+  File "/Users/hk/Downloads/DSFinalYearProject/MLPredictiveAnalysis/funding_stage_prediction.py", line 6503, in generate_timeseries_interactive_dashboard
+    dashboard_paths["funding_trends"] = self._generate_funding_trends_dashboard(results, trends_dir)
+                                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'AdvancedDashboardGenerator' object has no attribute '_generate_funding_trends_dashboard'. Did you mean: '_generate_forecast_trend_dashboard'?
+
+2025-04-30 02:24:25,624 - __main__ - INFO - Dashboard generation complete!
+2025-04-30 02:24:25,624 - __main__ - INFO - Dashboards saved to: /Users/hk/Downloads/DSFinalYearProject/MLPredictiveAnalysis/dashboard_output_20250430_022421

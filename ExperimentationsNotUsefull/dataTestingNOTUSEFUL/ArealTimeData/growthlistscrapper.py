@@ -10,6 +10,9 @@ from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.common.action_chains import ActionChains
 from selenium.common.exceptions import TimeoutException
 from selenium import webdriver
+from selenium.webdriver.chrome.options import Options
+from selenium.webdriver.chrome.service import Service
+from webdriver_manager.chrome import ChromeDriverManager
 from pathlib import Path
 import schedule
 
@@ -41,9 +44,9 @@ class GrowthListStartup:
 class GrowthListScraper:
     BASE_URL = "https://growthlist.co/san-francisco-startups/"
     
-    def __init__(self, driver):
-        self.driver = driver
+    def __init__(self, headless=True):
         self.startups = []
+        self.driver = self._setup_driver(headless)
         
     def handle_popup(self) -> bool:
         """Handle the subscription popup with multiple fallback strategies"""
@@ -270,13 +273,32 @@ class GrowthListScraper:
         except Exception as e:
             logger.warning(f"Error closing WebDriver: {str(e)}")
 
+    def _setup_driver(self, headless_mode):
+        logger.info(f"Setting up Chrome WebDriver (Headless: {headless_mode})")
+        chrome_options = Options()
+        if headless_mode:
+            chrome_options.add_argument("--headless=new")
+            chrome_options.add_argument("--disable-gpu")
+            chrome_options.add_argument("--window-size=1920,1080")
+        chrome_options.add_argument("--no-sandbox")
+        chrome_options.add_argument("--disable-dev-shm-usage")
+        
+        try:
+            service = Service(ChromeDriverManager().install())
+            driver = webdriver.Chrome(service=service, options=chrome_options)
+            driver.set_page_load_timeout(30)
+            logger.info("WebDriver setup completed successfully")
+            return driver
+        except Exception as e:
+            logger.error(f"WebDriver setup failed: {e}")
+            raise
+
 def main():
     """Main function to run the scraper"""
     logger.info("Starting GrowthList scraper script")
-    driver = webdriver.Chrome()
-    scraper = GrowthListScraper(driver)
-    
+    scraper = None
     try:
+        scraper = GrowthListScraper(headless=True)
         scraper.extract_data()
         scraper.normalize_funding()
         scraper.analyze_industries()

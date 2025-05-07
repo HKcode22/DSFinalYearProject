@@ -1,0 +1,28 @@
+{
+    "timestamp": "20250428_014230",
+    "data_records": 1744,
+    "features": [
+        "funding_amount_log",
+        "employees",
+        "employee_efficiency",
+        "funding_year",
+        "funding_month",
+        "previous_rounds",
+        "months_since_first_funding",
+        "funding_velocity"
+    ],
+    "model_results": {
+        "Random Forest": {
+            "accuracy": 0.9054441260744985,
+            "model_path": "Not saved"
+        },
+        "XGBoost": {
+            "accuracy": 0.8911174785100286,
+            "model_path": "Not saved"
+        },
+        "Ensemble": {
+            "accuracy": 0.8997134670487106,
+            "model_path": "Not saved"
+        }
+    }
+}

@@ -1,0 +1,153 @@
+2025-04-30 02:34:36,262 - numexpr.utils - INFO - NumExpr defaulting to 8 threads.
+2025-04-30 02:34:37,703 - __main__ - INFO - Using base directory: /Users/hk/Downloads/DSFinalYearProject
+2025-04-30 02:34:37,703 - __main__ - INFO - Using output directory: /Users/hk/Downloads/DSFinalYearProject/FundingStageOutput
+2025-04-30 02:34:37,703 - __main__ - INFO - Initializing improved dashboard implementation...
+2025-04-30 02:34:37,706 - MLPredictiveAnalysis.funding_stage_prediction - INFO - Historical database initialized
+2025-04-30 02:34:37,706 - MLPredictiveAnalysis.funding_stage_prediction - INFO - Created visualization directory: /Users/hk/Downloads/DSFinalYearProject/FundingStageOutput/visualizations
+2025-04-30 02:34:37,707 - MLPredictiveAnalysis.funding_stage_prediction - INFO - Dashboard output directory set to: /Users/hk/Downloads/DSFinalYearProject/FundingStageOutput/dashboards
+2025-04-30 02:34:37,707 - MLPredictiveAnalysis.funding_stage_prediction - INFO - Created directory: /Users/hk/Downloads/DSFinalYearProject/FundingStageOutput/dashboards/classification_dashboards/model_comparison
+2025-04-30 02:34:37,707 - MLPredictiveAnalysis.funding_stage_prediction - INFO - Created directory: /Users/hk/Downloads/DSFinalYearProject/FundingStageOutput/dashboards/classification_dashboards/calibration_curves
+2025-04-30 02:34:37,707 - MLPredictiveAnalysis.funding_stage_prediction - INFO - Created directory: /Users/hk/Downloads/DSFinalYearProject/FundingStageOutput/dashboards/classification_dashboards/feature_importance
+2025-04-30 02:34:37,707 - MLPredictiveAnalysis.funding_stage_prediction - INFO - Created directory: /Users/hk/Downloads/DSFinalYearProject/FundingStageOutput/dashboards/classification_dashboards/confusion_matrices
+2025-04-30 02:34:37,707 - MLPredictiveAnalysis.funding_stage_prediction - INFO - Created directory: /Users/hk/Downloads/DSFinalYearProject/FundingStageOutput/dashboards/classification_dashboards/model_metrics
+2025-04-30 02:34:37,707 - MLPredictiveAnalysis.funding_stage_prediction - INFO - Created directory: /Users/hk/Downloads/DSFinalYearProject/FundingStageOutput/dashboards/timeseries_dashboards/forecast_trends
+2025-04-30 02:34:37,707 - MLPredictiveAnalysis.funding_stage_prediction - INFO - Created directory: /Users/hk/Downloads/DSFinalYearProject/FundingStageOutput/dashboards/timeseries_dashboards/industry_breakdown
+2025-04-30 02:34:37,707 - MLPredictiveAnalysis.funding_stage_prediction - INFO - Created directory: /Users/hk/Downloads/DSFinalYearProject/FundingStageOutput/dashboards/timeseries_dashboards/stage_evolution
+2025-04-30 02:34:37,707 - MLPredictiveAnalysis.funding_stage_prediction - INFO - Created directory: /Users/hk/Downloads/DSFinalYearProject/FundingStageOutput/dashboards/timeseries_dashboards/seasonality_analysis
+2025-04-30 02:34:37,708 - MLPredictiveAnalysis.funding_stage_prediction - INFO - Set matplotlib backend to Agg
+2025-04-30 02:34:37,708 - MLPredictiveAnalysis.funding_stage_prediction - INFO - Dashboard output directory set to: /Users/hk/Downloads/DSFinalYearProject/FundingStageOutput/advanced_dashboards
+2025-04-30 02:34:37,708 - MLPredictiveAnalysis.funding_stage_prediction - INFO - Created directory: /Users/hk/Downloads/DSFinalYearProject/FundingStageOutput/advanced_dashboards/classification_dashboards/model_comparison
+2025-04-30 02:34:37,708 - MLPredictiveAnalysis.funding_stage_prediction - INFO - Created directory: /Users/hk/Downloads/DSFinalYearProject/FundingStageOutput/advanced_dashboards/classification_dashboards/calibration_curves
+2025-04-30 02:34:37,708 - MLPredictiveAnalysis.funding_stage_prediction - INFO - Created directory: /Users/hk/Downloads/DSFinalYearProject/FundingStageOutput/advanced_dashboards/classification_dashboards/feature_importance
+2025-04-30 02:34:37,708 - MLPredictiveAnalysis.funding_stage_prediction - INFO - Created directory: /Users/hk/Downloads/DSFinalYearProject/FundingStageOutput/advanced_dashboards/classification_dashboards/confusion_matrices
+2025-04-30 02:34:37,708 - MLPredictiveAnalysis.funding_stage_prediction - INFO - Created directory: /Users/hk/Downloads/DSFinalYearProject/FundingStageOutput/advanced_dashboards/classification_dashboards/model_metrics
+2025-04-30 02:34:37,708 - MLPredictiveAnalysis.funding_stage_prediction - INFO - Created directory: /Users/hk/Downloads/DSFinalYearProject/FundingStageOutput/advanced_dashboards/timeseries_dashboards/forecast_trends
+2025-04-30 02:34:37,708 - MLPredictiveAnalysis.funding_stage_prediction - INFO - Created directory: /Users/hk/Downloads/DSFinalYearProject/FundingStageOutput/advanced_dashboards/timeseries_dashboards/industry_breakdown
+2025-04-30 02:34:37,708 - MLPredictiveAnalysis.funding_stage_prediction - INFO - Created directory: /Users/hk/Downloads/DSFinalYearProject/FundingStageOutput/advanced_dashboards/timeseries_dashboards/stage_evolution
+2025-04-30 02:34:37,708 - MLPredictiveAnalysis.funding_stage_prediction - INFO - Created directory: /Users/hk/Downloads/DSFinalYearProject/FundingStageOutput/advanced_dashboards/timeseries_dashboards/seasonality_analysis
+2025-04-30 02:34:37,708 - MLPredictiveAnalysis.funding_stage_prediction - INFO - Set matplotlib backend to Agg
+2025-04-30 02:34:37,708 - MLPredictiveAnalysis.funding_stage_prediction - INFO - Created directory: /Users/hk/Downloads/DSFinalYearProject/FundingStageOutput/advanced_dashboards/classification_interactive/model_performance
+2025-04-30 02:34:37,708 - MLPredictiveAnalysis.funding_stage_prediction - INFO - Created directory: /Users/hk/Downloads/DSFinalYearProject/FundingStageOutput/advanced_dashboards/classification_interactive/prediction_interface
+2025-04-30 02:34:37,708 - MLPredictiveAnalysis.funding_stage_prediction - INFO - Created directory: /Users/hk/Downloads/DSFinalYearProject/FundingStageOutput/advanced_dashboards/classification_interactive/data_exploration
+2025-04-30 02:34:37,709 - MLPredictiveAnalysis.funding_stage_prediction - INFO - Created directory: /Users/hk/Downloads/DSFinalYearProject/FundingStageOutput/advanced_dashboards/classification_interactive/feature_analysis
+2025-04-30 02:34:37,709 - MLPredictiveAnalysis.funding_stage_prediction - INFO - Created directory: /Users/hk/Downloads/DSFinalYearProject/FundingStageOutput/advanced_dashboards/timeseries_interactive/funding_trends
+2025-04-30 02:34:37,709 - MLPredictiveAnalysis.funding_stage_prediction - INFO - Created directory: /Users/hk/Downloads/DSFinalYearProject/FundingStageOutput/advanced_dashboards/timeseries_interactive/forecast_components
+2025-04-30 02:34:37,709 - MLPredictiveAnalysis.funding_stage_prediction - INFO - Created directory: /Users/hk/Downloads/DSFinalYearProject/FundingStageOutput/advanced_dashboards/timeseries_interactive/industry_forecasts
+2025-04-30 02:34:37,709 - MLPredictiveAnalysis.funding_stage_prediction - INFO - Created directory: /Users/hk/Downloads/DSFinalYearProject/FundingStageOutput/advanced_dashboards/timeseries_interactive/stage_transitions
+2025-04-30 02:34:37,799 - MLPredictiveAnalysis.funding_stage_prediction - INFO - Successfully imported interactive dashboard libraries
+2025-04-30 02:34:37,800 - MLPredictiveAnalysis.improved_dashboard_implementation - INFO - Improved dashboard implementation initialized with output to: /Users/hk/Downloads/DSFinalYearProject/FundingStageOutput
+2025-04-30 02:34:37,800 - MLPredictiveAnalysis.improved_dashboard_implementation - INFO - Created organized directory structure for all outputs
+2025-04-30 02:34:37,800 - __main__ - INFO - Generating dashboards with better organization...
+2025-04-30 02:34:37,800 - MLPredictiveAnalysis.improved_dashboard_implementation - INFO - Generating organized dashboards...
+2025-04-30 02:34:37,800 - MLPredictiveAnalysis.improved_dashboard_implementation - INFO - Loading and processing data...
+2025-04-30 02:34:37,808 - MLPredictiveAnalysis.improved_dashboard_implementation - INFO - Found funding types in fundraiser data: ['Series A' 'Seed' 'Venture - Series Unknown' 'Debt Financing'
+ 'Undisclosed' 'Grant' 'Private Equity' 'Pre-Seed' 'Series C' 'Series B'
+ 'Series D' 'Series H' 'Angel' 'Series E' 'Series F']
+2025-04-30 02:34:37,808 - MLPredictiveAnalysis.improved_dashboard_implementation - INFO - Loaded 1103 records from fundraiser data
+2025-04-30 02:34:37,809 - MLPredictiveAnalysis.funding_stage_prediction - INFO - Found funding types in growthlist data: ['Series B' 'Seed' 'Pre-Seed' 'Series A' 'Series C'
+ 'Venture - Series Unknown' 'Series E' 'Private Equity' 'Series G'
+ 'Initial Coin Offering']
+2025-04-30 02:34:37,810 - MLPredictiveAnalysis.funding_stage_prediction - INFO - Loaded 100 records from growthlist data
+2025-04-30 02:34:37,816 - MLPredictiveAnalysis.funding_stage_prediction - INFO - Found funding stages in topstartup data: ['Series A' 'Series C' 'Series D' 'Series J' 'Series E' 'Series B'
+ 'Series F' 'Seed' 'Venture - Series Unknown' 'Series I' 'Series G'
+ 'Pre-Seed' 'Series H' 'Post-IPO']
+2025-04-30 02:34:37,817 - MLPredictiveAnalysis.funding_stage_prediction - WARNING - Unreasonably large funding amount detected: $20,000,000,000.00
+2025-04-30 02:34:37,817 - MLPredictiveAnalysis.funding_stage_prediction - WARNING - Unreasonably large funding amount detected: $29,000,000,000.00
+2025-04-30 02:34:37,817 - MLPredictiveAnalysis.funding_stage_prediction - WARNING - Unreasonably large funding amount detected: $13,000,000,000.00
+2025-04-30 02:34:37,817 - MLPredictiveAnalysis.funding_stage_prediction - WARNING - Unreasonably large funding amount detected: $48,000,000,000.00
+2025-04-30 02:34:37,817 - MLPredictiveAnalysis.funding_stage_prediction - WARNING - Unreasonably large funding amount detected: $23,000,000,000.00
+2025-04-30 02:34:37,817 - MLPredictiveAnalysis.funding_stage_prediction - INFO - Loaded 546 records from topstartup data
+2025-04-30 02:34:37,817 - MLPredictiveAnalysis.funding_stage_prediction - INFO - Loaded datasets - Fundraiser: 1103 rows, Growthlist: 100 rows, Topstartup: 546 rows
+2025-04-30 02:34:37,838 - MLPredictiveAnalysis.funding_stage_prediction - INFO - Processed 1103 records from fundraiser data
+2025-04-30 02:34:37,852 - MLPredictiveAnalysis.funding_stage_prediction - INFO - Unique funding stages from fundraiser: {'Series E', 'Pre-Seed', 'Series A', 'Angel', 'Undisclosed', 'Series D', 'Debt Financing', 'Venture - Series Unknown', 'Grant', 'Series B', 'Series F', 'Series H', 'Private Equity', 'Series C', 'Seed'}
+2025-04-30 02:34:37,854 - MLPredictiveAnalysis.funding_stage_prediction - INFO - Processed 100 records from growthlist data
+2025-04-30 02:34:37,863 - MLPredictiveAnalysis.funding_stage_prediction - WARNING - Unreasonably large funding amount detected: $20,000,000,000.00
+2025-04-30 02:34:37,863 - MLPredictiveAnalysis.funding_stage_prediction - WARNING - Unreasonably large funding amount detected: $29,000,000,000.00
+2025-04-30 02:34:37,863 - MLPredictiveAnalysis.funding_stage_prediction - WARNING - Unreasonably large funding amount detected: $13,000,000,000.00
+2025-04-30 02:34:37,864 - MLPredictiveAnalysis.funding_stage_prediction - WARNING - Unreasonably large funding amount detected: $48,000,000,000.00
+2025-04-30 02:34:37,864 - MLPredictiveAnalysis.funding_stage_prediction - WARNING - Unreasonably large funding amount detected: $23,000,000,000.00
+2025-04-30 02:34:37,864 - MLPredictiveAnalysis.funding_stage_prediction - INFO - Processed 546 records from topstartup data
+2025-04-30 02:34:37,872 - MLPredictiveAnalysis.funding_stage_prediction - INFO - Saved 1749 records to historical merged_data
+2025-04-30 02:34:37,872 - MLPredictiveAnalysis.funding_stage_prediction - INFO - Successfully merged 1749 records
+2025-04-30 02:34:37,878 - MLPredictiveAnalysis.improved_dashboard_implementation - INFO - Saved merged data with 1749 records to /Users/hk/Downloads/DSFinalYearProject/FundingStageOutput/data/merged_data_20250430_023437.csv
+2025-04-30 02:34:37,878 - MLPredictiveAnalysis.funding_stage_prediction - INFO - Starting feature extraction for 1749 records
+2025-04-30 02:34:37,878 - MLPredictiveAnalysis.funding_stage_prediction - INFO - Found 20 unique funding stages: ['Series A' 'Seed' 'Venture - Series Unknown' 'Debt Financing'
+ 'Undisclosed' 'Grant' 'Private Equity' 'Pre-Seed' 'Series C' 'Series B'
+ 'Series D' 'Series H' 'Angel' 'Series E' 'Series F' 'Series G'
+ 'Initial Coin Offering' 'Series J' 'Series I' 'Post-IPO']
+2025-04-30 02:34:37,878 - MLPredictiveAnalysis.funding_stage_prediction - INFO - Created funding stage mapping: {'Pre-Seed': 0, 'Seed': 1, 'Angel': 2, 'Series A': 3, 'Series B': 4, 'Series C': 5, 'Series D': 6, 'Series E': 7, 'Series F': 8, 'Series G': 9, 'Series H': 10, 'Venture - Series Unknown': 11, 'Debt Financing': 12, 'Undisclosed': 13, 'Grant': 14, 'Private Equity': 15, 'Initial Coin Offering': 16, 'Series J': 17, 'Series I': 18, 'Post-IPO': 19, 'Unknown': 20}
+2025-04-30 02:34:37,946 - MLPredictiveAnalysis.funding_stage_prediction - INFO - Feature engineering complete: 19 features created
+2025-04-30 02:34:37,957 - MLPredictiveAnalysis.improved_dashboard_implementation - INFO - Saved processed data with 1749 records to /Users/hk/Downloads/DSFinalYearProject/FundingStageOutput/data/processed_data_20250430_023437.csv
+2025-04-30 02:34:37,957 - MLPredictiveAnalysis.funding_stage_prediction - INFO - Preparing model data with features: ['funding_amount_log', 'employees', 'employee_efficiency', 'funding_year', 'funding_month', 'previous_rounds', 'months_since_first_funding', 'funding_velocity']
+2025-04-30 02:34:37,960 - MLPredictiveAnalysis.funding_stage_prediction - INFO - Original class distribution:
+funding_stage_numeric
+1     347
+3     313
+4     223
+11    197
+5     179
+0     124
+6      84
+14     67
+12     43
+7      39
+19     34
+15     28
+13     25
+8      23
+10      7
+9       7
+2       4
+18      2
+16      1
+17      1
+20      1
+Name: count, dtype: int64
+2025-04-30 02:34:37,960 - MLPredictiveAnalysis.funding_stage_prediction - INFO - Found 7 rare classes: Index([10, 9, 2, 18, 16, 17, 20], dtype='int64', name='funding_stage_numeric')
+2025-04-30 02:34:37,960 - MLPredictiveAnalysis.funding_stage_prediction - INFO - Merged rare classes into related major classes
+2025-04-30 02:34:37,960 - MLPredictiveAnalysis.funding_stage_prediction - INFO - Updated class distribution after merging:
+funding_stage_numeric
+1     351
+3     313
+4     223
+11    201
+5     179
+0     124
+6      84
+14     67
+12     43
+7      39
+8      37
+19     34
+15     28
+13     25
+20      1
+Name: count, dtype: int64
+2025-04-30 02:34:37,961 - MLPredictiveAnalysis.funding_stage_prediction - INFO - Remapped classes to be continuous. Class mapping: {np.int64(0): 0, np.int64(1): 1, np.int64(3): 2, np.int64(4): 3, np.int64(5): 4, np.int64(6): 5, np.int64(7): 6, np.int64(8): 7, np.int64(11): 8, np.int64(12): 9, np.int64(13): 10, np.int64(14): 11, np.int64(15): 12, np.int64(19): 13, np.int64(20): 14}
+2025-04-30 02:34:37,962 - MLPredictiveAnalysis.funding_stage_prediction - INFO - Prepared model data: X shape=(1749, 8), y shape=(1749,)
+2025-04-30 02:34:37,962 - MLPredictiveAnalysis.funding_stage_prediction - INFO - Final class distribution: {1: 351, 2: 313, 3: 223, 8: 201, 4: 179, 0: 124, 5: 84, 11: 67, 9: 43, 6: 39, 7: 37, 13: 34, 12: 28, 10: 25, 14: 1}
+2025-04-30 02:34:37,962 - MLPredictiveAnalysis.improved_dashboard_implementation - INFO - Training classification models...
+2025-04-30 02:34:37,963 - __main__ - ERROR - Error running improved dashboards: The least populated class in y has only 1 member, which is too few. The minimum number of groups for any class cannot be less than 2.
+2025-04-30 02:34:37,964 - __main__ - ERROR - Traceback (most recent call last):
+  File "/Users/hk/Downloads/DSFinalYearProject/MLPredictiveAnalysis/run_improved_dashboards.py", line 60, in run_improved_dashboards
+    dashboard_paths = dashboard_impl.generate_dashboards()
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/hk/Downloads/DSFinalYearProject/MLPredictiveAnalysis/improved_dashboard_implementation.py", line 395, in generate_dashboards
+    classification_results = self.run_classification_models(X, y)
+                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/hk/Downloads/DSFinalYearProject/MLPredictiveAnalysis/improved_dashboard_implementation.py", line 223, in run_classification_models
+    X_train, X_test, y_train, y_test = train_test_split(
+                                       ^^^^^^^^^^^^^^^^^
+  File "/Users/hk/Downloads/DSFinalYearProject/.venv/lib/python3.12/site-packages/sklearn/utils/_param_validation.py", line 216, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/hk/Downloads/DSFinalYearProject/.venv/lib/python3.12/site-packages/sklearn/model_selection/_split.py", line 2872, in train_test_split
+    train, test = next(cv.split(X=arrays[0], y=stratify))
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/hk/Downloads/DSFinalYearProject/.venv/lib/python3.12/site-packages/sklearn/model_selection/_split.py", line 1909, in split
+    for train, test in self._iter_indices(X, y, groups):
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/hk/Downloads/DSFinalYearProject/.venv/lib/python3.12/site-packages/sklearn/model_selection/_split.py", line 2318, in _iter_indices
+    raise ValueError(
+ValueError: The least populated class in y has only 1 member, which is too few. The minimum number of groups for any class cannot be less than 2.
+

@@ -1,0 +1,60 @@
+
+            <!DOCTYPE html>
+            <html>
+                <head>
+                    <meta charset="UTF-8">
+                    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                    <title>Time Series Dashboard</title>
+                    <style>
+                        body { font-family: Arial, sans-serif; margin: 0; padding: 20px; }
+                        h1 { color: #333; }
+                        .dashboard-links { display: flex; flex-wrap: wrap; }
+                        .dashboard-card { 
+                            margin: 10px; 
+                            padding: 15px; 
+                            border: 1px solid #ddd; 
+                            border-radius: 8px;
+                            width: 300px;
+                            background-color: #f9f9f9;
+                        }
+                        .dashboard-card h2 { margin-top: 0; }
+                        .dashboard-card a { 
+                            display: block; 
+                            margin-top: 10px; 
+                            padding: 8px 15px; 
+                            background-color: #4CAF50; 
+                            color: white; 
+                            text-decoration: none; 
+                            border-radius: 4px;
+                            text-align: center;
+                        }
+                        .dashboard-card a:hover { background-color: #45a049; }
+                    </style>
+                </head>
+                <body>
+                    <h1>Time Series Dashboard</h1>
+                    <div class="dashboard-links">
+                        <div class="dashboard-card">
+                            <h2>Funding Trends</h2>
+                            <p>View historical data and forecasted funding trends with confidence intervals.</p>
+                            <a href="funding_trends.html">View Dashboard</a>
+                        </div>
+                        <div class="dashboard-card">
+                            <h2>Forecast Components</h2>
+                            <p>Explore the trend and seasonal components of the forecast.</p>
+                            <a href="forecast_components.html">View Dashboard</a>
+                        </div>
+                        <div class="dashboard-card">
+                            <h2>Industry Comparison</h2>
+                            <p>Compare funding forecasts across different industries.</p>
+                            <a href="industry_comparison.html">View Dashboard</a>
+                        </div>
+                        <div class="dashboard-card">
+                            <h2>Stage Transitions</h2>
+                            <p>Visualize how funding stage composition changes over time.</p>
+                            <a href="stage_transitions.html">View Dashboard</a>
+                        </div>
+                    </div>
+                </body>
+            </html>
+            

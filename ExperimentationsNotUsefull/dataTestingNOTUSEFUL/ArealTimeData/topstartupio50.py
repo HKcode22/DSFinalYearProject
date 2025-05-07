@@ -175,15 +175,13 @@ class TopStartupsScraper:
         """Set up and configure the Chrome WebDriver - PERFORMANCE OPTIMIZED"""
         chrome_options = Options()
         if headless:
-            chrome_options.add_argument("--headless")
+            chrome_options.add_argument("--headless=new")
+            chrome_options.add_argument("--disable-gpu")
+            chrome_options.add_argument("--window-size=1920,1080")
         
         # Add common options for stability and performance
         chrome_options.add_argument("--no-sandbox")
         chrome_options.add_argument("--disable-dev-shm-usage")
-        chrome_options.add_argument("--disable-gpu")
-        chrome_options.add_argument("--window-size=1920,1080")
-        
-        # Performance optimizations
         chrome_options.add_argument("--disable-extensions")
         chrome_options.add_argument("--disable-infobars")
         chrome_options.add_argument("--disable-notifications")
@@ -698,7 +696,7 @@ def main():
     logger.info("Initializing TopStartups.io scraper")
     
     while True:
-        scraper = TopStartupsScraper(headless=False)  # Set to True for headless mode
+        scraper = TopStartupsScraper(headless=True)  # Ensure headless=True
         
         try:
             # Start the scraping process
@@ -749,7 +747,7 @@ if __name__ == "__main__":
     
     if args.once:
         # Single run mode
-        scraper = TopStartupsScraper(headless=False)
+        scraper = TopStartupsScraper(headless=True) # Ensure headless=True
         try:
             scraper.scrape_startups(max_startups=None)
             scraper.save_results()
@@ -759,4 +757,5 @@ if __name__ == "__main__":
         # Start continuous collection
         logger.info("Starting continuous data collection service")
         logger.info("Data will be collected every 24 hours")
+        # The main() function already handles the continuous loop with headless=True
         main()

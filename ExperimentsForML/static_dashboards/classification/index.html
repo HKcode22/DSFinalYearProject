@@ -1,0 +1,60 @@
+
+            <!DOCTYPE html>
+            <html>
+                <head>
+                    <meta charset="UTF-8">
+                    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                    <title>Classification Dashboard</title>
+                    <style>
+                        body { font-family: Arial, sans-serif; margin: 0; padding: 20px; }
+                        h1 { color: #333; }
+                        .dashboard-links { display: flex; flex-wrap: wrap; }
+                        .dashboard-card { 
+                            margin: 10px; 
+                            padding: 15px; 
+                            border: 1px solid #ddd; 
+                            border-radius: 8px;
+                            width: 300px;
+                            background-color: #f9f9f9;
+                        }
+                        .dashboard-card h2 { margin-top: 0; }
+                        .dashboard-card a { 
+                            display: block; 
+                            margin-top: 10px; 
+                            padding: 8px 15px; 
+                            background-color: #4CAF50; 
+                            color: white; 
+                            text-decoration: none; 
+                            border-radius: 4px;
+                            text-align: center;
+                        }
+                        .dashboard-card a:hover { background-color: #45a049; }
+                    </style>
+                </head>
+                <body>
+                    <h1>Classification Dashboard</h1>
+                    <div class="dashboard-links">
+                        <div class="dashboard-card">
+                            <h2>Model Performance</h2>
+                            <p>Compare accuracy, precision, recall, and F1 scores across different models.</p>
+                            <a href="model_metrics.html">View Dashboard</a>
+                        </div>
+                        <div class="dashboard-card">
+                            <h2>Confusion Matrix</h2>
+                            <p>Visualize model predictions across different classes.</p>
+                            <a href="confusion_matrix.html">View Dashboard</a>
+                        </div>
+                        <div class="dashboard-card">
+                            <h2>Feature Importance</h2>
+                            <p>Explore which features have the most impact on predictions.</p>
+                            <a href="feature_importance.html">View Dashboard</a>
+                        </div>
+                        <div class="dashboard-card">
+                            <h2>ROC Curves</h2>
+                            <p>Analyze model performance with ROC curves for each class.</p>
+                            <a href="roc_curves.html">View Dashboard</a>
+                        </div>
+                    </div>
+                </body>
+            </html>
+            

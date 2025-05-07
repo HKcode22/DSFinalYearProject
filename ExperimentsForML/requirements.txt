@@ -1,0 +1,11 @@
+dash==2.17.0
+dash-bootstrap-components==1.6.0
+plotly==5.22.0
+pandas==2.2.2
+numpy==1.26.4
+scikit-learn==1.5.0
+joblib==1.4.2
+xgboost>=1.6.0 # Or the version used in your pipeline
+# lightgbm>=3.0.0 # Add if LightGBM was used and needs loading
+# catboost>=1.0.0 # Add if CatBoost was used and needs loading
+# prophet>=1.1.0 # Only needed if you were generating forecast *within* dash 

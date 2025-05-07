@@ -1,0 +1,19 @@
+{
+  "run_timestamp": "20250430_183119",
+  "data_shape": {
+    "initial_records_merged": 1748,
+    "records_after_preprocessing": 1748,
+    "features_used": 8
+  },
+  "feature_names": [
+    "funding_amount_log",
+    "employees",
+    "employee_efficiency",
+    "funding_year",
+    "funding_month",
+    "previous_rounds",
+    "months_since_first_funding",
+    "funding_velocity"
+  ],
+  "class_mapping": {
+    

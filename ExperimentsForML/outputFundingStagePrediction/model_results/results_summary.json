@@ -1,0 +1,16 @@
+{
+  "random_forest": {
+    "accuracy": 0.9057142857142857,
+    "rmse": 0.8864052604279183,
+    "f1_weighted": 0.9049625356391664,
+    "model_file": "/Users/hk/Downloads/DSFinalYearProject/outputFundingStagePrediction/model_results/random_forest_model.joblib",
+    "metrics_file": "/Users/hk/Downloads/DSFinalYearProject/outputFundingStagePrediction/model_results/random_forest_metrics.json"
+  },
+  "lightgbm": {
+    "accuracy": 0.92,
+    "rmse": 0.7071067811865476,
+    "f1_weighted": 0.9197516160433171,
+    "model_file": "/Users/hk/Downloads/DSFinalYearProject/outputFundingStagePrediction/model_results/lightgbm_model.joblib",
+    "metrics_file": "/Users/hk/Downloads/DSFinalYearProject/outputFundingStagePrediction/model_results/lightgbm_metrics.json"
+  }
+}

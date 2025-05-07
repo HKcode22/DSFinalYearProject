@@ -1,0 +1,1330 @@
+{
+    "run_timestamp": "20250504_185822",
+    "data_shape": {
+        "initial_records_merged": 1748,
+        "records_after_preprocessing": 1748,
+        "features_used": 110
+    },
+    "feature_names": [
+        "funding_amount_log",
+        "employees",
+        "employee_efficiency",
+        "funding_year",
+        "funding_month",
+        "previous_rounds",
+        "months_since_first_funding",
+        "funding_velocity",
+        "month_sin",
+        "month_cos",
+        "funding_amount_x_age",
+        "employees_x_rounds",
+        "velocity_x_rounds",
+        "age_x_employees",
+        "industry_category_0",
+        "industry_category_AI & ML",
+        "industry_category_Aerospace",
+        "industry_category_Airlines/Aviation",
+        "industry_category_Apparel & Fashion",
+        "industry_category_Architecture, Media",
+        "industry_category_Augmented Reality",
+        "industry_category_Automotive",
+        "industry_category_Aviation & Aerospace",
+        "industry_category_Banking",
+        "industry_category_Biotech",
+        "industry_category_Blockchain",
+        "industry_category_Blockchain, Data",
+        "industry_category_Blockchain, Gaming",
+        "industry_category_Building Materials",
+        "industry_category_Chemicals",
+        "industry_category_Cloud Computing",
+        "industry_category_Cloud Computing, Architecture",
+        "industry_category_Cloud Computing, Cyber Security",
+        "industry_category_Cloud Computing, Data, Government, Community",
+        "industry_category_Cloud Computing, Electronics",
+        "industry_category_Computer & Network Security",
+        "industry_category_Computer Games",
+        "industry_category_Computer Hardware",
+        "industry_category_Computer Networking",
+        "industry_category_Construction",
+        "industry_category_Construction, Marketplace, Aerospace",
+        "industry_category_Construction, Materials",
+        "industry_category_Consumer Services",
+        "industry_category_Cyber Security",
+        "industry_category_Data",
+        "industry_category_Defense & Space",
+        "industry_category_Design",
+        "industry_category_E-Learning",
+        "industry_category_EdTech",
+        "industry_category_Electrical/Electronic Manufacturing",
+        "industry_category_Electronics",
+        "industry_category_Energy",
+        "industry_category_Entertainment",
+        "industry_category_Entertainment, Music",
+        "industry_category_Environmental Services",
+        "industry_category_Family",
+        "industry_category_Farming",
+        "industry_category_FinTech",
+        "industry_category_Food & Agriculture",
+        "industry_category_Fund-Raising",
+        "industry_category_Government Administration",
+        "industry_category_Healthcare",
+        "industry_category_Hospitality",
+        "industry_category_Human Resources",
+        "industry_category_Human Resources, Recruiting",
+        "industry_category_IT & Software",
+        "industry_category_Individual & Family Services",
+        "industry_category_Industrial Automation",
+        "industry_category_Information Services",
+        "industry_category_Insurance",
+        "industry_category_Internet",
+        "industry_category_Investment Management",
+        "industry_category_Legal Services",
+        "industry_category_Machinery",
+        "industry_category_Management Consulting",
+        "industry_category_Maritime",
+        "industry_category_Market Research",
+        "industry_category_Marketing & Advertising",
+        "industry_category_Mechanical Or Industrial Engineering",
+        "industry_category_Media Production",
+        "industry_category_Medical Devices",
+        "industry_category_Medical Practice",
+        "industry_category_Mining & Metals",
+        "industry_category_Museums & Institutions",
+        "industry_category_Music",
+        "industry_category_Nanotechnology",
+        "industry_category_Nonprofit Organization Management",
+        "industry_category_Online Media",
+        "industry_category_Packaging & Containers",
+        "industry_category_Performing Arts",
+        "industry_category_Pharmaceuticals",
+        "industry_category_Professional Training & Coaching",
+        "industry_category_Public Safety",
+        "industry_category_Real Estate",
+        "industry_category_Research",
+        "industry_category_Restaurants",
+        "industry_category_Retail",
+        "industry_category_Semiconductors",
+        "industry_category_Social Network, Audio",
+        "industry_category_Social Network, Community",
+        "industry_category_Sports",
+        "industry_category_Telecommunications",
+        "industry_category_Transport & Logistics",
+        "industry_category_Unknown",
+        "industry_category_Utilities",
+        "industry_category_Venture Capital & Private Equity",
+        "industry_category_Veterinary",
+        "industry_category_Wholesale",
+        "industry_category_Wireless",
+        "company_age_bin_(0.0, 88.0]"
+    ],
+    "class_mapping": {
+        "0": "Grant",
+        "1": "Pre-Seed",
+        "2": "Private Equity",
+        "3": "Seed",
+        "4": "Series A",
+        "5": "Series B",
+        "6": "Series C",
+        "7": "Series D",
+        "8": "Series E",
+        "9": "Series F",
+        "10": "debt financing",
+        "11": "post-ipo",
+        "12": "undisclosed",
+        "13": "venture - series unknown"
+    },
+    "age_bin_edges": [
+        0.0,
+        88.0
+    ],
+    "age_bin_labels": [
+        "(0.0, 88.0]"
+    ],
+    "metrics": {
+        "Random Forest (Calibrated)": {
+            "accuracy": 0.86,
+            "precision_weighted": 0.8860560114762087,
+            "recall_weighted": 0.86,
+            "f1_weighted": 0.8676119158352195,
+            "rmse": 2.099659836395274,
+            "cross_val_accuracy_mean": 0.8798361495135689,
+            "cross_val_accuracy_std": 0.014681664468794533,
+            "classification_report": {
+                "0": {
+                    "precision": 0.35714285714285715,
+                    "recall": 0.7692307692307693,
+                    "f1-score": 0.4878048780487805,
+                    "support": 13.0
+                },
+                "1": {
+                    "precision": 0.9615384615384616,
+                    "recall": 1.0,
+                    "f1-score": 0.9803921568627451,
+                    "support": 25.0
+                },
+                "2": {
+                    "precision": 0.8333333333333334,
+                    "recall": 1.0,
+                    "f1-score": 0.9090909090909091,
+                    "support": 5.0
+                },
+                "3": {
+                    "precision": 0.8933333333333333,
+                    "recall": 0.9054054054054054,
+                    "f1-score": 0.8993288590604027,
+                    "support": 74.0
+                },
+                "4": {
+                    "precision": 0.9666666666666667,
+                    "recall": 0.9206349206349206,
+                    "f1-score": 0.943089430894309,
+                    "support": 63.0
+                },
+                "5": {
+                    "precision": 0.9285714285714286,
+                    "recall": 0.8666666666666667,
+                    "f1-score": 0.896551724137931,
+                    "support": 45.0
+                },
+                "6": {
+                    "precision": 0.9310344827586207,
+                    "recall": 0.75,
+                    "f1-score": 0.8307692307692308,
+                    "support": 36.0
+                },
+                "7": {
+                    "precision": 0.8461538461538461,
+                    "recall": 0.6470588235294118,
+                    "f1-score": 0.7333333333333333,
+                    "support": 17.0
+                },
+                "8": {
+                    "precision": 0.5,
+                    "recall": 0.5,
+                    "f1-score": 0.5,
+                    "support": 8.0
+                },
+                "9": {
+                    "precision": 0.6,
+                    "recall": 0.75,
+                    "f1-score": 0.6666666666666666,
+                    "support": 4.0
+                },
+                "10": {
+                    "precision": 0.6666666666666666,
+                    "recall": 0.6666666666666666,
+                    "f1-score": 0.6666666666666666,
+                    "support": 9.0
+                },
+                "11": {
+                    "precision": 0.875,
+                    "recall": 1.0,
+                    "f1-score": 0.9333333333333333,
+                    "support": 7.0
+                },
+                "12": {
+                    "precision": 0.8333333333333334,
+                    "recall": 1.0,
+                    "f1-score": 0.9090909090909091,
+                    "support": 5.0
+                },
+                "13": {
+                    "precision": 0.9714285714285714,
+                    "recall": 0.8717948717948718,
+                    "f1-score": 0.918918918918919,
+                    "support": 39.0
+                },
+                "accuracy": 0.86,
+                "macro avg": {
+                    "precision": 0.7974430700662227,
+                    "recall": 0.8319612945663365,
+                    "f1-score": 0.8053597869195812,
+                    "support": 350.0
+                },
+                "weighted avg": {
+                    "precision": 0.8860560114762087,
+                    "recall": 0.86,
+                    "f1-score": 0.8676119158352195,
+                    "support": 350.0
+                }
+            },
+            "version": "202505041859",
+            "created_at": "2025-05-04T18:59:32.065253",
+            "feature_names": [
+                "funding_amount_log",
+                "employees",
+                "employee_efficiency",
+                "funding_year",
+                "funding_month",
+                "previous_rounds",
+                "months_since_first_funding",
+                "funding_velocity",
+                "month_sin",
+                "month_cos",
+                "funding_amount_x_age",
+                "employees_x_rounds",
+                "velocity_x_rounds",
+                "age_x_employees",
+                "industry_category_0",
+                "industry_category_AI & ML",
+                "industry_category_Aerospace",
+                "industry_category_Airlines/Aviation",
+                "industry_category_Apparel & Fashion",
+                "industry_category_Architecture, Media",
+                "industry_category_Augmented Reality",
+                "industry_category_Automotive",
+                "industry_category_Aviation & Aerospace",
+                "industry_category_Banking",
+                "industry_category_Biotech",
+                "industry_category_Blockchain",
+                "industry_category_Blockchain, Data",
+                "industry_category_Blockchain, Gaming",
+                "industry_category_Building Materials",
+                "industry_category_Chemicals",
+                "industry_category_Cloud Computing",
+                "industry_category_Cloud Computing, Architecture",
+                "industry_category_Cloud Computing, Cyber Security",
+                "industry_category_Cloud Computing, Data, Government, Community",
+                "industry_category_Cloud Computing, Electronics",
+                "industry_category_Computer & Network Security",
+                "industry_category_Computer Games",
+                "industry_category_Computer Hardware",
+                "industry_category_Computer Networking",
+                "industry_category_Construction",
+                "industry_category_Construction, Marketplace, Aerospace",
+                "industry_category_Construction, Materials",
+                "industry_category_Consumer Services",
+                "industry_category_Cyber Security",
+                "industry_category_Data",
+                "industry_category_Defense & Space",
+                "industry_category_Design",
+                "industry_category_E-Learning",
+                "industry_category_EdTech",
+                "industry_category_Electrical/Electronic Manufacturing",
+                "industry_category_Electronics",
+                "industry_category_Energy",
+                "industry_category_Entertainment",
+                "industry_category_Entertainment, Music",
+                "industry_category_Environmental Services",
+                "industry_category_Family",
+                "industry_category_Farming",
+                "industry_category_FinTech",
+                "industry_category_Food & Agriculture",
+                "industry_category_Fund-Raising",
+                "industry_category_Government Administration",
+                "industry_category_Healthcare",
+                "industry_category_Hospitality",
+                "industry_category_Human Resources",
+                "industry_category_Human Resources, Recruiting",
+                "industry_category_IT & Software",
+                "industry_category_Individual & Family Services",
+                "industry_category_Industrial Automation",
+                "industry_category_Information Services",
+                "industry_category_Insurance",
+                "industry_category_Internet",
+                "industry_category_Investment Management",
+                "industry_category_Legal Services",
+                "industry_category_Machinery",
+                "industry_category_Management Consulting",
+                "industry_category_Maritime",
+                "industry_category_Market Research",
+                "industry_category_Marketing & Advertising",
+                "industry_category_Mechanical Or Industrial Engineering",
+                "industry_category_Media Production",
+                "industry_category_Medical Devices",
+                "industry_category_Medical Practice",
+                "industry_category_Mining & Metals",
+                "industry_category_Museums & Institutions",
+                "industry_category_Music",
+                "industry_category_Nanotechnology",
+                "industry_category_Nonprofit Organization Management",
+                "industry_category_Online Media",
+                "industry_category_Packaging & Containers",
+                "industry_category_Performing Arts",
+                "industry_category_Pharmaceuticals",
+                "industry_category_Professional Training & Coaching",
+                "industry_category_Public Safety",
+                "industry_category_Real Estate",
+                "industry_category_Research",
+                "industry_category_Restaurants",
+                "industry_category_Retail",
+                "industry_category_Semiconductors",
+                "industry_category_Social Network, Audio",
+                "industry_category_Social Network, Community",
+                "industry_category_Sports",
+                "industry_category_Telecommunications",
+                "industry_category_Transport & Logistics",
+                "industry_category_Unknown",
+                "industry_category_Utilities",
+                "industry_category_Venture Capital & Private Equity",
+                "industry_category_Veterinary",
+                "industry_category_Wholesale",
+                "industry_category_Wireless",
+                "company_age_bin_(0.0, 88.0]"
+            ],
+            "model_type": "CalibratedClassifierCV"
+        },
+        "XGBoost (Calibrated)": {
+            "accuracy": 0.9028571428571428,
+            "precision_weighted": 0.9093508528546204,
+            "recall_weighted": 0.9028571428571428,
+            "f1_weighted": 0.9041703965187371,
+            "rmse": 1.5537971921347118,
+            "cross_val_accuracy_mean": 0.9055837173579109,
+            "cross_val_accuracy_std": 0.014004789876213354,
+            "classification_report": {
+                "0": {
+                    "precision": 0.9285714285714286,
+                    "recall": 1.0,
+                    "f1-score": 0.9629629629629629,
+                    "support": 13.0
+                },
+                "1": {
+                    "precision": 0.96,
+                    "recall": 0.96,
+                    "f1-score": 0.96,
+                    "support": 25.0
+                },
+                "2": {
+                    "precision": 1.0,
+                    "recall": 1.0,
+                    "f1-score": 1.0,
+                    "support": 5.0
+                },
+                "3": {
+                    "precision": 0.9710144927536232,
+                    "recall": 0.9054054054054054,
+                    "f1-score": 0.9370629370629371,
+                    "support": 74.0
+                },
+                "4": {
+                    "precision": 0.9508196721311475,
+                    "recall": 0.9206349206349206,
+                    "f1-score": 0.9354838709677419,
+                    "support": 63.0
+                },
+                "5": {
+                    "precision": 1.0,
+                    "recall": 0.9111111111111111,
+                    "f1-score": 0.9534883720930233,
+                    "support": 45.0
+                },
+                "6": {
+                    "precision": 0.825,
+                    "recall": 0.9166666666666666,
+                    "f1-score": 0.868421052631579,
+                    "support": 36.0
+                },
+                "7": {
+                    "precision": 0.7647058823529411,
+                    "recall": 0.7647058823529411,
+                    "f1-score": 0.7647058823529411,
+                    "support": 17.0
+                },
+                "8": {
+                    "precision": 0.4444444444444444,
+                    "recall": 0.5,
+                    "f1-score": 0.47058823529411764,
+                    "support": 8.0
+                },
+                "9": {
+                    "precision": 0.6666666666666666,
+                    "recall": 0.5,
+                    "f1-score": 0.5714285714285714,
+                    "support": 4.0
+                },
+                "10": {
+                    "precision": 0.6923076923076923,
+                    "recall": 1.0,
+                    "f1-score": 0.8181818181818182,
+                    "support": 9.0
+                },
+                "11": {
+                    "precision": 0.875,
+                    "recall": 1.0,
+                    "f1-score": 0.9333333333333333,
+                    "support": 7.0
+                },
+                "12": {
+                    "precision": 0.8333333333333334,
+                    "recall": 1.0,
+                    "f1-score": 0.9090909090909091,
+                    "support": 5.0
+                },
+                "13": {
+                    "precision": 0.8974358974358975,
+                    "recall": 0.8974358974358975,
+                    "f1-score": 0.8974358974358975,
+                    "support": 39.0
+                },
+                "accuracy": 0.9028571428571428,
+                "macro avg": {
+                    "precision": 0.8435213935712268,
+                    "recall": 0.8768542774004959,
+                    "f1-score": 0.8558702744882737,
+                    "support": 350.0
+                },
+                "weighted avg": {
+                    "precision": 0.9093508528546204,
+                    "recall": 0.9028571428571428,
+                    "f1-score": 0.9041703965187371,
+                    "support": 350.0
+                }
+            },
+            "version": "202505041859",
+            "created_at": "2025-05-04T18:59:32.055713",
+            "feature_names": [
+                "funding_amount_log",
+                "employees",
+                "employee_efficiency",
+                "funding_year",
+                "funding_month",
+                "previous_rounds",
+                "months_since_first_funding",
+                "funding_velocity",
+                "month_sin",
+                "month_cos",
+                "funding_amount_x_age",
+                "employees_x_rounds",
+                "velocity_x_rounds",
+                "age_x_employees",
+                "industry_category_0",
+                "industry_category_AI & ML",
+                "industry_category_Aerospace",
+                "industry_category_Airlines/Aviation",
+                "industry_category_Apparel & Fashion",
+                "industry_category_Architecture, Media",
+                "industry_category_Augmented Reality",
+                "industry_category_Automotive",
+                "industry_category_Aviation & Aerospace",
+                "industry_category_Banking",
+                "industry_category_Biotech",
+                "industry_category_Blockchain",
+                "industry_category_Blockchain, Data",
+                "industry_category_Blockchain, Gaming",
+                "industry_category_Building Materials",
+                "industry_category_Chemicals",
+                "industry_category_Cloud Computing",
+                "industry_category_Cloud Computing, Architecture",
+                "industry_category_Cloud Computing, Cyber Security",
+                "industry_category_Cloud Computing, Data, Government, Community",
+                "industry_category_Cloud Computing, Electronics",
+                "industry_category_Computer & Network Security",
+                "industry_category_Computer Games",
+                "industry_category_Computer Hardware",
+                "industry_category_Computer Networking",
+                "industry_category_Construction",
+                "industry_category_Construction, Marketplace, Aerospace",
+                "industry_category_Construction, Materials",
+                "industry_category_Consumer Services",
+                "industry_category_Cyber Security",
+                "industry_category_Data",
+                "industry_category_Defense & Space",
+                "industry_category_Design",
+                "industry_category_E-Learning",
+                "industry_category_EdTech",
+                "industry_category_Electrical/Electronic Manufacturing",
+                "industry_category_Electronics",
+                "industry_category_Energy",
+                "industry_category_Entertainment",
+                "industry_category_Entertainment, Music",
+                "industry_category_Environmental Services",
+                "industry_category_Family",
+                "industry_category_Farming",
+                "industry_category_FinTech",
+                "industry_category_Food & Agriculture",
+                "industry_category_Fund-Raising",
+                "industry_category_Government Administration",
+                "industry_category_Healthcare",
+                "industry_category_Hospitality",
+                "industry_category_Human Resources",
+                "industry_category_Human Resources, Recruiting",
+                "industry_category_IT & Software",
+                "industry_category_Individual & Family Services",
+                "industry_category_Industrial Automation",
+                "industry_category_Information Services",
+                "industry_category_Insurance",
+                "industry_category_Internet",
+                "industry_category_Investment Management",
+                "industry_category_Legal Services",
+                "industry_category_Machinery",
+                "industry_category_Management Consulting",
+                "industry_category_Maritime",
+                "industry_category_Market Research",
+                "industry_category_Marketing & Advertising",
+                "industry_category_Mechanical Or Industrial Engineering",
+                "industry_category_Media Production",
+                "industry_category_Medical Devices",
+                "industry_category_Medical Practice",
+                "industry_category_Mining & Metals",
+                "industry_category_Museums & Institutions",
+                "industry_category_Music",
+                "industry_category_Nanotechnology",
+                "industry_category_Nonprofit Organization Management",
+                "industry_category_Online Media",
+                "industry_category_Packaging & Containers",
+                "industry_category_Performing Arts",
+                "industry_category_Pharmaceuticals",
+                "industry_category_Professional Training & Coaching",
+                "industry_category_Public Safety",
+                "industry_category_Real Estate",
+                "industry_category_Research",
+                "industry_category_Restaurants",
+                "industry_category_Retail",
+                "industry_category_Semiconductors",
+                "industry_category_Social Network, Audio",
+                "industry_category_Social Network, Community",
+                "industry_category_Sports",
+                "industry_category_Telecommunications",
+                "industry_category_Transport & Logistics",
+                "industry_category_Unknown",
+                "industry_category_Utilities",
+                "industry_category_Venture Capital & Private Equity",
+                "industry_category_Veterinary",
+                "industry_category_Wholesale",
+                "industry_category_Wireless",
+                "company_age_bin_(0.0, 88.0]"
+            ],
+            "model_type": "CalibratedClassifierCV"
+        },
+        "Gradient Boosting (Calibrated)": {
+            "accuracy": 0.88,
+            "precision_weighted": 0.8952072441016541,
+            "recall_weighted": 0.88,
+            "f1_weighted": 0.8827568951204299,
+            "rmse": 1.75824587911605,
+            "cross_val_accuracy_mean": 0.9005657962109576,
+            "cross_val_accuracy_std": 0.013866099835773003,
+            "classification_report": {
+                "0": {
+                    "precision": 0.65,
+                    "recall": 1.0,
+                    "f1-score": 0.7878787878787878,
+                    "support": 13.0
+                },
+                "1": {
+                    "precision": 0.9230769230769231,
+                    "recall": 0.96,
+                    "f1-score": 0.9411764705882353,
+                    "support": 25.0
+                },
+                "2": {
+                    "precision": 1.0,
+                    "recall": 1.0,
+                    "f1-score": 1.0,
+                    "support": 5.0
+                },
+                "3": {
+                    "precision": 0.9565217391304348,
+                    "recall": 0.8918918918918919,
+                    "f1-score": 0.9230769230769231,
+                    "support": 74.0
+                },
+                "4": {
+                    "precision": 0.8923076923076924,
+                    "recall": 0.9206349206349206,
+                    "f1-score": 0.90625,
+                    "support": 63.0
+                },
+                "5": {
+                    "precision": 1.0,
+                    "recall": 0.8666666666666667,
+                    "f1-score": 0.9285714285714286,
+                    "support": 45.0
+                },
+                "6": {
+                    "precision": 0.8611111111111112,
+                    "recall": 0.8611111111111112,
+                    "f1-score": 0.8611111111111112,
+                    "support": 36.0
+                },
+                "7": {
+                    "precision": 0.6666666666666666,
+                    "recall": 0.8235294117647058,
+                    "f1-score": 0.7368421052631579,
+                    "support": 17.0
+                },
+                "8": {
+                    "precision": 0.5,
+                    "recall": 0.375,
+                    "f1-score": 0.42857142857142855,
+                    "support": 8.0
+                },
+                "9": {
+                    "precision": 0.42857142857142855,
+                    "recall": 0.75,
+                    "f1-score": 0.5454545454545454,
+                    "support": 4.0
+                },
+                "10": {
+                    "precision": 0.75,
+                    "recall": 1.0,
+                    "f1-score": 0.8571428571428571,
+                    "support": 9.0
+                },
+                "11": {
+                    "precision": 0.8571428571428571,
+                    "recall": 0.8571428571428571,
+                    "f1-score": 0.8571428571428571,
+                    "support": 7.0
+                },
+                "12": {
+                    "precision": 1.0,
+                    "recall": 1.0,
+                    "f1-score": 1.0,
+                    "support": 5.0
+                },
+                "13": {
+                    "precision": 1.0,
+                    "recall": 0.8205128205128205,
+                    "f1-score": 0.9014084507042254,
+                    "support": 39.0
+                },
+                "accuracy": 0.88,
+                "macro avg": {
+                    "precision": 0.8203856012862225,
+                    "recall": 0.8661778342660698,
+                    "f1-score": 0.83390192610754,
+                    "support": 350.0
+                },
+                "weighted avg": {
+                    "precision": 0.8952072441016541,
+                    "recall": 0.88,
+                    "f1-score": 0.8827568951204299,
+                    "support": 350.0
+                }
+            }
+        },
+        "Logistic Regression": {
+            "accuracy": 0.5342857142857143,
+            "precision_weighted": 0.47537045298953934,
+            "recall_weighted": 0.5342857142857143,
+            "f1_weighted": 0.4710969729483568,
+            "rmse": 3.4454939517329835,
+            "cross_val_accuracy_mean": 0.5622017409114184,
+            "cross_val_accuracy_std": 0.022466445638462094,
+            "classification_report": {
+                "0": {
+                    "precision": 0.0,
+                    "recall": 0.0,
+                    "f1-score": 0.0,
+                    "support": 13.0
+                },
+                "1": {
+                    "precision": 0.8695652173913043,
+                    "recall": 0.8,
+                    "f1-score": 0.8333333333333334,
+                    "support": 25.0
+                },
+                "2": {
+                    "precision": 0.6666666666666666,
+                    "recall": 0.4,
+                    "f1-score": 0.5,
+                    "support": 5.0
+                },
+                "3": {
+                    "precision": 0.6095238095238096,
+                    "recall": 0.8648648648648649,
+                    "f1-score": 0.7150837988826816,
+                    "support": 74.0
+                },
+                "4": {
+                    "precision": 0.4953271028037383,
+                    "recall": 0.8412698412698413,
+                    "f1-score": 0.6235294117647059,
+                    "support": 63.0
+                },
+                "5": {
+                    "precision": 0.4444444444444444,
+                    "recall": 0.5333333333333333,
+                    "f1-score": 0.48484848484848486,
+                    "support": 45.0
+                },
+                "6": {
+                    "precision": 0.26666666666666666,
+                    "recall": 0.2222222222222222,
+                    "f1-score": 0.24242424242424243,
+                    "support": 36.0
+                },
+                "7": {
+                    "precision": 0.0,
+                    "recall": 0.0,
+                    "f1-score": 0.0,
+                    "support": 17.0
+                },
+                "8": {
+                    "precision": 0.3333333333333333,
+                    "recall": 0.125,
+                    "f1-score": 0.18181818181818182,
+                    "support": 8.0
+                },
+                "9": {
+                    "precision": 0.0,
+                    "recall": 0.0,
+                    "f1-score": 0.0,
+                    "support": 4.0
+                },
+                "10": {
+                    "precision": 0.0,
+                    "recall": 0.0,
+                    "f1-score": 0.0,
+                    "support": 9.0
+                },
+                "11": {
+                    "precision": 0.7777777777777778,
+                    "recall": 1.0,
+                    "f1-score": 0.875,
+                    "support": 7.0
+                },
+                "12": {
+                    "precision": 1.0,
+                    "recall": 0.8,
+                    "f1-score": 0.8888888888888888,
+                    "support": 5.0
+                },
+                "13": {
+                    "precision": 0.5714285714285714,
+                    "recall": 0.10256410256410256,
+                    "f1-score": 0.17391304347826086,
+                    "support": 39.0
+                },
+                "accuracy": 0.5342857142857143,
+                "macro avg": {
+                    "precision": 0.431052399288308,
+                    "recall": 0.4063753117324546,
+                    "f1-score": 0.39420281324562717,
+                    "support": 350.0
+                },
+                "weighted avg": {
+                    "precision": 0.47537045298953934,
+                    "recall": 0.5342857142857143,
+                    "f1-score": 0.4710969729483568,
+                    "support": 350.0
+                }
+            }
+        },
+        "KNN": {
+            "accuracy": 0.5285714285714286,
+            "precision_weighted": 0.5316367170421826,
+            "recall_weighted": 0.5285714285714286,
+            "f1_weighted": 0.5238741575854641,
+            "rmse": 3.6777322205014173,
+            "cross_val_accuracy_mean": 0.5035458269329237,
+            "cross_val_accuracy_std": 0.03529130661899411,
+            "classification_report": {
+                "0": {
+                    "precision": 0.2,
+                    "recall": 0.23076923076923078,
+                    "f1-score": 0.21428571428571427,
+                    "support": 13.0
+                },
+                "1": {
+                    "precision": 0.6666666666666666,
+                    "recall": 0.8,
+                    "f1-score": 0.7272727272727273,
+                    "support": 25.0
+                },
+                "2": {
+                    "precision": 1.0,
+                    "recall": 0.6,
+                    "f1-score": 0.75,
+                    "support": 5.0
+                },
+                "3": {
+                    "precision": 0.7407407407407407,
+                    "recall": 0.8108108108108109,
+                    "f1-score": 0.7741935483870968,
+                    "support": 74.0
+                },
+                "4": {
+                    "precision": 0.4745762711864407,
+                    "recall": 0.4444444444444444,
+                    "f1-score": 0.45901639344262296,
+                    "support": 63.0
+                },
+                "5": {
+                    "precision": 0.4090909090909091,
+                    "recall": 0.4,
+                    "f1-score": 0.4044943820224719,
+                    "support": 45.0
+                },
+                "6": {
+                    "precision": 0.391304347826087,
+                    "recall": 0.5,
+                    "f1-score": 0.43902439024390244,
+                    "support": 36.0
+                },
+                "7": {
+                    "precision": 0.42857142857142855,
+                    "recall": 0.35294117647058826,
+                    "f1-score": 0.3870967741935484,
+                    "support": 17.0
+                },
+                "8": {
+                    "precision": 0.1111111111111111,
+                    "recall": 0.125,
+                    "f1-score": 0.11764705882352941,
+                    "support": 8.0
+                },
+                "9": {
+                    "precision": 0.6,
+                    "recall": 0.75,
+                    "f1-score": 0.6666666666666666,
+                    "support": 4.0
+                },
+                "10": {
+                    "precision": 0.4,
+                    "recall": 0.2222222222222222,
+                    "f1-score": 0.2857142857142857,
+                    "support": 9.0
+                },
+                "11": {
+                    "precision": 0.75,
+                    "recall": 0.8571428571428571,
+                    "f1-score": 0.8,
+                    "support": 7.0
+                },
+                "12": {
+                    "precision": 1.0,
+                    "recall": 0.4,
+                    "f1-score": 0.5714285714285714,
+                    "support": 5.0
+                },
+                "13": {
+                    "precision": 0.5172413793103449,
+                    "recall": 0.38461538461538464,
+                    "f1-score": 0.4411764705882353,
+                    "support": 39.0
+                },
+                "accuracy": 0.5285714285714286,
+                "macro avg": {
+                    "precision": 0.5492359181788378,
+                    "recall": 0.49128186617682423,
+                    "f1-score": 0.5027154987906695,
+                    "support": 350.0
+                },
+                "weighted avg": {
+                    "precision": 0.5316367170421826,
+                    "recall": 0.5285714285714286,
+                    "f1-score": 0.5238741575854641,
+                    "support": 350.0
+                }
+            }
+        },
+        "SVC (Linear)": {
+            "accuracy": 0.7228571428571429,
+            "precision_weighted": 0.7387928146794658,
+            "recall_weighted": 0.7228571428571429,
+            "f1_weighted": 0.7232876963802453,
+            "rmse": 2.0942097043310364,
+            "cross_val_accuracy_mean": 0.7102611367127497,
+            "cross_val_accuracy_std": 0.029608002829460574,
+            "classification_report": {
+                "0": {
+                    "precision": 0.7777777777777778,
+                    "recall": 0.5384615384615384,
+                    "f1-score": 0.6363636363636364,
+                    "support": 13.0
+                },
+                "1": {
+                    "precision": 0.9230769230769231,
+                    "recall": 0.96,
+                    "f1-score": 0.9411764705882353,
+                    "support": 25.0
+                },
+                "2": {
+                    "precision": 1.0,
+                    "recall": 0.8,
+                    "f1-score": 0.8888888888888888,
+                    "support": 5.0
+                },
+                "3": {
+                    "precision": 0.88,
+                    "recall": 0.8918918918918919,
+                    "f1-score": 0.8859060402684564,
+                    "support": 74.0
+                },
+                "4": {
+                    "precision": 0.8688524590163934,
+                    "recall": 0.8412698412698413,
+                    "f1-score": 0.8548387096774194,
+                    "support": 63.0
+                },
+                "5": {
+                    "precision": 0.5666666666666667,
+                    "recall": 0.7555555555555555,
+                    "f1-score": 0.6476190476190476,
+                    "support": 45.0
+                },
+                "6": {
+                    "precision": 0.28125,
+                    "recall": 0.25,
+                    "f1-score": 0.2647058823529412,
+                    "support": 36.0
+                },
+                "7": {
+                    "precision": 0.4166666666666667,
+                    "recall": 0.5882352941176471,
+                    "f1-score": 0.4878048780487805,
+                    "support": 17.0
+                },
+                "8": {
+                    "precision": 0.14285714285714285,
+                    "recall": 0.125,
+                    "f1-score": 0.13333333333333333,
+                    "support": 8.0
+                },
+                "9": {
+                    "precision": 0.5,
+                    "recall": 0.75,
+                    "f1-score": 0.6,
+                    "support": 4.0
+                },
+                "10": {
+                    "precision": 0.6666666666666666,
+                    "recall": 0.4444444444444444,
+                    "f1-score": 0.5333333333333333,
+                    "support": 9.0
+                },
+                "11": {
+                    "precision": 0.875,
+                    "recall": 1.0,
+                    "f1-score": 0.9333333333333333,
+                    "support": 7.0
+                },
+                "12": {
+                    "precision": 1.0,
+                    "recall": 1.0,
+                    "f1-score": 1.0,
+                    "support": 5.0
+                },
+                "13": {
+                    "precision": 0.9629629629629629,
+                    "recall": 0.6666666666666666,
+                    "f1-score": 0.7878787878787878,
+                    "support": 39.0
+                },
+                "accuracy": 0.7228571428571429,
+                "macro avg": {
+                    "precision": 0.7044126618350858,
+                    "recall": 0.6865375166005417,
+                    "f1-score": 0.6853701672632994,
+                    "support": 350.0
+                },
+                "weighted avg": {
+                    "precision": 0.7387928146794658,
+                    "recall": 0.7228571428571429,
+                    "f1-score": 0.7232876963802453,
+                    "support": 350.0
+                }
+            }
+        }
+    },
+    "best_model_by_accuracy": "XGBoost (Calibrated)",
+    "benchmarks": {
+        "Angel": {
+            "funding_amount_median": 550000.0,
+            "funding_amount_q1": 0.0,
+            "funding_amount_q3": 250825000.0,
+            "employees_median": 3.0,
+            "employees_q1": 1.75,
+            "employees_q3": 48.0,
+            "count": 4
+        },
+        "Grant": {
+            "funding_amount_median": 1099995.0,
+            "funding_amount_q1": 50000.0,
+            "funding_amount_q3": 7500000.0,
+            "employees_median": 44.0,
+            "employees_q1": 15.5,
+            "employees_q3": 195.0,
+            "count": 67
+        },
+        "Pre-Seed": {
+            "funding_amount_median": 500000.0,
+            "funding_amount_q1": 500000.0,
+            "funding_amount_q3": 1212500.0,
+            "employees_median": 3.0,
+            "employees_q1": 2.0,
+            "employees_q3": 5.0,
+            "count": 124
+        },
+        "Private Equity": {
+            "funding_amount_median": 0.0,
+            "funding_amount_q1": 0.0,
+            "funding_amount_q3": 112500000.0,
+            "employees_median": 235.0,
+            "employees_q1": 43.0,
+            "employees_q3": 325.0,
+            "count": 28
+        },
+        "Seed": {
+            "funding_amount_median": 4034999.0,
+            "funding_amount_q1": 2500000.0,
+            "funding_amount_q3": 6778312.0,
+            "employees_median": 9.0,
+            "employees_q1": 4.0,
+            "employees_q3": 20.5,
+            "count": 347
+        },
+        "Series A": {
+            "funding_amount_median": 16000000.0,
+            "funding_amount_q1": 11000000.0,
+            "funding_amount_q3": 25000000.0,
+            "employees_median": 30.5,
+            "employees_q1": 18.0,
+            "employees_q3": 46.0,
+            "count": 313
+        },
+        "Series B": {
+            "funding_amount_median": 36000000.0,
+            "funding_amount_q1": 25000000.0,
+            "funding_amount_q3": 56851872.0,
+            "employees_median": 74.0,
+            "employees_q1": 30.5,
+            "employees_q3": 96.0,
+            "count": 223
+        },
+        "Series C": {
+            "funding_amount_median": 60000000.0,
+            "funding_amount_q1": 44000000.0,
+            "funding_amount_q3": 100000000.0,
+            "employees_median": 150.5,
+            "employees_q1": 75.5,
+            "employees_q3": 335.0,
+            "count": 179
+        },
+        "Series D": {
+            "funding_amount_median": 125000000.0,
+            "funding_amount_q1": 82750000.0,
+            "funding_amount_q3": 200000000.0,
+            "employees_median": 350.5,
+            "employees_q1": 150.5,
+            "employees_q3": 425.0,
+            "count": 84
+        },
+        "Series E": {
+            "funding_amount_median": 200000000.0,
+            "funding_amount_q1": 145000000.0,
+            "funding_amount_q3": 254000000.0,
+            "employees_median": 410.0,
+            "employees_q1": 350.5,
+            "employees_q3": 750.5,
+            "count": 39
+        },
+        "Series F": {
+            "funding_amount_median": 200000000.0,
+            "funding_amount_q1": 115000000.0,
+            "funding_amount_q3": 290000000.0,
+            "employees_median": 750.5,
+            "employees_q1": 350.5,
+            "employees_q3": 750.5,
+            "count": 23
+        },
+        "Series G": {
+            "funding_amount_median": 165000000.0,
+            "funding_amount_q1": 112500000.0,
+            "funding_amount_q3": 383000000.0,
+            "employees_median": 750.5,
+            "employees_q1": 350.5,
+            "employees_q3": 1875.5,
+            "count": 7
+        },
+        "Series H": {
+            "funding_amount_median": 188000000.0,
+            "funding_amount_q1": 123500000.0,
+            "funding_amount_q3": 400000000.0,
+            "employees_median": 750.5,
+            "employees_q1": 350.5,
+            "employees_q3": 2700.25,
+            "count": 7
+        },
+        "Unknown": {
+            "funding_amount_median": 17000000.0,
+            "funding_amount_q1": 17000000.0,
+            "funding_amount_q3": 17000000.0,
+            "employees_median": 0.0,
+            "employees_q1": 0.0,
+            "employees_q3": 0.0,
+            "count": 1
+        },
+        "debt financing": {
+            "funding_amount_median": 75000000.0,
+            "funding_amount_q1": 14000000.0,
+            "funding_amount_q3": 212500000.0,
+            "employees_median": 84.0,
+            "employees_q1": 38.5,
+            "employees_q3": 340.0,
+            "count": 43
+        },
+        "initial coin offering": {
+            "funding_amount_median": 75000000.0,
+            "funding_amount_q1": 75000000.0,
+            "funding_amount_q3": 75000000.0,
+            "employees_median": 0.0,
+            "employees_q1": 0.0,
+            "employees_q3": 0.0,
+            "count": 1
+        },
+        "post-ipo": {
+            "funding_amount_median": 1800000000.0,
+            "funding_amount_q1": 1000000000.0,
+            "funding_amount_q3": 2000000000.0,
+            "employees_median": 750.5,
+            "employees_q1": 150.5,
+            "employees_q3": 3000.5,
+            "count": 34
+        },
+        "series i": {
+            "funding_amount_median": 1349000000.0,
+            "funding_amount_q1": 1023500000.0,
+            "funding_amount_q3": 1674500000.0,
+            "employees_median": 1500.25,
+            "employees_q1": 750.125,
+            "employees_q3": 2250.375,
+            "count": 2
+        },
+        "series j": {
+            "funding_amount_median": 2000000000.0,
+            "funding_amount_q1": 2000000000.0,
+            "funding_amount_q3": 2000000000.0,
+            "employees_median": 0.0,
+            "employees_q1": 0.0,
+            "employees_q3": 0.0,
+            "count": 1
+        },
+        "undisclosed": {
+            "funding_amount_median": 5794991.0,
+            "funding_amount_q1": 2265000.0,
+            "funding_amount_q3": 18250002.0,
+            "employees_median": 29.0,
+            "employees_q1": 17.0,
+            "employees_q3": 63.0,
+            "count": 25
+        },
+        "venture - series unknown": {
+            "funding_amount_median": 10000000.0,
+            "funding_amount_q1": 2889489.75,
+            "funding_amount_q3": 29250000.0,
+            "employees_median": 44.5,
+            "employees_q1": 18.0,
+            "employees_q3": 110.0,
+            "count": 196
+        }
+    },
+    "feature_importance": {
+        "source_model": "XGBoost (Calibrated)",
+        "importance": {
+            "funding_velocity": 0.311000794172287,
+            "velocity_x_rounds": 0.3024061620235443,
+            "industry_category_AI & ML": 0.0788298174738884,
+            "previous_rounds": 0.07050512731075287,
+            "employees_x_rounds": 0.030914820730686188,
+            "funding_month": 0.024416901171207428,
+            "funding_amount_log": 0.023280281573534012,
+            "age_x_employees": 0.022143365815281868,
+            "funding_year": 0.021150903776288033,
+            "month_cos": 0.020070098340511322,
+            "employees": 0.018661078065633774,
+            "funding_amount_x_age": 0.015871940180659294,
+            "industry_category_FinTech": 0.011368743143975735,
+            "months_since_first_funding": 0.010925358161330223,
+            "month_sin": 0.010086643509566784,
+            "industry_category_IT & Software": 0.009843789972364902,
+            "industry_category_Unknown": 0.009313304908573627,
+            "employee_efficiency": 0.0069329990074038506,
+            "industry_category_Medical Devices": 0.0022778897546231747,
+            "industry_category_0": 0.0,
+            "industry_category_Aerospace": 0.0,
+            "industry_category_Airlines/Aviation": 0.0,
+            "industry_category_Apparel & Fashion": 0.0,
+            "industry_category_Architecture, Media": 0.0,
+            "industry_category_Augmented Reality": 0.0,
+            "industry_category_Automotive": 0.0,
+            "industry_category_Aviation & Aerospace": 0.0,
+            "industry_category_Banking": 0.0,
+            "industry_category_Biotech": 0.0,
+            "industry_category_Blockchain": 0.0,
+            "industry_category_Blockchain, Data": 0.0,
+            "industry_category_Blockchain, Gaming": 0.0,
+            "industry_category_Building Materials": 0.0,
+            "industry_category_Chemicals": 0.0,
+            "industry_category_Cloud Computing": 0.0,
+            "industry_category_Cloud Computing, Architecture": 0.0,
+            "industry_category_Cloud Computing, Cyber Security": 0.0,
+            "industry_category_Cloud Computing, Data, Government, Community": 0.0,
+            "industry_category_Cloud Computing, Electronics": 0.0,
+            "industry_category_Computer & Network Security": 0.0,
+            "industry_category_Computer Games": 0.0,
+            "industry_category_Computer Hardware": 0.0,
+            "industry_category_Computer Networking": 0.0,
+            "industry_category_Construction": 0.0,
+            "industry_category_Construction, Marketplace, Aerospace": 0.0,
+            "industry_category_Construction, Materials": 0.0,
+            "industry_category_Consumer Services": 0.0,
+            "industry_category_Cyber Security": 0.0,
+            "industry_category_Data": 0.0,
+            "industry_category_Defense & Space": 0.0,
+            "industry_category_Design": 0.0,
+            "industry_category_E-Learning": 0.0,
+            "industry_category_EdTech": 0.0,
+            "industry_category_Electrical/Electronic Manufacturing": 0.0,
+            "industry_category_Electronics": 0.0,
+            "industry_category_Energy": 0.0,
+            "industry_category_Entertainment": 0.0,
+            "industry_category_Entertainment, Music": 0.0,
+            "industry_category_Environmental Services": 0.0,
+            "industry_category_Family": 0.0,
+            "industry_category_Farming": 0.0,
+            "industry_category_Food & Agriculture": 0.0,
+            "industry_category_Fund-Raising": 0.0,
+            "industry_category_Government Administration": 0.0,
+            "industry_category_Healthcare": 0.0,
+            "industry_category_Hospitality": 0.0,
+            "industry_category_Human Resources": 0.0,
+            "industry_category_Human Resources, Recruiting": 0.0,
+            "industry_category_Individual & Family Services": 0.0,
+            "industry_category_Industrial Automation": 0.0,
+            "industry_category_Information Services": 0.0,
+            "industry_category_Insurance": 0.0,
+            "industry_category_Internet": 0.0,
+            "industry_category_Investment Management": 0.0,
+            "industry_category_Legal Services": 0.0,
+            "industry_category_Machinery": 0.0,
+            "industry_category_Management Consulting": 0.0,
+            "industry_category_Maritime": 0.0,
+            "industry_category_Market Research": 0.0,
+            "industry_category_Marketing & Advertising": 0.0,
+            "industry_category_Mechanical Or Industrial Engineering": 0.0,
+            "industry_category_Media Production": 0.0,
+            "industry_category_Medical Practice": 0.0,
+            "industry_category_Mining & Metals": 0.0,
+            "industry_category_Museums & Institutions": 0.0,
+            "industry_category_Music": 0.0,
+            "industry_category_Nanotechnology": 0.0,
+            "industry_category_Nonprofit Organization Management": 0.0,
+            "industry_category_Online Media": 0.0,
+            "industry_category_Packaging & Containers": 0.0,
+            "industry_category_Performing Arts": 0.0,
+            "industry_category_Pharmaceuticals": 0.0,
+            "industry_category_Professional Training & Coaching": 0.0,
+            "industry_category_Public Safety": 0.0,
+            "industry_category_Real Estate": 0.0,
+            "industry_category_Research": 0.0,
+            "industry_category_Restaurants": 0.0,
+            "industry_category_Retail": 0.0,
+            "industry_category_Semiconductors": 0.0,
+            "industry_category_Social Network, Audio": 0.0,
+            "industry_category_Social Network, Community": 0.0,
+            "industry_category_Sports": 0.0,
+            "industry_category_Telecommunications": 0.0,
+            "industry_category_Transport & Logistics": 0.0,
+            "industry_category_Utilities": 0.0,
+            "industry_category_Venture Capital & Private Equity": 0.0,
+            "industry_category_Veterinary": 0.0,
+            "industry_category_Wholesale": 0.0,
+            "industry_category_Wireless": 0.0,
+            "company_age_bin_(0.0, 88.0]": 0.0
+        }
+    }
+}

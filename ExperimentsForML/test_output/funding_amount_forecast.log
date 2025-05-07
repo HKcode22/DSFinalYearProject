@@ -1,0 +1,12 @@
+2025-04-27 23:08:40,302 - funding_amount_forecast - INFO - Funding Amount Forecast initialized
+2025-04-27 23:08:40,302 - funding_amount_forecast - INFO - Loading data from JSON files
+2025-04-27 23:08:40,302 - funding_amount_forecast - WARNING - Fundraiser data file not found: test_data/fundraisestartup50.json
+2025-04-27 23:08:40,302 - funding_amount_forecast - WARNING - Growthlist data file not found: test_data/growthlistscrapper.json
+2025-04-27 23:08:40,302 - funding_amount_forecast - WARNING - Topstartup data file not found: test_data/topstartupio50.json
+2025-04-27 23:08:40,302 - funding_amount_forecast - ERROR - No records found in any of the data sources
+2025-04-27 23:11:07,220 - funding_amount_forecast - INFO - Funding Amount Forecast initialized
+2025-04-27 23:11:07,220 - funding_amount_forecast - INFO - Loading data from JSON files
+2025-04-27 23:11:07,220 - funding_amount_forecast - WARNING - Fundraiser data file not found: test_data/fundraisestartup50.json
+2025-04-27 23:11:07,220 - funding_amount_forecast - WARNING - Growthlist data file not found: test_data/growthlistscrapper.json
+2025-04-27 23:11:07,220 - funding_amount_forecast - WARNING - Topstartup data file not found: test_data/topstartupio50.json
+2025-04-27 23:11:07,220 - funding_amount_forecast - ERROR - No records found in any of the data sources

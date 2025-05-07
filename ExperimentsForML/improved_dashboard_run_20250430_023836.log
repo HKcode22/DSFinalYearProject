@@ -1,0 +1,745 @@
+2025-04-30 02:38:36,879 - numexpr.utils - INFO - NumExpr defaulting to 8 threads.
+2025-04-30 02:38:38,928 - __main__ - INFO - Using base directory: /Users/hk/Downloads/DSFinalYearProject
+2025-04-30 02:38:38,928 - __main__ - INFO - Using output directory: /Users/hk/Downloads/DSFinalYearProject/FundingStageOutput
+2025-04-30 02:38:38,928 - __main__ - INFO - Initializing improved dashboard implementation...
+2025-04-30 02:38:38,930 - MLPredictiveAnalysis.funding_stage_prediction - INFO - Historical database initialized
+2025-04-30 02:38:38,930 - MLPredictiveAnalysis.funding_stage_prediction - INFO - Created visualization directory: /Users/hk/Downloads/DSFinalYearProject/FundingStageOutput/visualizations
+2025-04-30 02:38:38,932 - MLPredictiveAnalysis.funding_stage_prediction - INFO - Dashboard output directory set to: /Users/hk/Downloads/DSFinalYearProject/FundingStageOutput/dashboards
+2025-04-30 02:38:38,932 - MLPredictiveAnalysis.funding_stage_prediction - INFO - Created directory: /Users/hk/Downloads/DSFinalYearProject/FundingStageOutput/dashboards/classification_dashboards/model_comparison
+2025-04-30 02:38:38,932 - MLPredictiveAnalysis.funding_stage_prediction - INFO - Created directory: /Users/hk/Downloads/DSFinalYearProject/FundingStageOutput/dashboards/classification_dashboards/calibration_curves
+2025-04-30 02:38:38,932 - MLPredictiveAnalysis.funding_stage_prediction - INFO - Created directory: /Users/hk/Downloads/DSFinalYearProject/FundingStageOutput/dashboards/classification_dashboards/feature_importance
+2025-04-30 02:38:38,932 - MLPredictiveAnalysis.funding_stage_prediction - INFO - Created directory: /Users/hk/Downloads/DSFinalYearProject/FundingStageOutput/dashboards/classification_dashboards/confusion_matrices
+2025-04-30 02:38:38,932 - MLPredictiveAnalysis.funding_stage_prediction - INFO - Created directory: /Users/hk/Downloads/DSFinalYearProject/FundingStageOutput/dashboards/classification_dashboards/model_metrics
+2025-04-30 02:38:38,932 - MLPredictiveAnalysis.funding_stage_prediction - INFO - Created directory: /Users/hk/Downloads/DSFinalYearProject/FundingStageOutput/dashboards/timeseries_dashboards/forecast_trends
+2025-04-30 02:38:38,932 - MLPredictiveAnalysis.funding_stage_prediction - INFO - Created directory: /Users/hk/Downloads/DSFinalYearProject/FundingStageOutput/dashboards/timeseries_dashboards/industry_breakdown
+2025-04-30 02:38:38,932 - MLPredictiveAnalysis.funding_stage_prediction - INFO - Created directory: /Users/hk/Downloads/DSFinalYearProject/FundingStageOutput/dashboards/timeseries_dashboards/stage_evolution
+2025-04-30 02:38:38,932 - MLPredictiveAnalysis.funding_stage_prediction - INFO - Created directory: /Users/hk/Downloads/DSFinalYearProject/FundingStageOutput/dashboards/timeseries_dashboards/seasonality_analysis
+2025-04-30 02:38:38,932 - MLPredictiveAnalysis.funding_stage_prediction - INFO - Set matplotlib backend to Agg
+2025-04-30 02:38:38,933 - MLPredictiveAnalysis.funding_stage_prediction - INFO - Dashboard output directory set to: /Users/hk/Downloads/DSFinalYearProject/FundingStageOutput/advanced_dashboards
+2025-04-30 02:38:38,933 - MLPredictiveAnalysis.funding_stage_prediction - INFO - Created directory: /Users/hk/Downloads/DSFinalYearProject/FundingStageOutput/advanced_dashboards/classification_dashboards/model_comparison
+2025-04-30 02:38:38,933 - MLPredictiveAnalysis.funding_stage_prediction - INFO - Created directory: /Users/hk/Downloads/DSFinalYearProject/FundingStageOutput/advanced_dashboards/classification_dashboards/calibration_curves
+2025-04-30 02:38:38,934 - MLPredictiveAnalysis.funding_stage_prediction - INFO - Created directory: /Users/hk/Downloads/DSFinalYearProject/FundingStageOutput/advanced_dashboards/classification_dashboards/feature_importance
+2025-04-30 02:38:38,934 - MLPredictiveAnalysis.funding_stage_prediction - INFO - Created directory: /Users/hk/Downloads/DSFinalYearProject/FundingStageOutput/advanced_dashboards/classification_dashboards/confusion_matrices
+2025-04-30 02:38:38,934 - MLPredictiveAnalysis.funding_stage_prediction - INFO - Created directory: /Users/hk/Downloads/DSFinalYearProject/FundingStageOutput/advanced_dashboards/classification_dashboards/model_metrics
+2025-04-30 02:38:38,934 - MLPredictiveAnalysis.funding_stage_prediction - INFO - Created directory: /Users/hk/Downloads/DSFinalYearProject/FundingStageOutput/advanced_dashboards/timeseries_dashboards/forecast_trends
+2025-04-30 02:38:38,935 - MLPredictiveAnalysis.funding_stage_prediction - INFO - Created directory: /Users/hk/Downloads/DSFinalYearProject/FundingStageOutput/advanced_dashboards/timeseries_dashboards/industry_breakdown
+2025-04-30 02:38:38,935 - MLPredictiveAnalysis.funding_stage_prediction - INFO - Created directory: /Users/hk/Downloads/DSFinalYearProject/FundingStageOutput/advanced_dashboards/timeseries_dashboards/stage_evolution
+2025-04-30 02:38:38,935 - MLPredictiveAnalysis.funding_stage_prediction - INFO - Created directory: /Users/hk/Downloads/DSFinalYearProject/FundingStageOutput/advanced_dashboards/timeseries_dashboards/seasonality_analysis
+2025-04-30 02:38:38,935 - MLPredictiveAnalysis.funding_stage_prediction - INFO - Set matplotlib backend to Agg
+2025-04-30 02:38:38,935 - MLPredictiveAnalysis.funding_stage_prediction - INFO - Created directory: /Users/hk/Downloads/DSFinalYearProject/FundingStageOutput/advanced_dashboards/classification_interactive/model_performance
+2025-04-30 02:38:38,935 - MLPredictiveAnalysis.funding_stage_prediction - INFO - Created directory: /Users/hk/Downloads/DSFinalYearProject/FundingStageOutput/advanced_dashboards/classification_interactive/prediction_interface
+2025-04-30 02:38:38,935 - MLPredictiveAnalysis.funding_stage_prediction - INFO - Created directory: /Users/hk/Downloads/DSFinalYearProject/FundingStageOutput/advanced_dashboards/classification_interactive/data_exploration
+2025-04-30 02:38:38,935 - MLPredictiveAnalysis.funding_stage_prediction - INFO - Created directory: /Users/hk/Downloads/DSFinalYearProject/FundingStageOutput/advanced_dashboards/classification_interactive/feature_analysis
+2025-04-30 02:38:38,935 - MLPredictiveAnalysis.funding_stage_prediction - INFO - Created directory: /Users/hk/Downloads/DSFinalYearProject/FundingStageOutput/advanced_dashboards/timeseries_interactive/funding_trends
+2025-04-30 02:38:38,935 - MLPredictiveAnalysis.funding_stage_prediction - INFO - Created directory: /Users/hk/Downloads/DSFinalYearProject/FundingStageOutput/advanced_dashboards/timeseries_interactive/forecast_components
+2025-04-30 02:38:38,935 - MLPredictiveAnalysis.funding_stage_prediction - INFO - Created directory: /Users/hk/Downloads/DSFinalYearProject/FundingStageOutput/advanced_dashboards/timeseries_interactive/industry_forecasts
+2025-04-30 02:38:38,935 - MLPredictiveAnalysis.funding_stage_prediction - INFO - Created directory: /Users/hk/Downloads/DSFinalYearProject/FundingStageOutput/advanced_dashboards/timeseries_interactive/stage_transitions
+2025-04-30 02:38:39,144 - MLPredictiveAnalysis.funding_stage_prediction - INFO - Successfully imported interactive dashboard libraries
+2025-04-30 02:38:39,144 - MLPredictiveAnalysis.improved_dashboard_implementation - INFO - Improved dashboard implementation initialized with output to: /Users/hk/Downloads/DSFinalYearProject/FundingStageOutput
+2025-04-30 02:38:39,145 - MLPredictiveAnalysis.improved_dashboard_implementation - INFO - Created organized directory structure for all outputs
+2025-04-30 02:38:39,145 - __main__ - INFO - Generating dashboards with better organization...
+2025-04-30 02:38:39,145 - MLPredictiveAnalysis.improved_dashboard_implementation - INFO - Generating organized dashboards...
+2025-04-30 02:38:39,145 - MLPredictiveAnalysis.improved_dashboard_implementation - INFO - Loading and processing data...
+2025-04-30 02:38:39,163 - MLPredictiveAnalysis.improved_dashboard_implementation - INFO - Found funding types in fundraiser data: ['Series A' 'Seed' 'Venture - Series Unknown' 'Debt Financing'
+ 'Undisclosed' 'Grant' 'Private Equity' 'Pre-Seed' 'Series C' 'Series B'
+ 'Series D' 'Series H' 'Angel' 'Series E' 'Series F']
+2025-04-30 02:38:39,163 - MLPredictiveAnalysis.improved_dashboard_implementation - INFO - Loaded 1103 records from fundraiser data
+2025-04-30 02:38:39,165 - MLPredictiveAnalysis.funding_stage_prediction - INFO - Found funding types in growthlist data: ['Series B' 'Seed' 'Pre-Seed' 'Series A' 'Series C'
+ 'Venture - Series Unknown' 'Series E' 'Private Equity' 'Series G'
+ 'Initial Coin Offering']
+2025-04-30 02:38:39,165 - MLPredictiveAnalysis.funding_stage_prediction - INFO - Loaded 100 records from growthlist data
+2025-04-30 02:38:39,175 - MLPredictiveAnalysis.funding_stage_prediction - INFO - Found funding stages in topstartup data: ['Series A' 'Series C' 'Series D' 'Series J' 'Series E' 'Series B'
+ 'Series F' 'Seed' 'Venture - Series Unknown' 'Series I' 'Series G'
+ 'Pre-Seed' 'Series H' 'Post-IPO']
+2025-04-30 02:38:39,178 - MLPredictiveAnalysis.funding_stage_prediction - WARNING - Unreasonably large funding amount detected: $20,000,000,000.00
+2025-04-30 02:38:39,178 - MLPredictiveAnalysis.funding_stage_prediction - WARNING - Unreasonably large funding amount detected: $29,000,000,000.00
+2025-04-30 02:38:39,178 - MLPredictiveAnalysis.funding_stage_prediction - WARNING - Unreasonably large funding amount detected: $13,000,000,000.00
+2025-04-30 02:38:39,178 - MLPredictiveAnalysis.funding_stage_prediction - WARNING - Unreasonably large funding amount detected: $48,000,000,000.00
+2025-04-30 02:38:39,178 - MLPredictiveAnalysis.funding_stage_prediction - WARNING - Unreasonably large funding amount detected: $23,000,000,000.00
+2025-04-30 02:38:39,178 - MLPredictiveAnalysis.funding_stage_prediction - INFO - Loaded 546 records from topstartup data
+2025-04-30 02:38:39,178 - MLPredictiveAnalysis.funding_stage_prediction - INFO - Loaded datasets - Fundraiser: 1103 rows, Growthlist: 100 rows, Topstartup: 546 rows
+2025-04-30 02:38:39,231 - MLPredictiveAnalysis.funding_stage_prediction - INFO - Processed 1103 records from fundraiser data
+2025-04-30 02:38:39,258 - MLPredictiveAnalysis.funding_stage_prediction - INFO - Unique funding stages from fundraiser: {'Debt Financing', 'Series B', 'Seed', 'Series E', 'Grant', 'Undisclosed', 'Series H', 'Private Equity', 'Series D', 'Angel', 'Series F', 'Series C', 'Pre-Seed', 'Venture - Series Unknown', 'Series A'}
+2025-04-30 02:38:39,262 - MLPredictiveAnalysis.funding_stage_prediction - INFO - Processed 100 records from growthlist data
+2025-04-30 02:38:39,288 - MLPredictiveAnalysis.funding_stage_prediction - WARNING - Unreasonably large funding amount detected: $20,000,000,000.00
+2025-04-30 02:38:39,290 - MLPredictiveAnalysis.funding_stage_prediction - WARNING - Unreasonably large funding amount detected: $29,000,000,000.00
+2025-04-30 02:38:39,297 - MLPredictiveAnalysis.funding_stage_prediction - WARNING - Unreasonably large funding amount detected: $13,000,000,000.00
+2025-04-30 02:38:39,297 - MLPredictiveAnalysis.funding_stage_prediction - WARNING - Unreasonably large funding amount detected: $48,000,000,000.00
+2025-04-30 02:38:39,298 - MLPredictiveAnalysis.funding_stage_prediction - WARNING - Unreasonably large funding amount detected: $23,000,000,000.00
+2025-04-30 02:38:39,300 - MLPredictiveAnalysis.funding_stage_prediction - INFO - Processed 546 records from topstartup data
+2025-04-30 02:38:39,320 - MLPredictiveAnalysis.funding_stage_prediction - INFO - Saved 1749 records to historical merged_data
+2025-04-30 02:38:39,320 - MLPredictiveAnalysis.funding_stage_prediction - INFO - Successfully merged 1749 records
+2025-04-30 02:38:39,336 - MLPredictiveAnalysis.improved_dashboard_implementation - INFO - Saved merged data with 1749 records to /Users/hk/Downloads/DSFinalYearProject/FundingStageOutput/data/merged_data_20250430_023838.csv
+2025-04-30 02:38:39,336 - MLPredictiveAnalysis.funding_stage_prediction - INFO - Starting feature extraction for 1749 records
+2025-04-30 02:38:39,336 - MLPredictiveAnalysis.funding_stage_prediction - INFO - Found 20 unique funding stages: ['Series A' 'Seed' 'Venture - Series Unknown' 'Debt Financing'
+ 'Undisclosed' 'Grant' 'Private Equity' 'Pre-Seed' 'Series C' 'Series B'
+ 'Series D' 'Series H' 'Angel' 'Series E' 'Series F' 'Series G'
+ 'Initial Coin Offering' 'Series J' 'Series I' 'Post-IPO']
+2025-04-30 02:38:39,337 - MLPredictiveAnalysis.funding_stage_prediction - INFO - Created funding stage mapping: {'Pre-Seed': 0, 'Seed': 1, 'Angel': 2, 'Series A': 3, 'Series B': 4, 'Series C': 5, 'Series D': 6, 'Series E': 7, 'Series F': 8, 'Series G': 9, 'Series H': 10, 'Venture - Series Unknown': 11, 'Debt Financing': 12, 'Undisclosed': 13, 'Grant': 14, 'Private Equity': 15, 'Initial Coin Offering': 16, 'Series J': 17, 'Series I': 18, 'Post-IPO': 19, 'Unknown': 20}
+2025-04-30 02:38:39,460 - MLPredictiveAnalysis.funding_stage_prediction - INFO - Feature engineering complete: 19 features created
+2025-04-30 02:38:39,485 - MLPredictiveAnalysis.improved_dashboard_implementation - INFO - Saved processed data with 1749 records to /Users/hk/Downloads/DSFinalYearProject/FundingStageOutput/data/processed_data_20250430_023838.csv
+2025-04-30 02:38:39,485 - MLPredictiveAnalysis.funding_stage_prediction - INFO - Preparing model data with features: ['funding_amount_log', 'employees', 'employee_efficiency', 'funding_year', 'funding_month', 'previous_rounds', 'months_since_first_funding', 'funding_velocity']
+2025-04-30 02:38:39,490 - MLPredictiveAnalysis.funding_stage_prediction - INFO - Original class distribution:
+funding_stage_numeric
+1     347
+3     313
+4     223
+11    197
+5     179
+0     124
+6      84
+14     67
+12     43
+7      39
+19     34
+15     28
+13     25
+8      23
+10      7
+9       7
+2       4
+18      2
+16      1
+17      1
+20      1
+Name: count, dtype: int64
+2025-04-30 02:38:39,491 - MLPredictiveAnalysis.funding_stage_prediction - INFO - Found 7 rare classes: Index([10, 9, 2, 18, 16, 17, 20], dtype='int64', name='funding_stage_numeric')
+2025-04-30 02:38:39,492 - MLPredictiveAnalysis.funding_stage_prediction - INFO - Merged rare classes into related major classes
+2025-04-30 02:38:39,493 - MLPredictiveAnalysis.funding_stage_prediction - INFO - Updated class distribution after merging:
+funding_stage_numeric
+1     351
+3     313
+4     223
+11    201
+5     179
+0     124
+6      84
+14     67
+12     43
+7      39
+8      37
+19     34
+15     28
+13     25
+20      1
+Name: count, dtype: int64
+2025-04-30 02:38:39,495 - MLPredictiveAnalysis.funding_stage_prediction - INFO - Remapped classes to be continuous. Class mapping: {np.int64(0): 0, np.int64(1): 1, np.int64(3): 2, np.int64(4): 3, np.int64(5): 4, np.int64(6): 5, np.int64(7): 6, np.int64(8): 7, np.int64(11): 8, np.int64(12): 9, np.int64(13): 10, np.int64(14): 11, np.int64(15): 12, np.int64(19): 13, np.int64(20): 14}
+2025-04-30 02:38:39,499 - MLPredictiveAnalysis.funding_stage_prediction - INFO - Prepared model data: X shape=(1749, 8), y shape=(1749,)
+2025-04-30 02:38:39,500 - MLPredictiveAnalysis.funding_stage_prediction - INFO - Final class distribution: {1: 351, 2: 313, 3: 223, 8: 201, 4: 179, 0: 124, 5: 84, 11: 67, 9: 43, 6: 39, 7: 37, 13: 34, 12: 28, 10: 25, 14: 1}
+2025-04-30 02:38:39,500 - MLPredictiveAnalysis.improved_dashboard_implementation - INFO - Training classification models...
+2025-04-30 02:38:39,500 - MLPredictiveAnalysis.improved_dashboard_implementation - INFO - Removing 1 extremely rare classes with fewer than 2 samples
+2025-04-30 02:38:39,502 - MLPredictiveAnalysis.improved_dashboard_implementation - INFO - After removing rare classes: X shape=(1748, 8), y shape=(1748,)
+2025-04-30 02:38:39,505 - MLPredictiveAnalysis.improved_dashboard_implementation - INFO - Training Random Forest model...
+2025-04-30 02:38:39,505 - MLPredictiveAnalysis.funding_stage_prediction - INFO - Training Random Forest model...
+2025-04-30 02:38:39,733 - MLPredictiveAnalysis.funding_stage_prediction - INFO - Identified 56 potential outliers in training data
+2025-04-30 02:38:39,735 - MLPredictiveAnalysis.funding_stage_prediction - INFO - Outlier examples:
+[{'funding_amount_log': 0.7368803425161246, 'employees': 1.207672418407136, 'employee_efficiency': -0.0420685467848217, 'funding_year': 0.47180546582193506, 'funding_month': 1.721589812877086, 'previous_rounds': 2.91820165580833, 'months_since_first_funding': 1.4608234809389093, 'funding_velocity': -0.5052699428250734}, {'funding_amount_log': 0.8087138668252805, 'employees': 0.8895647429285434, 'employee_efficiency': -0.03852905431428893, 'funding_year': -1.787435491666415, 'funding_month': -0.9871728559984297, 'previous_rounds': 2.91820165580833, 'months_since_first_funding': -0.16035689226042596, 'funding_velocity': 4.343250868959902}, {'funding_amount_log': 0.48457672521238915, 'employees': 0.0034076469524640758, 'employee_efficiency': -0.03588106513460505, 'funding_year': 1.0366157051940226, 'funding_month': -0.4454203222233266, 'previous_rounds': 2.91820165580833, 'months_since_first_funding': 2.1092956302186434, 'funding_velocity': -0.10947232553650404}]
+2025-04-30 02:38:39,735 - MLPredictiveAnalysis.funding_stage_prediction - INFO - Class counts before training: [ 85 226 200 133 115  50  28  23 131  27  15  43  22  20]
+2025-04-30 02:38:40,320 - MLPredictiveAnalysis.funding_stage_prediction - INFO - Out-of-bag score: 0.9061
+2025-04-30 02:38:40,383 - MLPredictiveAnalysis.funding_stage_prediction - INFO - Random Forest accuracy: 0.9214
+2025-04-30 02:38:40,383 - MLPredictiveAnalysis.funding_stage_prediction - INFO - Classification report:
+              precision    recall  f1-score   support
+
+           0       0.93      1.00      0.97        14
+           1       0.95      0.98      0.96        55
+           2       0.91      0.96      0.93        50
+           3       1.00      0.96      0.98        45
+           4       0.96      0.96      0.96        28
+           5       0.86      0.71      0.77        17
+           6       0.60      1.00      0.75         3
+           7       1.00      1.00      1.00         7
+           8       0.84      0.90      0.87        30
+           9       0.67      0.57      0.62         7
+          10       1.00      0.60      0.75         5
+          11       1.00      0.73      0.84        11
+          12       0.50      1.00      0.67         1
+          13       1.00      1.00      1.00         7
+
+    accuracy                           0.92       280
+   macro avg       0.87      0.88      0.86       280
+weighted avg       0.93      0.92      0.92       280
+
+2025-04-30 02:38:40,613 - MLPredictiveAnalysis.improved_dashboard_implementation - INFO - Training XGBoost model...
+2025-04-30 02:38:40,615 - MLPredictiveAnalysis.funding_stage_prediction - INFO - Training XGBoost model...
+2025-04-30 02:38:40,737 - MLPredictiveAnalysis.funding_stage_prediction - INFO - Identified 56 potential outliers in training data
+2025-04-30 02:38:45,938 - MLPredictiveAnalysis.funding_stage_prediction - INFO - XGBoost accuracy: 0.9321
+2025-04-30 02:38:45,939 - MLPredictiveAnalysis.funding_stage_prediction - INFO - Classification report:
+              precision    recall  f1-score   support
+
+           0       0.93      1.00      0.97        14
+           1       1.00      0.98      0.99        55
+           2       0.96      0.96      0.96        50
+           3       1.00      0.96      0.98        45
+           4       0.93      0.93      0.93        28
+           5       0.85      0.65      0.73        17
+           6       0.60      1.00      0.75         3
+           7       1.00      1.00      1.00         7
+           8       0.75      0.90      0.82        30
+           9       0.83      0.71      0.77         7
+          10       1.00      1.00      1.00         5
+          11       1.00      0.91      0.95        11
+          12       1.00      1.00      1.00         1
+          13       1.00      1.00      1.00         7
+
+    accuracy                           0.93       280
+   macro avg       0.92      0.93      0.92       280
+weighted avg       0.94      0.93      0.93       280
+
+2025-04-30 02:38:45,991 - MLPredictiveAnalysis.improved_dashboard_implementation - INFO - Training LightGBM model...
+2025-04-30 02:38:45,992 - MLPredictiveAnalysis.improved_dashboard_implementation - WARNING - Error training LightGBM model: name 'lgb' is not defined
+2025-04-30 02:38:45,994 - MLPredictiveAnalysis.improved_dashboard_implementation - INFO - Running time series pipeline...
+2025-04-30 02:38:45,994 - MLPredictiveAnalysis.funding_stage_prediction - INFO - Created standardized output directory structure at /Users/hk/Downloads/DSFinalYearProject/FundingStageOutput
+2025-04-30 02:38:45,995 - MLPredictiveAnalysis.funding_stage_prediction - INFO - Historical database initialized
+2025-04-30 02:38:45,996 - MLPredictiveAnalysis.funding_stage_prediction - INFO - Archived 3 data files to /Users/hk/Downloads/DSFinalYearProject/data_archive/20250430_023845
+2025-04-30 02:38:45,996 - MLPredictiveAnalysis.funding_stage_prediction - INFO -   - fundraiser.json
+2025-04-30 02:38:45,996 - MLPredictiveAnalysis.funding_stage_prediction - INFO -   - growthlist.json
+2025-04-30 02:38:45,996 - MLPredictiveAnalysis.funding_stage_prediction - INFO -   - topstartup.json
+2025-04-30 02:38:45,996 - MLPredictiveAnalysis.funding_stage_prediction - INFO - Created visualization directory: /Users/hk/Downloads/DSFinalYearProject/FundingStageOutput/visualizations
+2025-04-30 02:38:45,998 - MLPredictiveAnalysis.funding_stage_prediction - INFO - Created visualization directory: /Users/hk/Downloads/DSFinalYearProject/FundingStageOutput/visualizations
+2025-04-30 02:38:45,999 - MLPredictiveAnalysis.funding_stage_prediction - INFO - Audit log initialized at /Users/hk/Downloads/DSFinalYearProject/FundingStageOutput/models/prediction_audit.csv
+2025-04-30 02:38:45,999 - MLPredictiveAnalysis.funding_stage_prediction - INFO - Set up data archive directory at /Users/hk/Downloads/DSFinalYearProject/FundingStageOutput/data_archive/20250430_023845
+2025-04-30 02:38:45,999 - MLPredictiveAnalysis.funding_stage_prediction - INFO - Dashboard output directory set to: /Users/hk/Downloads/DSFinalYearProject/FundingStageOutput/dashboards
+2025-04-30 02:38:45,999 - MLPredictiveAnalysis.funding_stage_prediction - INFO - Created directory: /Users/hk/Downloads/DSFinalYearProject/FundingStageOutput/dashboards/classification_dashboards/model_comparison
+2025-04-30 02:38:45,999 - MLPredictiveAnalysis.funding_stage_prediction - INFO - Created directory: /Users/hk/Downloads/DSFinalYearProject/FundingStageOutput/dashboards/classification_dashboards/calibration_curves
+2025-04-30 02:38:45,999 - MLPredictiveAnalysis.funding_stage_prediction - INFO - Created directory: /Users/hk/Downloads/DSFinalYearProject/FundingStageOutput/dashboards/classification_dashboards/feature_importance
+2025-04-30 02:38:45,999 - MLPredictiveAnalysis.funding_stage_prediction - INFO - Created directory: /Users/hk/Downloads/DSFinalYearProject/FundingStageOutput/dashboards/classification_dashboards/confusion_matrices
+2025-04-30 02:38:45,999 - MLPredictiveAnalysis.funding_stage_prediction - INFO - Created directory: /Users/hk/Downloads/DSFinalYearProject/FundingStageOutput/dashboards/classification_dashboards/model_metrics
+2025-04-30 02:38:45,999 - MLPredictiveAnalysis.funding_stage_prediction - INFO - Created directory: /Users/hk/Downloads/DSFinalYearProject/FundingStageOutput/dashboards/timeseries_dashboards/forecast_trends
+2025-04-30 02:38:45,999 - MLPredictiveAnalysis.funding_stage_prediction - INFO - Created directory: /Users/hk/Downloads/DSFinalYearProject/FundingStageOutput/dashboards/timeseries_dashboards/industry_breakdown
+2025-04-30 02:38:45,999 - MLPredictiveAnalysis.funding_stage_prediction - INFO - Created directory: /Users/hk/Downloads/DSFinalYearProject/FundingStageOutput/dashboards/timeseries_dashboards/stage_evolution
+2025-04-30 02:38:45,999 - MLPredictiveAnalysis.funding_stage_prediction - INFO - Created directory: /Users/hk/Downloads/DSFinalYearProject/FundingStageOutput/dashboards/timeseries_dashboards/seasonality_analysis
+2025-04-30 02:38:46,000 - MLPredictiveAnalysis.funding_stage_prediction - INFO - Set matplotlib backend to Agg
+2025-04-30 02:38:46,000 - MLPredictiveAnalysis.funding_stage_prediction - INFO - Initialized model directory structure at /Users/hk/Downloads/DSFinalYearProject/FundingStageOutput/models
+2025-04-30 02:38:46,000 - MLPredictiveAnalysis.funding_stage_prediction - INFO - Starting aggregate time series prediction with Prophet...
+2025-04-30 02:38:46,000 - MLPredictiveAnalysis.funding_stage_prediction - INFO - Created time series forecasts directory: /Users/hk/Downloads/DSFinalYearProject/FundingStageOutput/time_series_forecasts
+2025-04-30 02:38:46,000 - MLPredictiveAnalysis.funding_stage_prediction - INFO - Preparing time series data...
+2025-04-30 02:38:46,007 - MLPredictiveAnalysis.funding_stage_prediction - INFO - Found funding types in fundraiser data: ['Series A' 'Seed' 'Venture - Series Unknown' 'Debt Financing'
+ 'Undisclosed' 'Grant' 'Private Equity' 'Pre-Seed' 'Series C' 'Series B'
+ 'Series D' 'Series H' 'Angel' 'Series E' 'Series F']
+2025-04-30 02:38:46,007 - MLPredictiveAnalysis.funding_stage_prediction - INFO - Loaded 1103 records from fundraiser data
+2025-04-30 02:38:46,008 - MLPredictiveAnalysis.funding_stage_prediction - INFO - Found funding types in growthlist data: ['Series B' 'Seed' 'Pre-Seed' 'Series A' 'Series C'
+ 'Venture - Series Unknown' 'Series E' 'Private Equity' 'Series G'
+ 'Initial Coin Offering']
+2025-04-30 02:38:46,008 - MLPredictiveAnalysis.funding_stage_prediction - INFO - Loaded 100 records from growthlist data
+2025-04-30 02:38:46,013 - MLPredictiveAnalysis.funding_stage_prediction - INFO - Found funding stages in topstartup data: ['Series A' 'Series C' 'Series D' 'Series J' 'Series E' 'Series B'
+ 'Series F' 'Seed' 'Venture - Series Unknown' 'Series I' 'Series G'
+ 'Pre-Seed' 'Series H' 'Post-IPO']
+2025-04-30 02:38:46,014 - MLPredictiveAnalysis.funding_stage_prediction - WARNING - Unreasonably large funding amount detected: $20,000,000,000.00
+2025-04-30 02:38:46,014 - MLPredictiveAnalysis.funding_stage_prediction - WARNING - Unreasonably large funding amount detected: $29,000,000,000.00
+2025-04-30 02:38:46,014 - MLPredictiveAnalysis.funding_stage_prediction - WARNING - Unreasonably large funding amount detected: $13,000,000,000.00
+2025-04-30 02:38:46,015 - MLPredictiveAnalysis.funding_stage_prediction - WARNING - Unreasonably large funding amount detected: $48,000,000,000.00
+2025-04-30 02:38:46,015 - MLPredictiveAnalysis.funding_stage_prediction - WARNING - Unreasonably large funding amount detected: $23,000,000,000.00
+2025-04-30 02:38:46,015 - MLPredictiveAnalysis.funding_stage_prediction - INFO - Loaded 546 records from topstartup data
+2025-04-30 02:38:46,015 - MLPredictiveAnalysis.funding_stage_prediction - INFO - Loaded datasets - Fundraiser: 1103 rows, Growthlist: 100 rows, Topstartup: 546 rows
+2025-04-30 02:38:46,037 - MLPredictiveAnalysis.funding_stage_prediction - INFO - Processed 1103 records from fundraiser data
+2025-04-30 02:38:46,052 - MLPredictiveAnalysis.funding_stage_prediction - INFO - Unique funding stages from fundraiser: {'Debt Financing', 'Series B', 'Seed', 'Series E', 'Grant', 'Undisclosed', 'Series H', 'Private Equity', 'Series D', 'Angel', 'Series F', 'Series C', 'Pre-Seed', 'Venture - Series Unknown', 'Series A'}
+2025-04-30 02:38:46,054 - MLPredictiveAnalysis.funding_stage_prediction - INFO - Processed 100 records from growthlist data
+2025-04-30 02:38:46,063 - MLPredictiveAnalysis.funding_stage_prediction - WARNING - Unreasonably large funding amount detected: $20,000,000,000.00
+2025-04-30 02:38:46,064 - MLPredictiveAnalysis.funding_stage_prediction - WARNING - Unreasonably large funding amount detected: $29,000,000,000.00
+2025-04-30 02:38:46,064 - MLPredictiveAnalysis.funding_stage_prediction - WARNING - Unreasonably large funding amount detected: $13,000,000,000.00
+2025-04-30 02:38:46,064 - MLPredictiveAnalysis.funding_stage_prediction - WARNING - Unreasonably large funding amount detected: $48,000,000,000.00
+2025-04-30 02:38:46,065 - MLPredictiveAnalysis.funding_stage_prediction - WARNING - Unreasonably large funding amount detected: $23,000,000,000.00
+2025-04-30 02:38:46,065 - MLPredictiveAnalysis.funding_stage_prediction - INFO - Processed 546 records from topstartup data
+2025-04-30 02:38:46,071 - MLPredictiveAnalysis.funding_stage_prediction - INFO - Saved 1749 records to historical merged_data
+2025-04-30 02:38:46,071 - MLPredictiveAnalysis.funding_stage_prediction - INFO - Successfully merged 1749 records
+2025-04-30 02:38:46,079 - MLPredictiveAnalysis.funding_stage_prediction - INFO - Creating funding_stage_numeric column...
+2025-04-30 02:38:46,080 - MLPredictiveAnalysis.funding_stage_prediction - INFO - Prepared time series data with 1714 valid records
+2025-04-30 02:38:46,088 - MLPredictiveAnalysis.funding_stage_prediction - INFO - Aggregated data into 111 monthly periods
+2025-04-30 02:38:46,123 - cmdstanpy - DEBUG - input tempfile: /var/folders/nf/rxfx59l56_l7rvzr_k3n1r3c0000gn/T/tmpehcdqeu2/tiqcxock.json
+2025-04-30 02:38:46,126 - cmdstanpy - DEBUG - input tempfile: /var/folders/nf/rxfx59l56_l7rvzr_k3n1r3c0000gn/T/tmpehcdqeu2/_qr5nqs2.json
+2025-04-30 02:38:46,127 - cmdstanpy - DEBUG - idx 0
+2025-04-30 02:38:46,127 - cmdstanpy - DEBUG - running CmdStan, num_threads: None
+2025-04-30 02:38:46,127 - cmdstanpy - DEBUG - CmdStan args: ['/Users/hk/Downloads/DSFinalYearProject/.venv/lib/python3.12/site-packages/prophet/stan_model/prophet_model.bin', 'random', 'seed=13850', 'data', 'file=/var/folders/nf/rxfx59l56_l7rvzr_k3n1r3c0000gn/T/tmpehcdqeu2/tiqcxock.json', 'init=/var/folders/nf/rxfx59l56_l7rvzr_k3n1r3c0000gn/T/tmpehcdqeu2/_qr5nqs2.json', 'output', 'file=/var/folders/nf/rxfx59l56_l7rvzr_k3n1r3c0000gn/T/tmpehcdqeu2/prophet_modelykqa50u_/prophet_model-20250430023846.csv', 'method=optimize', 'algorithm=lbfgs', 'iter=10000']
+2025-04-30 02:38:46,127 - cmdstanpy - INFO - Chain [1] start processing
+2025-04-30 02:38:46,148 - cmdstanpy - INFO - Chain [1] done processing
+2025-04-30 02:38:46,177 - MLPredictiveAnalysis.funding_stage_prediction - INFO - Saved funding rounds forecast to /Users/hk/Downloads/DSFinalYearProject/FundingStageOutput/time_series_forecasts/funding_rounds_forecast.csv
+2025-04-30 02:38:46,534 - prophet - INFO - n_changepoints greater than number of observations. Using 9.
+2025-04-30 02:38:46,536 - cmdstanpy - DEBUG - input tempfile: /var/folders/nf/rxfx59l56_l7rvzr_k3n1r3c0000gn/T/tmpehcdqeu2/91w9iznr.json
+2025-04-30 02:38:46,537 - cmdstanpy - DEBUG - input tempfile: /var/folders/nf/rxfx59l56_l7rvzr_k3n1r3c0000gn/T/tmpehcdqeu2/fi_ywzcc.json
+2025-04-30 02:38:46,538 - cmdstanpy - DEBUG - idx 0
+2025-04-30 02:38:46,538 - cmdstanpy - DEBUG - running CmdStan, num_threads: None
+2025-04-30 02:38:46,538 - cmdstanpy - DEBUG - CmdStan args: ['/Users/hk/Downloads/DSFinalYearProject/.venv/lib/python3.12/site-packages/prophet/stan_model/prophet_model.bin', 'random', 'seed=14677', 'data', 'file=/var/folders/nf/rxfx59l56_l7rvzr_k3n1r3c0000gn/T/tmpehcdqeu2/91w9iznr.json', 'init=/var/folders/nf/rxfx59l56_l7rvzr_k3n1r3c0000gn/T/tmpehcdqeu2/fi_ywzcc.json', 'output', 'file=/var/folders/nf/rxfx59l56_l7rvzr_k3n1r3c0000gn/T/tmpehcdqeu2/prophet_modelq2b076a2/prophet_model-20250430023846.csv', 'method=optimize', 'algorithm=newton', 'iter=10000']
+2025-04-30 02:38:46,538 - cmdstanpy - INFO - Chain [1] start processing
+2025-04-30 02:38:46,794 - cmdstanpy - INFO - Chain [1] done processing
+2025-04-30 02:38:47,322 - prophet - INFO - n_changepoints greater than number of observations. Using 8.
+2025-04-30 02:38:47,324 - cmdstanpy - DEBUG - input tempfile: /var/folders/nf/rxfx59l56_l7rvzr_k3n1r3c0000gn/T/tmpehcdqeu2/bnkxjhj2.json
+2025-04-30 02:38:47,324 - cmdstanpy - DEBUG - input tempfile: /var/folders/nf/rxfx59l56_l7rvzr_k3n1r3c0000gn/T/tmpehcdqeu2/fxqqqw_d.json
+2025-04-30 02:38:47,325 - cmdstanpy - DEBUG - idx 0
+2025-04-30 02:38:47,325 - cmdstanpy - DEBUG - running CmdStan, num_threads: None
+2025-04-30 02:38:47,325 - cmdstanpy - DEBUG - CmdStan args: ['/Users/hk/Downloads/DSFinalYearProject/.venv/lib/python3.12/site-packages/prophet/stan_model/prophet_model.bin', 'random', 'seed=68152', 'data', 'file=/var/folders/nf/rxfx59l56_l7rvzr_k3n1r3c0000gn/T/tmpehcdqeu2/bnkxjhj2.json', 'init=/var/folders/nf/rxfx59l56_l7rvzr_k3n1r3c0000gn/T/tmpehcdqeu2/fxqqqw_d.json', 'output', 'file=/var/folders/nf/rxfx59l56_l7rvzr_k3n1r3c0000gn/T/tmpehcdqeu2/prophet_model6ehxlcmf/prophet_model-20250430023847.csv', 'method=optimize', 'algorithm=newton', 'iter=10000']
+2025-04-30 02:38:47,325 - cmdstanpy - INFO - Chain [1] start processing
+2025-04-30 02:38:47,837 - cmdstanpy - INFO - Chain [1] done processing
+2025-04-30 02:38:48,169 - prophet - INFO - n_changepoints greater than number of observations. Using 8.
+2025-04-30 02:38:48,170 - cmdstanpy - DEBUG - input tempfile: /var/folders/nf/rxfx59l56_l7rvzr_k3n1r3c0000gn/T/tmpehcdqeu2/fvpi50ea.json
+2025-04-30 02:38:48,170 - cmdstanpy - DEBUG - input tempfile: /var/folders/nf/rxfx59l56_l7rvzr_k3n1r3c0000gn/T/tmpehcdqeu2/n54igc7w.json
+2025-04-30 02:38:48,170 - cmdstanpy - DEBUG - idx 0
+2025-04-30 02:38:48,171 - cmdstanpy - DEBUG - running CmdStan, num_threads: None
+2025-04-30 02:38:48,171 - cmdstanpy - DEBUG - CmdStan args: ['/Users/hk/Downloads/DSFinalYearProject/.venv/lib/python3.12/site-packages/prophet/stan_model/prophet_model.bin', 'random', 'seed=25590', 'data', 'file=/var/folders/nf/rxfx59l56_l7rvzr_k3n1r3c0000gn/T/tmpehcdqeu2/fvpi50ea.json', 'init=/var/folders/nf/rxfx59l56_l7rvzr_k3n1r3c0000gn/T/tmpehcdqeu2/n54igc7w.json', 'output', 'file=/var/folders/nf/rxfx59l56_l7rvzr_k3n1r3c0000gn/T/tmpehcdqeu2/prophet_model14ht8gy0/prophet_model-20250430023848.csv', 'method=optimize', 'algorithm=newton', 'iter=10000']
+2025-04-30 02:38:48,171 - cmdstanpy - INFO - Chain [1] start processing
+2025-04-30 02:38:48,328 - cmdstanpy - INFO - Chain [1] done processing
+2025-04-30 02:38:48,630 - prophet - INFO - n_changepoints greater than number of observations. Using 8.
+2025-04-30 02:38:48,631 - cmdstanpy - DEBUG - input tempfile: /var/folders/nf/rxfx59l56_l7rvzr_k3n1r3c0000gn/T/tmpehcdqeu2/cbd11sfi.json
+2025-04-30 02:38:48,632 - cmdstanpy - DEBUG - input tempfile: /var/folders/nf/rxfx59l56_l7rvzr_k3n1r3c0000gn/T/tmpehcdqeu2/2fsb5ikr.json
+2025-04-30 02:38:48,632 - cmdstanpy - DEBUG - idx 0
+2025-04-30 02:38:48,632 - cmdstanpy - DEBUG - running CmdStan, num_threads: None
+2025-04-30 02:38:48,632 - cmdstanpy - DEBUG - CmdStan args: ['/Users/hk/Downloads/DSFinalYearProject/.venv/lib/python3.12/site-packages/prophet/stan_model/prophet_model.bin', 'random', 'seed=95911', 'data', 'file=/var/folders/nf/rxfx59l56_l7rvzr_k3n1r3c0000gn/T/tmpehcdqeu2/cbd11sfi.json', 'init=/var/folders/nf/rxfx59l56_l7rvzr_k3n1r3c0000gn/T/tmpehcdqeu2/2fsb5ikr.json', 'output', 'file=/var/folders/nf/rxfx59l56_l7rvzr_k3n1r3c0000gn/T/tmpehcdqeu2/prophet_modelpjzlb92m/prophet_model-20250430023848.csv', 'method=optimize', 'algorithm=newton', 'iter=10000']
+2025-04-30 02:38:48,632 - cmdstanpy - INFO - Chain [1] start processing
+2025-04-30 02:38:49,413 - cmdstanpy - INFO - Chain [1] done processing
+2025-04-30 02:38:49,672 - prophet - INFO - n_changepoints greater than number of observations. Using 8.
+2025-04-30 02:38:49,672 - cmdstanpy - DEBUG - input tempfile: /var/folders/nf/rxfx59l56_l7rvzr_k3n1r3c0000gn/T/tmpehcdqeu2/xv5e2ep0.json
+2025-04-30 02:38:49,673 - cmdstanpy - DEBUG - input tempfile: /var/folders/nf/rxfx59l56_l7rvzr_k3n1r3c0000gn/T/tmpehcdqeu2/0k0qaqla.json
+2025-04-30 02:38:49,673 - cmdstanpy - DEBUG - idx 0
+2025-04-30 02:38:49,673 - cmdstanpy - DEBUG - running CmdStan, num_threads: None
+2025-04-30 02:38:49,673 - cmdstanpy - DEBUG - CmdStan args: ['/Users/hk/Downloads/DSFinalYearProject/.venv/lib/python3.12/site-packages/prophet/stan_model/prophet_model.bin', 'random', 'seed=99625', 'data', 'file=/var/folders/nf/rxfx59l56_l7rvzr_k3n1r3c0000gn/T/tmpehcdqeu2/xv5e2ep0.json', 'init=/var/folders/nf/rxfx59l56_l7rvzr_k3n1r3c0000gn/T/tmpehcdqeu2/0k0qaqla.json', 'output', 'file=/var/folders/nf/rxfx59l56_l7rvzr_k3n1r3c0000gn/T/tmpehcdqeu2/prophet_model0nlj0hdv/prophet_model-20250430023849.csv', 'method=optimize', 'algorithm=newton', 'iter=10000']
+2025-04-30 02:38:49,673 - cmdstanpy - INFO - Chain [1] start processing
+2025-04-30 02:38:54,572 - cmdstanpy - INFO - Chain [1] done processing
+2025-04-30 02:38:54,894 - prophet - INFO - n_changepoints greater than number of observations. Using 8.
+2025-04-30 02:38:54,894 - cmdstanpy - DEBUG - input tempfile: /var/folders/nf/rxfx59l56_l7rvzr_k3n1r3c0000gn/T/tmpehcdqeu2/u7pvyg8k.json
+2025-04-30 02:38:54,895 - cmdstanpy - DEBUG - input tempfile: /var/folders/nf/rxfx59l56_l7rvzr_k3n1r3c0000gn/T/tmpehcdqeu2/abplyiqx.json
+2025-04-30 02:38:54,895 - cmdstanpy - DEBUG - idx 0
+2025-04-30 02:38:54,895 - cmdstanpy - DEBUG - running CmdStan, num_threads: None
+2025-04-30 02:38:54,895 - cmdstanpy - DEBUG - CmdStan args: ['/Users/hk/Downloads/DSFinalYearProject/.venv/lib/python3.12/site-packages/prophet/stan_model/prophet_model.bin', 'random', 'seed=49547', 'data', 'file=/var/folders/nf/rxfx59l56_l7rvzr_k3n1r3c0000gn/T/tmpehcdqeu2/u7pvyg8k.json', 'init=/var/folders/nf/rxfx59l56_l7rvzr_k3n1r3c0000gn/T/tmpehcdqeu2/abplyiqx.json', 'output', 'file=/var/folders/nf/rxfx59l56_l7rvzr_k3n1r3c0000gn/T/tmpehcdqeu2/prophet_models6ybmck9/prophet_model-20250430023854.csv', 'method=optimize', 'algorithm=newton', 'iter=10000']
+2025-04-30 02:38:54,895 - cmdstanpy - INFO - Chain [1] start processing
+2025-04-30 02:38:55,036 - cmdstanpy - INFO - Chain [1] done processing
+2025-04-30 02:38:55,266 - prophet - INFO - n_changepoints greater than number of observations. Using 7.
+2025-04-30 02:38:55,266 - cmdstanpy - DEBUG - input tempfile: /var/folders/nf/rxfx59l56_l7rvzr_k3n1r3c0000gn/T/tmpehcdqeu2/uj7x4z6s.json
+2025-04-30 02:38:55,267 - cmdstanpy - DEBUG - input tempfile: /var/folders/nf/rxfx59l56_l7rvzr_k3n1r3c0000gn/T/tmpehcdqeu2/ksci4e0g.json
+2025-04-30 02:38:55,267 - cmdstanpy - DEBUG - idx 0
+2025-04-30 02:38:55,267 - cmdstanpy - DEBUG - running CmdStan, num_threads: None
+2025-04-30 02:38:55,267 - cmdstanpy - DEBUG - CmdStan args: ['/Users/hk/Downloads/DSFinalYearProject/.venv/lib/python3.12/site-packages/prophet/stan_model/prophet_model.bin', 'random', 'seed=38687', 'data', 'file=/var/folders/nf/rxfx59l56_l7rvzr_k3n1r3c0000gn/T/tmpehcdqeu2/uj7x4z6s.json', 'init=/var/folders/nf/rxfx59l56_l7rvzr_k3n1r3c0000gn/T/tmpehcdqeu2/ksci4e0g.json', 'output', 'file=/var/folders/nf/rxfx59l56_l7rvzr_k3n1r3c0000gn/T/tmpehcdqeu2/prophet_modelydxmqfwl/prophet_model-20250430023855.csv', 'method=optimize', 'algorithm=newton', 'iter=10000']
+2025-04-30 02:38:55,267 - cmdstanpy - INFO - Chain [1] start processing
+2025-04-30 02:38:59,728 - cmdstanpy - INFO - Chain [1] done processing
+2025-04-30 02:39:00,117 - prophet - INFO - n_changepoints greater than number of observations. Using 8.
+2025-04-30 02:39:00,118 - cmdstanpy - DEBUG - input tempfile: /var/folders/nf/rxfx59l56_l7rvzr_k3n1r3c0000gn/T/tmpehcdqeu2/ounkkpzt.json
+2025-04-30 02:39:00,118 - cmdstanpy - DEBUG - input tempfile: /var/folders/nf/rxfx59l56_l7rvzr_k3n1r3c0000gn/T/tmpehcdqeu2/zyrbkpql.json
+2025-04-30 02:39:00,118 - cmdstanpy - DEBUG - idx 0
+2025-04-30 02:39:00,119 - cmdstanpy - DEBUG - running CmdStan, num_threads: None
+2025-04-30 02:39:00,119 - cmdstanpy - DEBUG - CmdStan args: ['/Users/hk/Downloads/DSFinalYearProject/.venv/lib/python3.12/site-packages/prophet/stan_model/prophet_model.bin', 'random', 'seed=55922', 'data', 'file=/var/folders/nf/rxfx59l56_l7rvzr_k3n1r3c0000gn/T/tmpehcdqeu2/ounkkpzt.json', 'init=/var/folders/nf/rxfx59l56_l7rvzr_k3n1r3c0000gn/T/tmpehcdqeu2/zyrbkpql.json', 'output', 'file=/var/folders/nf/rxfx59l56_l7rvzr_k3n1r3c0000gn/T/tmpehcdqeu2/prophet_modeljhxs27b8/prophet_model-20250430023900.csv', 'method=optimize', 'algorithm=newton', 'iter=10000']
+2025-04-30 02:39:00,119 - cmdstanpy - INFO - Chain [1] start processing
+2025-04-30 02:39:00,298 - cmdstanpy - INFO - Chain [1] done processing
+2025-04-30 02:39:00,516 - prophet - INFO - n_changepoints greater than number of observations. Using 8.
+2025-04-30 02:39:00,516 - cmdstanpy - DEBUG - input tempfile: /var/folders/nf/rxfx59l56_l7rvzr_k3n1r3c0000gn/T/tmpehcdqeu2/b61norkp.json
+2025-04-30 02:39:00,517 - cmdstanpy - DEBUG - input tempfile: /var/folders/nf/rxfx59l56_l7rvzr_k3n1r3c0000gn/T/tmpehcdqeu2/7wssqj8q.json
+2025-04-30 02:39:00,517 - cmdstanpy - DEBUG - idx 0
+2025-04-30 02:39:00,517 - cmdstanpy - DEBUG - running CmdStan, num_threads: None
+2025-04-30 02:39:00,517 - cmdstanpy - DEBUG - CmdStan args: ['/Users/hk/Downloads/DSFinalYearProject/.venv/lib/python3.12/site-packages/prophet/stan_model/prophet_model.bin', 'random', 'seed=32123', 'data', 'file=/var/folders/nf/rxfx59l56_l7rvzr_k3n1r3c0000gn/T/tmpehcdqeu2/b61norkp.json', 'init=/var/folders/nf/rxfx59l56_l7rvzr_k3n1r3c0000gn/T/tmpehcdqeu2/7wssqj8q.json', 'output', 'file=/var/folders/nf/rxfx59l56_l7rvzr_k3n1r3c0000gn/T/tmpehcdqeu2/prophet_modeluvyg_qoz/prophet_model-20250430023900.csv', 'method=optimize', 'algorithm=newton', 'iter=10000']
+2025-04-30 02:39:00,517 - cmdstanpy - INFO - Chain [1] start processing
+2025-04-30 02:39:00,689 - cmdstanpy - INFO - Chain [1] done processing
+2025-04-30 02:39:00,926 - prophet - INFO - n_changepoints greater than number of observations. Using 8.
+2025-04-30 02:39:00,927 - cmdstanpy - DEBUG - input tempfile: /var/folders/nf/rxfx59l56_l7rvzr_k3n1r3c0000gn/T/tmpehcdqeu2/xjr5z74f.json
+2025-04-30 02:39:00,927 - cmdstanpy - DEBUG - input tempfile: /var/folders/nf/rxfx59l56_l7rvzr_k3n1r3c0000gn/T/tmpehcdqeu2/mj4yhz8z.json
+2025-04-30 02:39:00,928 - cmdstanpy - DEBUG - idx 0
+2025-04-30 02:39:00,928 - cmdstanpy - DEBUG - running CmdStan, num_threads: None
+2025-04-30 02:39:00,928 - cmdstanpy - DEBUG - CmdStan args: ['/Users/hk/Downloads/DSFinalYearProject/.venv/lib/python3.12/site-packages/prophet/stan_model/prophet_model.bin', 'random', 'seed=71733', 'data', 'file=/var/folders/nf/rxfx59l56_l7rvzr_k3n1r3c0000gn/T/tmpehcdqeu2/xjr5z74f.json', 'init=/var/folders/nf/rxfx59l56_l7rvzr_k3n1r3c0000gn/T/tmpehcdqeu2/mj4yhz8z.json', 'output', 'file=/var/folders/nf/rxfx59l56_l7rvzr_k3n1r3c0000gn/T/tmpehcdqeu2/prophet_modelg734xnd_/prophet_model-20250430023900.csv', 'method=optimize', 'algorithm=newton', 'iter=10000']
+2025-04-30 02:39:00,928 - cmdstanpy - INFO - Chain [1] start processing
+2025-04-30 02:39:05,636 - cmdstanpy - INFO - Chain [1] done processing
+2025-04-30 02:39:05,921 - prophet - INFO - n_changepoints greater than number of observations. Using 8.
+2025-04-30 02:39:05,922 - cmdstanpy - DEBUG - input tempfile: /var/folders/nf/rxfx59l56_l7rvzr_k3n1r3c0000gn/T/tmpehcdqeu2/ytrtl8gg.json
+2025-04-30 02:39:05,923 - cmdstanpy - DEBUG - input tempfile: /var/folders/nf/rxfx59l56_l7rvzr_k3n1r3c0000gn/T/tmpehcdqeu2/ddnpzpy9.json
+2025-04-30 02:39:05,923 - cmdstanpy - DEBUG - idx 0
+2025-04-30 02:39:05,923 - cmdstanpy - DEBUG - running CmdStan, num_threads: None
+2025-04-30 02:39:05,923 - cmdstanpy - DEBUG - CmdStan args: ['/Users/hk/Downloads/DSFinalYearProject/.venv/lib/python3.12/site-packages/prophet/stan_model/prophet_model.bin', 'random', 'seed=5956', 'data', 'file=/var/folders/nf/rxfx59l56_l7rvzr_k3n1r3c0000gn/T/tmpehcdqeu2/ytrtl8gg.json', 'init=/var/folders/nf/rxfx59l56_l7rvzr_k3n1r3c0000gn/T/tmpehcdqeu2/ddnpzpy9.json', 'output', 'file=/var/folders/nf/rxfx59l56_l7rvzr_k3n1r3c0000gn/T/tmpehcdqeu2/prophet_modeli2wv2wg2/prophet_model-20250430023905.csv', 'method=optimize', 'algorithm=newton', 'iter=10000']
+2025-04-30 02:39:05,923 - cmdstanpy - INFO - Chain [1] start processing
+2025-04-30 02:39:08,091 - cmdstanpy - INFO - Chain [1] done processing
+2025-04-30 02:39:08,313 - prophet - INFO - n_changepoints greater than number of observations. Using 7.
+2025-04-30 02:39:08,314 - cmdstanpy - DEBUG - input tempfile: /var/folders/nf/rxfx59l56_l7rvzr_k3n1r3c0000gn/T/tmpehcdqeu2/omtvtw9s.json
+2025-04-30 02:39:08,314 - cmdstanpy - DEBUG - input tempfile: /var/folders/nf/rxfx59l56_l7rvzr_k3n1r3c0000gn/T/tmpehcdqeu2/mpo3i3d9.json
+2025-04-30 02:39:08,315 - cmdstanpy - DEBUG - idx 0
+2025-04-30 02:39:08,315 - cmdstanpy - DEBUG - running CmdStan, num_threads: None
+2025-04-30 02:39:08,315 - cmdstanpy - DEBUG - CmdStan args: ['/Users/hk/Downloads/DSFinalYearProject/.venv/lib/python3.12/site-packages/prophet/stan_model/prophet_model.bin', 'random', 'seed=18410', 'data', 'file=/var/folders/nf/rxfx59l56_l7rvzr_k3n1r3c0000gn/T/tmpehcdqeu2/omtvtw9s.json', 'init=/var/folders/nf/rxfx59l56_l7rvzr_k3n1r3c0000gn/T/tmpehcdqeu2/mpo3i3d9.json', 'output', 'file=/var/folders/nf/rxfx59l56_l7rvzr_k3n1r3c0000gn/T/tmpehcdqeu2/prophet_model50enfr26/prophet_model-20250430023908.csv', 'method=optimize', 'algorithm=newton', 'iter=10000']
+2025-04-30 02:39:08,315 - cmdstanpy - INFO - Chain [1] start processing
+2025-04-30 02:39:08,499 - cmdstanpy - INFO - Chain [1] done processing
+2025-04-30 02:39:08,729 - cmdstanpy - DEBUG - input tempfile: /var/folders/nf/rxfx59l56_l7rvzr_k3n1r3c0000gn/T/tmpehcdqeu2/qx_sh9fm.json
+2025-04-30 02:39:08,731 - cmdstanpy - DEBUG - input tempfile: /var/folders/nf/rxfx59l56_l7rvzr_k3n1r3c0000gn/T/tmpehcdqeu2/k7xvyn4f.json
+2025-04-30 02:39:08,732 - cmdstanpy - DEBUG - idx 0
+2025-04-30 02:39:08,732 - cmdstanpy - DEBUG - running CmdStan, num_threads: None
+2025-04-30 02:39:08,732 - cmdstanpy - DEBUG - CmdStan args: ['/Users/hk/Downloads/DSFinalYearProject/.venv/lib/python3.12/site-packages/prophet/stan_model/prophet_model.bin', 'random', 'seed=6647', 'data', 'file=/var/folders/nf/rxfx59l56_l7rvzr_k3n1r3c0000gn/T/tmpehcdqeu2/qx_sh9fm.json', 'init=/var/folders/nf/rxfx59l56_l7rvzr_k3n1r3c0000gn/T/tmpehcdqeu2/k7xvyn4f.json', 'output', 'file=/var/folders/nf/rxfx59l56_l7rvzr_k3n1r3c0000gn/T/tmpehcdqeu2/prophet_modelgwcnnsnl/prophet_model-20250430023908.csv', 'method=optimize', 'algorithm=lbfgs', 'iter=10000']
+2025-04-30 02:39:08,732 - cmdstanpy - INFO - Chain [1] start processing
+2025-04-30 02:39:08,743 - cmdstanpy - INFO - Chain [1] done processing
+2025-04-30 02:39:08,767 - MLPredictiveAnalysis.funding_stage_prediction - INFO - Saved funding amounts forecast to /Users/hk/Downloads/DSFinalYearProject/FundingStageOutput/time_series_forecasts/funding_amounts_forecast.csv
+2025-04-30 02:39:08,962 - cmdstanpy - DEBUG - input tempfile: /var/folders/nf/rxfx59l56_l7rvzr_k3n1r3c0000gn/T/tmpehcdqeu2/ehdt7dmv.json
+2025-04-30 02:39:08,965 - cmdstanpy - DEBUG - input tempfile: /var/folders/nf/rxfx59l56_l7rvzr_k3n1r3c0000gn/T/tmpehcdqeu2/cwmufgt4.json
+2025-04-30 02:39:08,965 - cmdstanpy - DEBUG - idx 0
+2025-04-30 02:39:08,965 - cmdstanpy - DEBUG - running CmdStan, num_threads: None
+2025-04-30 02:39:08,965 - cmdstanpy - DEBUG - CmdStan args: ['/Users/hk/Downloads/DSFinalYearProject/.venv/lib/python3.12/site-packages/prophet/stan_model/prophet_model.bin', 'random', 'seed=64062', 'data', 'file=/var/folders/nf/rxfx59l56_l7rvzr_k3n1r3c0000gn/T/tmpehcdqeu2/ehdt7dmv.json', 'init=/var/folders/nf/rxfx59l56_l7rvzr_k3n1r3c0000gn/T/tmpehcdqeu2/cwmufgt4.json', 'output', 'file=/var/folders/nf/rxfx59l56_l7rvzr_k3n1r3c0000gn/T/tmpehcdqeu2/prophet_model1_e_k4_2/prophet_model-20250430023908.csv', 'method=optimize', 'algorithm=lbfgs', 'iter=10000']
+2025-04-30 02:39:08,965 - cmdstanpy - INFO - Chain [1] start processing
+2025-04-30 02:39:08,974 - cmdstanpy - INFO - Chain [1] done processing
+2025-04-30 02:39:09,206 - cmdstanpy - DEBUG - input tempfile: /var/folders/nf/rxfx59l56_l7rvzr_k3n1r3c0000gn/T/tmpehcdqeu2/6fx0f6no.json
+2025-04-30 02:39:09,209 - cmdstanpy - DEBUG - input tempfile: /var/folders/nf/rxfx59l56_l7rvzr_k3n1r3c0000gn/T/tmpehcdqeu2/8nazt_4v.json
+2025-04-30 02:39:09,210 - cmdstanpy - DEBUG - idx 0
+2025-04-30 02:39:09,210 - cmdstanpy - DEBUG - running CmdStan, num_threads: None
+2025-04-30 02:39:09,210 - cmdstanpy - DEBUG - CmdStan args: ['/Users/hk/Downloads/DSFinalYearProject/.venv/lib/python3.12/site-packages/prophet/stan_model/prophet_model.bin', 'random', 'seed=42697', 'data', 'file=/var/folders/nf/rxfx59l56_l7rvzr_k3n1r3c0000gn/T/tmpehcdqeu2/6fx0f6no.json', 'init=/var/folders/nf/rxfx59l56_l7rvzr_k3n1r3c0000gn/T/tmpehcdqeu2/8nazt_4v.json', 'output', 'file=/var/folders/nf/rxfx59l56_l7rvzr_k3n1r3c0000gn/T/tmpehcdqeu2/prophet_modelp9barlls/prophet_model-20250430023909.csv', 'method=optimize', 'algorithm=lbfgs', 'iter=10000']
+2025-04-30 02:39:09,210 - cmdstanpy - INFO - Chain [1] start processing
+2025-04-30 02:39:09,223 - cmdstanpy - INFO - Chain [1] done processing
+2025-04-30 02:39:09,499 - cmdstanpy - DEBUG - input tempfile: /var/folders/nf/rxfx59l56_l7rvzr_k3n1r3c0000gn/T/tmpehcdqeu2/5h8686v3.json
+2025-04-30 02:39:09,502 - cmdstanpy - DEBUG - input tempfile: /var/folders/nf/rxfx59l56_l7rvzr_k3n1r3c0000gn/T/tmpehcdqeu2/zffji5rn.json
+2025-04-30 02:39:09,503 - cmdstanpy - DEBUG - idx 0
+2025-04-30 02:39:09,503 - cmdstanpy - DEBUG - running CmdStan, num_threads: None
+2025-04-30 02:39:09,503 - cmdstanpy - DEBUG - CmdStan args: ['/Users/hk/Downloads/DSFinalYearProject/.venv/lib/python3.12/site-packages/prophet/stan_model/prophet_model.bin', 'random', 'seed=8258', 'data', 'file=/var/folders/nf/rxfx59l56_l7rvzr_k3n1r3c0000gn/T/tmpehcdqeu2/5h8686v3.json', 'init=/var/folders/nf/rxfx59l56_l7rvzr_k3n1r3c0000gn/T/tmpehcdqeu2/zffji5rn.json', 'output', 'file=/var/folders/nf/rxfx59l56_l7rvzr_k3n1r3c0000gn/T/tmpehcdqeu2/prophet_model4jb93m5h/prophet_model-20250430023909.csv', 'method=optimize', 'algorithm=lbfgs', 'iter=10000']
+2025-04-30 02:39:09,503 - cmdstanpy - INFO - Chain [1] start processing
+2025-04-30 02:39:09,517 - cmdstanpy - INFO - Chain [1] done processing
+2025-04-30 02:39:09,756 - prophet - INFO - n_changepoints greater than number of observations. Using 8.
+2025-04-30 02:39:09,756 - cmdstanpy - DEBUG - input tempfile: /var/folders/nf/rxfx59l56_l7rvzr_k3n1r3c0000gn/T/tmpehcdqeu2/3ffoyyuw.json
+2025-04-30 02:39:09,757 - cmdstanpy - DEBUG - input tempfile: /var/folders/nf/rxfx59l56_l7rvzr_k3n1r3c0000gn/T/tmpehcdqeu2/4kesshc4.json
+2025-04-30 02:39:09,757 - cmdstanpy - DEBUG - idx 0
+2025-04-30 02:39:09,757 - cmdstanpy - DEBUG - running CmdStan, num_threads: None
+2025-04-30 02:39:09,757 - cmdstanpy - DEBUG - CmdStan args: ['/Users/hk/Downloads/DSFinalYearProject/.venv/lib/python3.12/site-packages/prophet/stan_model/prophet_model.bin', 'random', 'seed=43019', 'data', 'file=/var/folders/nf/rxfx59l56_l7rvzr_k3n1r3c0000gn/T/tmpehcdqeu2/3ffoyyuw.json', 'init=/var/folders/nf/rxfx59l56_l7rvzr_k3n1r3c0000gn/T/tmpehcdqeu2/4kesshc4.json', 'output', 'file=/var/folders/nf/rxfx59l56_l7rvzr_k3n1r3c0000gn/T/tmpehcdqeu2/prophet_model8ix2u17x/prophet_model-20250430023909.csv', 'method=optimize', 'algorithm=newton', 'iter=10000']
+2025-04-30 02:39:09,757 - cmdstanpy - INFO - Chain [1] start processing
+2025-04-30 02:39:11,729 - cmdstanpy - INFO - Chain [1] done processing
+2025-04-30 02:39:12,191 - prophet - INFO - n_changepoints greater than number of observations. Using 7.
+2025-04-30 02:39:12,193 - cmdstanpy - DEBUG - input tempfile: /var/folders/nf/rxfx59l56_l7rvzr_k3n1r3c0000gn/T/tmpehcdqeu2/ch67ppwy.json
+2025-04-30 02:39:12,194 - cmdstanpy - DEBUG - input tempfile: /var/folders/nf/rxfx59l56_l7rvzr_k3n1r3c0000gn/T/tmpehcdqeu2/rr51r0l5.json
+2025-04-30 02:39:12,194 - cmdstanpy - DEBUG - idx 0
+2025-04-30 02:39:12,194 - cmdstanpy - DEBUG - running CmdStan, num_threads: None
+2025-04-30 02:39:12,194 - cmdstanpy - DEBUG - CmdStan args: ['/Users/hk/Downloads/DSFinalYearProject/.venv/lib/python3.12/site-packages/prophet/stan_model/prophet_model.bin', 'random', 'seed=90385', 'data', 'file=/var/folders/nf/rxfx59l56_l7rvzr_k3n1r3c0000gn/T/tmpehcdqeu2/ch67ppwy.json', 'init=/var/folders/nf/rxfx59l56_l7rvzr_k3n1r3c0000gn/T/tmpehcdqeu2/rr51r0l5.json', 'output', 'file=/var/folders/nf/rxfx59l56_l7rvzr_k3n1r3c0000gn/T/tmpehcdqeu2/prophet_modellwivqr6p/prophet_model-20250430023912.csv', 'method=optimize', 'algorithm=newton', 'iter=10000']
+2025-04-30 02:39:12,194 - cmdstanpy - INFO - Chain [1] start processing
+2025-04-30 02:39:13,796 - cmdstanpy - INFO - Chain [1] done processing
+2025-04-30 02:39:14,024 - prophet - INFO - n_changepoints greater than number of observations. Using 8.
+2025-04-30 02:39:14,025 - cmdstanpy - DEBUG - input tempfile: /var/folders/nf/rxfx59l56_l7rvzr_k3n1r3c0000gn/T/tmpehcdqeu2/xmpawpay.json
+2025-04-30 02:39:14,025 - cmdstanpy - DEBUG - input tempfile: /var/folders/nf/rxfx59l56_l7rvzr_k3n1r3c0000gn/T/tmpehcdqeu2/4_797_27.json
+2025-04-30 02:39:14,026 - cmdstanpy - DEBUG - idx 0
+2025-04-30 02:39:14,026 - cmdstanpy - DEBUG - running CmdStan, num_threads: None
+2025-04-30 02:39:14,026 - cmdstanpy - DEBUG - CmdStan args: ['/Users/hk/Downloads/DSFinalYearProject/.venv/lib/python3.12/site-packages/prophet/stan_model/prophet_model.bin', 'random', 'seed=29970', 'data', 'file=/var/folders/nf/rxfx59l56_l7rvzr_k3n1r3c0000gn/T/tmpehcdqeu2/xmpawpay.json', 'init=/var/folders/nf/rxfx59l56_l7rvzr_k3n1r3c0000gn/T/tmpehcdqeu2/4_797_27.json', 'output', 'file=/var/folders/nf/rxfx59l56_l7rvzr_k3n1r3c0000gn/T/tmpehcdqeu2/prophet_modelvt2pu_6c/prophet_model-20250430023914.csv', 'method=optimize', 'algorithm=newton', 'iter=10000']
+2025-04-30 02:39:14,026 - cmdstanpy - INFO - Chain [1] start processing
+2025-04-30 02:39:14,138 - cmdstanpy - INFO - Chain [1] done processing
+2025-04-30 02:39:14,447 - prophet - INFO - n_changepoints greater than number of observations. Using 11.
+2025-04-30 02:39:14,448 - cmdstanpy - DEBUG - input tempfile: /var/folders/nf/rxfx59l56_l7rvzr_k3n1r3c0000gn/T/tmpehcdqeu2/s3i41waq.json
+2025-04-30 02:39:14,449 - cmdstanpy - DEBUG - input tempfile: /var/folders/nf/rxfx59l56_l7rvzr_k3n1r3c0000gn/T/tmpehcdqeu2/5uzr_3qw.json
+2025-04-30 02:39:14,449 - cmdstanpy - DEBUG - idx 0
+2025-04-30 02:39:14,449 - cmdstanpy - DEBUG - running CmdStan, num_threads: None
+2025-04-30 02:39:14,449 - cmdstanpy - DEBUG - CmdStan args: ['/Users/hk/Downloads/DSFinalYearProject/.venv/lib/python3.12/site-packages/prophet/stan_model/prophet_model.bin', 'random', 'seed=10325', 'data', 'file=/var/folders/nf/rxfx59l56_l7rvzr_k3n1r3c0000gn/T/tmpehcdqeu2/s3i41waq.json', 'init=/var/folders/nf/rxfx59l56_l7rvzr_k3n1r3c0000gn/T/tmpehcdqeu2/5uzr_3qw.json', 'output', 'file=/var/folders/nf/rxfx59l56_l7rvzr_k3n1r3c0000gn/T/tmpehcdqeu2/prophet_modelh31513sf/prophet_model-20250430023914.csv', 'method=optimize', 'algorithm=newton', 'iter=10000']
+2025-04-30 02:39:14,450 - cmdstanpy - INFO - Chain [1] start processing
+2025-04-30 02:39:20,131 - cmdstanpy - INFO - Chain [1] done processing
+2025-04-30 02:39:20,440 - cmdstanpy - DEBUG - input tempfile: /var/folders/nf/rxfx59l56_l7rvzr_k3n1r3c0000gn/T/tmpehcdqeu2/bz5kzt2y.json
+2025-04-30 02:39:20,442 - cmdstanpy - DEBUG - input tempfile: /var/folders/nf/rxfx59l56_l7rvzr_k3n1r3c0000gn/T/tmpehcdqeu2/7v5g3k06.json
+2025-04-30 02:39:20,442 - cmdstanpy - DEBUG - idx 0
+2025-04-30 02:39:20,442 - cmdstanpy - DEBUG - running CmdStan, num_threads: None
+2025-04-30 02:39:20,442 - cmdstanpy - DEBUG - CmdStan args: ['/Users/hk/Downloads/DSFinalYearProject/.venv/lib/python3.12/site-packages/prophet/stan_model/prophet_model.bin', 'random', 'seed=59551', 'data', 'file=/var/folders/nf/rxfx59l56_l7rvzr_k3n1r3c0000gn/T/tmpehcdqeu2/bz5kzt2y.json', 'init=/var/folders/nf/rxfx59l56_l7rvzr_k3n1r3c0000gn/T/tmpehcdqeu2/7v5g3k06.json', 'output', 'file=/var/folders/nf/rxfx59l56_l7rvzr_k3n1r3c0000gn/T/tmpehcdqeu2/prophet_model_t_vcux1/prophet_model-20250430023920.csv', 'method=optimize', 'algorithm=newton', 'iter=10000']
+2025-04-30 02:39:20,442 - cmdstanpy - INFO - Chain [1] start processing
+2025-04-30 02:39:20,557 - cmdstanpy - INFO - Chain [1] done processing
+2025-04-30 02:39:20,778 - cmdstanpy - DEBUG - input tempfile: /var/folders/nf/rxfx59l56_l7rvzr_k3n1r3c0000gn/T/tmpehcdqeu2/811uo3ec.json
+2025-04-30 02:39:20,780 - cmdstanpy - DEBUG - input tempfile: /var/folders/nf/rxfx59l56_l7rvzr_k3n1r3c0000gn/T/tmpehcdqeu2/y74e48jm.json
+2025-04-30 02:39:20,781 - cmdstanpy - DEBUG - idx 0
+2025-04-30 02:39:20,781 - cmdstanpy - DEBUG - running CmdStan, num_threads: None
+2025-04-30 02:39:20,781 - cmdstanpy - DEBUG - CmdStan args: ['/Users/hk/Downloads/DSFinalYearProject/.venv/lib/python3.12/site-packages/prophet/stan_model/prophet_model.bin', 'random', 'seed=52699', 'data', 'file=/var/folders/nf/rxfx59l56_l7rvzr_k3n1r3c0000gn/T/tmpehcdqeu2/811uo3ec.json', 'init=/var/folders/nf/rxfx59l56_l7rvzr_k3n1r3c0000gn/T/tmpehcdqeu2/y74e48jm.json', 'output', 'file=/var/folders/nf/rxfx59l56_l7rvzr_k3n1r3c0000gn/T/tmpehcdqeu2/prophet_model0tj5ibdx/prophet_model-20250430023920.csv', 'method=optimize', 'algorithm=lbfgs', 'iter=10000']
+2025-04-30 02:39:20,781 - cmdstanpy - INFO - Chain [1] start processing
+2025-04-30 02:39:20,790 - cmdstanpy - INFO - Chain [1] done processing
+2025-04-30 02:39:21,013 - cmdstanpy - DEBUG - input tempfile: /var/folders/nf/rxfx59l56_l7rvzr_k3n1r3c0000gn/T/tmpehcdqeu2/i0szt9yd.json
+2025-04-30 02:39:21,015 - cmdstanpy - DEBUG - input tempfile: /var/folders/nf/rxfx59l56_l7rvzr_k3n1r3c0000gn/T/tmpehcdqeu2/klt2o0mq.json
+2025-04-30 02:39:21,016 - cmdstanpy - DEBUG - idx 0
+2025-04-30 02:39:21,016 - cmdstanpy - DEBUG - running CmdStan, num_threads: None
+2025-04-30 02:39:21,016 - cmdstanpy - DEBUG - CmdStan args: ['/Users/hk/Downloads/DSFinalYearProject/.venv/lib/python3.12/site-packages/prophet/stan_model/prophet_model.bin', 'random', 'seed=38332', 'data', 'file=/var/folders/nf/rxfx59l56_l7rvzr_k3n1r3c0000gn/T/tmpehcdqeu2/i0szt9yd.json', 'init=/var/folders/nf/rxfx59l56_l7rvzr_k3n1r3c0000gn/T/tmpehcdqeu2/klt2o0mq.json', 'output', 'file=/var/folders/nf/rxfx59l56_l7rvzr_k3n1r3c0000gn/T/tmpehcdqeu2/prophet_modelkjgwes0f/prophet_model-20250430023921.csv', 'method=optimize', 'algorithm=lbfgs', 'iter=10000']
+2025-04-30 02:39:21,016 - cmdstanpy - INFO - Chain [1] start processing
+2025-04-30 02:39:21,025 - cmdstanpy - INFO - Chain [1] done processing
+2025-04-30 02:39:21,279 - cmdstanpy - DEBUG - input tempfile: /var/folders/nf/rxfx59l56_l7rvzr_k3n1r3c0000gn/T/tmpehcdqeu2/wvh2ltpe.json
+2025-04-30 02:39:21,285 - cmdstanpy - DEBUG - input tempfile: /var/folders/nf/rxfx59l56_l7rvzr_k3n1r3c0000gn/T/tmpehcdqeu2/1f9kbzm9.json
+2025-04-30 02:39:21,285 - cmdstanpy - DEBUG - idx 0
+2025-04-30 02:39:21,285 - cmdstanpy - DEBUG - running CmdStan, num_threads: None
+2025-04-30 02:39:21,286 - cmdstanpy - DEBUG - CmdStan args: ['/Users/hk/Downloads/DSFinalYearProject/.venv/lib/python3.12/site-packages/prophet/stan_model/prophet_model.bin', 'random', 'seed=52858', 'data', 'file=/var/folders/nf/rxfx59l56_l7rvzr_k3n1r3c0000gn/T/tmpehcdqeu2/wvh2ltpe.json', 'init=/var/folders/nf/rxfx59l56_l7rvzr_k3n1r3c0000gn/T/tmpehcdqeu2/1f9kbzm9.json', 'output', 'file=/var/folders/nf/rxfx59l56_l7rvzr_k3n1r3c0000gn/T/tmpehcdqeu2/prophet_modelqd25qw_g/prophet_model-20250430023921.csv', 'method=optimize', 'algorithm=newton', 'iter=10000']
+2025-04-30 02:39:21,286 - cmdstanpy - INFO - Chain [1] start processing
+2025-04-30 02:39:21,440 - cmdstanpy - INFO - Chain [1] done processing
+2025-04-30 02:39:21,690 - cmdstanpy - DEBUG - input tempfile: /var/folders/nf/rxfx59l56_l7rvzr_k3n1r3c0000gn/T/tmpehcdqeu2/v7z9lyvk.json
+2025-04-30 02:39:21,692 - cmdstanpy - DEBUG - input tempfile: /var/folders/nf/rxfx59l56_l7rvzr_k3n1r3c0000gn/T/tmpehcdqeu2/fkeyfuww.json
+2025-04-30 02:39:21,693 - cmdstanpy - DEBUG - idx 0
+2025-04-30 02:39:21,693 - cmdstanpy - DEBUG - running CmdStan, num_threads: None
+2025-04-30 02:39:21,693 - cmdstanpy - DEBUG - CmdStan args: ['/Users/hk/Downloads/DSFinalYearProject/.venv/lib/python3.12/site-packages/prophet/stan_model/prophet_model.bin', 'random', 'seed=13168', 'data', 'file=/var/folders/nf/rxfx59l56_l7rvzr_k3n1r3c0000gn/T/tmpehcdqeu2/v7z9lyvk.json', 'init=/var/folders/nf/rxfx59l56_l7rvzr_k3n1r3c0000gn/T/tmpehcdqeu2/fkeyfuww.json', 'output', 'file=/var/folders/nf/rxfx59l56_l7rvzr_k3n1r3c0000gn/T/tmpehcdqeu2/prophet_model8fuhv1v6/prophet_model-20250430023921.csv', 'method=optimize', 'algorithm=lbfgs', 'iter=10000']
+2025-04-30 02:39:21,693 - cmdstanpy - INFO - Chain [1] start processing
+2025-04-30 02:39:21,705 - cmdstanpy - INFO - Chain [1] done processing
+2025-04-30 02:39:21,962 - cmdstanpy - DEBUG - input tempfile: /var/folders/nf/rxfx59l56_l7rvzr_k3n1r3c0000gn/T/tmpehcdqeu2/7u4nrbqw.json
+2025-04-30 02:39:21,963 - cmdstanpy - DEBUG - input tempfile: /var/folders/nf/rxfx59l56_l7rvzr_k3n1r3c0000gn/T/tmpehcdqeu2/b33vownk.json
+2025-04-30 02:39:21,964 - cmdstanpy - DEBUG - idx 0
+2025-04-30 02:39:21,964 - cmdstanpy - DEBUG - running CmdStan, num_threads: None
+2025-04-30 02:39:21,964 - cmdstanpy - DEBUG - CmdStan args: ['/Users/hk/Downloads/DSFinalYearProject/.venv/lib/python3.12/site-packages/prophet/stan_model/prophet_model.bin', 'random', 'seed=32628', 'data', 'file=/var/folders/nf/rxfx59l56_l7rvzr_k3n1r3c0000gn/T/tmpehcdqeu2/7u4nrbqw.json', 'init=/var/folders/nf/rxfx59l56_l7rvzr_k3n1r3c0000gn/T/tmpehcdqeu2/b33vownk.json', 'output', 'file=/var/folders/nf/rxfx59l56_l7rvzr_k3n1r3c0000gn/T/tmpehcdqeu2/prophet_modelrdp_s_xr/prophet_model-20250430023921.csv', 'method=optimize', 'algorithm=newton', 'iter=10000']
+2025-04-30 02:39:21,964 - cmdstanpy - INFO - Chain [1] start processing
+2025-04-30 02:39:22,082 - cmdstanpy - INFO - Chain [1] done processing
+2025-04-30 02:39:22,336 - cmdstanpy - DEBUG - input tempfile: /var/folders/nf/rxfx59l56_l7rvzr_k3n1r3c0000gn/T/tmpehcdqeu2/nmpur1bl.json
+2025-04-30 02:39:22,339 - cmdstanpy - DEBUG - input tempfile: /var/folders/nf/rxfx59l56_l7rvzr_k3n1r3c0000gn/T/tmpehcdqeu2/emnvslmx.json
+2025-04-30 02:39:22,339 - cmdstanpy - DEBUG - idx 0
+2025-04-30 02:39:22,339 - cmdstanpy - DEBUG - running CmdStan, num_threads: None
+2025-04-30 02:39:22,339 - cmdstanpy - DEBUG - CmdStan args: ['/Users/hk/Downloads/DSFinalYearProject/.venv/lib/python3.12/site-packages/prophet/stan_model/prophet_model.bin', 'random', 'seed=12079', 'data', 'file=/var/folders/nf/rxfx59l56_l7rvzr_k3n1r3c0000gn/T/tmpehcdqeu2/nmpur1bl.json', 'init=/var/folders/nf/rxfx59l56_l7rvzr_k3n1r3c0000gn/T/tmpehcdqeu2/emnvslmx.json', 'output', 'file=/var/folders/nf/rxfx59l56_l7rvzr_k3n1r3c0000gn/T/tmpehcdqeu2/prophet_modelefsjusth/prophet_model-20250430023922.csv', 'method=optimize', 'algorithm=lbfgs', 'iter=10000']
+2025-04-30 02:39:22,339 - cmdstanpy - INFO - Chain [1] start processing
+2025-04-30 02:39:22,354 - cmdstanpy - INFO - Chain [1] done processing
+2025-04-30 02:39:22,610 - cmdstanpy - DEBUG - input tempfile: /var/folders/nf/rxfx59l56_l7rvzr_k3n1r3c0000gn/T/tmpehcdqeu2/hl_w8mz8.json
+2025-04-30 02:39:22,613 - cmdstanpy - DEBUG - input tempfile: /var/folders/nf/rxfx59l56_l7rvzr_k3n1r3c0000gn/T/tmpehcdqeu2/hb6tg2yn.json
+2025-04-30 02:39:22,613 - cmdstanpy - DEBUG - idx 0
+2025-04-30 02:39:22,613 - cmdstanpy - DEBUG - running CmdStan, num_threads: None
+2025-04-30 02:39:22,613 - cmdstanpy - DEBUG - CmdStan args: ['/Users/hk/Downloads/DSFinalYearProject/.venv/lib/python3.12/site-packages/prophet/stan_model/prophet_model.bin', 'random', 'seed=72306', 'data', 'file=/var/folders/nf/rxfx59l56_l7rvzr_k3n1r3c0000gn/T/tmpehcdqeu2/hl_w8mz8.json', 'init=/var/folders/nf/rxfx59l56_l7rvzr_k3n1r3c0000gn/T/tmpehcdqeu2/hb6tg2yn.json', 'output', 'file=/var/folders/nf/rxfx59l56_l7rvzr_k3n1r3c0000gn/T/tmpehcdqeu2/prophet_modelccsx7yph/prophet_model-20250430023922.csv', 'method=optimize', 'algorithm=lbfgs', 'iter=10000']
+2025-04-30 02:39:22,613 - cmdstanpy - INFO - Chain [1] start processing
+2025-04-30 02:39:22,624 - cmdstanpy - INFO - Chain [1] done processing
+2025-04-30 02:39:22,862 - cmdstanpy - DEBUG - input tempfile: /var/folders/nf/rxfx59l56_l7rvzr_k3n1r3c0000gn/T/tmpehcdqeu2/tm4bx329.json
+2025-04-30 02:39:22,865 - cmdstanpy - DEBUG - input tempfile: /var/folders/nf/rxfx59l56_l7rvzr_k3n1r3c0000gn/T/tmpehcdqeu2/tkphvrhd.json
+2025-04-30 02:39:22,865 - cmdstanpy - DEBUG - idx 0
+2025-04-30 02:39:22,865 - cmdstanpy - DEBUG - running CmdStan, num_threads: None
+2025-04-30 02:39:22,865 - cmdstanpy - DEBUG - CmdStan args: ['/Users/hk/Downloads/DSFinalYearProject/.venv/lib/python3.12/site-packages/prophet/stan_model/prophet_model.bin', 'random', 'seed=81040', 'data', 'file=/var/folders/nf/rxfx59l56_l7rvzr_k3n1r3c0000gn/T/tmpehcdqeu2/tm4bx329.json', 'init=/var/folders/nf/rxfx59l56_l7rvzr_k3n1r3c0000gn/T/tmpehcdqeu2/tkphvrhd.json', 'output', 'file=/var/folders/nf/rxfx59l56_l7rvzr_k3n1r3c0000gn/T/tmpehcdqeu2/prophet_modelkow9enj9/prophet_model-20250430023922.csv', 'method=optimize', 'algorithm=lbfgs', 'iter=10000']
+2025-04-30 02:39:22,865 - cmdstanpy - INFO - Chain [1] start processing
+2025-04-30 02:39:22,877 - cmdstanpy - INFO - Chain [1] done processing
+2025-04-30 02:39:23,178 - cmdstanpy - DEBUG - input tempfile: /var/folders/nf/rxfx59l56_l7rvzr_k3n1r3c0000gn/T/tmpehcdqeu2/ssztl_sh.json
+2025-04-30 02:39:23,180 - cmdstanpy - DEBUG - input tempfile: /var/folders/nf/rxfx59l56_l7rvzr_k3n1r3c0000gn/T/tmpehcdqeu2/t59mkju2.json
+2025-04-30 02:39:23,180 - cmdstanpy - DEBUG - idx 0
+2025-04-30 02:39:23,180 - cmdstanpy - DEBUG - running CmdStan, num_threads: None
+2025-04-30 02:39:23,181 - cmdstanpy - DEBUG - CmdStan args: ['/Users/hk/Downloads/DSFinalYearProject/.venv/lib/python3.12/site-packages/prophet/stan_model/prophet_model.bin', 'random', 'seed=83026', 'data', 'file=/var/folders/nf/rxfx59l56_l7rvzr_k3n1r3c0000gn/T/tmpehcdqeu2/ssztl_sh.json', 'init=/var/folders/nf/rxfx59l56_l7rvzr_k3n1r3c0000gn/T/tmpehcdqeu2/t59mkju2.json', 'output', 'file=/var/folders/nf/rxfx59l56_l7rvzr_k3n1r3c0000gn/T/tmpehcdqeu2/prophet_modelbhm4oxj4/prophet_model-20250430023923.csv', 'method=optimize', 'algorithm=newton', 'iter=10000']
+2025-04-30 02:39:23,181 - cmdstanpy - INFO - Chain [1] start processing
+2025-04-30 02:39:23,342 - cmdstanpy - INFO - Chain [1] done processing
+2025-04-30 02:39:23,822 - MLPredictiveAnalysis.funding_stage_prediction - INFO - Time series forecasts saved to /Users/hk/Downloads/DSFinalYearProject/FundingStageOutput/time_series_forecasts
+2025-04-30 02:39:23,822 - MLPredictiveAnalysis.funding_stage_prediction - INFO - Generating time series dashboards...
+2025-04-30 02:39:23,822 - MLPredictiveAnalysis.funding_stage_prediction - INFO - Generating forecast trend dashboard...
+2025-04-30 02:39:24,973 - MLPredictiveAnalysis.funding_stage_prediction - INFO - Forecast trend dashboard saved to: /Users/hk/Downloads/DSFinalYearProject/FundingStageOutput/dashboards/timeseries_dashboards/forecast_trends/forecast_trend_dashboard_20250430_023923.png
+2025-04-30 02:39:24,973 - MLPredictiveAnalysis.funding_stage_prediction - INFO - Generating industry breakdown dashboard...
+2025-04-30 02:39:27,407 - MLPredictiveAnalysis.funding_stage_prediction - INFO - Industry breakdown dashboard saved to: /Users/hk/Downloads/DSFinalYearProject/FundingStageOutput/dashboards/timeseries_dashboards/industry_breakdown/industry_breakdown_dashboard_20250430_023925.png
+2025-04-30 02:39:27,408 - MLPredictiveAnalysis.funding_stage_prediction - INFO - Generating funding stage evolution dashboard...
+2025-04-30 02:39:27,426 - MLPredictiveAnalysis.funding_stage_prediction - WARNING - Column stage_Debt Financing has mixed positive and negative values. Converting to absolute values.
+2025-04-30 02:39:27,426 - MLPredictiveAnalysis.funding_stage_prediction - WARNING - Column stage_Undisclosed has mixed positive and negative values. Converting to absolute values.
+2025-04-30 02:39:27,426 - MLPredictiveAnalysis.funding_stage_prediction - WARNING - Column stage_Pre-Seed has mixed positive and negative values. Converting to absolute values.
+2025-04-30 02:39:27,427 - MLPredictiveAnalysis.funding_stage_prediction - WARNING - Column stage_Series D has mixed positive and negative values. Converting to absolute values.
+2025-04-30 02:39:27,427 - MLPredictiveAnalysis.funding_stage_prediction - WARNING - Column stage_Series F has mixed positive and negative values. Converting to absolute values.
+2025-04-30 02:39:28,234 - MLPredictiveAnalysis.funding_stage_prediction - INFO - Stage evolution dashboard saved to: /Users/hk/Downloads/DSFinalYearProject/FundingStageOutput/dashboards/timeseries_dashboards/stage_evolution/stage_evolution_dashboard_20250430_023927.png
+2025-04-30 02:39:28,234 - MLPredictiveAnalysis.funding_stage_prediction - INFO - Generating seasonality analysis dashboard...
+2025-04-30 02:39:28,954 - MLPredictiveAnalysis.funding_stage_prediction - INFO - Seasonality dashboard saved to: /Users/hk/Downloads/DSFinalYearProject/FundingStageOutput/dashboards/timeseries_dashboards/seasonality_analysis/seasonality_dashboard_20250430_023928.png
+2025-04-30 02:39:28,955 - MLPredictiveAnalysis.funding_stage_prediction - INFO - Time series dashboards generated: ['forecast_trend', 'industry_breakdown', 'stage_evolution', 'seasonality']
+2025-04-30 02:39:28,956 - MLPredictiveAnalysis.improved_dashboard_implementation - INFO - Creating historical vs. predicted comparison visualizations...
+2025-04-30 02:39:28,956 - MLPredictiveAnalysis.improved_dashboard_implementation - WARNING - No forecast data available for historical comparison
+2025-04-30 02:39:28,956 - MLPredictiveAnalysis.improved_dashboard_implementation - INFO - Generating standard dashboards...
+2025-04-30 02:39:28,956 - MLPredictiveAnalysis.funding_stage_prediction - INFO - Generating classification model dashboards...
+2025-04-30 02:39:28,956 - MLPredictiveAnalysis.funding_stage_prediction - INFO - Generating model comparison dashboard...
+2025-04-30 02:39:29,163 - MLPredictiveAnalysis.funding_stage_prediction - INFO - Model comparison dashboard saved to: /Users/hk/Downloads/DSFinalYearProject/FundingStageOutput/dashboards/classification_dashboards/model_comparison/model_comparison_dashboard_20250430_023928.png
+2025-04-30 02:39:29,163 - MLPredictiveAnalysis.funding_stage_prediction - INFO - Generating calibration curves dashboards...
+2025-04-30 02:39:29,163 - MLPredictiveAnalysis.funding_stage_prediction - INFO - Created calibration curves directory: /Users/hk/Downloads/DSFinalYearProject/FundingStageOutput/dashboards/classification_dashboards/calibration_curves
+2025-04-30 02:39:29,163 - MLPredictiveAnalysis.funding_stage_prediction - INFO - Available models for calibration: ['Random Forest', 'XGBoost']
+2025-04-30 02:39:29,163 - MLPredictiveAnalysis.funding_stage_prediction - INFO - Model Random Forest has keys: ['accuracy', 'X_test', 'y_test', 'y_pred', 'y_proba', 'feature_names', 'model_path', 'isolation_forest']
+2025-04-30 02:39:29,163 - MLPredictiveAnalysis.funding_stage_prediction - INFO - Model XGBoost has keys: ['accuracy', 'X_test', 'y_test', 'y_pred', 'y_proba', 'feature_names', 'model_path', 'label_map', 'isolation_forest']
+2025-04-30 02:39:29,163 - MLPredictiveAnalysis.funding_stage_prediction - INFO - Using direct metrics dictionary for Random Forest
+2025-04-30 02:39:29,163 - MLPredictiveAnalysis.funding_stage_prediction - INFO - For model Random Forest, metrics has keys: ['accuracy', 'X_test', 'y_test', 'y_pred', 'y_proba', 'feature_names', 'model_path', 'isolation_forest']
+2025-04-30 02:39:29,163 - MLPredictiveAnalysis.funding_stage_prediction - INFO - Model Random Forest - y_test shape: (350,)
+2025-04-30 02:39:29,163 - MLPredictiveAnalysis.funding_stage_prediction - INFO - Model Random Forest - y_proba shape: (350, 14)
+2025-04-30 02:39:29,163 - MLPredictiveAnalysis.funding_stage_prediction - ERROR - Error creating multiclass calibration plot for Random Forest: name 'calibration_curves_dir' is not defined
+2025-04-30 02:39:29,165 - MLPredictiveAnalysis.funding_stage_prediction - ERROR - Traceback (most recent call last):
+  File "/Users/hk/Downloads/DSFinalYearProject/MLPredictiveAnalysis/funding_stage_prediction.py", line 4622, in _generate_calibration_curves_dashboard
+    y_test, y_proba, model_name, calibration_curves_dir, timestamp, output_paths)
+                                 ^^^^^^^^^^^^^^^^^^^^^^
+NameError: name 'calibration_curves_dir' is not defined. Did you mean: 'calibration_curve'?
+
+2025-04-30 02:39:29,165 - MLPredictiveAnalysis.funding_stage_prediction - INFO - Using direct metrics dictionary for XGBoost
+2025-04-30 02:39:29,165 - MLPredictiveAnalysis.funding_stage_prediction - INFO - For model XGBoost, metrics has keys: ['accuracy', 'X_test', 'y_test', 'y_pred', 'y_proba', 'feature_names', 'model_path', 'label_map', 'isolation_forest']
+2025-04-30 02:39:29,165 - MLPredictiveAnalysis.funding_stage_prediction - INFO - Model XGBoost - y_test shape: (350,)
+2025-04-30 02:39:29,165 - MLPredictiveAnalysis.funding_stage_prediction - INFO - Model XGBoost - y_proba shape: (350, 14)
+2025-04-30 02:39:29,165 - MLPredictiveAnalysis.funding_stage_prediction - ERROR - Error creating multiclass calibration plot for XGBoost: name 'calibration_curves_dir' is not defined
+2025-04-30 02:39:29,166 - MLPredictiveAnalysis.funding_stage_prediction - ERROR - Traceback (most recent call last):
+  File "/Users/hk/Downloads/DSFinalYearProject/MLPredictiveAnalysis/funding_stage_prediction.py", line 4622, in _generate_calibration_curves_dashboard
+    y_test, y_proba, model_name, calibration_curves_dir, timestamp, output_paths)
+                                 ^^^^^^^^^^^^^^^^^^^^^^
+NameError: name 'calibration_curves_dir' is not defined. Did you mean: 'calibration_curve'?
+
+2025-04-30 02:39:29,166 - MLPredictiveAnalysis.funding_stage_prediction - WARNING - Not enough models available for combined plot. Processed: []
+2025-04-30 02:39:29,166 - MLPredictiveAnalysis.funding_stage_prediction - INFO - Calibration dashboards created: 0
+2025-04-30 02:39:29,166 - MLPredictiveAnalysis.funding_stage_prediction - INFO - Output paths: {}
+2025-04-30 02:39:29,167 - MLPredictiveAnalysis.funding_stage_prediction - INFO - Generating feature importance dashboard...
+2025-04-30 02:39:29,167 - MLPredictiveAnalysis.funding_stage_prediction - WARNING - No models with feature importances found
+2025-04-30 02:39:29,167 - MLPredictiveAnalysis.funding_stage_prediction - INFO - Generating confusion matrix dashboards...
+2025-04-30 02:39:29,167 - MLPredictiveAnalysis.funding_stage_prediction - WARNING - No confusion matrix available for Random Forest
+2025-04-30 02:39:29,167 - MLPredictiveAnalysis.funding_stage_prediction - WARNING - No confusion matrix available for XGBoost
+2025-04-30 02:39:29,167 - MLPredictiveAnalysis.funding_stage_prediction - INFO - Generating model metrics dashboard...
+2025-04-30 02:39:29,672 - MLPredictiveAnalysis.funding_stage_prediction - INFO - Model metrics dashboard saved to: /Users/hk/Downloads/DSFinalYearProject/FundingStageOutput/dashboards/classification_dashboards/model_metrics/model_metrics_dashboard_20250430_023929.png
+2025-04-30 02:39:29,672 - MLPredictiveAnalysis.funding_stage_prediction - INFO - Generating time series model dashboards...
+2025-04-30 02:39:29,672 - MLPredictiveAnalysis.funding_stage_prediction - INFO - Generating forecast trend dashboard...
+2025-04-30 02:39:30,905 - MLPredictiveAnalysis.funding_stage_prediction - INFO - Forecast trend dashboard saved to: /Users/hk/Downloads/DSFinalYearProject/FundingStageOutput/dashboards/timeseries_dashboards/forecast_trends/forecast_trend_dashboard_20250430_023929.png
+2025-04-30 02:39:30,905 - MLPredictiveAnalysis.funding_stage_prediction - INFO - Generating industry breakdown dashboard...
+2025-04-30 02:39:33,229 - MLPredictiveAnalysis.funding_stage_prediction - INFO - Industry breakdown dashboard saved to: /Users/hk/Downloads/DSFinalYearProject/FundingStageOutput/dashboards/timeseries_dashboards/industry_breakdown/industry_breakdown_dashboard_20250430_023930.png
+2025-04-30 02:39:33,230 - MLPredictiveAnalysis.funding_stage_prediction - INFO - Generating funding stage evolution dashboard...
+2025-04-30 02:39:33,245 - MLPredictiveAnalysis.funding_stage_prediction - WARNING - Column stage_Debt Financing has mixed positive and negative values. Converting to absolute values.
+2025-04-30 02:39:33,245 - MLPredictiveAnalysis.funding_stage_prediction - WARNING - Column stage_Undisclosed has mixed positive and negative values. Converting to absolute values.
+2025-04-30 02:39:33,245 - MLPredictiveAnalysis.funding_stage_prediction - WARNING - Column stage_Pre-Seed has mixed positive and negative values. Converting to absolute values.
+2025-04-30 02:39:33,245 - MLPredictiveAnalysis.funding_stage_prediction - WARNING - Column stage_Series D has mixed positive and negative values. Converting to absolute values.
+2025-04-30 02:39:33,246 - MLPredictiveAnalysis.funding_stage_prediction - WARNING - Column stage_Series F has mixed positive and negative values. Converting to absolute values.
+2025-04-30 02:39:34,068 - MLPredictiveAnalysis.funding_stage_prediction - INFO - Stage evolution dashboard saved to: /Users/hk/Downloads/DSFinalYearProject/FundingStageOutput/dashboards/timeseries_dashboards/stage_evolution/stage_evolution_dashboard_20250430_023933.png
+2025-04-30 02:39:34,068 - MLPredictiveAnalysis.funding_stage_prediction - INFO - Generating seasonality analysis dashboard...
+2025-04-30 02:39:34,888 - MLPredictiveAnalysis.funding_stage_prediction - INFO - Seasonality dashboard saved to: /Users/hk/Downloads/DSFinalYearProject/FundingStageOutput/dashboards/timeseries_dashboards/seasonality_analysis/seasonality_dashboard_20250430_023934.png
+2025-04-30 02:39:34,888 - MLPredictiveAnalysis.improved_dashboard_implementation - INFO - Generating advanced dashboards...
+2025-04-30 02:39:34,888 - MLPredictiveAnalysis.funding_stage_prediction - INFO - Generating advanced classification dashboards...
+2025-04-30 02:39:35,170 - MLPredictiveAnalysis.funding_stage_prediction - ERROR - Error generating model performance dashboard: 'Div' object has no attribute 'to_html'
+2025-04-30 02:39:35,171 - MLPredictiveAnalysis.funding_stage_prediction - ERROR - Traceback (most recent call last):
+  File "/Users/hk/Downloads/DSFinalYearProject/MLPredictiveAnalysis/funding_stage_prediction.py", line 6858, in _generate_model_performance_dashboard
+    app_entry=app.layout.to_html(),
+              ^^^^^^^^^^^^^^^^^^
+AttributeError: 'Div' object has no attribute 'to_html'
+
+2025-04-30 02:39:35,171 - MLPredictiveAnalysis.funding_stage_prediction - ERROR - Error generating classification interactive dashboards: 'AdvancedDashboardGenerator' object has no attribute '_generate_prediction_interface_dashboard'
+2025-04-30 02:39:35,173 - MLPredictiveAnalysis.funding_stage_prediction - ERROR - Traceback (most recent call last):
+  File "/Users/hk/Downloads/DSFinalYearProject/MLPredictiveAnalysis/funding_stage_prediction.py", line 6458, in generate_classification_interactive_dashboard
+    dashboard_paths["prediction_interface"] = self._generate_prediction_interface_dashboard(results, prediction_dir)
+                                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'AdvancedDashboardGenerator' object has no attribute '_generate_prediction_interface_dashboard'. Did you mean: '_generate_feature_importance_dashboard'?
+
+2025-04-30 02:39:35,174 - MLPredictiveAnalysis.funding_stage_prediction - INFO - Generating advanced time series dashboards...
+2025-04-30 02:39:35,174 - MLPredictiveAnalysis.funding_stage_prediction - ERROR - Error generating time series interactive dashboards: 'AdvancedDashboardGenerator' object has no attribute '_generate_funding_trends_dashboard'
+2025-04-30 02:39:35,176 - MLPredictiveAnalysis.funding_stage_prediction - ERROR - Traceback (most recent call last):
+  File "/Users/hk/Downloads/DSFinalYearProject/MLPredictiveAnalysis/funding_stage_prediction.py", line 6503, in generate_timeseries_interactive_dashboard
+    dashboard_paths["funding_trends"] = self._generate_funding_trends_dashboard(results, trends_dir)
+                                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'AdvancedDashboardGenerator' object has no attribute '_generate_funding_trends_dashboard'. Did you mean: '_generate_forecast_trend_dashboard'?
+
+2025-04-30 02:39:35,180 - __main__ - INFO - Creating additional calibration plots...
+2025-04-30 02:39:35,180 - MLPredictiveAnalysis.improved_dashboard_implementation - INFO - Loading and processing data...
+2025-04-30 02:39:35,186 - MLPredictiveAnalysis.improved_dashboard_implementation - INFO - Found funding types in fundraiser data: ['Series A' 'Seed' 'Venture - Series Unknown' 'Debt Financing'
+ 'Undisclosed' 'Grant' 'Private Equity' 'Pre-Seed' 'Series C' 'Series B'
+ 'Series D' 'Series H' 'Angel' 'Series E' 'Series F']
+2025-04-30 02:39:35,186 - MLPredictiveAnalysis.improved_dashboard_implementation - INFO - Loaded 1103 records from fundraiser data
+2025-04-30 02:39:35,187 - MLPredictiveAnalysis.funding_stage_prediction - INFO - Found funding types in growthlist data: ['Series B' 'Seed' 'Pre-Seed' 'Series A' 'Series C'
+ 'Venture - Series Unknown' 'Series E' 'Private Equity' 'Series G'
+ 'Initial Coin Offering']
+2025-04-30 02:39:35,187 - MLPredictiveAnalysis.funding_stage_prediction - INFO - Loaded 100 records from growthlist data
+2025-04-30 02:39:35,193 - MLPredictiveAnalysis.funding_stage_prediction - INFO - Found funding stages in topstartup data: ['Series A' 'Series C' 'Series D' 'Series J' 'Series E' 'Series B'
+ 'Series F' 'Seed' 'Venture - Series Unknown' 'Series I' 'Series G'
+ 'Pre-Seed' 'Series H' 'Post-IPO']
+2025-04-30 02:39:35,194 - MLPredictiveAnalysis.funding_stage_prediction - WARNING - Unreasonably large funding amount detected: $20,000,000,000.00
+2025-04-30 02:39:35,194 - MLPredictiveAnalysis.funding_stage_prediction - WARNING - Unreasonably large funding amount detected: $29,000,000,000.00
+2025-04-30 02:39:35,194 - MLPredictiveAnalysis.funding_stage_prediction - WARNING - Unreasonably large funding amount detected: $13,000,000,000.00
+2025-04-30 02:39:35,194 - MLPredictiveAnalysis.funding_stage_prediction - WARNING - Unreasonably large funding amount detected: $48,000,000,000.00
+2025-04-30 02:39:35,194 - MLPredictiveAnalysis.funding_stage_prediction - WARNING - Unreasonably large funding amount detected: $23,000,000,000.00
+2025-04-30 02:39:35,194 - MLPredictiveAnalysis.funding_stage_prediction - INFO - Loaded 546 records from topstartup data
+2025-04-30 02:39:35,194 - MLPredictiveAnalysis.funding_stage_prediction - INFO - Loaded datasets - Fundraiser: 1103 rows, Growthlist: 100 rows, Topstartup: 546 rows
+2025-04-30 02:39:35,215 - MLPredictiveAnalysis.funding_stage_prediction - INFO - Processed 1103 records from fundraiser data
+2025-04-30 02:39:35,229 - MLPredictiveAnalysis.funding_stage_prediction - INFO - Unique funding stages from fundraiser: {'Debt Financing', 'Series B', 'Seed', 'Series E', 'Grant', 'Undisclosed', 'Series H', 'Private Equity', 'Series D', 'Angel', 'Series F', 'Series C', 'Pre-Seed', 'Venture - Series Unknown', 'Series A'}
+2025-04-30 02:39:35,232 - MLPredictiveAnalysis.funding_stage_prediction - INFO - Processed 100 records from growthlist data
+2025-04-30 02:39:35,241 - MLPredictiveAnalysis.funding_stage_prediction - WARNING - Unreasonably large funding amount detected: $20,000,000,000.00
+2025-04-30 02:39:35,242 - MLPredictiveAnalysis.funding_stage_prediction - WARNING - Unreasonably large funding amount detected: $29,000,000,000.00
+2025-04-30 02:39:35,242 - MLPredictiveAnalysis.funding_stage_prediction - WARNING - Unreasonably large funding amount detected: $13,000,000,000.00
+2025-04-30 02:39:35,242 - MLPredictiveAnalysis.funding_stage_prediction - WARNING - Unreasonably large funding amount detected: $48,000,000,000.00
+2025-04-30 02:39:35,243 - MLPredictiveAnalysis.funding_stage_prediction - WARNING - Unreasonably large funding amount detected: $23,000,000,000.00
+2025-04-30 02:39:35,243 - MLPredictiveAnalysis.funding_stage_prediction - INFO - Processed 546 records from topstartup data
+2025-04-30 02:39:35,252 - MLPredictiveAnalysis.funding_stage_prediction - INFO - Saved 1749 records to historical merged_data
+2025-04-30 02:39:35,253 - MLPredictiveAnalysis.funding_stage_prediction - INFO - Successfully merged 1749 records
+2025-04-30 02:39:35,258 - MLPredictiveAnalysis.improved_dashboard_implementation - INFO - Saved merged data with 1749 records to /Users/hk/Downloads/DSFinalYearProject/FundingStageOutput/data/merged_data_20250430_023838.csv
+2025-04-30 02:39:35,258 - MLPredictiveAnalysis.funding_stage_prediction - INFO - Starting feature extraction for 1749 records
+2025-04-30 02:39:35,259 - MLPredictiveAnalysis.funding_stage_prediction - INFO - Found 20 unique funding stages: ['Series A' 'Seed' 'Venture - Series Unknown' 'Debt Financing'
+ 'Undisclosed' 'Grant' 'Private Equity' 'Pre-Seed' 'Series C' 'Series B'
+ 'Series D' 'Series H' 'Angel' 'Series E' 'Series F' 'Series G'
+ 'Initial Coin Offering' 'Series J' 'Series I' 'Post-IPO']
+2025-04-30 02:39:35,260 - MLPredictiveAnalysis.funding_stage_prediction - INFO - Created funding stage mapping: {'Pre-Seed': 0, 'Seed': 1, 'Angel': 2, 'Series A': 3, 'Series B': 4, 'Series C': 5, 'Series D': 6, 'Series E': 7, 'Series F': 8, 'Series G': 9, 'Series H': 10, 'Venture - Series Unknown': 11, 'Debt Financing': 12, 'Undisclosed': 13, 'Grant': 14, 'Private Equity': 15, 'Initial Coin Offering': 16, 'Series J': 17, 'Series I': 18, 'Post-IPO': 19, 'Unknown': 20}
+2025-04-30 02:39:35,327 - MLPredictiveAnalysis.funding_stage_prediction - INFO - Feature engineering complete: 19 features created
+2025-04-30 02:39:35,340 - MLPredictiveAnalysis.improved_dashboard_implementation - INFO - Saved processed data with 1749 records to /Users/hk/Downloads/DSFinalYearProject/FundingStageOutput/data/processed_data_20250430_023838.csv
+2025-04-30 02:39:35,340 - MLPredictiveAnalysis.funding_stage_prediction - INFO - Preparing model data with features: ['funding_amount_log', 'employees', 'employee_efficiency', 'funding_year', 'funding_month', 'previous_rounds', 'months_since_first_funding', 'funding_velocity']
+2025-04-30 02:39:35,341 - MLPredictiveAnalysis.funding_stage_prediction - INFO - Original class distribution:
+funding_stage_numeric
+1     347
+3     313
+4     223
+11    197
+5     179
+0     124
+6      84
+14     67
+12     43
+7      39
+19     34
+15     28
+13     25
+8      23
+10      7
+9       7
+2       4
+18      2
+16      1
+17      1
+20      1
+Name: count, dtype: int64
+2025-04-30 02:39:35,341 - MLPredictiveAnalysis.funding_stage_prediction - INFO - Found 7 rare classes: Index([10, 9, 2, 18, 16, 17, 20], dtype='int64', name='funding_stage_numeric')
+2025-04-30 02:39:35,342 - MLPredictiveAnalysis.funding_stage_prediction - INFO - Merged rare classes into related major classes
+2025-04-30 02:39:35,342 - MLPredictiveAnalysis.funding_stage_prediction - INFO - Updated class distribution after merging:
+funding_stage_numeric
+1     351
+3     313
+4     223
+11    201
+5     179
+0     124
+6      84
+14     67
+12     43
+7      39
+8      37
+19     34
+15     28
+13     25
+20      1
+Name: count, dtype: int64
+2025-04-30 02:39:35,342 - MLPredictiveAnalysis.funding_stage_prediction - INFO - Remapped classes to be continuous. Class mapping: {np.int64(0): 0, np.int64(1): 1, np.int64(3): 2, np.int64(4): 3, np.int64(5): 4, np.int64(6): 5, np.int64(7): 6, np.int64(8): 7, np.int64(11): 8, np.int64(12): 9, np.int64(13): 10, np.int64(14): 11, np.int64(15): 12, np.int64(19): 13, np.int64(20): 14}
+2025-04-30 02:39:35,343 - MLPredictiveAnalysis.funding_stage_prediction - INFO - Prepared model data: X shape=(1749, 8), y shape=(1749,)
+2025-04-30 02:39:35,344 - MLPredictiveAnalysis.funding_stage_prediction - INFO - Final class distribution: {1: 351, 2: 313, 3: 223, 8: 201, 4: 179, 0: 124, 5: 84, 11: 67, 9: 43, 6: 39, 7: 37, 13: 34, 12: 28, 10: 25, 14: 1}
+2025-04-30 02:39:35,344 - MLPredictiveAnalysis.improved_dashboard_implementation - INFO - Training classification models...
+2025-04-30 02:39:35,344 - MLPredictiveAnalysis.improved_dashboard_implementation - INFO - Removing 1 extremely rare classes with fewer than 2 samples
+2025-04-30 02:39:35,344 - MLPredictiveAnalysis.improved_dashboard_implementation - INFO - After removing rare classes: X shape=(1748, 8), y shape=(1748,)
+2025-04-30 02:39:35,345 - MLPredictiveAnalysis.improved_dashboard_implementation - INFO - Training Random Forest model...
+2025-04-30 02:39:35,345 - MLPredictiveAnalysis.funding_stage_prediction - INFO - Training Random Forest model...
+2025-04-30 02:39:35,420 - MLPredictiveAnalysis.funding_stage_prediction - INFO - Identified 56 potential outliers in training data
+2025-04-30 02:39:35,420 - MLPredictiveAnalysis.funding_stage_prediction - INFO - Outlier examples:
+[{'funding_amount_log': 0.7368803425161246, 'employees': 1.207672418407136, 'employee_efficiency': -0.0420685467848217, 'funding_year': 0.47180546582193506, 'funding_month': 1.721589812877086, 'previous_rounds': 2.91820165580833, 'months_since_first_funding': 1.4608234809389093, 'funding_velocity': -0.5052699428250734}, {'funding_amount_log': 0.8087138668252805, 'employees': 0.8895647429285434, 'employee_efficiency': -0.03852905431428893, 'funding_year': -1.787435491666415, 'funding_month': -0.9871728559984297, 'previous_rounds': 2.91820165580833, 'months_since_first_funding': -0.16035689226042596, 'funding_velocity': 4.343250868959902}, {'funding_amount_log': 0.5689040355035355, 'employees': 0.3669592760708556, 'employee_efficiency': -0.042165667391098505, 'funding_year': 0.47180546582193506, 'funding_month': 1.1798372791019829, 'previous_rounds': 2.91820165580833, 'months_since_first_funding': 8.91825319765585, 'funding_velocity': 4.046402655993474}]
+2025-04-30 02:39:35,420 - MLPredictiveAnalysis.funding_stage_prediction - INFO - Class counts before training: [ 85 226 200 133 115  50  28  23 131  27  15  43  22  20]
+2025-04-30 02:39:35,660 - MLPredictiveAnalysis.funding_stage_prediction - INFO - Out-of-bag score: 0.8998
+2025-04-30 02:39:35,691 - MLPredictiveAnalysis.funding_stage_prediction - INFO - Random Forest accuracy: 0.9250
+2025-04-30 02:39:35,691 - MLPredictiveAnalysis.funding_stage_prediction - INFO - Classification report:
+              precision    recall  f1-score   support
+
+           0       0.93      1.00      0.97        14
+           1       0.98      0.96      0.97        55
+           2       0.92      0.96      0.94        50
+           3       0.96      0.96      0.96        45
+           4       0.96      0.93      0.95        28
+           5       0.86      0.71      0.77        17
+           6       0.60      1.00      0.75         3
+           7       1.00      1.00      1.00         7
+           8       0.85      0.93      0.89        30
+           9       0.67      0.57      0.62         7
+          10       1.00      0.80      0.89         5
+          11       1.00      0.82      0.90        11
+          12       0.50      1.00      0.67         1
+          13       1.00      1.00      1.00         7
+
+    accuracy                           0.93       280
+   macro avg       0.87      0.90      0.88       280
+weighted avg       0.93      0.93      0.92       280
+
+2025-04-30 02:39:35,814 - MLPredictiveAnalysis.improved_dashboard_implementation - INFO - Training XGBoost model...
+2025-04-30 02:39:35,814 - MLPredictiveAnalysis.funding_stage_prediction - INFO - Training XGBoost model...
+2025-04-30 02:39:35,950 - MLPredictiveAnalysis.funding_stage_prediction - INFO - Identified 56 potential outliers in training data
+2025-04-30 02:39:37,540 - MLPredictiveAnalysis.funding_stage_prediction - INFO - XGBoost accuracy: 0.9393
+2025-04-30 02:39:37,541 - MLPredictiveAnalysis.funding_stage_prediction - INFO - Classification report:
+              precision    recall  f1-score   support
+
+           0       0.93      1.00      0.97        14
+           1       1.00      0.98      0.99        55
+           2       0.96      0.96      0.96        50
+           3       0.98      0.96      0.97        45
+           4       0.93      0.96      0.95        28
+           5       0.86      0.71      0.77        17
+           6       0.60      1.00      0.75         3
+           7       1.00      1.00      1.00         7
+           8       0.79      0.90      0.84        30
+           9       1.00      0.71      0.83         7
+          10       1.00      1.00      1.00         5
+          11       1.00      0.91      0.95        11
+          12       1.00      1.00      1.00         1
+          13       1.00      1.00      1.00         7
+
+    accuracy                           0.94       280
+   macro avg       0.93      0.94      0.93       280
+weighted avg       0.94      0.94      0.94       280
+
+2025-04-30 02:39:37,592 - MLPredictiveAnalysis.improved_dashboard_implementation - INFO - Training LightGBM model...
+2025-04-30 02:39:37,592 - MLPredictiveAnalysis.improved_dashboard_implementation - WARNING - Error training LightGBM model: name 'lgb' is not defined
+2025-04-30 02:39:37,594 - MLPredictiveAnalysis.improved_dashboard_implementation - INFO - Creating calibration plots...
+2025-04-30 02:39:37,928 - MLPredictiveAnalysis.improved_dashboard_implementation - INFO - Created multiclass calibration plot for Random Forest at /Users/hk/Downloads/DSFinalYearProject/FundingStageOutput/dashboards/classification_dashboards/calibration_curves/random_forest_multiclass_calibration_20250430_023838.png
+2025-04-30 02:39:38,275 - MLPredictiveAnalysis.improved_dashboard_implementation - INFO - Created multiclass calibration plot for XGBoost at /Users/hk/Downloads/DSFinalYearProject/FundingStageOutput/dashboards/classification_dashboards/calibration_curves/xgboost_multiclass_calibration_20250430_023838.png
+2025-04-30 02:39:38,275 - __main__ - INFO - Dashboard generation complete!
+2025-04-30 02:39:38,275 - __main__ - INFO - All outputs saved to: /Users/hk/Downloads/DSFinalYearProject/FundingStageOutput
+2025-04-30 02:39:38,276 - __main__ - INFO - Main output directory: 0 files, 8 directories
+2025-04-30 02:39:38,276 - __main__ - INFO - - data_archive: 0 visualizations, 1 data files
+2025-04-30 02:39:38,276 - __main__ - INFO - - time_series_forecasts: 32 visualizations, 31 data files
+2025-04-30 02:39:38,276 - __main__ - INFO - - models: 0 visualizations, 1 data files
+2025-04-30 02:39:38,277 - __main__ - INFO - - dashboards/timeseries_dashboards/stage_evolution: 8 visualizations, 0 data files
+2025-04-30 02:39:38,277 - __main__ - INFO - - dashboards/timeseries_dashboards/forecast_trends: 4 visualizations, 0 data files
+2025-04-30 02:39:38,277 - __main__ - INFO - - dashboards/timeseries_dashboards/industry_breakdown: 4 visualizations, 0 data files
+2025-04-30 02:39:38,277 - __main__ - INFO - - dashboards/timeseries_dashboards/seasonality_analysis: 4 visualizations, 0 data files
+2025-04-30 02:39:38,277 - __main__ - INFO - - dashboards/classification_dashboards/calibration_curves: 2 visualizations, 0 data files
+2025-04-30 02:39:38,277 - __main__ - INFO - - dashboards/classification_dashboards/model_comparison: 2 visualizations, 0 data files
+2025-04-30 02:39:38,277 - __main__ - INFO - - dashboards/classification_dashboards/model_metrics: 2 visualizations, 0 data files
+2025-04-30 02:39:38,277 - __main__ - INFO - - data: 0 visualizations, 4 data files

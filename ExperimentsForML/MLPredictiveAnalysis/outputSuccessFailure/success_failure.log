@@ -1,0 +1,8 @@
+2025-04-24 03:36:18,613 - success_failure_prediction - INFO - Success/Failure Prediction system initialized
+2025-04-24 03:36:18,613 - success_failure_prediction - INFO - Starting success/failure prediction analysis
+2025-04-24 03:36:18,613 - success_failure_prediction - INFO - Step 1: Initializing component models
+2025-04-24 03:36:18,613 - success_failure_prediction - INFO - Initializing component prediction systems
+2025-04-24 03:36:18,622 - success_failure_prediction - INFO - All component systems initialized successfully
+2025-04-24 03:36:18,622 - success_failure_prediction - INFO - Step 2: Running component analyses
+2025-04-24 03:36:18,622 - success_failure_prediction - INFO - Running component analyses
+2025-04-24 03:36:18,622 - success_failure_prediction - INFO - Running funding stage prediction
