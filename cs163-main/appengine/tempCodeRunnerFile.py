@@ -1,1 +1,1 @@
-c
+                dbc.NavbarBrand("My Dashboard", href="/"),

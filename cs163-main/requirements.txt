@@ -1,0 +1,22 @@
+# Core Dash and Plotting
+dash==2.17.0
+dash-bootstrap-components==1.6.0
+plotly==5.22.0
+pandas==2.2.2
+# Google Cloud
+google-cloud-storage==2.16.0
+# WSGI Server
+gunicorn==22.0.0
+
+# Backend ML Dependencies
+scikit-learn==1.5.0
+joblib==1.4.2
+xgboost==2.0.3
+scipy==1.13.1
+# Optional - uncomment if used and installed
+# lightgbm==4.3.0
+# prophet==1.1.5
+# catboost==1.2.5 
+seaborn==0.13.2
+matplotlib==3.9.0
+numpy==1.26.4 # Ensure compatibility, especially with prophet/sklearn 

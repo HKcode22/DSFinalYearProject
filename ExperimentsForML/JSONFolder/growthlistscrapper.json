@@ -1,0 +1,1002 @@
+[
+    {
+        "name": "Sourcetable \u2014 AI spreadsheet & data analyst",
+        "website": "sourcetable.com",
+        "industry": "Artificial Intelligence",
+        "country": "United States",
+        "funding_amount": "$4,300,000",
+        "funding_type": "Seed",
+        "last_funding_date": "Apr 2025",
+        "funding_usd": null
+    },
+    {
+        "name": "Phonic",
+        "website": "phonic.co",
+        "industry": "Artificial Intelligence",
+        "country": "United States",
+        "funding_amount": "$4,000,000",
+        "funding_type": "Seed",
+        "last_funding_date": "Apr 2025",
+        "funding_usd": null
+    },
+    {
+        "name": "OpenAI",
+        "website": "www.openai.com",
+        "industry": "Artificial Intelligence",
+        "country": "United States",
+        "funding_amount": "$40,000,000,000",
+        "funding_type": "Venture - Series Unknown",
+        "last_funding_date": "Apr 2025",
+        "funding_usd": null
+    },
+    {
+        "name": "Further AI",
+        "website": "www.furtherai.com",
+        "industry": "Artificial Intelligence, Analytics",
+        "country": "United States",
+        "funding_amount": "$5,000,000",
+        "funding_type": "Seed",
+        "last_funding_date": "Apr 2025",
+        "funding_usd": null
+    },
+    {
+        "name": "LightSource",
+        "website": "lightsource.ai",
+        "industry": "Artificial Intelligence, Human Resources, Analytics",
+        "country": "United States",
+        "funding_amount": "$33,000,000",
+        "funding_type": "Series A",
+        "last_funding_date": "Apr 2025",
+        "funding_usd": null
+    },
+    {
+        "name": "Neurona Therapeutics",
+        "website": "www.neuronatherapeutics.com",
+        "industry": "Biotechnology, Healthcare, Pharmaceuticals",
+        "country": "United States",
+        "funding_amount": "$102,000,000",
+        "funding_type": "Venture - Series Unknown",
+        "last_funding_date": "Apr 2025",
+        "funding_usd": null
+    },
+    {
+        "name": "Classify",
+        "website": "www.tryclassify.com",
+        "industry": "Cloud Computing, Artificial Intelligence",
+        "country": "United States",
+        "funding_amount": "",
+        "funding_type": "Pre-Seed",
+        "last_funding_date": "Apr 2025",
+        "funding_usd": null
+    },
+    {
+        "name": "MSafe",
+        "website": "m-safe.io",
+        "industry": "Cyber Security, Data, Cloud Computing",
+        "country": "United States",
+        "funding_amount": "$5,000,000",
+        "funding_type": "Seed",
+        "last_funding_date": "Apr 2025",
+        "funding_usd": null
+    },
+    {
+        "name": "Redpanda Data",
+        "website": "redpanda.com",
+        "industry": "Data, B2B Software",
+        "country": "United States",
+        "funding_amount": "$100,000,000",
+        "funding_type": "Series D",
+        "last_funding_date": "Apr 2025",
+        "funding_usd": null
+    },
+    {
+        "name": "Larridin",
+        "website": "www.larridin.com",
+        "industry": "Fashion, Cloud Computing",
+        "country": "United States",
+        "funding_amount": "$17,000,000",
+        "funding_type": "Series A",
+        "last_funding_date": "Apr 2025",
+        "funding_usd": null
+    },
+    {
+        "name": "Thatch",
+        "website": "thatch.ai",
+        "industry": "FinTech, Finance",
+        "country": "United States",
+        "funding_amount": "$40,000,000",
+        "funding_type": "Series B",
+        "last_funding_date": "Apr 2025",
+        "funding_usd": null
+    },
+    {
+        "name": "F\u00e9lix",
+        "website": "www.felixpago.com",
+        "industry": "FinTech, Finance",
+        "country": "United States",
+        "funding_amount": "$75,000,000",
+        "funding_type": "Series B",
+        "last_funding_date": "Apr 2025",
+        "funding_usd": null
+    },
+    {
+        "name": "Plaid",
+        "website": "plaid.com",
+        "industry": "FinTech, Finance",
+        "country": "United States",
+        "funding_amount": "$575,000,000",
+        "funding_type": "Venture - Series Unknown",
+        "last_funding_date": "Apr 2025",
+        "funding_usd": null
+    },
+    {
+        "name": "careCycle",
+        "website": "carecycle.ai",
+        "industry": "Healthcare",
+        "country": "United States",
+        "funding_amount": "$2,000,000",
+        "funding_type": "Seed",
+        "last_funding_date": "Apr 2025",
+        "funding_usd": null
+    },
+    {
+        "name": "Daymark Health",
+        "website": "www.daymarkhealth.com",
+        "industry": "Healthcare, Cloud Computing",
+        "country": "United States",
+        "funding_amount": "$11,500,000",
+        "funding_type": "Seed",
+        "last_funding_date": "Apr 2025",
+        "funding_usd": null
+    },
+    {
+        "name": "Venteur",
+        "website": "www.venteur.co",
+        "industry": "Healthcare, Insurance",
+        "country": "United States",
+        "funding_amount": "$20,000,000",
+        "funding_type": "Series A",
+        "last_funding_date": "Apr 2025",
+        "funding_usd": null
+    },
+    {
+        "name": "Hovi AI",
+        "website": "www.hovi.ai",
+        "industry": "Marketing, Artificial Intelligence",
+        "country": "United States",
+        "funding_amount": "$400,000",
+        "funding_type": "Pre-Seed",
+        "last_funding_date": "Apr 2025",
+        "funding_usd": null
+    },
+    {
+        "name": "Entvin",
+        "website": "entvin.com",
+        "industry": "Retail, Fashion, E-commerce",
+        "country": "United States",
+        "funding_amount": "$500,000",
+        "funding_type": "Seed",
+        "last_funding_date": "Apr 2025",
+        "funding_usd": null
+    },
+    {
+        "name": "Suitpax",
+        "website": "suitpax.com",
+        "industry": "Travel, E-commerce",
+        "country": "United States",
+        "funding_amount": "",
+        "funding_type": "Pre-Seed",
+        "last_funding_date": "Apr 2025",
+        "funding_usd": null
+    },
+    {
+        "name": "Solve Intelligence",
+        "website": "www.solveintelligence.com",
+        "industry": "Artificial Intelligence",
+        "country": "United States",
+        "funding_amount": "$12,000,000",
+        "funding_type": "Series A",
+        "last_funding_date": "Apr 2025",
+        "funding_usd": null
+    },
+    {
+        "name": "Conduit",
+        "website": "www.conduit.app",
+        "industry": "Artificial Intelligence",
+        "country": "United States",
+        "funding_amount": "$3,100,000",
+        "funding_type": "Seed",
+        "last_funding_date": "Apr 2025",
+        "funding_usd": null
+    },
+    {
+        "name": "Monsha",
+        "website": "monsha.ai",
+        "industry": "Artificial Intelligence",
+        "country": "United States",
+        "funding_amount": "$125,000",
+        "funding_type": "Pre-Seed",
+        "last_funding_date": "Apr 2025",
+        "funding_usd": null
+    },
+    {
+        "name": "Plume Network",
+        "website": "www.plumenetwork.xyz",
+        "industry": "Blockchain",
+        "country": "United States",
+        "funding_amount": "",
+        "funding_type": "Venture - Series Unknown",
+        "last_funding_date": "Apr 2025",
+        "funding_usd": null
+    },
+    {
+        "name": "Springtail",
+        "website": "www.springtail.io",
+        "industry": "Cloud Computing",
+        "country": "United States",
+        "funding_amount": "$2,500,000",
+        "funding_type": "Pre-Seed",
+        "last_funding_date": "Apr 2025",
+        "funding_usd": null
+    },
+    {
+        "name": "Rescale",
+        "website": "www.rescale.com",
+        "industry": "Cloud Computing",
+        "country": "United States",
+        "funding_amount": "$115,000,000",
+        "funding_type": "Series D",
+        "last_funding_date": "Apr 2025",
+        "funding_usd": null
+    },
+    {
+        "name": "Artisan AI",
+        "website": "www.artisan.co",
+        "industry": "Construction, Architecture",
+        "country": "United States",
+        "funding_amount": "$25,000,000",
+        "funding_type": "Series A",
+        "last_funding_date": "Apr 2025",
+        "funding_usd": null
+    },
+    {
+        "name": "Remedy Scientific",
+        "website": "www.remedyscientific.com",
+        "industry": "Environment",
+        "country": "United States",
+        "funding_amount": "$11,000,000",
+        "funding_type": "Seed",
+        "last_funding_date": "Apr 2025",
+        "funding_usd": null
+    },
+    {
+        "name": "Authorium",
+        "website": "authorium.com",
+        "industry": "Legal",
+        "country": "United States",
+        "funding_amount": "$8,000,000",
+        "funding_type": "Series A",
+        "last_funding_date": "Apr 2025",
+        "funding_usd": null
+    },
+    {
+        "name": "Frekil",
+        "website": "www.frekil.com",
+        "industry": "Retail, Fashion",
+        "country": "United States",
+        "funding_amount": "$500,000",
+        "funding_type": "Pre-Seed",
+        "last_funding_date": "Apr 2025",
+        "funding_usd": null
+    },
+    {
+        "name": "Nexad",
+        "website": "www.nex.ad",
+        "industry": "Advertising, Artificial Intelligence",
+        "country": "United States",
+        "funding_amount": "$6,000,000",
+        "funding_type": "Seed",
+        "last_funding_date": "Apr 2025",
+        "funding_usd": null
+    },
+    {
+        "name": "Goodfire",
+        "website": "goodfire.ai",
+        "industry": "Artificial Intelligence",
+        "country": "United States",
+        "funding_amount": "$50,000,000",
+        "funding_type": "Series A",
+        "last_funding_date": "Apr 2025",
+        "funding_usd": null
+    },
+    {
+        "name": "Bauplan",
+        "website": "www.bauplanlabs.com",
+        "industry": "Artificial Intelligence",
+        "country": "United States",
+        "funding_amount": "$7,500,000",
+        "funding_type": "Seed",
+        "last_funding_date": "Apr 2025",
+        "funding_usd": null
+    },
+    {
+        "name": "Parsewise",
+        "website": "parsewise.ai",
+        "industry": "Artificial Intelligence",
+        "country": "United States",
+        "funding_amount": "$500,000",
+        "funding_type": "Pre-Seed",
+        "last_funding_date": "Apr 2025",
+        "funding_usd": null
+    },
+    {
+        "name": "Riza",
+        "website": "riza.io",
+        "industry": "Artificial Intelligence, Data, Analytics",
+        "country": "United States",
+        "funding_amount": "$2,700,000",
+        "funding_type": "Seed",
+        "last_funding_date": "Apr 2025",
+        "funding_usd": null
+    },
+    {
+        "name": "Glycomine",
+        "website": "glycomine.com",
+        "industry": "Biotechnology",
+        "country": "United States",
+        "funding_amount": "$115,000,000",
+        "funding_type": "Series C",
+        "last_funding_date": "Apr 2025",
+        "funding_usd": null
+    },
+    {
+        "name": "Spur",
+        "website": "www.spurtest.com",
+        "industry": "Healthcare",
+        "country": "United States",
+        "funding_amount": "$4,500,000",
+        "funding_type": "Seed",
+        "last_funding_date": "Apr 2025",
+        "funding_usd": null
+    },
+    {
+        "name": "Assort Health",
+        "website": "assorthealth.com",
+        "industry": "Healthcare",
+        "country": "United States",
+        "funding_amount": "",
+        "funding_type": "Venture - Series Unknown",
+        "last_funding_date": "Apr 2025",
+        "funding_usd": null
+    },
+    {
+        "name": "SlashExperts",
+        "website": "www.slashexperts.com",
+        "industry": "Professional Services",
+        "country": "United States",
+        "funding_amount": "$2,000,000",
+        "funding_type": "Seed",
+        "last_funding_date": "Apr 2025",
+        "funding_usd": null
+    },
+    {
+        "name": "Doss",
+        "website": "www.doss.com",
+        "industry": "Real Estate",
+        "country": "United States",
+        "funding_amount": "$18,000,000",
+        "funding_type": "Series A",
+        "last_funding_date": "Apr 2025",
+        "funding_usd": null
+    },
+    {
+        "name": "PHNX Materials",
+        "website": "www.phnxmaterials.com",
+        "industry": "3D, Materials",
+        "country": "United States",
+        "funding_amount": "$2,500,000",
+        "funding_type": "Seed",
+        "last_funding_date": "Apr 2025",
+        "funding_usd": null
+    },
+    {
+        "name": "Bagel AI",
+        "website": "bagel.ai",
+        "industry": "Artificial Intelligence",
+        "country": "United States",
+        "funding_amount": "$5,500,000",
+        "funding_type": "Seed",
+        "last_funding_date": "Apr 2025",
+        "funding_usd": null
+    },
+    {
+        "name": "TectoAI",
+        "website": "www.tecto.ai",
+        "industry": "Artificial Intelligence",
+        "country": "United States",
+        "funding_amount": "",
+        "funding_type": "Pre-Seed",
+        "last_funding_date": "Apr 2025",
+        "funding_usd": null
+    },
+    {
+        "name": "Listen Labs",
+        "website": "www.listenlabs.ai",
+        "industry": "Artificial Intelligence, Healthcare, Audio",
+        "country": "United States",
+        "funding_amount": "$27,000,000",
+        "funding_type": "Series A",
+        "last_funding_date": "Apr 2025",
+        "funding_usd": null
+    },
+    {
+        "name": "LTZ Therapeutics",
+        "website": "www.ltztherapeutics.com",
+        "industry": "Biotechnology",
+        "country": "United States",
+        "funding_amount": "$40,000,000",
+        "funding_type": "Series A",
+        "last_funding_date": "Apr 2025",
+        "funding_usd": null
+    },
+    {
+        "name": "Instrumentl",
+        "website": "www.instrumentl.com",
+        "industry": "Cloud Computing",
+        "country": "United States",
+        "funding_amount": "$55,000,000",
+        "funding_type": "Private Equity",
+        "last_funding_date": "Apr 2025",
+        "funding_usd": null
+    },
+    {
+        "name": "Salsa",
+        "website": "www.salsa.dev",
+        "industry": "Cloud Computing",
+        "country": "United States",
+        "funding_amount": "$20,000,000",
+        "funding_type": "Series A",
+        "last_funding_date": "Apr 2025",
+        "funding_usd": null
+    },
+    {
+        "name": "Browserbase",
+        "website": "www.browserbase.com",
+        "industry": "Cloud Computing",
+        "country": "United States",
+        "funding_amount": "",
+        "funding_type": "Series B",
+        "last_funding_date": "Apr 2025",
+        "funding_usd": null
+    },
+    {
+        "name": "Adaptive",
+        "website": "adaptive.ai",
+        "industry": "Construction",
+        "country": "United States",
+        "funding_amount": "$7,000,000",
+        "funding_type": "Seed",
+        "last_funding_date": "Apr 2025",
+        "funding_usd": null
+    },
+    {
+        "name": "Recce",
+        "website": "datarecce.io",
+        "industry": "Cyber Security",
+        "country": "United States",
+        "funding_amount": "$4,000,000",
+        "funding_type": "Pre-Seed",
+        "last_funding_date": "Apr 2025",
+        "funding_usd": null
+    },
+    {
+        "name": "Kenzo Security",
+        "website": "www.kenzo.security",
+        "industry": "Cyber Security",
+        "country": "United States",
+        "funding_amount": "$4,500,000",
+        "funding_type": "Seed",
+        "last_funding_date": "Apr 2025",
+        "funding_usd": null
+    },
+    {
+        "name": "Amplifier Security",
+        "website": "www.amplifiersecurity.com",
+        "industry": "Cyber Security",
+        "country": "United States",
+        "funding_amount": "$5,600,000",
+        "funding_type": "Seed",
+        "last_funding_date": "Apr 2025",
+        "funding_usd": null
+    },
+    {
+        "name": "Windfall",
+        "website": "www.windfall.com",
+        "industry": "Data",
+        "country": "United States",
+        "funding_amount": "$65,000,000",
+        "funding_type": "Series B",
+        "last_funding_date": "Apr 2025",
+        "funding_usd": null
+    },
+    {
+        "name": "Supabase",
+        "website": "supabase.com",
+        "industry": "Data",
+        "country": "United States",
+        "funding_amount": "$200,000,000",
+        "funding_type": "Series D",
+        "last_funding_date": "Apr 2025",
+        "funding_usd": null
+    },
+    {
+        "name": "MatBook",
+        "website": "www.thematbook.com",
+        "industry": "Education",
+        "country": "United States",
+        "funding_amount": "$750,000",
+        "funding_type": "Pre-Seed",
+        "last_funding_date": "Apr 2025",
+        "funding_usd": null
+    },
+    {
+        "name": "Suitpax",
+        "website": "suitpax.com",
+        "industry": "Fashion",
+        "country": "United States",
+        "funding_amount": "",
+        "funding_type": "Venture - Series Unknown",
+        "last_funding_date": "Apr 2025",
+        "funding_usd": null
+    },
+    {
+        "name": "GreenFi",
+        "website": "www.greenfi.com",
+        "industry": "FinTech, Finance",
+        "country": "United States",
+        "funding_amount": "$17,000,000",
+        "funding_type": "Seed",
+        "last_funding_date": "Apr 2025",
+        "funding_usd": null
+    },
+    {
+        "name": "Exante",
+        "website": "exante.app",
+        "industry": "FinTech, Investing",
+        "country": "United States",
+        "funding_amount": "$2,600,000",
+        "funding_type": "Seed",
+        "last_funding_date": "Apr 2025",
+        "funding_usd": null
+    },
+    {
+        "name": "CompScience",
+        "website": "www.compscience.com",
+        "industry": "Artificial Intelligence",
+        "country": "United States",
+        "funding_amount": "$27,600,000",
+        "funding_type": "Series B",
+        "last_funding_date": "Mar 2025",
+        "funding_usd": null
+    },
+    {
+        "name": "DeepNight",
+        "website": "www.deepnight.ai",
+        "industry": "Artificial Intelligence",
+        "country": "United States",
+        "funding_amount": "$5,500,000",
+        "funding_type": "Seed",
+        "last_funding_date": "Mar 2025",
+        "funding_usd": null
+    },
+    {
+        "name": "Quanta",
+        "website": "www.usequanta.com",
+        "industry": "Artificial Intelligence, Information Technology",
+        "country": "United States",
+        "funding_amount": "$4,700,000",
+        "funding_type": "Seed",
+        "last_funding_date": "Mar 2025",
+        "funding_usd": null
+    },
+    {
+        "name": "Doifoo",
+        "website": "doifoo.com",
+        "industry": "Artificial Intelligence, Travel",
+        "country": "United States",
+        "funding_amount": "",
+        "funding_type": "Pre-Seed",
+        "last_funding_date": "Mar 2025",
+        "funding_usd": null
+    },
+    {
+        "name": "Loyal",
+        "website": "loyalfordogs.com",
+        "industry": "Biotechnology",
+        "country": "United States",
+        "funding_amount": "$22,000,000",
+        "funding_type": "Series B",
+        "last_funding_date": "Mar 2025",
+        "funding_usd": null
+    },
+    {
+        "name": "SimCare AI",
+        "website": "www.somalab.ai",
+        "industry": "Biotechnology, Healthcare, Artificial Intelligence",
+        "country": "United States",
+        "funding_amount": "$2,000,000",
+        "funding_type": "Seed",
+        "last_funding_date": "Mar 2025",
+        "funding_usd": null
+    },
+    {
+        "name": "Rad Security",
+        "website": "rad.security",
+        "industry": "Cloud Computing, Cyber Security",
+        "country": "United States",
+        "funding_amount": "$14,000,000",
+        "funding_type": "Series A",
+        "last_funding_date": "Mar 2025",
+        "funding_usd": null
+    },
+    {
+        "name": "Metronome",
+        "website": "metronome.com",
+        "industry": "Cloud Computing, Finance",
+        "country": "United States",
+        "funding_amount": "$50,000,000",
+        "funding_type": "Series C",
+        "last_funding_date": "Mar 2025",
+        "funding_usd": null
+    },
+    {
+        "name": "Vana",
+        "website": "www.vana.org",
+        "industry": "Data",
+        "country": "United States",
+        "funding_amount": "",
+        "funding_type": "Venture - Series Unknown",
+        "last_funding_date": "Mar 2025",
+        "funding_usd": null
+    },
+    {
+        "name": "Bitwise",
+        "website": "www.bitwiseinvestments.com",
+        "industry": "Finance, Investing, Blockchain",
+        "country": "United States",
+        "funding_amount": "$70,000,000",
+        "funding_type": "Venture - Series Unknown",
+        "last_funding_date": "Mar 2025",
+        "funding_usd": null
+    },
+    {
+        "name": "Charta Health",
+        "website": "www.chartahealth.com",
+        "industry": "Healthcare, Data, Information Technology",
+        "country": "United States",
+        "funding_amount": "$8,100,000",
+        "funding_type": "Seed",
+        "last_funding_date": "Mar 2025",
+        "funding_usd": null
+    },
+    {
+        "name": "FirstWork",
+        "website": "www.firstwork.com",
+        "industry": "Human Resources, Recruiting",
+        "country": "United States",
+        "funding_amount": "$5,000,000",
+        "funding_type": "Seed",
+        "last_funding_date": "Mar 2025",
+        "funding_usd": null
+    },
+    {
+        "name": "Regie.ai",
+        "website": "www.regie.ai",
+        "industry": "Marketing, Artificial Intelligence",
+        "country": "United States",
+        "funding_amount": "$30,000,000",
+        "funding_type": "Series B",
+        "last_funding_date": "Mar 2025",
+        "funding_usd": null
+    },
+    {
+        "name": "Journify",
+        "website": "www.journify.io",
+        "industry": "Mobile, Mental Health, Wellness",
+        "country": "United States",
+        "funding_amount": "$4,000,000",
+        "funding_type": "Seed",
+        "last_funding_date": "Mar 2025",
+        "funding_usd": null
+    },
+    {
+        "name": "Ceramic",
+        "website": "ceramic.ai",
+        "industry": "Artificial Intelligence",
+        "country": "United States",
+        "funding_amount": "$12,000,000",
+        "funding_type": "Seed",
+        "last_funding_date": "Mar 2025",
+        "funding_usd": null
+    },
+    {
+        "name": "Anthropic",
+        "website": "www.anthropic.com",
+        "industry": "Artificial Intelligence",
+        "country": "United States",
+        "funding_amount": "$3,500,000,000",
+        "funding_type": "Series E",
+        "last_funding_date": "Mar 2025",
+        "funding_usd": null
+    },
+    {
+        "name": "GuidenAI",
+        "website": "guidenai.com",
+        "industry": "Artificial Intelligence",
+        "country": "United States",
+        "funding_amount": "$25,000",
+        "funding_type": "Pre-Seed",
+        "last_funding_date": "Mar 2025",
+        "funding_usd": null
+    },
+    {
+        "name": "Intangible",
+        "website": "www.intangible.ai",
+        "industry": "Artificial Intelligence, Cloud Computing",
+        "country": "United States",
+        "funding_amount": "$4,000,000",
+        "funding_type": "Seed",
+        "last_funding_date": "Mar 2025",
+        "funding_usd": null
+    },
+    {
+        "name": "Freed",
+        "website": "www.getfreed.ai",
+        "industry": "Artificial Intelligence, Cloud Computing",
+        "country": "United States",
+        "funding_amount": "$30,000,000",
+        "funding_type": "Series A",
+        "last_funding_date": "Mar 2025",
+        "funding_usd": null
+    },
+    {
+        "name": "UptimeAI",
+        "website": "www.uptimeai.com",
+        "industry": "Artificial Intelligence, Cloud Computing",
+        "country": "United States",
+        "funding_amount": "",
+        "funding_type": "Venture - Series Unknown",
+        "last_funding_date": "Mar 2025",
+        "funding_usd": null
+    },
+    {
+        "name": "LlamaIndex",
+        "website": "www.llamaindex.ai",
+        "industry": "Artificial Intelligence, Cloud Computing, Data",
+        "country": "United States",
+        "funding_amount": "$19,000,000",
+        "funding_type": "Series A",
+        "last_funding_date": "Mar 2025",
+        "funding_usd": null
+    },
+    {
+        "name": "Momentic",
+        "website": "momentic.ai",
+        "industry": "Artificial Intelligence, Data, Analytics",
+        "country": "United States",
+        "funding_amount": "$3,700,000",
+        "funding_type": "Seed",
+        "last_funding_date": "Mar 2025",
+        "funding_usd": null
+    },
+    {
+        "name": "Peregrine Technologies",
+        "website": "peregrine.io",
+        "industry": "Cloud Computing, Data, Government, Community",
+        "country": "United States",
+        "funding_amount": "$190,000,000",
+        "funding_type": "Series C",
+        "last_funding_date": "Mar 2025",
+        "funding_usd": null
+    },
+    {
+        "name": "Beacon.li",
+        "website": "www.beacon.li",
+        "industry": "Cloud Computing, Electronics",
+        "country": "United States",
+        "funding_amount": "$7,000,000",
+        "funding_type": "Series A",
+        "last_funding_date": "Mar 2025",
+        "funding_usd": null
+    },
+    {
+        "name": "Coalition",
+        "website": "www.coalitioninc.com",
+        "industry": "Cyber Security",
+        "country": "United States",
+        "funding_amount": "$30,000,000",
+        "funding_type": "Private Equity",
+        "last_funding_date": "Mar 2025",
+        "funding_usd": null
+    },
+    {
+        "name": "Zocks",
+        "website": "zocks.io",
+        "industry": "Finance, Blockchain, Artificial Intelligence",
+        "country": "United States",
+        "funding_amount": "$13,800,000",
+        "funding_type": "Series A",
+        "last_funding_date": "Mar 2025",
+        "funding_usd": null
+    },
+    {
+        "name": "Ria Health",
+        "website": "www.riahealth.com",
+        "industry": "Healthcare",
+        "country": "United States",
+        "funding_amount": "",
+        "funding_type": "Series B",
+        "last_funding_date": "Mar 2025",
+        "funding_usd": null
+    },
+    {
+        "name": "MaxIQ",
+        "website": "www.getmaxiq.com",
+        "industry": "Healthcare, Artificial Intelligence",
+        "country": "United States",
+        "funding_amount": "$7,800,000",
+        "funding_type": "Seed",
+        "last_funding_date": "Mar 2025",
+        "funding_usd": null
+    },
+    {
+        "name": "Spiritus",
+        "website": "spiritus.com",
+        "industry": "Healthcare, Electronics",
+        "country": "United States",
+        "funding_amount": "$30,000,000",
+        "funding_type": "Series A",
+        "last_funding_date": "Mar 2025",
+        "funding_usd": null
+    },
+    {
+        "name": "Outmarket AI",
+        "website": "outmarket.ai",
+        "industry": "Marketing, Artificial Intelligence",
+        "country": "United States",
+        "funding_amount": "$4,700,000",
+        "funding_type": "Seed",
+        "last_funding_date": "Mar 2025",
+        "funding_usd": null
+    },
+    {
+        "name": "Podqi",
+        "website": "www.podqi.com",
+        "industry": "Architecture, Media",
+        "country": "United States",
+        "funding_amount": "$3,200,000",
+        "funding_type": "Seed",
+        "last_funding_date": "Mar 2025",
+        "funding_usd": null
+    },
+    {
+        "name": "Invector",
+        "website": "invector.co",
+        "industry": "Artificial Intelligence",
+        "country": "United States",
+        "funding_amount": "",
+        "funding_type": "Seed",
+        "last_funding_date": "Mar 2025",
+        "funding_usd": null
+    },
+    {
+        "name": "Causal Labs",
+        "website": "www.getcausal.ai",
+        "industry": "Artificial Intelligence, Cloud Computing",
+        "country": "United States",
+        "funding_amount": "$6,000,000",
+        "funding_type": "Seed",
+        "last_funding_date": "Mar 2025",
+        "funding_usd": null
+    },
+    {
+        "name": "Sayso",
+        "website": "sayso.ai",
+        "industry": "Artificial Intelligence, Cloud Computing",
+        "country": "United States",
+        "funding_amount": "$40,000,000",
+        "funding_type": "Seed",
+        "last_funding_date": "Mar 2025",
+        "funding_usd": null
+    },
+    {
+        "name": "nunu.ai",
+        "website": "nunu.ai",
+        "industry": "Artificial Intelligence, Cloud Computing",
+        "country": "United States",
+        "funding_amount": "$6,000,000",
+        "funding_type": "Seed",
+        "last_funding_date": "Mar 2025",
+        "funding_usd": null
+    },
+    {
+        "name": "Cartesia",
+        "website": "www.cartesia.ai",
+        "industry": "Artificial Intelligence, Cloud Computing",
+        "country": "United States",
+        "funding_amount": "$64,000,000",
+        "funding_type": "Series A",
+        "last_funding_date": "Mar 2025",
+        "funding_usd": null
+    },
+    {
+        "name": "Rakurai",
+        "website": "rakurai.io",
+        "industry": "Cloud Computing",
+        "country": "United States",
+        "funding_amount": "$3,000,000",
+        "funding_type": "Seed",
+        "last_funding_date": "Mar 2025",
+        "funding_usd": null
+    },
+    {
+        "name": "Equilibrium Energy",
+        "website": "www.equilibriumenergy.com",
+        "industry": "Energy, Artificial Intelligence",
+        "country": "United States",
+        "funding_amount": "$28,000,000",
+        "funding_type": "Series B",
+        "last_funding_date": "Mar 2025",
+        "funding_usd": null
+    },
+    {
+        "name": "Wonder Family",
+        "website": "www.wonderfamily.com",
+        "industry": "Family",
+        "country": "United States",
+        "funding_amount": "",
+        "funding_type": "Seed",
+        "last_funding_date": "Mar 2025",
+        "funding_usd": null
+    },
+    {
+        "name": "Synctera",
+        "website": "www.synctera.com",
+        "industry": "FinTech, Finance",
+        "country": "United States",
+        "funding_amount": "$15,000,000",
+        "funding_type": "Series A",
+        "last_funding_date": "Mar 2025",
+        "funding_usd": null
+    },
+    {
+        "name": "Nirvana Insurance",
+        "website": "www.nirvanatech.com",
+        "industry": "FinTech, Finance, Blockchain",
+        "country": "United States",
+        "funding_amount": "$80,000,000",
+        "funding_type": "Series C",
+        "last_funding_date": "Mar 2025",
+        "funding_usd": null
+    },
+    {
+        "name": "Onyx",
+        "website": "www.onyx.app",
+        "industry": "Fitness, Mobile, Cloud Computing, Artificial Intelligence",
+        "country": "United States",
+        "funding_amount": "$10,000,000",
+        "funding_type": "Seed",
+        "last_funding_date": "Mar 2025",
+        "funding_usd": null
+    },
+    {
+        "name": "Ditto",
+        "website": "www.ditto.com",
+        "industry": "Retail, Fashion",
+        "country": "United States",
+        "funding_amount": "$82,000,000",
+        "funding_type": "Series B",
+        "last_funding_date": "Mar 2025",
+        "funding_usd": null
+    }
+]

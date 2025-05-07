@@ -16,16 +16,22 @@ import sys # <<< ADDED
 
 # --- Calculate project root and add to sys.path ---
 # This script is in cs163-main/frontend/
-# Project root (cs163-main) is one level up.
+# Project root (cs163-main) is TWO levels up.
 try:
-    project_root = os.path.dirname(os.path.abspath(__file__))
-    # project_root is currently 'cs163-main/frontend'
-    project_root = os.path.dirname(project_root) # This should now be 'cs163-main'
+    # Corrected: two levels up to get to cs163-main
+    SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
+    ASSETS_DIR = os.path.join(SCRIPT_DIR, "assets")
+    project_root = os.path.dirname(SCRIPT_DIR) # This is cs163-main
     if project_root not in sys.path:
-        sys.path.insert(0, project_root)
+        sys.path.insert(0, project_root) # Add cs163-main to path
+    # Ensure backend is also discoverable if project_root itself is not directly the parent of backend
+    # This is usually covered if project_root is cs163-main and backend is cs163-main/backend
 except NameError: # __file__ is not defined (e.g. in interactive interpreter)
+    # Fallback or raise error if essential
     logger.warning("__file__ not defined, sys.path modification for project_root might not be effective if not run as script.")
-    project_root = "." # Fallback
+    SCRIPT_DIR = os.getcwd() # Fallback SCRIPT_DIR to CWD
+    ASSETS_DIR = os.path.join(SCRIPT_DIR, "assets") # Fallback ASSETS_DIR
+    project_root = "." # Fallback to current directory, might not be correct for all imports
 
 # Configure logging for the Dash app (Moved Before Import)
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
@@ -33,30 +39,27 @@ logger = logging.getLogger(__name__)
 
 # --- Import custom class for loading model pickle ---
 try:
-    # Adjusted import path (assuming project_root 'cs163-main' is now in sys.path)
-    from backend.ML.funding_stage_prediction import AnomalyDetector#, apply_post_prediction_rules # <<< Rule function import commented out
+    # Adjusted import path to reflect the correct module location and name
+    from backend.ML.funding_stage_predictionORIGINAL import AnomalyDetector#, apply_post_prediction_rules # <<< Rule function import commented out
 except ImportError as e:
-    logger.error(f"Failed to import AnomalyDetector from backend.ML.funding_stage_prediction: {e}. Anomaly detection features will be disabled.") # Removed rule func from error msg
+    logger.error(f"Failed to import AnomalyDetector from backend.ML.funding_stage_predictionORIGINAL: {e}. Anomaly detection features will be disabled.") # Removed rule func from error msg
     AnomalyDetector = None # Define as None if import fails
-    # apply_post_prediction_rules = None # Keep commented out
 
-# --- Constants (now based on project_root and backend structure) ---
-# MainOutput is inside cs163-main/backend/MainOutput/
-BACKEND_DIR = os.path.join(project_root, 'backend')
-OUTPUT_DIR = os.path.join(BACKEND_DIR, 'MainOutput') 
+# --- Constants (now based on project_root) ---
+# Backend output is in project_root/backend/MainOutput/
+OUTPUT_DIR = os.path.join(project_root, 'backend', 'MainOutput') # Corrected path
 MODELS_DIR = os.path.join(OUTPUT_DIR, 'models')
 VIZ_DIR = os.path.join(OUTPUT_DIR, 'visualizations')
-PROTOTYPE_DIR = os.path.join(OUTPUT_DIR, 'prototype_dashboard') 
+PROTOTYPE_DIR = os.path.join(OUTPUT_DIR, 'prototype_dashboard') # This was MainOutput/prototype_dashboard before, now cs163-main/MainOutput/prototype_dashboard
 SUMMARY_GLOB = os.path.join(OUTPUT_DIR, "summary_*.json")
 FORECAST_HTML_GLOB = os.path.join(PROTOTYPE_DIR, "bay_area_funding_trend_interactive_*.html")
-CALIBRATION_PLOT_GLOB = os.path.join(VIZ_DIR, "calibration_plot*.png")
+CALIBRATION_PLOT_GLOB = None # Will be determined dynamically
 
 # Ensure directories exist (especially if MainOutput is now expected at a new common root)
-# These are primarily for the backend to create, but app might read from them.
-# os.makedirs(OUTPUT_DIR, exist_ok=True) # AppEngine likely won't create these
-# os.makedirs(MODELS_DIR, exist_ok=True)
-# os.makedirs(VIZ_DIR, exist_ok=True)
-# os.makedirs(PROTOTYPE_DIR, exist_ok=True)
+os.makedirs(OUTPUT_DIR, exist_ok=True)
+os.makedirs(MODELS_DIR, exist_ok=True)
+os.makedirs(VIZ_DIR, exist_ok=True)
+os.makedirs(PROTOTYPE_DIR, exist_ok=True)
 
 # --- Global Variables (Load data once on startup) ---
 app_data = {
@@ -691,9 +694,35 @@ def startup_data_load():
 
     # 3. Find Plot Files
     app_data["latest_forecast_html"] = find_latest_file(FORECAST_HTML_GLOB)
-    logger.info(f"Forecast HTML path found: {app_data['latest_forecast_html']}") # Log the path
-    app_data["latest_calibration_plot"] = find_latest_file(CALIBRATION_PLOT_GLOB)
-    logger.info(f"Calibration plot path found: {app_data['latest_calibration_plot']}") # Log the path
+    logger.info(f"Forecast HTML path found: {app_data['latest_forecast_html']}")
+
+    # --- Dynamically find calibration plot for the loaded model ---
+    loaded_model_name_for_plot = app_data.get("best_model_name", "Unknown")
+    specific_calibration_plot_path = None
+    if loaded_model_name_for_plot != "Unknown" and loaded_model_name_for_plot is not None:
+        safe_model_name_for_plot = loaded_model_name_for_plot.replace(" ", "_").replace("(", "").replace(")", "")
+        specific_calibration_glob = os.path.join(VIZ_DIR, f"calibration_plot_{safe_model_name_for_plot}_*.png")
+        logger.info(f"Looking for specific calibration plot: {specific_calibration_glob}")
+        specific_calibration_plot_path = find_latest_file(specific_calibration_glob)
+        if specific_calibration_plot_path:
+            logger.info(f"Found specific calibration plot: {specific_calibration_plot_path}")
+        else:
+            logger.warning(f"Specific calibration plot for '{loaded_model_name_for_plot}' not found using pattern: {specific_calibration_glob}. Will try generic.")
+
+    if specific_calibration_plot_path:
+        app_data["latest_calibration_plot"] = specific_calibration_plot_path
+    else:
+        # Fallback to generic glob if specific one not found or model name was unknown
+        generic_calibration_glob = os.path.join(VIZ_DIR, "calibration_plot_*.png")
+        logger.info(f"Falling back to generic calibration plot search: {generic_calibration_glob}")
+        app_data["latest_calibration_plot"] = find_latest_file(generic_calibration_glob)
+        if app_data["latest_calibration_plot"]:
+            logger.info(f"Found generic calibration plot: {app_data['latest_calibration_plot']}")
+        else:
+            logger.warning("No calibration plot found (specific or generic).")
+
+    logger.info(f"Final calibration plot path: {app_data.get('latest_calibration_plot')}")
+    # --- End dynamic calibration plot finding ---
 
     logger.info("--- Application Data Load Complete ---")
     logger.info(f"Features expected by model: {app_data.get('feature_names', 'N/A')}") # Use .get()
@@ -787,18 +816,18 @@ app.layout = dbc.Container([
                     html.Iframe(
                         id='forecast-plot-iframe',
                         # Use os.path.basename to get just the filename for assets URL
-                        src=app.get_asset_url(os.path.basename(app_data.get("latest_forecast_html", ""))) if app_data.get("latest_forecast_html") and os.path.exists(os.path.join("assets", os.path.basename(app_data.get("latest_forecast_html", "")))) else "",
+                        src=app.get_asset_url(os.path.basename(app_data.get("latest_forecast_html", ""))) if app_data.get("latest_forecast_html") and os.path.exists(os.path.join(ASSETS_DIR, os.path.basename(app_data.get("latest_forecast_html", "")))) else "",
                         style={"border": "none", "width": "100%", "height": "550px"} # Increased height
-                    ) if app_data.get("latest_forecast_html") and os.path.exists(os.path.join("assets", os.path.basename(app_data.get("latest_forecast_html", "")))) else html.P("Forecast plot not available or not found in assets folder."), # Updated condition
+                    ) if app_data.get("latest_forecast_html") and os.path.exists(os.path.join(ASSETS_DIR, os.path.basename(app_data.get("latest_forecast_html", "")))) else html.P("Forecast plot not available or not found in assets folder."), # Updated condition
                     html.Hr(),
                     # Calibration Plot
                     html.H5("Model Calibration"),
                     html.Img(
                         id='calibration-plot-img',
                         # Use os.path.basename for assets URL
-                        src=app.get_asset_url(os.path.basename(app_data.get("latest_calibration_plot", ""))) if app_data.get("latest_calibration_plot") and os.path.exists(os.path.join("assets", os.path.basename(app_data.get("latest_calibration_plot", "")))) else "",
+                        src=app.get_asset_url(os.path.basename(app_data.get("latest_calibration_plot", ""))) if app_data.get("latest_calibration_plot") and os.path.exists(os.path.join(ASSETS_DIR, os.path.basename(app_data.get("latest_calibration_plot", "")))) else "",
                         style={"max-width": "100%", "height": "auto"}
-                    ) if app_data.get("latest_calibration_plot") and os.path.exists(os.path.join("assets", os.path.basename(app_data.get("latest_calibration_plot", "")))) else html.P("Calibration plot not available or not found in assets folder."), # Updated condition
+                    ) if app_data.get("latest_calibration_plot") and os.path.exists(os.path.join(ASSETS_DIR, os.path.basename(app_data.get("latest_calibration_plot", "")))) else html.P("Calibration plot not available or not found in assets folder."), # Updated condition
                      html.P("Calibration Check: Shows how well the model's predicted probabilities match actual outcomes. Points closer to the dashed diagonal line indicate better calibration.", className="small text-muted mt-2")
                 ])
             ], className="shadow-sm mb-4"),
@@ -989,12 +1018,16 @@ if not os.path.exists("assets"):
     os.makedirs("assets")
     logger.info("Created 'assets' directory.")
 
+# Ensure the correct assets folder (relative to the script) is created and used
+os.makedirs(ASSETS_DIR, exist_ok=True)
+logger.info(f"Ensured assets directory exists at: {ASSETS_DIR}")
+
 # Helper function to copy assets if source exists
 def copy_asset(src_path_key, asset_type):
     src_path = app_data.get(src_path_key)
     if src_path and os.path.exists(src_path):
         dest_filename = os.path.basename(src_path)
-        dest_path = os.path.join("assets", dest_filename)
+        dest_path = os.path.join(ASSETS_DIR, dest_filename)
         try:
             import shutil
             # Check if destination exists and is older than source
@@ -1023,4 +1056,4 @@ if __name__ == '__main__':
     else:
          logger.info("Starting Dash server...")
          # Ensure assets folder is served - Dash does this by default if 'assets' exists
-         app.run(debug=True, port=8054) 
+         app.run(debug=True, port=8057) 

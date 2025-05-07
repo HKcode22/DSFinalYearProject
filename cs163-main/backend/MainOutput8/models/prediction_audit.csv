@@ -1,0 +1,1 @@
+timestamp,request_id,company_name,prediction_result,confidence,is_anomaly,anomaly_score,anomaly_reasons,feature_values,client_ip,model_version

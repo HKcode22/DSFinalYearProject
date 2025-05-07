@@ -4,3 +4,4 @@ pandas
 Flask
 gunicorn
 google-cloud-storage
+dash_bootstrap_components

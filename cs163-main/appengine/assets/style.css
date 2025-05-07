@@ -1,0 +1,38 @@
+/* assets/style.css */
+/* Button-like Navbar */
+.navbar {
+    background: #f8f9fa; /* Light background */
+    padding: 1rem 2rem;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.nav-container {
+    display: flex;
+    gap: 0.5rem; /* Space between buttons */
+}
+
+.nav-button {
+    background: #ffffff;
+    color: #333;
+    text-decoration: none;
+    padding: 0.5rem 1.2rem;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.nav-button:hover {
+    background: #007bff;
+    color: white;
+    border-color: #007bff;
+    transform: translateY(-1px);
+}
+
+/* Active button highlight */
+.active-button {
+    background: #007bff;
+    color: white !important;
+    border-color: #007bff;
+}

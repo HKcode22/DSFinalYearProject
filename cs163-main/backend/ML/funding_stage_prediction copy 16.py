@@ -71,23 +71,21 @@ logger = logging.getLogger(__name__)
 
 
 class DataLoader:
-    def __init__(self, base_dir="./", archive=False, output_dir_for_db="./MainOutput"):
+    def __init__(self, base_dir="./", archive=False):
         """Initialize data loader with paths to data sources and historical database"""
-        # Resolve base_dir to an absolute path immediately
-        # This base_dir is assumed to be the directory containing the JSON files.
-        self.base_dir = os.path.abspath(base_dir)
-        logger.info(f"DataLoader using absolute base_dir for JSON files: {self.base_dir}")
-
+        self.base_dir = base_dir
         self.archive = archive
         self.archive_dir = None
-        # output_dir_for_db is expected to be an absolute path or relative to script execution
-        # If pipeline passes an absolute path like /path/to/cs163-main/backend/MainOutput, this is fine.
-        os.makedirs(output_dir_for_db, exist_ok=True) 
         self.historical_db = os.path.join(
-            output_dir_for_db, "historical_funding_data.db")
+            base_dir, "historical_funding_data.db")
 
-        # self.base_dir IS the JSON folder
-        self.json_folder = self.base_dir
+        # Define paths to source files in JSONFolder - fix for duplicated path
+        # If base_dir already contains JSONFolder, don't add it again
+        if os.path.basename(base_dir) == "JSONFolder" or os.path.exists(
+                os.path.join(base_dir, "fundraisestartup50.json")):
+            self.json_folder = base_dir
+        else:
+            self.json_folder = os.path.join(base_dir, "JSONFolder")
 
         # Use the fixed json_folder path for file paths
         self.fundraiser_path = os.path.join(
@@ -96,10 +94,6 @@ class DataLoader:
             self.json_folder, "growthlistscrapper.json")
         self.topstartup_path = os.path.join(
             self.json_folder, "topstartupio50.json")
-        
-        logger.info(f"Fundraiser path: {self.fundraiser_path}")
-        logger.info(f"Growthlist path: {self.growthlist_path}")
-        logger.info(f"Topstartup path: {self.topstartup_path}")
 
         # Initialize the database for historical data
         self._init_historical_db()
@@ -918,7 +912,6 @@ class DataLoader:
             return pd.DataFrame()
 
 
-
 class FeatureEngineering:
     def __init__(self):
         """Initialize with dynamic funding stage mapping"""
@@ -1051,66 +1044,6 @@ class FeatureEngineering:
             data['funding_month'] = datetime.now().month
             data['months_since_first_funding'] = 0
 
-        # Standardize industry categories
-        data['industry_category'] = data['industry'].fillna('Unknown')
-
-        # Map to standardized categories with more comprehensive mapping
-        industry_mapping = {
-            'artificial intelligence': 'AI & ML',
-            'machine learning': 'AI & ML',
-            'information technology': 'IT & Software',
-            'software': 'IT & Software',
-            'health': 'Healthcare',
-            'healthcare': 'Healthcare',
-            'biotech': 'Biotech',
-            'biotechnology': 'Biotech',
-            'financial': 'FinTech',
-            'finance': 'FinTech',
-            'fintech': 'FinTech',
-            'education': 'EdTech',
-            'edtech': 'EdTech',
-            'retail': 'Retail',
-            'ecommerce': 'Retail',
-            'energy': 'Energy',
-            'renewable': 'Energy',
-            'food': 'Food & Agriculture',
-            'agriculture': 'Food & Agriculture',
-            'transportation': 'Transport & Logistics',
-            'logistics': 'Transport & Logistics',
-            'real estate': 'Real Estate',
-            'proptech': 'Real Estate'
-        }
-
-        # Apply mapping for standardization with better matching
-        def map_industry(industry_str):
-            if not industry_str or pd.isna(industry_str):
-                return 'Unknown'
-
-            industry_str = industry_str.lower()
-
-            for key, value in industry_mapping.items():
-                if key in industry_str:
-                    return value
-
-            return industry_str.title()  # Return capitalized version if no match
-
-        data['industry_category'] = data['industry_category'].apply(
-            map_industry)
-
-        # --- Consolidate Rare Industries --- #
-        min_frequency = 10
-        industry_counts = data['industry_category'].value_counts()
-        rare_industries = industry_counts[industry_counts < min_frequency].index.tolist()
-        # Ensure 'Other' itself isn't marked as rare if it meets threshold
-        if 'Other' in data['industry_category'].unique() and 'Other' in rare_industries:
-            if industry_counts.get('Other', 0) >= min_frequency:
-                rare_industries.remove('Other')
-
-        if rare_industries:
-            logger.info(f"Mapping {len(rare_industries)} rare industries (count < {min_frequency}) to 'Other': {rare_industries[:10]}...")
-            data['industry_category'] = data['industry_category'].replace(rare_industries, 'Other')
-        # --- End Consolidate Rare Industries --- #
-
         # --- ADD Features based on Funding History --- #
         try:
             data = data.sort_values(by=['company_name', 'funding_date'])
@@ -1171,7 +1104,6 @@ class FeatureEngineering:
         if 'employees' in data.columns:
             data['employees'] = pd.to_numeric(
                 data['employees'], errors='coerce')
-            data['employees'] = data['employees'].fillna(0) # Ensure employees is filled
 
             # Avoid division by zero
             data['employee_efficiency'] = data.apply(
@@ -1180,14 +1112,14 @@ class FeatureEngineering:
                 axis=1)
 
             # Fill missing values with median by funding stage
-            efficiency_medians = data.groupby('funding_stage_numeric')[ # Use numeric stage for groupby
+            efficiency_medians = data.groupby('funding_stage')[
                 'employee_efficiency'].median()
 
-            for stage_numeric_val in data['funding_stage_numeric'].unique(): # Iterate over numeric stage
+            for stage in data['funding_stage'].unique():
                 stage_median = efficiency_medians.get(
-                    stage_numeric_val, data['employee_efficiency'].median())
+                    stage, data['employee_efficiency'].median())
                 mask = (
-                    data['funding_stage_numeric'] == stage_numeric_val) & ( # Use numeric stage
+                    data['funding_stage'] == stage) & (
                     data['employee_efficiency'].isna())
                 data.loc[mask, 'employee_efficiency'] = stage_median
 
@@ -1195,8 +1127,163 @@ class FeatureEngineering:
             data['employee_efficiency'] = data['employee_efficiency'].fillna(
                 data['employee_efficiency'].median())
         else:
-            data['employees'] = 0 # Default to 0 if column doesn't exist
+            data['employees'] = np.nan
             data['employee_efficiency'] = np.nan
+
+        # Standardize industry categories
+        data['industry_category'] = data['industry'].fillna('Unknown')
+
+        # Map to standardized categories with more comprehensive mapping
+        industry_mapping = {
+            'artificial intelligence': 'AI & ML',
+            'machine learning': 'AI & ML',
+            'information technology': 'IT & Software',
+            'software': 'IT & Software',
+            'health': 'Healthcare',
+            'healthcare': 'Healthcare',
+            'biotech': 'Biotech',
+            'biotechnology': 'Biotech',
+            'financial': 'FinTech',
+            'finance': 'FinTech',
+            'fintech': 'FinTech',
+            'education': 'EdTech',
+            'edtech': 'EdTech',
+            'retail': 'Retail',
+            'ecommerce': 'Retail',
+            'energy': 'Energy',
+            'renewable': 'Energy',
+            'food': 'Food & Agriculture',
+            'agriculture': 'Food & Agriculture',
+            'transportation': 'Transport & Logistics',
+            'logistics': 'Transport & Logistics',
+            'real estate': 'Real Estate',
+            'proptech': 'Real Estate'
+        }
+
+        # Apply mapping for standardization with better matching
+        def map_industry(industry_str):
+            if not industry_str or pd.isna(industry_str):
+                return 'Unknown'
+
+            industry_str = industry_str.lower()
+
+            for key, value in industry_mapping.items():
+                if key in industry_str:
+                    return value
+
+            return industry_str.title()  # Return capitalized version if no match
+
+        data['industry_category'] = data['industry_category'].apply(
+            map_industry)
+
+        # --- Consolidate Rare Industries --- #
+        min_frequency = 10
+        industry_counts = data['industry_category'].value_counts()
+        rare_industries = industry_counts[industry_counts < min_frequency].index.tolist()
+        # Ensure 'Other' itself isn't marked as rare if it meets threshold
+        if 'Other' in data['industry_category'].unique() and 'Other' in rare_industries:
+            if industry_counts.get('Other', 0) >= min_frequency:
+                rare_industries.remove('Other')
+
+        if rare_industries:
+            logger.info(f"Mapping {len(rare_industries)} rare industries (count < {min_frequency}) to 'Other': {rare_industries[:10]}...")
+            data['industry_category'] = data['industry_category'].replace(rare_industries, 'Other')
+        # --- End Consolidate Rare Industries --- #
+
+        # Location features (if available)
+        if 'location' in data.columns or 'headquarters' in data.columns:
+            # Use either location or headquarters column
+            location_col = 'location' if 'location' in data.columns else 'headquarters'
+
+            data['location_category'] = data[location_col].fillna('Unknown')
+
+            # Extract country or state
+            def extract_location(loc_str):
+                if not isinstance(loc_str, str) or pd.isna(loc_str):
+                    return 'Unknown'
+
+                # Split by comma and get the last part (usually country/state)
+                parts = [p.strip() for p in loc_str.split(',')]
+
+                if len(parts) > 1:
+                    return parts[-1]  # Return the last part
+                return loc_str
+
+            data['location_category'] = data['location_category'].apply(
+                extract_location)
+
+            # Consolidate common locations
+            location_mapping = {
+                'United States': 'USA',
+                'US': 'USA',
+                'U.S.': 'USA',
+                'U.S.A.': 'USA',
+                'UK': 'United Kingdom',
+                'U.K.': 'United Kingdom'
+            }
+
+            data['location_category'] = data['location_category'].map(
+                lambda x: location_mapping.get(x, x)
+            )
+
+        # Funding frequency features
+        company_funding_counts = data.groupby('company_name').size()
+        data['previous_rounds'] = data['company_name'].map(
+            company_funding_counts) - 1
+        data['previous_rounds'] = data['previous_rounds'].clip(lower=0)
+
+        # New feature: Funding velocity (average months between rounds)
+        company_funding_dates = data.groupby(
+            'company_name')['funding_date'].apply(list)
+
+        def calc_funding_velocity(dates):
+            if not isinstance(dates, list) or len(dates) < 2:
+                return np.nan
+
+            # Sort dates and remove NaT
+            valid_dates = [d for d in dates if not pd.isna(d)]
+            if len(valid_dates) < 2:
+                return np.nan
+
+            valid_dates.sort()
+
+            # Calculate average months between rounds
+            intervals = []
+            for i in range(1, len(valid_dates)):
+                interval = (valid_dates[i].year - valid_dates[i - 1].year) * \
+                    12 + (valid_dates[i].month - valid_dates[i - 1].month)
+                intervals.append(interval)
+
+            return np.mean(intervals) if intervals else np.nan
+
+        data['funding_velocity'] = data['company_name'].map(
+            company_funding_dates.apply(calc_funding_velocity)
+        )
+
+        # +++ Add Interaction Features +++
+        # Ensure required columns exist and are numeric before creating interactions
+        if 'funding_amount_log' in data.columns and 'months_since_first_funding' in data.columns:
+             data['funding_amount_x_age'] = data['funding_amount_log'] * data['months_since_first_funding']
+        else:
+             data['funding_amount_x_age'] = 0 # Default if components are missing
+
+        if 'employees' in data.columns and 'previous_rounds' in data.columns:
+             data['employees_x_rounds'] = data['employees'] * data['previous_rounds']
+        else:
+              data['employees_x_rounds'] = 0 # Default if components are missing
+
+        # --- Add New Interaction Features ---
+        if 'funding_velocity' in data.columns and 'previous_rounds' in data.columns:
+             data['velocity_x_rounds'] = data['funding_velocity'] * data['previous_rounds']
+        else:
+             data['velocity_x_rounds'] = 0 # Default if components are missing
+
+        if 'months_since_first_funding' in data.columns and 'employees' in data.columns:
+             data['age_x_employees'] = data['months_since_first_funding'] * data['employees']
+        else:
+             data['age_x_employees'] = 0 # Default if components are missing
+        # --- End New Interaction Features ---
+        # +++ End Interaction Features +++
 
         # --- Add Binning Feature --- # # Renamed from company_age_bin
         age_feature = 'months_since_first_funding'
@@ -1256,45 +1343,6 @@ class FeatureEngineering:
              data['employees_bin'] = 'Unknown_Emp'
         # --- End Employee Binning --- #
 
-        # Funding frequency features
-        company_funding_counts = data.groupby('company_name').size()
-        data['previous_rounds'] = data['company_name'].map(
-            company_funding_counts) - 1
-        data['previous_rounds'] = data['previous_rounds'].clip(lower=0)
-        data['previous_rounds'] = data['previous_rounds'].fillna(0) # Ensure previous_rounds is filled
-
-        # New feature: Funding velocity (average months between rounds)
-        company_funding_dates = data.groupby(
-            'company_name')['funding_date'].apply(list)
-
-        def calc_funding_velocity(dates):
-            if not isinstance(dates, list) or len(dates) < 2:
-                return np.nan
-
-            valid_dates = [d for d in dates if not pd.isna(d)]
-            if len(valid_dates) < 2:
-                return np.nan
-
-            valid_dates.sort()
-            intervals = []
-            for i in range(1, len(valid_dates)):
-                interval = (valid_dates[i].year - valid_dates[i - 1].year) * \\
-                    12 + (valid_dates[i].month - valid_dates[i - 1].month)
-                intervals.append(interval)
-
-            return np.mean(intervals) if intervals else np.nan
-
-        data['funding_velocity'] = data['company_name'].map(
-            company_funding_dates.apply(calc_funding_velocity)
-        )
-        funding_velocity_median = data['funding_velocity'].median()
-        if pd.isna(funding_velocity_median):
-            funding_velocity_median = 0 
-        data['funding_velocity'] = data['funding_velocity'].fillna(funding_velocity_median) # Ensure funding_velocity is filled
-
-        # --- Add Interaction Features +++
-        # Ensure required columns exist and are numeric before creating interactions
-        # ... existing code ...
         # Fill missing values for all numeric columns
         numeric_cols = [
             'funding_amount',
@@ -1303,15 +1351,12 @@ class FeatureEngineering:
             'employee_efficiency',
             'previous_rounds',
             'funding_velocity',
-            'month_sin', 
-            'month_cos', 
-            'funding_amount_x_age', 
-            'employees_x_rounds', 
-            'velocity_x_rounds', 
-            'age_x_employees',
-            'time_since_last_funding',      # <<< ENSURED PRESENT
-            'funding_amount_ratio_vs_prev', # <<< ENSURED PRESENT
-            'funding_vs_industry_median'  # <<< ENSURED PRESENT
+            'month_sin', # Include new features
+            'month_cos', # Include new features
+            'funding_amount_x_age', # Include new features
+            'employees_x_rounds', # Include new features
+            'velocity_x_rounds', # <<< ADD NEW FEATURE TO LIST
+            'age_x_employees'    # <<< ADD NEW FEATURE TO LIST
         ]
 
         for col in numeric_cols:
@@ -1334,81 +1379,2772 @@ class FeatureEngineering:
         """Prepare feature matrix with proper type handling"""
         # Select relevant features that exist in the original data
         numeric_feature_cols = [
-            'funding_amount_log',
-            'employee_efficiency',
-            'funding_year',
-            'funding_month',
-            'previous_rounds',
+            'funding_amount_log', # Keep original log funding
+            'employee_efficiency', # Keep efficiency 
+            'funding_year', 
+            'funding_month', 
+            'previous_rounds', 
+            # 'months_since_first_funding', # REMOVED - Use binned version
             'funding_velocity',
-            'month_sin',
-            'month_cos',
-            'funding_amount_x_age',
-            'employees_x_rounds',
-            'velocity_x_rounds',
+            'month_sin', 
+            'month_cos', 
+            'funding_amount_x_age', 
+            'employees_x_rounds', 
+            'velocity_x_rounds', 
             'age_x_employees',
-            'time_since_last_funding',
-            'funding_amount_ratio_vs_prev',
-            'funding_vs_industry_median'
+            'time_since_last_funding',       # <<< ADDED
+            'funding_amount_ratio_vs_prev',  # <<< ADDED
+            'funding_vs_industry_median'   # <<< ADDED
+            # 'employees' # REMOVED - Use binned version
         ]
         categorical_feature_cols = [
             'industry_category', 
-            'company_age_bin', 
-            'employees_bin'
+            'company_age_bin', # Binned age
+            'employees_bin'      # Binned employees
         ]
 
+        # Only use features that actually exist in the data
         features_to_use_num = [col for col in numeric_feature_cols if col in data.columns]
-        features_to_use_cat = [col for col in categorical_feature_cols if col in data.columns]
+        features_to_use_cat = [col for col in categorical_feature_cols if col in data.columns] # <<< GET CATEGORICAL TO USE
 
+        # Log features used
+        # logger.info(f"Preparing model data with features: {features_to_use_num}")
         logger.info(f"Preparing model data with numeric features: {features_to_use_num}")
         logger.info(f"Preparing model data with categorical features: {features_to_use_cat}")
 
+        # Clean feature data - ensure numeric types
+        # X = data[features_to_use_num].copy()
         X_num = data[features_to_use_num].copy()
+
+        # Convert all features to numeric
+        # for col in X.columns:
+        #     X[col] = pd.to_numeric(X[col], errors='coerce')
         for col in X_num.columns:
             X_num[col] = pd.to_numeric(X_num[col], errors='coerce')
 
-        numeric_cols_present = X_num.select_dtypes(include=np.number).columns
-        for col in numeric_cols_present:
+        # Fill missing values for numeric columns - using median from actual
+        # data
+        # numeric_cols = X.select_dtypes(include=np.number).columns
+        numeric_cols = X_num.select_dtypes(include=np.number).columns # Use X_num
+
+        for col in numeric_cols:
+            # if X[col].isna().any():
+            #     median_value = X[col].median()
+            #     X[col] = X[col].fillna(median_value)
             if X_num[col].isna().any():
                 median_value = X_num[col].median()
                 X_num[col] = X_num[col].fillna(median_value)
-                logger.info(f"Filled NaN values in {col} with median: {median_value}")
+                logger.info(
+                    f"Filled NaN values in {col} with median: {median_value}")
 
-        X_cat_encoded = pd.DataFrame()
+        # --- One-Hot Encode Categorical Features --- #
+        X_cat_encoded = pd.DataFrame() # Initialize empty DataFrame
         if features_to_use_cat:
             X_cat = data[features_to_use_cat].copy()
+            # Ensure categorical columns are treated as strings/categories
             for col in X_cat.columns:
                  X_cat[col] = X_cat[col].astype('category')
-            X_cat_encoded = pd.get_dummies(X_cat, prefix=features_to_use_cat, dummy_na=False)
+            X_cat_encoded = pd.get_dummies(X_cat, prefix=features_to_use_cat, dummy_na=False) # Avoid NaN columns
             logger.info(f"Created {X_cat_encoded.shape[1]} features from one-hot encoding: {X_cat_encoded.columns.tolist()}")
 
+        # --- Combine Numeric and Encoded Categorical Features --- #
         X = pd.concat([X_num, X_cat_encoded], axis=1)
 
+        # --- Sanitize feature names for compatibility (e.g., XGBoost) --- #
         try:
             original_columns = X.columns.tolist()
             sanitized_columns = []
+            # Simple sanitization: replace problematic characters with underscores
+            # Consider more robust regex if needed: re.sub(r'[^\w\s]+', '', col)
             for col in original_columns:
-                sanitized_col = str(col).replace('[', '_').replace(']', '_').replace('<', '_') \\
+                sanitized_col = str(col).replace('[', '_').replace(']', '_').replace('<', '_') \
                                          .replace('(', '_').replace(')', '_').replace(',', '_').replace(' ', '')
                 sanitized_columns.append(sanitized_col)
+
             X.columns = sanitized_columns
-            if original_columns: # Add check for empty list
-                 logger.info(f"Sanitized {len(original_columns)} feature names. Example: '{original_columns[-1]}' -> '{X.columns[-1]}'")
+            logger.info(f"Sanitized {len(original_columns)} feature names. Example: '{original_columns[-1]}' -> '{X.columns[-1]}'")
         except Exception as sanitize_err:
             logger.error(f"Error sanitizing feature names: {sanitize_err}")
+            # Decide how to handle error - maybe revert to original names or raise?
+            # For now, log and continue with potentially problematic names
             pass
+        # --- End Sanitization --- #
 
+        # Target variable processing
         y = pd.to_numeric(data['funding_stage_numeric'], errors='coerce')
+
+        # Check we have enough data
         if y.notna().sum() < 10:
-            logger.warning(f"Very few valid target values: {y.notna().sum()} out of {len(y)}")
+            logger.warning(
+                f"Very few valid target values: {
+                    y.notna().sum()} out of {
+                    len(y)}")
 
         X = X[y.notna()]
         y = y[y.notna()].astype(int)
 
-        logger.info(f"Prepared model data: X shape={X.shape}, y shape={y.shape}")
+        # Log data shapes and class distribution
+        logger.info(
+            f"Prepared model data: X shape={
+                X.shape}, y shape={
+                y.shape}")
         logger.info(f"Class distribution: {y.value_counts().to_dict()}")
 
         return X, y
 
+
+class ModelTrainer:
+    def __init__(self, output_dir="./models"):
+        """Initialize with output directory for saving models"""
+        self.output_dir = output_dir
+        os.makedirs(output_dir, exist_ok=True)
+        self.timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
+
+    def train_random_forest(self, X, y):
+        """Train a Random Forest model for funding stage prediction with anomaly detection"""
+        logger.info("Training Random Forest model...")
+        try:
+            # Split data
+            X_train, X_test, y_train, y_test = train_test_split(
+                X, y, test_size=0.2, random_state=42
+            )
+
+            # Add anomaly detection using isolation forest to identify outliers
+            # Use a randomized seed to prevent predictable detection patterns
+            isolation_forest = IsolationForest(
+                contamination=0.05,
+                random_state=np.random.randint(
+                    0,
+                    10000))
+            outlier_scores = isolation_forest.fit_predict(X_train)
+            outliers_mask = outlier_scores == -1
+
+            if outliers_mask.any():
+                logger.info(
+                    f"Identified {
+                        outliers_mask.sum()} potential outliers in training data")
+
+                # Log some example outliers
+                outlier_examples = X_train.iloc[outliers_mask].head(
+                    3) if isinstance(X_train, pd.DataFrame) else None
+                if outlier_examples is not None:
+                    logger.info(
+                        f"Outlier examples:\n{
+                            outlier_examples.to_dict(
+                                orient='records')}")
+
+            # Check class imbalance
+            class_counts = np.bincount(y_train)
+            logger.info(f"Class counts before training: {class_counts}")
+
+            if np.min(class_counts) < 10:
+                logger.warning(
+                    f"Class imbalance detected, but continuing without resampling")
+
+            # Define model with hyperparameters - use bootstrap aggregating for robustness
+            # and randomized state for unpredictability
+            rf = RandomForestClassifier(
+                n_estimators=900,
+                max_depth=None,
+                min_samples_split=5,
+                min_samples_leaf=2,
+                bootstrap=True,
+                oob_score=True,  # Use out-of-bag to assess model quality
+                random_state=np.random.randint(
+                    0, 10000),  # Random seed for each run
+                n_jobs=-1
+            )
+
+            # Train model
+            rf.fit(X_train, y_train)
+
+            # Check out-of-bag score as additional validation
+            if hasattr(rf, 'oob_score_'):
+                logger.info(f"Out-of-bag score: {rf.oob_score_:.4f}")
+
+            # Evaluate
+            y_pred = rf.predict(X_test)
+            accuracy = accuracy_score(y_test, y_pred)
+            report = classification_report(y_test, y_pred)
+
+            logger.info(f"Random Forest accuracy: {accuracy:.4f}")
+            logger.info(f"Classification report:\n{report}")
+
+            # Save model and metadata including anomaly detector
+            model_path = os.path.join(
+                self.output_dir, f"random_forest_{
+                    self.timestamp}.joblib")
+            model_metadata = {
+                'model': rf,
+                'isolation_forest': isolation_forest,
+                'training_date': self.timestamp,
+                'feature_names': X.columns.tolist() if hasattr(
+                    X,
+                    'columns') else None,
+                'accuracy': accuracy,
+                'class_mapping': {
+                    i: label for i,
+                    label in enumerate(
+                        np.unique(y))}}
+            joblib.dump(model_metadata, model_path)
+
+            # Return model and evaluation data dictionary
+            return {
+                'status': 'success', # Add status
+                'model': rf, # Return model object
+                'accuracy': accuracy,
+                'X_test': X_test,
+                'y_test': y_test,
+                'y_pred': y_pred,
+                'y_proba': rf.predict_proba(X_test) if hasattr(rf, 'predict_proba') else None,
+                'feature_names': X.columns.tolist() if hasattr(X, 'columns') else None,
+                'model_path': model_path,
+                'isolation_forest': isolation_forest
+            }
+        except Exception as e:
+            logger.error(f"Error training Random Forest model: {e}")
+            logger.error(traceback.format_exc())
+            return {'status': 'failed', 'error': str(e), 'traceback': traceback.format_exc()}
+
+    def train_xgboost(self, X, y):
+        """
+        Train an XGBoost classifier with enhanced hyperparameters.
+        
+        Args:
+            X: Features matrix
+            y: Target vector
+            
+        Returns:
+            Dictionary with model, predictions, probabilities and metrics, or failure dict
+        """
+        try:
+            # Split the data
+            X_train, X_test, y_train, y_test = train_test_split(
+                X, y, test_size=0.2, random_state=42, stratify=y)
+
+            # Scale features
+            scaler = StandardScaler()
+            X_train_scaled = scaler.fit_transform(X_train)
+            X_test_scaled = scaler.transform(X_test)
+
+            # Train the model with tuned hyperparameters
+            model = xgb.XGBClassifier(
+                max_depth=6,
+                learning_rate=0.1,
+                n_estimators=500,
+                min_child_weight=1,
+                gamma=0,
+                subsample=0.8,
+                colsample_bytree=0.8,
+                reg_alpha=0,
+                reg_lambda=1,
+                objective='multi:softproba',
+                num_class=len(np.unique(y)),
+                random_state=42,
+                # Removed the use_label_encoder parameter as it's deprecated
+                verbosity=0
+            )
+
+            # Train the model
+            model.fit(
+                X_train_scaled,
+                y_train,
+                eval_set=[
+                    (X_train_scaled,
+                     y_train),
+                    (X_test_scaled,
+                     y_test)],
+                eval_metric=['mlogloss',
+                             'merror'],
+                early_stopping_rounds=10,
+                verbose=False)
+
+            # Make predictions
+            y_pred = model.predict(X_test_scaled)
+            y_proba = model.predict_proba(X_test_scaled)
+
+            # Calculate metrics
+            accuracy = accuracy_score(y_test, y_pred)
+            precision = precision_score(y_test, y_pred, average='weighted')
+            recall = recall_score(y_test, y_pred, average='weighted')
+            f1 = f1_score(y_test, y_pred, average='weighted')
+            confusion = confusion_matrix(y_test, y_pred)
+
+            # Log the performance
+            logger.info(
+                f"XGBoost Performance: Accuracy={accuracy:.4f}, F1={f1:.4f}")
+
+            # Return the results
+            return {
+                'status': 'success', # Add status indicator
+                'model': model,
+                'scaler': scaler,
+                'predictions': y_pred,
+                'probabilities': y_proba,
+                'confusion_matrix': confusion,
+                'accuracy': accuracy,
+                'precision': precision,
+                'recall': recall,
+                'f1_score': f1,
+                'feature_importance': model.feature_importances_
+            }
+        except Exception as e:
+            logger.error(f"Error training XGBoost model: {e}")
+            logger.error(traceback.format_exc())
+            # return None # Original line
+            return {'status': 'failed', 'error': str(e), 'traceback': traceback.format_exc()} # Modified line
+
+    def train_gradient_boosting(self, X, y):
+        """Train a Gradient Boosting model with optimized parameters"""
+        logger.info("Training Gradient Boosting model...") # Add logging
+        try: # <<< Add try block
+            X_train, X_test, y_train, y_test = train_test_split(
+                X, y, test_size=0.2, random_state=42, stratify=y)
+
+            # Define model with carefully selected parameters
+            gb = GradientBoostingClassifier(
+                n_estimators=900,
+                learning_rate=0.03,
+                max_depth=10,
+                min_samples_split=9,
+                min_samples_leaf=4,
+                subsample=0.8,
+                max_features='sqrt',
+                random_state=42,
+                verbose=0
+            )
+
+            # Fit the model
+            gb.fit(X_train, y_train)
+
+            # Evaluate
+            y_pred = gb.predict(X_test)
+            accuracy = accuracy_score(y_test, y_pred)
+
+            # Calculate additional metrics
+            precision = precision_score(y_test, y_pred, average='weighted', zero_division=0) # Added zero_division
+            recall = recall_score(y_test, y_pred, average='weighted', zero_division=0) # Added zero_division
+            f1 = f1_score(y_test, y_pred, average='weighted', zero_division=0) # Added zero_division
+
+            # Log the performance
+            logger.info(f"Gradient Boosting Performance: Accuracy={accuracy:.4f}, F1={f1:.4f}")
+
+            # Return results dictionary
+            return {
+                'status': 'success', # Add status
+                'model': gb, # Return model object
+                'accuracy': accuracy,
+                'precision': precision,
+                'recall': recall,
+                'f1_score': f1,
+                'X_test': X_test,
+                'y_test': y_test,
+                'y_pred': y_pred,
+                'feature_importance': gb.feature_importances_
+            }
+        except Exception as e: # <<< Add except block
+            logger.error(f"Error training Gradient Boosting model: {e}")
+            logger.error(traceback.format_exc())
+            return {'status': 'failed', 'error': str(e), 'traceback': traceback.format_exc()}
+
+
+class EnhancedModelTrainer(ModelTrainer):
+    def tune_random_forest(self, X, y):
+        """Use RandomizedSearchCV to find optimal Random Forest parameters"""
+        try: # Add try block
+            param_grid = {
+                'n_estimators': randint(100, 2500), # Further expanded upper bound
+                'max_depth': [None, 5, 10, 15, 20, 25, 30, 40, 50, 60], # More discrete values
+                'min_samples_split': randint(2, 40), # Expanded upper bound
+                'min_samples_leaf': randint(1, 30),  # Expanded upper bound
+                'max_features': ['sqrt', 'log2', None],
+                'bootstrap': [True, False],
+                'class_weight': ['balanced', 'balanced_subsample', None],
+                'criterion': ['gini', 'entropy', 'log_loss'],
+                'max_leaf_nodes': [None] + list(range(30, 401, 30)), # Expanded range and steps
+                'min_impurity_decrease': [0.0, 0.0001, 0.001, 0.01, 0.02, 0.05, 0.1], # Added more fine-grained values
+                'ccp_alpha': uniform(0.0, 0.1), # Expanded ccp_alpha for pruning
+                'min_weight_fraction_leaf': uniform(0.0, 0.4) # Added
+            }
+
+            rf = RandomForestClassifier(random_state=42)
+            grid_search = RandomizedSearchCV(
+                estimator=rf,
+                param_distributions=param_grid,
+                # n_iter=8,  # <<< INCREASED FROM 4 to 8
+                
+                n_iter=2, # <<< Reduced n_iter back to 2
+                cv=3,     # (Keep cv=3)
+                verbose=1,
+                random_state=42,
+                n_jobs=-1,
+                scoring='accuracy',
+                refit=True
+            )
+            grid_search.fit(X, y)
+
+            logger.info(f"Best Random Forest params: {grid_search.best_params_}")
+            logger.info(f"Best Random Forest score: {grid_search.best_score_:.4f}")
+
+            return grid_search.best_estimator_
+        except Exception as e: # Add except block
+            logger.error(f"Error tuning Random Forest: {str(e)}")
+            logger.error(traceback.format_exc())
+            return {'status': 'failed', 'error': str(e), 'traceback': traceback.format_exc()}
+    
+    def tune_xgboost(self, X, y):
+        """Use RandomizedSearchCV to find optimal XGBoost parameters"""
+        # Make sure we're using the right import
+        from xgboost import XGBClassifier
+        
+        # Define parameter grid (Enhanced Version)
+        param_grid = {
+            'n_estimators': randint(300, 4000), # Expanded upper bound
+            'max_depth': randint(3, 30), # More focused but still broad range for depth
+            'learning_rate': [0.0005, 0.001, 0.005, 0.01, 0.015, 0.02, 0.03, 0.05, 0.1, 0.15, 0.2, 0.3], # Discrete values, added more
+            'subsample': uniform(0.5, 0.5), # Samples from 0.5 to 1.0 (corrected range)
+            'colsample_bytree': uniform(0.5, 0.5), # Samples from 0.5 to 1.0 (corrected range)
+            'colsample_bylevel': uniform(0.5, 0.5), # Samples from 0.5 to 1.0 (corrected range)
+            'colsample_bynode': uniform(0.5, 0.5),  # Samples from 0.5 to 1.0 (corrected range)
+            'min_child_weight': randint(1, 20), # Expanded range
+            'gamma': uniform(0, 3.0), # Expanded range
+            'reg_alpha': [0, 0.0001, 0.001, 0.005, 0.01, 0.05, 0.1, 0.5, 1, 2], # More values
+            'reg_lambda': [0.001, 0.01, 0.05, 0.1, 0.5, 1, 2, 5, 10, 20, 50],    # More values
+            'max_delta_step': [0, 1, 3, 5, 7, 10], # Added 0, common default, more options
+            'objective': ['multi:softprob'], # Focused on softprob for probabilities
+            'booster': ['gbtree', 'dart'], # Focused on tree-based boosters
+            'tree_method': ['auto', 'hist', 'approx'], # Added tree_method
+            'scale_pos_weight': [1] + list(uniform(1, 10).rvs(3)) # For imbalanced data, 1 is default
+        }
+        
+        # Create a base model to tune
+        n_classes = len(np.unique(y))
+        # Ensure y is integer type for XGBoost
+        y = y.astype(int)
+        model = XGBClassifier(
+            num_class=n_classes,
+            eval_metric='mlogloss', # Add eval_metric
+            random_state=42,
+            verbosity=0
+        ) 
+        
+        # Set up the search (REMOVED n_iter argument)
+        search = RandomizedSearchCV(
+            estimator=model,
+            param_distributions=param_grid,
+            n_iter=2, # <<< Reduced n_iter back to 2
+            cv=3,    # (Keep cv=3)
+            verbose=2,
+            random_state=42,
+            n_jobs=-1,
+            scoring='accuracy'
+        )
+        
+        try:
+            # Fit the model
+            search.fit(X, y)
+            
+            # Get the best parameters and score
+            best_params = search.best_params_
+            best_score = search.best_score_
+            
+            logger.info(f"Best XGBoost params: {best_params}")
+            logger.info(f"Best XGBoost score: {best_score:.4f}")
+            
+            # Create a new model with the best parameters
+            best_model = XGBClassifier(
+                **best_params,
+                num_class=n_classes,
+                eval_metric='mlogloss', # Add eval_metric
+                random_state=42,
+                verbosity=0
+            )
+            
+            # Fit the model on the full dataset (optional, often best estimator is returned)
+            # best_model.fit(X, y)
+            
+            # Return the best estimator found by the search
+            return search.best_estimator_
+            
+        except Exception as e:
+            logger.error(f"Error tuning XGBoost: {str(e)}")
+            logger.error(traceback.format_exc())
+            # return None # Original line
+            return {'status': 'failed', 'error': str(e), 'traceback': traceback.format_exc()} # Modified line
+
+    def tune_gradient_boosting(self, X, y, n_iter): # <<< Changed default n_iter back to 4
+        """Tune Gradient Boosting Classifier using RandomizedSearchCV"""
+        logger.info(f"Starting Gradient Boosting tuning with n_iter={n_iter}...")
+        gb = GradientBoostingClassifier(random_state=42)
+
+        # Define parameter grid (reduced)
+        param_grid = {
+            'n_estimators': randint(100, 2500),       # Expanded range
+            'learning_rate': [0.0005, 0.001, 0.005, 0.01, 0.015, 0.02, 0.05, 0.1, 0.15, 0.2], # Discrete values, more options
+            'max_depth': randint(3, 20),             # Expanded range
+            'min_samples_split': randint(2, 40),    # Expanded range
+            'min_samples_leaf': randint(1, 40),     # Expanded range
+            'subsample': uniform(0.5, 0.5), # Range from 0.5 to 1.0 (corrected range)
+            'max_features': ['sqrt', 'log2', None], # Streamlined options
+            'loss': ['log_loss'], # For classification
+            'criterion': ['friedman_mse', 'squared_error'], # Added criterion
+            'min_impurity_decrease': [0.0, 0.0001, 0.001, 0.01, 0.02, 0.05], # Added more values
+            'max_leaf_nodes': [None] + list(range(20, 301, 30)), # Added, expanded range
+            'ccp_alpha': uniform(0.0, 0.1), # Expanded ccp_alpha
+            'init': [None] # Added 'init'
+        }
+
+        # Perform randomized search
+        search = RandomizedSearchCV(
+            estimator=gb,
+            param_distributions=param_grid,
+            n_iter=n_iter,  # <<< Use passed n_iter value (now defaults to 4, will be overridden in run)
+            cv=3,     # Keep cv=3 for speed
+            verbose=1,
+            random_state=42,
+            scoring='accuracy', # Optimize for accuracy
+            n_jobs=-1
+        )
+        
+        try:
+            search.fit(X, y)
+            logger.info(f"Best Gradient Boosting params: {search.best_params_}")
+            logger.info(f"Best Gradient Boosting score: {search.best_score_:.4f}")
+            return search.best_estimator_
+        except Exception as e:
+            logger.error(f"Error during Gradient Boosting tuning: {e}")
+            # Fallback to default if tuning fails
+            logger.warning("Falling back to default Gradient Boosting parameters.")
+            return GradientBoostingClassifier(random_state=42)
+    
+    def train_catboost(self, X, y):
+        """Train a CatBoost model with hyperparameter tuning"""
+        try:
+            from catboost import CatBoostClassifier
+            
+            # Define parameter grid
+            param_grid = {
+                'iterations': randint(100, 500),
+                'learning_rate': uniform(0.01, 0.3),
+                'depth': randint(4, 10),
+                'l2_leaf_reg': uniform(1, 9),
+                'bagging_temperature': uniform(0, 1),
+                'random_strength': uniform(0, 1),
+                'grow_policy': ['SymmetricTree', 'Depthwise', 'Lossguide']
+            }
+            
+            # Initialize the classifier
+            cat_clf = CatBoostClassifier(
+                random_seed=42,
+                thread_count=-1,
+                verbosity=0
+            )
+            
+            # Perform random search
+            search = RandomizedSearchCV(
+                cat_clf, param_grid, n_iter=2, cv=3, # <<< Reduced n_iter back to 2
+                scoring='accuracy', random_state=42, n_jobs=-1, verbose=1
+            )
+            
+            search.fit(X, y)
+            
+            logger.info(f"Best CatBoost params: {search.best_params_}")
+            logger.info(f"Best CatBoost score: {search.best_score_:.4f}")
+            
+            # Evaluate on train-test split
+            X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
+            best_model = search.best_estimator_
+            best_model.fit(X_train, y_train)
+            
+            y_pred = best_model.predict(X_test)
+            accuracy = accuracy_score(y_test, y_pred)
+            
+            logger.info(f"CatBoost test accuracy: {accuracy:.4f}")
+            
+            # Return success dictionary format (modify existing return)
+            return {
+                'status': 'success',
+                'model': best_model,
+                'accuracy': accuracy,
+                # Add other relevant metrics if needed, e.g., X_test, y_test, y_pred, scaler
+                # Note: This basic method doesn't use/return a scaler unlike _train_final_model
+            }
+        except ImportError:
+            logger.warning("CatBoost not installed. Skipping CatBoost model.")
+            # Return failure dictionary for consistency
+            return {'status': 'skipped', 'error': 'CatBoost not installed', 'accuracy': 0.0}
+        except Exception as e: # <<< Add general exception handler
+            logger.error(f"Error training CatBoost model: {e}")
+            logger.error(traceback.format_exc())
+            return {'status': 'failed', 'error': str(e), 'traceback': traceback.format_exc()}
+            
+    def train_stacked_ensemble(self, X, y, base_models_dict): # Updated to accept a dict of named models
+        """Train a stacked ensemble model with cross-validation using RF as meta-learner."""
+        from sklearn.ensemble import StackingClassifier, RandomForestClassifier # Ensure RandomForestClassifier is imported
+        
+        if not base_models_dict:
+            logger.error("No base models provided for stacking ensemble.")
+            return None, 0.0, None
+
+        base_estimators = []
+        for name, model_instance in base_models_dict.items():
+            if model_instance: # Ensure model is not None
+                base_estimators.append((name, model_instance))
+            else:
+                logger.warning(f"Model instance for '{name}' is None. Skipping for stacking.")
+        
+        if not base_estimators:
+            logger.error("No valid base model instances available for stacking.")
+            return None, 0.0, None
+
+        # Define meta-learner: RandomForestClassifier with limited complexity
+        meta_learner = RandomForestClassifier(
+            n_estimators=50, 
+            max_depth=5, 
+            min_samples_leaf=5,
+            random_state=42, 
+            n_jobs=-1,
+            class_weight='balanced'
+        )
+        
+        # Create the stacking ensemble
+        stacked_model = StackingClassifier(
+            estimators=base_estimators,
+            final_estimator=meta_learner,
+            stack_method='predict_proba', # Use probabilities for meta-learner
+            passthrough=False, # Do not pass original features to meta-learner
+            cv=3, # Reduced CV for speed for the stacking itself
+            n_jobs=-1,
+            verbose=1
+            # random_state removed as it's not a direct param of StackingClassifier
+        )
+        
+        # Evaluate on train-test split
+        X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42, stratify=y)
+        
+        # Scale data for base models if they require it (assume they are already tuned & might be pipelines)
+        # For simplicity, we'll assume base_models are ready to be fit or are pipelines with scaling.
+        # If direct scaling is needed here, it should be done carefully.
+        # Since _train_final_model handles scaling, and we'll use its output models, this should be fine.
+
+        logger.info(f"Fitting Stacking Ensemble with base models: {[name for name, _ in base_estimators]}")
+        stacked_model.fit(X_train, y_train) # Fit on the training data
+        
+        y_pred = stacked_model.predict(X_test)
+        accuracy = accuracy_score(y_test, y_pred)
+        
+        logger.info(f"Stacked Ensemble (RF Meta) test accuracy: {accuracy:.4f}")
+        
+        y_proba = None
+        if hasattr(stacked_model, 'predict_proba'):
+            try:
+                y_proba = stacked_model.predict_proba(X_test)
+            except Exception as e:
+                logger.warning(f"Couldn't get probabilities from stacked model: {str(e)}")
+        
+        return stacked_model, accuracy, y_proba
+        
+    def train_voting_ensemble(self, X, y, estimators, voting='soft'):
+        """Train a voting ensemble model with multiple base estimators"""
+        voting_clf = VotingClassifier(
+            estimators=estimators,
+            voting=voting,
+            n_jobs=-1
+        )
+        
+        # Evaluate on train-test split
+        X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
+        voting_clf.fit(X_train, y_train)
+        
+        y_pred = voting_clf.predict(X_test)
+        accuracy = accuracy_score(y_test, y_pred)
+        
+        logger.info(f"Voting Ensemble ({voting}) test accuracy: {accuracy:.4f}")
+        
+        return voting_clf, accuracy
+
+    # +++ Add tune_lightgbm method +++
+    def tune_lightgbm(self, X, y, n_iter=2): # <<< Changed default n_iter back to 2
+        """Tune LightGBM Classifier using RandomizedSearchCV"""
+        if not LGBMClassifier:
+             logger.warning("LightGBM not installed, cannot tune.")
+             return None
+
+        logger.info(f"Starting LightGBM tuning with n_iter={n_iter}...")
+        lgbm = LGBMClassifier(random_state=42, n_jobs=-1)
+
+        # Define parameter grid
+        param_grid = {
+            'n_estimators': randint(100, 500),
+            'learning_rate': uniform(0.01, 0.2),
+            'num_leaves': randint(20, 60),
+            'max_depth': [-1] + list(range(5, 16)), # -1 means no limit
+            'min_child_samples': randint(5, 30),
+            'subsample': uniform(0.6, 0.4), # range 0.6 to 1.0
+            'colsample_bytree': uniform(0.5, 0.5), # range 0.5 to 1.0
+            'reg_alpha': [0, 0.01, 0.1, 0.5, 1],
+            'reg_lambda': [0, 0.01, 0.1, 0.5, 1],
+        }
+
+        # Perform randomized search
+        search = RandomizedSearchCV(
+            estimator=lgbm,
+            param_distributions=param_grid,
+            n_iter=n_iter,  # <<< Use passed n_iter value (now defaults to 2)
+            cv=3,     # Keep cv=3 for speed
+            verbose=1,
+            random_state=42,
+            scoring='accuracy',
+            n_jobs=-1
+        )
+
+        try:
+            search.fit(X, y)
+            logger.info(f"Best LightGBM params: {search.best_params_}")
+            logger.info(f"Best LightGBM score: {search.best_score_:.4f}")
+            return search.best_estimator_
+        except Exception as e:
+            logger.error(f"Error during LightGBM tuning: {e}")
+            logger.error(traceback.format_exc())
+            return None # Return None on failure
+    # +++ End tune_lightgbm method +++
+
+    # +++ Add tune_decision_tree method +++
+    def tune_decision_tree(self, X, y, n_iter=2): # <<< Changed default n_iter back to 2
+        """Tune Decision Tree Classifier using RandomizedSearchCV"""
+        from sklearn.tree import DecisionTreeClassifier
+        logger.info(f"Starting Decision Tree tuning with n_iter={n_iter}...")
+        
+        dt = DecisionTreeClassifier(random_state=42)
+
+        param_grid = {
+            'criterion': ['gini', 'entropy', 'log_loss'],
+            'splitter': ['best', 'random'],
+            'max_depth': [None] + list(range(5, 51, 5)),
+            'min_samples_split': randint(2, 50),
+            'min_samples_leaf': randint(1, 50),
+            'max_features': ['sqrt', 'log2', None],
+            'max_leaf_nodes': [None] + list(range(20, 201, 20)),
+            'min_impurity_decrease': uniform(0.0, 0.1),
+            'ccp_alpha': uniform(0.0, 0.1), # Cost-complexity pruning
+            'class_weight': ['balanced', None]
+        }
+
+        search = RandomizedSearchCV(
+            estimator=dt,
+            param_distributions=param_grid,
+            n_iter=n_iter,
+            cv=3,
+            verbose=1,
+            random_state=42,
+            scoring='accuracy',
+            n_jobs=-1
+        )
+        
+        try:
+            search.fit(X, y)
+            logger.info(f"Best Decision Tree params: {search.best_params_}")
+            logger.info(f"Best Decision Tree score: {search.best_score_:.4f}")
+            return search.best_estimator_
+        except Exception as e:
+            logger.error(f"Error during Decision Tree tuning: {e}")
+            logger.error(traceback.format_exc())
+            return None
+    # +++ End tune_decision_tree method +++
+
+
+class ModelManager:
+    """Manages machine learning models for funding stage prediction with validation and audit"""
+
+    def __init__(self, model_dir='models/'):
+        """Initialize with model directory and setup audit logging"""
+        self.model_dir = model_dir
+        self.model = None
+        self.metadata = {}
+        self.scaler = None
+        self.feature_names = []
+        # Initialize AnomalyDetector here if needed, or ensure it's passed/set
+        self.anomaly_detector = AnomalyDetector(contamination=0.05) # Keep initialization
+        self.audit_log_file = os.path.join(model_dir, 'prediction_audit.csv')
+        self.init_audit_log()
+
+    def init_audit_log(self):
+        """Initialize audit log file if it doesn't exist"""
+        try:
+            # Create directory if it doesn't exist
+            os.makedirs(os.path.dirname(self.audit_log_file), exist_ok=True)
+
+            # Create audit log with headers if it doesn't exist
+            if not os.path.exists(self.audit_log_file):
+                headers = [
+                    'timestamp',
+                    'request_id',
+                    'company_name',
+                    'prediction_result',
+                    'confidence',
+                    'is_anomaly',
+                    'anomaly_score',
+                    'anomaly_reasons',
+                    'feature_values',
+                    'client_ip',
+                    'model_version']
+                with open(self.audit_log_file, 'w', newline='') as f:
+                    writer = csv.writer(f)
+                    writer.writerow(headers)
+
+            logger.info(f"Audit log initialized at {self.audit_log_file}")
+        except Exception as e:
+            logger.error(f"Failed to initialize audit log: {str(e)}")
+
+    def load_model(self, model_name, version='latest'):
+        """Load a trained model from disk with checks and validation
+
+        Args:
+            model_name: Name of the model to load
+            version: Version of the model (default: 'latest')
+
+        Returns:
+            bool: True if successful, False otherwise
+        """
+        try:
+            # Determine file path
+            if version == 'latest':
+                # Find the latest version
+                model_files = glob.glob(
+                    os.path.join(
+                        self.model_dir,
+                        f"{model_name}*.pkl"))
+                if not model_files:
+                    logger.error(f"No models found for {model_name}")
+                    return False
+                # Sort by name (which should include version)
+                model_files.sort(reverse=True)
+                model_path = model_files[0]
+            else:
+                model_path = os.path.join(
+                    self.model_dir, f"{model_name}_v{version}.pkl")
+                if not os.path.exists(model_path):
+                    logger.error(f"Model file not found: {model_path}")
+                    return False
+
+            # Load model and verify integrity
+            with open(model_path, 'rb') as f:
+                model_data = pickle.load(f)
+
+            # Validate model data structure
+            required_keys = [
+                'model',
+                'metadata',
+                'scaler',
+                'feature_names'] # REMOVED 'anomaly_detector'
+            if not all(key in model_data for key in required_keys):
+                # Be more specific about missing keys
+                missing = [key for key in required_keys if key not in model_data]
+                logger.error(
+                    f"Invalid model file format from {model_path}, missing required components: {missing}")
+                return False
+
+            # Check model integrity and assign to class properties
+            self.model = model_data['model']
+            self.metadata = model_data['metadata']
+            self.scaler = model_data['scaler']
+            self.feature_names = model_data['feature_names']
+
+            # Log successful load
+            version_info = self.metadata.get('version', 'unknown')
+            created_at = self.metadata.get('created_at', 'unknown')
+            logger.info(
+                f"Loaded {model_name} v{version_info} (created {created_at})")
+            return True
+        except Exception as e:
+            logger.error(f"Error loading model: {str(e)}")
+            return False
+
+    def fit_anomaly_detector(self, training_data, feature_names):
+        """Train the anomaly detector"""
+        if training_data is not None and self.anomaly_detector is not None:
+            logger.info("Training anomaly detector...")
+            # Ensure training_data matches expected feature names/order if applicable
+            # Assuming training_data is ready (e.g., scaled features)
+            self.anomaly_detector.fit(training_data, feature_names) # Pass feature names if AnomalyDetector uses them
+            logger.info("Anomaly detector trained.")
+        else:
+            logger.warning("Could not train anomaly detector: No data or detector instance.")
+
+    def save_model(
+            self,
+            model_name,
+            model,
+            scaler,
+            feature_names,
+            # training_data=None, # Removed: anomaly detector training is separate
+            metadata=None,
+            anomaly_detector=None): # <<< Add anomaly_detector parameter
+        """Save a trained model with important metadata"""
+        try:
+            # Create directory if it doesn't exist
+            os.makedirs(self.model_dir, exist_ok=True)
+
+            # Generate version
+            version = datetime.now().strftime("%Y%m%d%H%M")
+            # Ensure model_name doesn't already contain versioning info if passed
+            base_model_name = model_name.split('_v')[0]
+            # --- Save with .joblib extension --- #
+            model_path = os.path.join(
+                self.model_dir, f"{base_model_name}_v{version}.joblib")
+
+            # Set up metadata
+            if metadata is None:
+                metadata = {}
+
+            metadata.update({
+                'version': version,
+                'created_at': datetime.now().isoformat(),
+                'feature_names': feature_names,
+                'model_type': type(model).__name__
+            })
+
+            # Train anomaly detector if training data provided # REMOVED this logic
+            # if training_data is not None:
+            #     self.anomaly_detector.fit(training_data, feature_names)
+
+            # Package everything together
+            model_data = {
+                'model': model,
+                'metadata': metadata,
+                'scaler': scaler,
+                'feature_names': feature_names,
+                'anomaly_detector': anomaly_detector, # <<< Save the passed detector
+                # --- Extract and save specific keys --- #
+                'training_metadata': metadata.get('training_metadata', {}), # Extract inner dict
+                'class_mapping': metadata.get('class_mapping', {}) # Extract inner dict
+            }
+
+            # Save to disk using joblib for potentially better compatibility with sklearn models
+            joblib.dump(model_data, model_path) # Changed from pickle to joblib
+
+            logger.info(f"Model saved to {model_path}")
+            return model_path
+        except Exception as e:
+            logger.error(f"Failed to save model: {str(e)}")
+            logger.error(traceback.format_exc()) # Add traceback
+            return None
+
+    def predict(self, features, company_name=None, client_ip=None):
+        """Predict funding stage with validation and audit logging
+
+        Args:
+            features: Feature dictionary or pandas Series
+            company_name: Optional company name for validation
+            client_ip: Optional client IP for audit logging
+
+        Returns:
+            dict: Prediction results with confidence and validation info
+        """
+        try:
+            if self.model is None:
+                return {'error': 'No model loaded'}
+
+            # Convert dictionary to proper format if needed
+            if isinstance(features, dict):
+                # Check for missing features
+                missing_features = [
+                    f for f in self.feature_names if f not in features]
+                if missing_features:
+                    return {
+                        'error': f'Missing features: {missing_features}',
+                        'is_valid': False,
+                        'confidence': 0.0
+                    }
+
+                # Convert to numpy array
+                X = np.array([features[f]
+                             for f in self.feature_names]).reshape(1, -1)
+            elif isinstance(features, pd.Series):
+                # Get features in correct order
+                X = features[self.feature_names].values.reshape(1, -1)
+            else:
+                X = features
+
+            # Generate request ID for tracking
+            request_id = str(uuid.uuid4())
+
+            # Preprocess data
+            if self.scaler is not None:
+                X_scaled = self.scaler.transform(X)
+            else:
+                X_scaled = X
+
+            # Run company validation if name provided
+            company_valid = True
+            company_confidence = 1.0
+            if company_name:
+                company_valid, company_confidence = self.anomaly_detector.validate_company(
+                    company_name)
+                if not company_valid:
+                    logger.warning(
+                        f"Company validation failed for {company_name}")
+
+            # Check for anomalies
+            anomaly_result = self.anomaly_detector.detect_anomalies(
+                X_scaled, company_name)
+            is_anomaly = anomaly_result.get('is_anomaly', False)
+            anomaly_score = anomaly_result.get('score', 0.0)
+            anomaly_reasons = anomaly_result.get('reasons', [])
+
+            # Make prediction
+            prediction = int(self.model.predict(X_scaled)[0])
+            probabilities = self.model.predict_proba(X_scaled)[0]
+            confidence = float(np.max(probabilities))
+
+            # Adjust confidence based on anomaly
+            if is_anomaly:
+                # Reduce confidence proportionally to anomaly severity
+                adjusted_confidence = confidence * \
+                    (1 - min(anomaly_score, 0.9))
+            else:
+                adjusted_confidence = confidence
+
+            # Adjust confidence based on company validation
+            final_confidence = adjusted_confidence * company_confidence
+
+            # Prepare result
+            result = {
+                'prediction': prediction,
+                'confidence': round(final_confidence, 4),
+                'is_valid': not is_anomaly and company_valid,
+                'request_id': request_id
+            }
+
+            # Add validation details if there were issues
+            if is_anomaly or not company_valid:
+                result['validation'] = {
+                    'is_anomaly': is_anomaly,
+                    'anomaly_score': round(anomaly_score, 4),
+                    'reasons': anomaly_reasons,
+                    'company_valid': company_valid,
+                    'company_confidence': round(company_confidence, 4)
+                }
+
+            # Log prediction for audit
+            self._log_prediction(
+                request_id=request_id,
+                company_name=company_name,
+                prediction=prediction,
+                confidence=final_confidence,
+                is_anomaly=is_anomaly,
+                anomaly_score=anomaly_score,
+                anomaly_reasons=anomaly_reasons,
+                feature_values=features,
+                client_ip=client_ip
+            )
+
+            return result
+        except Exception as e:
+            logger.error(f"Prediction error: {str(e)}")
+            return {'error': f'Prediction failed: {str(e)}', 'is_valid': False}
+
+    def predict_proba(self, features, company_name=None, client_ip=None):
+        """Predict probabilities for all classes with validation
+
+        Args:
+            features: Feature dictionary or pandas Series
+            company_name: Optional company name for validation
+            client_ip: Optional client IP for audit logging
+
+        Returns:
+            dict: Prediction results with probabilities and validation info
+        """
+        try:
+            if self.model is None:
+                return {'error': 'No model loaded'}
+
+            # Convert dictionary to proper format if needed
+            if isinstance(features, dict):
+                # Check for missing features
+                missing_features = [
+                    f for f in self.feature_names if f not in features]
+                if missing_features:
+                    return {
+                        'error': f'Missing features: {missing_features}',
+                        'is_valid': False
+                    }
+
+                # Convert to numpy array
+                X = np.array([features[f]
+                             for f in self.feature_names]).reshape(1, -1)
+            elif isinstance(features, pd.Series):
+                # Get features in correct order
+                X = features[self.feature_names].values.reshape(1, -1)
+            else:
+                X = features
+
+            # Generate request ID for tracking
+            request_id = str(uuid.uuid4())
+
+            # Preprocess data
+            if self.scaler is not None:
+                X_scaled = self.scaler.transform(X)
+            else:
+                X_scaled = X
+
+            # Run company validation if name provided
+            company_valid = True
+            company_confidence = 1.0
+            if company_name:
+                company_valid, company_confidence = self.anomaly_detector.validate_company(
+                    company_name)
+                if not company_valid:
+                    logger.warning(
+                        f"Company validation failed for {company_name}")
+
+            # Check for anomalies
+            anomaly_result = self.anomaly_detector.detect_anomalies(
+                X_scaled, company_name)
+            is_anomaly = anomaly_result.get('is_anomaly', False)
+            anomaly_score = anomaly_result.get('score', 0.0)
+            anomaly_reasons = anomaly_result.get('reasons', [])
+
+            # Get class probabilities
+            probabilities = self.model.predict_proba(X_scaled)[0].tolist()
+            classes = self.model.classes_.tolist() if hasattr(
+                self.model, 'classes_') else list(range(len(probabilities)))
+
+            # Adjust probabilities based on anomaly and company validation
+            if is_anomaly or not company_valid:
+                # Make distribution more uniform (less confident) based on
+                # anomaly severity
+                adjustment_factor = 1.0 - \
+                    min(anomaly_score, 0.8) - (0.2 if not company_valid else 0)
+
+                # Adjust probabilities - move toward uniform distribution
+                uniform_prob = 1.0 / len(probabilities)
+                adjusted_probs = [
+                    p * adjustment_factor + uniform_prob * (1 - adjustment_factor)
+                    for p in probabilities
+                ]
+
+                # Renormalize to sum to 1
+                total = sum(adjusted_probs)
+                adjusted_probs = [p / total for p in adjusted_probs]
+            else:
+                adjusted_probs = probabilities
+
+            # Prepare result
+            result = {
+                'probabilities': {
+                    str(c): round(
+                        p,
+                        4) for c,
+                    p in zip(
+                        classes,
+                        adjusted_probs)},
+                'is_valid': not is_anomaly and company_valid,
+                'request_id': request_id}
+
+            # Add validation details if there were issues
+            if is_anomaly or not company_valid:
+                result['validation'] = {
+                    'is_anomaly': is_anomaly,
+                    'anomaly_score': round(anomaly_score, 4),
+                    'reasons': anomaly_reasons,
+                    'company_valid': company_valid,
+                    'company_confidence': round(company_confidence, 4)
+                }
+
+            # Find most likely class for audit logging
+            max_prob_idx = np.argmax(adjusted_probs)
+            prediction = classes[max_prob_idx]
+            confidence = adjusted_probs[max_prob_idx]
+
+            # Log prediction for audit
+            self._log_prediction(
+                request_id=request_id,
+                company_name=company_name,
+                prediction=prediction,
+                confidence=confidence,
+                is_anomaly=is_anomaly,
+                anomaly_score=anomaly_score,
+                anomaly_reasons=anomaly_reasons,
+                feature_values=features,
+                client_ip=client_ip
+            )
+
+            return result
+        except Exception as e:
+            logger.error(f"Prediction error: {str(e)}")
+            return {'error': f'Prediction failed: {str(e)}', 'is_valid': False}
+
+    def _log_prediction(self, request_id, company_name, prediction, confidence,
+                        is_anomaly, anomaly_score, anomaly_reasons,
+                        feature_values, client_ip=None):
+        """Log prediction details to audit trail
+
+        Args:
+            request_id: Unique identifier for the prediction request
+            company_name: Name of the company
+            prediction: The predicted class
+            confidence: Confidence score
+            is_anomaly: Whether prediction was flagged as anomalous
+            anomaly_score: Anomaly detection score
+            anomaly_reasons: List of reasons for anomaly detection
+            feature_values: Feature values used in prediction
+            client_ip: Client IP address
+        """
+        try:
+            # Prepare log entry
+            timestamp = datetime.now().isoformat()
+            model_version = self.metadata.get('version', 'unknown')
+
+            # Convert feature values to string
+            if isinstance(feature_values, dict):
+                feature_str = json.dumps({k: float(v) if isinstance(
+                    v, (int, float, np.number)) else str(v) for k, v in feature_values.items()})
+            else:
+                feature_str = str(feature_values)
+
+            # Format anomaly reasons
+            if isinstance(anomaly_reasons, list):
+                anomaly_reasons_str = '; '.join(anomaly_reasons)
+            else:
+                anomaly_reasons_str = str(anomaly_reasons)
+
+            # Write to CSV
+            with open(self.audit_log_file, 'a', newline='') as f:
+                writer = csv.writer(f)
+                writer.writerow([
+                    timestamp,
+                    request_id,
+                    company_name if company_name else 'unknown',
+                    prediction,
+                    confidence,
+                    1 if is_anomaly else 0,
+                    anomaly_score,
+                    anomaly_reasons_str,
+                    feature_str,
+                    client_ip if client_ip else 'unknown',
+                    model_version
+                ])
+
+        except Exception as e:
+            logger.error(f"Failed to log prediction: {str(e)}")
+            # Continue execution even if logging fails
+
+    # Add a method to load specifically using joblib
+    def load_model_joblib(self, model_name, version='latest'):
+        """Load a trained model from disk (saved with joblib) with checks and validation"""
+        try:
+            # Determine file path
+            if version == 'latest':
+                # +++ Add Debug Logging +++
+                logger.info(f"[load_model_joblib] Searching in directory: {self.model_dir}")
+                pkl_pattern = os.path.join(self.model_dir, f"{model_name}*.pkl")
+                logger.info(f"[load_model_joblib] Using PKL glob pattern: {pkl_pattern}")
+                # +++ End Debug Logging +++
+                model_files = glob.glob(pkl_pattern) # Use full path pattern
+                logger.info(f"[load_model_joblib] Found PKL files: {model_files}") # Log found files
+
+                if not model_files:
+                    # Try finding .joblib files as well
+                     # +++ Add Debug Logging +++
+                     joblib_pattern = os.path.join(self.model_dir, f"{model_name}*.joblib")
+                     logger.info(f"[load_model_joblib] Using JOBLIB glob pattern: {joblib_pattern}")
+                     # +++ End Debug Logging +++
+                     model_files = glob.glob(joblib_pattern) # Use full path pattern
+                     logger.info(f"[load_model_joblib] Found JOBLIB files: {model_files}") # Log found files
+                     if not model_files:
+                        logger.error(f"No models found matching pattern {model_name}* in {self.model_dir}")
+                        return False
+
+                # Sort by name (which should include version/timestamp)
+                model_files.sort(reverse=True)
+                model_path = model_files[0]
+            else:
+                # Try finding .pkl first, then .joblib
+                model_path_pkl = os.path.join(
+                    self.model_dir, f"{model_name}_v{version}.pkl")
+                model_path_joblib = os.path.join(
+                    self.model_dir, f"{model_name}_v{version}.joblib")
+
+                if os.path.exists(model_path_pkl):
+                    model_path = model_path_pkl
+                elif os.path.exists(model_path_joblib):
+                     model_path = model_path_joblib
+                else:
+                    logger.error(f"Model file not found for version {version}: {model_path_pkl} or {model_path_joblib}")
+                    return False
+
+            # Load model data using joblib
+            model_data = joblib.load(model_path)
+
+            # Validate model data structure
+            required_keys = [
+                'model',
+                'metadata',
+                'scaler',
+                'feature_names'] # REMOVED 'anomaly_detector'
+            if not all(key in model_data for key in required_keys):
+                # Be more specific about missing keys
+                missing = [key for key in required_keys if key not in model_data]
+                logger.error(
+                    f"Invalid model file format from {model_path}, missing required components: {missing}")
+                return False
+
+            # Check model integrity and assign to class properties
+            self.model = model_data['model']
+            self.metadata = model_data['metadata']
+            self.scaler = model_data['scaler']
+            self.feature_names = model_data['feature_names']
+
+            # Log successful load
+            version_info = self.metadata.get('version', 'unknown')
+            created_at = self.metadata.get('created_at', 'unknown')
+            logger.info(
+                f"Loaded {model_name} v{version_info} (created {created_at}) from {model_path}")
+            return True
+        except Exception as e:
+            logger.error(f"Error loading model from {model_path}: {str(e)}")
+            logger.error(traceback.format_exc()) # Add traceback
+            return False
+
+
+class Visualizer:
+    def __init__(self, output_dir="./visualizations", interactive=False):
+        """Initialize visualizer with output directory"""
+        self.output_dir = output_dir
+        self.interactive = interactive  # Set to False to prevent blocking terminal
+
+        # Ensure output directory exists - critical fix
+        try:
+            os.makedirs(output_dir, exist_ok=True)
+            logger.info(f"Created visualization directory: {output_dir}")
+        except Exception as e:
+            logger.error(f"Error creating visualization directory: {e}")
+            # Fallback to a directory we know exists
+            self.output_dir = "./MainOutput/visualizations"
+            os.makedirs(self.output_dir, exist_ok=True)
+
+        self.timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
+        self.palette = sns.color_palette("husl", 8)
+        self.feature_palettes = {
+            'categorical': sns.color_palette("Set3", 12),
+            'sequential': sns.color_palette("viridis", 8),
+            'diverging': sns.color_palette("RdYlBu", 11)
+        }
+
+    def plot_funding_stage_distribution(self, data, stage_mapping_rev=None): # Add stage_mapping_rev parameter
+        """Visualize the distribution of funding stages"""
+        plt.figure(figsize=(12, 6))
+
+        # Use provided reverse mapping if available, otherwise use default
+        if stage_mapping_rev is None:
+            # Fallback to a default/generic mapping if none provided
+            logger.warning("No stage mapping provided to plot_funding_stage_distribution. Using generic labels.")
+            # Example fallback - adjust as needed or remove if mapping is always expected
+            stage_map_rev_local = {i: f'Stage {i}' for i in sorted(data['funding_stage_numeric'].unique())}
+        else:
+            # Ensure keys in provided mapping are integers
+            stage_map_rev_local = {int(k): str(v) for k, v in stage_mapping_rev.items()}
+
+
+        # Count by stage using the numeric column
+        # Map numeric stages back to names using the determined mapping
+        stage_counts = data['funding_stage_numeric'].map(
+            lambda x: stage_map_rev_local.get(int(x), f'Unknown ({x})') # Handle missing keys
+        ).value_counts()
+
+        # Sort counts by the original numeric order if possible, else alphabetically
+        # Create a temporary series with numeric index for sorting
+        try:
+            num_order = {v: k for k, v in stage_map_rev_local.items()}
+            sort_order = stage_counts.index.map(lambda x: num_order.get(x, 999)) # Assign large number for unknowns
+            stage_counts = stage_counts.loc[sort_order.sort_values().index]
+        except Exception:
+            logger.warning("Could not sort stage distribution numerically, sorting alphabetically.")
+            stage_counts = stage_counts.sort_index()
+
+
+        # Plot
+        ax = stage_counts.plot(kind='bar', color='skyblue')
+        plt.title('Distribution of Funding Stages (After Remapping & Merging)', fontsize=14) # Update title
+        plt.xlabel('Funding Stage')
+        plt.ylabel('Number of Companies')
+        plt.xticks(rotation=45, ha='right') # Rotate labels for better readability
+        plt.grid(axis='y', linestyle='--', alpha=0.7)
+
+        # Add count labels on bars
+        for i, v in enumerate(stage_counts):
+            ax.text(i, v + 0.5, str(v), ha='center', va='bottom') # Adjust label position slightly
+
+        plt.tight_layout()
+        plt.savefig(
+            os.path.join(
+                self.output_dir,
+                f"funding_stage_dist_{
+                    self.timestamp}.png"))
+        if self.interactive:
+            plt.show()
+        plt.close()
+
+    def plot_feature_importance(self, model, feature_names):
+        """Visualize feature importance from model"""
+        plt.figure(figsize=(12, 8))
+
+        # Get feature importances
+        if hasattr(model, 'feature_importances_'):
+            importances = model.feature_importances_
+            indices = np.argsort(importances)[-15:]  # Top 15 features
+
+            # Plot horizontal bar chart
+            plt.barh(range(len(indices)), importances[indices], color='coral')
+            plt.yticks(range(len(indices)),
+                       [feature_names[i] for i in indices])
+            plt.title('Top Feature Importances', fontsize=14)
+            plt.xlabel('Relative Importance')
+
+            plt.tight_layout()
+            plt.savefig(
+                os.path.join(
+                    self.output_dir,
+                    f"feature_importance_{
+                        type(model).__name__}_{
+                        self.timestamp}.png"))
+            if self.interactive:
+                plt.show()
+            plt.close()
+
+    def plot_model_comparison(self, model_results):
+        """Compare performance of different models"""
+        plt.figure(figsize=(10, 6))
+
+        # Extract accuracies and find the best model
+        models = list(model_results.keys())
+        accuracies = [model_results[m].get('accuracy', 0.0) for m in models] # Use .get() for safety
+        best_model_index = np.argmax(accuracies)
+
+        # Use a consistent color, highlight the best
+        colors = ['skyblue'] * len(models)
+        if accuracies: # Check if accuracies list is not empty
+             colors[best_model_index] = 'dodgerblue' # Highlight best model
+
+        # Plot bar chart
+        bars = plt.bar(models, accuracies, color=colors) # Use the colors list
+        plt.title('Model Accuracy Comparison', fontsize=14)
+        plt.ylim(0, 1)
+        plt.ylabel('Accuracy')
+        plt.xticks(rotation=15, ha='right') # Slight rotation for model names
+        plt.grid(axis='y', linestyle='--', alpha=0.7)
+
+        # Add value labels on bars
+        for bar in bars:
+            height = bar.get_height()
+            plt.text(bar.get_x() + bar.get_width() / 2., height + 0.01,
+                     f'{height:.4f}', ha='center', va='bottom')
+
+        plt.tight_layout()
+        plt.savefig(
+            os.path.join(
+                self.output_dir,
+                f"model_comparison_{
+                    self.timestamp}.png"))
+        if self.interactive:
+            plt.show()
+        plt.close()
+
+    def plot_confusion_matrices(self, model_results):
+        """Plot confusion matrices for all models"""
+        plt.figure(figsize=(15, 10))
+
+        for i, (model_name, results) in enumerate(model_results.items(), 1):
+            plt.subplot(1, len(model_results), i)
+            cm = confusion_matrix(results['y_test'], results['y_pred'])
+
+            sns.heatmap(cm, annot=True, fmt='d', cmap='Blues')
+            plt.title(f'{model_name} Confusion Matrix')
+            plt.xlabel('Predicted Label')
+            plt.ylabel('True Label')
+
+        plt.tight_layout()
+        plt.savefig(
+            os.path.join(
+                self.output_dir,
+                f"confusion_matrices_{
+                    self.timestamp}.png"))
+        if self.interactive:
+            plt.show()
+        plt.close()
+
+    def plot_funding_vs_employees(self, data):
+        """Visualize relationship between funding amount and employee count"""
+        plt.figure(figsize=(12, 8))
+
+        # Prepare data
+        plot_data = data[['funding_amount', 'employees',
+                          'funding_stage_numeric']].dropna()
+
+        # Map numeric stages to colors
+        colors = plt.cm.viridis(np.linspace(0, 1, 12))
+        plot_data['color'] = plot_data['funding_stage_numeric'].apply(
+            lambda x: colors[int(x)] if 0 <= x < 12 else colors[0]
+        )
+
+        # Create scatter plot
+        plt.scatter(
+            plot_data['employees'],
+            plot_data['funding_amount'],
+            c=plot_data['color'],
+            alpha=0.6,
+            s=50
+        )
+
+        plt.title('Funding Amount vs. Employee Count by Stage', fontsize=14)
+        plt.xlabel('Number of Employees')
+        plt.ylabel('Funding Amount (USD)')
+        plt.yscale('log')
+        plt.xscale('log')
+        plt.grid(linestyle='--', alpha=0.7)
+
+        # Add legend
+        stage_map_rev = {
+            0: 'Pre-Seed', 1: 'Seed', 2: 'Series A',
+            3: 'Series B', 4: 'Series C', 5: 'Series D+'
+        }
+        legend_elements = [plt.Line2D([0], [0], marker='o', color='w',
+                                      markerfacecolor=colors[i], markersize=10,
+                                      label=stage_map_rev.get(i, f'Stage {i}'))
+                           for i in range(min(6, len(colors)))]
+        plt.legend(handles=legend_elements, loc='upper left')
+
+        plt.tight_layout()
+        plt.savefig(
+            os.path.join(
+                self.output_dir,
+                f"funding_vs_employees_{
+                    self.timestamp}.png"))
+        if self.interactive:
+            plt.show()
+        plt.close()
+
+    def plot_feature_comparison_matrix(self, data, features):
+        """Create a grid of scatterplots for feature comparisons"""
+        plt.figure(figsize=(20, 15))
+        g = sns.PairGrid(data[features], palette=self.palette)
+        g.map_upper(sns.scatterplot, alpha=0.6)
+        g.map_lower(sns.kdeplot, fill=True)
+        g.map_diag(sns.histplot, kde=True)
+        plt.suptitle('Feature Comparison Matrix', y=1.02)
+        plt.savefig(
+            os.path.join(
+                self.output_dir,
+                f"feature_matrix_{
+                    self.timestamp}.png"))
+        if self.interactive:
+            plt.show()
+        plt.close()
+
+    def plot_correlation_heatmap(self, data):
+        """Visualize feature correlations with funding stage"""
+        plt.figure(figsize=(15, 12))
+        corr = data.corr(numeric_only=True)
+        mask = np.triu(np.ones_like(corr, dtype=bool))
+        sns.heatmap(
+            corr,
+            mask=mask,
+            annot=True,
+            fmt=".2f",
+            cmap='coolwarm',
+            center=0)
+        plt.title("Feature Correlation Heatmap")
+        plt.xticks(rotation=45, ha='right')
+        plt.tight_layout()
+        plt.savefig(
+            os.path.join(
+                self.output_dir,
+                f"correlation_heatmap_{
+                    self.timestamp}.png"))
+        if self.interactive:
+            plt.show()
+        plt.close()
+
+    def plot_temporal_trends(self, data):
+        """Analyze funding trends over time with industry breakdown"""
+        plt.figure(figsize=(18, 8))
+
+        plt.subplot(1, 2, 1)
+        sns.lineplot(
+            data=data,
+            x='funding_year',
+            y='funding_amount',
+            hue='industry_category',
+            estimator='median',
+            errorbar=None)
+        plt.title('Median Funding Amount by Year')
+        plt.ylabel('USD (log scale)')
+        plt.yscale('log')
+
+        plt.subplot(1, 2, 2)
+        funding_counts = data.groupby(
+            ['funding_year', 'industry_category']).size().reset_index()
+        sns.lineplot(
+            data=funding_counts,
+            x='funding_year',
+            y=0,
+            hue='industry_category')
+        plt.title('Funding Round Frequency by Year')
+        plt.ylabel('Number of Rounds')
+
+        plt.tight_layout()
+        plt.savefig(
+            os.path.join(
+                self.output_dir,
+                f"temporal_trends_{
+                    self.timestamp}.png"))
+        if self.interactive:
+            plt.show()
+        plt.close()
+
+    def plot_industry_distributions(self, data):
+        """Compare funding patterns across industries"""
+        plt.figure(figsize=(15, 8))
+
+        plt.subplot(1, 2, 1)
+        sns.boxplot(
+            data=data,
+            x='industry_category',
+            y='funding_amount',
+            showfliers=False)
+        plt.yscale('log')
+        plt.title('Funding Amount Distribution by Industry')
+        plt.xticks(rotation=45)
+
+        plt.subplot(1, 2, 2)
+        stage_dist = data.groupby(
+            ['industry_category', 'funding_stage']).size().unstack()
+        stage_dist.plot(kind='bar', stacked=True, ax=plt.gca())
+        plt.title('Funding Stage Distribution by Industry')
+        plt.ylabel('Number of Companies')
+        plt.xticks(rotation=45)
+
+        plt.tight_layout()
+        plt.savefig(
+            os.path.join(
+                self.output_dir,
+                f"industry_analysis_{
+                    self.timestamp}.png"))
+        if self.interactive:
+            plt.show()
+        plt.close()
+
+    def plot_advanced_feature_correlations(self, data, features):
+        """Create detailed feature correlation visualizations"""
+        plt.figure(figsize=(20, 16))
+
+        # Advanced correlation heatmap
+        plt.subplot(2, 2, 1)
+        corr = data[features].corr()
+        mask = np.triu(np.ones_like(corr, dtype=bool))
+        sns.heatmap(corr, mask=mask, annot=True, fmt='.2f',
+                    cmap='coolwarm', center=0, square=True)
+        plt.title('Feature Correlation Matrix')
+
+        # Feature clustering
+        plt.subplot(2, 2, 2)
+        from scipy.cluster import hierarchy
+        corr_linkage = hierarchy.ward(corr)
+        sns.clustermap(corr, method='ward', cmap='coolwarm',
+                       annot=True, fmt='.2f', figsize=(10, 10))
+
+        # 3D scatter plot of top 3 features
+        plt.subplot(2, 2, 3, projection='3d')
+        top_features = features[:3]  # Use first 3 features
+        ax = plt.gca()
+        scatter = ax.scatter(data[top_features[0]],
+                             data[top_features[1]],
+                             data[top_features[2]],
+                             c=data['funding_stage_numeric'],
+                             cmap='viridis')
+        ax.set_xlabel(top_features[0])
+        ax.set_ylabel(top_features[1])
+        ax.set_zlabel(top_features[2])
+        plt.colorbar(scatter, label='Funding Stage')
+
+        plt.tight_layout()
+        plt.savefig(
+            os.path.join(
+                self.output_dir,
+                f"advanced_correlations_{
+                    self.timestamp}.png"))
+        if self.interactive:
+            plt.show()
+        plt.close()
+
+    def plot_feature_distributions(self, data, features):
+        """Plot detailed feature distributions"""
+        n_features = len(features)
+        fig = plt.figure(figsize=(15, n_features * 3))
+
+        for idx, feature in enumerate(features, 1):
+            # Distribution plot
+            plt.subplot(n_features, 2, 2 * idx - 1)
+            sns.histplot(
+                data=data,
+                x=feature,
+                hue='funding_stage',
+                multiple="stack",
+                palette=self.feature_palettes['categorical'])
+            plt.title(f'{feature} Distribution by Funding Stage')
+            plt.xticks(rotation=45)
+
+            # Box plot
+            plt.subplot(n_features, 2, 2 * idx)
+            sns.boxplot(data=data, y=feature, x='funding_stage',
+                        palette=self.feature_palettes['sequential'])
+            plt.xticks(rotation=45)
+            plt.title(f'{feature} Range by Funding Stage')
+
+        plt.tight_layout()
+        plt.savefig(
+            os.path.join(
+                self.output_dir,
+                f"feature_distributions_{
+                    self.timestamp}.png"))
+        if self.interactive:
+            plt.show()
+        plt.close()
+
+    def plot_funding_patterns(self, data):
+        """Visualize complex funding patterns with interactive display"""
+        plt.figure(figsize=(20, 12))  # Increased figure height from 10 to 12
+
+        # Funding amount distribution over time
+        plt.subplot(2, 2, 1)
+        sns.boxenplot(data=data, x='funding_year', y='funding_amount_log',
+                      palette=self.feature_palettes['sequential'])
+        plt.title('Funding Amount Distribution Over Time')
+        plt.xticks(rotation=45)
+
+        # Employee count vs Funding amount
+        plt.subplot(2, 2, 2)
+        sns.scatterplot(data=data, x='employees', y='funding_amount',
+                        hue='funding_stage', size='employee_efficiency',
+                        sizes=(20, 200), alpha=0.6,
+                        palette=self.feature_palettes['categorical'])
+        plt.yscale('log')
+        plt.xscale('log')
+        plt.title('Funding Amount vs Employee Count')
+
+        # Industry funding distribution
+        plt.subplot(2, 2, (3, 4))
+        industry_funding = data.groupby('industry_category')[
+            'funding_amount'].sum()
+        industry_funding.sort_values(
+            ascending=True).plot(
+            kind='barh',
+            color=self.feature_palettes['sequential'])
+        plt.title('Total Funding by Industry')
+
+        plt.subplots_adjust(left=0.1, right=0.9, top=0.9, bottom=0.1, wspace=0.3, hspace=0.4)  # Explicitly set margins instead of tight_layout
+        plt.savefig(os.path.join(self.output_dir,
+                                 f"funding_patterns_{self.timestamp}.png"))
+        if self.interactive:
+            plt.show()
+        plt.close()
+
+    def plot_pairwise_features(self, data, features):
+        """Plot pairwise feature relationships (scatter matrix)"""
+        sns.set(style="ticks")
+        pairplot = sns.pairplot(data[features + ['funding_stage']],
+                                hue='funding_stage', palette='tab10', diag_kind='kde')
+        plt.suptitle('Pairwise Feature Relationships', y=1.02)
+        plt.tight_layout()
+        plt.savefig(
+            os.path.join(
+                self.output_dir,
+                f"pairwise_features_{
+                    self.timestamp}.png"))
+        if self.interactive:
+            plt.show()
+        plt.close()
+
+    def plot_full_correlation_heatmap(self, data):
+        """Plot a full correlation heatmap for all numeric features"""
+        plt.figure(figsize=(18, 14))
+        corr = data.corr(numeric_only=True)
+        mask = np.triu(np.ones_like(corr, dtype=bool))
+        sns.heatmap(
+            corr,
+            mask=mask,
+            annot=True,
+            fmt=".2f",
+            cmap='coolwarm',
+            center=0)
+        plt.title("Full Feature Correlation Heatmap")
+        plt.xticks(rotation=45, ha='right')
+        plt.tight_layout()
+        plt.savefig(
+            os.path.join(
+                self.output_dir,
+                f"full_correlation_heatmap_{
+                    self.timestamp}.png"))
+        if self.interactive:
+            plt.show()
+        plt.close()
+
+    def plot_violin_funding_by_stage(self, data):
+        """Plot violin plot of funding amount by funding stage"""
+        plt.figure(figsize=(14, 8))
+        sns.violinplot(
+            data=data,
+            x='funding_stage',
+            y='funding_amount',
+            scale='width',
+            inner='quartile',
+            palette='Set2')
+        plt.yscale('log')
+        plt.title('Funding Amount Distribution by Stage (Violin Plot)')
+        plt.xticks(rotation=45)
+        plt.tight_layout()
+        plt.savefig(
+            os.path.join(
+                self.output_dir,
+                f"violin_funding_by_stage_{
+                    self.timestamp}.png"))
+        if self.interactive:
+            plt.show()
+        plt.close()
+
+
+class AdvancedVisualizer(Visualizer):
+    def plot_roc_curves(self, y_true, y_proba, classes):
+        plt.figure(figsize=(10, 8))
+        y_bin = label_binarize(y_true, classes=classes)
+        n_classes = len(classes)
+        fpr = dict()
+        tpr = dict()
+        roc_auc = dict()
+        
+        # Plot the ROC curve for each class
+        colors = plt.colormaps['tab10'](np.linspace(0, 1, n_classes))
+        for i in range(n_classes):
+            try:
+                # Check if there are positive samples for this class
+                if np.sum(y_bin[:, i]) > 0:
+                    fpr[i], tpr[i], _ = roc_curve(y_bin[:, i], y_proba[:, i])
+                    roc_auc[i] = auc(fpr[i], tpr[i])
+                    plt.plot(
+                        fpr[i],
+                        tpr[i],
+                        color=colors[i],
+                        lw=2,
+                        label=f'ROC curve (class {classes[i]}, AUC = {roc_auc[i]:0.2f})')
+                else:
+                    logger.info(f"Skipping ROC curve for class {classes[i]} - no positive samples")
+            except Exception as e:
+                logger.warning(f"Error plotting ROC curve for class {classes[i]}: {str(e)}")
+                continue
+                
+        plt.plot([0, 1], [0, 1], 'k--', lw=2)
+        plt.xlim([0.0, 1.0])
+        plt.ylim([0.0, 1.05])
+        plt.xlabel('False Positive Rate')
+        plt.ylabel('True Positive Rate')
+        plt.title('ROC Curves')
+        plt.legend(loc="lower right", fontsize='small')
+        plt.grid(True, alpha=0.3)
+        plt.savefig(os.path.join(self.output_dir, "roc_curves.png"))
+        if self.interactive:
+            plt.show()
+        plt.close()
+
+    def plot_calibration(self, y_true, y_proba, n_bins=10):
+        plt.figure(figsize=(10, 6))
+        if y_proba is None:
+             logger.warning("y_proba is None in plot_calibration. Skipping.")
+             plt.close() # Close the empty figure
+             return
+        if y_proba.ndim == 1:
+            logger.warning("Converting 1D probability array to 2D")
+            y_proba = np.column_stack([1 - y_proba, y_proba])
+
+        # Ensure y_true and y_proba have the same number of samples
+        if len(y_true) != len(y_proba):
+             logger.error(f"Mismatched lengths in plot_calibration: y_true ({len(y_true)}), y_proba ({len(y_proba)}). Skipping.")
+             plt.close()
+             return
+
+        n_classes = y_proba.shape[1]
+        unique_true_classes = np.unique(y_true)
+
+        for class_idx in range(n_classes):
+            # Check if this class index actually exists in the true labels
+            if class_idx not in unique_true_classes:
+                 logger.info(f"Skipping calibration plot for class {class_idx} as it's not present in y_true.")
+                 continue
+
+            try:
+                binary_y = (y_true == class_idx).astype(int)
+                # Check if there are any positive samples for this class after filtering
+                if np.sum(binary_y) == 0:
+                     logger.info(f"Skipping calibration plot for class {class_idx} - no positive samples in y_true for this class.")
+                     continue
+
+                class_proba = y_proba[:, class_idx]
+                prob_true, prob_pred = calibration_curve(
+                    binary_y, class_proba, n_bins=n_bins, strategy='quantile'
+                )
+                # Plot markers *with* connecting lines
+                plt.plot(prob_pred, prob_true, marker='o', linestyle='-', # Changed linestyle back from 'none' to '-'
+                         label=f'Class {class_idx}', alpha=0.7)
+            except ValueError as ve:
+                 # Catch specific ValueError from calibration_curve if bins are empty
+                 logger.warning(f"Could not calculate calibration curve for class {class_idx} (likely due to empty bins): {str(ve)}")
+                 continue
+            except Exception as e:
+                logger.warning(
+                    f"Skipping calibration for class {class_idx}: { # <<< Error was here
+                        str(e)}") # <<< Closing parenthesis added here
+                continue
+        plt.plot([0, 1], [0, 1], linestyle='--', color='gray', label='Perfectly Calibrated') # Added label for diagonal
+        plt.xlabel('Mean Predicted Probability (Bin)')
+        plt.ylabel('Fraction of Positives (Bin)')
+        plt.title('Calibration Plot (One-vs-Rest, Quantile Binning)') # Updated title
+        plt.legend(loc='upper left', fontsize='small')
+        plt.grid(True, alpha=0.3)
+        plt.savefig(os.path.join(self.output_dir, "calibration_plot.png"))
+        if self.interactive:
+            plt.show()
+        plt.close()
+
+    def plot_confidence_intervals(self, y_true, y_pred, y_proba):
+        plt.figure(figsize=(12, 6))
+        confidence = np.max(y_proba, axis=1)
+        bins = np.linspace(0, 1, 11)
+        bin_centers = (bins[:-1] + bins[1:]) / 2
+        accuracies = []
+        for i in range(len(bins) - 1):
+            mask = (confidence >= bins[i]) & (confidence < bins[i + 1])
+            if mask.sum() > 0:
+                acc = accuracy_score(y_true[mask], y_pred[mask])
+            else:
+                acc = 0
+            accuracies.append(acc)
+        plt.errorbar(bin_centers, accuracies, xerr=0.05, fmt='o')
+        plt.xlabel('Prediction Confidence')
+        plt.ylabel('Accuracy')
+        plt.title('Confidence vs Accuracy')
+        plt.savefig(os.path.join(self.output_dir, "confidence_intervals.png"))
+        if self.interactive:
+            plt.show()
+        plt.close()
+
+
+class FundingStagePredictionPipeline:
+    def __init__(self, base_dir="./", output_dir="./MainOutput", archive=False):
+        """Initialize the complete pipeline"""
+        self.base_dir = base_dir
+        self.output_dir = output_dir
+
+        # Create output directory structure
+        self.models_dir = os.path.join(output_dir, "models")
+        self.viz_dir = os.path.join(output_dir, "visualizations")
+        os.makedirs(self.output_dir, exist_ok=True)
+        os.makedirs(self.models_dir, exist_ok=True)
+        os.makedirs(self.viz_dir, exist_ok=True)
+
+        # Initialize components
+        self.data_loader = DataLoader(base_dir, archive=archive)
+        self.feature_engineer = FeatureEngineering()
+        self.model_trainer = ModelTrainer(self.models_dir)
+        self.visualizer = Visualizer(self.viz_dir)
+
+        # Timestamp for this run
+        self.timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
+
+    def run(self):
+        """Execute the full pipeline"""
+        try:
+            logger.info("Starting funding stage prediction pipeline")
+
+            # Step 1: Load and merge all data sources
+            logger.info("Step 1: Loading and merging data...")
+            merged_data = self.data_loader.merge_datasets()
+
+            if merged_data.empty:
+                logger.error("No data available. Exiting pipeline.")
+                return False
+
+            # Step 2: Feature engineering
+            logger.info("Step 2: Extracting features...")
+            processed_data = self.feature_engineer.extract_features(
+                merged_data)
+
+            # Step 3: Prepare data for modeling
+            logger.info("Step 3: Preparing model data...")
+            X, y = self.feature_engineer.prepare_model_data(processed_data)
+
+            # Step 4: Train models
+            logger.info("Step 4: Training models...")
+            rf_model, rf_results = self.model_trainer.train_random_forest(X, y)
+            xgb_model, xgb_results = self.model_trainer.train_xgboost(X, y)
+
+            # Collect all model results
+            model_results = {
+                'Random Forest': rf_results,
+                'XGBoost': xgb_results
+            }
+
+            # Step 5: Generate visualizations
+            logger.info("Step 5: Creating visualizations...")
+            self.visualizer.plot_funding_stage_distribution(processed_data)
+            self.visualizer.plot_feature_importance(rf_model, X.columns)
+            self.visualizer.plot_feature_importance(xgb_model, X.columns)
+            self.visualizer.plot_model_comparison(model_results)
+            self.visualizer.plot_funding_vs_employees(processed_data)
+
+            # Enhanced visualizations
+            key_features = [
+                'funding_amount_log', 'employees',
+                'employee_efficiency', 'previous_rounds',
+                'months_since_first_funding', 'funding_year', 'funding_month'
+            ]
+
+            self.visualizer.plot_feature_comparison_matrix(
+                processed_data, key_features)
+            self.visualizer.plot_correlation_heatmap(processed_data)
+            self.visualizer.plot_temporal_trends(processed_data)
+            self.visualizer.plot_industry_distributions(processed_data)
+            self.visualizer.plot_advanced_feature_correlations(
+                processed_data, key_features)
+            self.visualizer.plot_feature_distributions(
+                processed_data, key_features)
+            self.visualizer.plot_funding_patterns(processed_data)
+            # --- NEW VISUALIZATIONS ---
+            self.visualizer.plot_pairwise_features(
+                processed_data, key_features)
+            self.visualizer.plot_full_correlation_heatmap(processed_data)
+            self.visualizer.plot_violin_funding_by_stage(processed_data)
+
+            # Step 6: Save summary report
+            logger.info("Step 6: Saving summary report...")
+            summary = {
+                'timestamp': self.timestamp,
+                'data_records': len(merged_data),
+                'features': X.columns.tolist(),
+                'model_results': {
+                    'Random Forest': {
+                        'accuracy': float(rf_results['accuracy']),
+                        'model_path': rf_results['model_path']
+                    },
+                    'XGBoost': {
+                        'accuracy': float(xgb_results['accuracy']),
+                        'model_path': xgb_results['model_path']
+                    }
+                }
+            }
+
+            with open(os.path.join(self.output_dir, f"summary_{self.timestamp}.json"), 'w') as f:
+                json.dump(summary, f, indent=4)
+
+            logger.info("Pipeline completed successfully!")
+            return True
+
+        except Exception as e:
+            logger.error(f"Error in pipeline: {str(e)}")
+            import traceback
+            logger.error(traceback.format_exc())
+            return False
+
+    def schedule_run(self, interval_hours=24):
+        """Schedule pipeline to run automatically at intervals"""
+        import schedule
+        import time
+
+        def job():
+            logger.info(f"Running scheduled job at {datetime.now()}")
+            self.run()
+
+        # Schedule the job
+        schedule.every(interval_hours).hours.do(job)
+
+        # Run once immediately
+        job()
+
+        # Keep running
+        logger.info(
+            f"Scheduler started. Will run every {interval_hours} hours")
+        while True:
+            schedule.run_pending()
+            time.sleep(60)
+
+    def _init_model_directory(self):
+        """Create organized model directory structure"""
+        # Create main models directory
+        os.makedirs(self.models_dir, exist_ok=True)
+
+        # Create subdirectories for different model types
+        model_types = ['random_forest', 'xgboost', 'ensemble']
+        for model_type in model_types:
+            os.makedirs(
+                os.path.join(
+                    self.models_dir,
+                    model_type),
+                exist_ok=True)
+
+        # Create evaluation directory for model performance metrics
+        os.makedirs(os.path.join(self.models_dir, 'evaluation'), exist_ok=True)
+
+        logger.info(
+            f"Initialized model directory structure at {
+                self.models_dir}")
+
+
+class EnhancedPipeline(FundingStagePredictionPipeline):
+    def __init__(self, *args, **kwargs):
+        # Override the output_dir with our custom path
+        if 'output_dir' in kwargs:
+            kwargs['output_dir'] = './MainOutput'
+        else:
+            args = list(args)
+            if len(args) > 1:
+                args[1] = './MainOutput'
+            else:
+                args.append('./MainOutput')
+            args = tuple(args)
+
+        super().__init__(*args, **kwargs)
+        self.model_trainer = EnhancedModelTrainer(self.models_dir)
+
+        # Ensure all required directories exist before creating visualizer
+        os.makedirs(self.viz_dir, exist_ok=True)
+        os.makedirs(self.models_dir, exist_ok=True)
+
+        # Set to False to prevent interactive display
+        self.visualizer = AdvancedVisualizer(self.viz_dir, interactive=False)
+        self.model_manager = ModelManager(self.models_dir)
+        # +++ Add TimeSeriesForecaster instance +++
+        # self.time_series_forecaster = TimeSeriesForecaster(self.viz_dir) # Removed
+        self.time_series_forecaster = TimeSeriesForecaster(self.viz_dir) # Initialize forecaster
+        self._init_model_directory()
+        # Add attributes to store mapping and feature names if needed later
+        self.final_class_mapping = {}
+        self.reverse_final_class_mapping = {}
+        self.feature_names = []
+
+
+    def run(self):
+        try:
+            logger.info("Starting funding stage prediction pipeline")
+
+            # Steps 1-3: Existing data loading and feature engineering
+            merged_data = self.data_loader.merge_datasets()
+            if merged_data.empty:
+                logger.error("No data available. Exiting pipeline.")
+                return False
+
+            processed_data = self.feature_engineer.extract_features(
+                merged_data)
+            X, y = self.feature_engineer.prepare_model_data(processed_data)
+
+            # --- Data Preprocessing & Cleaning ---
+            # Remap all classes to be continuous from 0
+            def remap_classes(y_series, original_labels_series=None):
+                # Determine the unique classes to map
+                # If original_labels_series is provided, use it to get the STRING labels
+                # Otherwise, determine labels from the input y_series itself.
+                # --- Always try to use original_labels_series if provided --- #
+                if original_labels_series is not None and not original_labels_series.empty:
+                    # Convert to string explicitly for consistent mapping keys
+                    unique_classes = sorted(original_labels_series.dropna().astype(str).unique())
+                    logger.debug(f"remap_classes using labels from original_labels_series: {unique_classes}")
+                elif y_series.dtype == 'object': # Fallback if original labels not provided
+                    unique_classes = sorted(y_series.dropna().unique()) # Gets unique STRING labels
+                    logger.debug(f"remap_classes using labels from object y_series: {unique_classes}")
+                else: # Assume numeric input if no original labels provided
+                    unique_classes = sorted(y_series.dropna().unique()) # Gets unique NUMERIC labels
+                    logger.debug(f"remap_classes using labels from numeric y_series: {unique_classes}")
+                # Convert all unique classes to string for the map keys
+                unique_classes = [str(cls) for cls in unique_classes]
+
+                # Create the map: {original_label_string -> final_index}
+                class_map = {
+                    str(label): idx for idx, label in enumerate(unique_classes) # Ensure label is string
+                }
+
+                # --- Revised Mapping Application --- #
+                # If original_labels_series is provided, map IT using class_map
+                if original_labels_series is not None and not original_labels_series.empty:
+                    # Map the ORIGINAL labels to the new final indices
+                    remapped_y = original_labels_series.astype(str).map(class_map).fillna(-1).astype(int)
+                    # Return the remapped y and the {original_string: final_index} map
+                    return remapped_y, class_map
+                else:
+                     # Map the input y_series (likely strings or initial numbers)
+                    remapped_y = y_series.astype(str).map(class_map).fillna(-1).astype(int)
+                     # Return the remapped y and the {original_string_or_initial_num: final_index} map
+                    return remapped_y, class_map
+
+            # Ensure target variable exists
+            # --- Use the ORIGINAL 'funding_stage' column for initial mapping --- #
+            if 'funding_stage' not in processed_data.columns:
+                logger.error("Original target column 'funding_stage' not found.")
+                return False
+            # Store the original string labels before any remapping
+            original_string_labels = processed_data['funding_stage'].copy()
+
+            # --- First remap: original string -> initial index (0-based continuous) --- # 
+            y_initial_indices, initial_map_str_to_idx = remap_classes(original_string_labels)
+            # initial_map_str_to_idx should be {original_label_string: initial_index}
+            logger.info(f"Initial class mapping (String Label -> Initial Index): {initial_map_str_to_idx}")
+
+            # Handle rare classes (e.g., less than 10 samples) using the initial numeric indices
+            class_counts = pd.Series(y_initial_indices).value_counts()
+            min_samples_threshold = 10
+            rare_classes = class_counts[class_counts < min_samples_threshold].index.tolist()
+            y_merged = y_initial_indices.copy() # Work on a copy
+            if rare_classes:
+                majority_class_index = class_counts.idxmax()
+                # Use the initial numeric y for modification
+                y_merged = y_merged.apply(lambda x: majority_class_index if x in rare_classes else x)
+                logger.info(
+                    f"Merged rare classes (based on initial indices) into majority class index {majority_class_index}")
+
+            # --- Second remap to ensure final indices are continuous from 0 --- #
+            # Map the MERGED initial indices (y_merged) to final indices (0-based continuous)
+            unique_merged_indices = sorted(y_merged.dropna().unique())
+            initial_idx_to_final_idx_map = { 
+                initial_idx: final_idx for final_idx, initial_idx in enumerate(unique_merged_indices)
+            }
+            y_final = y_merged.map(initial_idx_to_final_idx_map).fillna(-1).astype(int)
+            logger.info(
+                f"Final map (Initial Index -> Final Index) after merging rare classes: {initial_idx_to_final_idx_map}")
+
+            # --- Create and Store the REQUIRED map: {final_index: original_label_string} --- #
+            # Link: final_index -> initial_index -> original_label_string
+            initial_map_idx_to_str = {v: k for k, v in initial_map_str_to_idx.items()} # {initial_index: original_string}
+            self.final_index_to_string_label_map = {}
+            for initial_index, final_index in initial_idx_to_final_idx_map.items():
+                 original_string_label = initial_map_idx_to_str.get(int(initial_index))
+                 if original_string_label is not None:
+                     self.final_index_to_string_label_map[final_index] = original_string_label # Keep it as string
+                 else:
+                     logger.warning(f"Could not find original string label for initial index {initial_index} when creating final map.")
+                     self.final_index_to_string_label_map[final_index] = f"LABEL_NOT_FOUND_FOR_INDEX_{initial_index}"
+
+            # --- Assign the final target vector for training --- #
+            y = y_final # Use the final, remapped, continuous 0-based indices for training
+            
+            # --- Ensure X is aligned with the final y before proceeding ---
+            # (This step is crucial if any rows were dropped during y processing)
+            if len(X) != len(y):
+                 logger.warning(f"X ({len(X)}) and final y ({len(y)}) have different lengths. Aligning X based on y's index.")
+                 # Assuming y's index corresponds to the original DataFrame before filtering
+                 # This might need adjustment based on how X and y indices are managed
+                 # A safer approach might be to filter X earlier based on valid y
+                 valid_y_indices = y.index # Get index from the final y Series
+                 X = X.loc[valid_y_indices] # Filter X using the valid indices from y
+                 if len(X) != len(y): # Check alignment again
+                     logger.error("CRITICAL: Failed to align X and y after remapping. Aborting.")
+                     return False # Stop if alignment fails
+            
+            X = X.reset_index(drop=True) # Reset index for both after alignment
+            y = y.reset_index(drop=True)
+
+            # Store the reverse mapping for visualization use # MOVED LOGGING AFTER y IS ASSIGNED
+            logger.info(f"Correct Final Index -> String Label mapping for saving: {self.final_index_to_string_label_map}")
+
+            # --- Feature Selection Removed ---
+            logger.info(f"Using all {X.shape[1]} engineered features for training.")
+            if hasattr(X, 'columns'):
+                 self.feature_names = X.columns.tolist()
+            else: # Handle numpy array case
+                 # Convert X to DataFrame if it's not already
+                 if not isinstance(X, pd.DataFrame):
+                      X = pd.DataFrame(X)
+                 self.feature_names = [f"feature_{i}" for i in range(X.shape[1])]
+                 X.columns = self.feature_names # Assign columns to the DataFrame
+                 logger.warning("X was not a DataFrame, assigned generic feature names.")
+
+            # +++ Fit Anomaly Detector on Core Numeric Features BEFORE Model Training Split +++
+            # (Keep the existing anomaly detector fitting logic here for the main pipeline)
+            try:
+                logger.info("Attempting to fit main anomaly detector on core numeric features...")
+                core_numeric_features_list = [
+                    'funding_amount_log', 'employees', 'employee_efficiency',
+                    'funding_year', 'funding_month', 'previous_rounds',
+                    'months_since_first_funding', 'funding_velocity',
+                    'month_sin', 'month_cos',
+                    'funding_amount_x_age', 'employees_x_rounds'
+                    # Add 'velocity_x_rounds', 'age_x_employees' if they exist
+                ] + [f for f in ['velocity_x_rounds', 'age_x_employees'] if f in X.columns]
+
+                existing_core_features_main = [f for f in core_numeric_features_list if f in X.columns]
+                logger.info(f"Core features selected for main anomaly detector: {existing_core_features_main}")
+
+                if existing_core_features_main:
+                    X_core_numeric_main = X[existing_core_features_main].copy()
+                    scaler_anomaly_main = StandardScaler()
+                    X_core_numeric_scaled_main = scaler_anomaly_main.fit_transform(X_core_numeric_main)
+                    self.model_manager.fit_anomaly_detector(X_core_numeric_scaled_main, existing_core_features_main)
+                    logger.info(f"Main anomaly detector fitted on {len(existing_core_features_main)} core features.")
+                else:
+                    logger.warning("No core numeric features found in X for main anomaly detector.")
+            except Exception as anomaly_fit_err_main:
+                logger.error(f"Error fitting main anomaly detector on core features: {anomaly_fit_err_main}", exc_info=True)
+            # +++ End Main Anomaly Detector Fitting +++
+
+            # --- Prepare Data & Train/Save Dashboard-Specific Model --- #
+            logger.info("*** Preparing data and training dashboard-specific model... ***")
+            
+            # Use ALL features from the main prepared dataset X for the dashboard model
+            all_features_for_dashboard = X.columns.tolist() # Get all columns from the final prepared X
+            logger.info(f"Using ALL {len(all_features_for_dashboard)} features for the dashboard model.")
+
+            # Check if features actually exist in X (sanity check)
+            if not all(f in X.columns for f in all_features_for_dashboard):
+                missing_dash = [f for f in all_features_for_dashboard if f not in X.columns]
+                logger.error(f"Dashboard Prep Error: Missing expected features in main X: {missing_dash}")
+                # Skip dashboard model training if features are missing
+            else:
+                # Select ALL features for the dashboard model
+                X_dashboard = X[all_features_for_dashboard].copy()
+                y_dashboard = y # Directly use the final, aligned, re-indexed y variable
+
+                logger.info(f"Dashboard model features (ALL): {len(all_features_for_dashboard)} features")
+                logger.info(f"Dashboard data shapes: X={X_dashboard.shape}, y={y_dashboard.shape}")
+
+                # Log y_dashboard values (optional - keep if needed)
+                logger.info("--- Checking y_dashboard values before split ---")
+                # ... (logging code) ...
+                logger.info("------------------------------------------------")
+
+                # Train/test split for dashboard model
+                X_train_dash, X_test_dash, y_train_dash, y_test_dash = train_test_split(
+                    X_dashboard, y_dashboard, test_size=0.2, random_state=42, stratify=y_dashboard
+                )
+
+                # Scale ALL features for the dashboard model
+                scaler_dash = StandardScaler()
+                X_train_dash_scaled = scaler_dash.fit_transform(X_train_dash)
+                X_test_dash_scaled = scaler_dash.transform(X_test_dash)
+
+                # Train RandomForest for the dashboard (using ALL scaled features)
+                logger.info("Training dashboard RandomForest with ALL features...") # Updated log
+                try:
+                    from sklearn.ensemble import RandomForestClassifier
+                    dashboard_rf = RandomForestClassifier(
+                        n_estimators=100,
+                        random_state=42,
+                        class_weight='balanced',
+                        n_jobs=-1
+                    )
+                    dashboard_model_trained = dashboard_rf.fit(X_train_dash_scaled, y_train_dash)
+                    dash_acc = dashboard_model_trained.score(X_test_dash_scaled, y_test_dash)
+                    logger.info(f"Dashboard RandomForest (All Features) Test Accuracy: {dash_acc:.4f}") # Updated log
+
+                    # Fit Anomaly Detector specifically for these features/scaling
+                    # Note: Anomaly detector now also uses all 110 features
+                    anomaly_detector_dash = AnomalyDetector(contamination=0.05)
+                    # We need X_train_dash_scaled (which has all features) for fitting
+                    anomaly_detector_dash.fit(X_train_dash_scaled) 
+                    logger.info("Fitted anomaly detector specifically for ALL dashboard model features.") # Updated log
+
+                    # Save this specific model, scaler, FULL features list, and detector
+                    dash_metadata = {
+                        'model_type': 'RandomForest_Dashboard_AllFeatures', # New type name
+                        'features': all_features_for_dashboard, # Save the full list
+                        'accuracy': dash_acc
+                    }
+                    # model_filename_dash = self._generate_filename("Dashboard_Model", dash_metadata['model_type']) # Error: Method does not exist here
+                    # Manually construct filename based on timestamp and type
+                    timestamp_str = datetime.now().strftime("%Y%m%d%H%M")
+                    model_filename_dash = f"Dashboard_Model_{dash_metadata['model_type']}_v{timestamp_str}.joblib"
+                    model_path_dash = os.path.join(self.models_dir, model_filename_dash)
+                    
+                    # Ensure the map being saved is the correct final one
+                    final_map_to_save = getattr(self, 'final_index_to_string_label_map', {})
+                    logger.info(f"Saving final map to dashboard model: {final_map_to_save}")
+
+                    joblib.dump({
+                        'model': dashboard_model_trained,
+                        'scaler': scaler_dash,
+                        'feature_names': all_features_for_dashboard, # Explicitly save all names
+                        'class_mapping': final_map_to_save, # Save the confirmed final map
+                        'anomaly_detector': anomaly_detector_dash,
+                        'training_metadata': dash_metadata
+                    }, model_path_dash)
+                    logger.info(f"Dashboard-specific model (All Features) saved to {model_path_dash}")
+                    # Verify save
+                    if os.path.exists(model_path_dash):
+                        logger.info(f"CONFIRMED: Dashboard model file (All Features) exists at {model_path_dash}")
+                    else:
+                        logger.error(f"FAILED TO SAVE Dashboard model file (All Features) at {model_path_dash}")
+
+                except ImportError:
+                    logger.error("Scikit-learn not installed? Cannot train dashboard RandomForest.")
+                except Exception as e:
+                    logger.error(f"Error training/saving dashboard model (All Features): {e}", exc_info=True)
+            # --- End Dashboard Model Section --- #
+
+            # --- Time Series Forecasting & Prototype Plot (Before Model Training) --- #
+            logger.info("Step 3.5: Generating Time Series Forecast & Dashboard Prototype Plot...")
+            if Prophet is not None: # Check if Prophet was imported successfully
+                try:
+                    # Use processed_data as it contains necessary columns before X,y split
+                    prophet_data = self.time_series_forecaster.prepare_prophet_data(processed_data)
+                    if prophet_data is not None and not prophet_data.empty:
+                        prophet_model, prophet_forecast = self.time_series_forecaster.train_predict(prophet_data, periods=6)
+                        if prophet_model and prophet_forecast is not None:
+                            # Pass the original prophet_data as history_df for plotting actuals
+                            self.time_series_forecaster.plot_dashboard_prototype(prophet_forecast, prophet_data)
+                        else:
+                            logger.warning("Prophet model training/prediction failed. Skipping dashboard plot.")
+                    else:
+                        logger.warning("Data preparation for Prophet failed or yielded no data. Skipping forecast plot.")
+                except Exception as ts_err:
+                    logger.error(f"Error during time series forecasting step: {ts_err}")
+                    logger.error(traceback.format_exc())
+            else:
+                logger.warning("Prophet not installed, skipping time series forecasting and dashboard prototype plot.")
+            # --- End Time Series Section --- #
+
+            # Step 4: Enhanced model training (using full feature set X)
+            logger.info("Step 4: Training models with default parameters...") # Updated log
+            # Ensure X and y are aligned after potential filtering/remapping
+            X = X.reset_index(drop=True)
+            y = y.reset_index(drop=True)
+
+            # --- Use Default Random Forest --- #
+            logger.info("Training Random Forest with defaults (balanced class weights)...") # Updated log
+            # Add class_weight='balanced'
+            default_rf = RandomForestClassifier(random_state=42, n_jobs=-1, class_weight='balanced', n_estimators=50) # Reduced n_estimators
+            
+            # logger.info("Tuning Random Forest (n_iter=2, cv=3)...") # Updated log
+            # tuned_rf = self.model_trainer.tune_random_forest(X.copy(), y.copy())
+            # if not tuned_rf or isinstance(tuned_rf, dict): # Check if tuning failed (dict indicates error status)
+            #     logger.warning("Hyperparameter tuning failed for Random Forest. Using default RF.")
+            #     tuned_rf = default_rf # Fallback to default
+            # else: # If tuning succeeded
+            #     logger.info("Using tuned Random Forest parameters.")
+            
+            rf_model, rf_results = self._train_final_model(
+                 default_rf, X.copy(), y.copy(), 'Random Forest' # <<< Use default_rf directly
+            )
+
+
+            # --- Use Default XGBoost --- #
+            logger.info("Training XGBoost with defaults...")
+            try:
+                 from xgboost import XGBClassifier
+                 n_classes_xgb = len(np.unique(y))
+                 default_xgb = XGBClassifier(
+                      random_state=42,
+                      num_class=n_classes_xgb,
+                      eval_metric='mlogloss',
+                      verbosity=0
+                 )
+                 # logger.info("Tuning XGBoost (n_iter=2, cv=3)...") # Updated log
+                 # tuned_xgb = self.model_trainer.tune_xgboost(X.copy(), y.copy())
+                 # if not tuned_xgb or isinstance(tuned_xgb, dict):
+                 #     logger.warning("Hyperparameter tuning failed for XGBoost. Using default XGB.")
+                 #     tuned_xgb = default_xgb
+                 # else:
+                 #     logger.info("Using tuned XGBoost parameters.")
+
+                 xgb_model, xgb_results = self._train_final_model(
+                      default_xgb, X.copy(), y.copy(), 'XGBoost' # <<< Use default_xgb directly
+                 )
+            except ImportError:
+                 logger.warning("XGBoost not found. Skipping XGBoost model.")
+                 xgb_model, xgb_results = None, None
+            except Exception as xgb_err:
+                 logger.error(f"Error training default XGBoost: {xgb_err}")
+                 xgb_model, xgb_results = None, None
+            # --- Tune XGBoost --- #
+            # logger.info("Tuning XGBoost (n_iter=1, cv=3)...") # Updated log message for n_iter=1 # <<< REMOVED TUNING CALL
+            # best_xgb = self.model_trainer.tune_xgboost(X.copy(), y.copy()) # Use copies to avoid modifying original X,y # <<< REMOVED TUNING CALL
+            # if not best_xgb or isinstance(best_xgb, dict): # <<< REMOVED TUNING CALL
+            #      logger.error("Hyperparameter tuning failed for XGBoost. Exiting.") # <<< REMOVED TUNING CALL
+            #      return False # <<< REMOVED TUNING CALL
+            # # Train final tuned XGB model # <<< REMOVED TUNING CALL
+            # xgb_model, xgb_results = self._train_final_model( # <<< REMOVED TUNING CALL
+            #      best_xgb, X.copy(), y.copy(), 'XGBoost' # <<< REMOVED TUNING CALL
+            # ) # <<< REMOVED TUNING CALL
+
+            # --- Use Default Gradient Boosting --- #
+            logger.info("Training Gradient Boosting with defaults...")
+            default_gb = GradientBoostingClassifier(random_state=42) # Initialize with defaults
+            
+            # logger.info("Tuning Gradient Boosting (n_iter=2, cv=3)...") # Updated log
+            # tuned_gb = self.model_trainer.tune_gradient_boosting(X.copy(), y.copy(), n_iter=2)
+            # if not tuned_gb or isinstance(tuned_gb, dict):
+            #      logger.warning("Hyperparameter tuning failed for Gradient Boosting. Using default GB.")
+            #      tuned_gb = default_gb
+            # else:
+            #      logger.info("Using tuned Gradient Boosting parameters.")
+
+            gb_model, gb_results = self._train_final_model(
+                default_gb, X.copy(), y.copy(), 'Gradient Boosting' # <<< Use default_gb directly
+            )
+            # --- Tune Gradient Boosting --- #
+            # logger.info("Tuning Gradient Boosting (n_iter=2, cv=3)...") # Change log message to n_iter=2
+            # best_gb = self.model_trainer.tune_gradient_boosting(X, y, n_iter=2) # <<< Use n_iter=2
+            # if not best_gb or isinstance(best_gb, dict): # Check if tuning failed
+            #      logger.error("Hyperparameter tuning failed for Gradient Boosting. Exiting.")
+            #      return False
+            # # Train final tuned GB model
+            # gb_model, gb_results = self._train_final_model( # Train tuned GB
+            #     best_gb, X.copy(), y.copy(), 'Gradient Boosting'
+            # )
+
+            # --- Train Default LightGBM (if installed) --- #
+            # logger.info("Tuning LightGBM (n_iter=4, cv=3)...") # <<< REMOVED TUNING
+
+            # --- KEEP LR, KNN, SVC, MLP WITH DEFAULTS --- #
+            # +++ Add Training for Logistic Regression +++
+            logger.info("Training Logistic Regression with defaults...")
+            # from sklearn.linear_model import LogisticRegression # Ensure import is present
+            # Add reasonable max_iter, consider class_weight='balanced'
+            default_lr = LogisticRegression(random_state=42, max_iter=1000, class_weight='balanced')
+            lr_model, lr_results = self._train_final_model(
+                default_lr, X.copy(), y.copy(), 'Logistic Regression'
+            )
+            # +++ End Training for Logistic Regression +++
+
+            # +++ Add Training for K-Nearest Neighbors +++
+            logger.info("Training K-Nearest Neighbors (k=7)...")
+            # from sklearn.neighbors import KNeighborsClassifier # Ensure import is present
+            # default_knn = KNeighborsClassifier(n_neighbors=7) # Using k=7 as an example
+            # knn_model, knn_results = self._train_final_model(
+            #     default_knn, X.copy(), y.copy(), 'K-Nearest Neighbors'
+            # )
+            knn_model, knn_results = None, None # Skip KNN
+            # +++ End Training for K-Nearest Neighbors +++
+
+            # --- REMOVE INCORRECT SVM BLOCK --- #
+            # # +++ Add Training for Support Vector Machines +++
+            # logger.info("Training Support Vector Machines with defaults...")
+            # default_svm = OneClassSVM(kernel='rbf') # <<< INCORRECT MODEL FOR CLASSIFICATION
+            # svm_model, svm_results = self._train_final_model(
+            #     default_svm, X.copy(), y.copy(), 'Support Vector Machines'
+            # )
+            # --- END REMOVE INCORRECT SVM BLOCK --- #
+
+            # +++ Add Training for SVC (Correct SVM for Classification) +++
+            logger.info("Training Support Vector Classifier (Linear Kernel)...")
+            # from sklearn.svm import SVC # Ensure import is present
+            # # Use probability=True for calibration/stacking, start with linear kernel for speed
+            # default_svc = SVC(random_state=42, kernel='linear', probability=True, class_weight='balanced')
+            # svc_model, svc_results = self._train_final_model(
+            #     default_svc, X.copy(), y.copy(), 'SVC (Linear)'
+            # )
+            svc_model, svc_results = None, None # Skip SVC
+            # +++ End Training for SVC +++
+
+            # +++ Add Training for MLP Classifier +++
+            logger.info("Training MLP Classifier...")
+            # from sklearn.neural_network import MLPClassifier # Ensure import is present
+            # # Increase max_iter, use default hidden layers for now
+            # default_mlp = MLPClassifier(random_state=42, max_iter=500, early_stopping=True) # Added early stopping
+            # mlp_model, mlp_results = self._train_final_model(
+            #     default_mlp, X.copy(), y.copy(), 'MLP Classifier'
+            # )
+            mlp_model, mlp_results = None, None # Skip MLP
+            # +++ End Training for MLP Classifier +++
+
+            # --- Manual Stacking Ensemble using Calibrated Probabilities --- #
+            logger.info("Training and evaluating Stacking Ensemble (Random Forest Meta-Model)...")
+            # stacking_ensemble_results = None # Skip Stacking Ensemble
+            stacking_ensemble_results = {} # Initialize results dict
+            meta_model_trained = None # Initialize model variable
+            try:
+                # Ensure base models are the *trained and calibrated* ones from rf_results, xgb_results, gb_results
+                base_models_for_stacking = {}
+                if rf_results and rf_results.get('calibrated_model'):
+                    base_models_for_stacking['RandomForest'] = rf_results['calibrated_model']
+                if xgb_results and xgb_results.get('calibrated_model'):
+                    base_models_for_stacking['XGBoost'] = xgb_results['calibrated_model']
+                if gb_results and gb_results.get('calibrated_model'):
+                    base_models_for_stacking['GradientBoosting'] = gb_results['calibrated_model']
+                # Optionally add more base models if they were trained and results exist
+                # if dt_results and dt_results.get('calibrated_model'):
+                #     base_models_for_stacking['DecisionTree'] = dt_results['calibrated_model']
+                # if knn_results and knn_results.get('calibrated_model'):
+                #     base_models_for_stacking['KNN'] = knn_results['calibrated_model']
+                # if svc_results and svc_results.get('calibrated_model'):
+                #     base_models_for_stacking['SVC_RBF'] = svc_results['calibrated_model']
+                # if mlp_results and mlp_results.get('calibrated_model'):
+                #     base_models_for_stacking['MLP'] = mlp_results['calibrated_model']
+
+
+                if len(base_models_for_stacking) >= 2: # Need at least 2 base models
+                    # The X and y for stacking should be the original (unsplit) data,
+                    # as StackingClassifier handles internal CV.
+                    # However, the base models passed should be *already fitted* on their training portion.
+                    # StackingClassifier with cv='prefit' is not straightforward for estimators that are already part of a pipeline (like CalibratedClassifierCV).
+                    # A common way is to pass unfitted versions and let StackingCVClassifier handle it.
+                    # For now, let's try with the fitted calibrated models, and StackingClassifier default CV.
+                    
+                    # Re-initialize base models for stacking if they are to be fit *within* StackingClassifier
+                    # Or, use the already trained (calibrated) models.
+                    # Let's use the trained (calibrated) ones. StackingClassifier will use their predict_proba.
+                    
+                    X_stack, y_stack = X.copy(), y.copy() # Use copies of full data
+                    
+                    meta_model_trained, stack_accuracy, stack_y_proba = self.model_trainer.train_stacked_ensemble(
+                        X_stack, y_stack, base_models_for_stacking
+                    )
+                    
+                    if meta_model_trained:
+                        # To fill the results dictionary similar to _train_final_model for summary
+                        _, X_test_stack, _, y_test_stack = train_test_split(X_stack, y_stack, test_size=0.2, random_state=42, stratify=y_stack)
+                        stack_y_pred = meta_model_trained.predict(X_test_stack) # Predict on the test part of X_stack
+                        
+                        stacking_ensemble_results = {
+                            'model': meta_model_trained, # This is the StackingClassifier itself
+                            'calibrated_model': meta_model_trained, # No separate calibration for the stacker itself here
+                            'accuracy': stack_accuracy,
+                            'precision': precision_score(y_test_stack, stack_y_pred, average='weighted', zero_division=0),
+                            'recall': recall_score(y_test_stack, stack_y_pred, average='weighted', zero_division=0),
+                            'f1_score': f1_score(y_test_stack, stack_y_pred, average='weighted', zero_division=0),
+                            'rmse': np.sqrt(mean_squared_error(y_test_stack, stack_y_pred)),
+                            'confusion_matrix': confusion_matrix(y_test_stack, stack_y_pred),
+                            'classification_report': classification_report(y_test_stack, stack_y_pred, output_dict=True, zero_division=0),
+                            'cross_val_scores': [stack_accuracy], # Simplified CV score
+                            'X_test': X_test_stack, 
+                            'y_test': y_test_stack,
+                            'y_pred': stack_y_pred,
+                            'y_proba': stack_y_proba,
+                            'feature_names': self.feature_names, # Original features are input to base models
+                            'scaler': None, # Scaler is handled by base models or not used by meta-learner directly
+                            'anomaly_detector': None # Anomaly detection for ensemble is more complex
+                        }
+                        logger.info(f"Stacking Ensemble (RF Meta) trained with accuracy: {stack_accuracy:.4f}")
+                    else:
+                        logger.warning("Stacking ensemble training returned no model.")
+                        stacking_ensemble_results = None
+                else:
+                    logger.warning("Not enough valid base models for stacking ensemble. Skipping.")
+                    stacking_ensemble_results = None
+            except Exception as stack_err:
+                 logger.error(f"Error training or evaluating stacking ensemble: {stack_err}")
+                 stacking_ensemble_results = None # Ensure it's None on error
+            # --- End Manual Stacking --- #
+
+            # +++ Add Decision Tree Training +++
+            logger.info("Training Decision Tree with defaults...") # Updated log message, removed tuning mention
+            from sklearn.tree import DecisionTreeClassifier # Ensure import
+            default_dt = DecisionTreeClassifier(random_state=42, class_weight='balanced') # Default DT
+            # logger.info("Tuning Decision Tree (n_iter=2, cv=3)...") # Updated log
+            # tuned_dt = self.model_trainer.tune_decision_tree(X.copy(), y.copy(), n_iter=2)
+            # if not tuned_dt or isinstance(tuned_dt, dict):
+            dt_results = None # Skip DT tuning
+            # else:
+            #     logger.info("Using tuned Decision Tree parameters.")
+            #     dt_results = tuned_dt
+            # +++ End Training for Decision Tree +++
+
+            # --- Train Tuned Logistic Regression ---
+            # logger.info("Training Logistic Regression (tuning equivalent within _train_final_model if needed, using defaults here)...")
+            # from sklearn.linear_model import LogisticRegression # Ensure import
+            # For LR, extensive tuning via RandomizedSearch might be overkill, but we can use a default good one.
+            # _train_final_model already handles scaling and fitting.
+            # Let's keep it simple with a well-chosen default for LR.
+            # tuned_lr = LogisticRegression(solver='liblinear', penalty='l1', C=1.0, random_state=42, max_iter=500, class_weight='balanced') 
+            # lr_model, lr_results = self._train_final_model(
+            #     tuned_lr, X.copy(), y.copy(), 'Logistic Regression'
+            # )
+            lr_model, lr_results = None, None # Explicitly set to None as we are removing it
+            # +++ End Training for Logistic Regression +++
+
+            # --- Train Tuned LightGBM ---
+            # logger.info("Tuning LightGBM (n_iter=4, cv=3)...") # <<< REMOVED TUNING
+            lgbm_results = None # Skip LGBM tuning
+            # +++ End Training for LightGBM +++
+
+            # --- Train Tuned Gradient Boosting ---
+            # logger.info("Tuning Gradient Boosting (n_iter=2, cv=3)...") # Change log message to n_iter=2
+            # best_gb = self.model_trainer.tune_gradient_boosting(X, y, n_iter=2) # <<< Use n_iter=2
+            # if not best_gb or isinstance(best_gb, dict): # Check if tuning failed
+            #      logger.error("Hyperparameter tuning failed for Gradient Boosting. Exiting.")
+            #      return False
+            # # Train final tuned GB model
+            # gb_model, gb_results = self._train_final_model( # Train tuned GB
+            #     best_gb, X.copy(), y.copy(), 'Gradient Boosting'
+            # )
+            gb_model, gb_results = None, None # Skip GB tuning
+            # +++ End Training for Gradient Boosting +++
+
+            # --- Train Tuned MLP ---
+            # logger.info("Tuning MLP (n_iter=2, cv=3)...") # <<< REMOVED TUNING
+            mlp_model, mlp_results = None, None # Skip MLP tuning
+            # +++ End Training for MLP +++
+
+            # --- Train Tuned SVC ---
+            # logger.info("Tuning SVC (n_iter=2, cv=3)...") # <<< REMOVED TUNING
+            svc_model, svc_results = None, None # Skip SVC tuning
+            # +++ End Training for SVC +++
+
+            # --- Train Tuned Decision Tree ---
+            # logger.info("Tuning Decision Tree (n_iter=2, cv=3)...") # <<< REMOVED TUNING
+            dt_results = None # Skip DT tuning
+            # +++ End Training for Decision Tree +++
+
+            # Step 5: Advanced visualizations
+            logger.info("Step 5: Creating advanced visualizations...")
+            # Pass all models and results to visualization
+            # Ensure we pass calibrated models where appropriate for probability plots
+            self._create_advanced_visualizations(
+                rf_results.get('calibrated_model'), # Pass calibrated RF
+                xgb_results.get('calibrated_model'), # Pass calibrated XGB
+                gb_results.get('calibrated_model'), # Pass calibrated GB
+                rf_results,
+                xgb_results,
+                gb_results,
+                dt_results, # Pass DT results
+                stacking_ensemble_results, # Use stacking ensemble results
+                y, # Original y before splitting (needed for overall class info)
+                processed_data) # Pass processed data for visualizations
+
+            # Step 6: Save Summary and Models
+            logger.info("Step 6: Saving summary and best models...")
+            # +++ Populate the summary dictionary correctly +++
+            model_results_summary_for_saving = {
+                'Random Forest (Calibrated)': rf_results, # Use names consistent with _save_summary
+                'XGBoost (Calibrated)': xgb_results,
+                'Gradient Boosting (Calibrated)': gb_results,
+                'LightGBM': locals().get('lgbm_results', None), # <<< Safely get lgbm_results
+                'Logistic Regression': lr_results,
+                'KNN': knn_results,
+                'SVC (RBF)': svc_results, # Updated name
+                'MLP Classifier': locals().get('mlp_results', None), # Safely get MLP
+                'Stacking Ensemble (RF Meta)': stacking_ensemble_results # Use consistent name
+            }
+            # Remove entries where results are None (e.g., model failed)
+            model_results_summary_for_saving = {k: v for k, v in model_results_summary_for_saving.items() if v is not None}
+            # +++ End population +++
+
+            # Pass the populated dictionary
+            summary_data = self._save_summary(
+                 merged_data, X, model_results_summary_for_saving, processed_data
+            )
+
+            if not summary_data:
+                 logger.error("Failed to generate or save pipeline summary.")
+                 return False # Indicate failure if summary couldn't be saved
+
+            # --- Final Logging based on success --- #
+            # The saving logic inside _save_summary now handles the final success/failure logging
+            # We just check if summary_data was returned
+
+            logger.info("Pipeline completed successfully!") # Moved here
+            return True # Indicate overall success
+
+        except Exception as e:
+            logger.error(f"Pipeline failed: {e}")
+            logger.error(traceback.format_exc())
+            return False
+
+    # --- Moved Method Definitions Start ---
     def _train_final_model(self, model, X, y, name):
         """Helper method to train final models with detailed metrics including RMSE and Calibration""" # Updated docstring
         # Need to import clone
