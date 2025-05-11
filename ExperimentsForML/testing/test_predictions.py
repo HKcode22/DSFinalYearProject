@@ -16,7 +16,7 @@ from datetime import datetime, timedelta
 
 # Add the project directory to the path to import the module
 sys.path.append("/Users/hk/Downloads/DSFinalYearProject")
-from MLPredictiveAnalysis.funding_stage_prediction import EnhancedPipeline, DataLoader, ModelManager, FeatureEngineering
+from MLPredictiveAnalysis.funding_stage_prediction9 import EnhancedPipeline, DataLoader, ModelManager, FeatureEngineering
 
 # Configure logging
 logging.basicConfig(

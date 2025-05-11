@@ -12,7 +12,7 @@ from sklearn.metrics import confusion_matrix, classification_report, roc_curve, 
 import matplotlib.dates as mdates  # Import matplotlib.dates for proper date formatting
 
 # Import necessary components from funding_stage_prediction.py
-from MLPredictiveAnalysis.funding_stage_prediction import (
+from MLPredictiveAnalysis.funding_stage_prediction9 import (
     DataLoader, FeatureEngineering, EnhancedPipeline, 
     Visualizer, AdvancedVisualizer, DashboardGenerator
 )

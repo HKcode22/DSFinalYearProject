@@ -23,7 +23,7 @@ import matplotlib.pyplot as plt
 from datetime import datetime
 
 # Import the modules to test
-from MLPredictiveAnalysis.funding_stage_prediction import DataLoader, FeatureEngineering, ModelTrainer
+from MLPredictiveAnalysis.funding_stage_prediction9 import DataLoader, FeatureEngineering, ModelTrainer
 
 def print_dataframe_info(df, name):
     """Print detailed information about a dataframe"""

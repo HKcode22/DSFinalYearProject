@@ -13,7 +13,7 @@ import matplotlib.pyplot as plt
 from datetime import datetime
 
 # Import classes from the existing funding_stage_prediction.py
-from MLPredictiveAnalysis.funding_stage_prediction import (
+from MLPredictiveAnalysis.funding_stage_prediction9 import (
     DataLoader, 
     FeatureEngineering,
     EnhancedModelTrainer,

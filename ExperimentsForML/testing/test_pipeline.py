@@ -1,6 +1,6 @@
 import os
 import logging
-from MLPredictiveAnalysis.funding_stage_prediction import EnhancedPipeline
+from MLPredictiveAnalysis.funding_stage_prediction9 import EnhancedPipeline
 
 def test_pipeline():
     # Set up logging

@@ -28,7 +28,7 @@ if current_dir not in sys.path:
     sys.path.insert(0, current_dir)
 
 # Import DashboardGenerator
-from MLPredictiveAnalysis.funding_stage_prediction import DashboardGenerator
+from MLPredictiveAnalysis.funding_stage_prediction9 import DashboardGenerator
 
 # Set up output directory
 OUTPUT_DIR = "./test_dashboard_output"

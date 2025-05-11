@@ -184,7 +184,7 @@ class FundraiseInsiderScraper:
                                         self.quick_human_delay()
                                         break
                             else:
-                                # If no close button, try to remove the overlay with JavaScript
+                                # If no close button  try to remove the overlay with JavaScript
                                 logger.info(f"No close button found, removing overlay with JavaScript")
                                 self.driver.execute_script("""
                                     var element = arguments[0];
@@ -322,7 +322,8 @@ class FundraiseInsiderScraper:
                     logger.info(f"URL confirms we're on page {expected_next_page}")
                     return True
             
-            # Use JavaScript to check the DOM (works better when window not focused)
+            # Use JavaScript to check the DOM 
+            # works better when window not focused)
             page_changed = self.driver.execute_script("""
                 var nextPage = arguments[0];
                 // Check URL and active indicators

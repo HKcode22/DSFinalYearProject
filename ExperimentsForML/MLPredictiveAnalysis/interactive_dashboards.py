@@ -19,7 +19,7 @@ logger = logging.getLogger(__name__)
 
 # Import components from funding_stage_prediction
 try:
-    from MLPredictiveAnalysis.funding_stage_prediction import (
+    from MLPredictiveAnalysis.funding_stage_prediction9 import (
         DataLoader, FeatureEngineering, EnhancedPipeline
     )
     from MLPredictiveAnalysis.enhanced_dashboards import EnhancedDashboards

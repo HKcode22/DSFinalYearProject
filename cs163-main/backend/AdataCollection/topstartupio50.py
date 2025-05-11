@@ -120,7 +120,7 @@ class TopStartupsScraperConfig:
         "a[href*='http']"
     ]
     
-    # Scrolling parameters - EXTREMELY FAST
+    # Scrolling parameters - EXTREMELY FASt
     MIN_SCROLL_DELAY = 0.01  # Reduced to near-zero
     MAX_SCROLL_DELAY = 0.03  # Reduced to near-zero
     MIN_SCROLL_AMOUNT = 500  # Increased for faster scrolling
@@ -296,7 +296,7 @@ class TopStartupsScraper:
                 except:
                     continue
             
-            # 2. Extract description (What they do)
+            # 1. Extract description (What they do)
             try:
                 # Better method using text patterns
                 what_they_do_div = None
@@ -635,7 +635,6 @@ def scheduled_job():
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description='TopStartups.io Scraper')
     # parser.add_argument('--once', action='store_true', help='Run once and exit')
-    # Add a headless flag, defaulting to True (headless) if --schedule is used or if --once is not explicitly non-headless
     parser.add_argument('--no-headless', action='store_false', dest='headless', help='Run with a visible browser window (primarily for debugging single runs)')
     parser.set_defaults(headless=True)
 
@@ -644,7 +643,6 @@ if __name__ == "__main__":
     if False:
         run_scraper_once(headless_arg=args.headless)
     else:
-        # Default to scheduling if --once is not provided
         logger.info("Scheduler started for TopStartups.io. Will run daily at 03:00 (local time).")
         schedule.every().day.at("03:00").do(scheduled_job)
         # Run once immediately as well before starting schedule loop

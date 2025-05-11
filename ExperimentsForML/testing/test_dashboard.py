@@ -20,7 +20,7 @@ logger = logging.getLogger(__name__)
 sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
 # Import the module
-from MLPredictiveAnalysis.funding_stage_prediction import DashboardGenerator
+from MLPredictiveAnalysis.funding_stage_prediction9 import DashboardGenerator
 
 def generate_mock_data():
     """Generate mock data for testing the dashboard"""

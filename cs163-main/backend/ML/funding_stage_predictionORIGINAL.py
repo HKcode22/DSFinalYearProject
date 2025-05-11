@@ -1329,7 +1329,7 @@ class FeatureEngineering:
         )
 
         # +++ Add Interaction Features +++
-        # Ensure required columns exist and are numeric before creating interactions
+        #  required columns exist and are numeric before creating interactions
         if 'funding_amount_log' in data.columns and 'months_since_first_funding' in data.columns:
              data['funding_amount_x_age'] = data['funding_amount_log'] * data['months_since_first_funding']
         else:
@@ -1419,12 +1419,12 @@ class FeatureEngineering:
             'employee_efficiency',
             'previous_rounds',
             'funding_velocity',
-            'month_sin', # Include new features
-            'month_cos', # Include new features
-            'funding_amount_x_age', # Include new features
-            'employees_x_rounds', # Include new features
-            'velocity_x_rounds', # <<< ADD NEW FEATURE TO LIST
-            'age_x_employees'    # <<< ADD NEW FEATURE TO LIST
+            'month_sin', # new features from here to below are new features i added
+            'month_cos', # 
+            'funding_amount_x_age', #
+            'employees_x_rounds', # 
+            'velocity_x_rounds', # 
+            'age_x_employees'    #
         ]
 
         for col in numeric_cols:
@@ -1452,7 +1452,7 @@ class FeatureEngineering:
             'funding_year', 
             'funding_month', 
             'previous_rounds', 
-            # 'months_since_first_funding', # REMOVED - Use binned version
+            # 'months_since_first_funding', #  - Use binned version
             'funding_velocity',
             'month_sin', 
             'month_cos', 
@@ -1463,7 +1463,7 @@ class FeatureEngineering:
             'time_since_last_funding',       # <<< ADDED
             'funding_amount_ratio_vs_prev',  # <<< ADDED
             'funding_vs_industry_median'   # <<< ADDED
-            # 'employees' # REMOVED - Use binned version
+            # 'employees' #  - Use binned version
         ]
         categorical_feature_cols = [
             'industry_category', 
@@ -1506,6 +1506,7 @@ class FeatureEngineering:
                     f"Filled NaN values in {col} with median: {median_value}")
 
         # --- One-Hot Encode Categorical Features --- #
+        #having issues with this section
         X_cat_encoded = pd.DataFrame() # Initialize empty DataFrame
         if features_to_use_cat:
             X_cat = data[features_to_use_cat].copy()
@@ -1579,6 +1580,7 @@ class ModelTrainer:
 
             # Add anomaly detection using isolation forest to identify outliers
             # Use a randomized seed to prevent predictable detection patterns
+            #though i did not use it in the final model because i wanted to test it i saw that it was effecting the outcome
             isolation_forest = IsolationForest(
                 contamination=0.05,
                 random_state=np.random.randint(
@@ -2116,6 +2118,7 @@ class EnhancedModelTrainer(ModelTrainer):
         # Return the fitted model, accuracy, probabilities, and the scaler used
         return stacked_model, accuracy, y_proba, scaler # <<< Return scaler
         
+    #might use this in the future 
     def train_voting_ensemble(self, X, y, estimators, voting='soft'):
         """Train a voting ensemble model with multiple base estimators"""
         voting_clf = VotingClassifier(
@@ -2135,7 +2138,7 @@ class EnhancedModelTrainer(ModelTrainer):
         
         return voting_clf, accuracy
 
-    # +++ Add tune_lightgbm method +++
+    # +++ Add tune_lightgbm method +++ for testing purposes
     def tune_lightgbm(self, X, y, n_iter=2): # <<< Changed default n_iter back to 2
         """Tune LightGBM Classifier using RandomizedSearchCV"""
         if not LGBMClassifier:
@@ -2181,7 +2184,7 @@ class EnhancedModelTrainer(ModelTrainer):
         )
 
         try:
-            # Temporarily redirect stdout and stderr to suppress C++ level prints
+            # Temporarily redirect stdout and stderr to suppress C++ level prints because it was annoying
             import sys
             import os
             original_stdout = sys.stdout
@@ -4410,7 +4413,7 @@ class EnhancedPipeline(FundingStagePredictionPipeline):
         f1 = f1_score(y_test, y_pred, average='weighted', zero_division=0)
         conf_matrix = confusion_matrix(y_test, y_pred)
 
-        # Calculate RMSE
+        # Calculate RMSE, professor said it can be misleading for classification though so i should be careful with it and not use it for inference
         rmse = np.sqrt(mean_squared_error(y_test, y_pred))
 
         # Calculate class-specific metrics
@@ -5224,24 +5227,29 @@ class AnomalyDetector:
                     'reason': 'dimension_mismatch',
                     'score': 1.0}
 
-            # Run standard anomaly checks
+            # we initialize a dictionary to hold the results of our checks.
             anomalies = {
-                'is_anomaly': False,
-                'score': 0.0,
-                'reasons': []
+                'is_anomaly': False, # by default, we assume it's not an anomaly.
+                'score': 0.0,        # the anomaly score.
+                'reasons': []        # a list to store reasons if it's flagged as an anomaly.
             }
 
-            # Apply isolation forest to get anomaly score
+            # if the isolation forest model is available (meaning it was loaded correctly).
             if self.isolation_forest is not None:
+                # 'decision_function' gives a score for each sample; lower scores mean more likely to be an anomaly.
                 scores = self.isolation_forest.decision_function(X)
+                # 'predict' gives -1 for anomalies and 1 for normal points.
                 predictions = self.isolation_forest.predict(X)
 
-                # Lower scores = more anomalous
+                # we find the minimum score among the samples provided.
                 min_score = np.min(scores)
+                # if this minimum score is below our threshold, or if any prediction is -1,
+                # it suggests an anomaly.
                 if min_score < threshold or np.any(predictions == -1):
                     anomalies['is_anomaly'] = True
-                    # Convert to positive for easier interpretation
+                    # we make the score positive for easier understanding (e.g., higher positive score = more anomalous).
                     anomalies['score'] = -min_score
+                    # we record the isolation forest score as a reason.
                     anomalies['reasons'].append(
                         f"Isolation forest score: {min_score:.3f}")
 
