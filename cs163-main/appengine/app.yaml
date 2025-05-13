@@ -1,10 +1,51 @@
 runtime: python310
-
-automatic_scaling:
-  target_cpu_utilization: 0.90
-  max_instances: 1
-
-entrypoint: gunicorn -b :8080 app163:server
+service: default # Or your preferred service name
+instance_class: F4_1G # Flexible environment, adjust based on needs. F4_1G is a good start for ML apps.
 
 env_variables:
-  BUCKET_NAME: 'sj-startup-452821.appspot.com'
+  GCS_BUCKET_NAME: 'staging.oval-sunset-450610-h4.appspot.com'
+  BUCKET_NAME: 'staging.oval-sunset-450610-h4.appspot.com'
+  # Ensure your service account key JSON is available and GOOGLE_APPLICATION_CREDENTIALS points to it
+  # If running on App Engine, it often uses the App Engine default service account with appropriate permissions
+  # GOOGLE_APPLICATION_CREDENTIALS: 'your-service-account-key.json' # Uncomment if using a specific SA key
+  PYTHONUNBUFFERED: 'TRUE' # Recommended for Python logging
+
+# Using Gunicorn without uvicorn worker as a simpler configuration
+entrypoint: gunicorn -b :$PORT -w 4 app163:server --timeout 300 --preload
+
+handlers:
+  # Serve static files from the 'assets' directory
+  - url: /assets
+    static_dir: assets # Dash apps often use an 'assets' folder for CSS, JS, and images
+    expiration: "1d"
+
+  # All other requests go to the Gunicorn server
+  - url: /.*
+    script: auto
+    secure: always # Redirect HTTP to HTTPS
+
+automatic_scaling:
+  target_cpu_utilization: 0.75
+  min_instances: 1
+  max_instances: 3 # Adjust as needed
+  # Optional: If your app is request-bound
+  # target_concurrent_requests: 80 
+  # max_pending_latency: 30s
+
+# Optional: Network settings if needed
+# network:
+#   name: default
+
+# Optional: Health checks (App Engine Flexible has default health checks)
+# health_check:
+#   enable_health_check: True
+#   check_interval_sec: 30
+#   timeout_sec: 4
+#   unhealthy_threshold: 2
+#   healthy_threshold: 2
+#   # Gunicorn typically responds to / with 200 if app is running
+#   # If you have a specific health check endpoint, use it here e.g. /healthz
+# liveness_check:
+#   path: "/healthz" # Create a /healthz endpoint in your app
+# readiness_check:
+#   path: "/healthz"

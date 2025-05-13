@@ -2786,7 +2786,6 @@ class ModelManager:
                 logger.error(
                     f"Invalid model file format from {model_path}, missing required components: {missing}")
                 return False
-
             # Check model integrity and assign to class properties
             self.model = model_data['model']
             self.metadata = model_data['metadata']
@@ -2815,28 +2814,41 @@ class ModelManager:
 
 
 class Visualizer:
-    def __init__(self, output_dir="./visualizations", interactive=False):
-        """Initialize visualizer with output directory"""
-        self.output_dir = output_dir
-        self.interactive = interactive  # Set to False to prevent blocking terminal
+    def __init__(self, output_dir="./visualizations", interactive=False, gcs_bucket_name=None, gcs_prefix_visualizations="visualizations/"): # Add GCS params
+        """
+        Initialize Visualizer.
 
-        # Ensure output directory exists - critical fix
-        try:
-            os.makedirs(output_dir, exist_ok=True)
-            logger.info(f"Created visualization directory: {output_dir}")
-        except Exception as e:
-            logger.error(f"Error creating visualization directory: {e}")
-            # Fallback to a directory we know exists
-            self.output_dir = "./MainOutput/visualizations"
-            os.makedirs(self.output_dir, exist_ok=True)
+        Args:
+            output_dir (str): Local directory for temporary plot saving if needed.
+            interactive (bool): If True, attempts to display plots (not recommended for server environments).
+            gcs_bucket_name (str): Name of the GCS bucket.
+            gcs_prefix_visualizations (str): GCS prefix for storing visualization files.
+        """
+        self.output_dir = os.path.abspath(output_dir)
+        self.interactive = interactive
+        self.gcs_bucket_name = gcs_bucket_name
+        self.gcs_prefix_visualizations = gcs_prefix_visualizations # Ensure it ends with a slash
 
-        self.timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
-        self.palette = sns.color_palette("husl", 8)
-        self.feature_palettes = {
-            'categorical': sns.color_palette("Set3", 12),
-            'sequential': sns.color_palette("viridis", 8),
-            'diverging': sns.color_palette("RdYlBu", 11)
-        }
+        # Ensure the local output directory exists for temporary files if needed
+        os.makedirs(self.output_dir, exist_ok=True)
+        
+        if self.interactive:
+            try:
+                # Attempt to use a non-interactive backend if interactive is True but display might not be available
+                matplotlib.use('Agg') 
+                import matplotlib.pyplot as plt
+                logger.info("Visualizer running in interactive mode with Agg backend.")
+            except ImportError:
+                logger.warning("Matplotlib not found. Plotting disabled.")
+                self.interactive = False # Fallback
+        else:
+            # Ensure Agg backend is used for non-interactive server environments
+            try:
+                matplotlib.use('Agg')
+                logger.info("Visualizer running in non-interactive mode with Agg backend.")
+            except Exception as e: # Add a generic except for the matplotlib.use call
+                logger.warning(f"Could not set Matplotlib backend to Agg: {e}")
+                pass # Continue if backend setting fails, plotting might still work or fail later
 
     def plot_funding_stage_distribution(self, data, stage_mapping_rev=None): # Add stage_mapping_rev parameter
         """Visualize the distribution of funding stages"""
@@ -3715,45 +3727,41 @@ class FundingStagePredictionPipeline:
         os.makedirs(os.path.join(self.models_dir, 'evaluation'), exist_ok=True)
 
         logger.info(
-            f"Initialized model directory structure at {
-                self.models_dir}")
+            f"Initialized model directory structure at {self.models_dir}")
 
 
 class EnhancedPipeline(FundingStagePredictionPipeline):
-    def __init__(self, *args, **kwargs):
-        # Override the output_dir with our custom path
-        if 'output_dir' in kwargs:
-            kwargs['output_dir'] = './cs163-main/backend/MainOutput'  # Changed path
-        else:
-            args = list(args)
-            if len(args) > 1:
-                args[1] = './cs163-main/backend/MainOutput'  # Changed path
-            else:
-                # If output_dir is not in kwargs and not enough args, add it to args
-                if len(args) == 0: # base_dir also not provided
-                    args.append(None) # Placeholder for base_dir, will be handled by super
-                args.append('./cs163-main/backend/MainOutput') # Changed path
-            args = tuple(args)
+    def __init__(self, base_dir=None, archive=False, **kwargs): # Explicitly accept base_dir and archive
+        # output_dir is fixed for EnhancedPipeline
+        output_dir_fixed = './cs163-main/backend/MainOutput'
 
-        super().__init__(*args, **kwargs)
+        # Pass arguments explicitly to the parent.
+        # If base_dir is provided by the caller, use it. Otherwise,
+        # let FundingStagePredictionPipeline use its own default for base_dir.
+        if base_dir is not None:
+            super().__init__(base_dir=base_dir, output_dir=output_dir_fixed, archive=archive)
+        else:
+            # Called as EnhancedPipeline(archive=True) or EnhancedPipeline()
+            super().__init__(output_dir=output_dir_fixed, archive=archive)
+        
+        # The rest of the __init__ method for EnhancedPipeline
+        # self.models_dir and self.viz_dir are set up by the parent's __init__
+        # based on the output_dir_fixed we passed.
+
         self.model_trainer = EnhancedModelTrainer(self.models_dir)
 
         # Ensure all required directories exist before creating visualizer
+        # These directories are derived from output_dir_fixed which is processed by the parent.
         os.makedirs(self.viz_dir, exist_ok=True)
         os.makedirs(self.models_dir, exist_ok=True)
 
-        # Set to False to prevent interactive display
         self.visualizer = AdvancedVisualizer(self.viz_dir, interactive=False)
         self.model_manager = ModelManager(self.models_dir)
-        # +++ Add TimeSeriesForecaster instance +++
-        # self.time_series_forecaster = TimeSeriesForecaster(self.viz_dir) # Removed
-        self.time_series_forecaster = TimeSeriesForecaster(self.viz_dir) # Initialize forecaster
-        self._init_model_directory()
-        # Add attributes to store mapping and feature names if needed later
+        self.time_series_forecaster = TimeSeriesForecaster(self.viz_dir)
+        self._init_model_directory() # This method is part of EnhancedPipeline
         self.final_class_mapping = {}
         self.reverse_final_class_mapping = {}
         self.feature_names = []
-
 
     def run(self):
         try:
@@ -5654,8 +5662,7 @@ def main():
 
     # Initialize pipeline with JSONFolder explicitly
     pipeline = EnhancedPipeline(
-        args.base_dir,
-        args.output_dir,
+        base_dir=args.base_dir,
         archive=args.archive)
 
     if args.reset_db:
@@ -5723,3 +5730,4 @@ class NumpyEncoder(json.JSONEncoder):
 
 if __name__ == "__main__":
     main()
+

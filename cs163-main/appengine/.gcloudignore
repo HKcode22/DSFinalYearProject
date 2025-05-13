@@ -13,7 +13,61 @@
 .git
 .gitignore
 
-# Python pycache:
+# Python virtual environment
+venv/
+env/
+ENV/
+lib/
+lib64/
+include/
+bin/
+pip-selfcheck.json
+
+# Python bytecode and cache
+*.py[co]
 __pycache__/
-# Ignored by the build system
-/setup.cfg
+*$py.class
+
+# IDE and editor specific files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+
+# Logs and temporary files
+*.log
+*.tmp
+*.bak
+
+# Local data or large asset folders not needed for runtime
+# Example: If you have a large local_data/ folder, add it here
+# local_data/
+
+# Any local model build artifacts if models are served from GCS
+# local_models_build/
+
+# Pip cache
+.cache/
+
+# Node modules (if any frontend part was experimented with)
+node_modules/
+npm-debug.log
+yarn-error.log
+
+# Specific large files or patterns if you identify them
+# large_dataset.csv
+
+# Instance metadata credentials (don't upload!)
+.env
+env.yaml
+
+# Project-specific files to ignore (if any)
+# e.g. my_local_config.ini
+
+# Archives
+*.tar.gz
+*.zip

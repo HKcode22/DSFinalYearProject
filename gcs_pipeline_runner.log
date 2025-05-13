@@ -1,0 +1,32 @@
+2025-05-11 22:56:11,657 - numexpr.utils - INFO - NumExpr defaulting to 8 threads.
+2025-05-11 22:56:12,657 - __main__ - INFO - GCS Pipeline Runner started. GCS Client: Initialized
+2025-05-11 22:56:12,657 - __main__ - INFO - Target GCS Bucket: your-gcs-bucket-name
+2025-05-11 22:56:12,657 - __main__ - WARNING - Placeholder data path /Users/hk/Downloads/DSFinalYearProject/cs163-main/backend/AdataCollection/JSONFolder/merged_df_test.csv does not exist. Pipeline might fail at data loading.
+2025-05-11 22:56:12,657 - __main__ - INFO - Configurations prepared. Initializing GCSEnhancedPipeline...
+2025-05-11 22:56:12,657 - __main__ - INFO - GCSEnhancedPipeline initializing. Bucket: your-gcs-bucket-name, Temp Base: /tmp/gcs_pipeline_main_run
+2025-05-11 22:56:12,657 - __main__ - ERROR - An error occurred during GCSEnhancedPipeline execution: DataLoader.__init__() got an unexpected keyword argument 'input_data_path'
+2025-05-11 22:56:12,658 - __main__ - ERROR - Traceback (most recent call last):
+  File "/Users/hk/Downloads/DSFinalYearProject/cs163-main/appengine/gcs_pipeline_runner.py", line 979, in <module>
+    gcs_pipeline = GCSEnhancedPipeline(
+                   ^^^^^^^^^^^^^^^^^^^^
+  File "/Users/hk/Downloads/DSFinalYearProject/cs163-main/appengine/gcs_pipeline_runner.py", line 793, in __init__
+    data_loader = OriginalDataLoader(**dl_config) # Or OriginalDataLoader(config_path=dl_config.get('path'), output_dir=dl_local_temp)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: DataLoader.__init__() got an unexpected keyword argument 'input_data_path'
+
+2025-05-11 22:57:25,181 - numexpr.utils - INFO - NumExpr defaulting to 8 threads.
+2025-05-11 22:57:25,944 - __main__ - INFO - GCS Pipeline Runner started. GCS Client: Initialized
+2025-05-11 22:57:25,944 - __main__ - INFO - Target GCS Bucket: sj-startup-452821.appspot.com
+2025-05-11 22:57:25,944 - __main__ - WARNING - Placeholder data path /Users/hk/Downloads/DSFinalYearProject/cs163-main/backend/AdataCollection/JSONFolder/merged_df_test.csv does not exist. Pipeline might fail at data loading.
+2025-05-11 22:57:25,944 - __main__ - INFO - Configurations prepared. Initializing GCSEnhancedPipeline...
+2025-05-11 22:57:25,944 - __main__ - INFO - GCSEnhancedPipeline initializing. Bucket: sj-startup-452821.appspot.com, Temp Base: /tmp/gcs_pipeline_main_run
+2025-05-11 22:57:25,944 - __main__ - ERROR - An error occurred during GCSEnhancedPipeline execution: DataLoader.__init__() got an unexpected keyword argument 'input_data_path'
+2025-05-11 22:57:25,945 - __main__ - ERROR - Traceback (most recent call last):
+  File "/Users/hk/Downloads/DSFinalYearProject/cs163-main/appengine/gcs_pipeline_runner.py", line 979, in <module>
+    gcs_pipeline = GCSEnhancedPipeline(
+                   ^^^^^^^^^^^^^^^^^^^^
+  File "/Users/hk/Downloads/DSFinalYearProject/cs163-main/appengine/gcs_pipeline_runner.py", line 793, in __init__
+    data_loader = OriginalDataLoader(**dl_config) # Or OriginalDataLoader(config_path=dl_config.get('path'), output_dir=dl_local_temp)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: DataLoader.__init__() got an unexpected keyword argument 'input_data_path'
+
