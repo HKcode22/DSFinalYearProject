@@ -24,8 +24,19 @@ try:
         # raise RuntimeError("CRITICAL: BUCKET_NAME environment variable not set. GCS operations will fail. Please set BUCKET_NAME before running the app.")
 
     # --- Calculate project root and add to sys.path ---
-    SCRIPT_DIR_APP163 = os.path.dirname(os.path.abspath(__file__))
-    PROJECT_ROOT_APP163 = os.path.dirname(SCRIPT_DIR_APP163)
+    PROJECT_ROOT_APP163 = None
+    SCRIPT_DIR_APP163 = None
+    try:
+        # This assumes app163.py is in appengine directory
+        SCRIPT_DIR_APP163 = os.path.dirname(os.path.abspath(__file__))
+        PROJECT_ROOT_APP163 = os.path.dirname(SCRIPT_DIR_APP163)
+        print(f"DEBUG: __file__ is defined. SCRIPT_DIR_APP163: {SCRIPT_DIR_APP163}, PROJECT_ROOT_APP163: {PROJECT_ROOT_APP163}")
+    except NameError:
+        print("DEBUG: __file__ is not defined. Falling back to os.getcwd() for PROJECT_ROOT_APP163.")
+        # In App Engine with Gunicorn, cwd is usually the directory containing app.yaml
+        PROJECT_ROOT_APP163 = os.getcwd()
+        SCRIPT_DIR_APP163 = os.path.join(PROJECT_ROOT_APP163, 'appengine') # Assuming app163.py is in appengine
+        print(f"DEBUG: Using getcwd(). PROJECT_ROOT_APP163: {PROJECT_ROOT_APP163}, SCRIPT_DIR_APP163 (derived): {SCRIPT_DIR_APP163}")
 
     TEMP_ASSET_DIR_NAME = "gcs_assets"
     TEMP_ASSET_ROOT = os.path.join('/tmp', TEMP_ASSET_DIR_NAME)
@@ -174,7 +185,9 @@ try:
             return False
 
     def sync_latest_assets_from_gcs():
-        """Copies the latest required plot files from GCS backend output to app temporary assets."""
+        """Copies the latest required plot files from GCS backend output to app temporary assets.
+           Also ensures essential local fallback assets are present in the temp assets folder.
+        """
         if not BUCKET_NAME:
             print("GCS Assets: BUCKET_NAME not set. Cannot sync assets from GCS.")
             return
@@ -213,6 +226,28 @@ try:
                 print(f"GCS Assets: Warning - Latest source blob for {name} (pattern: {file_pattern}) not found in GCS bucket '{BUCKET_NAME}' prefix '{gcs_prefix}'.")
 
         print(f"GCS Assets: Synchronization finished. Copied/Updated {copied_files_count} files to {TEMP_ASSET_ROOT}.")
+
+        # --- Ensure essential local fallback/static assets are in TEMP_ASSET_ROOT for Dash --- 
+        print(f"DEBUG: Ensuring essential local assets are in {TEMP_ASSET_ROOT}")
+        essential_local_assets = ['violin_funding_by_stage_20250512_022535.png', 'placeholder.png'] 
+        # Define where these local assets are stored within the app structure
+        local_assets_source_dir = os.path.join(SCRIPT_DIR_APP163, 'assets')
+        copied_local_essentials = 0
+        for asset_filename in essential_local_assets:
+            source_path = os.path.join(local_assets_source_dir, asset_filename)
+            temp_dest_path = os.path.join(TEMP_ASSET_ROOT, asset_filename)
+            if not os.path.exists(temp_dest_path) and os.path.exists(source_path):
+                try:
+                    shutil.copy(source_path, temp_dest_path)
+                    print(f"DEBUG: Copied essential local asset '{asset_filename}' to {TEMP_ASSET_ROOT}")
+                    copied_local_essentials += 1
+                except Exception as e:
+                    print(f"DEBUG: Failed to copy essential local asset '{asset_filename}': {e}")
+            elif os.path.exists(temp_dest_path):
+                print(f"DEBUG: Essential asset '{asset_filename}' already in {TEMP_ASSET_ROOT} (possibly from GCS sync or previous copy).")
+            elif not os.path.exists(source_path):
+                print(f"DEBUG: Essential local asset '{asset_filename}' not found at source '{source_path}'.")
+        print(f"DEBUG: Copied {copied_local_essentials} essential local assets to {TEMP_ASSET_ROOT}.")
 
     def sync_models_from_gcs():
         """Downloads all model files (.joblib and _metadata.json) from GCS to a temporary local directory."""
