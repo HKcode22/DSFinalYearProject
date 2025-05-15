@@ -19,26 +19,72 @@ try:
     # --- GCS Configuration ---
     BUCKET_NAME = os.environ.get('BUCKET_NAME')
     if not BUCKET_NAME:
-        raise RuntimeError("CRITICAL: BUCKET_NAME environment variable not set. GCS operations will fail. Please set BUCKET_NAME before running the app.")
-
-    TEMP_ASSET_DIR_NAME = "gcs_assets"
-    TEMP_ASSET_ROOT = os.path.join('/tmp', TEMP_ASSET_DIR_NAME)
-    TEMP_MODEL_DIR = os.path.join('/tmp', 'gcs_models')
+        print("WARNING: BUCKET_NAME environment variable not set. Attempting to use default: 'staging.oval-sunset-450610-h4.appspot.com'")
+        BUCKET_NAME = 'staging.oval-sunset-450610-h4.appspot.com' # Default bucket name
+        # raise RuntimeError("CRITICAL: BUCKET_NAME environment variable not set. GCS operations will fail. Please set BUCKET_NAME before running the app.")
 
     # --- Calculate project root and add to sys.path ---
     SCRIPT_DIR_APP163 = os.path.dirname(os.path.abspath(__file__))
     PROJECT_ROOT_APP163 = os.path.dirname(SCRIPT_DIR_APP163)
+
+    TEMP_ASSET_DIR_NAME = "gcs_assets"
+    TEMP_ASSET_ROOT = os.path.join('/tmp', TEMP_ASSET_DIR_NAME)
+    TEMP_MODEL_DIR = os.path.join('/tmp', 'gcs_models')
+    LOCAL_FALLBACK_MODEL_DIR = os.path.join(PROJECT_ROOT_APP163, 'backend', 'MainOutput', 'models')
+
+    # --- Path modification for allowing pickle to find original module definitions ---
+    # This is for models saved when funding_stage_predictionORIGINAL.py was treated as a top-level module.
+    ML_DIR_FOR_PICKLE = os.path.join(SCRIPT_DIR_APP163, 'ML') # Directory containing funding_stage_predictionORIGINAL.py
+    if ML_DIR_FOR_PICKLE not in sys.path:
+        sys.path.insert(0, ML_DIR_FOR_PICKLE)
+        print(f"DEBUG: Added to sys.path for pickle: {ML_DIR_FOR_PICKLE}")
+
+    # Add appengine directory to sys.path for relative imports like 'from ML...' used in *this* script
+    if SCRIPT_DIR_APP163 not in sys.path:
+        # Insert after ML_DIR_FOR_PICKLE if it was added, otherwise at a suitable high-priority spot
+        insert_idx_appengine = 1 if ML_DIR_FOR_PICKLE in sys.path and sys.path.index(ML_DIR_FOR_PICKLE) == 0 else 0
+        sys.path.insert(insert_idx_appengine, SCRIPT_DIR_APP163)
+        print(f"DEBUG: Added to sys.path for app163 'from ML import ...' style imports: {SCRIPT_DIR_APP163} at index {insert_idx_appengine}")
+
+    # Add project root for other potential imports
     if PROJECT_ROOT_APP163 not in sys.path:
-        sys.path.insert(0, PROJECT_ROOT_APP163)
+        insert_idx_project_root = 0
+        # Determine safe insertion index after previously added paths
+        if SCRIPT_DIR_APP163 in sys.path:
+            insert_idx_project_root = sys.path.index(SCRIPT_DIR_APP163) + 1
+        elif ML_DIR_FOR_PICKLE in sys.path:
+            insert_idx_project_root = sys.path.index(ML_DIR_FOR_PICKLE) + 1
+        # Ensure index is within current bounds of sys.path
+        insert_idx_project_root = min(insert_idx_project_root, len(sys.path))
+        sys.path.insert(insert_idx_project_root, PROJECT_ROOT_APP163)
+        print(f"DEBUG: Added to sys.path for project root: {PROJECT_ROOT_APP163} at index {insert_idx_project_root}")
+    
+    # Subsequent paths should be inserted after the primary ones already established
+    # Find the highest index of the paths we've definitely managed so far
+    managed_paths = [ML_DIR_FOR_PICKLE, SCRIPT_DIR_APP163, PROJECT_ROOT_APP163]
+    current_max_managed_idx = -1
+    for p in managed_paths:
+        if p in sys.path:
+            current_max_managed_idx = max(current_max_managed_idx, sys.path.index(p))
+    
+    insert_idx_for_others = current_max_managed_idx + 1
+
     BACKEND_DIR_APP163 = os.path.join(PROJECT_ROOT_APP163, 'backend')
     if BACKEND_DIR_APP163 not in sys.path:
-        sys.path.insert(0, BACKEND_DIR_APP163)
+        sys.path.insert(insert_idx_for_others, BACKEND_DIR_APP163)
+        print(f"DEBUG: Added to sys.path for backend: {BACKEND_DIR_APP163} at index {insert_idx_for_others}")
+        insert_idx_for_others += 1 # Increment for next potential insertion
+        
     FRONTEND_DIR_APP163 = os.path.join(PROJECT_ROOT_APP163, 'frontend')
     if FRONTEND_DIR_APP163 not in sys.path:
-        sys.path.insert(0, FRONTEND_DIR_APP163)
+        sys.path.insert(insert_idx_for_others, FRONTEND_DIR_APP163)
+        print(f"DEBUG: Added to sys.path for frontend: {FRONTEND_DIR_APP163} at index {insert_idx_for_others}")
+
+    print(f"DEBUG: Final sys.path: {sys.path}")
+    # --- End of sys.path modifications ---
 
     try:
-        from ML.funding_stage_predictionORIGINALml import FeatureEngineering, ModelManager, AnomalyDetector, NumpyEncoder
+        from ML.funding_stage_predictionORIGINAL import FeatureEngineering, ModelManager, AnomalyDetector, NumpyEncoder
         print("Successfully imported custom ML modules in app163.py")
     except ImportError as e:
         print(f"Error importing custom ML modules in app163.py: {e}. Prediction engine will not work.")
@@ -57,6 +103,7 @@ try:
     GCS_VISUALIZATIONS_PREFIX = 'MainOutput/visualizations/'
     GCS_PROTOTYPE_PREFIX = 'MainOutput/prototype_dashboard/'
     GCS_MODELS_PREFIX = 'MainOutput/models/'
+    GCS_SUMMARIES_PREFIX = 'MainOutput/'
 
     storage_client = None
     try:
@@ -67,7 +114,7 @@ try:
     def find_latest_gcs_blob(bucket_name, gcs_prefix, file_pattern):
         """Finds the latest blob in GCS matching a prefix and pattern."""
         if not storage_client or not bucket_name:
-            print(f"[GCS] Storage client or bucket name not available for find_latest_gcs_blob (prefix: {gcs_prefix}).")
+            print(f"GCS: Storage client or bucket name not available for find_latest_gcs_blob (prefix: {gcs_prefix}).")
             return None
         try:
             bucket = storage_client.bucket(bucket_name)
@@ -75,23 +122,24 @@ try:
             
             matching_blobs = []
             for blob in blobs:
-                # Simple pattern matching: check if file_pattern is in the blob name part after prefix
                 file_name_part = blob.name[len(gcs_prefix):] if blob.name.startswith(gcs_prefix) else blob.name
-                # Example: pattern is 'calibration_plot_Random_Forest_Tuned_*.png'
-                # We need a more robust glob-like matching if '*' is used.
-                # For now, let's assume pattern_prefix matching from get_asset_url_path
-                # or exact names for models.
-                # This function needs to be smarter if using complex glob patterns.
-                # For now, using a simpler approach: if pattern has '*', treat it as prefix.
+                # Simple pattern matching for wildcards
                 if '*' in file_pattern:
                     base_pattern = file_pattern.split('*')[0]
-                    if base_pattern in file_name_part:
-                        matching_blobs.append(blob)
-                elif file_pattern == file_name_part: # Exact match if no wildcard
+                    # Ensure pattern is not empty and filename part starts with base_pattern
+                    # and also consider the part after '*' if it exists.
+                    parts = file_pattern.split('*')
+                    if len(parts) == 1: # e.g. "pattern*"
+                        if file_name_part.startswith(base_pattern):
+                            matching_blobs.append(blob)
+                    elif len(parts) == 2: # e.g. "pattern1*pattern2"
+                        if file_name_part.startswith(parts[0]) and file_name_part.endswith(parts[1]):
+                            matching_blobs.append(blob)
+                    # Add more sophisticated glob handling if needed for more complex patterns
+                elif file_pattern == file_name_part: # Exact match
                      matching_blobs.append(blob)
-                elif file_pattern in file_name_part: # Substring match as a fallback
+                elif file_pattern in file_name_part: # Substring match as a fallback (use sparingly)
                      matching_blobs.append(blob)
-
 
             if not matching_blobs:
                 # print(f"[GCS] No blobs found in bucket '{bucket_name}' with prefix '{gcs_prefix}' matching pattern '{file_pattern}'")
@@ -102,35 +150,34 @@ try:
             # print(f"[GCS] Found latest for {file_pattern} in {gcs_prefix}: {latest_blob.name}")
             return latest_blob
         except Exception as e:
-            print(f"[GCS] Error finding latest blob for {file_pattern} in {gcs_prefix} (bucket: {bucket_name}): {e}")
+            print(f"GCS: Error finding latest blob for {file_pattern} in {gcs_prefix} (bucket: {bucket_name}): {e}")
             return None
 
     def download_blob_to_temp(bucket_name, blob_name, temp_destination_path):
         """Downloads a blob from GCS to a temporary local path."""
         if not storage_client or not bucket_name:
-            print(f"[GCS] Storage client or bucket name not available for download_blob_to_temp (blob: {blob_name}).")
+            print(f"GCS: Storage client or bucket name not available for download_blob_to_temp (blob: {blob_name}).")
             return False
         try:
             bucket = storage_client.bucket(bucket_name)
             blob = bucket.blob(blob_name)
             os.makedirs(os.path.dirname(temp_destination_path), exist_ok=True)
             blob.download_to_filename(temp_destination_path)
-            print(f"[GCS] Downloaded {blob_name} to {temp_destination_path}")
+            print(f"GCS: Downloaded {blob_name} to {temp_destination_path}")
             return True
         except Exception as e:
-            print(f"[GCS] Failed to download {blob_name} to {temp_destination_path}: {e}")
+            print(f"GCS: Failed to download {blob_name} to {temp_destination_path}: {e}")
             return False
 
     def sync_latest_assets_from_gcs():
         """Copies the latest required plot files from GCS backend output to app temporary assets."""
         if not BUCKET_NAME:
-            print("[GCS Assets] BUCKET_NAME not set. Cannot sync assets from GCS.")
+            print("GCS Assets: BUCKET_NAME not set. Cannot sync assets from GCS.")
             return
 
-        print("[GCS Assets] Starting asset synchronization from GCS...")
-        os.makedirs(TEMP_ASSET_ROOT, exist_ok=True) # Ensure temp assets dir exists
+        print("GCS Assets: Starting asset synchronization...")
+        os.makedirs(TEMP_ASSET_ROOT, exist_ok=True)
 
-        # (GCS Prefix, GCS File Pattern (or exact name), Asset Type Name, local subdirectory if any)
         assets_to_sync_from_gcs = [
             (GCS_PROTOTYPE_PREFIX, 'bay_area_funding_trend_interactive_*.html', 'Forecast HTML'),
             (GCS_VISUALIZATIONS_PREFIX, 'calibration_plot_Random_Forest_Tuned_*.png', 'RF Calibration Plot'),
@@ -147,26 +194,72 @@ try:
                 dest_filename_in_temp = os.path.basename(latest_blob.name)
                 temp_dest_path = os.path.join(TEMP_ASSET_ROOT, dest_filename_in_temp)
                 
-                # Download if it doesn't exist locally or if GCS version is newer (more complex check needed for GCS mtime vs local)
-                # For simplicity, always download or check if local exists. Add more sophisticated check if needed.
-                if not os.path.exists(temp_dest_path) or latest_blob.updated.timestamp() > os.path.getmtime(temp_dest_path): # Compare timestamps
+                needs_download = True
+                if os.path.exists(temp_dest_path) and latest_blob.updated:
+                    if latest_blob.updated.timestamp() <= os.path.getmtime(temp_dest_path):
+                         needs_download = False
+                
+                if needs_download:
                      if download_blob_to_temp(BUCKET_NAME, latest_blob.name, temp_dest_path):
-                        print(f"[GCS Assets] Copied/Updated {name} to temp assets: {dest_filename_in_temp}")
+                        print(f"GCS Assets: Copied/Updated {name}: {dest_filename_in_temp}")
                         copied_files_count += 1
                 # else:
-                    # print(f"[GCS Assets] {name} already up-to-date in temp assets.")
+                    # print(f"GCS Assets: {name} already up-to-date in temp assets.")
             else:
-                print(f"[GCS Assets] Warning: Latest source blob for {name} (pattern: {file_pattern}) not found in GCS bucket '{BUCKET_NAME}' with prefix '{gcs_prefix}'.")
+                print(f"GCS Assets: Warning - Latest source blob for {name} (pattern: {file_pattern}) not found in GCS bucket '{BUCKET_NAME}' prefix '{gcs_prefix}'.")
 
-        print(f"[GCS Assets] Asset synchronization from GCS finished. Copied/Updated {copied_files_count} files to {TEMP_ASSET_ROOT}.")
+        print(f"GCS Assets: Synchronization finished. Copied/Updated {copied_files_count} files to {TEMP_ASSET_ROOT}.")
 
+    def sync_models_from_gcs():
+        """Downloads all model files (.joblib and _metadata.json) from GCS to a temporary local directory."""
+        if not BUCKET_NAME or not storage_client:
+            print("GCS Models: BUCKET_NAME or storage_client not available. Cannot sync models.")
+            return
+
+        print(f"GCS Models: Starting model synchronization (bucket: {BUCKET_NAME}, prefix: {GCS_MODELS_PREFIX}) to {TEMP_MODEL_DIR}...")
+        os.makedirs(TEMP_MODEL_DIR, exist_ok=True)
+
+        try:
+            bucket = storage_client.bucket(BUCKET_NAME)
+            blobs = list(bucket.list_blobs(prefix=GCS_MODELS_PREFIX))
+            
+            downloaded_model_files_count = 0
+            if not blobs:
+                print(f"GCS Models: No blobs found in bucket '{BUCKET_NAME}' with prefix '{GCS_MODELS_PREFIX}'.")
+                return
+
+            for blob in blobs:
+                if blob.name.endswith('/') or not (blob.name.endswith('.joblib') or blob.name.endswith('_metadata.json')):
+                    # Skip "folders" or files not matching model extensions
+                    continue
+
+                dest_filename_in_temp = os.path.basename(blob.name)
+                temp_dest_path = os.path.join(TEMP_MODEL_DIR, dest_filename_in_temp)
+
+                # Download if it doesn't exist locally or if GCS version is newer
+                needs_download = True
+                if os.path.exists(temp_dest_path):
+                    local_mtime = os.path.getmtime(temp_dest_path)
+                    gcs_mtime = blob.updated.timestamp() if blob.updated else (blob.time_created.timestamp() if blob.time_created else 0)
+                    if local_mtime >= gcs_mtime:
+                        needs_download = False
+                        # print(f"[GCS Models] Model file {dest_filename_in_temp} already up-to-date in {TEMP_MODEL_DIR}.")
+
+                if needs_download:
+                    if download_blob_to_temp(BUCKET_NAME, blob.name, temp_dest_path):
+                        print(f"GCS Models: Downloaded/Updated model file: {dest_filename_in_temp}")
+                        downloaded_model_files_count += 1
+            
+            print(f"GCS Models: Synchronization finished. Downloaded/Updated {downloaded_model_files_count} model files to {TEMP_MODEL_DIR}.")
+
+        except Exception as e:
+            print(f"GCS Models: Error during model synchronization: {e}")
 
     def get_asset_url_path(pattern_prefix):
         """Finds the latest asset in the temporary assets folder and returns its Dash asset URL path."""
-        # This function now looks in TEMP_ASSET_ROOT
         if not os.path.exists(TEMP_ASSET_ROOT):
-            print(f"[Assets] Temporary asset directory {TEMP_ASSET_ROOT} does not exist.")
-            return app.get_asset_url('placeholder.png') # Assuming you add a placeholder to local appengine/assets
+            print(f"Assets: Temporary asset directory {TEMP_ASSET_ROOT} does not exist.")
+            return app.get_asset_url('violin_funding_by_stage_20250512_022535.png') 
 
         try:
             # Search for files starting with pattern_prefix in TEMP_ASSET_ROOT
@@ -177,7 +270,7 @@ try:
 
             if not matching_files:
                 # print(f"[Assets] No files found in {TEMP_ASSET_ROOT} for prefix: {pattern_prefix}")
-                return app.get_asset_url('placeholder.png') 
+                return app.get_asset_url('violin_funding_by_stage_20250512_022535.png') 
             
             latest_file_local = max(matching_files, key=os.path.getmtime)
             asset_filename = os.path.basename(latest_file_local)
@@ -185,20 +278,19 @@ try:
             return app.get_asset_url(asset_filename) # Dash serves this from the `assets_folder`
         except Exception as e:
             print(f"[Assets] Error in get_asset_url_path for {pattern_prefix}: {e}")
-            return app.get_asset_url('placeholder.png')
+            return app.get_asset_url('violin_funding_by_stage_20250512_022535.png')
 
 
     # --- Run Asset Sync on Startup ---
-    # sync_latest_assets() # Temporarily commented out for App Engine deployment
     # We will call sync_latest_assets_from_gcs() after app initialization
 
     # Initialize Google Cloud Storage client
-    # Moved client initialization to the top GCS Configuration section
+    # Client initialization moved to the top GCS Configuration section
 
     def get_gcs_data(bucket_name_param, blob_name): # bucket_name_param to avoid conflict with global BUCKET_NAME
         """Downloads CSV data from GCS and returns a pandas DataFrame."""
         if not storage_client or not bucket_name_param:
-            print(f"[GCS Data] Storage client or bucket name not available for get_gcs_data (blob: {blob_name}).")
+            print(f"GCS Data: Storage client or bucket name not available for get_gcs_data (blob: {blob_name}).")
             return pd.DataFrame() # Return empty DataFrame on error
         try:
             bucket = storage_client.bucket(bucket_name_param)
@@ -219,6 +311,7 @@ try:
     # --- Sync GCS assets after app is defined and TEMP_ASSET_ROOT is known by Dash ---
     if storage_client and BUCKET_NAME: # Only attempt if GCS client and bucket name are available
         sync_latest_assets_from_gcs()
+        sync_models_from_gcs() # Call to sync models
     else:
         print("Skipping GCS asset sync due to missing GCS client or BUCKET_NAME.")
 
@@ -299,8 +392,9 @@ try:
                             html.Li("Training and evaluation of multiple predictive models (e.g., Random Forest, XGBoost, LightGBM, Ensembles) for funding stage classification."),
                             html.Li("Identification of key features influencing funding stage predictions."),
                             html.Li("An interactive engine to predict the funding stage for user-provided startup data.")
-                        ])
-                    ], className="p-4 bg-light rounded")
+                        ]),
+                        html.Img(src=app.get_asset_url('placeholder.png'), className="img-fluid mt-3")
+                    ], className="p-4 border rounded")
                 ], width=12)
             ])
         ], className="my-4")
@@ -352,15 +446,14 @@ try:
                     html.Div([
                         html.H4("Data Overview", className="mb-3"),
                         html.P("Key aspects of our processed dataset:"),
-                        # The following numbers are illustrative based on the capabilities of funding_stage_predictionORIGINAL.py
-                        # Actual numbers would come from a specific run's summary.json.
+                        # These are general capabilities. Actual numbers depend on specific pipeline runs.
                         html.Ul([
                             html.Li(f"Dataset typically comprises several hundred to a few thousand unique funding events after merging and cleaning."),
                             html.Li(f"A comprehensive set of ~30-40 engineered features are created, including temporal, categorical, and interaction terms."),
                             html.Li("Funding stages are mapped to a consistent numerical representation for modeling."),
                             html.Li("Models are trained to predict these numerical funding stages.")
                         ]),
-                        html.Img(src=get_asset_url_path('data-flow'), className="img-fluid mt-3") # Assume data-flow.png is copied to assets
+                        html.Img(src=app.get_asset_url('violin_funding_by_stage_20250512_022535.png'), className="img-fluid mt-3") # Using specific asset violin_funding_by_stage_20250512_022535.png
                     ], className="p-4 border rounded")
                 ], md=4)
             ])
@@ -435,7 +528,7 @@ try:
                         html.P("Comparison of different models based on key performance metrics like Accuracy and RMSE.", className="text-muted"),
                         
                         html.H4("Illustrative Model Architecture", className="mt-4"),
-                        html.Img(src=get_asset_url_path('model-architecture'), className="img-fluid mb-3"),
+                        html.Img(src=app.get_asset_url('placeholder.png'), className="img-fluid mb-3"), # Pointing to placeholder as model-architecture.png is not synced from GCS
                         html.P("Our pipeline involves data ingestion, preprocessing, feature engineering, model training (often including ensembles), and evaluation.", className="text-muted"),
 
                     ], className="p-4")
@@ -505,7 +598,6 @@ try:
                             {'label': 'Stacking Ensemble (RF Meta)', 'value': 'Dashboard_Model_Stacking_Ensemble_(RF_Meta)'},
                             {'label': 'Random Forest (All Features)', 'value': 'Dashboard_Model_RandomForest_Dashboard_AllFeatures'},
                             {'label': 'XGBoost (Tuned)', 'value': 'XGBoost_Tuned'}, # Use base name
-                            {'label': 'LightGBM (Tuned)', 'value': 'LightGBM_Tuned'}, # ADDED BACK - Use likely base name pattern
                             {'label': 'Decision Tree (Calibrated)', 'value': 'Dashboard_Model_Decision_Tree_(Calibrated)'}, # Still commented out as not seen
                             {'label': 'Best Model (from Latest Summary)', 'value': 'BEST_FROM_SUMMARY'}
                         ],
@@ -532,12 +624,9 @@ try:
                     dbc.Label("Previous Funding Rounds - Count of prior rounds:"),
                     dbc.Input(id="interactive-previous-rounds", placeholder="E.g., 2", type="number", className="mb-2"),
                     
-                    # For features like 'funding_year', 'funding_month', 'month_sin', 'month_cos', 
-                    # these are typically derived from a 'funding_date'. 
-                    # For this interactive engine, we will use the current date to derive these if FeatureEngineering requires them.
-                    # Explicit inputs for these derived features are usually not user-friendly.
-
-                    dbc.Button("Predict Funding Stage", id="interactive-predict-button", color="primary", className="mt-3 mb-3 n-clicks-0"), # Added n_clicks-0
+                    # Temporal features like funding_year, month_sin/cos will be derived from current date if needed by FeatureEngineering.
+                    
+                    dbc.Button("Predict Funding Stage", id="interactive-predict-button", color="primary", className="mt-3 mb-3", n_clicks=0),
                     
                     html.Div(id='interactive-prediction-output', className="mt-4 p-3 border rounded", children="Prediction results will appear here.")
                     
@@ -547,15 +636,14 @@ try:
     ])
 
     # Globals for holding loaded model and related objects for the interactive engine
-    # This is a simplified cache; for production, consider a more robust caching/loading strategy
     interactive_engine_globals = {
-        'model_manager': None, # Will hold instance of ModelManager
-        'feature_engineer': None, # Will hold instance of FeatureEngineering
-        'loaded_model_name_cache': None, # Tracks which model (pattern) is currently loaded
+        'model_manager': None,
+        'feature_engineer': None,
+        'loaded_model_name_cache': None,
         'class_mapping_from_summary': {},
         'feature_names_from_summary': [],
-        'age_bin_edges_from_summary': None, # For FeatureEngineer
-        'age_bin_labels_from_summary': None  # For FeatureEngineer
+        'age_bin_edges_from_summary': None,
+        'age_bin_labels_from_summary': None
     }
 
     # Function to initialize or get the ModelManager and FeatureEngineer
@@ -568,47 +656,67 @@ try:
                 PROJECT_ROOT_APP163 = os.path.dirname(SCRIPT_DIR_APP163_FALLBACK)
                 print("Recalculated PROJECT_ROOT_APP163 in get_ml_tools")
             except NameError:
-                PROJECT_ROOT_APP163 = "." # Last resort, might not be correct
-                print("Warning: PROJECT_ROOT_APP163 defaulted to '.' in get_ml_tools")
+                PROJECT_ROOT_APP163 = "." 
+                print("Warning: PROJECT_ROOT_APP163 defaulted to '.' in get_ml_tools, this might cause issues if not in App Engine context.")
 
         if FeatureEngineering and interactive_engine_globals['feature_engineer'] is None:
             interactive_engine_globals['feature_engineer'] = FeatureEngineering()
             print("Initialized FeatureEngineering for interactive engine.")
         
-        # --- Determine paths relative to PROJECT_ROOT_APP163 (cs163-main) ---
-        output_dir_interactive = os.path.join(PROJECT_ROOT_APP163, 'backend', 'MainOutput')
-        models_dir_interactive = os.path.join(output_dir_interactive, 'models')
-        # Print the directory that will be used for models, for debugging
-        print(f"[get_ml_tools] Model directory for ModelManager: {models_dir_interactive}") # ADDED PRINT
+        # Determine paths for ModelManager initialization
+        output_dir_interactive_fallback = os.path.join(PROJECT_ROOT_APP163, 'backend', 'MainOutput') # Fallback/reference path
+        models_dir_interactive_fallback = os.path.join(output_dir_interactive_fallback, 'models') # Fallback/reference path
+        
+        target_model_dir_for_manager = TEMP_MODEL_DIR # Models are synced here from GCS
+        # Print the directory that will be used for models by ModelManager
+        print(f"ML Tools: ModelManager will use model directory: {target_model_dir_for_manager}")
 
         if ModelManager and interactive_engine_globals['model_manager'] is None:
-            if not os.path.exists(models_dir_interactive):
-                print(f"CRITICAL_INTERACTIVE: Models directory does not exist at {models_dir_interactive}. Predictions may fail if models are not deployed here.")
-            interactive_engine_globals['model_manager'] = ModelManager(model_dir=models_dir_interactive)
-            print(f"Initialized ModelManager for interactive engine, model_dir: {models_dir_interactive}")
+            # Ensure the target directory exists, though sync_models_from_gcs should create it
+            os.makedirs(target_model_dir_for_manager, exist_ok=True)
+            
+            if not os.listdir(target_model_dir_for_manager): 
+                 print(f"ML Tools WARNING: Target model directory {target_model_dir_for_manager} is empty. Model loading will fail if sync from GCS was unsuccessful.")
+            
+            print(f"ML Tools: Initializing ModelManager with model_dir: {target_model_dir_for_manager}")
+            interactive_engine_globals['model_manager'] = ModelManager(model_dir=target_model_dir_for_manager)
 
-        # Load summary data to get mappings and feature names if not already loaded or if they are empty
+        # Load summary data from GCS to get mappings and feature names
         if not interactive_engine_globals['class_mapping_from_summary'] or not interactive_engine_globals['feature_names_from_summary']:
-            try:
-                summary_files = glob.glob(os.path.join(output_dir_interactive, "summary_*.json"))
-                if summary_files:
-                    latest_summary_path = max(summary_files, key=os.path.getctime)
-                    with open(latest_summary_path, 'r') as f:
-                        summary_data = json.load(f) 
+            if storage_client and BUCKET_NAME:
+                print(f"Interactive Engine: Loading latest summary from GCS Bucket: {BUCKET_NAME}, Prefix: {GCS_SUMMARIES_PREFIX}")
+                latest_summary_blob = find_latest_gcs_blob(BUCKET_NAME, GCS_SUMMARIES_PREFIX, "summary_*.json")
+                if latest_summary_blob:
+                    summary_filename = os.path.basename(latest_summary_blob.name)
+                    # Ensure TEMP_MODEL_DIR exists for downloading summary, or use TEMP_ASSET_ROOT
+                    os.makedirs(TEMP_MODEL_DIR, exist_ok=True) 
+                    temp_summary_path = os.path.join(TEMP_MODEL_DIR, summary_filename)
                     
-                    interactive_engine_globals['class_mapping_from_summary'] = {int(k): str(v) for k,v in summary_data.get('class_mapping', {}).items()}
-                    interactive_engine_globals['feature_names_from_summary'] = summary_data.get('feature_names', [])
-                    interactive_engine_globals['age_bin_edges_from_summary'] = summary_data.get('age_bin_edges')
-                    interactive_engine_globals['age_bin_labels_from_summary'] = summary_data.get('age_bin_labels')
-                    
-                    print(f"Interactive engine: Loaded class_mapping ({len(interactive_engine_globals['class_mapping_from_summary'])}) and feature_names ({len(interactive_engine_globals['feature_names_from_summary'])}) from {latest_summary_path}")
-                    print(f"Interactive engine: Age bins from summary - Edges: {interactive_engine_globals['age_bin_edges_from_summary'] is not None}, Labels: {interactive_engine_globals['age_bin_labels_from_summary'] is not None}")
-
+                    if download_blob_to_temp(BUCKET_NAME, latest_summary_blob.name, temp_summary_path):
+                        try:
+                            with open(temp_summary_path, 'r') as f:
+                                summary_data = json.load(f)
+                            
+                            interactive_engine_globals['class_mapping_from_summary'] = {int(k): str(v) for k,v in summary_data.get('class_mapping', {}).items()}
+                            interactive_engine_globals['feature_names_from_summary'] = summary_data.get('feature_names', [])
+                            interactive_engine_globals['age_bin_edges_from_summary'] = summary_data.get('age_bin_edges')
+                            interactive_engine_globals['age_bin_labels_from_summary'] = summary_data.get('age_bin_labels')
+                            
+                            print(f"Interactive Engine: Loaded class_mapping ({len(interactive_engine_globals['class_mapping_from_summary'])}) and feature_names ({len(interactive_engine_globals['feature_names_from_summary'])}) from GCS summary: {summary_filename}")
+                            # print(f"Interactive engine: Age bins from summary - Edges: {interactive_engine_globals['age_bin_edges_from_summary'] is not None}, Labels: {interactive_engine_globals['age_bin_labels_from_summary'] is not None}")
+                        except Exception as e:
+                            print(f"Interactive Engine: Error processing downloaded summary file {temp_summary_path}: {e}")
+                    else:
+                        print(f"Interactive Engine: Failed to download latest summary file from GCS: {latest_summary_blob.name}")
                 else:
-                    print(f"Interactive engine: No summary file found in {output_dir_interactive} to load class mapping/feature names.")
-            except Exception as e:
-                print(f"Interactive engine: Error loading summary for class mapping/features: {e}")
-                interactive_engine_globals['class_mapping_from_summary'] = {}
+                    print(f"Interactive Engine: No summary file (summary_*.json) found in GCS bucket '{BUCKET_NAME}' with prefix '{GCS_SUMMARIES_PREFIX}'.")
+            else:
+                print("Interactive Engine: GCS client or BUCKET_NAME not available. Cannot load summary from GCS.")
+            
+            # Fallback if GCS load failed or was skipped
+            if not interactive_engine_globals['class_mapping_from_summary']: 
+                print(f"Interactive Engine: class_mapping or feature_names are still empty. Interactive predictions might fail or be inaccurate.")
+                interactive_engine_globals['class_mapping_from_summary'] = {} # Ensure they are dict/list
                 interactive_engine_globals['feature_names_from_summary'] = []
                 interactive_engine_globals['age_bin_edges_from_summary'] = None
                 interactive_engine_globals['age_bin_labels_from_summary'] = None
@@ -635,21 +743,16 @@ try:
 
         print(f"[Interactive Predict] Button clicked. Selected model pattern: {selected_model_pattern}")
 
-        # --- Initialize ML Tools --- 
-        # Check if classes were imported correctly
-        if 'FeatureEngineering' not in globals() or FeatureEngineering is None or \
-           'ModelManager' not in globals() or ModelManager is None or \
-           'AnomalyDetector' not in globals(): # AnomalyDetector can be None if import failed, handle gracefully
-            print("[Interactive Predict] Error: Core ML classes (FeatureEngineering, ModelManager) are not available.")
+        if FeatureEngineering is None or ModelManager is None:
+            print("[Interactive Predict] Error: Core ML classes (FeatureEngineering, ModelManager) are not available due to import issues.")
             return dbc.Alert("Error: Core ML components not loaded. Prediction unavailable. Check server logs.", color="danger")
 
         model_manager, feature_engineer = get_ml_tools()
 
-        if not model_manager: # Feature engineer might be usable even if model fails, but prediction needs model_manager
+        if not model_manager:
             print("[Interactive Predict] Error: ModelManager could not be initialized by get_ml_tools().")
             return dbc.Alert("Error: Model Manager tool could not be initialized. Check server logs.", color="danger")
         if not feature_engineer:
-            # Attempt re-initialization if it failed before
             try: 
                  interactive_engine_globals['feature_engineer'] = FeatureEngineering()
                  feature_engineer = interactive_engine_globals['feature_engineer']
@@ -658,46 +761,185 @@ try:
                  print(f"[Interactive Predict] Error: Failed to initialize FeatureEngineer: {fe_init_err}")
                  return dbc.Alert("Error: Feature Engineering tool could not be initialized. Check server logs.", color="danger")
 
-        # --- Load Model --- 
-        global PROJECT_ROOT_APP163 # Required for path construction
+        global PROJECT_ROOT_APP163
         if 'PROJECT_ROOT_APP163' not in globals() or not PROJECT_ROOT_APP163:
             try:
                 SCRIPT_DIR_APP163_CB = os.path.dirname(os.path.abspath(__file__))
                 PROJECT_ROOT_APP163 = os.path.dirname(SCRIPT_DIR_APP163_CB)
                 print("[Interactive Predict] Re-initialized PROJECT_ROOT_APP163 in callback.")
             except NameError:
-                PROJECT_ROOT_APP163 = "."
-                print("[Interactive Predict] Warning: PROJECT_ROOT_APP163 defaulted to '.' in callback.")
-        output_dir_interactive = os.path.join(PROJECT_ROOT_APP163, 'backend', 'MainOutput')
+                PROJECT_ROOT_APP163 = "." 
+                print("Warning: PROJECT_ROOT_APP163 defaulted to '.' in callback.")
 
-        actual_model_to_load = selected_model_pattern
+        # --- Model Loading Logic ---
+        load_success = False
+        model_base_name_to_load = selected_model_pattern
+        version_to_load = 'latest'
+        
+        # Helper to parse model name like "BaseName_vYYYYMMDD" or "BaseName_vYYYYMMDD_HHMMSS"
+        def _extract_base_and_version(name_str):
+            import re
+            # Regex to capture base name and version string (e.g., _v20230101 or _v20230101_123045)
+            # It tries to find the last occurrence of _v followed by digits and optionally more digits separated by underscore
+            match = re.match(r'(.*?)_((v\d{8}(_\d{6})?)|(v\d{8}))$', name_str)
+            if match:
+                base_name = match.group(1)
+                version_str = match.group(2) # This will be like 'v20230101' or 'v20230101_123045'
+                if not version_str.startswith('v'): # Ensure 'v' prefix if accidentally captured without it by a broader group
+                    version_str = 'v' + version_str
+                return base_name, version_str
+            return name_str, 'latest' # Default if no version pattern found
+
+        user_preferred_specific_versions = {
+            'Dashboard_Model_Stacking_Ensemble_(RF_Meta)': 'v202505110540',
+            'Dashboard_Model_RandomForest_Dashboard_AllFeatures': 'v202505110539',
+            'XGBoost_Tuned': 'v202505110545'
+        }
+
         if selected_model_pattern == 'BEST_FROM_SUMMARY':
-            try:
-                summary_files = glob.glob(os.path.join(output_dir_interactive, "summary_*.json"))
-                if not summary_files: return dbc.Alert("Error: Cannot determine BEST_FROM_SUMMARY, no summary file found.", color="danger")
-                latest_summary_path = max(summary_files, key=os.path.getctime)
-                with open(latest_summary_path, 'r') as f: summary_data = json.load(f)
-                best_model_name_from_summary = summary_data.get('best_model_by_accuracy')
-                if not best_model_name_from_summary: return dbc.Alert("Error: Best model name not found in summary.", color="danger")
-                actual_model_to_load = best_model_name_from_summary.replace(" ", "_").replace("(", "").replace(")", "")
-                print(f"[Interactive Predict] BEST_FROM_SUMMARY resolved to: {actual_model_to_load}")
-            except Exception as e: return dbc.Alert(f"Error resolving BEST_FROM_SUMMARY: {str(e)}", color="danger")
+            print(f"[Interactive Predict] 'BEST_FROM_SUMMARY' selected. Resolving from GCS summary.")
+            resolved_full_name_from_summary = None
+            if storage_client and BUCKET_NAME:
+                latest_summary_blob = find_latest_gcs_blob(BUCKET_NAME, GCS_SUMMARIES_PREFIX, "summary_*.json")
+                if latest_summary_blob:
+                    summary_filename = os.path.basename(latest_summary_blob.name)
+                    temp_summary_path = os.path.join(TEMP_MODEL_DIR, summary_filename)
+                    if download_blob_to_temp(BUCKET_NAME, latest_summary_blob.name, temp_summary_path):
+                        try:
+                            with open(temp_summary_path, 'r') as f: summary_data_local = json.load(f)
+                            best_model_name_from_summary_raw = summary_data_local.get('best_model_by_accuracy')
+                            if not best_model_name_from_summary_raw:
+                                return dbc.Alert("Error: Best model name not found in summary.", color="danger")
+                            resolved_full_name_from_summary = best_model_name_from_summary_raw.replace(" ", "_").replace("(", "").replace(")", "")
+                            print(f"[Interactive Predict] BEST_FROM_SUMMARY resolved to raw name: {resolved_full_name_from_summary}")
+                        except Exception as e:
+                            return dbc.Alert(f"Error resolving BEST_FROM_SUMMARY from GCS file: {str(e)} (Path: {temp_summary_path})", color="danger")
+                    else:
+                        return dbc.Alert("Error: Failed to download summary file for BEST_FROM_SUMMARY.", color="danger")
+                else:
+                    return dbc.Alert("Error: No summary file found in GCS for BEST_FROM_SUMMARY.", color="danger")
+            else:
+                return dbc.Alert("Error: GCS not available for BEST_FROM_SUMMARY.", color="danger")
 
-        if model_manager.model is None or interactive_engine_globals['loaded_model_name_cache'] != actual_model_to_load:
-            print(f"[Interactive Predict] Attempting to load model for pattern: {actual_model_to_load}...")
-            if hasattr(model_manager, 'model_dir'): print(f"[Interactive Predict] ModelManager loading from: {model_manager.model_dir}")
-            load_success = model_manager.load_model_joblib(model_name=actual_model_to_load, version='latest')
-            if not load_success: return dbc.Alert(f"Error: Could not load the selected model: {actual_model_to_load}. Check logs.", color="danger")
-            interactive_engine_globals['loaded_model_name_cache'] = actual_model_to_load
-            # ModelManager's metadata should be populated by load_model_joblib
-            loaded_type = model_manager.metadata.get('training_metadata', {}).get('model_type', model_manager.metadata.get('model_type', actual_model_to_load))
-            loaded_version = model_manager.metadata.get('version', 'N/A')
-            print(f"[Interactive Predict] Successfully loaded model: {loaded_type} (Version: {loaded_version})")
-        else:
-            loaded_type = model_manager.metadata.get('training_metadata', {}).get('model_type', model_manager.metadata.get('model_type', interactive_engine_globals['loaded_model_name_cache']))
-            print(f"[Interactive Predict] Using cached model: {loaded_type}")
+            if resolved_full_name_from_summary:
+                model_base_name_to_load, version_to_load = _extract_base_and_version(resolved_full_name_from_summary)
+                print(f"[Interactive Predict] BEST_FROM_SUMMARY parsed to Base: '{model_base_name_to_load}', Version: '{version_to_load}'")
+            else: # Should have returned an error above if resolution failed
+                return dbc.Alert("Error: Could not determine model from BEST_FROM_SUMMARY.", color="danger")
+        
+        # Now, attempt to load the model
+        # This block handles the general case and the first attempt for user-preferred versions.
+        # Reset model manager state before any load attempt if model changes
+        current_model_cache_key = f"{model_base_name_to_load}_{version_to_load}"
+        if model_manager.model is None or interactive_engine_globals.get('loaded_model_name_cache') != current_model_cache_key:
+            print(f"[Interactive Predict] Attempting to load model from GCS-synced dir: '{model_base_name_to_load}' with version: '{version_to_load}'")
+            if hasattr(model_manager, 'model_dir'): print(f"[Interactive Predict] ModelManager primary loading from: {model_manager.model_dir}")
+            
+            if os.path.exists(TEMP_MODEL_DIR):
+                print(f"[Interactive Predict] DEBUG: Contents of {TEMP_MODEL_DIR} before load: {os.listdir(TEMP_MODEL_DIR)}")
+            else:
+                print(f"[Interactive Predict] DEBUG ERROR: Model directory {TEMP_MODEL_DIR} does not exist.")
+            
+            if not os.path.exists(TEMP_MODEL_DIR) or not os.listdir(TEMP_MODEL_DIR):
+                print(f"[Interactive Predict] ERROR: Model directory {TEMP_MODEL_DIR} is empty/missing. Attempting re-sync.")
+                sync_models_from_gcs()
+                if os.path.exists(TEMP_MODEL_DIR): print(f"[Interactive Predict] DEBUG: Contents of {TEMP_MODEL_DIR} after re-sync: {os.listdir(TEMP_MODEL_DIR)}")
+                if not os.path.exists(TEMP_MODEL_DIR) or not os.listdir(TEMP_MODEL_DIR):
+                    return dbc.Alert(f"Error: Model directory {TEMP_MODEL_DIR} empty after re-sync. Cannot load model. Check logs.", color="danger")
 
-        # --- Feature Engineering (Manual Approach for Single Prediction) --- 
+            # Clear previous model state from manager before loading new one
+            model_manager.model = None
+            model_manager.metadata = {} # Important to clear old metadata
+            model_manager.feature_names = []
+            model_manager.scaler = None
+            model_manager.anomaly_detector = None
+
+            load_success = model_manager.load_model_joblib(model_name=model_base_name_to_load, version=version_to_load)
+            if load_success:
+                interactive_engine_globals['loaded_model_name_cache'] = current_model_cache_key
+                print(f"[Interactive Predict] Successfully loaded model from GCS-synced dir: '{model_base_name_to_load}' (Version: '{version_to_load}')")
+            else:
+                print(f"[Interactive Predict] Failed to load model from GCS-synced dir: '{model_base_name_to_load}' (Version: '{version_to_load}') with first attempt.")
+        else: # Model is already cached and matches the target
+            load_success = True 
+            print(f"[Interactive Predict] Using cached model from GCS-synced dir: {interactive_engine_globals.get('loaded_model_name_cache')}")
+
+
+        # If the first attempt failed for a user-preferred model, try the specific hardcoded version from GCS-synced dir
+        if not load_success and selected_model_pattern in user_preferred_specific_versions and version_to_load == 'latest':
+            # This implies the first attempt was with 'latest' for a user-preferred base name.
+            specific_version_str = user_preferred_specific_versions[selected_model_pattern]
+            print(f"[Interactive Predict] Initial 'latest' load from GCS-synced dir failed for '{selected_model_pattern}'. Trying specific version from GCS-synced dir: '{specific_version_str}'")
+            
+            current_model_cache_key = f"{selected_model_pattern}_{specific_version_str}" # Update cache key for this attempt
+            # Ensure manager is reset for this specific attempt
+            model_manager.model = None
+            model_manager.metadata = {}
+            model_manager.feature_names = []
+            model_manager.scaler = None
+            model_manager.anomaly_detector = None
+
+            load_success = model_manager.load_model_joblib(model_name=selected_model_pattern, version=specific_version_str)
+            if load_success:
+                interactive_engine_globals['loaded_model_name_cache'] = current_model_cache_key
+                print(f"[Interactive Predict] Successfully loaded model from GCS-synced dir: '{selected_model_pattern}' (Specific Version: '{specific_version_str}')")
+            else:
+                print(f"[Interactive Predict] Also failed to load model from GCS-synced dir: '{selected_model_pattern}' (Specific Version: '{specific_version_str}')")
+        
+        # --- Fallback to local directory if GCS attempts failed ---
+        if not load_success: 
+            print(f"[Interactive Predict] All GCS-synced load attempts failed for '{model_base_name_to_load}' (version: '{version_to_load}').")
+            print(f"[Interactive Predict] Now attempting to load from local fallback directory: {LOCAL_FALLBACK_MODEL_DIR}")
+
+            if not os.path.exists(LOCAL_FALLBACK_MODEL_DIR):
+                print(f"[Interactive Predict] Fallback model directory {LOCAL_FALLBACK_MODEL_DIR} does not exist. Cannot attempt fallback load.")
+            elif not os.listdir(LOCAL_FALLBACK_MODEL_DIR):
+                print(f"[Interactive Predict] Fallback model directory {LOCAL_FALLBACK_MODEL_DIR} is empty. Cannot attempt fallback load.")
+            else:
+                original_model_dir_for_fallback = model_manager.model_dir # Store current (should be TEMP_MODEL_DIR)
+                
+                print(f"[Interactive Predict] Temporarily setting model_manager.model_dir to {LOCAL_FALLBACK_MODEL_DIR} for fallback attempt.")
+                model_manager.model_dir = LOCAL_FALLBACK_MODEL_DIR
+                
+                # Reset model state in manager before trying to load from fallback
+                model_manager.model = None
+                model_manager.metadata = {}
+                model_manager.feature_names = []
+                model_manager.scaler = None
+                model_manager.anomaly_detector = None
+                
+                print(f"[Interactive Predict] DEBUG: Contents of {LOCAL_FALLBACK_MODEL_DIR} before fallback load: {os.listdir(LOCAL_FALLBACK_MODEL_DIR)}")
+                
+                # Attempt to load the same model_base_name_to_load and version_to_load that failed from GCS
+                fallback_load_success_flag = model_manager.load_model_joblib(model_name=model_base_name_to_load, version=version_to_load)
+                
+                if fallback_load_success_flag:
+                    load_success = True # Update the main load_success flag
+                    # Update cache key to reflect it's a fallback model. 
+                    # The version_to_load here is the one that was attempted from GCS (e.g. 'latest' or specific 'vYYYYMMDD')
+                    interactive_engine_globals['loaded_model_name_cache'] = f"{model_base_name_to_load}_{version_to_load}_fallback"
+                    print(f"[Interactive Predict] Successfully loaded model from LOCAL FALLBACK: '{model_base_name_to_load}' (Version: '{version_to_load}') from {LOCAL_FALLBACK_MODEL_DIR}")
+                else:
+                    print(f"[Interactive Predict] Also failed to load model from LOCAL FALLBACK: '{model_base_name_to_load}' (Version: '{version_to_load}') from {LOCAL_FALLBACK_MODEL_DIR}")
+                    # load_success remains False
+
+                # IMPORTANT: Restore original model_dir for the model_manager
+                model_manager.model_dir = original_model_dir_for_fallback
+                print(f"[Interactive Predict] Restored model_manager.model_dir to: {model_manager.model_dir}")
+
+        if not load_success:
+             # Construct a more informative error message
+            error_msg_detail = f"Could not load model '{selected_model_pattern}'."
+            if selected_model_pattern in user_preferred_specific_versions:
+                error_msg_detail += f" Tried with 'latest' and specific version '{user_preferred_specific_versions[selected_model_pattern]}'."
+            elif selected_model_pattern == 'BEST_FROM_SUMMARY':
+                 error_msg_detail += f" Resolved from summary to Base: '{model_base_name_to_load}', Version: '{version_to_load}'."
+            else:
+                error_msg_detail += f" Tried with version '{version_to_load}'."
+            error_msg_detail += " Ensure it exists in GCS at MainOutput/models/ and was synced to /tmp/gcs_models. Check server logs."
+            return dbc.Alert(error_msg_detail, color="danger")
+        
+        # --- Feature Engineering ---
         try: 
             # 1. Get Input Values Safely
             raw_company_name = company_name if company_name else f"InteractivePredict_{uuid.uuid4().hex[:8]}"
@@ -715,18 +957,17 @@ try:
 
             # 2. Initialize Feature DataFrame using model's expected feature names
             if not model_manager.feature_names:
-                return dbc.Alert("Error: Feature names not loaded with the model.", color="danger")
+                # Attempt to load feature names from the global cache if model manager doesn't have them
+                if interactive_engine_globals['feature_names_from_summary']:
+                    model_manager.feature_names = interactive_engine_globals['feature_names_from_summary']
+                    print("[Interactive Predict] Loaded feature names from GCS summary cache into ModelManager.")
+                else:
+                    return dbc.Alert("Error: Feature names not loaded with the model and not found in GCS summary cache.", color="danger")
+
             features_dict = {feature_name: 0.0 for feature_name in model_manager.feature_names} # Default all to 0.0 float
 
-            # 3. Calculate Core Numeric Features (mimicking FeatureEngineering.extract_features)
-            # Use np.log1p for stability with potential 0 funding
+            # 3. Calculate Core Numeric Features
             features_dict['funding_amount_log'] = np.log1p(funding_amount_val) if pd.notna(funding_amount_val) else 0.0 
-            # Keep raw employees if model expects it (check model_manager.feature_names)
-            # if 'employees' in features_dict: # Model might use binned employees instead 
-            #     features_dict['employees'] = float(employees_val) if pd.notna(employees_val) else 0.0 
-            # Keep raw months_since if model expects it
-            # if 'months_since_first_funding' in features_dict:
-            #     features_dict['months_since_first_funding'] = float(months_since_first_val) if pd.notna(months_since_first_val) else 0.0
             if 'previous_rounds' in features_dict:
                 features_dict['previous_rounds'] = float(previous_rounds_val) # Already defaulted to 0
             
@@ -846,13 +1087,11 @@ try:
             # 5. Convert final dict to DataFrame in correct order
             X_final_features = pd.DataFrame([features_dict], columns=model_manager.feature_names)
             
-            # Final check for NaNs introduced during calculation (should be minimal with defaults)
             if X_final_features.isnull().any().any():
                 print(f"[Interactive Predict] Warning: NaNs found in final feature vector before prediction. Filling with 0. Columns: {X_final_features.columns[X_final_features.isnull().any()].tolist()}")
                 X_final_features.fillna(0.0, inplace=True)
 
             print(f"[Interactive Predict] Manual Feature Engineering complete. Final feature count: {len(X_final_features.columns)}")
-            # print(f"[Interactive Predict] Data for prediction: {X_final_features.iloc[0].to_dict()}") # DEBUG: Print full vector if needed
 
         except Exception as fe_manual_error:
             print(f"[Interactive Predict] Error during manual feature engineering: {fe_manual_error}")
@@ -895,7 +1134,7 @@ try:
             result_display_elements = []
             # Prediction Alert
             result_display_elements.append(dbc.Alert([
-                html.H4(f"Predicted Funding Stage: {predicted_stage_label} (Idx: {predicted_stage_numeric_final})"), # Simplified label
+                html.H4(f"Predicted Funding Stage: {predicted_stage_label} (Idx: {predicted_stage_numeric_final})"),
                 html.P(f"Confidence: {confidence_val:.2f}%")
             ], color="success"))
             # Validation Alert
@@ -916,7 +1155,7 @@ try:
             if isinstance(model_acc_disp, (float, int)): model_acc_disp = f"{model_acc_disp:.3f}"
             result_display_elements.append(html.Div([
                 html.H5("Model Used:", className="mt-3"),
-                html.P(f"Type: {model_type_disp}, Ver: {model_version_disp}, Trained Acc: {model_acc_disp}") # Compact display
+                html.P(f"Type: {model_type_disp}, Ver: {model_version_disp}, Trained Acc: {model_acc_disp}")
             ], className="small text-muted"))
 
             print("[Interactive Predict] Successfully processed prediction results.")

@@ -12,6 +12,9 @@ automatic_scaling:
   max_pending_latency: automatic
   max_concurrent_requests: 50 # Adjust based on app behavior
 
+env_variables:
+  BUCKET_NAME: 'staging.oval-sunset-450610-h4.appspot.com'
+
 handlers:
 # This configures static file serving for anything in the 'assets' folder.
 - url: /assets
