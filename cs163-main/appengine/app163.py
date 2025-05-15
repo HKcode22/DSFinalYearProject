@@ -11,9 +11,9 @@ paths_to_add = [
     os.path.join(APP_ENGINE_PROJECT_ROOT, 'appengine', 'ML'), # For 'import funding_stage_predictionORIGINAL'
     os.path.join(APP_ENGINE_PROJECT_ROOT, 'appengine'),      # For 'from ML import ...' if appengine/ML is a package
     APP_ENGINE_PROJECT_ROOT,                                 # For 'from appengine import ...'
-    os.path.join(APP_ENGINE_PROJECT_ROOT, 'backend'),
-    # Add other necessary root paths for your project structure if any
-]
+    os.path.join(APP_ENGINE_PROJECT_ROOT, 'backend')
+    # Add other necessary root paths for your project structure if any # Ensure this line is commented out or valid if it was causing issues
+] # Ensure this closing bracket is present and correct
 
 for p in reversed(paths_to_add): # Insert at the beginning, so reverse iterate
     if p not in sys.path:
