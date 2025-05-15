@@ -431,7 +431,8 @@ try:
                 dbc.Col([
                     html.H4("Random Forest Model Calibration", className="text-center mb-3 mt-4"),
                     html.Img(
-                        src=get_asset_url_path('calibration_plot_Random_Forest_Tuned_'), 
+                        # src=get_asset_url_path('calibration_plot_Random_Forest_Tuned_'), 
+                        src=app.get_asset_url('calibration_plot_Random_Forest_Tuned_20250511_201419.png'), # Hardcoded for testing
                         className="img-fluid",
                         style={"display": "block", "margin-left": "auto", "margin-right": "auto", "max-height": "500px"}
                     ),
