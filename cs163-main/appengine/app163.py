@@ -4,16 +4,15 @@ import sys
 # --- Force sys.path setup early using os.getcwd() as App Engine root --- 
 # This assumes Gunicorn's CWD is the app root (where app.yaml is)
 APP_ENGINE_PROJECT_ROOT = os.getcwd()
-print(f"DEBUG: APP_ENGINE_PROJECT_ROOT (from getcwd()): {APP_ENGINE_PROJECT_ROOT}")
+print(f"DEBUG: app163.py started. APP_ENGINE_PROJECT_ROOT (from getcwd()): {APP_ENGINE_PROJECT_ROOT}") # Moved initial print here
 
 # Paths to add, in order of preference for imports
 paths_to_add = [
-    os.path.join(APP_ENGINE_PROJECT_ROOT, 'appengine', 'ML'), # For 'import funding_stage_predictionORIGINAL'
-    os.path.join(APP_ENGINE_PROJECT_ROOT, 'appengine'),      # For 'from ML import ...' if appengine/ML is a package
-    APP_ENGINE_PROJECT_ROOT,                                 # For 'from appengine import ...'
+    os.path.join(APP_ENGINE_PROJECT_ROOT, 'appengine', 'ML'),
+    os.path.join(APP_ENGINE_PROJECT_ROOT, 'appengine'),
+    APP_ENGINE_PROJECT_ROOT,
     os.path.join(APP_ENGINE_PROJECT_ROOT, 'backend')
-    # Add other necessary root paths for your project structure if any # Ensure this line is commented out or valid if it was causing issues
-] # Ensure this closing bracket is present and correct
+]
 
 for p in reversed(paths_to_add): # Insert at the beginning, so reverse iterate
     if p not in sys.path:
@@ -1276,6 +1275,15 @@ try:
                 html.Hr(),
                 html.P(f"The pathname {pathname} was not recognised...")
             ])
+
+    # Ensure server is defined for Gunicorn even if the main app init fails before server assignment
+    # This is a last resort and ideally should not be hit if the main try block for app setup is robust.
+    if 'server' not in globals():
+        print("CRITICAL: 'server' was not defined. Attempting to create a minimal fallback server.")
+        minimal_fallback_app = Dash(__name__)
+        minimal_fallback_app.layout = html.Div("Emergency fallback: Server variable was not defined.")
+        server = minimal_fallback_app.server
+        print("Minimal fallback server created.")
 
     if __name__ == "__main__":
         app.run(debug=True)
