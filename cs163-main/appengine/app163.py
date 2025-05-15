@@ -1,3 +1,27 @@
+import os
+import sys
+
+# --- Force sys.path setup early using os.getcwd() as App Engine root --- 
+# This assumes Gunicorn's CWD is the app root (where app.yaml is)
+APP_ENGINE_PROJECT_ROOT = os.getcwd()
+print(f"DEBUG: APP_ENGINE_PROJECT_ROOT (from getcwd()): {APP_ENGINE_PROJECT_ROOT}")
+
+# Paths to add, in order of preference for imports
+paths_to_add = [
+    os.path.join(APP_ENGINE_PROJECT_ROOT, 'appengine', 'ML'), # For 'import funding_stage_predictionORIGINAL'
+    os.path.join(APP_ENGINE_PROJECT_ROOT, 'appengine'),      # For 'from ML import ...' if appengine/ML is a package
+    APP_ENGINE_PROJECT_ROOT,                                 # For 'from appengine import ...'
+    os.path.join(APP_ENGINE_PROJECT_ROOT, 'backend'),
+    # Add other necessary root paths for your project structure if any
+]
+
+for p in reversed(paths_to_add): # Insert at the beginning, so reverse iterate
+    if p not in sys.path:
+        sys.path.insert(0, p)
+        print(f"DEBUG: Early added to sys.path: {p}")
+print(f"DEBUG: sys.path after early setup: {sys.path}")
+# --- End of forced sys.path setup ---
+
 try:
     from dash import Dash, html, dcc, callback, Output, Input, dash_table, State
     import dash_bootstrap_components as dbc
@@ -23,20 +47,17 @@ try:
         BUCKET_NAME = 'staging.oval-sunset-450610-h4.appspot.com' # Default bucket name
         # raise RuntimeError("CRITICAL: BUCKET_NAME environment variable not set. GCS operations will fail. Please set BUCKET_NAME before running the app.")
 
-    # --- Calculate project root and add to sys.path ---
-    PROJECT_ROOT_APP163 = None
-    SCRIPT_DIR_APP163 = None
-    try:
-        # This assumes app163.py is in appengine directory
-        SCRIPT_DIR_APP163 = os.path.dirname(os.path.abspath(__file__))
-        PROJECT_ROOT_APP163 = os.path.dirname(SCRIPT_DIR_APP163)
-        print(f"DEBUG: __file__ is defined. SCRIPT_DIR_APP163: {SCRIPT_DIR_APP163}, PROJECT_ROOT_APP163: {PROJECT_ROOT_APP163}")
-    except NameError:
-        print("DEBUG: __file__ is not defined. Falling back to os.getcwd() for PROJECT_ROOT_APP163.")
-        # In App Engine with Gunicorn, cwd is usually the directory containing app.yaml
-        PROJECT_ROOT_APP163 = os.getcwd()
-        SCRIPT_DIR_APP163 = os.path.join(PROJECT_ROOT_APP163, 'appengine') # Assuming app163.py is in appengine
-        print(f"DEBUG: Using getcwd(). PROJECT_ROOT_APP163: {PROJECT_ROOT_APP163}, SCRIPT_DIR_APP163 (derived): {SCRIPT_DIR_APP163}")
+    # --- Calculate project root and add to sys.path --- 
+    # THIS SECTION WILL BE LARGELY REPLACED/SIMPLIFIED OR REMOVED
+    # We now use APP_ENGINE_PROJECT_ROOT established earlier.
+    PROJECT_ROOT_APP163 = APP_ENGINE_PROJECT_ROOT
+    SCRIPT_DIR_APP163 = os.path.join(PROJECT_ROOT_APP163, 'appengine') # Standard assumption
+    ML_DIR_FOR_PICKLE = os.path.join(SCRIPT_DIR_APP163, 'ML')
+    BACKEND_DIR_APP163 = os.path.join(PROJECT_ROOT_APP163, 'backend')
+    FRONTEND_DIR_APP163 = os.path.join(PROJECT_ROOT_APP163, 'frontend')
+
+    print(f"DEBUG: PROJECT_ROOT_APP163 (post early setup): {PROJECT_ROOT_APP163}")
+    print(f"DEBUG: SCRIPT_DIR_APP163 (post early setup): {SCRIPT_DIR_APP163}")
 
     TEMP_ASSET_DIR_NAME = "gcs_assets"
     TEMP_ASSET_ROOT = os.path.join('/tmp', TEMP_ASSET_DIR_NAME)
@@ -45,56 +66,55 @@ try:
 
     # --- Path modification for allowing pickle to find original module definitions ---
     # This is for models saved when funding_stage_predictionORIGINAL.py was treated as a top-level module.
-    ML_DIR_FOR_PICKLE = os.path.join(SCRIPT_DIR_APP163, 'ML') # Directory containing funding_stage_predictionORIGINAL.py
-    if ML_DIR_FOR_PICKLE not in sys.path:
-        sys.path.insert(0, ML_DIR_FOR_PICKLE)
-        print(f"DEBUG: Added to sys.path for pickle: {ML_DIR_FOR_PICKLE}")
+    # ML_DIR_FOR_PICKLE = os.path.join(SCRIPT_DIR_APP163, 'ML') # Already defined
+    # if ML_DIR_FOR_PICKLE not in sys.path:
+    #     sys.path.insert(0, ML_DIR_FOR_PICKLE)
+    #     print(f"DEBUG: Added to sys.path for pickle: {ML_DIR_FOR_PICKLE}")
 
     # Add appengine directory to sys.path for relative imports like 'from ML...' used in *this* script
-    if SCRIPT_DIR_APP163 not in sys.path:
-        # Insert after ML_DIR_FOR_PICKLE if it was added, otherwise at a suitable high-priority spot
-        insert_idx_appengine = 1 if ML_DIR_FOR_PICKLE in sys.path and sys.path.index(ML_DIR_FOR_PICKLE) == 0 else 0
-        sys.path.insert(insert_idx_appengine, SCRIPT_DIR_APP163)
-        print(f"DEBUG: Added to sys.path for app163 'from ML import ...' style imports: {SCRIPT_DIR_APP163} at index {insert_idx_appengine}")
+    # if SCRIPT_DIR_APP163 not in sys.path:
+        # insert_idx_appengine = 1 if ML_DIR_FOR_PICKLE in sys.path and sys.path.index(ML_DIR_FOR_PICKLE) == 0 else 0
+        # sys.path.insert(insert_idx_appengine, SCRIPT_DIR_APP163)
+        # print(f"DEBUG: Added to sys.path for app163 'from ML import ...' style imports: {SCRIPT_DIR_APP163} at index {insert_idx_appengine}")
 
     # Add project root for other potential imports
-    if PROJECT_ROOT_APP163 not in sys.path:
-        insert_idx_project_root = 0
+    # if PROJECT_ROOT_APP163 not in sys.path:
+        # insert_idx_project_root = 0
         # Determine safe insertion index after previously added paths
-        if SCRIPT_DIR_APP163 in sys.path:
-            insert_idx_project_root = sys.path.index(SCRIPT_DIR_APP163) + 1
-        elif ML_DIR_FOR_PICKLE in sys.path:
-            insert_idx_project_root = sys.path.index(ML_DIR_FOR_PICKLE) + 1
+        # if SCRIPT_DIR_APP163 in sys.path:
+            # insert_idx_project_root = sys.path.index(SCRIPT_DIR_APP163) + 1
+        # elif ML_DIR_FOR_PICKLE in sys.path:
+            # insert_idx_project_root = sys.path.index(ML_DIR_FOR_PICKLE) + 1
         # Ensure index is within current bounds of sys.path
-        insert_idx_project_root = min(insert_idx_project_root, len(sys.path))
-        sys.path.insert(insert_idx_project_root, PROJECT_ROOT_APP163)
-        print(f"DEBUG: Added to sys.path for project root: {PROJECT_ROOT_APP163} at index {insert_idx_project_root}")
+        # insert_idx_project_root = min(insert_idx_project_root, len(sys.path))
+        # sys.path.insert(insert_idx_project_root, PROJECT_ROOT_APP163)
+        # print(f"DEBUG: Added to sys.path for project root: {PROJECT_ROOT_APP163} at index {insert_idx_project_root}")
     
     # Subsequent paths should be inserted after the primary ones already established
     # Find the highest index of the paths we've definitely managed so far
-    managed_paths = [ML_DIR_FOR_PICKLE, SCRIPT_DIR_APP163, PROJECT_ROOT_APP163]
-    current_max_managed_idx = -1
-    for p in managed_paths:
-        if p in sys.path:
-            current_max_managed_idx = max(current_max_managed_idx, sys.path.index(p))
+    # managed_paths = [ML_DIR_FOR_PICKLE, SCRIPT_DIR_APP163, PROJECT_ROOT_APP163]
+    # current_max_managed_idx = -1
+    # for p in managed_paths:
+        # if p in sys.path:
+            # current_max_managed_idx = max(current_max_managed_idx, sys.path.index(p))
     
-    insert_idx_for_others = current_max_managed_idx + 1
+    # insert_idx_for_others = current_max_managed_idx + 1
 
-    BACKEND_DIR_APP163 = os.path.join(PROJECT_ROOT_APP163, 'backend')
-    if BACKEND_DIR_APP163 not in sys.path:
-        sys.path.insert(insert_idx_for_others, BACKEND_DIR_APP163)
-        print(f"DEBUG: Added to sys.path for backend: {BACKEND_DIR_APP163} at index {insert_idx_for_others}")
-        insert_idx_for_others += 1 # Increment for next potential insertion
+    # BACKEND_DIR_APP163 = os.path.join(PROJECT_ROOT_APP163, 'backend')
+    # if BACKEND_DIR_APP163 not in sys.path:
+        # sys.path.insert(insert_idx_for_others, BACKEND_DIR_APP163)
+        # print(f"DEBUG: Added to sys.path for backend: {BACKEND_DIR_APP163} at index {insert_idx_for_others}")
+        # insert_idx_for_others += 1 # Increment for next potential insertion
         
-    FRONTEND_DIR_APP163 = os.path.join(PROJECT_ROOT_APP163, 'frontend')
-    if FRONTEND_DIR_APP163 not in sys.path:
-        sys.path.insert(insert_idx_for_others, FRONTEND_DIR_APP163)
-        print(f"DEBUG: Added to sys.path for frontend: {FRONTEND_DIR_APP163} at index {insert_idx_for_others}")
+    # FRONTEND_DIR_APP163 = os.path.join(PROJECT_ROOT_APP163, 'frontend')
+    # if FRONTEND_DIR_APP163 not in sys.path:
+        # sys.path.insert(insert_idx_for_others, FRONTEND_DIR_APP163)
+        # print(f"DEBUG: Added to sys.path for frontend: {FRONTEND_DIR_APP163} at index {insert_idx_for_others}")
 
-    print(f"DEBUG: Final sys.path: {sys.path}")
-    # --- End of sys.path modifications ---
+    # print(f"DEBUG: Final sys.path: {sys.path}") # This can be removed or kept from early setup
+    # --- End of sys.path modifications --- (Old section largely commented out/replaced)
 
-    print("DEBUG: Attempting to import ML modules. Current sys.path:", sys.path) # Added for debugging
+    print("DEBUG: Attempting to import ML modules. Current sys.path (after early setup):", sys.path) # Modified for debugging
     try:
         from ML.funding_stage_predictionORIGINAL import FeatureEngineering, ModelManager, AnomalyDetector, NumpyEncoder
         print("Successfully imported custom ML modules in app163.py")
