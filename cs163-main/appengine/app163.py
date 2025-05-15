@@ -83,11 +83,13 @@ try:
     print(f"DEBUG: Final sys.path: {sys.path}")
     # --- End of sys.path modifications ---
 
+    print("DEBUG: Attempting to import ML modules. Current sys.path:", sys.path) # Added for debugging
     try:
         from ML.funding_stage_predictionORIGINAL import FeatureEngineering, ModelManager, AnomalyDetector, NumpyEncoder
         print("Successfully imported custom ML modules in app163.py")
     except ImportError as e:
         print(f"Error importing custom ML modules in app163.py: {e}. Prediction engine will not work.")
+        print(f"DETAILED IMPORT ERROR for ML modules: {e}") # Added for detailed debugging
         FeatureEngineering = None
         ModelManager = None
         AnomalyDetector = None
@@ -142,6 +144,7 @@ try:
                      matching_blobs.append(blob)
 
             if not matching_blobs:
+                print(f"[GCS Detailed] No blobs found. Bucket: '{bucket_name}', Prefix: '{gcs_prefix}', Pattern: '{file_pattern}', All Blobs listed (up to 50): {[b.name for b in blobs[:50]]}") # Added detailed logging
                 # print(f"[GCS] No blobs found in bucket '{bucket_name}' with prefix '{gcs_prefix}' matching pattern '{file_pattern}'")
                 return None
             
@@ -167,6 +170,7 @@ try:
             return True
         except Exception as e:
             print(f"GCS: Failed to download {blob_name} to {temp_destination_path}: {e}")
+            print(f"DETAILED GCS Download Error: {e}, Bucket: {bucket_name}, Blob: {blob_name}") # Added detailed logging
             return False
 
     def sync_latest_assets_from_gcs():
@@ -310,10 +314,11 @@ try:
 
     # --- Sync GCS assets after app is defined and TEMP_ASSET_ROOT is known by Dash ---
     if storage_client and BUCKET_NAME: # Only attempt if GCS client and bucket name are available
+        print("DEBUG: Attempting to sync GCS assets and models...") # Added for debugging
         sync_latest_assets_from_gcs()
         sync_models_from_gcs() # Call to sync models
     else:
-        print("Skipping GCS asset sync due to missing GCS client or BUCKET_NAME.")
+        print("Skipping GCS asset/model sync due to missing GCS client or BUCKET_NAME.")
 
 
     # Navbar component (fixed the parenthesis issue here)
