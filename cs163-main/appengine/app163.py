@@ -116,11 +116,31 @@ try:
 
     print("DEBUG: Attempting to import ML modules. Current sys.path (after early setup):", sys.path) # Modified for debugging
     try:
-        from ML.funding_stage_predictionORIGINAL import FeatureEngineering, ModelManager, AnomalyDetector, NumpyEncoder
-        print("Successfully imported custom ML modules in app163.py")
+        # Let's try importing one by one to isolate
+        print("DEBUG: Attempting to import FeatureEngineering...")
+        from ML.funding_stage_predictionORIGINAL import FeatureEngineering
+        print("DEBUG: Successfully imported FeatureEngineering.")
+
+        print("DEBUG: Attempting to import ModelManager...")
+        from ML.funding_stage_predictionORIGINAL import ModelManager
+        print("DEBUG: Successfully imported ModelManager.")
+
+        print("DEBUG: Attempting to import AnomalyDetector...")
+        from ML.funding_stage_predictionORIGINAL import AnomalyDetector
+        print("DEBUG: Successfully imported AnomalyDetector.")
+
+        print("DEBUG: Attempting to import NumpyEncoder...")
+        from ML.funding_stage_predictionORIGINAL import NumpyEncoder
+        print("DEBUG: Successfully imported NumpyEncoder.")
+
+        print("Successfully imported all custom ML modules in app163.py")
+
     except ImportError as e:
+        import traceback
         print(f"Error importing custom ML modules in app163.py: {e}. Prediction engine will not work.")
-        print(f"DETAILED IMPORT ERROR for ML modules: {e}") # Added for detailed debugging
+        print(f"DETAILED IMPORT ERROR for ML modules: {e}")
+        print("FULL TRACEBACK FOR IMPORT ERROR:")
+        traceback.print_exc()
         FeatureEngineering = None
         ModelManager = None
         AnomalyDetector = None
