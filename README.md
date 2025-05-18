@@ -46,7 +46,7 @@ top-level folders:
 │   │   │   ├── topstartupio50.py
 │   │   │   └── JSONFolder/         # Output for raw scraped JSON/CSV data
 │   │   ├── ML/
-│   │   │   └── funding_stage_predictionORIGINAL.py # Core ML pipeline script
+│   │   │   └── funding_stage_predictionORIGINAL.py # Core ML pipeline script (We moved this ML folder in appengine folder due to issues occuring)
 │   │   └── MainOutput/             # Default output for ML pipeline (models, summaries, viz)
 │   │
 │   ├── appengine/                  # Frontend and Google App Engine deployment configuration
