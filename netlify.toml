@@ -1,6 +1,6 @@
 [build]
-  publish = "."
-  command = "echo 'Static files ready'"
+  publish = "dist"
+  command = "echo 'Build complete'"
 
 [[redirects]]
   from = "/*"
