@@ -4,7 +4,7 @@
   "description": "Startup Funding Stage Prediction & Market Analysis - Bay Area Focus",
   "main": "index.html",
   "scripts": {
-    "build": "mkdir -p dist && cp -r cs163-main/appengine/assets dist/ && cp index.html dist/",
+    "build": "cp -r cs163-main/appengine/assets . && cp index.html .",
     "dev": "python -m http.server 8000",
     "serve": "python -m http.server 8000"
   },
