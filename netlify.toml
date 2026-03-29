@@ -2,18 +2,7 @@
   publish = "."
   command = "echo 'Static files ready'"
 
-[build.environment]
-  NODE_VERSION = "18"
-
 [[redirects]]
   from = "/*"
   to = "/index.html"
   status = 200
-
-[context.production]
-  publish = "."
-  command = "echo 'Production ready'"
-
-[context.deploy-preview]
-  publish = "."
-  command = "echo 'Preview ready'"
