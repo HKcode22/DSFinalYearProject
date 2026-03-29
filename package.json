@@ -1,0 +1,23 @@
+{
+  "name": "startup-funding-prediction",
+  "version": "1.0.0",
+  "description": "Startup Funding Stage Prediction & Market Analysis - Bay Area Focus",
+  "main": "index.html",
+  "scripts": {
+    "build": "mkdir -p dist && cp -r cs163-main/appengine/assets dist/ && cp index.html dist/",
+    "dev": "python -m http.server 8000",
+    "serve": "python -m http.server 8000"
+  },
+  "keywords": [
+    "startup",
+    "funding",
+    "prediction",
+    "machine-learning",
+    "bay-area",
+    "data-science"
+  ],
+  "author": "HKcode22",
+  "license": "MIT",
+  "devDependencies": {},
+  "dependencies": {}
+}
