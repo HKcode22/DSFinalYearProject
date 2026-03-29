@@ -11,7 +11,9 @@
   status = 200
 
 [context.production]
+  publish = "."
   command = "echo 'Production ready'"
 
 [context.deploy-preview]
+  publish = "."
   command = "echo 'Preview ready'"
