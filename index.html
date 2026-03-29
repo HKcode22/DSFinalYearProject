@@ -3,135 +3,211 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Startup Funding Stage Analytics - Bay Area</title>
+    <title>Startup Funding Stage Analytics & Prediction - Bay Area</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
-        body { font-family: 'Segoe UI', sans-serif; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); min-height: 100vh; padding-top: 70px; }
-        .navbar { background: rgba(255,255,255,0.95) !important; backdrop-filter: blur(10px); box-shadow: 0 2px 20px rgba(0,0,0,0.1); }
-        .navbar-brand { font-weight: bold; color: #667eea !important; }
-        .nav-link { color: #555 !important; font-weight: 500; margin: 0 5px; border-radius: 8px; padding: 8px 16px !important; }
-        .nav-link:hover, .nav-link.active { background: #667eea; color: white !important; }
-        .section { display: none; padding: 40px 0; }
-        .section.active { display: block; animation: fadeIn 0.5s; }
-        @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
-        .card { border: none; border-radius: 16px; box-shadow: 0 10px 40px rgba(0,0,0,0.1); margin-bottom: 30px; }
-        .metric-box { background: white; border-radius: 16px; padding: 30px; text-align: center; box-shadow: 0 10px 40px rgba(0,0,0,0.1); }
-        .metric-box h2 { font-size: 3rem; color: #667eea; font-weight: bold; }
-        .btn-primary { background: #667eea; border: none; border-radius: 10px; padding: 12px 30px; }
-        footer { background: #1a1a2e; color: white; padding: 40px 0; margin-top: 60px; }
-        h1 { color: white; font-weight: bold; margin-bottom: 20px; }
-        .glass-card { background: rgba(255,255,255,0.95); border-radius: 16px; padding: 30px; margin-bottom: 30px; }
-    </style>
-</head>
-<body>
-    <nav class="navbar navbar-expand-lg fixed-top">
-        <div class="container">
-            <a class="navbar-brand" href="#" onclick="showSection('home')"><i class="fas fa-rocket me-2"></i>Startup Analytics</a>
-            <div class="collapse navbar-collapse">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link active" href="#" onclick="showSection('home')" id="nav-home">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#" onclick="showSection('objective')" id="nav-objective">Objective</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#" onclick="showSection('methods')" id="nav-methods">Methods</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#" onclick="showSection('findings')" id="nav-findings">Findings</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#" onclick="showSection('predict')" id="nav-predict">Predict</a></li>
-                </ul>
+        :root {
+            --primary-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            --success-gradient: linear-gradient(135deg, #11998e 0%, #38ef7d 100%);
+            --info-gradient: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+            --warning-gradient: linear-gradient(135deg, #fa709a 0%, #fee140 100%);
+            --glass-bg: rgba(255, 255, 255, 0.95);
+            --shadow-soft: 0 10px 40px rgba(0,0,0,0.1);
+   <html lang="endo<head>
+    <met 6    <gba(0,0,0,0.15);
+                <title>Startup Funding        * { margin: 0; padding: 0; box-sizing: bo    <link href="https:// {
+            font-family: 'Inter', sans-serif;
+      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+ )     <style>
+        :root {
+            --primary-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 1000.        :r              ow: var(--shadow-soft);
+            padding: 1rem 0;
+        }
+        .navbar-brand {
+            --info-gradient: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+ nd            --warning-gradient: linear-gradient(135deg, #fa709a 0%, #fee140 10              --glass-bg: rgba(255, 255, 255, 0.95);
+            --shadow-soft: 0 1 f            --shadow-soft: 0 10px 40px rgba(0,0,0rt   <html lang="endo<head>
+    <met 6    <gba(0,0,0,0.1      <met 6    <gba(0,0,0 1                <title>Startupll            font-family: 'Inter', sans-serif;
+      <link href="https://fonts.googleapis.com/css2?family=Inter:wkg      <link href="https://fonts.googleapis.cco    <style>
+ )     <style>
+        :root {
+            --primary-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 1000.        :r              ow: var(--shadow-soft);
+            padding: 1rem 0xt-align: center;
+  )     <st          :root {            --on            padding: 1rem 0;
+        }
+        .navbar-brand {
+            --info-gradient: linear-gradient(135deg, #4facfe 0%,p:        }
+        .navbar-bte        co            --info-gra   nd            --warning-gradient: linear-gradient(135deg, #fa709a 0%, #fee140ro            --shadow-soft: 0 1 f            --shadow-soft: 0 10px 40px rgba(0,0,0rt   <html lang="endo<head>
+    <met 6    <gba(0,0,id    <met 6    <gba(0,0,0,0.1      <met 6    <gba(0,0,0 1                <ti     padding: 2rem;
+            tr      <link href="https://fonts.googleapis.com/css2?family=Inter:wkg      <link href="https://fonts.googleapis.cco    <style>
+ )    px )     <style>
+        :root {
+            --primary-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 1000.        :r            :radius            --);            padding: 1rem 0xt-align: center;
+  )     <st          :root {            --on            padding: 1rem 0;
+        }ri  )     <st          :root {            --oar        }
+        .navbar-brand {
+            --info-gradient: linear-gin        
+             --info-grae;        .navbar-bte        co            --info-gra   nd            --warn10    <met 6    <gba(0,0,id    <met 6    <gba(0,0,0,0.1      <met 6    <gba(0,0,0 1                <ti     padding: 2rem;
+            tr      <link href="https://fonts.googleapis.com/css2?family=Inter:wkg      <link href="https://fonts.google:             tr      <link href="https://fonts.googleapis.com/css2?family=Inter:wkg      <link href="https://fonts.googac )    px )     <style>
+        :root {
+            --primary-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 1000.        :r                  :root {
+      {
+            bac  )     <st          :root {            --on            padding: 1rem 0;
+        }ri  )     <st          :root {            --oar        }
+        .navbar-brand {
+                }ri  )     <st          :root {            --oar        }
+               .navbar-brand {
+            --info-gradient: linear-gin       font-weight: 600;
+               --info-grae;        .navbar-bte                tr      <link href="https://fonts.googleapis.com/css2?family=Inter:wkg      <link href="https://fonts.google:             tr      <link href="https://fonts.googleapis.com/css2?family=Inter:wkg      <link hre          :root {
+            --primary-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 1000.        :r                  :root {
+      {
+            bac  )     <st          :root {            --on            padding: 1rem 0;
+        }ri  )     <st          :rg             --        {
+            bac  )     <st          :root {            --on            padding: 1rem 0;
+        }ri  )             cl        }ri  )     <st          :root {            --oar        }
+        .navbar-bran="        .navbar-brand {
+                }ri  )     <st          ass="navbar-nav ms-auto">
+               .navbar-brand {
+            --info-gradient: linear-gin  ="            --info-gradient: ')               --info-grae;        .navbar-bte                              --primary-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 1000.        :r                  :root {
+      {
+            bac  )     <st          :root {            --on            padding: 1rem 0;
+        }ri  )     <st          :rg             --        {
+            av      {
+            bac  )     <st          :root {            --on            padding: 1rem 0;
+        }ri  )nav-lin      f=        }ri  )     <st          :rg             --        {
+            bac  )     <st-1            bac  )     <st          :root {            --o-i        }ri  )             cl        }ri  )     <st          :root {            --oar on        .navbar-bran="        .navbar-brand {
+                }ri  )     <st          ass="na                  }ri  )     <st          ass=class="section active">
+        <div class="hero">
+            <div             --info-gradient:         {
+            bac  )     <st          :root {            --on            padding: 1rem 0;
+        }ri  )     <st          :rg             --        {
+            av      {
+            bac  )     <st          :riv class="container">
+            <div       "r        }ri  )     <st          :rg         -3 col-6"><div class="metric-card"><h2>85%</            av      {
+            bac  )     <st          "c            bac  )  cl      etric-card" style="background: var(--success-gradient);"><h2>1,700+</h2><p>Startup            bac  )     <st-1            bac  )     <st          :root {            --o-st                }ri  )     <st          ass="na                  }ri  )     <st          ass=class="section active">
+        <div class="hero">
+            <div             --info-gradient:         {
+            bac  )  iv        <div class="hero">
+            <div             --info-gradient:         {
+            bac  )     <st      i             <div         me            bac  )     <st          :root {                     }ri  )     <st          :rg             --        {
+            av      {
+ html"            av      {
+            bac  )     <st                        bac         <div class="chart-container">
+                <h3 class="t            bac  )     <st          "c            bac  )  cl      etric-card" style="background: var(--success-gradient);"><h2>1,700+_p        <div class="hero">
+            <div             --info-gradient:         {
+            bac  )  iv        <div class="hero">
+            <div             --info-gradient:         {
+            bac  )     <st      i             <div         me            bac  )     <st          :root {                     }ri  )     <st          :rg            ss            <div                       bac  )  iv        <div class="hero">
+      <            <div             --info-gradient:  ><            bac  )     <st      i             <div    un            av      {
+ html"            av      {
+            bac  )     <st                        bac         <div class="chart-container">
+                <h3 class="t     Ba html"            av
+             bac  )     <st <                <h3 class="t            bac  )     <st          "c            bac  )  cl  ur            <div             --info-gradient:         {
+            bac  )  iv        <div class="hero">
+            <div             --info-gradient:         {
+            bac  )     <st y             bac  )  iv        <div class="hero">
+     -3            <div             --info-gradiess me-2            bac  )     <st      i             <div     t      <            <div             --info-gradient:  ><            bac  )     <st      i             <div    un            av      {
+ html"            av      {
+            bac  )     <st                        bac             <p>Data scrape html"            av      {
+            bac  )     <st                        bac         <div class="chart-container">
+                          bac  )     <st">                <h3 class="t     Ba html"            av
+             bac  )     <st <     </             bac  )     <st <                <h3 class
+             bac  )  iv        <div class="hero">
+            <div             --info-gradient:         {
+            bac  )     <st y             bac  )  iv        <li class="mb            <div             --info-gradient:  </            bac  )     <st y             bac  )  iv          -3            <div             --info-gradiess me-2            bac  )  Ma html"            av      {
+            bac  )     <st                        bac             <p>Data scrape html"            av      {
+            bac  )     <st                        bac         <div class="chart-container">
+                ar            bac  )     <st/i            bac  )     <st                        bac         <div class="chart-container">
+              i                           bac  )     <st">                <h3 class="t     Ba html"                      bac  )     <st <     </             bac  )     <st <                <h3 class
+     <l             bac  )  iv        <div clasRF, XGBoost, LightGBM</li>
+                                    <div             --info-gradient:   io            bac  )     <st y             bac  )  iv   lu            bac  )     <st                        bac             <p>Data scrape html"            av      {
+            bac  )     <st                        bac         <div class="chart-container">
+                ar            bac  )     <st/i            bac  )     <st                       bac  )     <st                        bac         <div class="chart-container">
+              as                ar            bac  )     <st/i          g</h3>
+                        <p>Ri              i                           bac  )     <st">                <h3 class="t     Ba html"                      bac  )     <st la     <l             bac  )  iv        <div clasRF, XGBoost, LightGBM</li>
+                                    <div             --info-gradient:   io            bac  )     <st y             bac  )  r                                     <div               </div>
+                        bac  )     <st                        bac         <div class="chart-container">
+                ar            bac  )     <st/i            bac  )     <st                        <img src="assets/model_comparison_accuracy_rmse_20                ar            bac  )     <st/i            bac  )     <st                  /d              as                ar            bac  )     <st/i          g</h3>
+                        <p>Ri              i                           bac  )     <st">       </                        <p>Ri              i                           bac  )md                                    <div             --info-gradient:   io            bac  )     <st y             bac  )  r                                     <div               </div>
+                        bac  )     <st              20                        bac  )     <st                        bac         <div class="chart-container">
+           "col-md-6">
+                    <div class="chart-container">
+                          ar            bac  )     <st/i            bac  )  ext-warning"></i>Feature Importance</h                        <p>Ri              i                           bac  )     <st">       </                        <p>Ri              i                             </div>
             </div>
-        </div>
-    </nav>
-
-    <div id="home" class="section active">
-        <div class="container">
-            <div class="text-center py-5">
-                <h1>Startup Funding Stage Analytics</h1>
-                <p class="lead text-white">Bay Area Focus - ML Powered</p>
-            </div>
-            <div class="row mb-5">
-                <div class="col-md-3 col-6 mb-3"><div class="metric-box"><h2>85%</h2><p>Accuracy</p></div></div>
-                <div class="col-md-3 col-6 mb-3"><div class="metric-box"><h2>1,700+</h2><p>Startups</p></div></div>
-                <div class="col-md-3 col-6 mb-3"><div class="metric-box"><h2>40+</h2><p>Features</p></div></div>
-                <div class="col-md-3 col-6 mb-3"><div class="metric-box"><h2>5</h2><p>Models</p></div></div>
-            </div>
-            <div class="card"><div class="card-body">
-                <h3 class="text-center">Bay Area Funding Trend</h3>
-                <iframe src="assets/bay_area_funding_trend_interactive_20250511_195524.html" width="100%" height="500" frameborder="0"></iframe>
-            </div></div>
-        </div>
-    </div>
-
-    <div id="objective" class="section">
-        <div class="container">
-            <h1 class="text-center mb-5">Project Objective</h1>
             <div class="glass-card">
-                <h3>Goals</h3>
-                <ul>
-                    <li>Develop ML models to predict funding stages</li>
-                    <li>Engineer features from diverse data sources</li>
-                    <li>Analyze trends and identify key factors</li>
-                </ul>
-            </div>
+                <h3><i class="fas fa-lightbulb me-2 text-warning"></i>Key Insights</h                        bac  )     <st              20                        bac  )     <st                        bac         <div class="chart-container">
+           "col-md-6">
+                    <div class="chart-container">
+                          ar            bac  )     <st/i            bac  )  ext-warning"></i>Feature Importance</h               la           "col-md-6">
+                    <div class="chart-container">
+                          ar            bac  )     <st/i            bac  )  ext-war                      <>
+                          ar            bac  )                </div>
             <div class="glass-card">
-                <h3>Data Sources</h3>
-                <p>TopStartup.io, FundraiserInsider, GrowthList</p>
-            </div>
-        </div>
-    </div>
-
-    <div id="methods" class="section">
-        <div class="container">
-            <h1 class="text-center mb-5">Methods</h1>
+                <h3><i class="fas fa-lightbulb me-2 text-warning"></i>Key Insights</h                        bac  )     <st              20                        bac  )     <st                        bac         <div class="chart-cd-            <div                   <h3><i class="fas fou           "col-md-6">
+                    <div class="chart-container">
+                          ar            bac  )     <st/i            bac  )  ext-warning"></i>Feature Importance</h               la           "col-md-6">
+                                    <s<                          ar            bac  )  "n                    <div class="chart-container">
+                          ar            bac  )     <st/i            bac  )  ext-war                    c                          ar        <div class="co                          ar            bac  )                </div>
             <div class="glass-card">
-                <h3>Models Used</h3>
-                <p>Random Forest, XGBoost, LightGBM, Stacking Ensemble</p>
-            </div>
-        </div>
-    </div>
-
-    <div id="findings" class="section">
-        <div class="container">
-            <h1 class="text-center mb-5">Findings</h1>
-            <div class="card"><div class="card-body">
-                <img src="assets/funding_stage_dist_20250511_195524.png" class="img-fluid">
-            </div></div>
-        </div>
-    </div>
-
-    <div id="predict" class="section">
-        <div class="container">
-            <h1 class="text-center mb-5">Predict</h1>
-            <div class="row">
-                <div class="col-md-6 mx-auto">
-                    <div class="card"><div class="card-body p-4">
-                        <input type="number" class="form-control mb-3" id="amt" placeholder="Funding Amount">
-                        <button class="btn btn-primary w-100" onclick="predict()">Predict</button>
-                        <div id="res" class="mt-3" style="display:none;">
-                            <div class="alert alert-success" id="out"></div>
-                        </div>
-                    </div></div>
-                </div>
-            </div>
+"t            <div class="glass-card">
+                <h3><i class=""                 <h3><i class="fas f/d                    <div class="chart-container">
+                          ar            bac  )     <st/i            bac  )  ext-warning"></i>Feature Importance</h               la           "col-md-6">
+                                    <s<                          ar            bac  )  "n                                              ar            bac  )  on                                    <s<                          ar            bac  )  "n                    <div class="chart-container">
+             re                          ar            bac  )     <st/i            bac  )  ext-war                    c                          ar      <            <div class="glass-card">
+"t            <div class="glass-card">
+                <h3><i class=""                 <h3><i class="fas f/d                             </div>
         </div>
     </div>
 
     <footer>
-        <div class="container text-center">
-            <p>&copy; 2024 Startup Funding Prediction Project</p>
+  "t    <div class="container text-cent                <h3><i class=""      cl                          ar            bac  )     <st/i            bac  )  ext-warning"></i>Feature Importance</h   oj                                    <s<                          ar            bac  )  "n                                              ar            baci              re                          ar            bac  )     <st/i            bac  )  ext-war                    c                          ar      <            <div class="glass-card">
+"t            <div class="glass-card">
+                <h3><i class=""                 <h3><i class="fas dl"t            <div class="glass-card">
+                <h3><i class=""                 <h3><i class="fas f/d                             </div>
         </div>
-    </footer>
+    </div>
 
-    <script>
-        function showSection(id) {
-            document.querySelectorAll(".section").forEach(s => s.classList.remove("active"));
-            document.getElementById(id).classList.add("active");
-            document.querySelectorAll(".nav-link").forEach(l => l.classList.remove("active"));
-            document.getElementById("nav-" + id).classList.add("active");
-        }
-        function predict() {
-            const amt = document.getElementById("amt").value;
-            const stage = amt < 2000000 ? "Seed" : amt < 10000000 ? "Series A" : "Series B+";
-            document.getElementById("out").textContent = "Predicted: " + stage;
-            document.getElementById("res").style.display = "block";
-        }
+    <footer>
+  "t .g                <h3><i class=""      d(        </div>
+    </div>
+
+    <footer>
+  "t    <div class="container text-cent                <h3><i c);    </div>
+
+ do
+    t.getEl  "t    <dina"t            <div class="glass-card">
+                <h3><i class=""                 <h3><i class="fas dl"t            <div class="glass-card">
+                <h3><i class=""                 <h3><i class="fas f/d                             </div>
+        </div>
+    </div>
+
+    <footer>
+  "t .g                <h3><i class=""      d(        </div>
+    </div>
+
+    <footer>
+  "t    <div class="container text-cent                <h3><i c);    </div>
+
+ do
+    t.getEl  "t    <dina"t            <div class="glass-card">
+                <h3te                <h3><i class=""       }                <h3><i class=""                 <h3><i class="fas f/d                             </div>
+'p        </div>
+    </div>
+
+    <footer>
+  "t .g                <h3><i class=""      d(        </div>
+  .t    </div>
+
+ 'C
+    <fce: '  "t .g    ce    </div>
+
+    <footer>
+  "t    <div class="container textlt
+    <foodis  "t    <dick
+ d        }
     </script>
 </body>
 </html>
