@@ -1,6 +1,6 @@
 [build]
   publish = "."
-  command = "npm run build"
+  command = "echo 'Static files ready'"
 
 [build.environment]
   NODE_VERSION = "18"
@@ -11,7 +11,7 @@
   status = 200
 
 [context.production]
-  command = "npm run build"
+  command = "echo 'Production ready'"
 
 [context.deploy-preview]
-  command = "npm run build"
+  command = "echo 'Preview ready'"
