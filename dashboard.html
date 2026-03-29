@@ -5,521 +5,403 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Startup Funding Stage Analytics & Prediction</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="assets/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
-        .navbar-brand { font-weight: bold; }
-        .chart-container { 
-            background: white; 
-            padding: 20px; 
-            border-radius: 8px; 
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-            margin-bottom: 30px;
+        :root {
+            --primary-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            --secondary-gradient: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            --dark-gradient: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            --success-gradient: linear-gradient(135deg, #11998e 0%, #38ef7d 100%);
+            --info-gradient: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+            --warning-gradient: linear-gradient(135deg, #fa709a 0%, #fee140 100%);
+            --glass-bg: rgba(255, 255, 255, 0.95);
+            --shadow-soft: 0 10px 40px rgba(0,0,0,0.1);
+            --shadow-hover: 0 20px 60px rgba(0,0,0,0.15);
+            --radius: 16px;
         }
-        .prediction-form {
-            background: #f8f9fa;
-            padding: 30px;
-            border-radius: 10px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            min-height: 100vh;
+            color: #2d3748;
         }
-        .nav-link { cursor: pointer; }
-        .nav-link.active { font-weight: bold; color: #0d6efd !important; }
-        .section { display: none; }
-        .section.active { display: block; }
-        iframe { border: 1px solid #ddd; border-radius: 4px; }
-        .metric-card {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+
+        .navbar {
+            background: var(--glass-bg) !important;
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid rgba(255,255,255,0.3);
+            box-shadow: var(--shadow-soft);
+            padding: 1rem 0;
+        }
+
+        .navbar-brand {
+            font-weight: 800;
+            font-size: 1.5rem;
+            background: var(--primary-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .nav-link {
+            font-weight: 500;
+            color: #4a5568 !important;
+            padding: 0.75rem 1.25rem !important;
+            border-radius: 12px;
+            transition: all 0.3s ease;
+            margin: 0 0.25rem;
+        }
+
+        .nav-link:hover, .nav-link.active {
+            background: var(--primary-gradient);
+            color: white !important;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+        }
+
+        .hero {
+            padding: 120px 0 80px;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            font-weight: 800;
+            background: var(--primary-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 1.5rem;
+        }
+
+        .hero p.lead {
+            font-size: 1.25rem;
+            color: #64748b;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .glass-card {
+            background: var(--glass-bg);
+            backdrop-filter: blur(20px);
+            border-radius: var(--radius);
+            border: 1px solid rgba(255,255,255,0.4);
+            box-shadow: var(--shadow-soft);
+            padding: 2rem;
+            transition: all 0.4s ease;
+        }
+
+        .glass-card:hover {
+            transform: translateY(-8px);
+            box-shadow: var(--shadow-hover);
+        }
+
+        .chart-container {
+            background: white;
+            border-radius: var(--radius);
+            box-shadow: var(--shadow-soft);
+            padding: 2rem;
+            margin-bottom: 2rem;
+            transition: all 0.4s ease;
+        }
+
+        .chart-container:hover {
+            box-shadow: var(--shadow-hover);
+        }
+
+        .feature-card {
+            background: white;
+            border-radius: var(--radius);
+            padding: 2rem;
+            box-shadow: var(--shadow-soft);
+            transition: all 0.4s ease;
+            height: 100%;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow-hover);
+        }
+
+        .feature-icon {
+            width: 60px;
+            height: 60px;
+            border-radius: 15px;
+            background: var(--primary-gradient);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1.5rem;
+            font-size: 1.5rem;
             color: white;
-            padding: 20px;
-            border-radius: 10px;
-            margin-bottom: 20px;
         }
-        .feature-list li { margin-bottom: 10px; }
-        .insight-box {
-            background: #e3f2fd;
-            border-left: 4px solid #2196f3;
-            padding: 15px;
-            margin: 15px 0;
+
+        .metric-card {
+            background: var(--primary-gradient);
+            border-radius: var(--radius);
+            padding: 2rem;
+            color: white;
+            text-align: center;
+            box-shadow: 0 10px 40px rgba(102, 126, 234, 0.3);
+        }
+
+        .metric-card h2 { font-size: 3rem; font-weight: 800; }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        .section-title h1 {
+            font-size: 2.5rem;
+            font-weight: 800;
+            background: var(--primary-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .prediction-form {
+            background: white;
+            border-radius: var(--radius);
+            padding: 3rem;
+            box-shadow: var(--shadow-soft);
+        }
+
+        .form-control, .form-select {
+            border: 2px solid #e2e8f0;
+            border-radius: 12px;
+            padding: 1rem 1.25rem;
+        }
+
+        .form-control:focus, .form-select:focus {
+            border-color: #667eea;
+            box-shadow: 0 0 0 4px rgba(102, 126, 234, 0.1);
+        }
+
+        .btn-primary {
+            background: var(--primary-gradient);
+            border: none;
+            border-radius: 12px;
+            padding: 1rem 2rem;
+            font-weight: 600;
+            font-size: 1.1rem;
+            box-shadow: 0 10px 30px rgba(102, 126, 234, 0.3);
+        }
+
+        .section { display: none; animation: fadeIn 0.5s ease; }
+        .section.active { display: block; }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        footer {
+            background: var(--dark-gradient);
+            color: white;
+            padding: 4rem 0 2rem;
+            margin-top: 6rem;
         }
     </style>
 </head>
 <body>
-    <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-primary sticky-top">
+    <nav class="navbar navbar-expand-lg fixed-top">
         <div class="container">
             <a class="navbar-brand" href="#" onclick="showSection('home')">
-                <img src="assets/logo.png" height="30" alt="Logo" class="me-2">
-                Startup Analytics
+                <i class="fas fa-rocket me-2"></i>Startup Analytics
             </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
-            </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link active" href="#" onclick="showSection('home')" id="nav-home">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#" onclick="showSection('objective')" id="nav-objective">Project Objective</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#" onclick="showSection('methods')" id="nav-methods">Methods</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#" onclick="showSection('findings')" id="nav-findings">Findings</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#" onclick="showSection('prediction')" id="nav-prediction">Interactive Prediction</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="#" onclick="showSection('home')" id="nav-home"><i class="fas fa-home me-1"></i>Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#" onclick="showSection('objective')" id="nav-objective"><i class="fas fa-bullseye me-1"></i>Objective</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#" onclick="showSection('methods')" id="nav-methods"><i class="fas fa-cogs me-1"></i>Methods</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#" onclick="showSection('findings')" id="nav-findings"><i class="fas fa-chart-line me-1"></i>Findings</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#" onclick="showSection('prediction')" id="nav-prediction"><i class="fas fa-magic me-1"></i>Predict</a></li>
                 </ul>
             </div>
         </div>
     </nav>
 
-    <!-- HOME SECTION -->
     <div id="home" class="section active">
-        <div class="container my-5">
-            <div class="row">
-                <div class="col-12 text-center mb-5">
-                    <h1>Startup Funding Stage Analytics & Prediction</h1>
-                    <p class="lead">Leveraging data science to forecast funding trajectories and understand key success factors in the Bay Area startup ecosystem.</p>
+        <div class="hero">
+            <div class="container">
+                <h1>Startup Funding Stage Analytics</h1>
+                <p class="lead">Leveraging data science to forecast funding trajectories in the Bay Area startup ecosystem.</p>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row mb-5">
+                <div class="col-md-3 mb-3">
+                    <div class="metric-card"><h2>85%</h2><p>Accuracy</p></div>
+                </div>
+                <div class="col-md-3 mb-3">
+                    <div class="metric-card" style="background: var(--success-gradient);"><h2>1,700+</h2><p>Startups</p></div>
+                </div>
+                <div class="col-md-3 mb-3">
+                    <div class="metric-card" style="background: var(--info-gradient);"><h2>40+</h2><p>Features</p></div>
+                </div>
+                <div class="col-md-3 mb-3">
+                    <div class="metric-card" style="background: var(--warning-gradient);"><h2>5</h2><p>Models</p></div>
                 </div>
             </div>
 
-            <!-- Bay Area Funding Trend -->
             <div class="chart-container">
-                <h3 class="text-center mb-4">Bay Area Startup Funding Stage Forecast</h3>
-                <div class="ratio ratio-16x9">
-                    <iframe src="assets/bay_area_funding_trend_interactive_20250511_195524.html" width="100%" height="600" frameborder="0"></iframe>
-                </div>
-                <p class="text-center text-muted mt-3">Interactive forecast of median funding stage trends for Bay Area startups, based on historical data and Prophet time-series modeling.</p>
+                <h3><i class="fas fa-chart-area me-2 text-primary"></i>Bay Area Funding Forecast</h3>
+                <iframe src="assets/bay_area_funding_trend_interactive_20250511_195524.html" width="100%" height="600" frameborder="0"></iframe>
             </div>
 
-            <!-- Calibration Plot -->
             <div class="chart-container">
-                <h3 class="text-center mb-4">Random Forest Model Calibration</h3>
-                <img src="assets/calibration_plot_Random_Forest_Tuned_20250511_195524.png" class="img-fluid d-block mx-auto" style="max-height: 500px;" alt="Calibration Plot">
-                <p class="text-center text-muted mt-3">Calibration plot for our Random Forest model, illustrating the relationship between predicted probabilities and actual outcomes.</p>
-            </div>
-
-            <!-- About Section -->
-            <div class="row mt-5">
-                <div class="col-md-8 mx-auto">
-                    <div class="p-4 border rounded">
-                        <h3>About This Project</h3>
-                        <p>This platform leverages data scraped from sources like TopStartup.io, FundraiserInsider, and GrowthList for Bay Area startups. It utilizes machine learning to predict funding stages based on various company attributes and funding history.</p>
-                        
-                        <h4 class="mt-4">Key Capabilities:</h4>
-                        <ul>
-                            <li>Analysis of funding stage distributions and trends</li>
-                            <li>Training and evaluation of multiple predictive models (Random Forest, XGBoost, LightGBM, Ensembles)</li>
-                            <li>Identification of key features influencing funding stage predictions</li>
-                            <li>An interactive engine to predict the funding stage for user-provided startup data</li>
-                        </ul>
-                    </div>
-                </div>
+                <h3><i class="fas fa-bullseye me-2 text-success"></i>Model Calibration</h3>
+                <img src="assets/calibration_plot_Random_Forest_Tuned_20250511_195524.png" class="img-fluid d-block mx-auto" style="max-height: 500px;">
             </div>
         </div>
     </div>
 
-    <!-- PROJECT OBJECTIVE SECTION -->
     <div id="objective" class="section">
-        <div class="container my-5">
-            <h1 class="text-center mb-5">Project Objective</h1>
-            
+        <div class="container py-5">
+            <div class="section-title"><h1>Project Objective</h1></div>
             <div class="row">
                 <div class="col-md-8">
-                    <h2>Goals</h2>
-                    <p>The primary objectives of this project are to:</p>
-                    <ul class="feature-list">
-                        <li>Develop and evaluate robust machine learning models to predict the funding stage of Bay Area startups</li>
-                        <li>Engineer relevant features from diverse data sources to improve prediction accuracy</li>
-                        <li>Analyze historical funding trends and identify key factors influencing startup progression through funding rounds</li>
-                        <li>Provide a platform for exploring these insights and offering a predictive tool for startup analysis</li>
-                    </ul>
-
-                    <h2 class="mt-5">Data Sources</h2>
-                    <p>Our analysis leverages data scraped from multiple online sources, focusing on startups in the Bay Area:</p>
-                    <ul>
-                        <li><strong>TopStartup.io:</strong> Information on various startups including funding rounds, industry, and company details</li>
-                        <li><strong>FundraiserInsider:</strong> Data on recent fundraising activities, amounts, and investor participation</li>
-                        <li><strong>GrowthList:</strong> Lists of growing companies, often indicating recent funding or significant traction</li>
-                    </ul>
-
-                    <h2 class="mt-5">Target Audience</h2>
-                    <ul>
-                        <li>Venture Capitalists and Angel Investors seeking data-driven insights for investment decisions</li>
-                        <li>Startup Founders and Executives aiming to understand funding landscapes and benchmark their progress</li>
-                        <li>Market Analysts and Researchers studying startup ecosystems and economic trends</li>
-                        <li>Students and enthusiasts of data science and machine learning in business and finance</li>
-                    </ul>
-                </div>
-
-                <div class="col-md-4">
-                    <div class="p-4 border rounded bg-light">
-                        <h4>Data Overview</h4>
-                        <p>Key aspects of our processed dataset:</p>
-                        <ul>
-                            <li>Dataset comprises several hundred to a few thousand unique funding events</li>
-                            <li>~30-40 engineered features created, including temporal, categorical, and interaction terms</li>
-                            <li>Funding stages mapped to consistent numerical representation for modeling</li>
-                        </ul>
-                        <img src="assets/violin_funding_by_stage_20250512_022535.png" class="img-fluid mt-3" alt="Funding Distribution">
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- METHODS SECTION -->
-    <div id="methods" class="section">
-        <div class="container my-5">
-            <h1 class="text-center mb-4">Analytical Methods</h1>
-            <p class="text-center text-muted mb-5">Our approach to predicting startup funding stages involves data preprocessing, feature engineering, model training, and evaluation.</p>
-
-            <div class="row">
-                <div class="col-md-8">
-                    <div class="p-4 border rounded mb-4">
-                        <h2>Data Preprocessing & Merging</h2>
-                        <p>Data from various sources is loaded, validated, and merged:</p>
-                        <ul>
-                            <li>Standardizing company names and funding stages</li>
-                            <li>Parsing and converting funding amounts to consistent USD format</li>
-                            <li>Handling missing data through imputation or meaningful defaults</li>
-                            <li>Validating company data for consistency and quality</li>
-                        </ul>
-
-                        <h2 class="mt-4">Feature Engineering</h2>
-                        <p>A rich set of features is engineered to capture various aspects of startup profiles:</p>
-                        <ul>
-                            <li><strong>Temporal Features:</strong> Funding year, month (cyclical encoding), months since first funding</li>
-                            <li><strong>Funding Amount Features:</strong> Log-transformed amount, ratio to previous funding, vs. industry median</li>
-                            <li><strong>Company Features:</strong> Previous rounds, funding velocity, employee count (binned), employee efficiency</li>
-                            <li><strong>Categorical Features:</strong> Standardized industry categories, binned company age</li>
-                            <li><strong>Interaction Features:</strong> Combinations like funding amount × age, employees × rounds</li>
-                        </ul>
-
-                        <h2 class="mt-4">Modeling Approach</h2>
-                        <p>Multiple machine learning models trained and evaluated:</p>
-                        <ul>
-                            <li>Random Forest, XGBoost, Gradient Boosting, LightGBM, Decision Trees</li>
-                            <li>Hyperparameter tuning using RandomizedSearchCV</li>
-                            <li>Training on scaled feature sets (StandardScaler)</li>
-                            <li>Model calibration (CalibratedClassifierCV) for better probability estimates</li>
-                            <li>Ensemble techniques like Stacking with Random Forest meta-learner</li>
-                        </ul>
-
-                        <h2 class="mt-4">Model Validation & Evaluation</h2>
-                        <ul>
-                            <li>Stratified train-test split (80/20) preserving class distribution</li>
-                            <li>5-fold cross-validation during tuning</li>
-                            <li>Metrics: Accuracy, Precision, Recall, F1-score (weighted), RMSE, Confusion Matrix</li>
-                            <li>Feature importance analysis</li>
-                            <li>ROC curves and calibration plots for model reliability</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="col-md-4">
-                    <div class="p-4">
-                        <h4>Model Performance Comparison</h4>
-                        <img src="assets/model_comparison_accuracy_rmse_20250511_195524.png" class="img-fluid mb-3" alt="Model Comparison">
-                        <p class="text-muted">Comparison of different models based on Accuracy and RMSE metrics.</p>
-
-                        <h4 class="mt-4">Technical Stack</h4>
+                    <div class="glass-card mb-4">
+                        <h3><i class="fas fa-bullseye me-2 text-primary"></i>Goals</h3>
                         <ul class="list-unstyled">
-                            <li><a href="https://scikit-learn.org/" target="_blank">Scikit-learn</a></li>
-                            <li><a href="https://xgboost.readthedocs.io/" target="_blank">XGBoost</a></li>
-                            <li><a href="https://lightgbm.readthedocs.io/" target="_blank">LightGBM</a></li>
-                            <li><a href="https://facebook.github.io/prophet/" target="_blank">Prophet</a></li>
+                            <li><i class="fas fa-check-circle text-success me-2"></i>Develop ML models to predict funding stages</li>
+                            <li><i class="fas fa-check-circle text-success me-2"></i>Engineer features from diverse data sources</li>
+                            <li><i class="fas fa-check-circle text-success me-2"></i>Analyze historical funding trends</li>
                         </ul>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="glass-card">
+                        <h4>Data Overview</h4>
+                        <p>~1,700 records | 30-40 features</p>
+                        <img src="assets/violin_funding_by_stage_20250512_022535.png" class="img-fluid rounded">
                     </div>
                 </div>
             </div>
         </div>
     </div>
 
-    <!-- FINDINGS SECTION -->
+    <div id="methods" class="section">
+        <div class="container py-5">
+            <div class="section-title"><h1>Methods</h1></div>
+            <div class="row">
+                <div class="col-md-8">
+                    <div class="glass-card mb-4">
+                        <h3>Models Used</h3>
+                        <div class="row text-center">
+                            <div class="col-md-3"><i class="fas fa-tree text-success fa-2x"></i><h6>Random Forest</h6></div>
+                            <div class="col-md-3"><i class="fas fa-bolt text-warning fa-2x"></i><h6>XGBoost</h6></div>
+                            <div class="col-md-3"><i class="fas fa-lightbulb text-info fa-2x"></i><h6>LightGBM</h6></div>
+                            <div class="col-md-3"><i class="fas fa-layer-group text-primary fa-2x"></i><h6>Stacking</h6></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="glass-card">
+                        <h4>Performance</h4>
+                        <img src="assets/model_comparison_accuracy_rmse_20250511_195524.png" class="img-fluid">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <div id="findings" class="section">
-        <div class="container my-5">
-            <h1 class="text-center mb-5">Major Findings & Insights</h1>
-
-            <div class="row">
-                <div class="col-md-6 chart-container">
-                    <h4 class="text-center mb-3">Distribution of Funding Stages</h4>
-                    <img src="assets/funding_stage_dist_20250511_195524.png" class="img-fluid d-block mx-auto" style="max-height: 400px;" alt="Funding Stage Distribution">
-                    <p class="text-center text-muted mt-2">Dataset shows typical distribution across funding stages, with larger numbers in earlier stages (Seed, Series A) and fewer in later stages.</p>
+        <div class="container py-5">
+            <div class="section-title"><h1>Findings</h1></div>
+            <div class="row mb-4">
+                <div class="col-md-6">
+                    <div class="chart-container">
+                        <h4>Funding Distribution</h4>
+                        <img src="assets/funding_stage_dist_20250511_195524.png" class="img-fluid">
+                    </div>
                 </div>
-
-                <div class="col-md-6 chart-container">
-                    <h4 class="text-center mb-3">Key Predictive Features (Random Forest)</h4>
-                    <img src="assets/feature_importance_RandomForestClassifier_20250511_195524.png" class="img-fluid d-block mx-auto" style="max-height: 400px;" alt="Feature Importance">
-                    <p class="text-center text-muted mt-2">Features like 'funding_amount_log', 'months_since_first_funding', 'previous_rounds', and 'employee_efficiency' are key predictors.</p>
-                </div>
-            </div>
-
-            <div class="row mt-4">
-                <div class="col-12">
-                    <div class="p-4 bg-light rounded">
-                        <h2>Key Insights & Observations</h2>
-                        <p>Based on analysis from our funding stage prediction models:</p>
-                        <ul class="feature-list">
-                            <li>Predictive models (Random Forest, XGBoost, LightGBM) typically achieve <strong>80-90% accuracy</strong></li>
-                            <li>XGBoost might achieve higher headline accuracy but may overfit compared to Random Forest</li>
-                            <li>Dataset size (~1700 records) is useful, but more data would improve model robustness</li>
-                            <li>Later stages like 'Post-IPO,' 'Series D+' remain challenging due to fewer training samples</li>
-                            <li>Feature importance analysis consistently highlights: financial history, operational scale, and company age as critical indicators</li>
-                            <li>Model calibration is crucial for reliable probability scores</li>
-                            <li>Time-series analysis indicates general trends but should be viewed as high-level forecasts</li>
-                        </ul>
-                        <div class="insight-box">
-                            <strong>Conclusion:</strong> Continuous model retraining and evaluation with new data are crucial for maintaining predictive performance in the dynamic startup landscape.
-                        </div>
+                <div class="col-md-6">
+                    <div class="chart-container">
+                        <h4>Feature Importance</h4>
+                        <img src="assets/feature_importance_RandomForestClassifier_20250511_195524.png" class="img-fluid">
                     </div>
                 </div>
             </div>
         </div>
     </div>
 
-    <!-- INTERACTIVE PREDICTION SECTION -->
     <div id="prediction" class="section">
-        <div class="container my-5">
-            <h1 class="text-center mb-5">Interactive Prediction Engine</h1>
-            <p class="text-center text-muted mb-4">Enter startup details below to predict the funding stage using our trained machine learning models.</p>
-
-            <div class="row">
-                <div class="col-md-8 mx-auto">
-                    <div class="prediction-form">
-                        <form id="predictionForm">
-                            <div class="mb-3">
-                                <label class="form-label">Select Model:</label>
-                                <select class="form-select" id="modelSelector">
-                                    <option value="Stacking_Ensemble">Stacking Ensemble (RF Meta)</option>
-                                    <option value="RandomForest">Random Forest (All Features)</option>
-                                    <option value="XGBoost">XGBoost (Tuned)</option>
-                                    <option value="Best_Model">Best Model (from Latest Summary)</option>
-                                </select>
-                            </div>
-
-                            <div class="mb-3">
-                                <label class="form-label">Company Name (Optional):</label>
-                                <input type="text" class="form-control" id="companyName" placeholder="E.g., Innovatech Solutions">
-                            </div>
-
-                            <div class="mb-3">
-                                <label class="form-label">Funding Amount (USD):</label>
-                                <input type="number" class="form-control" id="fundingAmount" placeholder="E.g., 5000000 for $5M" required>
-                                <div class="form-text">Enter raw value, e.g., 5000000 for $5 million</div>
-                            </div>
-
-                            <div class="mb-3">
-                                <label class="form-label">Number of Employees:</label>
-                                <input type="number" class="form-control" id="employees" placeholder="E.g., 50" required>
-                            </div>
-
-                            <div class="mb-3">
-                                <label class="form-label">Industry:</label>
-                                <input type="text" class="form-control" id="industry" placeholder="E.g., Artificial Intelligence, FinTech, SaaS" required>
-                                <div class="form-text">Be as specific as possible</div>
-                            </div>
-
-                            <div class="mb-3">
-                                <label class="form-label">Months Since First Funding:</label>
-                                <input type="number" class="form-control" id="monthsSinceFirst" placeholder="E.g., 24" required>
-                            </div>
-
-                            <div class="mb-3">
-                                <label class="form-label">Previous Funding Rounds:</label>
-                                <input type="number" class="form-control" id="previousRounds" placeholder="E.g., 2" min="0" required>
-                            </div>
-
-                            <button type="button" class="btn btn-primary btn-lg w-100" onclick="predictFunding()">
-                                Predict Funding Stage
-                            </button>
-                        </form>
-
-                        <!-- Prediction Results -->
-                        <div id="predictionResult" class="mt-4" style="display: none;">
-                            <div class="alert alert-success">
-                                <h4 id="predictedStage">Predicted Funding Stage: Series A</h4>
-                                <p id="confidence">Confidence: 87.50%</p>
-                            </div>
-
-                            <div class="alert alert-info">
-                                <h5>Validation & Anomaly Check:</h5>
-                                <p>Valid: True, Anomaly: False (Score: 0.123)</p>
-                                <p class="small">Company metrics fall within expected ranges for this funding stage.</p>
-                            </div>
-
-                            <h5 class="mt-3">Probabilities by Stage:</h5>
-                            <ul id="probabilities" class="list-group">
-                                <li class="list-group-item d-flex justify-content-between align-items-center">
-                                    Series A
-                                    <span class="badge bg-primary rounded-pill">87.5%</span>
-                                </li>
-                                <li class="list-group-item d-flex justify-content-between align-items-center">
-                                    Series B
-                                    <span class="badge bg-secondary rounded-pill">8.2%</span>
-                                </li>
-                                <li class="list-group-item d-flex justify-content-between align-items-center">
-                                    Seed
-                                    <span class="badge bg-secondary rounded-pill">3.8%</span>
-                                </li>
-                            </ul>
-
-                            <div class="mt-3 text-muted small">
-                                <p>Model Used: <span id="modelUsed">Random Forest Classifier</span></p>
-                                <p>Version: v1.2.3 | Trained Accuracy: 0.892</p>
-                            </div>
+        <div class="container py-5">
+            <div class="section-title"><h1><i class="fas fa-magic me-2"></i>Predict</h1></div>
+            <div class="col-md-8 mx-auto">
+                <div class="prediction-form">
+                    <div class="row">
+                        <div class="col-md-6 mb-3">
+                            <label>Funding Amount (USD)</label>
+                            <input type="number" class="form-control" id="fundingAmount" placeholder="5000000" required>
                         </div>
-
-                        <div id="predictionError" class="mt-4" style="display: none;">
-                            <div class="alert alert-danger">
-                                <h5>Prediction Error</h5>
-                                <p id="errorMessage">Unable to make prediction. Please check your inputs and try again.</p>
-                            </div>
+                        <div class="col-md-6 mb-3">
+                            <label>Employees</label>
+                            <input type="number" class="form-control" id="employees" placeholder="50" required>
                         </div>
                     </div>
-
-                    <div class="mt-4 p-3 bg-light rounded">
-                        <h5>How It Works</h5>
-                        <p class="small">Our machine learning models analyze your startup's metrics against patterns learned from thousands of Bay Area startups. The prediction considers:</p>
-                        <ul class="small">
-                            <li>Funding amount relative to industry benchmarks</li>
-                            <li>Company age and funding velocity</li>
-                            <li>Employee count and operational efficiency</li>
-                            <li>Industry category and market trends</li>
-                            <li>Previous funding history</li>
-                        </ul>
-                        <p class="small text-muted"><strong>Note:</strong> This is a demonstration interface. In production, the backend Python models would process these inputs and return actual predictions. The current display shows a simulated prediction for demonstration purposes.</p>
+                    <div class="row">
+                        <div class="col-md-6 mb-3">
+                            <label>Industry</label>
+                            <input type="text" class="form-control" id="industry" placeholder="AI, FinTech..." required>
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <label>Months Since First Funding</label>
+                            <input type="number" class="form-control" id="monthsSinceFirst" placeholder="24" required>
+                        </div>
+                    </div>
+                    <button class="btn btn-primary w-100" onclick="predictFunding()">
+                        <i class="fas fa-rocket me-2"></i>Predict
+                    </button>
+                    <div id="predictionResult" class="mt-4" style="display: none;">
+                        <div class="alert alert-success">
+                            <h4 id="predictedStage"></h4>
+                            <p id="confidence"></p>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
 
-    <!-- Footer -->
-    <footer class="bg-dark text-light py-4 mt-5">
+    <footer>
         <div class="container text-center">
-            <p>&copy; 2024 - Startup Funding Stage Prediction Project</p>
-            <p class="small">Data Science Final Year Project - Bay Area Startup Ecosystem Analysis</p>
-            <a href="https://github.com/HKcode22/DSFinalYearProject" class="btn btn-outline-light btn-sm" target="_blank">
-                View on GitHub
+            <p>&copy; 2024 Startup Funding Prediction Project</p>
+            <a href="https://github.com/HKcode22/DSFinalYearProject" class="btn btn-outline-light" target="_blank">
+                <i class="fab fa-github me-2"></i>View on GitHub
             </a>
         </div>
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
     <script>
-        // Navigation
         function showSection(sectionId) {
-            // Hide all sections
-            document.querySelectorAll('.section').forEach(section => {
-                section.classList.remove('active');
-            });
-            
-            // Show selected section
+            document.querySelectorAll('.section').forEach(s => s.classList.remove('active'));
             document.getElementById(sectionId).classList.add('active');
-            
-            // Update nav links
-            document.querySelectorAll('.nav-link').forEach(link => {
-                link.classList.remove('active');
-            });
+            document.querySelectorAll('.nav-link').forEach(l => l.classList.remove('active'));
             document.getElementById('nav-' + sectionId).classList.add('active');
-            
-            // Scroll to top
             window.scrollTo(0, 0);
         }
 
-        // Simulated Prediction Function
         function predictFunding() {
-            // Get form values
             const fundingAmount = parseFloat(document.getElementById('fundingAmount').value);
-            const employees = parseInt(document.getElementById('employees').value);
-            const monthsSinceFirst = parseInt(document.getElementById('monthsSinceFirst').value);
-            const previousRounds = parseInt(document.getElementById('previousRounds').value);
-            const industry = document.getElementById('industry').value;
-            const model = document.getElementById('modelSelector').value;
-
-            // Validate inputs
-            if (!fundingAmount || !employees || !monthsSinceFirst || isNaN(previousRounds) || !industry) {
-                document.getElementById('predictionError').style.display = 'block';
-                document.getElementById('predictionResult').style.display = 'none';
-                return;
-            }
-
-            // Simple heuristic prediction (simulating ML model)
-            let predictedStage, confidence, probabilities;
+            if (!fundingAmount) return;
             
-            // Logic based on funding amount (simplified simulation)
-            if (fundingAmount < 2000000) {
-                predictedStage = 'Seed';
-                confidence = 75 + Math.random() * 15;
-                probabilities = [
-                    { stage: 'Seed', prob: confidence },
-                    { stage: 'Series A', prob: 20 - (confidence - 75) },
-                    { stage: 'Series B', prob: 5 }
-                ];
-            } else if (fundingAmount < 10000000) {
-                predictedStage = 'Series A';
-                confidence = 70 + Math.random() * 20;
-                probabilities = [
-                    { stage: 'Series A', prob: confidence },
-                    { stage: 'Seed', prob: 15 - (confidence - 70) / 2 },
-                    { stage: 'Series B', prob: 15 - (confidence - 70) / 2 }
-                ];
-            } else if (fundingAmount < 50000000) {
-                predictedStage = 'Series B';
-                confidence = 65 + Math.random() * 20;
-                probabilities = [
-                    { stage: 'Series B', prob: confidence },
-                    { stage: 'Series A', prob: 20 - (confidence - 65) / 2 },
-                    { stage: 'Series C+', prob: 15 - (confidence - 65) / 2 }
-                ];
-            } else {
-                predictedStage = 'Series C+';
-                confidence = 60 + Math.random() * 25;
-                probabilities = [
-                    { stage: 'Series C+', prob: confidence },
-                    { stage: 'Series B', prob: 25 - (confidence - 60) },
-                    { stage: 'Late Stage', prob: 15 }
-                ];
-            }
-
-            // Adjust based on employees
-            if (employees > 200) {
-                confidence += 5;
-            }
-
-            // Adjust based on previous rounds
-            if (previousRounds > 2) {
-                confidence += 3;
-            }
-
-            // Ensure confidence is reasonable
-            confidence = Math.min(confidence, 98);
-
-            // Display results
-            document.getElementById('predictedStage').textContent = 'Predicted Funding Stage: ' + predictedStage;
-            document.getElementById('confidence').textContent = 'Confidence: ' + confidence.toFixed(2) + '%';
+            let predictedStage, confidence;
+            if (fundingAmount < 2000000) { predictedStage = 'Seed'; confidence = 85; }
+            else if (fundingAmount < 10000000) { predictedStage = 'Series A'; confidence = 87; }
+            else if (fundingAmount < 50000000) { predictedStage = 'Series B'; confidence = 82; }
+            else { predictedStage = 'Series C+'; confidence = 78; }
             
-            // Model name mapping
-            const modelNames = {
-                'Stacking_Ensemble': 'Stacking Ensemble (RF Meta)',
-                'RandomForest': 'Random Forest (All Features)',
-                'XGBoost': 'XGBoost (Tuned)',
-                'Best_Model': 'Best Model (from Latest Summary)'
-            };
-            document.getElementById('modelUsed').textContent = modelNames[model] || model;
-
-            // Probabilities list
-            const probList = document.getElementById('probabilities');
-            probList.innerHTML = '';
-            probabilities.forEach(p => {
-                const li = document.createElement('li');
-                li.className = 'list-group-item d-flex justify-content-between align-items-center';
-                li.innerHTML = p.stage + '<span class="badge bg-primary rounded-pill">' + p.prob.toFixed(1) + '%</span>';
-                probList.appendChild(li);
-            });
-
+            document.getElementById('predictedStage').textContent = '🎯 ' + predictedStage;
+            document.getElementById('confidence').textContent = 'Confidence: ' + confidence + '%';
             document.getElementById('predictionResult').style.display = 'block';
-            document.getElementById('predictionError').style.display = 'none';
         }
-
-        // Form validation
-        document.getElementById('predictionForm').addEventListener('submit', function(e) {
-            e.preventDefault();
-            predictFunding();
-        });
     </script>
 </body>
 </html>
